@@ -1,0 +1,11 @@
+#+title: Car
+Not to be confused with the first element in a list :)
+* Cars
+:PROPERTIES:
+:ID:       e6a7db9a-b591-48f9-aa9c-296968821599
+:CREATED:  <2025-01-17 Fri 21:54>
+:END:
+:EDGES:
+[2025-01-17 Fri 21:54] -- [[https://en.wikipedia.org/wiki/Car][Car - Wikipedia]]
+[2025-01-17 Fri 22:48] -> [[id:0cbdde1c-8f48-40eb-b090-975cff3ffeae][Honda Motor Company]]
+:END:

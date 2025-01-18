@@ -1,0 +1,10 @@
+#+title: Shell langs
+* Nu
+:PROPERTIES:
+:ID:       b4048114-ec39-4e53-816f-2f1319d404ee
+:END:
+:EDGES:
+[2025-01-16 Thu 22:32] -- [[https://www.nushell.sh/][Nushell]]
+[2025-01-16 Thu 22:32] -- [[https://www.nushell.sh/cookbook/][Cookbook | Nushell]]
+[2025-01-16 Thu 22:32] -- [[https://github.com/nushell/nu_scripts][nushell/nu_scripts]]
+:END:

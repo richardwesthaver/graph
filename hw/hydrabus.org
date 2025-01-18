@@ -1,0 +1,12 @@
+#+title: HydraBus
+* HydraBus
+:PROPERTIES:
+:ID:       632212eb-accb-4660-a46a-c8688c5d237a
+:CREATED:  <2025-01-17 Fri 16:07>
+:END:
+:EDGES:
+[2025-01-17 Fri 16:08] -- [[https://github.com/hydrabus/hydrabus][GitHub - hydrabus/hydrabus]]
+[2025-01-17 Fri 16:08] -- [[https://github.com/hydrabus/hydrafw/wiki][Home · hydrabus/hydrafw Wiki · GitHub]]
+[2025-01-17 Fri 16:08] -- [[https://www.digikey.com/en/products/detail/benjamin-vernoux/HYDRABUS-V1/15652912][HYDRABUS_V1 digikey]]
+:END:
+- [[https://hydrabus.com/wp-content/uploads/2024/01/HydraBus_1_0_HydraFW_Default_PinAssignment_A4.jpg?v=0b3b97fa6688][Pin Assignments]]

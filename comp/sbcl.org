@@ -1,0 +1,91 @@
+#+title: SBCL
+* SBCL
+:PROPERTIES:
+:ID:       a7f9b428-9323-492f-aaa5-94669bfbc55b
+:END:
+** Internals
+:PROPERTIES:
+:ID:       9aac997a-5d9c-43dd-b2ca-8b8b02d9f2dd
+:END:
+:EDGES:
+[2025-01-17 Fri 15:50] -- [[https://simonsafar.com/2020/sbcl/][An exploration of SBCL internals - simonsafar.com]]
+[2025-01-17 Fri 19:03] -- [[https://github.com/guicho271828/sbcl-wiki/wiki/][guicho271828/sbcl-wiki]]
+:END:
+*** Low Tags
+:PROPERTIES:
+:CREATED:  <2025-01-17 Fri 15:50>
+:ID:       fd50e430-8a51-406a-96bd-ae6a1cf73bdd
+:END:
+#+begin_src c
+  #define SBCL_GENESIS_CONSTANTS
+  #define FIXNUM_TAG_MASK 1 /* 0x1 */
+  #define N_FIXNUM_TAG_BITS 1 /* 0x1 */
+  #define N_LOWTAG_BITS 4 /* 0x4 */
+  #define N_WIDETAG_BITS 8 /* 0x8 */
+  #define N_WORD_BYTES 8 /* 0x8 */
+  #define LOWTAG_MASK 15 /* 0xF */
+  #define N_WORD_BITS 64 /* 0x40 */
+  #define WIDETAG_MASK 255 /* 0xFF */
+  #define SHORT_HEADER_MAX_WORDS 32767 /* 0x7FFF */
+
+  #define EVEN_FIXNUM_LOWTAG 0 /* 0x0 */
+  #define OTHER_IMMEDIATE_0_LOWTAG 1 /* 0x1 */
+  #define PAD0_LOWTAG 2 /* 0x2 */
+  #define INSTANCE_POINTER_LOWTAG 3 /* 0x3 */
+  #define PAD1_LOWTAG 4 /* 0x4 */
+  #define OTHER_IMMEDIATE_1_LOWTAG 5 /* 0x5 */
+  #define PAD2_LOWTAG 6 /* 0x6 */
+  #define LIST_POINTER_LOWTAG 7 /* 0x7 */
+  #define ODD_FIXNUM_LOWTAG 8 /* 0x8 */
+  #define OTHER_IMMEDIATE_2_LOWTAG 9 /* 0x9 */
+  #define PAD3_LOWTAG 10 /* 0xA */
+  #define FUN_POINTER_LOWTAG 11 /* 0xB */
+  #define PAD4_LOWTAG 12 /* 0xC */
+  #define OTHER_IMMEDIATE_3_LOWTAG 13 /* 0xD */
+  #define PAD5_LOWTAG 14 /* 0xE */
+  #define OTHER_POINTER_LOWTAG 15 /* 0xF */
+#+end_src
+*** Symbols of Interest
+:PROPERTIES:
+:ID:       a8ee911d-6d19-452b-b03a-249a446c1b20
+:CREATED:  <2025-01-17 Fri 19:11>
+:END:
+#+begin_src lisp
+  sb-sys:*runtime-dlhandle*
+  sb-fasl:+fasl-file-version+
+  sb-fasl:+backend-fasl-file-implementation+
+  sb-debug:print-backtrace
+  sb-debug:map-backtrace
+  sb-pretty:pprint-dispatch-table
+  sb-lockless:
+  sb-ext:simd-pack
+  sb-walker:define-walker-template
+  sb-walker:macroexpand-all
+  sb-walker:walk-form
+  sb-kernel:empty-type
+  sb-kernel:*eval-calls*
+  sb-kernel:*gc-pin-code-pages*
+  sb-kernel:*restart-clusters*
+  sb-kernel:*save-lisp-clobbered-globals*
+  sb-kernel:*top-level-form-p*
+  sb-kernel:*universal-fun-type*
+  sb-kernel:*universal-type*
+  sb-kernel:*wild-type*
+  sb-kernel:+simd-pack-element-types+
+  (sb-vm:memory-usage)
+  (sb-vm:boxed-context-register)
+  (sb-vm:c-find-heap->arena)
+  (sb-vm:copy-number-to-heap)
+  (sb-vm:dump-arena-objects)
+  (sb-vm:fixnumize)
+  (sb-vm:rewind-arena)
+  (sb-vm:show-heap->arena)
+  (sb-vm:with/without-arena)
+  (sb-cltl2:{augment-environment,compiler-let,define-declaration,parse-macro})
+  (sb-cltl2:{declaration-information, variable-information, function-information})
+  sb-di:
+  sb-assem:
+  sb-md5:
+  sb-regalloc:
+  sb-disassem:
+#+end_src

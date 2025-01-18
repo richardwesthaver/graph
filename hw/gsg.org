@@ -1,0 +1,17 @@
+#+title: Great Scott Gadgets
+* Great Scott Gadgets
+:PROPERTIES:
+:ID:       f8b83779-83c1-47fc-88e7-c76018e4b8df
+:CREATED:  <2025-01-17 Fri 18:27>
+:END:
+:EDGES:
+[2025-01-17 Fri 18:27] -- [[https://greatscottgadgets.com/][Great Scott Gadgets]]
+:END:
+** HackRF
+:PROPERTIES:
+:ID:       74f75829-fdc6-456e-b306-ab42b18260f3
+:CREATED:  <2025-01-17 Fri 18:31>
+:END:
+:EDGES:
+[2025-01-17 Fri 18:31] -- [[https://greatscottgadgets.com/hackrf/][HackRF Product Line - Great Scott Gadgets]]
+:END:

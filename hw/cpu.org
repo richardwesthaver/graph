@@ -1,0 +1,10 @@
+#+title: CPU
+* CPU
+:PROPERTIES:
+:ID:       20e26c76-3247-4434-89dc-cbd5712fdf67
+:CREATED:  <2025-01-17 Fri 22:58>
+:END:
+:EDGES:
+[2025-01-17 Fri 22:59] -- [[https://en.wikipedia.org/wiki/Central_processing_unit][Central processing unit - Wikipedia]]
+:END:
+The 'Central' processing unit.

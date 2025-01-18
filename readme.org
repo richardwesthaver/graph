@@ -1,0 +1,15 @@
+#+title: Graph
+#+description: CC Knowledge Graph
+#+author: Richard Westhaver
+#+email:richard.westhaver@gmail.com
+#+setupfile: clean.theme
+#+export_file_name: index
+
+The CC =graph= is a collection of org documents representing a network
+of /nodes/ and /edges/. Nodes are typically represented as Org
+headlines and the Edges are dynamically built from dedicated =EDGES=
+drawers located under Org headlines or otherwise inferred from a
+parent node or file.
+
+These documents depend on the core =graph.el= package which provides
+an interface for modifying the graph.

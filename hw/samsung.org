@@ -1,0 +1,17 @@
+#+title: Samsung
+* Samsung Electronics
+:PROPERTIES:
+:ID:       f67cc642-30fe-4dd9-a78d-6c5296dc861a
+:CREATED:  <2025-01-17 Fri 16:18>
+:END:
+:EDGES:
+[2025-01-17 Fri 16:18] -- [[https://en.wikipedia.org/wiki/Samsung_Electronics][Samsung Electronics - Wikipedia]]
+:END:
+** Storage Products
+:PROPERTIES:
+:ID:       978eae63-4d8e-4dbf-bfba-b135d82ab027
+:CREATED:  <2025-01-17 Fri 23:03>
+:END:
+:EDGES:
+[2025-01-17 Fri 23:03] -- [[https://semiconductor.samsung.com/consumer-storage/][Samsung Consumer Memory Storage | Samsung Semiconductor Global]]
+:END:

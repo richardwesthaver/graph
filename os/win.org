@@ -1,0 +1,6 @@
+#+title: Windows
+#+description: 
+
+ Bloated Telemetry-Machine ran by millions. Favored by the gaming
+ industry, and enterprise, and others who have sold their souls and
+ probably should have known better.

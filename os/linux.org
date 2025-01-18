@@ -1,0 +1,37 @@
+#+title: GNU/Linux
+#+description: A Free (as in Freedom) OS
+
+
+At this point, I don't really care what the non-believers think - if
+you are *not* running GNU/Linux, you are wrong. Of course I understand
+the need to run dedicated Windows and MacOS machines, when it is out
+of your control - say you have a Macbook or need to run it for
+%employer. No need to stress about that. But when you are given the
+opportunity - given a choice, you should pick whatever Linux-based OS
+suits your needs best.
+* Devices
+:PROPERTIES:
+:ID:       ad25b130-d832-4109-84ad-7cb9900ed227
+:CREATED:  <2025-01-17 Fri 19:15>
+:END:
+[[https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/dev.html][/dev]]
+In Linux, everything is a file.
+
+/dev/ contains special device files - usually block or character
+device.
+
+major, minor = category, device
+0, 5
+
+mknod - create special device files
+
+[[https://www.redhat.com/en/blog/linux-block-devices-hints-debugging-and-new-developments][redhat hints]]
+** Framebuffer
+:PROPERTIES:
+:ID:       639e5d85-e143-421d-86be-9bc291bc2f8b
+:CREATED:  <2025-01-17 Fri 19:15>
+:END:
+:EDGES:
+[2025-01-17 Fri 19:15] -- [[https://docs.kernel.org/fb/framebuffer.html][The Frame Buffer Device — The Linux Kernel documentation]]
+:END:
+/dev/fb*

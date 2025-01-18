@@ -1,0 +1,39 @@
+#+title: Honda
+* Honda Motor Company
+:PROPERTIES:
+:ID:       0cbdde1c-8f48-40eb-b090-975cff3ffeae
+:CREATED:  <2025-01-17 Fri 16:05>
+:END:
+:EDGES:
+[2025-01-17 Fri 16:06] -- [[https://en.wikipedia.org/wiki/Honda][Honda - Wikipedia]]
+[2025-01-17 Fri 16:07] -- [[https://global.honda/][Honda Motor Co.,Ltd.｜Honda Global Corporate Website]]
+[2025-01-17 Fri 22:48] <- [[id:e6a7db9a-b591-48f9-aa9c-296968821599][Cars]]
+:END:
+
+** Head Unit
+:PROPERTIES:
+:ID:       99c456f5-d1cc-4de3-8c76-6b02990b8e30
+:CREATED:  <2025-01-17 Fri 16:09>
+:END:
+:EDGES:
+[2025-01-17 Fri 16:16] -- [[https://github.com/librick/ic1101/tree/main][GitHub - librick/ic1101: Reverse engineering 10th gen Civic]]
+:END:
+
+*** ADB
+:PROPERTIES:
+:ID:       0a1a68f5-acee-4762-8136-477f8fe3e5ad
+:CREATED:  <2025-01-17 Fri 16:10>
+:END:
+:EDGES:
+[2025-01-17 Fri 16:12] -- [[https://www.autohack.org/][Honda Hack – How to root your Honda head unit and install apps freely.]]
+:END:
+
+** CAN Messages
+:PROPERTIES:
+:ID:       f213dab2-1cda-47ee-88f6-6f7e7754f74e
+:CREATED:  <2025-01-17 Fri 16:14>
+:END:
+:EDGES:
+[2025-01-17 Fri 16:14] -- [[https://github.com/commaai/opendbc/tree/master/opendbc/dbc/generator/honda][opendbc/opendbc/dbc/generator/honda]]
+:END:
+

@@ -1,0 +1,14 @@
+#+title: Query Languages
+* SQL
+:PROPERTIES:
+:ID:       90b5d156-6fd6-47de-9e76-32e69115f5ac
+:CREATED:  <2025-01-17 Fri 18:42>
+:END:
+* DQL
+:PROPERTIES:
+:ID:       da0aecca-6d5b-4719-9235-6a11fe978b11
+:CREATED:  <2025-01-17 Fri 18:42>
+:END:
+A term we coined for 'Deductive Query Languages' - implemented as part
+of the CC Core. Datalog and subsets of Prolog fall under this
+category.

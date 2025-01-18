@@ -1,0 +1,11 @@
+#+title: ASM
+#+description: Assembly Language Flavors
+
+* NASM
+:PROPERTIES:
+:ID:       5f4daaa9-8536-4051-b2b3-b4669f7960ee
+:CREATED:  <2025-01-17 Fri 18:23>
+:END:
+:EDGES:
+[2025-01-17 Fri 18:23] -- [[https://www.nasm.us/][NASM]]
+:END:
