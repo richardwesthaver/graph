@@ -1,4 +1,10 @@
 #+title: Shell langs
+* Bash
+:PROPERTIES:
+:ID:       603a9a84-70ee-437b-9419-06e99fe431f3
+:CREATED:  <2025-01-18 Sat 20:46>
+:END:
+
 * Nu
 :PROPERTIES:
 :ID:       b4048114-ec39-4e53-816f-2f1319d404ee

@@ -1,1 +1,6 @@
 #+title: Javascript
+* Javascript
+:PROPERTIES:
+:ID:       d9226de2-4b80-4193-a06e-e3185ffb5217
+:CREATED:  <2025-01-18 Sat 20:46>
+:END:

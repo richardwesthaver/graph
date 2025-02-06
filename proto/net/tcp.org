@@ -1,1 +1,11 @@
 #+title: TCP
+* TCP
+:PROPERTIES:
+:ID:       a2c33f5d-8e07-4122-98df-72d321ae313b
+:CREATED:  <2025-01-18 Sat 20:42>
+:END:
+** HTTP
+:PROPERTIES:
+:ID:       5c9b8b56-6c37-4171-8da1-ac6e4e3cd0a1
+:CREATED:  <2025-01-18 Sat 20:42>
+:END:

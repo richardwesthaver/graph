@@ -89,3 +89,9 @@
   sb-regalloc:
   sb-disassem:
 #+end_src
+
+** Tree Shaker
+:PROPERTIES:
+:ID:       6beca36e-6264-4741-9180-66e81bf58c49
+:CREATED:  <2025-01-26 Sun 00:54>
+:END:

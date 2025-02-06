@@ -1,0 +1,9 @@
+#+title: Glasgow Haskell Compiler
+* GHC
+:PROPERTIES:
+:ID:       9a00b903-ea15-48d3-8440-025998ca857b
+:CREATED:  <2025-02-06 Thu 18:34>
+:END:
+:EDGES:
+[2025-02-06 Thu 18:34] -- [[https://www.haskell.org/ghc/][The Glasgow Haskell Compiler]]
+:END:

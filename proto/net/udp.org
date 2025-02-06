@@ -1,1 +1,57 @@
 #+title: UDP
+* UDP
+:PROPERTIES:
+:ID:       a2f33ea0-51c3-45d8-8c19-03a95321384c
+:CREATED:  <2025-01-17 Fri 23:14>
+:END:
+** Multicast
+:PROPERTIES:
+:ID:       f7e112ca-25b4-41f1-a756-2492eda9dd90
+:CREATED:  <2025-02-01 Sat 22:02>
+:END:
+:EDGES:
+[2025-02-01 Sat 22:11] -- [[https://datatracker.ietf.org/doc/html/rfc5771][RFC 5771 - IANA Guidelines for IPv4 Multicast Address Assignments]]
+[2025-02-01 Sat 22:11] -- [[https://datatracker.ietf.org/doc/html/rfc7346][RFC 7346 - IPv6 Multicast Address Scopes]]
+:END:
+*** Multicasting in Rust
+:PROPERTIES:
+:ID:       d3e91177-ad7f-4d8d-82d9-5ac09f786774
+:CREATED:  <2025-02-01 Sat 22:03>
+:END:
+:EDGES:
+[2025-02-01 Sat 22:03] -- [[https://bluejekyll.github.io/blog/posts/multicasting-in-rust/][Multicasting in Rust]]
+[2025-02-01 Sat 22:06] <- [[id:7dd61019-39f3-4706-bfc4-ea48bf76da9c][Rust]]
+[2025-02-01 Sat 22:27] -> [[id:8e929d14-5562-4e6b-8ecc-41245faecec1][mDNS]]
+:END:
+- unicast :: single =src= to single =dst= (TCP and UDP)
+- broadcast :: many =src= to many =dst= on a single network (UDP)
+- anycast :: single =src= to one of many =dst= (TCP [kinda] and UDP)
+- multicast :: many =src= to many =dst= (UDP and RTP*)
+** Protocols
+*** QUIC
+:PROPERTIES:
+:ID:       031f06eb-b4a6-4386-a17f-33712bf67181
+:CREATED:  <2025-01-17 Fri 23:14>
+:END:
+**** Quinn
+:PROPERTIES:
+:ID:       f10769f7-cf9b-4bb5-ada9-d499af348f9d
+:CREATED:  <2025-01-17 Fri 23:14>
+:END:
+[[https://github.com/quinn-rs/quinn/tree/main][GitHub - quinn-rs/quinn]]
+:END:
+Async-friendly QUIC implementation in Rust
+*** OSC
+:PROPERTIES:
+:ID:       33ad3584-2728-4f90-8fae-397f026731f1
+:CREATED:  <2025-01-18 Sat 20:43>
+:END:
+*** RTP
+:PROPERTIES:
+:ID:       e7e88a43-5294-48fd-84dc-9f90a4ae193b
+:CREATED:  <2025-02-01 Sat 22:10>
+:END:
+:EDGES:
+[2025-02-01 Sat 22:10] -- [[https://en.wikipedia.org/wiki/Real-time_Transport_Protocol][Real-time Transport Protocol - Wikipedia]]
+:END:
+Real-time Transport Protocol

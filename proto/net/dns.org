@@ -1,0 +1,16 @@
+#+title: Domain Name Systems
+* DNS
+:PROPERTIES:
+:ID:       78f84075-f759-43dd-be98-b23eccf26333
+:CREATED:  <2025-02-01 Sat 22:15>
+:END:
+* mDNS
+:PROPERTIES:
+:ID:       8e929d14-5562-4e6b-8ecc-41245faecec1
+:CREATED:  <2025-02-01 Sat 22:16>
+:END:
+:EDGES:
+[2025-02-01 Sat 22:16] -- [[https://datatracker.ietf.org/doc/html/rfc6762][RFC 6762 - Multicast DNS]]
+[2025-02-01 Sat 22:18] -- [[https://en.wikipedia.org/wiki/Multicast_address][Multicast address - Wikipedia]]
+[2025-02-01 Sat 22:27] <- [[id:d3e91177-ad7f-4d8d-82d9-5ac09f786774][Multicasting in Rust]]
+:END:

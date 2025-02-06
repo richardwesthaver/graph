@@ -1,0 +1,20 @@
+#+title: Concatenative Programming Languages
+
+* Forth
+:PROPERTIES:
+:ID:       ffb8be57-d874-4540-9fe0-9efea6559185
+:CREATED:  <2025-01-18 Sat 20:44>
+:END:
+
+* Factor
+:PROPERTIES:
+:ID:       ffb8be57-d874-4540-9fe0-9efea6559185
+:CREATED:  <2025-01-18 Sat 20:44>
+:END:
+
+* Joy
+:PROPERTIES:
+:ID:       ffb8be57-d874-4540-9fe0-9efea6559185
+:CREATED:  <2025-01-18 Sat 20:44>
+:END:
+

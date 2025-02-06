@@ -1,0 +1,9 @@
+#+title: Version Control Systems
+* VCS
+:PROPERTIES:
+:ID:       36ccc6c1-1b2d-4a48-8c1c-714a43873407
+:CREATED:  <2025-02-06 Thu 18:40>
+:END:
+:EDGES:
+[2025-02-06 Thu 18:40] -- [[https://en.wikipedia.org/wiki/Version_control][Version control - Wikipedia]]
+:END:

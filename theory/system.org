@@ -1,0 +1,21 @@
+#+title: System Theory
+* OSI
+:PROPERTIES:
+:ID:       f08e3bbb-44cf-4036-8fb9-406d9f030f4f
+:CREATED:  <2025-02-01 Sat 19:08>
+:END:
+:EDGES:
+[2025-02-01 Sat 19:09] -- [[https://en.wikipedia.org/wiki/OSI_model][OSI model - Wikipedia]]
+:END:
+The Open Systems Interconnection (OSI) Model provides a 'common basis
+for the coordination of standards development for the purpose of
+systems interconnection.'
+
+1. Physical
+2. Data
+3. Network
+4. Transport 
+  http://103.47.12.35/bitstream/handle/1/4881/659.pdf
+5. Session
+6. Presentation
+7. Application

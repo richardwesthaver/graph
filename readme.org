@@ -2,7 +2,7 @@
 #+description: CC Knowledge Graph
 #+author: Richard Westhaver
 #+email:richard.westhaver@gmail.com
-#+setupfile: clean.theme
+#+setupfile: ../clean.theme
 #+export_file_name: index
 
 The CC =graph= is a collection of org documents representing a network
@@ -13,3 +13,18 @@ parent node or file.
 
 These documents depend on the core =graph.el= package which provides
 an interface for modifying the graph.
+
+- app
+- art
+- os
+- int
+- proto
+  - net
+  - dat
+- hw
+- web
+- comp
+- lang
+- math
+- theory
+

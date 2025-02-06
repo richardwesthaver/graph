@@ -1,0 +1,39 @@
+#+TITLE: PC Part Picker
+* pcpartpicker.com
+:PROPERTIES:
+:ID:       218869f2-d154-490b-ab0a-88fb23ca0368
+:CREATED:  <2025-02-01 Sat 15:28>
+:END:
+:EDGES:
+[2025-02-01 Sat 15:29] -- [[https://www.reddit.com/r/buildapc/comments/g7tum/comment/c1lkk6i/][Reddit - comment on internals (14y ago)]]
+:END:
+- python/django stack
+
+crawler.pcpartpicker.com
+
+- https://pcpartpicker.com/products/cpu/
+  - /qapi/product/category
+- https://cfparequest.pcpartpicker.com/js/parequest.js
+
+#+begin_src lisp
+(mapcar 'list (hash-table-keys (nth 2 (multiple-value-list (req:get "https://pcpartpicker.com/products/cpu/#X=0,371659")))))
+#+end_src
+
+#+RESULTS:
+| alt-svc                   |
+| cf-ray                    |
+| server                    |
+| x-xss-protection          |
+| x-frame-options           |
+| x-content-type-options    |
+| referrer-policy           |
+| expect-ct                 |
+| strict-transport-security |
+| cf-cache-status           |
+| set-cookie                |
+| vary                      |
+| connection                |
+| transfer-encoding         |
+| content-type              |
+| date                      |
+

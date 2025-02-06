@@ -1,5 +1,4 @@
 #+title: Lisp
-
 * Common Lisp
 :EDGES:
 [2025-01-17 Fri 15:49] -- [[https://lisp-lang.org/][Common Lisp]]

@@ -1,0 +1,10 @@
+#+title: Compiler Theory
+* Tree Shaking
+:PROPERTIES:
+:ID:       23185c5d-7470-4bf5-a700-99752c334333
+:CREATED:  <2025-01-26 Sun 00:55>
+:END:
+:EDGES:
+[2025-01-26 Sun 00:56] -- [[https://en.wikipedia.org/wiki/Tree_shaking][Tree shaking - Wikipedia]]
+:END:
+A dead-code-elimination technique applied when optimizing code.
