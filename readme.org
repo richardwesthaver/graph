@@ -14,17 +14,16 @@ parent node or file.
 These documents depend on the core =graph.el= package which provides
 an interface for modifying the graph.
 
-- app
-- art
-- os
-- int
-- proto
-  - net
-  - dat
-- hw
-- web
-- comp
-- lang
-- math
-- theory
+[[file:app][app]]
+[[file:comp][comp]]
+[[file:hw][hw]]
+[[file:int][int]]
+[[file:lang][lang]]
+[[file:math][math]]
+[[file:notes.org][notes]]
+[[file:os][os]]
+[[file:proto][proto]]
+[[file:sys][sys]]
+[[file:theory][theory]]
+[[file:web][web]]
 
