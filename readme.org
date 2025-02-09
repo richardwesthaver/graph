@@ -1,7 +1,7 @@
 #+title: Graph
 #+description: CC Knowledge Graph
 #+author: Richard Westhaver
-#+email:richard.westhaver@gmail.com
+#+email: richard.westhaver@gmail.com
 #+setupfile: ../clean.theme
 #+export_file_name: index
 
