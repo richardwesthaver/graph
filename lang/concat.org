@@ -5,7 +5,9 @@
 :ID:       ffb8be57-d874-4540-9fe0-9efea6559185
 :CREATED:  <2025-01-18 Sat 20:44>
 :END:
-
+- [2023-07-04 Tue]
+  Factor is a cool concatenative lang but unfortunately the C interface
+  (vm/master.h) no longer exists on the master branch.
 * Factor
 :PROPERTIES:
 :ID:       ffb8be57-d874-4540-9fe0-9efea6559185
@@ -16,5 +18,8 @@
 :PROPERTIES:
 :ID:       ffb8be57-d874-4540-9fe0-9efea6559185
 :CREATED:  <2025-01-18 Sat 20:44>
+:END:
+:EDGES:
+[2025-02-06 Thu 18:55] -- [[https://hypercubed.github.io/joy/html/j02maf.html][Mathematical foundations of Joy]]
 :END:
 

@@ -1,0 +1,19 @@
+#+title: Desktop Protocols
+* XDG
+:PROPERTIES:
+:ID:       e0ad1796-3d1e-4026-b019-e212756a205f
+:CREATED:  <2025-02-09 Sun 13:35>
+:END:
+:EDGES:
+[2025-02-09 Sun 13:35] -- [[https://www.freedesktop.org/wiki/Specifications/][Specifications]]
+[2025-02-09 Sun 13:37] -- [[https://gitlab.freedesktop.org/xdg][xdg · GitLab]]
+:END:
+/Cross-Desktop Group/
+** xdg-user-dirs
+:PROPERTIES:
+:ID:       d34f4c76-4cee-4513-b172-c2a6034c2048
+:CREATED:  <2025-02-09 Sun 13:38>
+:END:
+:EDGES:
+[2025-02-09 Sun 13:38] -- [[http://freedesktop.org/wiki/Software/xdg-user-dirs][xdg-user-dirs]]
+:END:

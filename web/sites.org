@@ -1,4 +1,16 @@
-#+TITLE: PC Part Picker
+#+title: Websites
+* ozbargain.com.au
+:PROPERTIES:
+:ID:       0ef132b4-d324-4bf9-86d0-94ada3ef04b3
+:CREATED:  <2025-02-01 Sat 16:51>
+:END:
+:EDGES:
+[2025-02-01 Sat 16:51] -- [[https://www.ozbargain.com.au/node/675611][OzBargain - RSS Feed - Accessing The Deals Comments? - OzBargain Forums]]
+:END:
+- https://www.ozbargain.com.au/ozbapi/block/forum_new
+- https://www.ozbargain.com.au/deals/feed
+- https://www.ozbargain.com.au/live/feed
+
 * pcpartpicker.com
 :PROPERTIES:
 :ID:       218869f2-d154-490b-ab0a-88fb23ca0368

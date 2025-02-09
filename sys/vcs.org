@@ -7,3 +7,13 @@
 :EDGES:
 [2025-02-06 Thu 18:40] -- [[https://en.wikipedia.org/wiki/Version_control][Version control - Wikipedia]]
 :END:
+** Git
+:PROPERTIES:
+:ID:       442c8fbb-b09d-4f85-a068-2a0f6a2de430
+:CREATED:  <2025-02-09 Sun 13:32>
+:END:
+** Mercurial
+:PROPERTIES:
+:ID:       be8e9117-4d72-40ea-a062-8029a3342248
+:CREATED:  <2025-02-09 Sun 13:32>
+:END:

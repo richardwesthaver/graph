@@ -1,0 +1,10 @@
+#+title: Web Data Sources
+* public datasets
+:PROPERTIES:
+:ID:       59e3ba53-3f40-47db-929c-acc998f9092d
+:CREATED:  <2025-02-06 Thu 19:07>
+:END:
+https://github.com/awesomedata/awesome-public-datasets
+https://docs.openml.org/Datasets/
+https://wiki.pathmind.com/open-datasets
+https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/

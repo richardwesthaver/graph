@@ -7,3 +7,50 @@
 :EDGES:
 [2025-02-01 Sat 22:06] -> [[id:d3e91177-ad7f-4d8d-82d9-5ac09f786774][Multicasting in Rust]]
 :END:
+** Serde
+:PROPERTIES:
+:ID:       ffb4e87c-e265-4549-91f9-093e714708c0
+:CREATED:  <2025-02-06 Thu 18:59>
+:END:
+- [2023-07-05 Wed] \\
+  important part of the Rust ecosystem, another dtolnay
+  contribution. If you want to program a /data/ format in the Rust
+  ecosystem, this is how you do it.
+
+  The way it works is that you define some special structs, a
+  Serializer and a Deserializer which implement the Serialize and
+  Deserialize traits provided by serde, respectively.
+
+  You can use these structs to provide your public API. The
+  conventional choice is public top-level functions like from-str
+  and to-string. That's it, your serialization library can now read and
+  write your data format as Rust data types.
+
+  [[https://serde.rs/enum-representations.html][enum-representations]]
+  - the default behavior is an externally tagged representation (verbose)
+
+  The docs use strings as core IO when implementing a custom format,
+  but the convention is to implement for T where T is bound by std::io
+  Read or Write trait. Then you can provide a more robust public API
+  (from_bytes, from_writer, etc).
+** Rust != C
+:PROPERTIES:
+:ID:       bb68152d-1794-47d8-86c0-03eb7f9256d7
+:CREATED:  <2025-02-06 Thu 18:59>
+:END:
+/Rust is not C/. =C= is old, i.e. well-supported with a stable ABI,
+making the process of creating bindings for a C library a breeze in
+many languages.
+
+For a Rust library we need to first appease the compiler, as explained
+in [[https://doc.rust-lang.org/nomicon/ffi.html#calling-rust-code-from-c][this section]] of the Rustonomicon. Among other things it involves
+changing the calling-convention of functions with a type signature and
+editing the Cargo.toml file to produce a C-compatible ABI binary. The
+Rust default ABI is unstable and can't reliably be used like the C ABI
+can.
+** best practices
+:PROPERTIES:
+:ID:       ea2f3f8e-1c8c-4c05-b16c-fb197d346409
+:END:
+https://rust-lang.github.io/api-guidelines/documentation.html
+also: https://lisp-lang.org/style-guide/

@@ -45,6 +45,14 @@
   #define PAD5_LOWTAG 14 /* 0xE */
   #define OTHER_POINTER_LOWTAG 15 /* 0xF */
 #+end_src
+*** Bindings
+:PROPERTIES:
+:ID:       a4d05da6-b90d-4a9f-8237-67a10c8c4588
+:CREATED:  <2025-02-09 Sun 14:21>
+:END:
+:EDGES:
+[2025-02-09 Sun 14:22] -- [[https://www.sbcl.org/sbcl-internals/Binding-and-unbinding.html][Binding and unbinding - SBCL Internals]]
+:END:
 *** Symbols of Interest
 :PROPERTIES:
 :ID:       a8ee911d-6d19-452b-b03a-249a446c1b20
@@ -95,3 +103,5 @@
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49
 :CREATED:  <2025-01-26 Sun 00:54>
 :END:
+With the complexity involved in SBCL image dumps it becomes a hard
+problem to design an effective tree-shaker.

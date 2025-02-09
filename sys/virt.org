@@ -1,0 +1,17 @@
+#+title: Virtualization
+* Containers
+:PROPERTIES:
+:ID:       83b24cd0-3c89-400e-b63b-64872569222b
+:CREATED:  <2025-02-09 Sun 13:32>
+:END:
+** OCI
+:PROPERTIES:
+:ID:       ec17da11-a3d1-4343-9d0b-09c63c569db5
+:CREATED:  <2025-02-06 Thu 18:45>
+:END:
+** Docker
+:PROPERTIES:
+:ID:       c7733e64-1370-4586-94e1-dfad81080160
+:CREATED:  <2025-02-06 Thu 18:45>
+:END:
+
