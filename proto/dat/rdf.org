@@ -1,0 +1,21 @@
+#+title: Resource Description Framework
+* RDF
+:PROPERTIES:
+:ID:       69d2206b-c9bf-46ff-a354-d6428863559d
+:CREATED:  <2025-02-10 Mon 20:04>
+:END:
+:EDGES:
+[2025-02-10 Mon 20:04] -- [[https://en.wikipedia.org/wiki/Resource_Description_Framework][Resource Description Framework - Wikipedia]]
+[2025-02-10 Mon 20:05] -- [[https://www.w3.org/RDF/][RDF - Semantic Web Standards]]
+[2025-02-10 Mon 20:10] -- [[https://neo4j.com/blog/rdf-vs-property-graphs-knowledge-graphs/][RDF Triple Stores vs. Property Graphs: What's the Difference?]]
+:END:
+- [[https://www.w3.org/TR/n-quads/][n-quads]]
+- [[https://www.w3.org/TR/turtle/][turtle]]
+** SPARQL
+:PROPERTIES:
+:ID:       9dcb0f55-6bdc-4b81-a7f5-4c24901596ca
+:CREATED:  <2025-02-10 Mon 20:06>
+:END:
+:EDGES:
+[2025-02-10 Mon 20:06] -- [[https://www.w3.org/2001/sw/wiki/SPARQL][SPARQL - Semantic Web Standards]]
+:END:
