@@ -105,3 +105,25 @@
 :END:
 With the complexity involved in SBCL image dumps it becomes a hard
 problem to design an effective tree-shaker.
+
+** Contribs
+:PROPERTIES:
+:ID:       c33a5587-daab-4e61-a0df-fc6856b00f70
+:CREATED:  <2025-02-11 Tue 20:55>
+:END:
+
+*** sb-bsd-sockets
+:PROPERTIES:
+:ID:       0c2908c2-69d0-4866-b225-3d7eec026b76
+:CREATED:  <2025-02-11 Tue 20:55>
+:END:
+#+begin_src lisp
+(defvar *protocols*
+  `((:tcp ,sockint::ipproto_tcp "tcp" "TCP")
+    (:udp ,sockint::ipproto_udp "udp" "UDP")
+    (:ip ,sockint::ipproto_ip "ip" "IP")
+    (:ipv6 ,sockint::ipproto_ipv6 "ipv6" "IPV6")
+    (:icmp ,sockint::ipproto_icmp "icmp" "ICMP")
+    (:igmp ,sockint::ipproto_igmp "igmp" "IGMP")
+    (:raw ,sockint::ipproto_raw "raw" "RAW")))
+#+end_src

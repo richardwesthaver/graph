@@ -80,7 +80,7 @@ feels right even if the implementation is something very different
 With X, it is assumed to be much harder to write an equivalent
 'compositor'. Here's the thing though - with a significantly complex X
 client implementation, it is /impossible/ to replicate in WL. This is
-really the crux of Artemi's argument in his issue. He asked for a 1:1
+really the crux of Artem's argument in his issue. He asked for a 1:1
 equivalent X/WL comparison when no such thing exists, and in my
 opinion it is a waste of time.
 

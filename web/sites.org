@@ -49,3 +49,37 @@ crawler.pcpartpicker.com
 | content-type              |
 | date                      |
 
+* nytimes.com
+:PROPERTIES:
+:ID:       6448b881-6310-4f17-9d3d-874ec5fa3972
+:CREATED:  <2025-02-11 Tue 19:22>
+:END:
+:EDGES:
+[2025-02-11 Tue 19:22] -- [[https://www.nytimes.com/][The New York Times - Breaking News, US News, World News and Videos]]
+[2025-02-11 Tue 19:29] -- [[https://open.nytimes.com/abra-an-enterprise-framework-for-experimentation-at-the-times-57f8931449cd][ABRA: An enterprise framework for experimentation at The Times | by The NYT Open Team | NYT Open]]
+:END:
+#+begin_src js
+  _f.apply(null,["url":url,"body":body,"headers":{nyt-app-type,nyt-app-version,nyt-token,x-nyt-targeting-dimensions-map:"newsTenure=anon_user"}]]
+#+end_src
+- NYT-User-Token
+- https://a1.nyt.com/abra-config/current/vi-prd.json
+- https://samizdat-graphql.nytimes.com/graphql/v2
+
+* craigslist.org
+:PROPERTIES:
+:ID:       314f6109-db30-45de-bda1-3b1084224b40
+:CREATED:  <2025-02-11 Tue 19:31>
+:END:
+:EDGES:
+[2025-02-11 Tue 19:32] -- [[https://craigslist.org/][craigslist: hartford jobs, apartments, for sale, services, community, and events]]
+[2025-02-11 Tue 19:33] -- [[https://www.craigslist.org/about/bulk_posting_interface][craigslist Bulk Posting Interface]]
+[2025-02-11 Tue 19:34] -- [[https://bapi.craigslist.org/bulkpost-docs/v1/][Craigslist Bulkpost API]]
+:END:
+* ebay.com
+:PROPERTIES:
+:ID:       9edf9c19-de57-46f2-85c6-8de9df888057
+:CREATED:  <2025-02-11 Tue 19:36>
+:END:
+:EDGES:
+[2025-02-11 Tue 19:36] -- [[https://developer.ebay.com/develop][Develop | eBay Developers Program]]
+:END:
