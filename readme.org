@@ -27,3 +27,12 @@ an interface for modifying the graph.
 [[file:theory][theory]]
 [[file:web][web]]
 
+#+begin_src emacs-lisp :export results
+  (org-graph-from-id-locations t)
+  `((nodes ,(hash-table-count (org-graph-nodes org-graph)))
+    (edges ,(hash-table-count (org-graph-edges org-graph))))
+#+end_src
+
+#+RESULTS:
+| nodes | 157 |
+| edges |  92 |

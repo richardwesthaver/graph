@@ -15,9 +15,11 @@
 [2025-02-07 Fri 21:00] -- [[https://lispcookbook.github.io/cl-cookbook/clos.html][Fundamentals of CLOS]]
 [2025-02-07 Fri 21:01] -- [[https://gigamonkeys.com/book/object-reorientation-generic-functions][Object Reorientation: Generic Functions]]
 [2025-02-07 Fri 21:02] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/07_.htm][CLHS: Chapter 7]]
+:END:
 *** Method Combination
 :PROPERTIES:
 :ID:       4e7b8135-3d53-4739-9a72-563971a5b876
+:CREATED:  <2025-01-17 Fri 19:19>
 :END:
 :EDGES:
 [2025-02-07 Fri 21:00] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node285.html][28.1.7.2. Standard Method Combination]]
@@ -66,9 +68,7 @@ and Web screenshot tests.
 :EDGES:
 [2025-01-17 Fri 19:30] -- [[https://github.com/atlas-engineer/nyxt][GitHub - atlas-engineer/nyxt]]
 :END:
-#+begin_quote
 the hacker's browser
-#+end_quote
 
-- note :: as of [2025-02-07 Fri] I'm unable to successfully build Nyxt
-  on my system, but the code available has some goodies (json/nlp/etc)
+as of [2025-02-07 Fri] I'm unable to successfully build Nyxt on my
+system, but the code available has some goodies (json/nlp/etc)

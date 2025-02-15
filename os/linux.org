@@ -131,6 +131,7 @@ https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 *** Userspace Block Device
 :PROPERTIES:
 :ID:       d58cb494-ce43-49cc-859b-aa6a518ac314
+:CREATED:  <2025-02-14 Fri 22:11>
 :END:
 :EDGES:
 [2025-02-06 Thu 19:10] -- [[https://docs.kernel.org/block/ublk.html][Userspace block device driver (ublk driver)]]
