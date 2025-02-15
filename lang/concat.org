@@ -22,8 +22,8 @@
 
 * Factor
 :PROPERTIES:
-:ID:       ffb8be57-d874-4540-9fe0-9efea6559185
 :CREATED:  <2025-01-18 Sat 20:44>
+:ID:       b0f61b51-fbd8-4b45-a8cd-0a2e08864fed
 :END:
 :EDGES:
 [2025-02-13 Thu 22:34] -- [[https://factorcode.org/][Factor programming language]]
@@ -31,8 +31,8 @@
 
 * Joy
 :PROPERTIES:
-:ID:       ffb8be57-d874-4540-9fe0-9efea6559185
 :CREATED:  <2025-01-18 Sat 20:44>
+:ID:       39af0f8f-aff7-40f3-a139-e1338a6bb966
 :END:
 :EDGES:
 [2025-02-06 Thu 18:55] -- [[https://hypercubed.github.io/joy/html/j02maf.html][Mathematical foundations of Joy]]
