@@ -1,17 +1,32 @@
 #+title: Concatenative Programming Languages
-
 * Forth
 :PROPERTIES:
 :ID:       ffb8be57-d874-4540-9fe0-9efea6559185
 :CREATED:  <2025-01-18 Sat 20:44>
 :END:
+:EDGES:
+[2025-02-13 Thu 22:33] -- [[https://www.forth.com/][forth.com]]
+:END:
 - [2023-07-04 Tue]
   Factor is a cool concatenative lang but unfortunately the C interface
   (vm/master.h) no longer exists on the master branch.
+
+** Books
+:PROPERTIES:
+:ID:       35de6467-e9fc-49f4-b46b-0e05029f9f48
+:CREATED:  <2025-02-13 Thu 22:32>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:33] -- [[https://vfxforth.com/arena/ProgramForth.pdf][Programming Forth]]
+:END:
+
 * Factor
 :PROPERTIES:
 :ID:       ffb8be57-d874-4540-9fe0-9efea6559185
 :CREATED:  <2025-01-18 Sat 20:44>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:34] -- [[https://factorcode.org/][Factor programming language]]
 :END:
 
 * Joy

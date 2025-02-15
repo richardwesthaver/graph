@@ -1,0 +1,9 @@
+#+title: Extensible Markup Language
+* XML
+:PROPERTIES:
+:ID:       c73d296a-47fe-4769-9802-86cac8a86090
+:CREATED:  <2025-02-13 Thu 22:50>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:51] -- [[https://www.w3.org/TR/xml/][Extensible Markup Language (XML) 1.0 (Fifth Edition)]]
+:END:

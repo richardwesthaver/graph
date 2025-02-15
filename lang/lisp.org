@@ -3,7 +3,10 @@
 :EDGES:
 [2025-01-17 Fri 15:49] -- [[https://lisp-lang.org/][Common Lisp]]
 [2025-01-17 Fri 19:19] -- [[https://common-lisp-libraries.readthedocs.io/][common-lisp-libraries]]
+[2025-02-13 Thu 22:42] -- [[https://franz.com/support/documentation/cl-ansi-standard-draft-w-sidebar.pdf][CL ANSI Standard Draft]]
+[2025-02-13 Thu 22:43] -- [[https://www.lispworks.com/documentation/HyperSpec/Front/StartPts.htm][CLHS: Starting Points]]
 :END:
+
 ** CLOS
 :PROPERTIES:
 :ID:       8bc4ff14-f001-4515-ac1f-fd59ef8ef506

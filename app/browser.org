@@ -1,0 +1,16 @@
+#+title: Web Browsers
+* Chrome
+:PROPERTIES:
+:ID:       49a90b67-054a-4591-b73f-8821dba7c060
+:CREATED:  <2025-02-13 Thu 22:36>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/canary/][Chrome Canary]]
+[2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/][Google Chrome]]
+[2025-02-13 Thu 22:38] -- [[https://www.chromium.org/chromium-projects/][Chromium]]
+:END:
+* Firefox
+:PROPERTIES:
+:ID:       de59cc69-d16c-4ff9-87f4-1d95f34525e9
+:CREATED:  <2025-02-13 Thu 22:38>
+:END:

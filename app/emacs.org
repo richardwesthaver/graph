@@ -4,3 +4,17 @@
 :ID:       5fc53135-1b6c-4260-b264-66be7a2b8ff0
 :CREATED:  <2025-01-18 Sat 20:47>
 :END:
+:EDGES:
+[2025-02-13 Thu 22:39] -- [[https://www.gnu.org/software/emacs/][GNU Emacs]]
+[2025-02-13 Thu 22:41] -- [[https://www.gnu.org/software/emacs/manual/][Online Manuals]]
+:END:
+
+** Org Mode
+:PROPERTIES:
+:ID:       cea03181-b97b-494d-b362-28056416469d
+:CREATED:  <2025-02-13 Thu 22:39>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:40] -- [[https://orgmode.org/][Org mode for GNU Emacs]]
+[2025-02-13 Thu 22:40] -- [[https://orgmode.org/org.html][The Org Manual]]
+:END:

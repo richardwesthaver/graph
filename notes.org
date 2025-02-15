@@ -115,3 +115,215 @@ as little as possible, exposing the interesting bits.
 - focus on composition
 - build applications
 - aggresively incorporate lessons learned
+
+* thunks
+:PROPERTIES:
+:ID:       f0acadbc-b8a6-4dd3-a8a4-f51cba10da75
+:CREATED:  <2025-01-17 Fri 15:54>
+:END:
+- from tagbody in Lisp discord
+#+begin_quote
+the inventors of the thunk recalling that the term "was coined after
+they realized (in the wee hours after hours of discussion) that the
+type of an argument in Algol-60 could be figured out in advance with a
+little compile-time thought [...] In other words, it had 'already been
+thought of'; thus it was christened a thunk, which is 'the past tense
+of "think" at two in the morning'.
+#+end_quote
+
+* SBCL+Rust=?
+:PROPERTIES:
+:ID:       a8b0dd7e-741c-4f5f-9d66-40b26ef56b14
+:CREATED:  <2025-02-14 Fri 19:04>
+:END:
+** Overview
+:PROPERTIES:
+:ID:       748ba6e4-60db-4ff7-9d78-12c3f67644d8
+:END:
++ CODE :: [[https://lab.rwest.io/packy/stash/dysk][packy/stash/dysk]]
+
+Lisp is powerful. Rust is consistent. I like these languages and have
+an interest in combining them - i.e. calling Rust code from Lisp and
+vice-versa. The level of interop we're after in this case is the
+simplest - [[https://en.wikipedia.org/wiki/Foreign_function_interface][FFI]]. In the future we won't be paying much attention to the
+FFI in particular, for reasons which will become obvious shortly,
+and instead opt for 'source2source' compilation.
+
+
+
+There's an article about calling Rust from Common Lisp [[https://dev.to/veer66/calling-rust-from-common-lisp-45c5][here]] which
+shows the basics and serves as a great starting point for those
+interested.
+
+*** Rust ABI
+:PROPERTIES:
+:ID:       6c24dc95-eea6-44fb-8c7f-bb49227ca7bf
+:END:
+The complication(s) with Rust I mentioned early is really just that /it is not C/. =C=
+is old, i.e. well-supported with a stable ABI, making the process of creating bindings
+for a C library a breeze in many languages.
+
+For a Rust library we need to first appease the compiler, as explained in [[https://doc.rust-lang.org/nomicon/ffi.html#calling-rust-code-from-c][this section]]
+of the Rustonomicon. Among other things it involves changing the calling-convention of
+functions with a type signature and editing the Cargo.toml file to produce a
+C-compatible ABI binary. The Rust default ABI is unstable and can't reliably be used
+like the C ABI can.
+
+[[https://github.com/rodrimati1992/abi_stable_crates][abi_stable_crates]] is a project which addresses some of the ABI concerns, presenting a
+sort of ABI-API as a Rust library. Perhaps this is the direction the ecosystem will go
+with in order to maintain an unstable ABI, but for now there is no 'clear' pathway for a
+friction-less FFI development experience in Rust.
+
+*** Overhead
+:PROPERTIES:
+:ID:       faf8fbcb-3403-4e2f-b881-ef1404ad9780
+:END:
+Using FFI involves some overhead. Check [[https://github.com/dyu/ffi-overhead][here]] for an example benchmark
+across a few languages. While building the =core=, I'm very much
+aware of this, and will need a few sanity benchmarks to make sure the
+cost doesn't outweigh the benefit. In particular, I'm concerned about
+crossing multiple language barriers (Rust<->C<->Lisp).
+
+** basic example
+:PROPERTIES:
+:ID:       ab04fff7-51c9-4f1c-b61b-fa4739932343
+:END:
+*** Setup
+:PROPERTIES:
+:ID:       08420b18-3856-4b62-9523-98fb3398afca
+:END:
+For starters, I'm going to assume we all have Rust (via [[https://rustup.rs/][rustup]]) and
+[[https://www.sbcl.org/][sbcl]] installed on our GNU/Linux system (some tweaks needed for
+Darwin/Windows, not covered in this post).
+**** Cargo
+:PROPERTIES:
+:ID:       cfeb1299-67c5-4a64-863e-f214e195e176
+:END:
+Create a new library crate. For this example we're focusing on a
+'skeleton' for /dynamic/ libraries only, so our experiment will be
+called =dylib-skel= or *dysk* for short.  
+
+src_sh[:exports code]{cargo init dysk --lib && cd dysk && touch test.rs}
+
+A =src/lib.rs= will be generated for you.
+
+The next step is to edit your =Cargo.toml= file. Add these lines after
+the =[package]= section and before =[dependencies]=:
+#+begin_src conf-toml
+[lib]
+crate-type = ["cdylib","rlib"]
+path = "src/lib.rs"
+[[bin]]
+name="dysk-test"
+path="test.rs"
+#+end_src
+
+This tells Rust to generate a shared C-compatible object with a =.so=
+extension which we can open using [[https://man.archlinux.org/man/dlopen.3.en][dlopen]] as well as an executable
+binary named =dysk-test=.
+
+**** cbindgen
+:PROPERTIES:
+:ID:       435d84d6-c959-4bf6-ad37-fb6e524b54ff
+:END:
+***** install
+:PROPERTIES:
+:ID:       15115ab8-e7b4-4050-9567-bf026cc140d1
+:END:
+Next, we want the =cbindgen= program which we'll use to generate
+header files for C/C++. This step isn't necessary at all, we just want
+it for further experimentation.
+
+src_sh[:exports code]{cargo install --force cbindgen}
+
+We append the =cbindgen= crate as a /build dependency/ to our
+=Cargo.toml= like so:
+#+begin_src conf-toml
+[build-dependencies]
+cbindgen = "0.24"
+#+end_src
+***** cbindgen.toml
+:PROPERTIES:
+:ID:       21d776b7-9f8d-445c-83c2-8e0c28751827
+:END:
+#+begin_src conf-toml :tangle cbindgen.toml
+language = "C"
+autogen_warning = "/* Warning, this file is autogenerated by cbindgen. Don't modify this manually. */"
+include_version = true
+namespace = "dysk"
+cpp_compat = true
+after_includes = "#define DYSK_VERSION \"0.1.0\""
+line_length = 88
+tab_width = 2
+documentation = true
+documentation_style = "c99"
+usize_is_size_t = true
+[cython]
+header = "dysk.h"
+#+end_src
+***** build.rs
+:PROPERTIES:
+:ID:       469dd142-bafa-4076-8ba9-baf088e60260
+:END:
+#+begin_src rust :tangle build.rs
+fn main() -> Result<(), cbindgen::Error> {
+  if let Ok(b) = cbindgen::generate(std::env::var("CARGO_MANIFEST_DIR").unwrap()) {
+    b.write_to_file("dysk.h"); Ok(())}
+  else { panic!("failed to generate dysk.h from cbindgen.toml") } }
+#+end_src
+*** lib.rs
+:PROPERTIES:
+:ID:       e9d50e77-4d1e-4d38-90aa-9977d8c6c888
+:END:
+#+begin_src rust :tangle lib.rs
+//! lib.rs --- dysk library
+use std::ffi::{c_char, c_int, CString};
+#[no_mangle]
+pub extern "C" fn hello() -> *const c_char {
+  CString::new("hello from rust").unwrap().into_raw()}
+#[no_mangle]
+pub extern "C" fn plus(a:c_int,b:c_int) -> c_int {a+b}
+#[no_mangle]
+pub extern "C" fn plus1(n:c_int) -> c_int {n+1}
+#+end_src
+*** test.rs
+:PROPERTIES:
+:ID:       84b5dffe-7171-4d72-9788-f288e3185070
+:END:
+#+begin_src rust :tangle test.rs
+//! test.rs --- dysk test
+fn main() { let mut i = 0u32; while i < 500000000 {i+=1; dysk::plus1(2 as core::ffi::c_int);}}
+#+end_src
+*** compile
+:PROPERTIES:
+:ID:       30f4fb3e-0757-4df6-947f-8d1e11edabf9
+:END:
+#+begin_src sh
+cargo build --release
+#+end_src
+*** load from SBCL
+:PROPERTIES:
+:ID:       69b517f2-648d-4e44-b956-7879b3dadf99
+:END:
+#+begin_src lisp :tangle dysk.lisp
+;;; dysk.lisp
+;; (dysk:hello) ;; => "hello from rust"
+(defpackage :dysk
+  (:use :cl :sb-alien)
+  (:export :hello :plus :plus1))
+(in-package :dysk)
+(load-shared-object #P"target/release/libdysk.so")
+(define-alien-routine hello c-string)
+(define-alien-routine plus int (a int) (b int))
+(define-alien-routine plus1 int (n int))
+#+end_src
+**** benchmark
+:PROPERTIES:
+:ID:       86e4195d-601b-4736-b852-1209a6d38bdf
+:END:
+#+begin_src shell
+time target/release/dysk-test
+#+end_src
+#+begin_src lisp :tangle test.lisp
+(time (dotimes (_ 500000000) (dysk:plus1 2)))
+#+end_src

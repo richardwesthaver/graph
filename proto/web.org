@@ -1,0 +1,10 @@
+#+title: Web Protocols and Standards
+* WebGPU
+:PROPERTIES:
+:ID:       78ff8ddb-cc33-4538-9157-1a11cc04248d
+:CREATED:  <2025-02-13 Thu 22:48>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:48] -- [[https://gpuweb.github.io/gpuweb/][WebGPU]]
+[2025-02-13 Thu 22:48] -- [[https://sotrh.github.io/learn-wgpu/][Learn Wgpu]]
+:END:
