@@ -1,0 +1,23 @@
+#+title: Processes
+* Project Management
+:PROPERTIES:
+:ID:       4b96aef0-69cd-4493-be15-9ba0d62012c2
+:CREATED:  <2025-02-14 Fri 22:37>
+:END:
+[[https://en.wikipedia.org/wiki/Project_management][Project management - Wikipedia]]
+:END:
+* Task Management
+:PROPERTIES:
+:ID:       dfd57e14-4ef7-4bb9-9b86-0352cbf14c90
+:CREATED:  <2025-02-14 Fri 22:37>
+:END:
+[[https://en.wikipedia.org/wiki/Task_management][Task management - Wikipedia]]
+:END:
+* Operations Management
+:PROPERTIES:
+:ID:       9d05f7b3-fc57-41ea-828e-f482be342bb7
+:CREATED:  <2025-02-14 Fri 22:37>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:38] -- [[https://en.wikipedia.org/wiki/Operations_management][Operations management - Wikipedia]]
+:END:

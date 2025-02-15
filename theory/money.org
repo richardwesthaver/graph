@@ -1,0 +1,28 @@
+#+title: Money Theory
+* Money
+:PROPERTIES:
+:ID:       1488ce14-b340-49ed-ba7c-cbecf8212b47
+:CREATED:  <2025-02-14 Fri 22:20>
+:END:
+** Finance
+:PROPERTIES:
+:ID:       5bea8dac-44fa-48e6-b7b6-4f971fad73e8
+:CREATED:  <2025-02-14 Fri 22:17>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:20] -- [[https://en.wikipedia.org/wiki/Finance][Finance - Wikipedia]]
+:END:
+*** Derivative
+:PROPERTIES:
+:ID:       5f17b96f-915b-460d-a60a-4b9bc9d7b007
+:CREATED:  <2025-02-14 Fri 22:19>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:20] -- [[https://en.wikipedia.org/wiki/Derivative_(finance)][Derivative (finance) - Wikipedia]]
+:END:
+#+begin_quote
+1. an item (the "underlier") that can or must be bought or sold,
+2. a future act which must occur (such as a sale or purchase of the underlier),
+3. a price at which the future transaction must take place, and
+4. a future date by which the act (such as a purchase or sale) must take place.
+#+end_quote

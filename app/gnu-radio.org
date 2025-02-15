@@ -1,0 +1,10 @@
+#+title: GNU Radio
+* GNU Radio
+:PROPERTIES:
+:ID:       c92b3830-3836-41b0-a502-f04b44cd3292
+:CREATED:  <2025-02-14 Fri 22:22>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:23] -- [[https://www.gnuradio.org/][GNU Radio]]
+[2025-02-14 Fri 22:23] -- [[https://wiki.gnuradio.org/index.php?title=What_Is_GNU_Radio][What Is GNU Radio - GNU Radio]]
+:END:

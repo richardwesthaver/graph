@@ -1,0 +1,33 @@
+#+title: Economic Theory
+* Economics
+:PROPERTIES:
+:ID:       f21933e9-5fd6-4cc8-a964-2b75c753c8d4
+:CREATED:  <2025-02-14 Fri 22:39>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:57] -- [[https://en.wikipedia.org/wiki/Economics][Economics - Wikipedia]]
+:END:
+** Microeconomics
+:PROPERTIES:
+:ID:       6e111491-9ca8-4535-9642-d0bec178eed2
+:CREATED:  <2025-02-14 Fri 22:39>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:40] -- [[https://en.wikipedia.org/wiki/Microeconomics][Microeconomics - Wikipedia]]
+:END:
+** Macroeconomics
+:PROPERTIES:
+:ID:       b579b27e-6057-4012-9503-0eb710490ec1
+:CREATED:  <2025-02-14 Fri 22:39>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:57] -- [[https://en.wikipedia.org/wiki/Macroeconomics][Macroeconomics - Wikipedia]]
+:END:
+** Games
+:PROPERTIES:
+:ID:       f346f656-c938-46fa-b1e8-334c1eba3b21
+:CREATED:  <2025-02-14 Fri 22:41>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:41] -- [[https://en.wikipedia.org/wiki/Game_theory][Game theory - Wikipedia]]
+:END:
