@@ -1,17 +1,52 @@
 #+title: Virtualization
-* Containers
+* Container
 :PROPERTIES:
 :ID:       83b24cd0-3c89-400e-b63b-64872569222b
 :CREATED:  <2025-02-09 Sun 13:32>
 :END:
+:EDGES:
+[2025-01-18 Sat 19:57] -- [[https://en.wikipedia.org/wiki/Containerization_(computing)][Containerization (computing) - Wikipedia]]
+:END:
+Containers are really a 21st-century invention derived from full
+machine emulation such as QEMU/KVM and the need to support
+highly-distributed application architectures on limited physical
+nodes. A container is usually associated with a single service,
+endpoint, or workload and provides isolation from other containers and
+the host.
+** Distroless
+:PROPERTIES:
+:ID:       94419fb9-0726-47a0-b416-dca75e9a508c
+:CREATED:  <2025-01-26 Sun 01:55>
+:END:
+:EDGES:
+[2025-01-26 Sun 01:55] -- [[https://labs.iximiuz.com/tutorials/gcr-distroless-container-images][What's Inside Distroless Container Images: Taking a Closer Look]]
+[2025-01-26 Sun 01:56] -- [[https://github.com/GoogleContainerTools/distroless][GoogleContainerTools/distroless: 🥑 Language focused docker images, minus the operating system.]]
 ** OCI
 :PROPERTIES:
 :ID:       ec17da11-a3d1-4343-9d0b-09c63c569db5
 :CREATED:  <2025-02-06 Thu 18:45>
+:END:
+:EDGES:
+[2025-01-18 Sat 19:57] -- [[https://opencontainers.org/][Open Container Initiative - Open Container Initiative]]
+[2025-01-18 Sat 20:41] << [[id:89199dcd-fabd-4952-b5e9-1b3ffaf06e6b][Podman]]
 :END:
 ** Docker
 :PROPERTIES:
 :ID:       c7733e64-1370-4586-94e1-dfad81080160
 :CREATED:  <2025-02-06 Thu 18:45>
 :END:
-
+* VM
+:PROPERTIES:
+:ID:       86b9ed90-dbc4-4ee8-ac8d-842ef0b39941
+:CREATED:  <2025-02-14 Fri 21:33>
+:END:
+Virtual Machines
+** OVF
+:PROPERTIES:
+:ID:       858d93bc-65b8-46e5-a8aa-342a14fbd20d
+:CREATED:  <2025-02-14 Fri 21:33>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:33] -- [[https://en.wikipedia.org/wiki/Open_Virtualization_Format][Open Virtualization Format - Wikipedia]]
+:END:
+Open Virtualization Format

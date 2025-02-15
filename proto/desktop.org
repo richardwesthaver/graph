@@ -17,3 +17,12 @@
 :EDGES:
 [2025-02-09 Sun 13:38] -- [[http://freedesktop.org/wiki/Software/xdg-user-dirs][xdg-user-dirs]]
 :END:
+* Secret Service
+:PROPERTIES:
+:ID:       6f534214-a89d-4cec-9c29-0f345fdc2199
+:CREATED:  <2025-02-14 Fri 21:43>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:43] -- [[https://specifications.freedesktop.org/secret-service-spec/latest/][Secret Service API Draft]]
+[2025-02-14 Fri 21:44] -- [[https://www.gnu.org/software/emacs/manual/html_node/auth/Secret-Service-API.html][Secret Service API (Emacs auth-source Library 0.3)]]
+:END:

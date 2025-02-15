@@ -1,0 +1,54 @@
+#+title: Machine Learning
+* ML
+:PROPERTIES:
+:ID:       10588a36-bec0-4a84-9cce-179cbdeb1e4e
+:CREATED:  <2025-02-14 Fri 21:54>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:54] -- [[https://en.wikipedia.org/wiki/Machine_learning][Machine learning - Wikipedia]]
+:END:
+** Models
+:PROPERTIES:
+:ID:       c899b4aa-563b-42ac-8e01-f488107dd63f
+:CREATED:  <2025-02-14 Fri 21:54>
+:END:
+*** LLM
+:PROPERTIES:
+:ID:       2a3605d9-9e3a-4743-9b59-e0f0c3c2c323
+:CREATED:  <2025-02-14 Fri 21:54>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:55] -- [[https://en.wikipedia.org/wiki/Large_language_model][Large language model - Wikipedia]]
+:END:
+Large language models.
+
+:note:
+I have a very negative opinion of the current AI-product paradigm
+which is dominated by chatbots.
+:end:
+**** GPT
+:PROPERTIES:
+:ID:       7a50d672-f3b9-4606-b4b7-3a6133c9b076
+:CREATED:  <2025-02-14 Fri 21:56>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:57] -- [[https://en.wikipedia.org/wiki/Generative_pre-trained_transformer][Generative pre-trained transformer - Wikipedia]]
+:END:
+Generative Pre-trained Transformer
+***** DeepSeek
+:PROPERTIES:
+:ID:       d767b814-5842-4c8f-8b97-818b53759ac3
+:CREATED:  <2025-02-14 Fri 21:59>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:59] -- [[https://github.com/deepseek-ai/DeepSeek-R1][DeepSeek-R1]]
+:END:
+***** LLaMA
+:PROPERTIES:
+:ID:       6e99e961-7ce7-4d3f-86f8-66fde8855f4b
+:CREATED:  <2025-02-14 Fri 22:02>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:02] -- [[https://github.com/ggerganov/llama.cpp][ggerganov/llama.cpp: LLM inference in C/C++]]
+[2025-02-14 Fri 22:02] -- [[https://arxiv.org/abs/2302.13971][LLaMA: Open and Efficient Foundation Language Models]]
+:END:

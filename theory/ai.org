@@ -1,0 +1,17 @@
+#+title: Artificial Intelligence
+* AI
+:PROPERTIES:
+:ID:       cd514a66-4979-4983-8c9b-29b54eafa8dd
+:CREATED:  <2025-02-14 Fri 21:53>
+:END:
+[[https://en.wikipedia.org/wiki/Artificial_intelligence][Artificial intelligence - Wikipedia]]
+:END:
+** GenAI
+:PROPERTIES:
+:ID:       976c3073-07c5-4901-bb64-2b2e2f799170
+:CREATED:  <2025-02-14 Fri 22:01>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:01] -- [[https://en.wikipedia.org/wiki/Generative_artificial_intelligence][Generative artificial intelligence - Wikipedia]]
+:END:
+Generative AI

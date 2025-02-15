@@ -1,0 +1,11 @@
+#+title: Statistics
+* Statistics
+:PROPERTIES:
+:ID:       e986c340-2931-46e3-8adc-bfbf0cd95bd4
+:CREATED:  <2025-02-14 Fri 21:52>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:52] -- [[https://en.wikipedia.org/wiki/Statistics][Statistics - Wikipedia]]
+:END:
+The discipline that conerns the collection, organization, analysis,
+interpretation, and presentation of data.
