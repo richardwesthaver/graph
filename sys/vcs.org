@@ -12,8 +12,35 @@
 :ID:       442c8fbb-b09d-4f85-a068-2a0f6a2de430
 :CREATED:  <2025-02-09 Sun 13:32>
 :END:
+:EDGES:
+[2025-02-14 Fri 21:20] -- [[https://git-scm.com/][Git]]
+[2025-02-14 Fri 21:20] -- [[https://git-scm.com/book/en/v2/Git-Tools-Submodules][Git Submodules]]
+:END:
+
 ** Mercurial
 :PROPERTIES:
 :ID:       be8e9117-4d72-40ea-a062-8029a3342248
 :CREATED:  <2025-02-09 Sun 13:32>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:21] -- [[https://www.mercurial-scm.org/][Mercurial SCM]]
+:END:
+
+*** Extensions
+:PROPERTIES:
+:ID:       a62a2e17-8167-4812-b5ec-f4f9ef698f56
+:CREATED:  <2025-02-14 Fri 21:21>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:21] -- [[https://wiki.mercurial-scm.org/UsingExtensions][Using Mercurial Extensions]]
+:END:
+
+**** Evolve
+:PROPERTIES:
+:ID:       f8829131-67eb-4d4d-a101-28f08eced9ae
+:CREATED:  <2025-02-14 Fri 21:21>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:22] -- [[https://wiki.mercurial-scm.org/EvolveExtension][Evolve Extension]]
+[2025-02-14 Fri 21:22] -- [[https://wiki.mercurial-scm.org/ChangesetEvolution][Changeset Evolution]]
 :END:

@@ -4,3 +4,33 @@
 :ID:       b3639401-b960-42d3-8325-7b5e056e3478
 :CREATED:  <2025-01-17 Fri 16:05>
 :END:
+** Extensions
+:PROPERTIES:
+:ID:       2a3947b0-a120-4c48-a8d5-f9c01deb49b9
+:CREATED:  <2025-02-14 Fri 21:14>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:14] -- [[https://gcc.gnu.org/onlinedocs/gcc/C-Extensions.html][C Extensions]]
+:END:
+
+*** Function Attributes
+:PROPERTIES:
+:ID:       f6074a9e-0c44-4dd7-a472-dfae30ce34db
+:CREATED:  <2025-02-14 Fri 21:06>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:06] -- [[https://gcc.gnu.org/onlinedocs/gcc-4.5.3/gcc/Function-Attributes.html][Function Attributes]]
+:END:
+#+begin_src c
+  #define AN(f,s,x...) __attribute((naked))U f(x){asm(s);}
+#+end_src
+
+*** Pragmas
+:PROPERTIES:
+:ID:       ad2e3567-2c78-40f5-9a5d-2ffb66e5fae2
+:CREATED:  <2025-02-14 Fri 21:16>
+:END:
+:EDGES:
+[2025-02-14 Fri 21:16] -- [[https://gcc.gnu.org/onlinedocs/gcc/Pragmas.html][Pragmas]]
+:END:
+Generally recommended to use [[id:f6074a9e-0c44-4dd7-a472-dfae30ce34db][Function Attributes]] instead.
