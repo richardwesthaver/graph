@@ -4,7 +4,7 @@
 #+email: richard.westhaver@gmail.com
 #+setupfile: ../clean.theme
 #+export_file_name: index
-
+#+bibliography: refs.bib
 The CC =graph= is a collection of org documents representing a network
 of /nodes/ and /edges/. Nodes are typically represented as Org
 headlines and the Edges are dynamically built from dedicated =EDGES=
