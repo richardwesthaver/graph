@@ -1,6 +1,8 @@
 #+title: Windows
-#+description: 
-
- Bloated Telemetry-Machine ran by millions. Favored by the gaming
- industry, and enterprise, and others who have sold their souls and
- probably should have known better.
+* Windows
+:PROPERTIES:
+:ID:       c584cce5-6e64-4ad3-99ad-0d0ef2119837
+:CREATED:  <2025-02-14 Fri 22:13>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:13] -- [[https://en.wikipedia.org/wiki/Microsoft_Windows][Microsoft Windows - Wikipedia]]

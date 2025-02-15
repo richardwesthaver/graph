@@ -1,7 +1,10 @@
 #+title: GNU/Linux
 #+description: A Free (as in Freedom) OS
-
-
+* Linux
+:PROPERTIES:
+:ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
+:CREATED:  <2025-02-09 Sun 13:33>
+:END:
 At this point, I don't really care what the non-believers think - if
 you are *not* running GNU/Linux, you are wrong. Of course I understand
 the need to run dedicated Windows and MacOS machines, when it is out
@@ -9,14 +12,7 @@ of your control - say you have a Macbook or need to run it for
 %employer. No need to stress about that. But when you are given the
 opportunity - given a choice, you should pick whatever Linux-based OS
 suits your needs best.
-
-* 
-:PROPERTIES:
-:ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
-:CREATED:  <2025-02-09 Sun 13:33>
-:END:
-
-* Devices
+** Devices
 :PROPERTIES:
 :ID:       ad25b130-d832-4109-84ad-7cb9900ed227
 :CREATED:  <2025-01-17 Fri 19:15>
@@ -33,7 +29,7 @@ major, minor = category, device
 mknod - create special device files
 
 [[https://www.redhat.com/en/blog/linux-block-devices-hints-debugging-and-new-developments][redhat hints]]
-** utils
+*** utils
 :PROPERTIES:
 :ID:       f8ce343e-c866-4fff-8e39-2da32a59d56e
 :CREATED:  <2025-02-06 Thu 19:16>
@@ -122,7 +118,7 @@ compression/de-duplication can be done via VDO kernel mod
 
 https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 
-** Frame Buffer Device
+*** Frame Buffer Device
 :PROPERTIES:
 :ID:       639e5d85-e143-421d-86be-9bc291bc2f8b
 :CREATED:  <2025-01-17 Fri 19:15>
@@ -132,7 +128,7 @@ https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 :END:
 /dev/fb*
 - used by fbgrab/fbcat program
-** Userspace Block Device
+*** Userspace Block Device
 :PROPERTIES:
 :ID:       d58cb494-ce43-49cc-859b-aa6a518ac314
 :END:
@@ -141,3 +137,16 @@ https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 :END:
 ublk
 https://github.com/ming1/ubdsrv
+** Libraries
+:PROPERTIES:
+:ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
+:CREATED:  <2025-02-14 Fri 22:11>
+:END:
+*** Keutils
+:PROPERTIES:
+:ID:       5e859a3f-0c31-4796-85c6-7008b346f186
+:CREATED:  <2025-02-14 Fri 22:12>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
+:END:
