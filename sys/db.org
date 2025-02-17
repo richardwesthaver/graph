@@ -1,2 +1,52 @@
 #+title: Databases
+* DB
+:PROPERTIES:
+:ID:       a833eb98-c31e-4492-ac07-e718a9bce086
+:CREATED:  <2025-02-16 Sun 19:06>
+:END:
+:EDGES:
+[2025-02-16 Sun 19:06] -- [[https://en.wikipedia.org/wiki/Database][Database - Wikipedia]]
+:END:
+** Partition
+:PROPERTIES:
+:ID:       f239f934-a477-4050-8d19-3c2597a64b34
+:CREATED:  <2025-02-16 Sun 19:07>
+:END:
+:EDGES:
+[2025-02-16 Sun 19:08] -- [[https://en.wikipedia.org/wiki/Partition_(database)][Partition (database) - Wikipedia]]
+:END:
+*** Shard
+:PROPERTIES:
+:ID:       03aa2c81-5318-45d7-853f-bbcfdb8e7d48
+:CREATED:  <2025-02-16 Sun 19:07>
+:END:
+:EDGES:
+[2025-02-16 Sun 19:07] -- [[https://en.wikipedia.org/wiki/Shard_(database_architecture)][Shard (database architecture) - Wikipedia]]
+:END:
+** DBMS
+:PROPERTIES:
+:ID:       3bd5f5f8-956b-49a4-b280-eec4a8c0f85e
+:CREATED:  <2025-02-16 Sun 19:09>
+:END:
+:EDGES:
+[2025-02-16 Sun 19:16] -- [[https://www.ibm.com/docs/en/zos-basic-skills?][IBM Documentation]]
+:END:
+Database Management Systems
 
+Traditionally DBMS has referred to a large, closed system. This
+paradigm is slowly diminishing as we move towards more capable
+middleware and micro-service architectures which defeat the purpose of
+a monolithic, weakly distributed system.
+
+Our understanding of DBMS, for the purpose of this node is quite
+vague - it is anything which is powerful enough to be used as the core
+of a DBMS on its own or which covers enough surface area in the DB
+school of thought to be considered one.
+*** DataFusion
+:PROPERTIES:
+:ID:       3ce0b887-31ea-4a78-96a2-6671907a687a
+:CREATED:  <2025-02-16 Sun 19:09>
+:END:
+:EDGES:
+[2025-02-16 Sun 19:16] -- [[https://datafusion.apache.org/][Apache DataFusion — Apache DataFusion documentation]]
+:END:
