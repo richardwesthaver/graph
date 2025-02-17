@@ -66,3 +66,11 @@ service unit. See the respective man pages for more information:
   [Install]
   WantedBy=default.target
 #+end_src
+*** Templates
+:PROPERTIES:
+:ID:       55bce339-207c-47fc-b829-7567d95e46fa
+:CREATED:  <2025-02-16 Sun 21:08>
+:END:
+:EDGES:
+[2025-02-16 Sun 21:08] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#Service%20Templates][systemd.service]]
+:END:
