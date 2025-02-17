@@ -10,7 +10,7 @@
 - [2023-07-04 Tue]
   Factor is a cool concatenative lang but unfortunately the C interface
   (vm/master.h) no longer exists on the master branch.
-
+- [[https://www.pbm.com/~lindahl/real.programmers.html][Real Programmers Don't Use Pascal]]
 ** Books
 :PROPERTIES:
 :ID:       35de6467-e9fc-49f4-b46b-0e05029f9f48
@@ -37,4 +37,3 @@
 :EDGES:
 [2025-02-06 Thu 18:55] -- [[https://hypercubed.github.io/joy/html/j02maf.html][Mathematical foundations of Joy]]
 :END:
-

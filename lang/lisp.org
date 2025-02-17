@@ -1,11 +1,17 @@
 #+title: Lisp
+#+bibliography: ../refs.bib
 * Common Lisp
+:PROPERTIES:
+:ID:       af0ed8bb-4b45-42f9-b8be-82b8ea7935a3
+:CREATED:  <2025-02-16 Sun 20:04>
+:END:
 :EDGES:
 [2025-01-17 Fri 15:49] -- [[https://lisp-lang.org/][Common Lisp]]
 [2025-01-17 Fri 19:19] -- [[https://common-lisp-libraries.readthedocs.io/][common-lisp-libraries]]
 [2025-02-13 Thu 22:42] -- [[https://franz.com/support/documentation/cl-ansi-standard-draft-w-sidebar.pdf][CL ANSI Standard Draft]]
 [2025-02-13 Thu 22:43] -- [[https://www.lispworks.com/documentation/HyperSpec/Front/StartPts.htm][CLHS: Starting Points]]
 :END:
+
 ** CLOS
 :PROPERTIES:
 :ID:       8bc4ff14-f001-4515-ac1f-fd59ef8ef506
@@ -45,6 +51,18 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-02-14 Fri 20:20] -- [[https://gist.github.com/WetHat/a49e6f2140b401a190d45d31e052af8f][Pretty Print Table Data in Common Lisp]]
 :END:
+
+** Loop
+:PROPERTIES:
+:ID:       439a02f1-afcf-4ba3-bdf4-0304d152ba6f
+:CREATED:  <2025-02-16 Sun 19:40>
+:END:
+
+** Macros
+:PROPERTIES:
+:ID:       1ccb1faa-6e41-4b4f-877f-4382bc250e53
+:CREATED:  <2025-02-16 Sun 19:40>
+:END:
 ** Applications
 :PROPERTIES:
 :ID:       475491e1-eacd-4759-be06-1c027e91f565
@@ -72,3 +90,17 @@ the hacker's browser
 
 as of [2025-02-07 Fri] I'm unable to successfully build Nyxt on my
 system, but the code available has some goodies (json/nlp/etc)
+* Scheme
+:PROPERTIES:
+:ID:       cce00db3-1428-4380-aa5d-8d2ec767b873
+:CREATED:  <2025-02-16 Sun 20:03>
+:END:
+#+cite_export: csl
+#+print_bibliography:
+** Racket
+:PROPERTIES:
+:ID:       74140b0d-af83-4516-ac70-b62bfa3de68d
+:CREATED:  <2025-02-16 Sun 20:03>
+:END:
+- [cite/t/b:@super8-fp]
+  from the PLT guys at NEU - Racket

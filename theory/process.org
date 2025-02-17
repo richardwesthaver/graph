@@ -21,3 +21,26 @@
 :EDGES:
 [2025-02-14 Fri 22:38] -- [[https://en.wikipedia.org/wiki/Operations_management][Operations management - Wikipedia]]
 :END:
+* Information Management
+:PROPERTIES:
+:ID:       4700f502-0bab-4887-b925-224003cc3663
+:CREATED:  <2025-02-16 Sun 20:21>
+:END:
+:EDGES:
+[2025-02-16 Sun 20:21] -- [[https://en.wikipedia.org/wiki/Information_management][Information management - Wikipedia]]
+[2025-02-16 Sun 20:22] -- [[https://en.wikipedia.org/wiki/Information_system][Information system - Wikipedia]]
+:END:
+** Information
+:PROPERTIES:
+:ID:       d181e466-49d6-4421-9282-d227618c5188
+:CREATED:  <2025-02-16 Sun 20:21>
+:END:
+:EDGES:
+[2025-02-16 Sun 20:21] -- [[https://en.wikipedia.org/wiki/Information][Information - Wikipedia]]
+:END:
+  - Information is in essence, data that enables decision making.
+  - "knowledge obtained from investigation, study, or instruction."
+  - disinformation :: false information which is intended to mislead
+  - misinformation :: false, inaccurate, or misleading information
+    that is communicated regardless of an intention to deceive.
+  - [[https://en.wikipedia.org/wiki/Uncertainty][uncertainty]]

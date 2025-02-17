@@ -4,8 +4,41 @@
 :ID:       a2c33f5d-8e07-4122-98df-72d321ae313b
 :CREATED:  <2025-01-18 Sat 20:42>
 :END:
+* WebSocket
+:PROPERTIES:
+:ID:       52a7cb9d-5b78-4681-9146-2d8f5707c1a3
+:CREATED:  <2025-02-16 Sun 20:41>
+:END:
++ rfc :: [[https://datatracker.ietf.org/doc/html/rfc6455][6455]]
+- layer on top of TCP
+- [[https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API][The WebSocket API (WebSockets) - Web APIs | MDN]]
+
 ** HTTP
 :PROPERTIES:
 :ID:       5c9b8b56-6c37-4171-8da1-ac6e4e3cd0a1
 :CREATED:  <2025-01-18 Sat 20:42>
 :END:
+- https://developer.mozilla.org/en-US/docs/Web/HTTP
+#+begin_quote
+Hypertext Transfer Protocol (HTTP) is an application-layer protocol
+for transmitting hypermedia documents, such as HTML. It was designed
+for communication between web browsers and web servers, but it can
+also be used for other purposes. HTTP follows a classical
+client-server model, with a client opening a connection to make a
+request, then waiting until it receives a response. HTTP is a
+stateless protocol, meaning that the server does not keep any data
+(state) between two requests. Though often based on a TCP/IP layer, it
+can be used on any reliable transport layer, that is, a protocol that
+doesn't lose messages silently like UDP does. RUDP — the reliable
+update of UDP — is a suitable alternative.
+#+end_quote
+#+begin_center
+-- [[https://developer.mozilla.org/en-US/docs/Web/HTTP][MDN web docs]]
+#+end_center
+*** HTTPS
+:PROPERTIES:
+:ID:       81e78198-a5ed-4fdd-b487-1bb3874ffa71
+:CREATED:  <2025-02-16 Sun 20:40>
+:END:
+- HTTPS consists of HTTP with the addition of [[file:../../../../Z/core/notes/tls.org][TLS]]
+- HTTP/S is used as a blanket statement for both HTTP and HTTPS

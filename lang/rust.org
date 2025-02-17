@@ -7,6 +7,39 @@
 :EDGES:
 [2025-02-01 Sat 22:06] -> [[id:d3e91177-ad7f-4d8d-82d9-5ac09f786774][Multicasting in Rust]]
 :END:
+- [[https://doc.rust-lang.org/book/][The Rust Book]]
+- [[https://doc.rust-lang.org/rust-by-example/][Rust By Example]]
+- [[https://doc.rust-lang.org/rustc][the rustc book]]
+  :notes:
+  - rustc is the Rust compiler. It is rarely invoked directly by the
+    programmer, but rather indirectly through Cargo. Use the
+    =--verbose= flag to see how =rustc= is called, for example in:
+    #+begin_src shell :eval never
+    cargo build --verbose
+    #+end_src
+  - The compiler has many options
+  :end:
+- [[https://doc.rust-lang.org/cargo][The Cargo Book]]
+- [[https://www.fpcomplete.com/blog/philosophies-rust-haskell/][Philosophies of Rust and Haskell]]                                       :hs:
+- [[https://blog.logrocket.com/rust-cryptography-libraries-a-comprehensive-list/][Rust cryptography libraries: A comprehensive list - LogRocket Blog]]
+- [[https://github.com/dtolnay/syn/tree/master/examples/heapsize][heapsize - syn proc_macro example]] 
+- [[https://gitlab.redox-os.org/redox-os][redox-os · GitLab]]
+- [[https://docs.rust-embedded.org/][Embedded Rust documentation]]
+- [[https://github.com/rust-embedded/wg][GitHub - rust-embedded/wg: Coordination repository of the embedded devices Working Group]]
+- [[https://github.com/MabezDev/xtensa-rust-quickstart/blob/master/src/main.rs][xtensa-rust-quickstart/main.rs at master · MabezDev/xtensa-rust-quickstart · GitHub]]
+- [[https://github.com/rust-lang/rust/blob/master/src/bootstrap/config.rs][rust/config.rs . github]]
+- [[https://jakearchibald.com/2017/async-iterators-and-generators/][Async iterators and generators - JakeArchibald.com]]
+- [[https://rustwasm.github.io/book/introduction.html][Introduction - Rust and WebAssembly]]
+- [[https://gitlab.freedesktop.org/gstreamer/gstreamer-rs][GStreamer / gstreamer-rs · GitLab]]
+- [[https://smallcultfollowing.com/babysteps/blog/2019/10/26/async-fn-in-traits-are-hard/][why async fn in traits are hard]]                                     :async:
+- [[https://doc.rust-lang.org/nightly/std/pin/index.html][std::pin - Rust]]
+- [[https://doc.rust-lang.org/std/macro.todo.html][std::todo - Rust]]
+  - todo macros for code that is /not yet written/ - =unimplemented!=
+  makes no such claims.
+- [[https://internals.rust-lang.org/t/traits-that-should-be-in-std-but-arent/3002][Traits that should be in std, but aren't - libs - Rust Internals]]
+- [[https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples][Macros in Rust]]                                                     :macros:
+- [[https://danielkeep.github.io/tlborm/book/README.html][The Little Book of Rust Macros]]                                     :macros:
+
 ** Serde
 :PROPERTIES:
 :ID:       ffb4e87c-e265-4549-91f9-093e714708c0

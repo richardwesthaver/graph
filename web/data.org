@@ -8,3 +8,4 @@ https://github.com/awesomedata/awesome-public-datasets
 https://docs.openml.org/Datasets/
 https://wiki.pathmind.com/open-datasets
 https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/
+https://www.opensourceshakespeare.org/

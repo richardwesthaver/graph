@@ -7,6 +7,12 @@
 :EDGES:
 [2025-02-16 Sun 19:06] -- [[https://en.wikipedia.org/wiki/Database][Database - Wikipedia]]
 :END:
+- [[https://en.wikipedia.org/wiki/Extract,_transform,_load][ETL]]
+- [[https://en.wikipedia.org/wiki/Extract,_load,_transform][ELT]]
+- [[https://en.wikipedia.org/wiki/Data_warehouse][Data Warehouse]]
+- [[https://en.wikipedia.org/wiki/Data_mart][Data Mart]]
+- [[https://en.wikipedia.org/wiki/Data_lake][Data Lake]]
+
 ** Partition
 :PROPERTIES:
 :ID:       f239f934-a477-4050-8d19-3c2597a64b34

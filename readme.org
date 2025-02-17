@@ -24,7 +24,7 @@ an interface for modifying the graph.
 | nodes | 162 |
 | edges |  94 |
 
-#+BEGIN: project-info :status nil
+#+BEGIN: project-info :status nil :tasks nil
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
@@ -34,29 +34,28 @@ an interface for modifying the graph.
 | description | :description CC Org Files                           |
 | skel-id     | :id 1784914079056115652                             |
 | root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/2c2fc5585ca1][2c2fc5585ca1:16+]] |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/9f0228a7480b][9f0228a7480b:18+]] |
 | tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Sat Feb 15 17:44:34 2025 -0500                      |
+| updated     | Sun Feb 16 19:28:39 2025 -0500                      |
 | langs       | org                                                 |
-| lines       | 2389 :λ 2252 :# 0 :_ 137                            |
+| lines       | 2468 :λ 2331 :# 5 :_ 132                            |
 |-------------+-----------------------------------------------------|
-
-#+CALL: project-tasks() :dir ~/comp/org/graph/
-
-#+RESULTS:
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
 #+RESULTS:
 : 2025-01    426 ***********
-: 2025-02   2173 *************************************************************
+: 2025-02   2320 *************************************************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                  | size | modified            |
 |-----------------------+------+---------------------|
-| [[https://github.com/richardwesthaver/graph/blob/default/readme.org][readme.org]]            |  11k | 2025-02-15 17:49:55 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/lisp.org][lang/lisp.org]]         | 3.2k | 2025-02-16 19:40:58 |
+| [[https://github.com/richardwesthaver/graph/blob/default/readme.org][readme.org]]            |  11k | 2025-02-16 19:53:57 |
+| [[https://github.com/richardwesthaver/graph/blob/default/refs.bib][refs.bib]]              |   5k | 2025-02-16 19:33:18 |
+| [[https://github.com/richardwesthaver/graph/blob/default/refs.org][refs.org]]              |  13k | 2025-02-16 19:34:55 |
 | [[https://github.com/richardwesthaver/graph/blob/default/app/browser.org][app/browser.org]]       |  500 | 2025-02-13 22:38:38 |
 | [[https://github.com/richardwesthaver/graph/blob/default/app/emacs.org][app/emacs.org]]         |  582 | 2025-02-13 22:41:12 |
 | [[https://github.com/richardwesthaver/graph/blob/default/app/gnu-radio.org][app/gnu-radio.org]]     |  334 | 2025-02-14 22:24:04 |
@@ -80,7 +79,6 @@ an interface for modifying the graph.
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/concat.org][lang/concat.org]]       |   1k | 2025-02-15 15:54:10 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/java.org][lang/java.org]]         |   14 | 2024-10-19 03:03:17 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/javascript.org][lang/javascript.org]]   |  134 | 2025-01-18 20:46:49 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/lisp.org][lang/lisp.org]]         |   3k | 2025-02-14 22:59:03 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/python.org][lang/python.org]]       |  126 | 2025-01-18 20:45:59 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/query.org][lang/query.org]]        |  382 | 2025-01-17 18:44:07 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/rust.org][lang/rust.org]]         | 2.2k | 2025-02-06 19:05:08 |
@@ -102,12 +100,11 @@ an interface for modifying the graph.
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/net/tls.org][proto/net/tls.org]]     | 1.4k | 2025-02-03 19:36:34 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/net/udp.org][proto/net/udp.org]]     | 1.9k | 2025-02-01 22:27:16 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/web.org][proto/web.org]]         |  310 | 2025-02-14 19:01:15 |
-| [[https://github.com/richardwesthaver/graph/blob/default/refs.bib][refs.bib]]              | 4.5k | 2025-02-15 17:19:40 |
-| [[https://github.com/richardwesthaver/graph/blob/default/refs.org][refs.org]]              |  15k | 2025-02-15 17:41:49 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/db.org][sys/db.org]]            |   20 | 2025-02-14 21:51:28 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/db.org][sys/db.org]]            | 1.7k | 2025-02-16 19:16:48 |
 | [[https://github.com/richardwesthaver/graph/blob/default/sys/dsp.org][sys/dsp.org]]           |  281 | 2025-02-14 22:35:05 |
 | [[https://github.com/richardwesthaver/graph/blob/default/sys/fs.org][sys/fs.org]]            | 7.6k | 2025-02-15 17:43:25 |
 | [[https://github.com/richardwesthaver/graph/blob/default/sys/mem.org][sys/mem.org]]           |  758 | 2025-02-13 22:32:17 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/srv.org][sys/srv.org]]           | 2.2k | 2025-02-16 19:02:59 |
 | [[https://github.com/richardwesthaver/graph/blob/default/sys/vcs.org][sys/vcs.org]]           | 1.3k | 2025-02-14 21:22:47 |
 | [[https://github.com/richardwesthaver/graph/blob/default/sys/virt.org][sys/virt.org]]          | 1.9k | 2025-02-14 21:49:29 |
 | [[https://github.com/richardwesthaver/graph/blob/default/theory/ai.org][theory/ai.org]]         |  521 | 2025-02-14 22:01:40 |

@@ -151,3 +151,12 @@ https://github.com/ming1/ubdsrv
 :EDGES:
 [2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
 :END:
+** Kernel
+:PROPERTIES:
+:ID:       caed860f-fcef-43a2-b080-94b01352cd43
+:CREATED:  <2025-02-16 Sun 20:12>
+:END:
+:EDGES:
+[2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/kernel-hacking/hacking.html][Unreliable Guide To Hacking The Linux Kernel — The Linux Kernel documentation]]
+[2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/][The Linux Kernel documentation — The Linux Kernel documentation]]
+:END:

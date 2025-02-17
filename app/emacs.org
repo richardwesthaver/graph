@@ -8,6 +8,9 @@
 [2025-02-13 Thu 22:39] -- [[https://www.gnu.org/software/emacs/][GNU Emacs]]
 [2025-02-13 Thu 22:41] -- [[https://www.gnu.org/software/emacs/manual/][Online Manuals]]
 :END:
+- refer to the INSTALL file in the root of the emacs repo for an
+  overview of install options
+- releases are hosted at [[https://ftp.gnu.org/gnu/emacs/]]
 
 ** Org Mode
 :PROPERTIES:
@@ -17,4 +20,6 @@
 :EDGES:
 [2025-02-13 Thu 22:40] -- [[https://orgmode.org/][Org mode for GNU Emacs]]
 [2025-02-13 Thu 22:40] -- [[https://orgmode.org/org.html][The Org Manual]]
+[2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
+[2025-02-16 Sun 20:14] -- [[https://orgmode.org/manual/Library-of-Babel.html][Library of Babel (The Org Manual)]]
 :END:

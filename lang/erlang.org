@@ -1,0 +1,11 @@
+#+title: Erlang
+* Erlang
+:PROPERTIES:
+:ID:       609eef50-a8d4-465c-808d-93c623c05a85
+:CREATED:  <2025-02-16 Sun 20:35>
+:END:
+- [[https://www.erlang.org/][Erlang Programming Language]]
+- [[cdn:media/doc/getting_started_with_erlang-5.4.pdf][Getting Started with Erlang (PDF)]]
+- [[https://learnyousomeerlang.com/introduction][Introduction | Learn You Some Erlang for Great Good!]]
+- [[https://github.com/erlang/otp][GitHub - erlang/otp: Erlang/OTP]]
+- [[https://matthil.de/b/web_protocol.html][matt's web protocol experiments in erlang]]
