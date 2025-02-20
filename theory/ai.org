@@ -4,7 +4,8 @@
 :ID:       cd514a66-4979-4983-8c9b-29b54eafa8dd
 :CREATED:  <2025-02-14 Fri 21:53>
 :END:
-[[https://en.wikipedia.org/wiki/Artificial_intelligence][Artificial intelligence - Wikipedia]]
+:EDGES:
+[2025-02-14 Fri 22:01] -- [[https://en.wikipedia.org/wiki/Artificial_intelligence][Artificial intelligence - Wikipedia]]
 :END:
 ** GenAI
 :PROPERTIES:
