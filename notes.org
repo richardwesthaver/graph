@@ -327,3 +327,28 @@ time target/release/dysk-test
 #+begin_src lisp :tangle test.lisp
 (time (dotimes (_ 500000000) (dysk:plus1 2)))
 #+end_src
+* ops
+:PROPERTIES:
+:ID:       68ab3b7d-272e-4807-b2e9-959f182b8966
+:CREATED:  <2025-02-20 Thu 20:10>
+:END:
+** Release
+:PROPERTIES:
+:ID:       9376d6e5-fe52-41f3-a821-0c2286daf1e0
+:CREATED:  <2025-02-20 Thu 20:10>
+:END:
+
+https://cl-net-snmp.common-lisp.dev/release/release.sh
+#+begin_src shell
+  #!/bin/sh
+  set -x
+
+  rm -rf $1-$2/.git
+  rm -f $1-$2.tar.gz*
+  tar cvzf $1-$2.tar.gz $1-$2
+  rm $1_latest.tar.gz
+  ln -s $1-$2.tar.gz $1_latest.tar.gz
+  gpg -b -a $1-$2.tar.gz
+  rm $1_latest.tar.gz.asc
+  ln -s $1-$2.tar.gz.asc $1_latest.tar.gz.asc
+#+end_src

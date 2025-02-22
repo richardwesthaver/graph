@@ -4,6 +4,9 @@
 :ID:       a2f33ea0-51c3-45d8-8c19-03a95321384c
 :CREATED:  <2025-01-17 Fri 23:14>
 :END:
+:EDGES:
+[2025-02-20 Thu 20:50] -- [[https://www.rfc-editor.org/info/rfc8085][UDP Usage Guidelines]]
+:END:
 - [[https://www.cs.unc.edu/~dewan/242/s07/notes/ipc/node26.html][Process to Process Communication: UDP and TCP/IP]]
 ** Multicast
 :PROPERTIES:
@@ -29,6 +32,9 @@
 - anycast :: single =src= to one of many =dst= (TCP [kinda] and UDP)
 - multicast :: many =src= to many =dst= (UDP and RTP*)
 ** Protocols
+:PROPERTIES:
+:ID:       7f5a6675-3e8a-414b-8788-c9957708bd79
+:END:
 *** QUIC
 :PROPERTIES:
 :ID:       031f06eb-b4a6-4386-a17f-33712bf67181
@@ -55,8 +61,8 @@ Transport-layer network protocol, part of the Chromium project.
   but relevant
 **** drafts
 :PROPERTIES:
-:ID:       8cfb37e7-3529-455d-a1ab-9ad07d600ea5
 :CREATED:  <2025-01-17 Fri 23:14>
+:ID:       530fbb93-e34e-45e0-b62c-4e9a5022649a
 :END:
 - [[https://tools.ietf.org/html/draft-tsvwg-quic-protocol-02][draft-wg-02]] 
 - [[https://tools.ietf.org/html/draft-ietf-quic-transport-29][draft-ietf-quic-transport-29 - QUIC: A UDP-Based Multiplexed and Secure Transport]]
