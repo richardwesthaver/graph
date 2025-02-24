@@ -1,4 +1,5 @@
 #+title: Shell langs
+#+setupfile: ../../clean.theme
 * Bash
 :PROPERTIES:
 :ID:       603a9a84-70ee-437b-9419-06e99fe431f3

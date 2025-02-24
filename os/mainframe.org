@@ -1,0 +1,19 @@
+#+title: Mainframe Operating Systems
+* IBM
+:PROPERTIES:
+:ID:       ece2479d-c9f8-4606-a137-7ca679cf7762
+:CREATED:  <2025-02-22 Sat 19:45>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:45] -- [[https://en.wikipedia.org/wiki/History_of_IBM_mainframe_operating_systems][History of IBM mainframe operating systems - Wikipedia]]
+[2025-02-22 Sat 19:47] -- [[https://www.ibm.com/z/operating-systems][Mainframe Operating Systems (OS) | IBM]]
+:END:
+** z/OS
+:PROPERTIES:
+:ID:       70fae18f-5a6e-4d1b-ba88-81339f13d0ec
+:CREATED:  <2025-02-22 Sat 19:45>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:48] -- [[https://www.ibm.com/products/zos][IBM z/OS operating system]]
+:END:
+[[https://discord.com/channels/880322471608344597/880322472161972260][Discord - System Z Enthusiasts]]

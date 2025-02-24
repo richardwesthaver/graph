@@ -1,1 +1,2 @@
 #+title: Intel
+#+setupfile: ../../clean.theme

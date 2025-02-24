@@ -1,4 +1,5 @@
 #+title: Rust
+#+setupfile: ../../clean.theme
 * Rust
 :PROPERTIES:
 :ID:       7dd61019-39f3-4706-bfc4-ea48bf76da9c

@@ -1,5 +1,6 @@
 #+title: Lisp
 #+bibliography: ../refs.bib
+#+setupfile: ../../clean.theme
 * Common Lisp
 :PROPERTIES:
 :ID:       af0ed8bb-4b45-42f9-b8be-82b8ea7935a3
@@ -51,17 +52,18 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-02-14 Fri 20:20] -- [[https://gist.github.com/WetHat/a49e6f2140b401a190d45d31e052af8f][Pretty Print Table Data in Common Lisp]]
 :END:
-
 ** Loop
 :PROPERTIES:
 :ID:       439a02f1-afcf-4ba3-bdf4-0304d152ba6f
 :CREATED:  <2025-02-16 Sun 19:40>
 :END:
-
 ** Macros
 :PROPERTIES:
 :ID:       1ccb1faa-6e41-4b4f-877f-4382bc250e53
 :CREATED:  <2025-02-16 Sun 19:40>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:18] -- [[https://letoverlambda.com/][Let Over Lambda]]
 :END:
 ** Applications
 :PROPERTIES:
@@ -90,6 +92,21 @@ the hacker's browser
 
 as of [2025-02-07 Fri] I'm unable to successfully build Nyxt on my
 system, but the code available has some goodies (json/nlp/etc)
+** Libraries
+:PROPERTIES:
+:ID:       82d4dffa-070c-4ead-b317-9f9b6820e2c1
+:CREATED:  <2025-02-22 Sat 15:15>
+:END:
+*** CLX
+:PROPERTIES:
+:ID:       54ea6883-851d-4829-8f71-889aa7f58c45
+:CREATED:  <2025-02-22 Sat 15:15>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:15] -- [[https://github.com/sharplispers/clx][sharplispers/clx]]
+:END:
+[[https://github.com/sharplispers/clx/tree/master/extensions][clx/extensions]]
+
 * Scheme
 :PROPERTIES:
 :ID:       cce00db3-1428-4380-aa5d-8d2ec767b873

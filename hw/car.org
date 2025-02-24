@@ -1,4 +1,5 @@
 #+title: Car
+#+setupfile: ../../clean.theme
 Not to be confused with the first element in a list :)
 * Cars
 :PROPERTIES:

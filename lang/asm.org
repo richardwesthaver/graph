@@ -1,6 +1,6 @@
 #+title: ASM
 #+description: Assembly Language Flavors
-
+#+setupfile: ../../clean.theme
 * NASM
 :PROPERTIES:
 :ID:       5f4daaa9-8536-4051-b2b3-b4669f7960ee

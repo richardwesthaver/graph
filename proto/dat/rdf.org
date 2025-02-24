@@ -1,4 +1,5 @@
 #+title: Resource Description Framework
+#+setupfile: ../../../clean.theme
 * RDF
 :PROPERTIES:
 :ID:       69d2206b-c9bf-46ff-a354-d6428863559d

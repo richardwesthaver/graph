@@ -1,4 +1,5 @@
 #+title: Extensible Markup Language
+#+setupfile: ../../../clean.theme
 * XML
 :PROPERTIES:
 :ID:       c73d296a-47fe-4769-9802-86cac8a86090

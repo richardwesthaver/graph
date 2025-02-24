@@ -1,0 +1,30 @@
+#+title: Package Managers
+* DNF
+:PROPERTIES:
+:ID:       26b32ae2-b49c-42cb-a0d7-4823221b79f2
+:CREATED:  <2025-02-22 Sat 18:57>
+:END:
+:EDGES:
+[2025-02-22 Sat 18:58] -- [[https://github.com/rpm-software-management/dnf5][rpm-software-management/dnf5]]
+[2025-02-22 Sat 19:01] -- [[https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/sysadmin/#dnf-5][Changes in Fedora 41 For System Administrators :: Fedora Docs]]
+:END:
+Dandified YUM
+* RPM
+:PROPERTIES:
+:ID:       0a40d25f-0fe5-4b71-9d22-07d4bb355ff4
+:CREATED:  <2025-02-22 Sat 19:02>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:02] -- [[https://rpm.org/index.html][rpm.org - Home]]
+[2025-02-22 Sat 19:03] -- [[https://rpm-packaging-guide.github.io/][RPM Packaging Guide]]
+[2025-02-22 Sat 19:06] -- [[https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based][RPM-based Linux distributions - Wikipedia]]
+:END:
+* rpm-ostree
+:PROPERTIES:
+:ID:       836933b5-3035-4e8c-a2b9-63a773a359db
+:CREATED:  <2025-02-22 Sat 19:18>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:18] -- [[https://coreos.github.io/rpm-ostree/][A true hybrid image/package system | rpm-ostree]]
+:END:
+[[https://coreos.github.io/rpm-ostree/countme/][DNF Count Me support | rpm-ostree]]

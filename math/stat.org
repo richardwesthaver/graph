@@ -1,4 +1,5 @@
 #+title: Statistics
+#+setupfile: ../../clean.theme
 * Statistics
 :PROPERTIES:
 :ID:       e986c340-2931-46e3-8adc-bfbf0cd95bd4

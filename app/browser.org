@@ -1,4 +1,5 @@
 #+title: Web Browsers
+#+setupfile: ../../clean.theme
 * Chrome
 :PROPERTIES:
 :ID:       49a90b67-054a-4591-b73f-8821dba7c060

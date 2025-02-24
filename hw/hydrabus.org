@@ -1,4 +1,5 @@
 #+title: HydraBus
+#+setupfile: ../../clean.theme
 * HydraBus
 :PROPERTIES:
 :ID:       632212eb-accb-4660-a46a-c8688c5d237a

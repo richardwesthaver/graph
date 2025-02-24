@@ -1,4 +1,5 @@
 #+title: Emacs
+#+setupfile: ../../clean.theme
 * Emacs
 :PROPERTIES:
 :ID:       5fc53135-1b6c-4260-b264-66be7a2b8ff0

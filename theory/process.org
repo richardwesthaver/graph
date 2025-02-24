@@ -1,4 +1,5 @@
 #+title: Processes
+#+setupfile: ../../clean.theme
 * Project Management
 :PROPERTIES:
 :ID:       4b96aef0-69cd-4493-be15-9ba0d62012c2

@@ -1,4 +1,5 @@
 #+title: CPU
+#+setupfile: ../../clean.theme
 * CPU
 :PROPERTIES:
 :ID:       20e26c76-3247-4434-89dc-cbd5712fdf67

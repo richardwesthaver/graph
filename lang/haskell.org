@@ -1,4 +1,5 @@
 #+title: Haskell
+#+setupfile: ../../clean.theme
 * Haskell
 :PROPERTIES:
 :ID:       917c397b-01f2-4f02-8b27-abeeeaa463ab

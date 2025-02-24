@@ -1,4 +1,5 @@
 #+title: Hacking Theology
+#+setupfile: ../../clean.theme
 * Wardriving
 :PROPERTIES:
 :ID:       904371de-eaaf-4df9-a9df-4a2a443f2066

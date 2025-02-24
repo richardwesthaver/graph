@@ -1,4 +1,5 @@
 #+title: Concatenative Programming Languages
+#+setupfile: ../../clean.theme
 * Forth
 :PROPERTIES:
 :ID:       ffb8be57-d874-4540-9fe0-9efea6559185

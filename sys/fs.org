@@ -1,5 +1,6 @@
 #+title: Filesystems
 #+bibliography: ../refs.bib
+#+setupfile: ../../clean.theme
 * FS
 :PROPERTIES:
 :ID:       8ff74861-a0bc-49e1-83eb-3a32f8f8fb78

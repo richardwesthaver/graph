@@ -1,4 +1,5 @@
 #+title: Erlang
+#+setupfile: ../../clean.theme
 * Erlang
 :PROPERTIES:
 :ID:       609eef50-a8d4-465c-808d-93c623c05a85

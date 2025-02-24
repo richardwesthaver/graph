@@ -1,4 +1,5 @@
 #+title: SBCL
+#+setupfile: ../../clean.theme
 * SBCL
 :PROPERTIES:
 :ID:       a7f9b428-9323-492f-aaa5-94669bfbc55b

@@ -1,4 +1,5 @@
 #+title: LLVM
+#+setupfile: ../../clean.theme
 * LLVM
 :PROPERTIES:
 :ID:       496b952f-4c98-4303-92b4-1c766565092c

@@ -1,0 +1,19 @@
+#+title: Internet Protocols
+* IP
+:PROPERTIES:
+:ID:       2c915d42-3f42-4a94-a2d7-af73c9938c7b
+:CREATED:  <2025-02-22 Sat 15:21>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:21] -- [[https://en.wikipedia.org/wiki/Internet_Protocol][Internet Protocol - Wikipedia]]
+:END:
+** IP Address
+:PROPERTIES:
+:ID:       1f6e6b6d-a64d-41d8-a60b-898c5024a87e
+:CREATED:  <2025-02-22 Sat 15:22>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:22] -- [[https://en.wikipedia.org/wiki/IP_address][IP address - Wikipedia]]
+[2025-02-22 Sat 15:23] -- [[https://en.wikipedia.org/wiki/Reserved_IP_addresses][Reserved IP addresses - Wikipedia]]
+[2025-02-22 Sat 15:24] -- [[https://datatracker.ietf.org/doc/html/rfc6890][RFC 6890 - Special-Purpose IP Address Registries]]
+:END:

@@ -1,4 +1,5 @@
 #+title: Websites
+#+setupfile: ../../clean.theme
 * ozbargain.com.au
 :PROPERTIES:
 :ID:       0ef132b4-d324-4bf9-86d0-94ada3ef04b3
@@ -83,3 +84,50 @@ crawler.pcpartpicker.com
 :EDGES:
 [2025-02-11 Tue 19:36] -- [[https://developer.ebay.com/develop][Develop | eBay Developers Program]]
 :END:
+* ietf.org
+:PROPERTIES:
+:ID:       8c348a7e-3d6c-4ee8-9bd5-1e57a9754a24
+:CREATED:  <2025-02-22 Sat 15:26>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:26] -- [[https://www.ietf.org/][IETF | Internet Engineering Task Force]]
+[2025-02-22 Sat 15:27] -- [[https://datatracker.ietf.org/][IETF Datatracker]]
+:END:
+- [[https://datatracker.ietf.org/api/][Datatracker API Notes]]
+* iana.org
+:PROPERTIES:
+:ID:       52f85631-e0b4-402d-8300-3b0f96cff72e
+:CREATED:  <2025-02-22 Sat 15:30>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:30] -- [[https://www.iana.org/][Internet Assigned Numbers Authority]]
+:END:
+- [[https://www.iana.org/time-zones][Time Zone Database]]
+- [[https://www.iana.org/protocols][Protocol Registries]]
+* usa.gov
+:PROPERTIES:
+:ID:       b03233cd-2dd2-4dc8-83ea-75f74981c4fa
+:CREATED:  <2025-02-22 Sat 19:57>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:57] -- [[https://www.usa.gov/][USAGov]]
+:END:
+** noaa.gov
+:PROPERTIES:
+:ID:       67cd18d7-3c2d-461c-a61e-32cbff5be10a
+:CREATED:  <2025-02-22 Sat 19:55>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:53] -- [[https://www.noaa.gov/][National Oceanic Atmospheric Administration]]
+:END:
+- [[https://search.usa.gov/search?v%3Aproject=firstgov&query=API&affiliate=noaa.gov][API - NOAA.gov Search Results]]
+*** weather.gov
+:PROPERTIES:
+:ID:       246f5fca-c142-4c9e-b5f8-e59bb89feb9e
+:CREATED:  <2025-02-22 Sat 19:52>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:53] -- [[https://www.weather.gov/][National Weather Service]]
+:END:
+US National Weather Service
+[[https://www.weather.gov/documentation/services-web-api][API Web Service]]

@@ -1,4 +1,5 @@
 #+title: Peer-to-Peer Protocols
+#+setupfile: ../../../clean.theme
 * libp2p
 :PROPERTIES:
 :ID:       29fcf858-c4ca-4315-a987-dce397465f17

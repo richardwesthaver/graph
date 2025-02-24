@@ -1,0 +1,9 @@
+#+setupfile: ../../clean.theme
+* Caddy
+:PROPERTIES:
+:ID:       2415d486-e74b-4318-90cc-8d68c4bffb2e
+:CREATED:  <2025-02-21 Fri 21:21>
+:END:
+:EDGES:
+[2025-02-21 Fri 21:23] -- [[https://caddyserver.com/docs/][Caddy Documentation]]
+:END:

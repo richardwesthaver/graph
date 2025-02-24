@@ -1,4 +1,5 @@
 #+title: Great Scott Gadgets
+#+setupfile: ../../clean.theme
 * Great Scott Gadgets
 :PROPERTIES:
 :ID:       f8b83779-83c1-47fc-88e7-c76018e4b8df

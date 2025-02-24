@@ -1,4 +1,5 @@
 #+title: Javascript
+#+setupfile: ../../clean.theme
 * Javascript
 :PROPERTIES:
 :ID:       d9226de2-4b80-4193-a06e-e3185ffb5217

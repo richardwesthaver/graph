@@ -1,5 +1,6 @@
 #+title: GNU/Linux
 #+description: A Free (as in Freedom) OS
+#+setupfile: ../../clean.theme
 * Linux
 :PROPERTIES:
 :ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
@@ -127,4 +128,93 @@ https://github.com/ming1/ubdsrv
 :EDGES:
 [2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/kernel-hacking/hacking.html][Unreliable Guide To Hacking The Linux Kernel — The Linux Kernel documentation]]
 [2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/][The Linux Kernel documentation — The Linux Kernel documentation]]
+:END:
+** Filesystem
+:PROPERTIES:
+:ID:       1f938c20-8d8e-460c-8fb7-f4afaac432cc
+:CREATED:  <2025-02-22 Sat 19:04>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:04] -- [[https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard][Filesystem Hierarchy Standard - Wikipedia]]
+:END:
+** Distributions
+:PROPERTIES:
+:ID:       34966e81-ab92-4b85-b11e-073784261db5
+:CREATED:  <2025-02-22 Sat 19:31>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:31] -- [[https://en.wikipedia.org/wiki/List_of_Linux_distributions][List of Linux distributions - Wikipedia]]
+:END:
+*** Fedora
+:PROPERTIES:
+:ID:       c9fdd74c-0eb2-4d8f-bc22-0cf40996f186
+:CREATED:  <2025-02-22 Sat 19:32>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:32] -- [[https://fedoraproject.org/][Fedora Linux | The Fedora Project]]
+:END:
+**** CoreOS
+:PROPERTIES:
+:ID:       ca6795ee-4b2c-4ec3-9bdc-f6be67c2f1ec
+:CREATED:  <2025-02-22 Sat 19:32>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:32] -- [[https://docs.fedoraproject.org/en-US/fedora-coreos/][Fedora CoreOS Documentation]]
+:END:
+[[https://coreos.github.io/ignition/][Ignition documentation]]
+**** IoT
+:PROPERTIES:
+:ID:       79c00d69-0624-4e85-a237-79e73e612dca
+:CREATED:  <2025-02-22 Sat 19:34>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:34] -- [[https://docs.fedoraproject.org/en-US/iot/][Fedora IoT Documentation]]
+:END:
+*** Arch
+:PROPERTIES:
+:ID:       6ef3fb84-6805-46f7-ad13-8929a023b43c
+:CREATED:  <2025-02-22 Sat 19:39>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:40] -- [[https://archlinux.org/][Arch Linux]]
+:END:
+*** Ubuntu
+:PROPERTIES:
+:ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02
+:CREATED:  <2025-02-22 Sat 19:39>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:41] -- [[https://ubuntu.com/][Enterprise Open Source and Linux | Ubuntu]]
+:END:
+*** Debian
+:PROPERTIES:
+:ID:       f03769bc-abf2-4f58-809f-b672c66120f3
+:CREATED:  <2025-02-22 Sat 19:39>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:41] -- [[https://www.debian.org/][Debian -- The Universal Operating System]]
+:END:
+*** Alpine
+:PROPERTIES:
+:ID:       4e717401-7b7b-4ce6-83c7-6f8420e01b93
+:CREATED:  <2025-02-22 Sat 19:40>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:41] -- [[https://www.alpinelinux.org/][Alpine Linux]]
+:END:
+*** Gentoo
+:PROPERTIES:
+:ID:       5cbe7ad4-008a-4ed7-889d-e7ec5663dfd1
+:CREATED:  <2025-02-22 Sat 19:40>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:42] -- [[https://www.gentoo.org/][Gentoo Linux]]
+:END:
+*** Slackware
+:PROPERTIES:
+:ID:       21e5a881-54d0-410e-b48a-f32ee26ef90d
+:CREATED:  <2025-02-22 Sat 19:43>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:43] -- [[http://www.slackware.com/][The Slackware Linux Project]]
 :END:

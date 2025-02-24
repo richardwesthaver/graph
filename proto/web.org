@@ -1,4 +1,5 @@
 #+title: Web Protocols and Standards
+#+setupfile: ../../clean.theme
 * WebGPU
 :PROPERTIES:
 :ID:       78ff8ddb-cc33-4538-9157-1a11cc04248d

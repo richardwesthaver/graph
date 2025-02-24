@@ -1,4 +1,5 @@
 #+title: Compiler Theory
+#+setupfile: ../../clean.theme
 * Tree Shaking
 :PROPERTIES:
 :ID:       23185c5d-7470-4bf5-a700-99752c334333

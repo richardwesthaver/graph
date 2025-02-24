@@ -1,4 +1,5 @@
 #+title: Windows
+#+setupfile: ../../clean.theme
 * Windows
 :PROPERTIES:
 :ID:       c584cce5-6e64-4ad3-99ad-0d0ef2119837

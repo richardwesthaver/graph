@@ -1,4 +1,5 @@
 #+title: System Theory
+#+setupfile: ../../clean.theme
 * OSI
 :PROPERTIES:
 :ID:       f08e3bbb-44cf-4036-8fb9-406d9f030f4f
@@ -19,3 +20,12 @@ systems interconnection.'
 5. Session
 6. Presentation
 7. Application
+* Hysteresis
+:PROPERTIES:
+:ID:       69e45a0c-8352-4810-952a-c81b0f99d21b
+:CREATED:  <2025-02-22 Sat 19:25>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:25] -- [[https://en.wikipedia.org/wiki/Hysteresis][Hysteresis - Wikipedia]]
+:END:
+[[https://blog.verbum.org/2020/08/22/immutable-%E2%86%92-reprovisionable-anti-hysteresis/][“Immutable” → reprovisionable, anti-hysteresis « Colin Walters]]

@@ -1,1 +1,2 @@
 #+title: AMD
+#+setupfile: ../../clean.theme

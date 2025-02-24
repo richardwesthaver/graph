@@ -1,4 +1,5 @@
 #+title: Version Control Systems
+#+setupfile: ../../clean.theme
 * VCS
 :PROPERTIES:
 :ID:       36ccc6c1-1b2d-4a48-8c1c-714a43873407

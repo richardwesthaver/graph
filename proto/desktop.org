@@ -1,4 +1,5 @@
 #+title: Desktop Protocols
+#+setupfile: ../../clean.theme
 * XDG
 :PROPERTIES:
 :ID:       e0ad1796-3d1e-4026-b019-e212756a205f
@@ -25,4 +26,31 @@
 :EDGES:
 [2025-02-14 Fri 21:43] -- [[https://specifications.freedesktop.org/secret-service-spec/latest/][Secret Service API Draft]]
 [2025-02-14 Fri 21:44] -- [[https://www.gnu.org/software/emacs/manual/html_node/auth/Secret-Service-API.html][Secret Service API (Emacs auth-source Library 0.3)]]
+:END:
+* X
+:PROPERTIES:
+:ID:       1b00b336-268e-4203-850d-12cb8b79c86c
+:CREATED:  <2025-02-22 Sat 15:12>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:12] -- [[https://www.x.org/wiki/][X.Org]]
+:END:
+The X Window System and the X.Org project.
+[[https://www.x.org/wiki/Documentation/][Documentation]]
+[[https://www.x.org/wiki/guide/][Guide]]
+** Extensions
+:PROPERTIES:
+:ID:       f0a4403d-d5f1-4f7c-8d56-ab235ecb16dd
+:CREATED:  <2025-02-22 Sat 15:13>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:13] -- [[https://www.x.org/wiki/guide/extensions/][The X New Developer’s Guide: Modern Extensions To X]]
+:END:
+*** Composite
+:PROPERTIES:
+:ID:       eb66d5e4-e0bf-4f4a-a935-0fb30365dca2
+:CREATED:  <2025-02-22 Sat 15:14>
+:END:
+:EDGES:
+[2025-02-22 Sat 15:14] -- [[https://www.freedesktop.org/wiki/Software/CompositeExt/][CompositeExt]]
 :END:

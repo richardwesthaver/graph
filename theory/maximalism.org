@@ -1,4 +1,5 @@
 #+title: Maximalist Ideologies
+#+setupfile: ../../clean.theme
 * Utena
 :PROPERTIES:
 :ID:       adcd747b-2fdf-4686-abbb-26940bbb1a20

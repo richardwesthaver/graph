@@ -1,4 +1,5 @@
 #+title: notes
+#+setupfile: ../clean.theme
 * On Infra
 :PROPERTIES:
 :ID:       332145f8-50b4-46d1-8368-ddaf097c875f
@@ -337,7 +338,6 @@ time target/release/dysk-test
 :ID:       9376d6e5-fe52-41f3-a821-0c2286daf1e0
 :CREATED:  <2025-02-20 Thu 20:10>
 :END:
-
 https://cl-net-snmp.common-lisp.dev/release/release.sh
 #+begin_src shell
   #!/bin/sh

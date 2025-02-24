@@ -1,4 +1,5 @@
 #+title: Memory Allocation Strategies
+#+setupfile: ../../clean.theme
 * Memory
 :PROPERTIES:
 :ID:       e485721a-4cd8-4bae-8d62-45e11729da70

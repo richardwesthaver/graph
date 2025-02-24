@@ -1,4 +1,5 @@
 #+title: Web Data Sources
+#+setupfile: ../../clean.theme
 * public datasets
 :PROPERTIES:
 :ID:       59e3ba53-3f40-47db-929c-acc998f9092d
@@ -9,3 +10,4 @@ https://docs.openml.org/Datasets/
 https://wiki.pathmind.com/open-datasets
 https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/
 https://www.opensourceshakespeare.org/
+[[https://registry.opendata.aws/][Registry of Open Data on AWS]]

@@ -1,4 +1,4 @@
 #+title: MacOS
 #+description: A distant cousin of UNIX which hasn't 'quite' lost the plot
-
+#+setupfile: ../../clean.theme
 

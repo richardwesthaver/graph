@@ -1,1 +1,2 @@
 #+title: NVIDIA
+#+setupfile: ../../clean.theme

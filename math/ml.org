@@ -1,4 +1,5 @@
 #+title: Machine Learning
+#+setupfile: ../../clean.theme
 * ML
 :PROPERTIES:
 :ID:       10588a36-bec0-4a84-9cce-179cbdeb1e4e

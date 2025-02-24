@@ -1,4 +1,5 @@
 #+title: Money Theory
+#+setupfile: ../../clean.theme
 * Money
 :PROPERTIES:
 :ID:       1488ce14-b340-49ed-ba7c-cbecf8212b47

@@ -1,4 +1,5 @@
 #+title: GPU
+#+setupfile: ../../clean.theme
 * GPU
 :PROPERTIES:
 :ID:       05a6ae25-b2ed-4edb-9104-e6894819b96e

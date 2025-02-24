@@ -1,4 +1,5 @@
 #+title: Glasgow Haskell Compiler
+#+setupfile: ../../clean.theme
 * GHC
 :PROPERTIES:
 :ID:       9a00b903-ea15-48d3-8440-025998ca857b

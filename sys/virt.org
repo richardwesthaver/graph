@@ -1,4 +1,5 @@
 #+title: Virtualization
+#+setupfile: ../../clean.theme
 * Container
 :PROPERTIES:
 :ID:       83b24cd0-3c89-400e-b63b-64872569222b
@@ -6,6 +7,7 @@
 :END:
 :EDGES:
 [2025-01-18 Sat 19:57] -- [[https://en.wikipedia.org/wiki/Containerization_(computing)][Containerization (computing) - Wikipedia]]
+[2025-02-22 Sat 22:49] -- [[https://github.com/containers/][Containers · GitHub]]
 :END:
 Containers are really a 21st-century invention derived from full
 machine emulation such as QEMU/KVM and the need to support

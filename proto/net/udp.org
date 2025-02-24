@@ -1,4 +1,5 @@
 #+title: UDP
+#+setupfile: ../../../clean.theme
 * UDP
 :PROPERTIES:
 :ID:       a2f33ea0-51c3-45d8-8c19-03a95321384c

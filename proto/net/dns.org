@@ -1,4 +1,5 @@
 #+title: Domain Name Systems
+#+setupfile: ../../../clean.theme
 * DNS
 :PROPERTIES:
 :ID:       78f84075-f759-43dd-be98-b23eccf26333

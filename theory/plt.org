@@ -1,4 +1,5 @@
 #+title: Programming Language Theory
+#+setupfile: ../../clean.theme
 * PLT
 :PROPERTIES:
 :ID:       3a1058df-158c-49eb-bcc5-21b842ec966e

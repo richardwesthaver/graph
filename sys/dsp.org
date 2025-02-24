@@ -1,4 +1,5 @@
 #+title: Digital Signal Processing
+#+setupfile: ../../clean.theme
 * DSP
 :PROPERTIES:
 :ID:       3da5cb2e-53cf-424b-af43-580fab3e690a

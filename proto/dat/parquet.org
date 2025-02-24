@@ -1,4 +1,5 @@
 #+title: Parquet
+#+setupfile: ../../../clean.theme
 * Parquet
 :PROPERTIES:
 :ID:       07fcb963-c208-4735-9abb-3c55c2340a5f

@@ -1,4 +1,5 @@
 #+title: Artificial Intelligence
+#+setupfile: ../../clean.theme
 * AI
 :PROPERTIES:
 :ID:       cd514a66-4979-4983-8c9b-29b54eafa8dd

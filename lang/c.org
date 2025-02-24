@@ -1,5 +1,6 @@
 #+title: C
 #+description: The C Language Paradigm
+#+setupfile: ../../clean.theme
 * C
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/c][C reference - cppreference.com]]

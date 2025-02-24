@@ -1,4 +1,5 @@
 #+title: GNU Radio
+#+setupfile: ../../clean.theme
 * GNU Radio
 :PROPERTIES:
 :ID:       c92b3830-3836-41b0-a502-f04b44cd3292

@@ -1,4 +1,5 @@
 #+title: SigMF Protocol
+#+setupfile: ../../../clean.theme
 * SigMF
 :PROPERTIES:
 :ID:       13226398-1931-44a5-8914-7eb2be0c345e
