@@ -1,4 +1,5 @@
 #+title: Internet Protocols
+#+setupfile: ../../../clean.theme
 * IP
 :PROPERTIES:
 :ID:       2c915d42-3f42-4a94-a2d7-af73c9938c7b

@@ -98,7 +98,13 @@
   sb-regalloc:
   sb-disassem:
 #+end_src
-
+*** Core Format
+:PROPERTIES:
+:ID:       db473315-0c74-40cb-ab07-9259b2113043
+:CREATED:  <2025-02-24 Mon 21:36>
+:END:
+[[https://github.com/sbcl/sbcl/blob/master/src/runtime/coreparse.c][sbcl/src/runtime/coreparse.c at master · sbcl/sbcl · GitHub]]
+[[https://github.com/sbcl/sbcl/blob/master/src/runtime/core.h][sbcl/src/runtime/core.h at master · sbcl/sbcl · GitHub]]
 ** Tree Shaker
 :PROPERTIES:
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49
@@ -106,7 +112,9 @@
 :END:
 With the complexity involved in SBCL image dumps it becomes a hard
 problem to design an effective tree-shaker.
-
+- [[https://github.com/sbcl/sbcl/blob/master/tests/treeshake.pure.lisp][sbcl/tests/treeshake.pure.lisp]]
+- [[https://github.com/sbcl/sbcl/commit/f9b92e43b95f08d8e7efeb1735844ee325ca5b3c][Shake tree harder · sbcl/sbcl@f9b92e4]]
+- =sb-impl::shake-packages=
 ** Contribs
 :PROPERTIES:
 :ID:       c33a5587-daab-4e61-a0df-fc6856b00f70

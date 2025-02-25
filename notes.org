@@ -352,3 +352,11 @@ https://cl-net-snmp.common-lisp.dev/release/release.sh
   rm $1_latest.tar.gz.asc
   ln -s $1-$2.tar.gz.asc $1_latest.tar.gz.asc
 #+end_src
+* Hopscotch hashing
+:PROPERTIES:
+:ID:       2dfa085f-d853-4e13-a6cf-654d0f96b81f
+:CREATED:  <2025-02-24 Mon 21:34>
+:END:
+:EDGES:
+[2025-02-24 Mon 21:34] -- [[https://en.wikipedia.org/wiki/Hopscotch_hashing][Hopscotch hashing - Wikipedia]]
+:END:

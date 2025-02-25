@@ -1,4 +1,5 @@
 #+title: Mainframe Operating Systems
+#+setupfile: ../../clean.theme
 * IBM
 :PROPERTIES:
 :ID:       ece2479d-c9f8-4606-a137-7ca679cf7762
