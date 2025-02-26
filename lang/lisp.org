@@ -12,7 +12,12 @@
 [2025-02-13 Thu 22:42] -- [[https://franz.com/support/documentation/cl-ansi-standard-draft-w-sidebar.pdf][CL ANSI Standard Draft]]
 [2025-02-13 Thu 22:43] -- [[https://www.lispworks.com/documentation/HyperSpec/Front/StartPts.htm][CLHS: Starting Points]]
 :END:
-
+** Syntax
+:PROPERTIES:
+:ID:       df41336d-5185-4047-9644-e25925529f08
+:CREATED:  <2025-02-25 Tue 16:05>
+:END:
+- Pragmatic Parsing in Common Lisp - [[https://www.plover.com/misc/hbaker-archive/Prag-Parse.html][ACM Lisp Pointers 4, 2 (Apr/Jun 1991), 3-15.]]
 ** CLOS
 :PROPERTIES:
 :ID:       8bc4ff14-f001-4515-ac1f-fd59ef8ef506
@@ -52,6 +57,25 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-02-14 Fri 20:20] -- [[https://gist.github.com/WetHat/a49e6f2140b401a190d45d31e052af8f][Pretty Print Table Data in Common Lisp]]
 :END:
+
+** Functions
+:PROPERTIES:
+:ID:       ebbc665a-10c3-46a3-8052-4f46bc9ac2b1
+:CREATED:  <2025-02-25 Tue 16:08>
+:END:
+:EDGES:
+[2025-02-25 Tue 16:08] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node62.html][5.2. Functions]]
+:END:
+- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node63.html#SECTION00921000000000000000][5.2.1. Named Functions]]
+*** Lambda-Expressions
+:PROPERTIES:
+:ID:       7555f8c6-5dd5-4607-ae1f-32643bf03ba9
+:CREATED:  <2025-02-25 Tue 16:09>
+:END:
+:EDGES:
+[2025-02-25 Tue 16:09] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node64.html#SECTION00922000000000000000][5.2.2. Lambda-Expressions]]
+:END:
+
 ** Loop
 :PROPERTIES:
 :ID:       439a02f1-afcf-4ba3-bdf4-0304d152ba6f
