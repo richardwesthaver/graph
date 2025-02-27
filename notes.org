@@ -188,6 +188,7 @@ crossing multiple language barriers (Rust<->C<->Lisp).
 ** basic example
 :PROPERTIES:
 :ID:       ab04fff7-51c9-4f1c-b61b-fa4739932343
+:header-args: :tangle no
 :END:
 *** Setup
 :PROPERTIES:
