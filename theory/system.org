@@ -29,3 +29,29 @@ systems interconnection.'
 [2025-02-22 Sat 19:25] -- [[https://en.wikipedia.org/wiki/Hysteresis][Hysteresis - Wikipedia]]
 :END:
 [[https://blog.verbum.org/2020/08/22/immutable-%E2%86%92-reprovisionable-anti-hysteresis/][“Immutable” → reprovisionable, anti-hysteresis « Colin Walters]]
+* Computer Architecture
+:PROPERTIES:
+:ID:       ae2eadd2-e305-44b4-bff3-952aa09d2943
+:CREATED:  <2025-02-26 Wed 20:45>
+:END:
+** Von Neumann Machine
+:PROPERTIES:
+:ID:       0e6b0635-a1ed-41ff-9129-a2e72461dc0b
+:CREATED:  <2025-02-26 Wed 20:45>
+:END:
+:EDGES:
+[2025-02-26 Wed 20:46] -- [[https://en.wikipedia.org/wiki/Von_Neumann_architecture][Von Neumann architecture - Wikipedia]]
+:END:
+** HLLCA
+:PROPERTIES:
+:ID:       fcd2d202-b02b-44a7-a218-59b5bfeca1c7
+:CREATED:  <2025-02-26 Wed 20:46>
+:END:
+*** Lisp Machine
+:PROPERTIES:
+:ID:       bd25630a-b72a-46c5-abf1-733f5c892bf6
+:CREATED:  <2025-02-26 Wed 20:47>
+:END:
+:EDGES:
+[2025-02-26 Wed 20:47] -- [[https://en.wikipedia.org/wiki/Lisp_machine][Lisp machine - Wikipedia]]
+:END:

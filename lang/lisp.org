@@ -130,7 +130,37 @@ system, but the code available has some goodies (json/nlp/etc)
 [2025-02-22 Sat 15:15] -- [[https://github.com/sharplispers/clx][sharplispers/clx]]
 :END:
 [[https://github.com/sharplispers/clx/tree/master/extensions][clx/extensions]]
-
+** Packages
+:PROPERTIES:
+:ID:       92dd3f0e-4789-4016-a623-48af3c45cd05
+:CREATED:  <2025-02-26 Wed 20:52>
+:END:
+** Package Managers
+:PROPERTIES:
+:ID:       d41019fd-ca88-4608-af00-9e7a84dcd49f
+:CREATED:  <2025-02-26 Wed 20:53>
+:END:
+*** Quicklisp
+:PROPERTIES:
+:ID:       0b568dbe-fc89-4ce6-be86-fd18d1d2d5c0
+:CREATED:  <2025-02-26 Wed 20:53>
+:END:
+:EDGES:
+[2025-02-26 Wed 20:54] -- [[https://www.quicklisp.org/beta/][Quicklisp beta]]
+:END:
+#+begin_quote
+Quicklisp is a library manager for Common Lisp. It works with your
+existing Common Lisp implementation to download, install, and load any
+of over 1,500 libraries with a few simple commands.
+#+end_quote
+**** Ultralisp
+:PROPERTIES:
+:ID:       6cfca9d2-8d3d-4725-a08f-349e08fd44e3
+:CREATED:  <2025-02-26 Wed 20:54>
+:END:
+:EDGES:
+[2025-02-26 Wed 20:54] -- [[https://ultralisp.org/][Ultralisp - Fast Common Lisp Repository]]
+:END:
 * Scheme
 :PROPERTIES:
 :ID:       cce00db3-1428-4380-aa5d-8d2ec767b873
@@ -145,3 +175,13 @@ system, but the code available has some goodies (json/nlp/etc)
 :END:
 - [cite/t/b:@super8-fp]
   from the PLT guys at NEU - Racket
+* Lisp Machine Lisp
+:PROPERTIES:
+:ID:       e21c02a5-5039-42c2-8416-aa5d45e70cb6
+:CREATED:  <2025-02-26 Wed 20:49>
+:END:
+:EDGES:
+[2025-02-26 Wed 20:49] -- [[https://en.wikipedia.org/wiki/Lisp_Machine_Lisp][Lisp Machine Lisp - Wikipedia]]
+:END:
+Maclisp->Zetalisp
+- [[http://www.jargon.net/jargon/jargonfile/c/chinenual.html][jargon, node: chine nual]]

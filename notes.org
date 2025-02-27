@@ -360,3 +360,53 @@ https://cl-net-snmp.common-lisp.dev/release/release.sh
 :EDGES:
 [2025-02-24 Mon 21:34] -- [[https://en.wikipedia.org/wiki/Hopscotch_hashing][Hopscotch hashing - Wikipedia]]
 :END:
+* Tree-sitter
+:PROPERTIES:
+:ID:       026c796e-dcff-4eda-ad83-12e5d60f9971
+:CREATED:  <2025-02-26 Wed 17:31>
+:END:
+:EDGES:
+[2025-02-26 Wed 17:31] -- [[https://github.com/tree-sitter/tree-sitter][GitHub - tree-sitter/tree-sitter: An incremental parsing system for programming tools]]
+[2025-02-26 Wed 17:32] -- [[https://tree-sitter.github.io/tree-sitter/index.html][Introduction - Tree-sitter]]
+[2025-02-26 Wed 18:45] -- [[https://tree-sitter.github.io/tree-sitter/3-syntax-highlighting.html][Syntax Highlighting - Tree-sitter]]
+:END:
+- [[https://github.com/tree-sitter/tree-sitter/tree/master/highlight][tree-sitter/highlight]]
+:END:
+* Get Off My Cloud
+:PROPERTIES:
+:CREATED:  <2025-02-26 Wed 20:38>
+:ID:       6dbb0064-1421-41bb-b2df-36f694efce0a
+:CUSTOM_ID: get-off-my-cloud
+:END:
+  - industry has moved away from client-side, distributed compute in
+    favor of centralized server-side compute resources behind API
+    gateways.
+  - entire businesses are built on a single Cloud Provider and are
+    fundamentally incapable of moving off that Cloud.
+    - they /think/ in terms of that Provider. The Provider influences
+      all of their decisions.
+  - users control very little compute power
+    - personal computing hardware (consumer-grade) is limited in capability
+      - non-servicable architectures, planned obsolescence, closed firmware
+    - mainstream operating systems don't optimize for resource
+      efficiency - they maximize for the volume of telemetry data they
+      can collect and profit from
+
+* Death of the Programmer
+:PROPERTIES:
+:CREATED:  <2025-02-26 Wed 20:38>
+:ID:       138f4a50-1d52-4e13-bf67-f225ef9f6747
+:CUSTOM_ID: death-of-the-programmer
+:END:
+  - The role of the programmer is changing
+  - programmers are no longer required to understand how computers
+    work to have a successful career
+    - Cloud Providers wrap all low-level details in their own
+      proprietary vocabulary and APIs
+    - To program on the cloud, you need to use the Cloud vocabulary
+      and are discouraged from thinking of computers as they actually
+      exist in the real world
+  - Cloud Providers influence college cirruculums, replacing compute
+    and systems theory with courses designed to teach you how to
+    configure Cloud Services.
+
