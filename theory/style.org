@@ -1,0 +1,28 @@
+#+title: The Essence of Style
+#+setupfile: ../../clean.theme
+* Style
+:PROPERTIES:
+:ID:       6b994f9a-2584-4f8f-8739-d9d70847e8aa
+:CREATED:  <2025-02-27 Thu 16:46>
+:END:
+** Coding Style
+:PROPERTIES:
+:ID:       25fede3d-355d-4644-a0eb-df2d828157ab
+:CREATED:  <2025-02-27 Thu 16:46>
+:END:
+*** Tiger Style
+:PROPERTIES:
+:ID:       10cdeed6-9dca-42af-9b33-3d2a6addbddc
+:CREATED:  <2025-02-27 Thu 16:47>
+:END:
+:EDGES:
+[2025-02-27 Thu 16:47] -- [[https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/TIGER_STYLE.md][tigerbeetle/docs/TIGER_STYLE.md]]
+:END:
+*** The Power of 10
+:PROPERTIES:
+:ID:       483ef3a4-c1d8-4fc4-988a-03e9f5e789ac
+:CREATED:  <2025-02-27 Thu 16:48>
+:END:
+:EDGES:
+[2025-02-27 Thu 16:48] -- [[https://web.eecs.umich.edu/~imarkov/10rules.pdf][umich pdf]]
+:END:

@@ -13,7 +13,29 @@ of your control - say you have a Macbook or need to run it for
 %employer. No need to stress about that. But when you are given the
 opportunity - given a choice, you should pick whatever Linux-based OS
 suits your needs best.
-** Devices
+** Libraries
+:PROPERTIES:
+:ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
+:CREATED:  <2025-02-14 Fri 22:11>
+:END:
+*** Keyutils
+:PROPERTIES:
+:ID:       5e859a3f-0c31-4796-85c6-7008b346f186
+:CREATED:  <2025-02-14 Fri 22:12>
+:END:
+:EDGES:
+[2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
+:END:
+** Kernel
+:PROPERTIES:
+:ID:       caed860f-fcef-43a2-b080-94b01352cd43
+:CREATED:  <2025-02-16 Sun 20:12>
+:END:
+:EDGES:
+[2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/kernel-hacking/hacking.html][Unreliable Guide To Hacking The Linux Kernel — The Linux Kernel documentation]]
+[2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/][The Linux Kernel documentation — The Linux Kernel documentation]]
+:END:
+*** Devices
 :PROPERTIES:
 :ID:       ad25b130-d832-4109-84ad-7cb9900ed227
 :CREATED:  <2025-01-17 Fri 19:15>
@@ -30,7 +52,7 @@ major, minor = category, device
 mknod - create special device files
 
 [[https://www.redhat.com/en/blog/linux-block-devices-hints-debugging-and-new-developments][redhat hints]]
-*** utils
+**** utils
 :PROPERTIES:
 :ID:       f8ce343e-c866-4fff-8e39-2da32a59d56e
 :CREATED:  <2025-02-06 Thu 19:16>
@@ -87,7 +109,7 @@ compression/de-duplication can be done via VDO kernel mod
 
 https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 
-*** Frame Buffer Device
+**** Frame Buffer Device
 :PROPERTIES:
 :ID:       639e5d85-e143-421d-86be-9bc291bc2f8b
 :CREATED:  <2025-01-17 Fri 19:15>
@@ -97,7 +119,7 @@ https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 :END:
 /dev/fb*
 - used by fbgrab/fbcat program
-*** Userspace Block Device
+**** Userspace Block Device
 :PROPERTIES:
 :ID:       d58cb494-ce43-49cc-859b-aa6a518ac314
 :CREATED:  <2025-02-14 Fri 22:11>
@@ -107,29 +129,26 @@ https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 :END:
 ublk
 https://github.com/ming1/ubdsrv
-** Libraries
+**** Input Devices
 :PROPERTIES:
-:ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
-:CREATED:  <2025-02-14 Fri 22:11>
-:END:
-*** Keyutils
-:PROPERTIES:
-:ID:       5e859a3f-0c31-4796-85c6-7008b346f186
-:CREATED:  <2025-02-14 Fri 22:12>
+:ID:       ea9bb3f9-3607-4be2-82f8-e9b3381a0524
+:CREATED:  <2025-02-27 Thu 18:51>
 :END:
 :EDGES:
-[2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
+[2025-02-27 Thu 18:51] -- [[https://en.wikipedia.org/wiki/Evdev][evdev - Wikipedia]]
+[2025-02-27 Thu 18:51] -- [[https://www.kernel.org/doc/Documentation/input/input.txt][kernel.org input.txt]]
 :END:
-** Kernel
+*** Systems
 :PROPERTIES:
-:ID:       caed860f-fcef-43a2-b080-94b01352cd43
-:CREATED:  <2025-02-16 Sun 20:12>
+:ID:       1f728d2c-edf1-4502-9560-d0a6c45d5df8
+:CREATED:  <2025-02-27 Thu 19:38>
 :END:
 :EDGES:
-[2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/kernel-hacking/hacking.html][Unreliable Guide To Hacking The Linux Kernel — The Linux Kernel documentation]]
-[2025-02-16 Sun 20:12] -- [[https://www.kernel.org/doc/html/latest/][The Linux Kernel documentation — The Linux Kernel documentation]]
+[2025-02-27 Thu 19:43] -- [[https://man7.org/linux/man-pages/man2/syscalls.2.html][syscalls(2) - Linux manual page]]
+[2025-02-27 Thu 19:44] -- [[https://linux-kernel-labs.github.io/refs/heads/master/lectures/syscalls.html][System Calls — The Linux Kernel documentation]]
+[2025-02-27 Thu 19:46] -- [[https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl][linux/arch/x86/entry/syscalls/syscall_64.tbl]]
 :END:
-** Filesystem
+**** Filesystem
 :PROPERTIES:
 :ID:       1f938c20-8d8e-460c-8fb7-f4afaac432cc
 :CREATED:  <2025-02-22 Sat 19:04>
@@ -137,7 +156,43 @@ https://github.com/ming1/ubdsrv
 :EDGES:
 [2025-02-22 Sat 19:04] -- [[https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard][Filesystem Hierarchy Standard - Wikipedia]]
 :END:
-** Distributions
+**** IO
+:PROPERTIES:
+:ID:       9d49d145-2c94-4d6f-a4e1-5016df6cbedc
+:CREATED:  <2025-02-27 Thu 19:39>
+:END:
+Input/Output operations
+***** epoll
+:PROPERTIES:
+:ID:       74367b29-6a50-4eb4-ac6b-1c1b96dabd89
+:CREATED:  <2025-02-27 Thu 19:39>
+:END:
+:EDGES:
+[2025-02-27 Thu 19:42] -- [[https://man7.org/linux/man-pages/man7/epoll.7.html][epoll(7) - Linux manual page]]
+:END:
+***** io_uring
+:PROPERTIES:
+:ID:       92c2a9aa-6584-470e-977a-3547bca79414
+:CREATED:  <2025-02-27 Thu 19:39>
+:END:
+:EDGES:
+[2025-02-27 Thu 19:40] -- [[https://despairlabs.com/blog/posts/2021-06-16-io-uring-is-not-an-event-system/][io_uring is not an event system · blog · despair labs]]
+[2025-02-27 Thu 19:40] -- [[https://github.com/noteflakes/awesome-io_uring][GitHub - noteflakes/awesome-io_uring: Awesome io_uring]]
+[2025-02-27 Thu 19:40] -- [[https://lpc.events/event/17/contributions/1596/attachments/1346/2694/Zero%20Copy%20Rx%20with%20io_uring%20-%20LPC%202023.pdf][Zero Copy Rx with io_uring]]
+[2025-02-27 Thu 19:41] -- [[https://man7.org/linux/man-pages/man7/io_uring.7.html][io_uring(7) - Linux manual page]]
+[2025-02-27 Thu 19:41] -- [[https://blog.cloudflare.com/missing-manuals-io_uring-worker-pool/][Missing Manuals - io_uring worker pool]]
+[2025-02-27 Thu 19:42] -- [[https://unixism.net/loti/][Lord of the io_uring]]
+:END:
+***** poll
+:PROPERTIES:
+:ID:       d43311bf-7f5f-4d21-aad8-4b35548813b5
+:CREATED:  <2025-02-27 Thu 19:43>
+:END:
+:EDGES:
+[2025-02-27 Thu 19:43] -- [[https://man7.org/linux/man-pages/man2/poll.2.html][poll(2) - Linux manual page]]
+:END:
+
+** Distros
 :PROPERTIES:
 :ID:       34966e81-ab92-4b85-b11e-073784261db5
 :CREATED:  <2025-02-22 Sat 19:31>
@@ -145,6 +200,7 @@ https://github.com/ming1/ubdsrv
 :EDGES:
 [2025-02-22 Sat 19:31] -- [[https://en.wikipedia.org/wiki/List_of_Linux_distributions][List of Linux distributions - Wikipedia]]
 :END:
+Linux Distributions
 *** Fedora
 :PROPERTIES:
 :ID:       c9fdd74c-0eb2-4d8f-bc22-0cf40996f186

@@ -49,6 +49,11 @@ Our understanding of DBMS, for the purpose of this node is quite
 vague - it is anything which is powerful enough to be used as the core
 of a DBMS on its own or which covers enough surface area in the DB
 school of thought to be considered one.
+*** RocksDB
+:PROPERTIES:
+:ID:       b569a646-de4c-4287-8599-52b237a753b4
+:CREATED:  <2025-02-27 Thu 16:17>
+:END:
 *** DataFusion
 :PROPERTIES:
 :ID:       3ce0b887-31ea-4a78-96a2-6671907a687a
@@ -57,3 +62,23 @@ school of thought to be considered one.
 :EDGES:
 [2025-02-16 Sun 19:16] -- [[https://datafusion.apache.org/][Apache DataFusion — Apache DataFusion documentation]]
 :END:
+**** Arrow
+:PROPERTIES:
+:ID:       dd24ce27-3907-48e4-8b5d-8be8b2035ae1
+:CREATED:  <2025-02-27 Thu 18:02>
+:END:
+:EDGES:
+[2025-02-27 Thu 18:02] -- [[https://arrow.apache.org/][Apache Arrow | Apache Arrow]]
+:END:
+
+*** tigerbeetle                                                     :fin:zig:
+:PROPERTIES:
+:ID:       9933d695-6379-4903-a4d5-0aa887bfa7d9
+:CREATED:  <2025-02-27 Thu 16:17>
+:END:
+:EDGES:
+[2025-02-27 Thu 16:17] -- [[https://github.com/tigerbeetle/tigerbeetle][GitHub - tigerbeetle/tigerbeetle: The financial transactions database designed for mission critical safety and performance.]]
+:END:
+- very high quality code
+- zig
+- excellent style guide

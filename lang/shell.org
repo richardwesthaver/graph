@@ -15,3 +15,36 @@
 [2025-01-16 Thu 22:32] -- [[https://www.nushell.sh/cookbook/][Cookbook | Nushell]]
 [2025-01-16 Thu 22:32] -- [[https://github.com/nushell/nu_scripts][nushell/nu_scripts]]
 :END:
+* Powershell
+:PROPERTIES:
+:ID:       9815156f-fcf9-4c33-bcb9-3719f2245b3f
+:CREATED:  <2025-02-27 Thu 16:51>
+:END:
+* CMD
+:PROPERTIES:
+:ID:       c1cb5688-a66f-43e7-8997-1aebe845a7f6
+:CREATED:  <2025-02-27 Thu 16:51>
+:END:
+:EDGES:
+[2025-02-27 Thu 16:52] -- [[https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands][Windows commands | Microsoft Learn]]
+[2025-02-27 Thu 16:56] -- [[https://en.wikipedia.org/wiki/Batch_file][Batch file - Wikipedia]]
+:END:
+This node captures the plethora of Windows Script Host languages in
+addition to batch files (.bat) and top-level CMD commands.
+** Batch
+:PROPERTIES:
+:ID:       733d8d74-9f4d-407e-8a1b-fd40264cdba2
+:CREATED:  <2025-02-27 Thu 16:52>
+:END:
+- .bat files
+** WSH
+:PROPERTIES:
+:ID:       1dab85a8-c52e-4185-a5d3-1ae182c5ee4e
+:CREATED:  <2025-02-27 Thu 16:53>
+:END:
+Windows Script Host
+- wscript.exe
+- cscript.exe
+
+- VBScript
+- JScript

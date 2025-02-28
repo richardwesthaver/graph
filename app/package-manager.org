@@ -1,4 +1,5 @@
 #+title: Package Managers
+#+setupfile: ../../clean.theme
 * DNF
 :PROPERTIES:
 :ID:       26b32ae2-b49c-42cb-a0d7-4823221b79f2
