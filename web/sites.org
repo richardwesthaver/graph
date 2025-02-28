@@ -131,3 +131,39 @@ crawler.pcpartpicker.com
 :END:
 US National Weather Service
 [[https://www.weather.gov/documentation/services-web-api][API Web Service]]
+* pitchfork.com
+:PROPERTIES:
+:ID:       d3271956-f2d8-41cf-ab3c-02b7f86e6cf4
+:CREATED:  <2025-02-28 Fri 08:28>
+:END:
+:EDGES:
+[2025-02-28 Fri 08:28] -- [[https://pitchfork.com/][Pitchfork | The Most Trusted Voice in Music. | Pitchfork]]
+:END:
+- [[https://pitchfork.com/info/rss/][RSS | Pitchfork]]
+* metabrainz.org
+:PROPERTIES:
+:ID:       ae7cfa47-aecd-4ce4-a0a7-19f71efe12ff
+:CREATED:  <2025-02-28 Fri 08:31>
+:END:
+:EDGES:
+[2025-02-28 Fri 08:31] -- [[https://metabrainz.org/][MetaBrainz Foundation]]
+:END:
+** musicbrainz.org
+:PROPERTIES:
+:ID:       29407696-fd6e-428b-85a1-5616baf554d9
+:CREATED:  <2025-02-28 Fri 08:29>
+:END:
+:EDGES:
+[2025-02-28 Fri 08:29] -- [[https://musicbrainz.org/][MusicBrainz - the open music encyclopedia]]
+:END:
+- [[https://musicbrainz.org/doc/MusicBrainz_API][MusicBrainz API - MusicBrainz]]
+- [[https://metabrainz.org/datasets][Datasets - MetaBrainz Foundation]]
+** freesound.org
+:PROPERTIES:
+:ID:       eb20a9f9-4c80-40d5-b4c1-153c8976db19
+:CREATED:  <2025-02-28 Fri 08:32>
+:END:
+:EDGES:
+[2025-02-28 Fri 08:32] -- [[https://freesound.org/][Freesound]]
+:END:
+[[https://freesound.org/docs/api/][Freesound API documentation]]
