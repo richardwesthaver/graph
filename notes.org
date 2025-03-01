@@ -117,21 +117,6 @@ as little as possible, exposing the interesting bits.
 - build applications
 - aggresively incorporate lessons learned
 
-* thunks
-:PROPERTIES:
-:ID:       f0acadbc-b8a6-4dd3-a8a4-f51cba10da75
-:CREATED:  <2025-01-17 Fri 15:54>
-:END:
-- from tagbody in Lisp discord
-#+begin_quote
-the inventors of the thunk recalling that the term "was coined after
-they realized (in the wee hours after hours of discussion) that the
-type of an argument in Algol-60 could be figured out in advance with a
-little compile-time thought [...] In other words, it had 'already been
-thought of'; thus it was christened a thunk, which is 'the past tense
-of "think" at two in the morning'.
-#+end_quote
-
 * SBCL+Rust=?
 :PROPERTIES:
 :ID:       a8b0dd7e-741c-4f5f-9d66-40b26ef56b14
@@ -353,14 +338,6 @@ https://cl-net-snmp.common-lisp.dev/release/release.sh
   rm $1_latest.tar.gz.asc
   ln -s $1-$2.tar.gz.asc $1_latest.tar.gz.asc
 #+end_src
-* Hopscotch hashing
-:PROPERTIES:
-:ID:       2dfa085f-d853-4e13-a6cf-654d0f96b81f
-:CREATED:  <2025-02-24 Mon 21:34>
-:END:
-:EDGES:
-[2025-02-24 Mon 21:34] -- [[https://en.wikipedia.org/wiki/Hopscotch_hashing][Hopscotch hashing - Wikipedia]]
-:END:
 * Tree-sitter
 :PROPERTIES:
 :ID:       026c796e-dcff-4eda-ad83-12e5d60f9971
@@ -411,3 +388,26 @@ https://cl-net-snmp.common-lisp.dev/release/release.sh
     and systems theory with courses designed to teach you how to
     configure Cloud Services.
 
+* A Narcissist's Prayer
+:PROPERTIES:
+:ID:       98e52e0e-104b-4dd8-b147-3a170163aeb9
+:CREATED:  <2025-03-01 Sat 11:41>
+:END:
+:EDGES:
+[2025-03-01 Sat 11:41] -- [[https://narcissistprayer.com/narcissistsprayer/][A Narcissist's Prayer | narcissistprayer]]
+:END:
+
+* duangle texts
+:PROPERTIES:
+:ID:       1c1bfaa5-53d9-4274-b4ef-621b7b52a959
+:CREATED:  <2025-03-01 Sat 12:22>
+:END:
+:EDGES:
+[2025-03-01 Sat 12:23] -- [[https://git.sr.ht/~duangle/texts][~duangle/texts - devlogs, documentation, musings, pastes, etc. - sourcehut git]]
+:END:
+- great list of resources from a small german indie-game studio
+- @paniq = Leonard Ritter
+- shared on Lisp Discord, via Mastodon
+- [[https://duangle.com/][Main - Duangle]]
+- plan.md
+  - ant farm - [[https://en.wikipedia.org/wiki/Formicarium][Formicarium - Wikipedia]] - nice

@@ -5,6 +5,8 @@
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/c][C reference - cppreference.com]]
 :END:
+[[https://en.cppreference.com/w/c/23][C23 - cppreference.com]]
+
 * CPP
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/][cppreference.com]]

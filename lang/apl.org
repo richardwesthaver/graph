@@ -217,6 +217,7 @@
 :END:
 - [[https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Programming.md][Programming in K]]
 - [[https://ngn.bitbucket.io/k.html][k impls]]
+- [[https://github.com/kparc/ksimple][kparc/ksimple: k/simple is a bare minimum k interpreter for learning purposes by arthur whitney]]
 - http://nsl.com/k/training/idioms_K3.pdf - k2/k3 version
 - Arthur Whitney's array programming language
 - many dialects, the OG ones are proprietary, there are OSS

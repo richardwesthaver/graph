@@ -1,0 +1,33 @@
+#+title: Algorithms
+* Algorithm
+:PROPERTIES:
+:ID:       26e0dd8a-352e-4c57-b501-15bdef909d88
+:CREATED:  <2025-02-28 Fri 17:39>
+:END:
+:EDGES:
+[2025-02-28 Fri 17:39] -- [[https://en.wikipedia.org/wiki/Algorithm][Algorithm - Wikipedia]]
+:END:
+** Sort
+:PROPERTIES:
+:ID:       0205d00e-3ba5-4016-afcf-03f888f5bd18
+:CREATED:  <2025-02-28 Fri 18:20>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:20] -- [[https://en.wikipedia.org/wiki/Sorting_algorithm][Sorting algorithm - Wikipedia]]
+:END:
+** Hash
+:PROPERTIES:
+:ID:       0756b187-0c00-434e-98a5-75e06cb3f01b
+:CREATED:  <2025-02-28 Fri 18:20>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:21] -- [[https://en.wikipedia.org/wiki/Hash_function][Hash function - Wikipedia]]
+:END:
+*** Hopscotch hashing
+:PROPERTIES:
+:ID:       2dfa085f-d853-4e13-a6cf-654d0f96b81f
+:CREATED:  <2025-02-24 Mon 21:34>
+:END:
+:EDGES:
+[2025-02-24 Mon 21:34] -- [[https://en.wikipedia.org/wiki/Hopscotch_hashing][Hopscotch hashing - Wikipedia]]
+:END:

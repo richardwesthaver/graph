@@ -10,3 +10,11 @@
 :END:
 The discipline that conerns the collection, organization, analysis,
 interpretation, and presentation of data.
+** Probability
+:PROPERTIES:
+:ID:       d48237d3-1559-46ff-83a0-ccfd3513a697
+:CREATED:  <2025-02-28 Fri 18:22>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:22] -- [[https://en.wikipedia.org/wiki/Probability_theory][Probability theory - Wikipedia]]
+:END:

@@ -1,0 +1,46 @@
+#+title: Logic
+* Logic
+:PROPERTIES:
+:ID:       9ff60117-e232-4754-8fa4-85939b519ced
+:CREATED:  <2025-02-28 Fri 18:53>
+:END:
+** Formal Logic
+:PROPERTIES:
+:ID:       460c0ac9-f37b-46ba-9837-21f6424185fd
+:CREATED:  <2025-02-28 Fri 18:53>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:53] -- [[https://en.wikipedia.org/wiki/Logic][Logic - Wikipedia]]
+:END:
+- AKA Symbolic Logic
+*** Formal Language
+:PROPERTIES:
+:ID:       fb36a89f-2b32-452a-b480-5ea23bd63efb
+:CREATED:  <2025-02-28 Fri 18:54>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:54] -- [[https://en.wikipedia.org/wiki/Formal_language][Formal language - Wikipedia]]
+:END:
+*** Formal System
+:PROPERTIES:
+:ID:       d2bffba1-8d5e-4733-be29-8e07c2cb528c
+:CREATED:  <2025-02-28 Fri 18:24>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:24] -- [[https://en.wikipedia.org/wiki/Formal_system][Formal system - Wikipedia]]
+:END:
+**** Lambda Calculus
+:PROPERTIES:
+:ID:       68ab28bf-45b9-4d51-90d0-8fb77017ec62
+:CREATED:  <2025-02-28 Fri 18:24>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:24] -- [[https://en.wikipedia.org/wiki/Lambda_calculus][Lambda calculus - Wikipedia]]
+:END:
+- [[https://en.wikipedia.org/wiki/Alonzo_Church][Alonzo Church - Wikipedia]]
+- [[https://en.wikipedia.org/wiki/Richard_Montague][Richard Montague - Wikipedia]]
+** Paradox
+:PROPERTIES:
+:ID:       23328bba-a55c-475a-9438-8f86f5df6f2a
+:CREATED:  <2025-02-28 Fri 18:55>
+:END:

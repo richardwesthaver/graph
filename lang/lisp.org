@@ -67,7 +67,7 @@ list, max, min, nconc, or, progn, and standard.
 [2025-02-25 Tue 16:08] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node62.html][5.2. Functions]]
 :END:
 - [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node63.html#SECTION00921000000000000000][5.2.1. Named Functions]]
-*** Lambda-Expressions
+*** Lambda-Expression
 :PROPERTIES:
 :ID:       7555f8c6-5dd5-4607-ae1f-32643bf03ba9
 :CREATED:  <2025-02-25 Tue 16:09>
@@ -75,6 +75,20 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-02-25 Tue 16:09] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node64.html#SECTION00922000000000000000][5.2.2. Lambda-Expressions]]
 :END:
+*** Thunk
+:PROPERTIES:
+:ID:       d69c0095-59e3-4005-8360-f928c3ace460
+:CREATED:  <2025-02-28 Fri 17:43>
+:END:
+- from tagbody in Lisp discord
+#+begin_quote
+the inventors of the thunk recalling that the term "was coined after
+they realized (in the wee hours after hours of discussion) that the
+type of an argument in Algol-60 could be figured out in advance with a
+little compile-time thought [...] In other words, it had 'already been
+thought of'; thus it was christened a thunk, which is 'the past tense
+of "think" at two in the morning'.
+#+end_quote
 
 ** Loop
 :PROPERTIES:
@@ -89,6 +103,15 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-02-22 Sat 15:18] -- [[https://letoverlambda.com/][Let Over Lambda]]
 :END:
+*** Compiler Macros
+:PROPERTIES:
+:ID:       961d0c81-11f0-49e2-8ccb-9c31f6b6528d
+:CREATED:  <2025-02-28 Fri 18:27>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:27] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/03_bba.htm][CLHS: Section 3.2.2.1]]
+:END:
+
 ** Applications
 :PROPERTIES:
 :ID:       475491e1-eacd-4759-be06-1c027e91f565

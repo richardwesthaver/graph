@@ -1,0 +1,58 @@
+#+title: Abstract Structures
+* Abstract Structure
+:PROPERTIES:
+:ID:       4850e361-e569-4b8e-a0e3-cedcc7e4b3a3
+:CREATED:  <2025-02-28 Fri 18:19>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:19] -- [[https://en.wikipedia.org/wiki/Abstract_structure][Abstract structure - Wikipedia]]
+:END:
+* Graph
+:PROPERTIES:
+:ID:       e2fd1fd6-2393-45a2-a073-0c44bfcfc2a0
+:CREATED:  <2025-02-28 Fri 19:00>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:00] -- [[https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)][Graph (discrete mathematics) - Wikipedia]]
+[2025-02-28 Fri 19:00] -- [[https://en.wikipedia.org/wiki/Graph_theory][Graph theory - Wikipedia]]
+:END:
+** Vertex
+:PROPERTIES:
+:ID:       e70dcd77-790b-4588-8abc-71b2f30c6a86
+:CREATED:  <2025-02-28 Fri 19:15>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:15] -- [[https://en.wikipedia.org/wiki/Vertex_(graph_theory)][Vertex (graph theory) - Wikipedia]]
+:END:
+** Edge
+:PROPERTIES:
+:ID:       2c184ae0-2523-4f44-9711-4e50e1c93c55
+:CREATED:  <2025-02-28 Fri 19:15>
+:END:
+A link between vertices, often represented as a line optionally with
+arrows as allowed by the applicable graph model (directed, undirected,
+acyclic, etc)
+* Stack
+:PROPERTIES:
+:ID:       2b5b4c0a-c4e8-4d76-b71f-240d6707cb02
+:CREATED:  <2025-02-28 Fri 19:18>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:18] -- [[https://en.wikipedia.org/wiki/Stack_(abstract_data_type)][Stack (abstract data type) - Wikipedia]]
+:END:
+* Linked List
+:PROPERTIES:
+:ID:       8805be63-567a-472d-a70c-6155ba2f3d02
+:CREATED:  <2025-02-28 Fri 19:18>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:18] -- [[https://en.wikipedia.org/wiki/Linked_list][Linked list - Wikipedia]]
+:END:
+* Tuple
+:PROPERTIES:
+:ID:       2616620b-782c-4c1f-97f9-e8f2d4fb8a38
+:CREATED:  <2025-02-28 Fri 19:19>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:19] -- [[https://en.wikipedia.org/wiki/Tuple][Tuple - Wikipedia]]
+:END:

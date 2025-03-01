@@ -167,3 +167,14 @@ US National Weather Service
 [2025-02-28 Fri 08:32] -- [[https://freesound.org/][Freesound]]
 :END:
 [[https://freesound.org/docs/api/][Freesound API documentation]]
+** electricitymaps.com
+:PROPERTIES:
+:ID:       005a209d-c429-410e-9ca0-f347b0ff646a
+:CREATED:  <2025-03-01 Sat 12:11>
+:END:
+:EDGES:
+[2025-03-01 Sat 12:13] -- [[https://www.electricitymaps.com/][The leading electricity grid API | Electricity Maps]]
+:END:
+- [[https://www.electricitymaps.com/methodology][Methodology | Electricity Maps]]
+- Free API Access
+- [[https://app.electricitymaps.com/][app]]

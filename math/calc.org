@@ -1,0 +1,59 @@
+#+title: Calculus
+* Calculus
+:PROPERTIES:
+:ID:       cb921570-b908-4b8b-bf46-d4f31b3e1239
+:CREATED:  <2025-02-28 Fri 18:15>
+:END:
+The study of continuous change.
+- [[https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus][Fundamental theorem of calculus - Wikipedia]]
+** Differential Calculus
+:PROPERTIES:
+:ID:       d0976b17-9de6-4c85-9ae5-8f1e89c4941a
+:CREATED:  <2025-02-28 Fri 18:33>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:33] -- [[https://en.wikipedia.org/wiki/Differential_calculus][Differential calculus - Wikipedia]]
+:END:
+** Integral
+:PROPERTIES:
+:ID:       ac761edc-8416-449a-9876-1564c57e06fa
+:CREATED:  <2025-02-28 Fri 18:34>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:35] -- [[https://en.wikipedia.org/wiki/Integral][Integral - Wikipedia]]
+:END:
+** Series
+:PROPERTIES:
+:ID:       39d6876c-5605-4a33-9be4-491f592d91ec
+:CREATED:  <2025-02-28 Fri 18:37>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:37] -- [[https://en.wikipedia.org/wiki/Series_(mathematics)][Series (mathematics) - Wikipedia]]
+:END:
+
+** Vector Calculus
+:PROPERTIES:
+:ID:       a652db50-8f75-46df-8ba0-f196f4b7fb75
+:CREATED:  <2025-02-28 Fri 18:37>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:37] -- [[https://en.wikipedia.org/wiki/Vector_calculus][Vector calculus - Wikipedia]]
+:END:
+
+** Stochastic Calculus
+:PROPERTIES:
+:ID:       8f56ea7b-0b22-4620-a454-a7ff9d9b5a5c
+:CREATED:  <2025-02-28 Fri 18:38>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:38] -- [[https://en.wikipedia.org/wiki/Stochastic_calculus][Stochastic calculus - Wikipedia]]
+:END:
+
+** Generalized Functions
+:PROPERTIES:
+:ID:       5bb49707-e877-45fd-b2e9-a04d80ab4eca
+:CREATED:  <2025-02-28 Fri 18:32>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:32] -- [[https://en.wikipedia.org/wiki/Generalized_function][Generalized function - Wikipedia]]
+:END:

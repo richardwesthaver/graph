@@ -1,0 +1,59 @@
+#+title: Computer Science
+* Computer Science
+:PROPERTIES:
+:ID:       adc765c5-ae57-47f0-b220-6450dbcabebb
+:CREATED:  <2025-02-28 Fri 18:56>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Theory_of_computation][Theory of computation - Wikipedia]]
+[2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Theoretical_computer_science][Theoretical computer science - Wikipedia]]
+
+** Data Structure
+:PROPERTIES:
+:ID:       956cb941-dd29-4b70-b0f7-53ad71362ed0
+:CREATED:  <2025-02-28 Fri 19:19>
+:END:
+
+*** Array
+:PROPERTIES:
+:ID:       825b2467-a397-4fcc-83b6-c3397e9cc091
+:CREATED:  <2025-02-28 Fri 19:20>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:20] -- [[https://en.wikipedia.org/wiki/Array_(data_structure)][Array (data structure) - Wikipedia]]
+:END:
+
+** Automata Theory
+:PROPERTIES:
+:ID:       6eeab81b-c95c-4991-9e0a-d3c565dc800d
+:CREATED:  <2025-02-28 Fri 18:56>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:56] -- [[https://en.wikipedia.org/wiki/Automata_theory][Automata theory - Wikipedia]]
+:END:
+*** Abstract Machine
+:PROPERTIES:
+:ID:       160d9219-f9e4-4ab3-864d-5aa0df3f9099
+:CREATED:  <2025-02-28 Fri 18:56>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:56] -- [[https://en.wikipedia.org/wiki/Abstract_machine][Abstract machine - Wikipedia]]
+:END:
+**** FSM
+:PROPERTIES:
+:ID:       4bec80fd-4547-462f-9945-e4e524a018c4
+:CREATED:  <2025-02-28 Fri 18:58>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:58] -- [[https://en.wikipedia.org/wiki/Finite-state_machine][Finite-state machine - Wikipedia]]
+:END:
+Finite-State Machine
+
+*** Automaton
+:PROPERTIES:
+:ID:       8259478a-d303-4d05-ac00-505decc39bb4
+:CREATED:  <2025-02-28 Fri 18:57>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Automaton][Automaton - Wikipedia]]
+:END:

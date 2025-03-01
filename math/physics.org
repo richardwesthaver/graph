@@ -1,0 +1,136 @@
+#+title: Physics
+* Physics
+:PROPERTIES:
+:ID:       873426f8-2dca-46ef-bef2-1fa1e3aa6881
+:CREATED:  <2025-02-28 Fri 18:39>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:39] -- [[https://en.wikipedia.org/wiki/Physics][Physics - Wikipedia]]
+:END:
+#+begin_quote
+Physics is the scientific study of matter, its fundamental
+constituents, its motion and behavior through space and time, and the
+related entities of energy and force.
+#+end_quote
+** Energy
+:PROPERTIES:
+:ID:       9f4d121c-27af-4b5a-a54f-d77117880495
+:CREATED:  <2025-02-28 Fri 18:49>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:50] -- [[https://en.wikipedia.org/wiki/Energy][Energy - Wikipedia]]
+:END:
+*** Radiation
+:PROPERTIES:
+:ID:       68c944e3-dabc-401c-820a-85a8028ab049
+:CREATED:  <2025-02-28 Fri 18:50>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:50] -- [[https://en.wikipedia.org/wiki/Radiation][Radiation - Wikipedia]]
+:END:
+*** Ionization
+:PROPERTIES:
+:ID:       3328ae51-9643-469e-aaf5-aec4c64338f0
+:CREATED:  <2025-02-28 Fri 18:51>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:51] -- [[https://en.wikipedia.org/wiki/Ionization][Ionization - Wikipedia]]
+:END:
+
+** Acoustics
+:PROPERTIES:
+:ID:       ceec7c59-321e-4506-9a0d-61f56247f2f2
+:CREATED:  <2025-02-28 Fri 18:40>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:40] -- [[https://en.wikipedia.org/wiki/Acoustics][Acoustics - Wikipedia]]
+:END:
+** Classical Physics
+:PROPERTIES:
+:ID:       0662e746-3702-44f3-b383-e8bffc45aa6f
+:CREATED:  <2025-02-28 Fri 18:40>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:40] -- [[https://en.wikipedia.org/wiki/Classical_physics][Classical physics - Wikipedia]]
+:END:
+** Thermodynamics
+:PROPERTIES:
+:ID:       a2901e49-a517-4d17-88ac-f789706c0e80
+:CREATED:  <2025-02-28 Fri 18:40>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:41] -- [[https://en.wikipedia.org/wiki/Thermodynamics][Thermodynamics - Wikipedia]]
+:END:
+** Electromagnetism
+:PROPERTIES:
+:ID:       653faa00-7ff5-4e00-9a78-56b3c2e686c2
+:CREATED:  <2025-02-28 Fri 18:43>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:44] -- [[https://en.wikipedia.org/wiki/Classical_electromagnetism][Classical electromagnetism - Wikipedia]]
+:END:
+** Modern Physics
+:PROPERTIES:
+:ID:       e802b005-157c-485d-8281-713a85c4d124
+:CREATED:  <2025-02-28 Fri 18:41>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:41] -- [[https://en.wikipedia.org/wiki/Modern_physics][Modern physics - Wikipedia]]
+:END:
+** Quantum Physics
+:PROPERTIES:
+:ID:       c7f7b48d-23cd-44ed-be1d-223c4af3d3aa
+:CREATED:  <2025-02-28 Fri 18:42>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:42] -- [[https://en.wikipedia.org/wiki/Introduction_to_quantum_mechanics][Introduction to quantum mechanics - Wikipedia]]
+:END:
+** Optics
+:PROPERTIES:
+:ID:       bfc0616e-b631-4b74-a27a-839f25455c44
+:CREATED:  <2025-02-28 Fri 18:43>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:43] -- [[https://en.wikipedia.org/wiki/Optics][Optics - Wikipedia]]
+:END:
+** Atomic Physics
+:PROPERTIES:
+:ID:       7f7a4ace-9070-4c17-b71d-ec68141cae78
+:CREATED:  <2025-02-28 Fri 18:44>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:44] -- [[https://en.wikipedia.org/wiki/Atomic_physics][Atomic physics - Wikipedia]]
+:END:
+** Particle Physics
+:PROPERTIES:
+:ID:       b06d0c06-7561-4a7f-80d0-cf989a43ab15
+:CREATED:  <2025-02-28 Fri 18:45>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:45] -- [[https://en.wikipedia.org/wiki/Particle_physics][Particle physics - Wikipedia]]
+:END:
+** Nuclear Physics
+:PROPERTIES:
+:ID:       90300edf-9fa4-438b-8f34-65a6857cfdab
+:CREATED:  <2025-02-28 Fri 18:46>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:46] -- [[https://en.wikipedia.org/wiki/Nuclear_physics][Nuclear physics - Wikipedia]]
+:END:
+- [[https://en.wikipedia.org/wiki/Cosmic_ray_spallation][Cosmic ray spallation - Wikipedia]]
+*** Fission
+:PROPERTIES:
+:ID:       b4038fa1-5bbb-48e9-935e-293209907a8b
+:CREATED:  <2025-02-28 Fri 18:47>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:47] -- [[https://en.wikipedia.org/wiki/Nuclear_fission][Nuclear fission - Wikipedia]]
+:END:
+*** Nuclear Astrophysics
+:PROPERTIES:
+:ID:       0977c147-3689-4dc6-bde7-c7ee9eec5db0
+:CREATED:  <2025-02-28 Fri 18:49>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:49] -- [[https://en.wikipedia.org/wiki/Nuclear_astrophysics][Nuclear astrophysics - Wikipedia]]
+:END:

@@ -19,3 +19,11 @@ laptop.
 :EDGES:
 [2025-01-17 Fri 18:47] -- [[https://en.wikipedia.org/wiki/Software_cracking][Software cracking - Wikipedia]]
 :END:
+* Rubberducking
+:PROPERTIES:
+:ID:       598fc07b-3eab-46d7-abd2-510ee8135584
+:CREATED:  <2025-03-01 Sat 12:27>
+:END:
+:EDGES:
+[2025-03-01 Sat 12:27] -- [[https://en.wikipedia.org/wiki/Rubber_duck_debugging][Rubber duck debugging - Wikipedia]]
+:END:

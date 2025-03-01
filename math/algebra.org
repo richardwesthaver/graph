@@ -1,0 +1,160 @@
+#+title: Algebra
+* Algebra
+:PROPERTIES:
+:ID:       3f69489f-80bf-4b1b-8113-ab8fd5e20e33
+:CREATED:  <2025-02-28 Fri 17:48>
+:END:
+:EDGES:
+[2025-02-28 Fri 17:49] -- [[https://en.wikipedia.org/wiki/Algebra][Algebra - Wikipedia]]
+:END:
+The study of generalizations of arithmetic operations.
+** Abstract Algebra
+:PROPERTIES:
+:ID:       8208c5b8-462c-4f11-b935-246de88e6667
+:CREATED:  <2025-02-28 Fri 17:55>
+:END:
+:EDGES:
+[2025-02-28 Fri 17:56] -- [[https://en.wikipedia.org/wiki/Abstract_algebra][Abstract algebra - Wikipedia]]
+:END:
+*** Category Theory
+:PROPERTIES:
+:ID:       993236b2-fc86-4cce-ac35-0730976a8333
+:CREATED:  <2025-02-28 Fri 17:56>
+:END:
+:EDGES:
+[2025-02-28 Fri 17:56] -- [[https://en.wikipedia.org/wiki/Category_theory][Category theory - Wikipedia]]
+:END:
+**** Category
+:PROPERTIES:
+:ID:       d94b3cbc-9dca-430f-af25-523fa12273e6
+:CREATED:  <2025-02-28 Fri 18:06>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:07] -- [[https://en.wikipedia.org/wiki/Category_(mathematics)][Category (mathematics) - Wikipedia]]
+:END:
+Abstract Categories
+**** Monoidal Category
+:PROPERTIES:
+:ID:       0ebc3d0a-8913-49c1-b8a1-c62ac145b2ba
+:CREATED:  <2025-02-28 Fri 18:08>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:08] -- [[https://en.wikipedia.org/wiki/Monoidal_category][Monoidal category - Wikipedia]]
+:END:
+
+***** Concrete Category
+:PROPERTIES:
+:ID:       14121452-3f4f-459f-9116-f8fdafd8cd73
+:CREATED:  <2025-02-28 Fri 18:06>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:07] -- [[https://en.wikipedia.org/wiki/Concrete_category][Concrete category - Wikipedia]]
+:END:
+
+**** Functor
+:PROPERTIES:
+:ID:       d0b0d9af-ffae-42c4-a151-1f947f348077
+:CREATED:  <2025-02-28 Fri 18:13>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:13] -- [[https://en.wikipedia.org/wiki/Functor][Functor - Wikipedia]]
+:END:
+
+**** Operad
+:PROPERTIES:
+:ID:       eca3fc3d-22c2-474c-9966-82ce724a0607
+:CREATED:  <2025-02-28 Fri 18:05>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:05] -- [[https://en.wikipedia.org/wiki/Operad][Operad - Wikipedia]]
+:END:
+- a structure containing:
+  - collection of abstract ops
+    - fixed input arity
+    - single value output
+  - spec on how to compose ops ([[https://en.wikipedia.org/wiki/Operad_algebra][Operad algebra - Wikipedia]])
+    
+*** Universal Algebra
+:PROPERTIES:
+:ID:       b7e6df5e-8393-4763-87a5-7183b62ad07e
+:CREATED:  <2025-02-28 Fri 17:58>
+:END:
+:EDGES:
+[2025-02-28 Fri 17:58] -- [[https://en.wikipedia.org/wiki/Universal_algebra][Universal algebra - Wikipedia]]
+:END:
+
+**** Partial Algebra
+:PROPERTIES:
+:ID:       2054dbdf-d464-44fb-96b9-c3f41e006ca3
+:CREATED:  <2025-02-28 Fri 18:26>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:26] -- [[https://en.wikipedia.org/wiki/Partial_algebra][Partial algebra - Wikipedia]]
+:END:
+
+** Algebraic Topology
+:PROPERTIES:
+:ID:       bcaa674a-b485-46db-955c-17ba5eec4592
+:CREATED:  <2025-02-28 Fri 17:59>
+:END:
+:EDGES:
+[2025-02-28 Fri 17:59] -- [[https://en.wikipedia.org/wiki/Algebraic_topology][Algebraic topology - Wikipedia]]
+[2025-02-28 Fri 18:13] -- [[https://en.wikipedia.org/wiki/Topological_space][Topological space - Wikipedia]]
+:END:
+** Algebraic Structure
+:PROPERTIES:
+:ID:       f66bf1e0-ef4f-4038-9da5-06dca676dba9
+:CREATED:  <2025-02-28 Fri 18:10>
+:END:
+[[https://en.wikipedia.org/wiki/Algebraic_structure][Algebraic structure - Wikipedia]]
+:END:
+*** Group
+:PROPERTIES:
+:ID:       c93a7820-514e-422a-af95-1dd6f8846665
+:CREATED:  <2025-02-28 Fri 18:29>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:29] -- [[https://en.wikipedia.org/wiki/Group_(mathematics)][Group (mathematics) - Wikipedia]]
+:END:
+*** Set
+:PROPERTIES:
+:ID:       4c5eb400-b3f5-48fb-875b-f7a5f3c99ede
+:CREATED:  <2025-02-28 Fri 18:30>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:30] -- [[https://en.wikipedia.org/wiki/Set_(mathematics)][Set (mathematics) - Wikipedia]]
+:END:
+*** Magma
+:PROPERTIES:
+:ID:       b703c556-fd85-484e-954e-2f6f163a5752
+:CREATED:  <2025-02-28 Fri 18:30>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:31] -- [[https://en.wikipedia.org/wiki/Magma_(algebra)][Magma (algebra) - Wikipedia]]
+:END:
+*** Function
+:PROPERTIES:
+:ID:       39130a13-90fc-4e04-a05a-acdf31fc88ad
+:CREATED:  <2025-02-28 Fri 18:31>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:31] -- [[https://en.wikipedia.org/wiki/Function_(mathematics)][Function (mathematics) - Wikipedia]]
+:END:
+- [[https://en.wikipedia.org/wiki/Image_(mathematics)][Image (mathematics) - Wikipedia]]
+- [[https://en.wikipedia.org/wiki/Domain_of_a_function][Domain of a function - Wikipedia]]
+**** Inverse
+:PROPERTIES:
+:ID:       82e956dc-69e5-4eef-993f-6afa97a38312
+:CREATED:  <2025-02-28 Fri 18:36>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:36] -- [[https://en.wikipedia.org/wiki/Inverse_function][Inverse function - Wikipedia]]
+:END:
+*** Operation
+:PROPERTIES:
+:ID:       feaa8203-1dfe-4009-8a12-56b3a044d183
+:CREATED:  <2025-02-28 Fri 18:31>
+:END:
+:EDGES:
+[2025-02-28 Fri 18:31] -- [[https://en.wikipedia.org/wiki/Operation_(mathematics)][Operation (mathematics) - Wikipedia]]
+:END:
