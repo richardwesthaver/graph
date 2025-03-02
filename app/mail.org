@@ -1,0 +1,11 @@
+#+title: Mail Apps
+#+setupfile: ../../clean.theme
+* notmuch
+:PROPERTIES:
+:ID:       bad99155-7f62-404c-ae48-18d753bcdfb4
+:CREATED:  <2025-03-01 Sat 13:41>
+:END:
+:EDGES:
+[2025-03-01 Sat 13:41] -- [[https://notmuchmail.org/][notmuch]]
+:END:
+- [[https://notmuchmail.org/news/][News]]
