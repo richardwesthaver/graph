@@ -8,6 +8,7 @@
 :EDGES:
 [2025-02-07 Fri 21:08] -- [[https://en.wikipedia.org/wiki/Programming_language_theory][Programming language theory - Wikipedia]]
 :END:
+- [[https://en.wikipedia.org/wiki/Programming_paradigm][Programming paradigm - Wikipedia]]
 ** OOP
 :PROPERTIES:
 :ID:       44659589-80a3-459b-ad29-d2e5b208b451
@@ -17,3 +18,9 @@
 [2025-02-07 Fri 21:10] -- [[https://en.wikipedia.org/wiki/Object-oriented_programming][Object-oriented programming - Wikipedia]]
 :END:
 Object-Oriented Programming
+** Functional Programming
+:PROPERTIES:
+:ID:       7dfd88e4-5511-4ff8-99ce-0fbf464bde58
+:CREATED:  <2025-03-01 Sat 16:43>
+:END:
+- [[https://itnext.io/why-functional-programming-languages-will-never-be-mainstream-e1b5a8c9e4d8][Why Functional Programming Languages Will Never Be Mainstream | by Jeffrey Rennie | Jan, 2025 | ITNEXT]]

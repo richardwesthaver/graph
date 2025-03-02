@@ -4,6 +4,11 @@
 :PROPERTIES:
 :ID:       a7f9b428-9323-492f-aaa5-94669bfbc55b
 :END:
+:EDGES:
+[2025-03-01 Sat 19:51] -- [[https://www.sbcl.org/getting.html][Getting Started - Steel Bank Common Lisp]]
+:END:
+- [[https://github.com/sbcl/sbcl/blob/master/INSTALL][sbcl/INSTALL]]
+- [[https://www.sbcl.org/news.html][News - Steel Bank Common Lisp]]
 ** Internals
 :PROPERTIES:
 :ID:       9aac997a-5d9c-43dd-b2ca-8b8b02d9f2dd

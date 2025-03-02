@@ -12,7 +12,6 @@
 - refer to the INSTALL file in the root of the emacs repo for an
   overview of install options
 - releases are hosted at [[https://ftp.gnu.org/gnu/emacs/]]
-
 ** Org Mode
 :PROPERTIES:
 :ID:       cea03181-b97b-494d-b362-28056416469d
@@ -24,3 +23,19 @@
 [2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
 [2025-02-16 Sun 20:14] -- [[https://orgmode.org/manual/Library-of-Babel.html][Library of Babel (The Org Manual)]]
 :END:
+
+** Eww
+:PROPERTIES:
+:ID:       21adcc1c-67ee-4f50-9049-12794824b2c7
+:CREATED:  <2025-03-01 Sat 13:35>
+:END:
+:EDGES:
+[2025-03-01 Sat 13:36] -- [[https://www.emacswiki.org/emacs/eww][EmacsWiki: eww]]
+:END:
+
+the Emacs Web Wowser, a browser written in elisp based on shr.el.
+#+begin_src shell :exports code :results none
+  eww() {
+   emacsclient -a '' -t -e '(eww-browse-url "'"$1"'")'
+  }
+#+end_src

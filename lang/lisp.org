@@ -12,11 +12,13 @@
 [2025-02-13 Thu 22:42] -- [[https://franz.com/support/documentation/cl-ansi-standard-draft-w-sidebar.pdf][CL ANSI Standard Draft]]
 [2025-02-13 Thu 22:43] -- [[https://www.lispworks.com/documentation/HyperSpec/Front/StartPts.htm][CLHS: Starting Points]]
 :END:
+
 ** Syntax
 :PROPERTIES:
 :ID:       df41336d-5185-4047-9644-e25925529f08
 :CREATED:  <2025-02-25 Tue 16:05>
 :END:
+
 - Pragmatic Parsing in Common Lisp - [[https://www.plover.com/misc/hbaker-archive/Prag-Parse.html][ACM Lisp Pointers 4, 2 (Apr/Jun 1991), 3-15.]]
 ** CLOS
 :PROPERTIES:
@@ -158,6 +160,40 @@ system, but the code available has some goodies (json/nlp/etc)
 :ID:       92dd3f0e-4789-4016-a623-48af3c45cd05
 :CREATED:  <2025-02-26 Wed 20:52>
 :END:
+:EDGES:
+[2025-03-01 Sat 15:51] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm][CLHS: Macro DEFPACKAGE]]
+:END:
+- [[https://www.lispworks.com/documentation/HyperSpec/Body/f_shadow.htm][CLHS: Function SHADOW]]
+
+- :intern \\
+  The symbols named by the argument symbol-names are found or created
+  in the package being defined.  The :intern option interacts with the
+  :use option, since inherited symbols can be used rather than new
+  ones created.
+
+#+begin_quote
+It is recommended that the entire package definition is put in a
+single place, and that all the package definitions of a program are in
+a single file. This file can be loaded before loading or compiling
+anything else that depends on those packages. Such a file can be read
+in the COMMON-LISP-USER package, avoiding any initial state issues.
+#+end_quote
+
+- SBCL supports some additions to defpackage (:lock and :implement) -
+  uiop and our own =defpkg= supports even more (:recycle, etc)
+- [[https://www.sbcl.org/manual/#Package-Locks][SBCL Package Locks]]
+- :implement \\
+  #+begin_quote
+  Each package has a list of associated implementation packages. A
+  locked package, and the symbols whose home package it is, can be
+  modified without violating package locks only when =*package*= is
+  bound to one of the implementation packages of the locked package.
+
+  Unless explicitly altered by defpackage,
+  =sb-ext:add-implementation-package=, or
+  =sb-ext:remove-implementation-package= each package is its own
+  (only) implementation package.
+  #+end_quote
 ** Package Managers
 :PROPERTIES:
 :ID:       d41019fd-ca88-4608-af00-9e7a84dcd49f
@@ -170,12 +206,17 @@ system, but the code available has some goodies (json/nlp/etc)
 :END:
 :EDGES:
 [2025-02-26 Wed 20:54] -- [[https://www.quicklisp.org/beta/][Quicklisp beta]]
+[2025-03-01 Sat 16:07] -- [[https://github.com/quicklisp][quicklisp (Zach Beane) · GitHub]]
 :END:
 #+begin_quote
 Quicklisp is a library manager for Common Lisp. It works with your
 existing Common Lisp implementation to download, install, and load any
 of over 1,500 libraries with a few simple commands.
 #+end_quote
+- [[https://github.com/quicklisp/quicklisp-controller][quicklisp/quicklisp-controller: The software to build Quicklisp dists.]]
+- [[https://github.com/quicklisp/quicklisp-projects][quicklisp/quicklisp-projects: Metadata for projects tracked by Quicklisp.]]
+- see also Shinmera's [[https://github.com/Shirakumo/redist][Shirakumo/redist: A project to handle the creation of Quicklisp dists]]
+  - with a nice html page for the dist: [[https://dist.shirakumo.org/shirakumo/][shirakumo Distribution Index]]
 **** Ultralisp
 :PROPERTIES:
 :ID:       6cfca9d2-8d3d-4725-a08f-349e08fd44e3
@@ -184,6 +225,7 @@ of over 1,500 libraries with a few simple commands.
 :EDGES:
 [2025-02-26 Wed 20:54] -- [[https://ultralisp.org/][Ultralisp - Fast Common Lisp Repository]]
 :END:
+An alternative distribution for Quicklisp - tracks git branches.
 * Scheme
 :PROPERTIES:
 :ID:       cce00db3-1428-4380-aa5d-8d2ec767b873
@@ -208,3 +250,12 @@ of over 1,500 libraries with a few simple commands.
 :END:
 Maclisp->Zetalisp
 - [[http://www.jargon.net/jargon/jargonfile/c/chinenual.html][jargon, node: chine nual]]
+* Elisp
+:PROPERTIES:
+:ID:       6c69c42b-3d0a-48bf-a5ad-43b350477387
+:CREATED:  <2025-03-01 Sat 16:35>
+:END:
+:EDGES:
+[2025-03-01 Sat 16:36] -- [[https://www.gnu.org/software/emacs/manual/elisp.html][GNU Emacs Lisp Reference Manual]]
+[2025-03-01 Sat 16:36] -- [[https://www.gnu.org/software/emacs/manual/eintr.html][An Introduction to Programming in Emacs Lisp - GNU Project - Free Software Foundation (FSF)]]
+:END:
