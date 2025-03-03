@@ -1,4 +1,5 @@
 #+title: Algebra
+#+setupfile: ../../clean.theme
 * Algebra
 :PROPERTIES:
 :ID:       3f69489f-80bf-4b1b-8113-ab8fd5e20e33

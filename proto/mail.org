@@ -1,0 +1,35 @@
+#+title: Mail Protocols
+#+setupfile: ../../clean.theme
+* Sieve
+:PROPERTIES:
+:ID:       3a05dc16-8faf-4004-a2ca-26f2eeee5dd5
+:CREATED:  <2025-03-03 Mon 16:51>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:52] -- [[https://datatracker.ietf.org/doc/html/rfc5228][RFC 5228 - Sieve: An Email Filtering Language]]
+:END:
+* JMAP
+:PROPERTIES:
+:ID:       1cf5b67e-e476-48a9-9560-7e0d49de9768
+:CREATED:  <2025-03-03 Mon 16:53>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:53] -- [[https://jmap.io/][JSON Meta Application Protocol Specification (JMAP)]]
+[2025-03-03 Mon 16:53] -- [[https://datatracker.ietf.org/group/jmap/about/][JSON Mail Access Protocol (jmap)]]
+:END:
+* IMAP
+:PROPERTIES:
+:ID:       3bdc7566-668c-4332-8684-7cfdbcd71c8f
+:CREATED:  <2025-03-03 Mon 16:54>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:54] -- [[https://datatracker.ietf.org/doc/html/rfc9051][RFC 9051 - Internet Message Access Protocol (IMAP) - Version 4rev2]]
+:END:
+* POP3
+:PROPERTIES:
+:ID:       f1d8108d-f9fa-4ab6-b1e9-ca0b932552c5
+:CREATED:  <2025-03-03 Mon 16:55>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:55] -- [[https://www.ietf.org/rfc/rfc1939.html][RFC1939]]
+:END:

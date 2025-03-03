@@ -55,3 +55,20 @@ systems interconnection.'
 :EDGES:
 [2025-02-26 Wed 20:47] -- [[https://en.wikipedia.org/wiki/Lisp_machine][Lisp machine - Wikipedia]]
 :END:
+* Knowledge System
+:PROPERTIES:
+:ID:       8889ae64-a982-4f6c-a875-5cbae6dbb323
+:CREATED:  <2025-03-03 Mon 17:05>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:05] -- [[https://en.wikipedia.org/wiki/Knowledge-based_systems][Knowledge-based systems - Wikipedia]]
+:END:
+- aka ~KMS~
+** Expert System
+:PROPERTIES:
+:ID:       dc13038b-91ba-4a5c-bc62-ad189033023d
+:CREATED:  <2025-03-03 Mon 17:05>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:06] -- [[https://en.wikipedia.org/wiki/Expert_system][Expert system - Wikipedia]]
+:END:

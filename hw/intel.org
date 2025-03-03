@@ -1,2 +1,11 @@
 #+title: Intel
 #+setupfile: ../../clean.theme
+* Intel                                                               :intel:
+:PROPERTIES:
+:ID:       4555306b-b68c-43a9-8a54-e4066ca7437d
+:CREATED:  <2025-03-03 Mon 11:43>
+:END:
+:EDGES:
+[2025-03-03 Mon 11:43] -- [[https://www.intel.com/][Intel]]
+:END:
+- [[https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html][Intel® Developer Catalog]]

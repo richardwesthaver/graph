@@ -1,14 +1,14 @@
 #+title: Filesystems
 #+bibliography: ../refs.bib
 #+setupfile: ../../clean.theme
-* FS
+* FS                                                                     :fs:
 :PROPERTIES:
 :ID:       8ff74861-a0bc-49e1-83eb-3a32f8f8fb78
 :CREATED:  <2025-02-15 Sat 16:31>
 :END:
 #+cite_export: csl
 #+print_bibliography:
-** BTRFS
+** BTRFS                                                              :btrfs:
 :PROPERTIES:
 :ID:       3e7bb82e-7dae-476a-8ed0-18c361c9bd1b
 :END:
@@ -162,7 +162,7 @@ servers. This entails challenges on many different fronts.
   - https://docs.kernel.org/userspace-api/ioctl/ioctl-number.html
   - Btrfs filesystem some lifted to vfs/generic
   - fs/btrfs/ioctl.h and linux/fs.h
-** ZFS
+** ZFS                                                                  :zfs:
 :PROPERTIES:
 :ID:       3c828873-641e-4846-abd6-781605f33f60
 :CREATED:  <2025-02-15 Sat 16:32>

@@ -1,14 +1,16 @@
 #+title: UDP
 #+setupfile: ../../../clean.theme
-* UDP
+* UDP                                                                   :udp:
 :PROPERTIES:
 :ID:       a2f33ea0-51c3-45d8-8c19-03a95321384c
 :CREATED:  <2025-01-17 Fri 23:14>
 :END:
 :EDGES:
 [2025-02-20 Thu 20:50] -- [[https://www.rfc-editor.org/info/rfc8085][UDP Usage Guidelines]]
+[2025-03-03 Mon 15:47] >> [[id:2c915d42-3f42-4a94-a2d7-af73c9938c7b][IP]]
 :END:
 - [[https://www.cs.unc.edu/~dewan/242/s07/notes/ipc/node26.html][Process to Process Communication: UDP and TCP/IP]]
+
 ** Multicast
 :PROPERTIES:
 :ID:       f7e112ca-25b4-41f1-a756-2492eda9dd90
@@ -36,13 +38,14 @@
 :PROPERTIES:
 :ID:       7f5a6675-3e8a-414b-8788-c9957708bd79
 :END:
-*** QUIC
+*** QUIC                                                               :quic:
 :PROPERTIES:
 :ID:       031f06eb-b4a6-4386-a17f-33712bf67181
 :CREATED:  <2025-01-17 Fri 23:14>
 :END:
 :EDGES:
 [2025-02-16 Sun 20:42] -- [[https://docs.google.com/document/d/1gY9-YNDNAB1eip-RTPbqphgySwSNSDHLq9D5Bty4FSU][QUIC at 10,000 feet - Google Docs]]
+[2025-03-03 Mon 15:46] >> [[id:81e78198-a5ed-4fdd-b487-1bb3874ffa71][HTTPS]]
 :END:
 - https://www.chromium.org/quic
 
@@ -70,7 +73,7 @@ Transport-layer network protocol, part of the Chromium project.
 - [[https://tools.ietf.org/html/draft-ietf-quic-invariants-09][draft-ietf-quic-invariants-09 - Version-Independent Properties of QUIC]]
 - [[https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-00][draft-iyengar-quic-delayed-ack-00 - Sender Control of Acknowledgement Delays in QUIC]]
 - [[https://quicwg.org/][QUIC Working Group]]
-**** Quinn
+**** Quinn                                                             :rust:
 :PROPERTIES:
 :ID:       f10769f7-cf9b-4bb5-ada9-d499af348f9d
 :CREATED:  <2025-01-17 Fri 23:14>
@@ -78,10 +81,24 @@ Transport-layer network protocol, part of the Chromium project.
 [[https://github.com/quinn-rs/quinn/tree/main][GitHub - quinn-rs/quinn]]
 :END:
 Async-friendly QUIC implementation in Rust
-*** OSC
+*** OSC                                                                 :osc:
 :PROPERTIES:
 :ID:       33ad3584-2728-4f90-8fae-397f026731f1
 :CREATED:  <2025-01-18 Sat 20:43>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:37] -- [[https://ccrma.stanford.edu/groups/osc/index.html][OSC index]]
+:END:
+
+*** WebRTC
+:PROPERTIES:
+:ID:       989ae244-f798-425c-bcf1-32014eafbd22
+:CREATED:  <2025-03-03 Mon 15:44>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:44] -- [[https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols][Introduction to WebRTC protocols - Web APIs | MDN]]
+[2025-03-03 Mon 15:45] -- [[https://medium.com/@venkatraghav2003/webrtc-an-overview-2b3dc7d5e1bf][WebRTC-An Overview | by Venkatakrishnan | Medium]]
+[2025-03-03 Mon 15:46] -> [[id:52a7cb9d-5b78-4681-9146-2d8f5707c1a3][WebSocket]]
 :END:
 *** RTP
 :PROPERTIES:

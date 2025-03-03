@@ -1,2 +1,10 @@
 #+title: NVIDIA
 #+setupfile: ../../clean.theme
+* NVIDIA                                                             :nvidia:
+:PROPERTIES:
+:ID:       eaf2ecf5-7748-40e5-bd1b-c8fc2053d050
+:CREATED:  <2025-03-03 Mon 11:45>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:47] << [[id:a531e912-55ab-4889-806f-475c0316713e][CUDA]]
+:END:

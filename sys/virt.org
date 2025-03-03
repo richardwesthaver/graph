@@ -1,6 +1,7 @@
 #+title: Virtualization
 #+setupfile: ../../clean.theme
-* Container
+#+FILETAGS: virt
+* Container                                                       :container:
 :PROPERTIES:
 :ID:       83b24cd0-3c89-400e-b63b-64872569222b
 :CREATED:  <2025-02-09 Sun 13:32>
@@ -37,7 +38,7 @@ the host.
 :ID:       c7733e64-1370-4586-94e1-dfad81080160
 :CREATED:  <2025-02-06 Thu 18:45>
 :END:
-* VM
+* VM                                                                     :vm:
 :PROPERTIES:
 :ID:       86b9ed90-dbc4-4ee8-ac8d-842ef0b39941
 :CREATED:  <2025-02-14 Fri 21:33>

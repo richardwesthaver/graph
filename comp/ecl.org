@@ -1,0 +1,11 @@
+#+title: Embedded Common Lisp
+#+setupfile: ../../clean.theme
+* ECL
+:PROPERTIES:
+:ID:       03934099-5cca-488c-aa5b-ed5dd4bfb428
+:CREATED:  <2025-03-03 Mon 16:43>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:56] -- [[info:ecl][info]]
+[2025-03-03 Mon 16:57] -- [[man:ecl][man]]
+:END:

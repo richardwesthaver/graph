@@ -1,6 +1,6 @@
 #+title: GPU
 #+setupfile: ../../clean.theme
-* GPU
+* GPU                                                                   :gpu:
 :PROPERTIES:
 :ID:       05a6ae25-b2ed-4edb-9104-e6894819b96e
 :CREATED:  <2025-01-17 Fri 23:00>

@@ -1,0 +1,42 @@
+#+title: Terminals
+#+setupfile: ../../clean.theme
+* Terminal Emulator                                                :term:tty:
+:PROPERTIES:
+:ID:       a1bc7f75-4b67-452d-9c30-54420f66e1c5
+:CREATED:  <2025-03-03 Mon 16:18>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:18] -- [[https://en.wikipedia.org/wiki/Terminal_emulator][Terminal emulator - Wikipedia]]
+:END:
+- [[https://en.wikipedia.org/wiki/Tty_(Unix)][tty (Unix) - Wikipedia]]
+** Alacritty
+:PROPERTIES:
+:ID:       b6cc9844-e152-4227-820d-d7d00c7381aa
+:CREATED:  <2025-03-03 Mon 16:18>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:20] -- [[https://alacritty.org/][Alacritty - A cross-platform, OpenGL terminal emulator]]
+[2025-03-03 Mon 16:20] -- [[https://github.com/alacritty/alacritty][alacritty/alacritty]]
+:END:
+** WezTerm
+:PROPERTIES:
+:ID:       8c91f0e4-8cc5-4622-8e34-0f0eab0818ae
+:CREATED:  <2025-03-03 Mon 16:21>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:21] -- [[https://wezterm.org/][WezTerm - Wez's Terminal Emulator]]
+[2025-03-03 Mon 16:21] -- [[https://github.com/wezterm/wezterm][wezterm/wezterm]]
+:END:
+** Terminal Multiplexer
+:PROPERTIES:
+:ID:       528d0b97-b753-40b1-8db2-198ce59296a6
+:CREATED:  <2025-03-03 Mon 16:25>
+:END:
+*** Tmux                                                               :tmux:
+:PROPERTIES:
+:ID:       3c83b6e7-fa30-4e48-88b2-5d96e749e60a
+:CREATED:  <2025-03-03 Mon 16:25>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:25] -- [[man:tmux][man]]
+:END:

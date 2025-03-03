@@ -1,6 +1,6 @@
 #+title: Databases
 #+setupfile: ../../clean.theme
-* DB
+* DB                                                                     :db:
 :PROPERTIES:
 :ID:       a833eb98-c31e-4492-ac07-e718a9bce086
 :CREATED:  <2025-02-16 Sun 19:06>
@@ -30,7 +30,7 @@
 :EDGES:
 [2025-02-16 Sun 19:07] -- [[https://en.wikipedia.org/wiki/Shard_(database_architecture)][Shard (database architecture) - Wikipedia]]
 :END:
-** DBMS
+** DBMS                                                                :dbms:
 :PROPERTIES:
 :ID:       3bd5f5f8-956b-49a4-b280-eec4a8c0f85e
 :CREATED:  <2025-02-16 Sun 19:09>
@@ -49,12 +49,12 @@ Our understanding of DBMS, for the purpose of this node is quite
 vague - it is anything which is powerful enough to be used as the core
 of a DBMS on its own or which covers enough surface area in the DB
 school of thought to be considered one.
-*** RocksDB
+*** RocksDB                                                         :rocksdb:
 :PROPERTIES:
 :ID:       b569a646-de4c-4287-8599-52b237a753b4
 :CREATED:  <2025-02-27 Thu 16:17>
 :END:
-*** DataFusion
+*** DataFusion                                                       :apache:
 :PROPERTIES:
 :ID:       3ce0b887-31ea-4a78-96a2-6671907a687a
 :CREATED:  <2025-02-16 Sun 19:09>

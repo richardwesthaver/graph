@@ -5,8 +5,19 @@
 :ID:       b3639401-b960-42d3-8325-7b5e056e3478
 :CREATED:  <2025-01-17 Fri 16:05>
 :END:
+:EDGES:
+[2025-03-03 Mon 16:34] -- [[man:gcc][man]]
+[2025-03-03 Mon 16:34] -- [[info:gcc][info]]
+[2025-03-03 Mon 16:37] -- [[info:gccint][gccint]]
+[2025-03-03 Mon 16:38] -- [[info:gccinstall][gccinstall]]
+:END:
 - [[https://gcc.gnu.org/onlinedocs/gcc-8.1.0/gcc/Standards.html][GCC Supported Standards]]
 
+** G++                                                                  :cpp:
+:PROPERTIES:
+:ID:       4b5e18bd-cb9b-4f83-a463-e4a95764104b
+:CREATED:  <2025-03-03 Mon 16:36>
+:END:
 ** Extensions
 :PROPERTIES:
 :ID:       2a3947b0-a120-4c48-a8d5-f9c01deb49b9

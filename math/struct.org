@@ -1,4 +1,5 @@
 #+title: Abstract Structures
+#+setupfile: ../../clean.theme
 * Abstract Structure
 :PROPERTIES:
 :ID:       4850e361-e569-4b8e-a0e3-cedcc7e4b3a3
@@ -55,4 +56,21 @@ acyclic, etc)
 :END:
 :EDGES:
 [2025-02-28 Fri 19:19] -- [[https://en.wikipedia.org/wiki/Tuple][Tuple - Wikipedia]]
+:END:
+* Curve
+:PROPERTIES:
+:ID:       51e7d9ad-28a2-4284-94a1-18a642d0cf3d
+:CREATED:  <2025-03-03 Mon 16:59>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:59] -- [[https://en.wikipedia.org/wiki/Algebraic_curve][Algebraic curve - Wikipedia]]
+:END:
+** Elliptic Curve
+:PROPERTIES:
+:ID:       b4579e67-0855-44e1-971d-1a727694af17
+:CREATED:  <2025-03-03 Mon 16:59>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:00] -- [[https://en.wikipedia.org/wiki/Elliptic_curve][Elliptic curve - Wikipedia]]
+[2025-03-03 Mon 17:01] << [[id:5add36a0-129f-466c-b493-b34aee8b99a6][ECC]]
 :END:

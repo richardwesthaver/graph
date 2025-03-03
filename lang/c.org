@@ -35,6 +35,17 @@
 :EDGES:
 [2025-03-02 Sun 20:46] -- [[https://www.adaptagrams.org/][Adaptagrams: Tools for Adaptive Diagrams]]
 :END:
+
+*** NaCl
+:PROPERTIES:
+:ID:       f4bfdb27-161d-4b47-b417-55ac4eeff234
+:CREATED:  <2025-03-03 Mon 15:01>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:01] -- [[https://nacl.cr.yp.to][~]]
+[2025-03-03 Mon 15:01] -- [[https://nacl.cr.yp.to/secretbox.html][Secret-key authenticated encryption: crypto_secretbox]]
+:END:
+
 ** CUDA                                                          :nvidia:gpu:
 :PROPERTIES:
 :ID:       a531e912-55ab-4889-806f-475c0316713e
@@ -42,5 +53,7 @@
 :END:
 :EDGES:
 [2025-03-02 Sun 21:29] -- [[https://docs.nvidia.com/cuda][CUDA Toolkit Documentation 12.8]]
+[2025-03-03 Mon 14:46] -> [[id:339518e9-2112-4c79-9471-ccc8f57b8105][NVCC]]
+[2025-03-03 Mon 14:47] >> [[id:eaf2ecf5-7748-40e5-bd1b-c8fc2053d050][NVIDIA]]
 :END:
 - [[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html][1. Introduction — CUDA C++ Programming Guide]]

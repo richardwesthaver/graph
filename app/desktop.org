@@ -1,0 +1,64 @@
+#+title: Desktop Apps and Services
+#+setupfile: ../../clean.theme
+* Window Manager                                                      :wm:
+:PROPERTIES:
+:ID:       cabd6581-92db-4e5e-b9cd-f5a1c09a8145
+:CREATED:  <2025-03-03 Mon 17:25>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:26] -- [[https://wiki.archlinux.org/title/Window_manager][Window manager - ArchWiki]]
+:END:
+** X11                                                                  :x11:
+:PROPERTIES:
+:ID:       4b669611-0283-4a6c-acfd-942868d5bee3
+:CREATED:  <2025-03-03 Mon 17:26>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:31] >> [[id:1b00b336-268e-4203-850d-12cb8b79c86c][X]]
+:END:
+*** 2bwm
+:PROPERTIES:
+:ID:       d6d7338a-e161-45b0-bcf9-e50fef6d9b86
+:CREATED:  <2025-03-03 Mon 17:32>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:32] -- [[https://github.com/venam/2bwm][venam/2bwm]]
+:END:
+*** mcwm
+:PROPERTIES:
+:ID:       4f39c714-4a7b-4cd3-89a2-0c0c7b0953b9
+:CREATED:  <2025-03-03 Mon 17:33>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:33] -- [[https://www.hack.org/mc/hacks/mcwm/][mcwm — a minimalist window manager]]
+:END:
+*** i3
+:PROPERTIES:
+:ID:       9b98c316-303e-4919-8a7c-09965fff6c17
+:CREATED:  <2025-03-03 Mon 17:29>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:29] -- [[https://i3wm.org/][i3 - improved tiling wm]]
+:END:
+*** StumpWM                                                             :swm:
+:PROPERTIES:
+:ID:       b8588986-ec59-41d1-91a4-901e3c7217d3
+:CREATED:  <2025-03-03 Mon 17:27>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:28] -- [[info:stumpwm][info]]
+[2025-03-03 Mon 17:28] -- [[https://stumpwm.github.io/][Stump Window Manager]]
+:END:
+** Wayland                                                               :wl:
+:PROPERTIES:
+:ID:       66cbbdac-801f-4c42-b16a-09cde9a69a7f
+:CREATED:  <2025-03-03 Mon 17:27>
+:END:
+*** Sway
+:PROPERTIES:
+:ID:       cb4981e6-af47-400e-a761-4a73b3dd791e
+:CREATED:  <2025-03-03 Mon 17:50>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:51] -- [[https://swaywm.org/][Sway]]
+:END:

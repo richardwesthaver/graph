@@ -1,4 +1,5 @@
 #+title: Logic
+#+setupfile: ../../clean.theme
 * Logic
 :PROPERTIES:
 :ID:       9ff60117-e232-4754-8fa4-85939b519ced

@@ -1,6 +1,6 @@
 #+title: Version Control Systems
 #+setupfile: ../../clean.theme
-* VCS
+* VCS                                                                    :vc:
 :PROPERTIES:
 :ID:       36ccc6c1-1b2d-4a48-8c1c-714a43873407
 :CREATED:  <2025-02-06 Thu 18:40>
@@ -11,7 +11,7 @@
 - [[https://blog.nrwl.io/misconceptions-about-monorepos-monorepo-monolith-df1250d4b03c][Misconceptions about Monorepos: Monorepo != Monolith]] - Victor Savkin 2019
 - [[https://research.google/pubs/pub45424/][Why Google Stores Billions of Lines of Code in a Single Repository]] - Josh Levenberg, 2016
 
-** Git
+** Git                                                                  :git:
 :PROPERTIES:
 :ID:       442c8fbb-b09d-4f85-a068-2a0f6a2de430
 :CREATED:  <2025-02-09 Sun 13:32>
@@ -21,7 +21,7 @@
 [2025-02-14 Fri 21:20] -- [[https://git-scm.com/book/en/v2/Git-Tools-Submodules][Git Submodules]]
 :END:
 
-** Mercurial
+** Mercurial                                                             :hg:
 :PROPERTIES:
 :ID:       be8e9117-4d72-40ea-a062-8029a3342248
 :CREATED:  <2025-02-09 Sun 13:32>

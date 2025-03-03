@@ -1,0 +1,114 @@
+#+title: Editor Apps
+#+setupfile: ../../clean.theme
+* Emacs                                                               :emacs:
+:PROPERTIES:
+:ID:       5fc53135-1b6c-4260-b264-66be7a2b8ff0
+:CREATED:  <2025-01-18 Sat 20:47>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:39] -- [[https://www.gnu.org/software/emacs/][GNU Emacs]]
+[2025-02-13 Thu 22:41] -- [[https://www.gnu.org/software/emacs/manual/][Online Manuals]]
+[2025-03-03 Mon 14:01] << [[id:6c69c42b-3d0a-48bf-a5ad-43b350477387][Elisp]]
+[2025-03-03 Mon 16:27] -- [[man:emacs][man]]
+:END:
+- refer to the INSTALL file in the root of the emacs repo for an
+  overview of install options
+- releases are hosted at [[https://ftp.gnu.org/gnu/emacs/]]
+** Org Mode                                                             :org:
+:PROPERTIES:
+:ID:       cea03181-b97b-494d-b362-28056416469d
+:CREATED:  <2025-02-13 Thu 22:39>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:40] -- [[https://orgmode.org/][Org mode for GNU Emacs]]
+[2025-02-13 Thu 22:40] -- [[https://orgmode.org/org.html][The Org Manual]]
+[2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
+[2025-02-16 Sun 20:14] -- [[https://orgmode.org/manual/Library-of-Babel.html][Library of Babel (The Org Manual)]]
+:END:
+
+** Eww                                                              :browser:
+:PROPERTIES:
+:ID:       21adcc1c-67ee-4f50-9049-12794824b2c7
+:CREATED:  <2025-03-01 Sat 13:35>
+:END:
+:EDGES:
+[2025-03-01 Sat 13:36] -- [[https://www.emacswiki.org/emacs/eww][EmacsWiki: eww]]
+:END:
+the Emacs Web Wowser, a browser written in elisp based on shr.el.
+#+begin_src shell :exports code :results none
+  eww() {
+   emacsclient -a '' -t -e '(eww-browse-url "'"$1"'")'
+  }
+#+end_src
+
+** Speedbar
+:PROPERTIES:
+:ID:       2cebd8b2-615e-44b2-afd4-2e302f836dd3
+:CREATED:  <2025-03-03 Mon 13:43>
+:END:
+:EDGES:
+[2025-03-03 Mon 13:44] -- [[https://www.gnu.org/software/emacs/manual/html_node/speedbar/index.html][Top (Speedbar: File/Tag summarizing utility)]]
+:END:
+
+** ERC                                                                  :irc:
+:PROPERTIES:
+:ID:       a42c2aaa-8dda-40ca-b455-7511f0cb084a
+:CREATED:  <2025-03-03 Mon 16:45>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:46] -- [[info:erc][info]]
+:END:
+
+** EUDC
+:PROPERTIES:
+:ID:       b72f96f7-4040-4548-8da2-e619d26c4887
+:CREATED:  <2025-03-03 Mon 16:47>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:48] -- [[info:eudc][info]]
+:END:
+Emacs Unified Directory Client
+*** BBDB                                                               :bbdb:
+:PROPERTIES:
+:ID:       db8e43f4-78ec-4fb1-93e7-11ac7ee87799
+:CREATED:  <2025-03-03 Mon 17:46>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:46] -- [[info:eudc#bbdb][info]]
+:END:
+
+** SLIME                                                            :lisp:cl:
+:PROPERTIES:
+:ID:       f499c680-9a01-4a11-bc69-81861fd864d0
+:CREATED:  <2025-03-03 Mon 17:45>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:46] -- [[info:slime][info]]
+:END:
+
+** Emacsen
+:PROPERTIES:
+:ID:       68c578fc-020f-4751-a659-a05c979272c9
+:CREATED:  <2025-03-03 Mon 15:54>
+:END:
+
+** Apps
+:PROPERTIES:
+:ID:       1bbc8529-d207-4a7e-a72a-b231316c90e6
+:CREATED:  <2025-03-03 Mon 15:54>
+:END:
+
+*** Cloudmacs
+:PROPERTIES:
+:ID:       defa663e-3522-475c-ad44-615b64edabf1
+:CREATED:  <2025-03-03 Mon 15:54>
+:END:
+:EDGES:
+[2025-03-03 Mon 13:44] -- [[https://beepb00p.xyz/cloudmacs.html][Cloudmacs: Emacs in your web browser | beepb00p]]
+:END:
+
+* Vim                                                                    :vi:
+:PROPERTIES:
+:ID:       d8c3b69f-27d2-4091-8d91-1ed42bc06c05
+:CREATED:  <2025-03-03 Mon 17:45>
+:END:

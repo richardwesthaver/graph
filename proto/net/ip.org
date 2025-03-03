@@ -7,6 +7,8 @@
 :END:
 :EDGES:
 [2025-02-22 Sat 15:21] -- [[https://en.wikipedia.org/wiki/Internet_Protocol][Internet Protocol - Wikipedia]]
+[2025-03-03 Mon 15:47] << [[id:a2f33ea0-51c3-45d8-8c19-03a95321384c][UDP]]
+[2025-03-03 Mon 15:47] << [[id:a2c33f5d-8e07-4122-98df-72d321ae313b][TCP]]
 :END:
 ** IP Address
 :PROPERTIES:

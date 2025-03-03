@@ -1,6 +1,6 @@
 #+title: Domain Name Systems
 #+setupfile: ../../../clean.theme
-* DNS
+* DNS                                                                   :dns:
 :PROPERTIES:
 :ID:       78f84075-f759-43dd-be98-b23eccf26333
 :CREATED:  <2025-02-01 Sat 22:15>

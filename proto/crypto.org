@@ -1,0 +1,63 @@
+#+title: Cryptographic Protocols
+#+setupfile: ../../clean.theme
+* ECC
+:PROPERTIES:
+:ID:       5add36a0-129f-466c-b493-b34aee8b99a6
+:CREATED:  <2025-03-03 Mon 15:07>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:07] -- [[https://en.wikipedia.org/wiki/Elliptic-curve_cryptography][Elliptic-curve cryptography - Wikipedia]]
+[2025-03-03 Mon 17:01] >> [[id:b4579e67-0855-44e1-971d-1a727694af17][Elliptic Curve]]
+:END:
+Elliptic-curve cryptography
+
+** ECDH
+:PROPERTIES:
+:ID:       6723d8fb-5e3d-4b38-96d5-3b054dbb7b58
+:CREATED:  <2025-03-03 Mon 15:07>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:07] -- [[https://en.wikipedia.org/wiki/Elliptic-curve_Diffie%E2%80%93Hellman][Elliptic-curve Diffie–Hellman - Wikipedia]]
+:END:
+Elliptic-curve Diffie-Hellman
+*** Curve25519
+:PROPERTIES:
+:ID:       46e1e3dd-7c47-45bb-8b78-18a87b7258dd
+:CREATED:  <2025-03-03 Mon 15:06>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:06] -- [[https://cr.yp.to/ecdh.html][Curve25519: high-speed elliptic-curve cryptography]]
+:END:
+** EdDSA
+:PROPERTIES:
+:ID:       dce824ff-24e2-4bf1-b0a9-b42f778dad39
+:CREATED:  <2025-03-03 Mon 15:11>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:11] -- [[https://en.wikipedia.org/wiki/EdDSA][EdDSA - Wikipedia]]
+:END:
+Edwards-curve Digital Signature Algorithm 
+*** Ed25519
+:PROPERTIES:
+:ID:       2f1c6753-397b-4ab9-9457-4e0136c6bf8b
+:CREATED:  <2025-03-03 Mon 15:04>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:04] -- [[https://ed25519.cr.yp.to/][~]]
+:END:
+*** Salsa20
+:PROPERTIES:
+:ID:       123c1580-8dca-4773-8879-9769ebd84ad0
+:CREATED:  <2025-03-03 Mon 15:12>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:12] -- [[https://cr.yp.to/salsa20.html][~]]
+:END:
+**** Rumba20
+:PROPERTIES:
+:ID:       b754ec14-7d34-4504-9494-93532bd61cd5
+:CREATED:  <2025-03-03 Mon 15:13>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:13] -- [[https://cr.yp.to/rumba20.html][~]]
+:END:

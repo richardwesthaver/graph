@@ -1,4 +1,5 @@
 #+title: Computer Science
+#+setupfile: ../../clean.theme
 * Computer Science
 :PROPERTIES:
 :ID:       adc765c5-ae57-47f0-b220-6450dbcabebb

@@ -1,7 +1,7 @@
 #+title: GNU/Linux
 #+description: A Free (as in Freedom) OS
 #+setupfile: ../../clean.theme
-* Linux
+* Linux                                                               :linux:
 :PROPERTIES:
 :ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
 :CREATED:  <2025-02-09 Sun 13:33>

@@ -18,7 +18,7 @@
 :EDGES:
 [2025-02-09 Sun 13:38] -- [[http://freedesktop.org/wiki/Software/xdg-user-dirs][xdg-user-dirs]]
 :END:
-* Secret Service
+* Secret Service                                                     :crypto:
 :PROPERTIES:
 :ID:       6f534214-a89d-4cec-9c29-0f345fdc2199
 :CREATED:  <2025-02-14 Fri 21:43>
@@ -27,13 +27,14 @@
 [2025-02-14 Fri 21:43] -- [[https://specifications.freedesktop.org/secret-service-spec/latest/][Secret Service API Draft]]
 [2025-02-14 Fri 21:44] -- [[https://www.gnu.org/software/emacs/manual/html_node/auth/Secret-Service-API.html][Secret Service API (Emacs auth-source Library 0.3)]]
 :END:
-* X
+* X                                                                     :x11:
 :PROPERTIES:
 :ID:       1b00b336-268e-4203-850d-12cb8b79c86c
 :CREATED:  <2025-02-22 Sat 15:12>
 :END:
 :EDGES:
 [2025-02-22 Sat 15:12] -- [[https://www.x.org/wiki/][X.Org]]
+[2025-03-03 Mon 17:31] << [[id:4b669611-0283-4a6c-acfd-942868d5bee3][X11]]
 :END:
 The X Window System and the X.Org project.
 [[https://www.x.org/wiki/Documentation/][Documentation]]
@@ -53,4 +54,20 @@ The X Window System and the X.Org project.
 :END:
 :EDGES:
 [2025-02-22 Sat 15:14] -- [[https://www.freedesktop.org/wiki/Software/CompositeExt/][CompositeExt]]
+:END:
+*** RandR
+:PROPERTIES:
+:ID:       bde20e62-dcd9-48fe-ba2b-bf795ed81a51
+:CREATED:  <2025-03-03 Mon 17:37>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:37] -- [[https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/master/randrproto.txt?ref_type=heads][randrproto.txt · master · xorg / proto / xorgproto]]
+:END:
+** XCB
+:PROPERTIES:
+:ID:       eabb4e88-738d-42d2-986d-e5ffdd4c6fb5
+:CREATED:  <2025-03-03 Mon 17:35>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:35] -- [[https://xcb.freedesktop.org/][xcb]]
 :END:

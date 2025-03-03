@@ -1,9 +1,12 @@
 #+title: Windows
 #+setupfile: ../../clean.theme
-* Windows
+* Windows                                                            :ms:win:
 :PROPERTIES:
 :ID:       c584cce5-6e64-4ad3-99ad-0d0ef2119837
 :CREATED:  <2025-02-14 Fri 22:13>
 :END:
 :EDGES:
 [2025-02-14 Fri 22:13] -- [[https://en.wikipedia.org/wiki/Microsoft_Windows][Microsoft Windows - Wikipedia]]
+[2025-03-03 Mon 18:05] -- [[https://learn.microsoft.com/en-us/windows/][Windows Documentation | Microsoft Learn]]
+:END:
+

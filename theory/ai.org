@@ -1,6 +1,6 @@
 #+title: Artificial Intelligence
 #+setupfile: ../../clean.theme
-* AI
+* AI                                                                     :ai:
 :PROPERTIES:
 :ID:       cd514a66-4979-4983-8c9b-29b54eafa8dd
 :CREATED:  <2025-02-14 Fri 21:53>
@@ -8,6 +8,7 @@
 :EDGES:
 [2025-02-14 Fri 22:01] -- [[https://en.wikipedia.org/wiki/Artificial_intelligence][Artificial intelligence - Wikipedia]]
 :END:
+- [[https://www.itstraightdope.net/articles/deductive-vs-inductive-algorithms][Deductive vs. Inductive Algorithms — IT Straight Dope]]
 ** GenAI
 :PROPERTIES:
 :ID:       976c3073-07c5-4901-bb64-2b2e2f799170

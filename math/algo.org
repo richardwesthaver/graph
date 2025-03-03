@@ -1,5 +1,6 @@
 #+title: Algorithms
-* Algorithm
+#+setupfile: ../../clean.theme
+* Algorithm                                                            :algo:
 :PROPERTIES:
 :ID:       26e0dd8a-352e-4c57-b501-15bdef909d88
 :CREATED:  <2025-02-28 Fri 17:39>

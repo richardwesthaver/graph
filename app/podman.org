@@ -7,12 +7,17 @@
 :END:
 :EDGES:
 [2025-01-18 Sat 19:55] -- [[https://podman.io/][Podman]]
-[2025-01-18 Sat 20:41] >> [[id:c105b0a7-28f2-4573-a41b-3e01b65c6358][OCI]]
+[2025-01-18 Sat 20:41] >> [[id:ec17da11-a3d1-4343-9d0b-09c63c569db5][OCI]]
+[2025-03-03 Mon 16:30] -- [[man:podman][man]]
 :END:
 A tool for managing OCI containers and pods.
+
 ** Buildah
 :PROPERTIES:
 :ID:       3efd02f4-b340-4566-a7fc-95b3c895c762
 :CREATED:  <2025-02-22 Sat 22:48>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:30] -- [[man:buildah][man]]
 :END:
 [[https://buildah.io/blogs/2017/11/02/getting-started-with-buildah.html][Getting Started with Buildah | buildah.io]]

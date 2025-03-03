@@ -40,8 +40,12 @@
 - [[https://internals.rust-lang.org/t/traits-that-should-be-in-std-but-arent/3002][Traits that should be in std, but aren't - libs - Rust Internals]]
 - [[https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples][Macros in Rust]]                                                     :macros:
 - [[https://danielkeep.github.io/tlborm/book/README.html][The Little Book of Rust Macros]]                                     :macros:
-
-** Serde
+** Libraries
+:PROPERTIES:
+:ID:       8fbe9da2-1d6a-43bc-bd89-cf448d43eab8
+:CREATED:  <2025-03-03 Mon 15:08>
+:END:
+*** Serde
 :PROPERTIES:
 :ID:       ffb4e87c-e265-4549-91f9-093e714708c0
 :CREATED:  <2025-02-06 Thu 18:59>
@@ -67,6 +71,15 @@
   but the convention is to implement for T where T is bound by std::io
   Read or Write trait. Then you can provide a more robust public API
   (from_bytes, from_writer, etc).
+*** Dalek
+:PROPERTIES:
+:ID:       79ad4134-5182-4001-b404-faeb9abd2474
+:CREATED:  <2025-03-03 Mon 15:09>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:09] -- [[http://dalek.rs/][dalek cryptography]]
+:END:
+
 ** Rust != C
 :PROPERTIES:
 :ID:       bb68152d-1794-47d8-86c0-03eb7f9256d7

@@ -1,0 +1,38 @@
+#+title: Virtual Private Networking
+#+setupfile: ../../clean.theme
+* VPN                                                                   :vpn:
+:PROPERTIES:
+:ID:       17dd76c0-b08b-4df5-b9fb-c1dd6b84d812
+:CREATED:  <2025-03-03 Mon 15:35>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:36] -- [[https://en.wikipedia.org/wiki/Virtual_private_network][Virtual private network - Wikipedia]]
+:END:
+** WireGuard                                                             :wg:
+:PROPERTIES:
+:ID:       b01ba656-940f-43bd-ae92-e0ac3b142028
+:CREATED:  <2025-03-03 Mon 15:36>
+:END:
+:EDGES:
+[2025-03-03 Mon 15:36] -- [[https://www.wireguard.com/][WireGuard: fast, modern, secure VPN tunnel]]
+[2025-03-03 Mon 15:36] -- [[https://www.wireguard.com/repositories/][Repositories - WireGuard]]
+:END:
+#+begin_src shell
+  sudo pacman -S wireguard-tools
+#+end_src
+
+- etc/wireguard/wg0.conf
+#+begin_src conf
+  [Interface]
+  Address = 10.4.2.1/24
+  SaveConfig = true
+  ListenPort = 50001
+  PrivateKey = $VPN_PRIVATE_KEY
+  [Peer]
+  PublicKey = $VPN_PUBLIC_KEY
+#+end_src
+
+=ip link add dev wg0 type wireguard=
+=ip addr add dev wg0 88.4.2.1/24=
+=wg setconf wg0 /etc/wireguard/wg0.conf=
+=ip link set up dev wg0=

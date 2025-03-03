@@ -1,7 +1,8 @@
 #+title: Lisp
 #+bibliography: ../refs.bib
 #+setupfile: ../../clean.theme
-* Common Lisp
+#+filetags: lisp
+* Common Lisp                                                            :cl:
 :PROPERTIES:
 :ID:       af0ed8bb-4b45-42f9-b8be-82b8ea7935a3
 :CREATED:  <2025-02-16 Sun 20:04>
@@ -20,6 +21,27 @@
 :END:
 
 - Pragmatic Parsing in Common Lisp - [[https://www.plover.com/misc/hbaker-archive/Prag-Parse.html][ACM Lisp Pointers 4, 2 (Apr/Jun 1991), 3-15.]]
+*** common-lisp unicode support
+:PROPERTIES:
+:ID:       db68087d-cc4c-462d-b4e0-bbda756dc37c
+:CREATED:  <2025-03-03 Mon 14:53>
+:END:
+:LOGBOOK:
+- State "NOTE"       from              [2023-10-20 Fri 01:11]
+:END:
+#+begin_src lisp
+(defmacro λ (&rest symbols-and-expr)
+  `(lambda ,(butlast symbols-and-expr)
+     ,@(last symbols-and-expr)))
+
+(mapcar (λ x (* x x)) '(1 2 3 4))
+
+;; other tremendously useful characters:
+'|αβγδεζηθικλμνξοπρστυϕχψω|
+'|ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥϕΧΨΩ|
+'|ℝℕℤℚ∥√∡∞∝ℵ∅∫|
+'|¬∀∃∨∧⊥∈⊂∪∩⇐⇔⇒↦|
+#+end_src
 ** CLOS
 :PROPERTIES:
 :ID:       8bc4ff14-f001-4515-ac1f-fd59ef8ef506
@@ -29,6 +51,7 @@
 [2025-02-07 Fri 21:00] -- [[https://lispcookbook.github.io/cl-cookbook/clos.html][Fundamentals of CLOS]]
 [2025-02-07 Fri 21:01] -- [[https://gigamonkeys.com/book/object-reorientation-generic-functions][Object Reorientation: Generic Functions]]
 [2025-02-07 Fri 21:02] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/07_.htm][CLHS: Chapter 7]]
+[2025-03-03 Mon 14:03] <- [[id:da96454b-fc70-4a5c-bd7a-e66d148eb1d9][EIEIO]]
 :END:
 *** Method Combination
 :PROPERTIES:
@@ -69,7 +92,7 @@ list, max, min, nconc, or, progn, and standard.
 [2025-02-25 Tue 16:08] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node62.html][5.2. Functions]]
 :END:
 - [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node63.html#SECTION00921000000000000000][5.2.1. Named Functions]]
-*** Lambda-Expression
+*** Lambda Expressions
 :PROPERTIES:
 :ID:       7555f8c6-5dd5-4607-ae1f-32643bf03ba9
 :CREATED:  <2025-02-25 Tue 16:09>
@@ -77,6 +100,55 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-02-25 Tue 16:09] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node64.html#SECTION00922000000000000000][5.2.2. Lambda-Expressions]]
 :END:
+
+#+begin_quote
+This is not SBCL specific, but according to the ANSI Common Lisp
+standard.
+
+*Convert a /Lambda Expression/ as List to a Function*
+
+These are your options:
+
+CL-USER 168 > (funcall (coerce '(lambda (x) (* x x)) 'function) 4)
+16
+
+CL-USER 169 > (funcall (compile nil '(lambda (x) (* x x))) 4)
+16
+
+CL-USER 170 > (funcall (eval '(lambda (x) (* x x))) 4) ; because LAMBDA is a macro, too
+16
+CL-USER 171 > (funcall (eval '(function (lambda (x) (* x x)))) 4)
+16
+
+Note though that the lambda expression is referencing the null lexical
+environment. Thus it has no access to any lexical variables from the
+surrounding code.
+
+*Lambda expressions are not function objects*
+
+    Why is a lambda expression not a function?
+
+Because it is just a list, not code. To make a lambda expression into
+code, you have to turn it into a function object.
+
+Some other (often older) Lisps allow you to use lambda expressions as
+code, but not Common Lisp.  This is defined by the standard.
+
+You can't do (funcall '(lambda (x) (+ x x)) 3). You have to convert
+the lambda expression into a function object first.
+
+*FUNCTION is a special operator -> syntax+semantics*
+
+    (funcall (function (struct-slot1 struct1)) 3)
+
+This is a syntax error, already. FUNCTION is a special operator and
+expects a function name or a lambda expression. (struct-slot1 struct1)
+is neither. (struct-slot1 struct1) is code which retrieves a value
+from a structure. But it is not a function name, which would be a
+symbol or a list (setf <some-symbol>). It is also not a lambda
+expression, which would be something like (lambda (...) .  ..).
+#+end_quote
+- rainer [[https://stackoverflow.com/questions/40031593/sbcl-lambda-expressions][common lisp - SBCL & Lambda Expressions - Stack Overflow]]
 *** Thunk
 :PROPERTIES:
 :ID:       d69c0095-59e3-4005-8360-f928c3ace460
@@ -129,18 +201,6 @@ of "think" at two in the morning'.
 :END:
 A Screenshot Testing service to tie with your existing Android, iOS
 and Web screenshot tests.
-*** Nyxt
-:PROPERTIES:
-:ID:       91358236-2663-47d9-9990-1f772a3778a4
-:CREATED:  <2025-01-17 Fri 19:30>
-:END:
-:EDGES:
-[2025-01-17 Fri 19:30] -- [[https://github.com/atlas-engineer/nyxt][GitHub - atlas-engineer/nyxt]]
-:END:
-the hacker's browser
-
-as of [2025-02-07 Fri] I'm unable to successfully build Nyxt on my
-system, but the code available has some goodies (json/nlp/etc)
 ** Libraries
 :PROPERTIES:
 :ID:       82d4dffa-070c-4ead-b317-9f9b6820e2c1
@@ -274,10 +334,13 @@ of over 1,500 libraries with a few simple commands.
 [2025-02-26 Wed 20:54] -- [[https://ultralisp.org/][Ultralisp - Fast Common Lisp Repository]]
 :END:
 An alternative distribution for Quicklisp - tracks git branches.
-* Scheme
+* Scheme                                                                :scm:
 :PROPERTIES:
 :ID:       cce00db3-1428-4380-aa5d-8d2ec767b873
 :CREATED:  <2025-02-16 Sun 20:03>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:20] -- [[https://www.scheme.org/][The Scheme Programming Language]]
 :END:
 #+cite_export: csl
 #+print_bibliography:
@@ -285,6 +348,9 @@ An alternative distribution for Quicklisp - tracks git branches.
 :PROPERTIES:
 :ID:       74140b0d-af83-4516-ac70-b62bfa3de68d
 :CREATED:  <2025-02-16 Sun 20:03>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:19] -- [[https://racket-lang.org/][Racket]]
 :END:
 - [cite/t/b:@super8-fp]
   from the PLT guys at NEU - Racket
@@ -298,12 +364,72 @@ An alternative distribution for Quicklisp - tracks git branches.
 :END:
 Maclisp->Zetalisp
 - [[http://www.jargon.net/jargon/jargonfile/c/chinenual.html][jargon, node: chine nual]]
-* Elisp
+* Elisp                                                      :emacs:elisp:cl:
 :PROPERTIES:
 :ID:       6c69c42b-3d0a-48bf-a5ad-43b350477387
 :CREATED:  <2025-03-01 Sat 16:35>
 :END:
 :EDGES:
-[2025-03-01 Sat 16:36] -- [[https://www.gnu.org/software/emacs/manual/elisp.html][GNU Emacs Lisp Reference Manual]]
+[2025-03-01 Sat 16:36] -- [[info:elisp][Elisp info]]
 [2025-03-01 Sat 16:36] -- [[https://www.gnu.org/software/emacs/manual/eintr.html][An Introduction to Programming in Emacs Lisp - GNU Project - Free Software Foundation (FSF)]]
+[2025-03-03 Mon 14:01] >> [[id:5fc53135-1b6c-4260-b264-66be7a2b8ff0][Emacs]]
+:END:
+** Threads
+:PROPERTIES:
+:ID:       5510378f-d1a7-4642-8a24-ada2d7f7e54d
+:CREATED:  <2025-03-03 Mon 13:43>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:14] -- [[info:elisp#Threads][ref]]
+:END:
+
+** EIEIO
+:PROPERTIES:
+:ID:       da96454b-fc70-4a5c-bd7a-e66d148eb1d9
+:CREATED:  <2025-03-03 Mon 14:02>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:02] -- [[info:eieio][ref]]
+[2025-03-03 Mon 14:03] -> [[id:8bc4ff14-f001-4515-ac1f-fd59ef8ef506][CLOS]]
+:END:
+
+** Display
+:PROPERTIES:
+:ID:       dd393948-c526-4216-bf9b-5869a7121933
+:CREATED:  <2025-03-03 Mon 14:05>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:05] -- [[info:elisp#Display][ref]]
+:END:
+*** Ewoc                                                                :gui:
+:PROPERTIES:
+:ID:       114b1269-7400-45a7-ac41-17032015ffaa
+:CREATED:  <2025-03-03 Mon 14:05>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:05] -- [[info:elisp#abstract display][ref]]
+:END: 
+*** Native Widgets
+:PROPERTIES:
+:ID:       401e2cbd-2769-4c73-979e-ca98f4f6208c
+:CREATED:  <2025-03-03 Mon 14:07>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:08] -- [[info:elisp#xwidgets][ref]]
+:END:
+*** SVG Images
+:PROPERTIES:
+:ID:       c3aeb32d-5353-40e3-9817-c086f6beb58b
+:CREATED:  <2025-03-03 Mon 14:08>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:08] -- [[info:elisp#svg images][ref]]
+:END:
+** Overlays
+:PROPERTIES:
+:ID:       358a0e2b-b5e0-47ad-9c70-7bb72b1c548f
+:CREATED:  <2025-03-03 Mon 14:08>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:08] -- [[info:elisp#overlays][ref]]
 :END:

@@ -1,6 +1,6 @@
 #+title: Services
 #+setupfile: ../../clean.theme
-* Init Systems
+* Init Systems                                                         :init:
 :PROPERTIES:
 :ID:       da8ae0b8-adcf-4639-9cfa-01b7b9fb3c44
 :CREATED:  <2025-02-16 Sun 18:49>
@@ -9,7 +9,7 @@
 [2025-02-16 Sun 18:52] -- [[https://en.wikipedia.org/wiki/Init][init - Wikipedia]]
 :END:
 SystemV -> systemd, OpenRC
-** systemd
+** systemd                                                          :systemd:
 :PROPERTIES:
 :ID:       27dd8c6f-e018-4c91-9113-325be8ee483a
 :CREATED:  <2025-02-16 Sun 18:55>

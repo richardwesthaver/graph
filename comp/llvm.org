@@ -8,6 +8,7 @@
 :EDGES:
 [2025-03-02 Sun 21:12] -- [[https://llvm.org/][The LLVM Compiler Infrastructure Project]]
 [2025-03-02 Sun 21:13] -- [[https://github.com/llvm/llvm-project][llvm/llvm-project]]
+[2025-03-03 Mon 14:32] << [[id:25754e07-2c57-4385-a52a-33b0179e2b85][LLVM IR]]
 :END:
 - [[https://blog.llvm.org/][The LLVM Project Blog]]
 - [[https://llvm.org/devmtg/][Dev Meetings]]
@@ -26,6 +27,9 @@
 :ID:       3f0ed70c-6774-499c-9c15-a28a5e653161
 :CREATED:  <2025-02-14 Fri 21:19>
 :END:
+:EDGES:
+[2025-03-03 Mon 16:37] -- [[man:clang][man]]
+:END:
 *** Extensions
 :PROPERTIES:
 :ID:       f283db5a-bbe5-477f-834f-46b9ac992baf
@@ -41,4 +45,6 @@
 :END:
 :EDGES:
 [2025-03-02 Sun 21:30] -- [[https://developer.nvidia.com/cuda-llvm-compiler][CUDA LLVM Compiler | NVIDIA Developer]]
+[2025-03-03 Mon 14:46] <- [[id:a531e912-55ab-4889-806f-475c0316713e][CUDA]]
+[2025-03-03 Mon 14:33] << [[id:650a3fc0-6eec-4b9c-8db5-b89715ff50cc][NNVM IR]]
 :END:

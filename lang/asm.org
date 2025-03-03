@@ -9,15 +9,16 @@
 :EDGES:
 [2025-01-17 Fri 18:23] -- [[https://www.nasm.us/][NASM]]
 :END:
-* x86
+* x86                                                                   :x86:
 :PROPERTIES:
 :ID:       3eec30c3-ab67-42f1-b77f-191905d43c6c
 :CREATED:  <2025-03-02 Sun 21:19>
 :END:
 :EDGES:
 [2025-03-02 Sun 21:19] -- [[https://www.cs.virginia.edu/~evans/cs216/guides/x86.html][Guide to x86 Assembly]]
+[2025-03-03 Mon 14:38] -- [[https://en.wikipedia.org/wiki/X86_instruction_listings][x86 instruction listings - Wikipedia]]
 :END:
-* AMD64
+** x86_64                                                        :x86_64:
 :PROPERTIES:
 :ID:       4c7530b8-6d6f-475a-b2a3-986a10a0d812
 :CREATED:  <2025-03-02 Sun 21:19>
@@ -27,8 +28,83 @@
 [2025-03-02 Sun 21:20] -- [[https://gist.github.com/aagontuk/177947659828c1fe6611d4971bfddd27][Resources on x86_64 ISA · GitHub]]
 [2025-03-02 Sun 21:21] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html][Intel® 64 and IA-32 Architectures Software Developer Manuals]]
 :END:
-- aka ~x86_64~
-* RISC-V
+- aka ~amd64~
+- [[https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/programmer-references/40332.pdf][AMD64 Architecture Programmer's Manual Vol 1-5]]
+** Extensions
+:PROPERTIES:
+:ID:       c9748bd6-8f6b-459e-b863-b2b155e3e420
+:CREATED:  <2025-03-03 Mon 14:33>
+:END:
+*** SIMD
+:PROPERTIES:
+:ID:       d9641715-f038-4093-961d-87489fb2390d
+:CREATED:  <2025-03-03 Mon 14:34>
+:END:
+**** AVX
+:PROPERTIES:
+:ID:       9e9bfa13-eed1-49a8-bad1-bfa2f2dade86
+:CREATED:  <2025-03-03 Mon 14:33>
+:END:
+[[https://en.wikipedia.org/wiki/Advanced_Vector_Extensions][Advanced Vector Extensions - Wikipedia]]
+:END:
+
+**** SSE
+:PROPERTIES:
+:ID:       37c0d23a-8c9b-49d9-98e9-964ca52be6de
+:CREATED:  <2025-03-03 Mon 14:34>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:34] -- [[https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions][Streaming SIMD Extensions - Wikipedia]]
+:END:
+
+**** PAE
+:PROPERTIES:
+:ID:       3234c77c-97dd-4180-b8ca-48e18de7ab81
+:CREATED:  <2025-03-03 Mon 14:35>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:35] -- [[https://en.wikipedia.org/wiki/Physical_Address_Extension][Physical Address Extension - Wikipedia]]
+:END:
+
+*** APX
+:PROPERTIES:
+:ID:       c06fcd4c-193a-4ba7-bd16-3b8e537dd2ad
+:CREATED:  <2025-03-03 Mon 14:34>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:36] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/advanced-performance-extensions-apx.html][Introducing Intel® Advanced Performance Extensions (Intel® APX)]]
+:END:
+
+*** AES
+:PROPERTIES:
+:ID:       96d5af9b-48f1-4d26-bcdd-a6ed47a73141
+:CREATED:  <2025-03-03 Mon 14:37>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:37] -- [[https://en.wikipedia.org/wiki/AES_instruction_set][AES instruction set - Wikipedia]]
+:END:
+
+*** Virtualization
+:PROPERTIES:
+:ID:       5c9317c4-d3fc-4648-bfe2-38d9ca0719ec
+:CREATED:  <2025-03-03 Mon 14:39>
+:END:
+:EDGES:
+[2025-03-03 Mon 14:39] -- [[https://en.wikipedia.org/wiki/X86_virtualization][x86 virtualization - Wikipedia]]
+[2025-03-03 Mon 16:56] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/sect-virtualization-troubleshooting-enabling_intel_vt_and_amd_v_virtualization_hardware_extensions_in_bios][Enabling Intel VT and AMD-V virtualization hardware extensions in BIOS | Red Hat Product Documentation]]
+:END:
+**** AMD-V
+:PROPERTIES:
+:ID:       5aabf9b2-3071-40cc-acfb-f93ed4a15afb
+:CREATED:  <2025-03-03 Mon 14:39>
+:END:
+**** Intel VT-x
+:PROPERTIES:
+:ID:       16a8ffe9-da94-43dd-be0f-7e0d7af68476
+:CREATED:  <2025-03-03 Mon 14:39>
+:END:
+
+* RISC-V                                                               :risc:
 :PROPERTIES:
 :ID:       e6c89750-0770-4c0f-a943-f6419313970e
 :CREATED:  <2025-03-02 Sun 21:22>
@@ -58,8 +134,8 @@
 :EDGES:
 [2025-03-02 Sun 21:18] -- [[https://llvm.org/docs/LangRef.html][LLVM Language Reference Manual — LLVM 21.0.0git documentation]]
 [2025-03-02 Sun 21:18] -- [[https://mcyoung.xyz/2023/08/01/llvm-ir/][A Gentle Introduction to LLVM IR · mcyoung]]
+[2025-03-03 Mon 14:32] >> [[id:496b952f-4c98-4303-92b4-1c766565092c][LLVM]]
 :END:
-
 ** NNVM IR                                                  :llvm:gpu:nvidia:
 :PROPERTIES:
 :ID:       650a3fc0-6eec-4b9c-8db5-b89715ff50cc
@@ -67,4 +143,5 @@
 :END:
 :EDGES:
 [2025-03-02 Sun 21:24] -- [[https://docs.nvidia.com/cuda/nvvm-ir-spec/][1. Introduction — NVVM IR Specification 12.8 documentation]]
+[2025-03-03 Mon 14:48] >> [[id:339518e9-2112-4c79-9471-ccc8f57b8105][NVCC]]
 :END:

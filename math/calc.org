@@ -1,4 +1,5 @@
 #+title: Calculus
+#+setupfile: ../../clean.theme
 * Calculus
 :PROPERTIES:
 :ID:       cb921570-b908-4b8b-bf46-d4f31b3e1239

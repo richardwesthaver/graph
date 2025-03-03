@@ -1,2 +1,10 @@
 #+title: AMD
 #+setupfile: ../../clean.theme
+* AMD                                                                   :amd:
+:PROPERTIES:
+:ID:       e2368655-59e9-404b-9ac6-cecb35216c11
+:CREATED:  <2025-03-03 Mon 11:46>
+:END:
+:EDGES:
+[2025-03-03 Mon 11:46] -- [[https://www.amd.com][AMD]]
+:END:

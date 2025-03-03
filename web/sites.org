@@ -1,6 +1,6 @@
 #+title: Websites
 #+setupfile: ../../clean.theme
-* ozbargain.com.au
+* ozbargain.com.au                                                    :merch:
 :PROPERTIES:
 :ID:       0ef132b4-d324-4bf9-86d0-94ada3ef04b3
 :CREATED:  <2025-02-01 Sat 16:51>
@@ -12,7 +12,7 @@
 - https://www.ozbargain.com.au/deals/feed
 - https://www.ozbargain.com.au/live/feed
 
-* pcpartpicker.com
+* pcpartpicker.com                                                    :merch:
 :PROPERTIES:
 :ID:       218869f2-d154-490b-ab0a-88fb23ca0368
 :CREATED:  <2025-02-01 Sat 15:28>
@@ -50,7 +50,7 @@ crawler.pcpartpicker.com
 | content-type              |
 | date                      |
 
-* nytimes.com
+* nytimes.com                                                          :news:
 :PROPERTIES:
 :ID:       6448b881-6310-4f17-9d3d-874ec5fa3972
 :CREATED:  <2025-02-11 Tue 19:22>
@@ -66,7 +66,7 @@ crawler.pcpartpicker.com
 - https://a1.nyt.com/abra-config/current/vi-prd.json
 - https://samizdat-graphql.nytimes.com/graphql/v2
 
-* craigslist.org
+* craigslist.org                                                      :merch:
 :PROPERTIES:
 :ID:       314f6109-db30-45de-bda1-3b1084224b40
 :CREATED:  <2025-02-11 Tue 19:31>
@@ -76,7 +76,7 @@ crawler.pcpartpicker.com
 [2025-02-11 Tue 19:33] -- [[https://www.craigslist.org/about/bulk_posting_interface][craigslist Bulk Posting Interface]]
 [2025-02-11 Tue 19:34] -- [[https://bapi.craigslist.org/bulkpost-docs/v1/][Craigslist Bulkpost API]]
 :END:
-* ebay.com
+* ebay.com                                                            :merch:
 :PROPERTIES:
 :ID:       9edf9c19-de57-46f2-85c6-8de9df888057
 :CREATED:  <2025-02-11 Tue 19:36>
@@ -104,7 +104,7 @@ crawler.pcpartpicker.com
 :END:
 - [[https://www.iana.org/time-zones][Time Zone Database]]
 - [[https://www.iana.org/protocols][Protocol Registries]]
-* usa.gov
+* usa.gov                                                               :gov:
 :PROPERTIES:
 :ID:       b03233cd-2dd2-4dc8-83ea-75f74981c4fa
 :CREATED:  <2025-02-22 Sat 19:57>
@@ -131,7 +131,7 @@ crawler.pcpartpicker.com
 :END:
 US National Weather Service
 [[https://www.weather.gov/documentation/services-web-api][API Web Service]]
-* pitchfork.com
+* pitchfork.com                                                       :music:
 :PROPERTIES:
 :ID:       d3271956-f2d8-41cf-ab3c-02b7f86e6cf4
 :CREATED:  <2025-02-28 Fri 08:28>
@@ -148,7 +148,7 @@ US National Weather Service
 :EDGES:
 [2025-02-28 Fri 08:31] -- [[https://metabrainz.org/][MetaBrainz Foundation]]
 :END:
-** musicbrainz.org
+** musicbrainz.org                                                    :music:
 :PROPERTIES:
 :ID:       29407696-fd6e-428b-85a1-5616baf554d9
 :CREATED:  <2025-02-28 Fri 08:29>
@@ -158,7 +158,7 @@ US National Weather Service
 :END:
 - [[https://musicbrainz.org/doc/MusicBrainz_API][MusicBrainz API - MusicBrainz]]
 - [[https://metabrainz.org/datasets][Datasets - MetaBrainz Foundation]]
-** freesound.org
+** freesound.org                                                :audio:media:
 :PROPERTIES:
 :ID:       eb20a9f9-4c80-40d5-b4c1-153c8976db19
 :CREATED:  <2025-02-28 Fri 08:32>
@@ -167,7 +167,7 @@ US National Weather Service
 [2025-02-28 Fri 08:32] -- [[https://freesound.org/][Freesound]]
 :END:
 [[https://freesound.org/docs/api/][Freesound API documentation]]
-** electricitymaps.com
+* electricitymaps.com
 :PROPERTIES:
 :ID:       005a209d-c429-410e-9ca0-f347b0ff646a
 :CREATED:  <2025-03-01 Sat 12:11>
@@ -178,7 +178,7 @@ US National Weather Service
 - [[https://www.electricitymaps.com/methodology][Methodology | Electricity Maps]]
 - Free API Access
 - [[https://app.electricitymaps.com/][app]]
-* discord.com
+* discord.com                                                   :social:chat:
 :PROPERTIES:
 :ID:       8e4d1a1b-9497-4291-b9fe-6d814b6935b4
 :CREATED:  <2025-03-02 Sun 20:33>
@@ -187,7 +187,7 @@ US National Weather Service
 [2025-03-02 Sun 20:34] -- [[https://discord.com/][Discord - Group Chat That’s All Fun & Games]]
 :END:
 
-* linkedin.com
+* linkedin.com                                                       :social:
 :PROPERTIES:
 :ID:       537c7ed7-c5a3-43a0-8636-6f9185711622
 :CREATED:  <2025-03-02 Sun 20:34>
@@ -196,7 +196,7 @@ US National Weather Service
 [2025-03-02 Sun 20:34] -- [[https://www.linkedin.com/][LinkedIn]]
 :END:
 
-* youtube.com
+* youtube.com                                                   :media:video:
 :PROPERTIES:
 :ID:       41dfdeb8-e1c8-44ba-8235-e48da9c0ca32
 :CREATED:  <2025-03-02 Sun 20:35>
@@ -205,7 +205,7 @@ US National Weather Service
 [2025-03-02 Sun 20:35] -- [[https://www.youtube.com/][YouTube]]
 :END:
 
-* google.com
+* google.com                                                         :search:
 :PROPERTIES:
 :ID:       99c4fb1a-715e-45aa-bac8-cd588fac8f0f
 :CREATED:  <2025-03-02 Sun 20:35>
@@ -214,7 +214,7 @@ US National Weather Service
 [2025-03-02 Sun 20:35] -- [[http://google.com/][Google]]
 :END:
 
-* amazon.com
+* amazon.com                                                          :merch:
 :PROPERTIES:
 :ID:       9cad378b-bb5d-4005-9059-d8ac639ca85c
 :CREATED:  <2025-03-02 Sun 20:35>
@@ -232,7 +232,7 @@ US National Weather Service
 [2025-03-02 Sun 20:36] -- [[https://wikipedia.org/][Wikipedia]]
 :END:
 
-* gnu.org
+* gnu.org                                                               :gnu:
 :PROPERTIES:
 :ID:       04f8bf69-e4bc-4a5a-83ba-f211df606857
 :CREATED:  <2025-03-02 Sun 20:37>
@@ -259,7 +259,7 @@ US National Weather Service
 [2025-03-02 Sun 20:38] -- [[https://stackoverflow.com/][Newest Questions - Stack Overflow]]
 :END:
 
-* yahoo.com
+* yahoo.com                                                          :search:
 :PROPERTIES:
 :ID:       86df9eba-9175-43c8-b083-d263cf0c800c
 :CREATED:  <2025-03-02 Sun 20:38>
@@ -268,7 +268,7 @@ US National Weather Service
 [2025-03-02 Sun 20:38] -- [[https://yahoo.com][Yahoo]]
 :END:
 
-* dnsdumpster.com
+* dnsdumpster.com                                                    :search:
 :PROPERTIES:
 :ID:       58e80e6d-e99d-46db-8da8-ff397a304fb9
 :CREATED:  <2025-03-02 Sun 20:39>
@@ -286,7 +286,7 @@ US National Weather Service
 [2025-03-02 Sun 20:39] -- [[https://arxiv.org/][arXiv.org e-Print archive]]
 :END:
 
-* reddit.com
+* reddit.com                                                   :social:forum:
 :PROPERTIES:
 :ID:       dc19bb9a-3f8e-41ba-b352-2787b5f68897
 :CREATED:  <2025-03-02 Sun 20:40>

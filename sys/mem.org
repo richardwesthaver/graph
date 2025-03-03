@@ -1,11 +1,11 @@
 #+title: Memory Allocation Strategies
 #+setupfile: ../../clean.theme
-* Memory
+* Memory                                                                :mem:
 :PROPERTIES:
 :ID:       e485721a-4cd8-4bae-8d62-45e11729da70
 :CREATED:  <2025-02-13 Thu 22:27>
 :END:
-** Memory Pool
+** Memory Pool                                                        :alloc:
 :PROPERTIES:
 :ID:       2ae80374-cb47-494a-be51-e7f267f80a99
 :CREATED:  <2025-02-13 Thu 22:31>
@@ -15,7 +15,7 @@
 [2025-02-13 Thu 22:32] -- [[https://en.wikipedia.org/wiki/Memory_pool][Memory pool - Wikipedia]]
 :END:
 
-** Buddy Allocator
+** Buddy Allocator                                                    :alloc:
 :PROPERTIES:
 :ID:       2f1f89cb-1b42-4155-b79e-b531659323af
 :CREATED:  <2025-02-13 Thu 22:28>

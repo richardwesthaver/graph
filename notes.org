@@ -411,3 +411,57 @@ https://cl-net-snmp.common-lisp.dev/release/release.sh
 - [[https://duangle.com/][Main - Duangle]]
 - plan.md
   - ant farm - [[https://en.wikipedia.org/wiki/Formicarium][Formicarium - Wikipedia]] - nice
+* Enshittification of the Internet
+:PROPERTIES:
+:ID:       aa7d66fb-d93a-49b5-9bb3-2425400f5100
+:END:
+- State "NOTE"       from              [2023-11-04 Sat 12:20]
+- [[https://www.youtube.com/watch?v=rimtaSgGz_4][DEFCON 31 - An Audacious Plan to Halt the Internet's Enshittification - Cory Doctorow]]
+- "Five giant websites filled with screenshots of text from the other four" - Tom Eastman
+- lies, deceit, manipulation. you should be angry. furious.
+- another view - too many people. corporations are bad.
+- the crimes of the public company. the crimes of the stock owners.
+- Network effects - double-edged sword - once people leave they don't come back.
+- large companies hedge to keep competition out - buy competition,
+  kinda suck themselves, sell below cost
+- Competitors hack interoperability layers to get over competitor high-switching costs.
+- we're hackers so there are artificially low switching costs.
+- now adversarial interoperability hacking is poopoo'd by FAANG
+- media giants have agreed to end history - chatbots instead of humans
+- felony contempt of business model = IP
+- adblocks in apps are now illegal
+- when companies do not face competition, are allowed to tweak backend
+  laws to do 'Darth Vader shit'.
+- we can't pass laws against them.
+- The America Act - Ted Cruz, Elizabeth Warren
+- HUGE plug for the FTC and the good work they're doing (Activision, Blizzard)
+- interop is how we seize the means of computation
+- apply gig-economy
+- new API standards, platforms which maximize interop
+- easy to get wrong
+- these APIs can be hacked by big players.
+- restore right to reverse, mod, hack, tinker services
+- how do we keep the interoperators honest?
+- the alternative to good fire is wild fire
+- we could have a better tech sector
+- standard path is work a few years at FAANG, make shit startup and
+  get hired back by your own boss
+- cory@eff.org
+- Ulysses is a hacker
+- I want to hear the siren's song
+- form a Ulysses pact - they exist in tech
+- anticipate your weakness - take steps while you are cognizent
+- Federated services are better. they fail gracefully.
+- can these services attain lift-off? hard equation
+- "If you wanted to do something I wouldn't start from here."
+- Norms, Laws, Codes, and Markets
+* ultimate traffic controller
+:PROPERTIES:
+:ID:       02999b9e-d860-4608-8b63-80265d65f951
+:END:
+:EDGES:
+[2025-03-03 Mon 15:21] -- [[https://lartc.org/howto/lartc.cookbook.ultimate-tc.html][The Ultimate Traffic Conditioner: Low Latency, Fast Up & Downloads]]
+:END:
+:LOGBOOK:
+- State "NOTE"       from              [2024-05-02 Thu 15:12]
+:END:

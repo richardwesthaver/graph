@@ -6,9 +6,44 @@
 :END:
 :EDGES:
 [2025-03-01 Sat 19:51] -- [[https://www.sbcl.org/getting.html][Getting Started - Steel Bank Common Lisp]]
+[2025-03-03 Mon 16:33] -- [[info:sbcl][info]]
+[2025-03-03 Mon 16:34] -- [[man:sbcl][man]]
 :END:
 - [[https://github.com/sbcl/sbcl/blob/master/INSTALL][sbcl/INSTALL]]
 - [[https://www.sbcl.org/news.html][News - Steel Bank Common Lisp]]
+** Extensions
+:PROPERTIES:
+:ID:       868e5534-1ab9-49aa-88c8-f9529b3dfc98
+:CREATED:  <2025-03-03 Mon 14:53>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:58] -- [[info:sbcl#extensions][info]]
+:END:
+*** ed functions
+:PROPERTIES:
+:ID:       11329fdb-2923-4ccf-953c-037e78433b1a
+:CREATED:  <2025-03-03 Mon 14:53>
+:END:
+:LOGBOOK:
+- State "NOTE"       from              [2023-10-20 Fri 01:14]
+:END:
+#+begin_example
+  Although SBCL does not provide a resident editor, the ed function can
+  be customized to hook into user-provided editing mechanisms as
+  follows:
+
+  Function: ed [cl] &optional x
+
+      Starts the editor (on a file or a function if named). Functions
+      from the list *ed-functions* are called in order with x as an
+      argument until one of them returns non-NIL; these functions are
+      responsible for signalling a file-error to indicate failure to
+      perform an operation on the file system.
+
+  Variable: *ed-functions* [sb-ext]
+
+      See function documentation for ed. 
+#+end_example
 ** Internals
 :PROPERTIES:
 :ID:       9aac997a-5d9c-43dd-b2ca-8b8b02d9f2dd
@@ -122,7 +157,7 @@
 :END:
 Virtual Operations
 
-*** Aliens
+*** Aliens                                                              :ffi:
 :PROPERTIES:
 :ID:       93e1ed13-dc82-4a9b-8b9e-f60f06b01a4f
 :CREATED:  <2025-02-28 Fri 19:09>
@@ -133,7 +168,7 @@ Virtual Operations
 [2025-02-28 Fri 19:10] -- [[https://www.sbcl.org/sbcl-internals/Linkage_002dtable.html#Linkage_002dtable][Linkage-table - SBCL Internals]]
 :END:
 
-*** Compiler
+*** Compiler                                                           :comp:
 :PROPERTIES:
 :ID:       624cbc9a-9797-4889-a8b5-8440b04d9c01
 :CREATED:  <2025-02-28 Fri 19:14>
@@ -146,6 +181,9 @@ Virtual Operations
 :PROPERTIES:
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49
 :CREATED:  <2025-01-26 Sun 00:54>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:57] >> [[id:23185c5d-7470-4bf5-a700-99752c334333][Tree Shaking]]
 :END:
 With the complexity involved in SBCL image dumps it becomes a hard
 problem to design an effective tree-shaker.

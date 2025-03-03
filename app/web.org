@@ -1,0 +1,186 @@
+#+title: Web Applications and Tools
+#+setupfile: ../../clean.theme
+* Browser                                                           :browser:
+:PROPERTIES:
+:ID:       54b782ae-11c2-4546-a506-003a21fd9537
+:CREATED:  <2025-03-03 Mon 17:18>
+:END:
+** Chrome                                                            :chrome:
+:PROPERTIES:
+:ID:       49a90b67-054a-4591-b73f-8821dba7c060
+:CREATED:  <2025-02-13 Thu 22:36>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/canary/][Chrome Canary]]
+[2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/][Google Chrome]]
+[2025-02-13 Thu 22:38] -- [[https://www.chromium.org/chromium-projects/][Chromium]]
+[2025-03-03 Mon 16:31] -- [[man:chromium][man]]
+:END:
+*** Devtools
+:PROPERTIES:
+:ID:       51cb270e-5c5a-4605-9867-aa40a68ddceb
+:CREATED:  <2025-03-02 Sun 21:35>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:35] -- [[https://developer.chrome.com/docs/devtools][Chrome DevTools - Chrome for Developers]]
+[2025-03-02 Sun 21:39] -- [[https://chromedevtools.github.io/devtools-protocol/][Chrome DevTools Protocol]]
+:END:
+- probably my favorite feature of chrome - good dev tools.
+- [[https://www.chromium.org/developers/how-tos/trace-event-profiling-tool/][The Trace Event Profiling Tool (about:tracing)]]
+- [[https://developer.chrome.com/docs/devtools/network][Inspect network activity]]
+- [[https://github.com/aslushnikov/getting-started-with-cdp/blob/master/README.md][getting-started-with-cdp/README.md]]
+** Firefox                                                  :firefox:mozilla:
+:PROPERTIES:
+:ID:       de59cc69-d16c-4ff9-87f4-1d95f34525e9
+:CREATED:  <2025-02-13 Thu 22:38>
+:END:
+:EDGES:
+[2025-03-03 Mon 12:31] -- [[https://www.mozilla.org/en-US/firefox/][Get Firefox browser — Mozilla (US)]]
+:END:
+- [[https://firefox-source-docs.mozilla.org/devtools-user/index.html][Firefox DevTools User Docs — Firefox Source Docs documentation]]
+- [[https://firefox-source-docs.mozilla.org/remote/index.html][Remote Protocols — Firefox Source Docs documentation]]
+  - [[https://firefox-source-docs.mozilla.org/remote/cdp/][Remote Protocol (CDP) — Firefox Source Docs documentation]]
+
+** Nyxt                                                                  :cl:
+:PROPERTIES:
+:ID:       0290f01c-13ab-4268-b9de-030ffda5a4b8
+:CREATED:  <2025-03-03 Mon 12:34>
+:END:
+:EDGES:
+[2025-03-03 Mon 12:34] -- [[https://nyxt-browser.com/][Nyxt browser: The hacker's browser]]
+[2025-01-17 Fri 19:30] -- [[https://github.com/atlas-engineer/nyxt][GitHub - atlas-engineer/nyxt]]
+:END:
+the hacker's browser
+
+as of [2025-02-07 Fri] I'm unable to successfully build Nyxt on my
+system, but the code available has some goodies (json/nlp/etc)
+** IceCat                                                   :mozilla:firefox:
+:PROPERTIES:
+:ID:       cae8de41-beb8-42b3-bec8-20f0a29dd59c
+:CREATED:  <2025-03-03 Mon 12:36>
+:END:
+:EDGES:
+[2025-03-03 Mon 12:36] -- [[https://www.gnu.org/software/gnuzilla/][GNUzilla and IceCat - GNU Project - Free Software Foundation]]
+[2025-03-03 Mon 12:37] -- [[https://gnuzilla.gnu.org/][Mozzarella - Free extension for Firefox-based browsers]]
+:END:
+
+* Torrent Client                                                    :torrent:
+:PROPERTIES:
+:ID:       fdae8dcf-92f8-4a72-b91a-8a830e80c17b
+:CREATED:  <2025-03-03 Mon 17:18>
+:END:
+** Transmission
+:PROPERTIES:
+:ID:       74e5db7a-bb98-4a54-a7e6-fab58f580acf
+:CREATED:  <2025-03-03 Mon 17:14>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:14] -- [[https://transmissionbt.com/][Transmission]]
+[2025-03-03 Mon 17:17] -- [[https://github.com/transmission/transmission][transmission/transmission]]
+:END:
+#+begin_quote
+A Fast, Easy and Free Bittorrent Client For macOS, Windows and Linux
+#+end_quote
+* Server
+:PROPERTIES:
+:ID:       f7a60f4c-2aa4-4330-95bb-7077ab534258
+:CREATED:  <2025-03-03 Mon 17:20>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:23] -- [[https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server][What is a web server? - Learn web development | MDN]]
+:END:
+Web Servers
+** Caddy
+:PROPERTIES:
+:ID:       2415d486-e74b-4318-90cc-8d68c4bffb2e
+:CREATED:  <2025-02-21 Fri 21:21>
+:END:
+:EDGES:
+[2025-02-21 Fri 21:23] -- [[https://caddyserver.com/docs/][Caddy Documentation]]
+:END:
+*** API
+:PROPERTIES:
+:ID:       a6291723-d71e-4e1f-b53d-ed5914551e80
+:CREATED:  <2025-03-03 Mon 14:58>
+:header-args: :export both :eval never
+:END:
+#+name: beginner-caddy-config
+#+begin_src json :tangle beginner-caddy-config.json
+  {
+      "apps": {
+          "http": {
+              "servers": {
+                  "example": {
+                      "listen": [":2015"],
+                      "routes": [
+                          {
+                              "handle": [{
+                                  "handler": "static_response",
+                                  "body": "Hello, world!"
+                              }]
+                          }
+                      ]
+                  }
+              }
+          }
+      }
+  }
+
+#+end_src
+
+#+name: load-caddy-config
+#+begin_src bash :noweb yes
+    curl localhost:2019/load \
+         -H "Content-Type: application/json" \
+         -d @beginner-caddy-config.json
+#+end_src
+
+#+name: get-caddy-config
+#+begin_src bash :results output replace
+curl localhost:2019/config/ | jq
+#+end_src
+
+#+RESULTS: get-config
+#+begin_example
+{
+  "apps": {
+    "http": {
+      "servers": {
+        "example": {
+          "listen": [
+            ":2015"
+          ],
+          "routes": [
+            {
+              "handle": [
+                {
+                  "body": "Hello, world!",
+                  "handler": "static_response"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+#+end_example
+** Nginx
+:PROPERTIES:
+:ID:       e0d6567f-73e8-4a02-8360-4938d7994f3a
+:CREATED:  <2025-03-03 Mon 17:21>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:21] -- [[https://nginx.org/][nginx]]
+[2025-03-03 Mon 17:21] -- [[man:nginx][man]]
+:END:
+** Httpd
+:PROPERTIES:
+:ID:       163facc3-2d47-47ee-b0c8-0512a3efcd13
+:CREATED:  <2025-03-03 Mon 17:22>
+:END:
+:EDGES:
+[2025-03-03 Mon 17:22] -- [[https://httpd.apache.org/][The Apache HTTP Server Project]]
+:END:
+Apache HTTP Server

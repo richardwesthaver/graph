@@ -1,4 +1,5 @@
 #+title: Physics
+#+setupfile: ../../clean.theme
 * Physics
 :PROPERTIES:
 :ID:       873426f8-2dca-46ef-bef2-1fa1e3aa6881

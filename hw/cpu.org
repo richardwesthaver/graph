@@ -1,6 +1,6 @@
 #+title: CPU
 #+setupfile: ../../clean.theme
-* CPU
+* CPU                                                                   :cpu:
 :PROPERTIES:
 :ID:       20e26c76-3247-4434-89dc-cbd5712fdf67
 :CREATED:  <2025-01-17 Fri 22:58>
@@ -9,3 +9,44 @@
 [2025-01-17 Fri 22:59] -- [[https://en.wikipedia.org/wiki/Central_processing_unit][Central processing unit - Wikipedia]]
 :END:
 The 'Central' processing unit.
+* AMD Zen                                                               :amd:
+:PROPERTIES:
+:ID:       1b41d186-948d-4ef1-b36d-f3e2fa14fa3d
+:CREATED:  <2025-03-03 Mon 12:10>
+:END:
+:EDGES:
+[2025-03-03 Mon 12:10] -- [[https://en.wikipedia.org/wiki/Zen_(microarchitecture)][Zen (microarchitecture) - Wikipedia]]
+:END:
+- [[https://www.amd.com/en/developer/zendnn.html][ZenDNN]]
+- [[https://github.com/amd/ZenDNN][GitHub - amd/ZenDNN]]
+- [[https://docs.amd.com/r/en-US/57300-ZenDNN-user-guide/ZenDNN][ZenDNN User Guide]]
+** EPYC
+:PROPERTIES:
+:ID:       86c29a1a-359d-4049-816d-2ec56e6bdd5f
+:CREATED:  <2025-03-03 Mon 11:47>
+:END:
+:EDGES:
+[2025-03-03 Mon 11:46] -- [[https://www.amd.com/en/products/processors/server/epyc.html][AMD EPYC]]
+:END:
+- [[https://www.amd.com/en/developer.html][dev]]
+- [[https://www.amd.com/en/resources/epyc-tools.html][EPYC Tools]]
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/white-papers/amd-epyc-9004-wp-cpu-for-llm.pdf][Practical Strategies for Low-cost LLM Deployments Using 4th Gen AMD EPYC Processors]]
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/ai-inferencing-with-amd-epyc-processors-white-paper.pdf][AI Interencing with AMD EPYC Processors]]
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/user-guides/58206_amd-epyc-9004-ug-virtual-machine-migration-guide.pdf][VM Migration Guide]]
+
+* Intel Core                                                          :intel:
+:PROPERTIES:
+:ID:       b64ab310-f4f1-4be7-991b-d38ef4ad686f
+:CREATED:  <2025-03-03 Mon 12:30>
+:END:
+:EDGES:
+[2025-03-03 Mon 12:30] -- [[https://www.intel.com/content/www/us/en/products/details/processors/core.html][Intel® Core™ Processors]]
+:END:
+* Intel Xeon                                                          :intel:
+:PROPERTIES:
+:ID:       cf84218a-5bbc-4b73-919b-994cbd0e2845
+:CREATED:  <2025-03-03 Mon 12:30>
+:END:
+:EDGES:
+[2025-03-03 Mon 12:30] -- [[https://www.intel.com/content/www/us/en/products/details/processors/xeon.html][Intel® Xeon® Processors]]
+:END:
