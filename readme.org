@@ -21,28 +21,27 @@ an interface for modifying the graph.
 #+end_src
 
 #+RESULTS:
-| nodes | 345 |
-| edges | 237 |
+| nodes | 348 |
+| edges | 240 |
 
 #+call: project-html-files()
 
 #+RESULTS:
 | file                | modified            |
 |---------------------+---------------------|
-| [[https://compiler.company/graph/app/emacs.html][app/emacs]]           | 2025-03-01 17:19:14 |
-| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]           | 2025-03-01 19:52:45 |
-| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]           | 2025-03-01 20:17:54 |
-| [[https://compiler.company/graph/index.html][index]]               | 2025-03-01 20:49:16 |
-| [[https://compiler.company/graph/refs.html][refs]]                | 2025-03-01 16:38:59 |
-| [[https://compiler.company/graph/theory/plt.html][theory/plt]]          | 2025-03-01 16:44:08 |
+| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]           | 2025-03-02 20:13:25 |
+| [[https://compiler.company/graph/index.html][index]]               | 2025-03-02 20:31:17 |
 | [[https://compiler.company/graph/app/browser.html][app/browser]]         | 2025-02-21 22:35:00 |
 | [[https://compiler.company/graph/app/caddy.html][app/caddy]]           | 2025-02-21 22:35:05 |
+| [[https://compiler.company/graph/app/emacs.html][app/emacs]]           | 2025-03-01 17:19:14 |
 | [[https://compiler.company/graph/app/gnu-radio.html][app/gnu-radio]]       | 2025-02-21 22:35:11 |
+| [[https://compiler.company/graph/app/mail.html][app/mail]]            | 2025-03-01 13:42:08 |
 | [[https://compiler.company/graph/app/package-manager.html][app/package-manager]] | 2025-02-27 17:02:23 |
 | [[https://compiler.company/graph/app/podman.html][app/podman]]          | 2025-03-01 20:24:35 |
 | [[https://compiler.company/graph/comp/gcc.html][comp/gcc]]            | 2025-02-28 17:46:00 |
 | [[https://compiler.company/graph/comp/ghc.html][comp/ghc]]            | 2025-02-21 22:34:46 |
 | [[https://compiler.company/graph/comp/llvm.html][comp/llvm]]           | 2025-02-21 22:34:49 |
+| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]           | 2025-03-01 19:52:45 |
 | [[https://compiler.company/graph/hw/amd.html][hw/amd]]              | 2025-02-21 22:34:13 |
 | [[https://compiler.company/graph/hw/car.html][hw/car]]              | 2025-02-21 22:34:16 |
 | [[https://compiler.company/graph/hw/cpu.html][hw/cpu]]              | 2025-02-21 22:34:19 |
@@ -92,6 +91,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/net/tls.html][proto/net/tls]]       | 2025-02-21 22:32:27 |
 | [[https://compiler.company/graph/proto/net/udp.html][proto/net/udp]]       | 2025-02-21 22:32:32 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]           | 2025-02-21 22:32:12 |
+| [[https://compiler.company/graph/refs.html][refs]]                | 2025-03-01 16:38:59 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]              | 2025-02-27 18:02:41 |
 | [[https://compiler.company/graph/sys/dsp.html][sys/dsp]]             | 2025-02-21 22:31:30 |
 | [[https://compiler.company/graph/sys/fs.html][sys/fs]]              | 2025-02-21 22:31:34 |
@@ -105,6 +105,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/theory/hacking.html][theory/hacking]]      | 2025-03-01 12:27:45 |
 | [[https://compiler.company/graph/theory/maximalism.html][theory/maximalism]]   | 2025-02-21 22:30:28 |
 | [[https://compiler.company/graph/theory/money.html][theory/money]]        | 2025-02-21 22:30:37 |
+| [[https://compiler.company/graph/theory/plt.html][theory/plt]]          | 2025-03-01 16:44:08 |
 | [[https://compiler.company/graph/theory/process.html][theory/process]]      | 2025-02-21 22:31:00 |
 | [[https://compiler.company/graph/theory/style.html][theory/style]]        | 2025-02-27 17:04:03 |
 | [[https://compiler.company/graph/theory/system.html][theory/system]]       | 2025-02-26 20:47:40 |

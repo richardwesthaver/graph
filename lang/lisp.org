@@ -155,6 +155,45 @@ system, but the code available has some goodies (json/nlp/etc)
 [2025-02-22 Sat 15:15] -- [[https://github.com/sharplispers/clx][sharplispers/clx]]
 :END:
 [[https://github.com/sharplispers/clx/tree/master/extensions][clx/extensions]]
+*** Shirakumo Ecosystem
+:PROPERTIES:
+:ID:       503387d8-fa9c-4269-99bc-1d29415ab290
+:CREATED:  <2025-03-02 Sun 20:09>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:12] -- [[https://github.com/Shirakumo][Shirakumo · GitHub]]
+:END:
+Shinmera runs an indie-game studio based on CL and has contributed
+well over 10% of the Quicklisp ecosystem. Impressive effort and worthy
+of a dedicated info node here.
+
+**** Radiance
+:PROPERTIES:
+:ID:       1beb282b-8c4d-4561-a293-07439d0367ae
+:CREATED:  <2025-03-02 Sun 20:11>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:11] -- [[https://github.com/Shirakumo/radiance][Shirakumo/radiance: A Common Lisp web application environment]]
+:END:
+
+**** Alloy
+:PROPERTIES:
+:ID:       8af234c8-1455-4dc8-a2df-e6d5b5777606
+:CREATED:  <2025-03-02 Sun 20:12>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:12] -- [[https://github.com/Shirakumo/alloy][Shirakumo/alloy: A new user interface protocol and toolkit implementation]]
+:END:
+
+**** Framebuffers
+:PROPERTIES:
+:ID:       e70d50df-d897-4a5f-a669-fa5dc3f94b23
+:CREATED:  <2025-03-02 Sun 20:13>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:13] -- [[https://github.com/Shirakumo/framebuffers][Shirakumo/framebuffers: A library for portable framebuffer access]]
+:END:
+
 ** Packages
 :PROPERTIES:
 :ID:       92dd3f0e-4789-4016-a623-48af3c45cd05
