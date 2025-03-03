@@ -1,13 +1,46 @@
 #+title: C
 #+description: The C Language Paradigm
 #+setupfile: ../../clean.theme
-* C
+* C                                                                       :c:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/c][C reference - cppreference.com]]
 :END:
 [[https://en.cppreference.com/w/c/23][C23 - cppreference.com]]
 
-* CPP
+* CPP                                                                   :cpp:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/][cppreference.com]]
 :END:
+
+** Libraries
+:PROPERTIES:
+:ID:       ad099ae1-d55f-49f4-99c7-de92ced85488
+:CREATED:  <2025-03-02 Sun 20:45>
+:END:
+
+*** Boost
+:PROPERTIES:
+:ID:       2b62b530-80c0-4a78-828e-509ac78dbfd9
+:CREATED:  <2025-03-02 Sun 20:45>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:46] -- [[https://www.boost.org/][Boost C++ Libraries]]
+:END:
+
+*** Adaptagrams                                                       :graph:
+:PROPERTIES:
+:ID:       d7c12344-b1ae-4bf2-a620-bc99f8e71e29
+:CREATED:  <2025-03-02 Sun 20:45>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:46] -- [[https://www.adaptagrams.org/][Adaptagrams: Tools for Adaptive Diagrams]]
+:END:
+** CUDA                                                          :nvidia:gpu:
+:PROPERTIES:
+:ID:       a531e912-55ab-4889-806f-475c0316713e
+:CREATED:  <2025-03-02 Sun 21:29>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:29] -- [[https://docs.nvidia.com/cuda][CUDA Toolkit Documentation 12.8]]
+:END:
+- [[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html][1. Introduction — CUDA C++ Programming Guide]]

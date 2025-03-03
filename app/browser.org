@@ -10,6 +10,19 @@
 [2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/][Google Chrome]]
 [2025-02-13 Thu 22:38] -- [[https://www.chromium.org/chromium-projects/][Chromium]]
 :END:
+** Devtools
+:PROPERTIES:
+:ID:       51cb270e-5c5a-4605-9867-aa40a68ddceb
+:CREATED:  <2025-03-02 Sun 21:35>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:35] -- [[https://developer.chrome.com/docs/devtools][Chrome DevTools - Chrome for Developers]]
+[2025-03-02 Sun 21:39] -- [[https://chromedevtools.github.io/devtools-protocol/][Chrome DevTools Protocol]]
+:END:
+- probably my favorite feature of chrome - good dev tools.
+- [[https://www.chromium.org/developers/how-tos/trace-event-profiling-tool/][The Trace Event Profiling Tool (about:tracing)]]
+- [[https://developer.chrome.com/docs/devtools/network][Inspect network activity]]
+- [[https://github.com/aslushnikov/getting-started-with-cdp/blob/master/README.md][getting-started-with-cdp/README.md]]
 * Firefox
 :PROPERTIES:
 :ID:       de59cc69-d16c-4ff9-87f4-1d95f34525e9

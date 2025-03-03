@@ -5,6 +5,8 @@
 :ID:       917c397b-01f2-4f02-8b27-abeeeaa463ab
 :CREATED:  <2025-02-16 Sun 20:35>
 :END:
-- [[https://www.haskell.org/][Haskell Language]]
+:EDGES:
+[2025-02-16 Sun 20:35] -- [[https://www.haskell.org/][Haskell Language]]
+:END:
 - [[https://blog.akquinet.de/2021/01/03/haskell-is-faster-than-rust-wait-a-sec/][Haskell is Faster than Rust! … Wait a Sec! – akquinet AG – Blog]]
 - [[https://hledger.org/index.html][hledger]]

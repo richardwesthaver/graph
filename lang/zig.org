@@ -1,0 +1,26 @@
+#+title: Zig
+#+setupfile: ../../clean.theme
+* Zig
+:PROPERTIES:
+:ID:       24f9cd96-0ad1-412a-a24b-c3fa1bdf3c98
+:CREATED:  <2025-03-02 Sun 20:59>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:00] -- [[https://ziglang.org/][Zig Programming Language]]
+:END:
+** Libraries
+:PROPERTIES:
+:ID:       65db51e0-b2a6-46b4-9ff6-c76bb11b2cb5
+:CREATED:  <2025-03-02 Sun 20:59>
+:END:
+** Apps
+:PROPERTIES:
+:ID:       85cab8fb-c534-4bd9-a2b6-16e31014d2c2
+:CREATED:  <2025-03-02 Sun 20:59>
+:END:
+*** Wisp                                                       :js:lisp:wasm:
+:PROPERTIES:
+:ID:       b8c643e4-3d48-45c3-a61b-db9613d1db28
+:CREATED:  <2025-03-02 Sun 20:59>
+:END:
+Lisp in WebAssembly

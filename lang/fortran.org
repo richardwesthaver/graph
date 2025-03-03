@@ -1,0 +1,8 @@
+#+title: Fortran
+#+setupfile: ../../clean.theme
+* Fortran
+:PROPERTIES:
+:ID:       f32a0d3a-79b7-4853-81e2-bafd46f33428
+:CREATED:  <2025-03-02 Sun 21:14>
+:END:
+- llvm frontend :: [[https://flang.llvm.org/docs/][Flang’s documentation — The Flang Compiler]]

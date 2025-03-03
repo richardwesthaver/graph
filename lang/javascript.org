@@ -5,3 +5,45 @@
 :ID:       d9226de2-4b80-4193-a06e-e3185ffb5217
 :CREATED:  <2025-01-18 Sat 20:46>
 :END:
+** Libraries
+:PROPERTIES:
+:ID:       7ddd2d60-6a99-4948-aa7b-f36dc9839599
+:CREATED:  <2025-03-02 Sun 20:46>
+:END:
+*** WebCola
+:PROPERTIES:
+:ID:       1dd1ff5b-c2bb-47ff-96d0-f56d2fac465b
+:CREATED:  <2025-03-02 Sun 20:46>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:47] -- [[https://github.com/tgdwyer/WebCola][tgdwyer/WebCola: Javascript constraint-based graph layout]]
+[2025-03-02 Sun 20:47] -- [[https://marvl.infotech.monash.edu/webcola/][cola.js: Constraint-based Layout in the Browser]]
+:END:
+- [[https://cprimozic.net/blog/speeding-up-webcola-with-webassembly/#custom-canvas-based-renderer][Speeding Up the Webcola Graph Viz Library with Rust + WebAssembly - Casey Primozic]]
+*** Cytoscape.js
+:PROPERTIES:
+:ID:       5886ca2e-a096-4f08-b08e-75da2c12109a
+:CREATED:  <2025-03-02 Sun 20:48>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:48] -- [[https://js.cytoscape.org/][Cytoscape.js]]
+:END:
+*** SVG.js
+:PROPERTIES:
+:ID:       b2f13ede-db9d-494b-a454-515496cb6b7e
+:CREATED:  <2025-03-02 Sun 20:49>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:49] -- [[https://svgjs.dev/docs/3.2/][SVG.js v3.2 | Home]]
+:END:
+*** d3.js
+:PROPERTIES:
+:ID:       84bd750f-75f0-4b23-b18e-7868783fdacb
+:CREATED:  <2025-03-02 Sun 20:49>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:50] -- [[https://d3js.org/][D3 by Observable | The JavaScript library for bespoke data visualization]]
+:END:
+- [[https://d3js.org/d3-force][d3-force]]
+- [[https://observablehq.com/@d3/gallery][D3 gallery / D3 | Observable]]
+  - [[https://observablehq.com/@d3/word-cloud][Word cloud / D3 | Observable]]

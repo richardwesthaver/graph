@@ -1,15 +1,43 @@
 #+title: Query Languages
 #+setupfile: ../../clean.theme
-* SQL
+* SQL                                                             :query:sql:
 :PROPERTIES:
 :ID:       90b5d156-6fd6-47de-9e76-32e69115f5ac
 :CREATED:  <2025-01-17 Fri 18:42>
 :END:
-* DQL
+:EDGES:
+[2025-03-02 Sun 21:06] -- [[https://en.wikipedia.org/wiki/SQL][SQL - Wikipedia]]
+:END:
+
+* DQL                                                                 :query:
 :PROPERTIES:
 :ID:       da0aecca-6d5b-4719-9235-6a11fe978b11
 :CREATED:  <2025-01-17 Fri 18:42>
 :END:
+:EDGES:
+[2025-03-02 Sun 21:06] -- [[https://en.wikipedia.org/wiki/Deductive_language][Deductive language - Wikipedia]]
+[2025-03-02 Sun 21:06] -- [[https://en.wikipedia.org/wiki/Deductive_database][Deductive database - Wikipedia]]
+:END:
 A term we coined for 'Deductive Query Languages' - implemented as part
 of the CC Core. Datalog and subsets of Prolog fall under this
 category.
+
+** Prolog                                                            :prolog:
+:PROPERTIES:
+:ID:       3ac23a84-ba2e-41a1-9ea4-268e01891930
+:CREATED:  <2025-03-02 Sun 21:05>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:07] -- [[https://en.wikipedia.org/wiki/Prolog][Prolog - Wikipedia]]
+:END:
+- implementations
+  - [[https://www.swi-prolog.org/][SWI-Prolog]]
+  - [[https://www.scryer.pl/][Scryer Prolog]]
+*** Datalog
+:PROPERTIES:
+:ID:       2e7cc5b2-718c-4968-84c0-f881e702a616
+:CREATED:  <2025-03-02 Sun 21:05>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:33] -- [[https://clojure.github.io/clojure-contrib/doc/datalog.html][An Overview of Datalog]]
+:END:

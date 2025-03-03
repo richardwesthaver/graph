@@ -9,9 +9,62 @@
 :EDGES:
 [2025-01-17 Fri 18:23] -- [[https://www.nasm.us/][NASM]]
 :END:
+* x86
+:PROPERTIES:
+:ID:       3eec30c3-ab67-42f1-b77f-191905d43c6c
+:CREATED:  <2025-03-02 Sun 21:19>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:19] -- [[https://www.cs.virginia.edu/~evans/cs216/guides/x86.html][Guide to x86 Assembly]]
+:END:
+* AMD64
+:PROPERTIES:
+:ID:       4c7530b8-6d6f-475a-b2a3-986a10a0d812
+:CREATED:  <2025-03-02 Sun 21:19>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:20] -- [[https://en.wikipedia.org/wiki/X86-64][x86-64 - Wikipedia]]
+[2025-03-02 Sun 21:20] -- [[https://gist.github.com/aagontuk/177947659828c1fe6611d4971bfddd27][Resources on x86_64 ISA · GitHub]]
+[2025-03-02 Sun 21:21] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html][Intel® 64 and IA-32 Architectures Software Developer Manuals]]
+:END:
+- aka ~x86_64~
+* RISC-V
+:PROPERTIES:
+:ID:       e6c89750-0770-4c0f-a943-f6419313970e
+:CREATED:  <2025-03-02 Sun 21:22>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:22] -- [[https://riscv.org/][RISC-V International]]
+[2025-03-02 Sun 21:23] -- [[https://github.com/riscv/riscv-isa-manual][GitHub - riscv/riscv-isa-manual: RISC-V Instruction Set Manual]]
+[2025-03-02 Sun 21:23] -- [[https://riscv.org/specifications/ratified/][RISC-V Ratified Specifications]]
+:END:
 
-* WASM
+* WASM                                                                  :web:
 :PROPERTIES:
 :ID:       bdae141e-3288-4108-b509-dddd4a8b3731
 :CREATED:  <2025-01-18 Sat 20:45>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:41] -- [[https://developer.mozilla.org/en-US/docs/WebAssembly/Reference][WebAssembly instruction reference - WebAssembly | MDN]]
+[2025-03-02 Sun 21:40] -- [[https://webassembly.org/][WebAssembly]]
+[2025-03-02 Sun 21:40] -- [[https://webassembly.github.io/spec/core/][WebAssembly Specification — WebAssembly 2.0 (Draft 2025-01-28)]]
+:END:
+
+* LLVM IR                                                              :llvm:
+:PROPERTIES:
+:ID:       25754e07-2c57-4385-a52a-33b0179e2b85
+:CREATED:  <2025-03-02 Sun 21:18>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:18] -- [[https://llvm.org/docs/LangRef.html][LLVM Language Reference Manual — LLVM 21.0.0git documentation]]
+[2025-03-02 Sun 21:18] -- [[https://mcyoung.xyz/2023/08/01/llvm-ir/][A Gentle Introduction to LLVM IR · mcyoung]]
+:END:
+
+** NNVM IR                                                  :llvm:gpu:nvidia:
+:PROPERTIES:
+:ID:       650a3fc0-6eec-4b9c-8db5-b89715ff50cc
+:CREATED:  <2025-03-02 Sun 21:24>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:24] -- [[https://docs.nvidia.com/cuda/nvvm-ir-spec/][1. Introduction — NVVM IR Specification 12.8 documentation]]
 :END:

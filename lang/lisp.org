@@ -194,6 +194,15 @@ of a dedicated info node here.
 [2025-03-02 Sun 20:13] -- [[https://github.com/Shirakumo/framebuffers][Shirakumo/framebuffers: A library for portable framebuffer access]]
 :END:
 
+*** jscl
+:PROPERTIES:
+:ID:       3addee17-b990-4a6d-9767-071969ed9d0e
+:CREATED:  <2025-03-02 Sun 20:51>
+:END:
+:EDGES:
+[2025-03-02 Sun 20:52] -- [[https://github.com/jscl-project/jscl][jscl-project/jscl: A Lisp-to-JavaScript compiler bootstrapped from Common Lisp]]
+:END:
+
 ** Packages
 :PROPERTIES:
 :ID:       92dd3f0e-4789-4016-a623-48af3c45cd05

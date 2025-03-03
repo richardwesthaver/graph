@@ -1,10 +1,18 @@
 #+title: LLVM
 #+setupfile: ../../clean.theme
-* LLVM
+* LLVM                                                                 :llvm:
 :PROPERTIES:
 :ID:       496b952f-4c98-4303-92b4-1c766565092c
 :CREATED:  <2025-01-17 Fri 16:04>
 :END:
+:EDGES:
+[2025-03-02 Sun 21:12] -- [[https://llvm.org/][The LLVM Compiler Infrastructure Project]]
+[2025-03-02 Sun 21:13] -- [[https://github.com/llvm/llvm-project][llvm/llvm-project]]
+:END:
+- [[https://blog.llvm.org/][The LLVM Project Blog]]
+- [[https://llvm.org/devmtg/][Dev Meetings]]
+- [[https://llvm.org/pubs/][Publications]]
+
 ** Extensions
 :PROPERTIES:
 :ID:       05eeed21-6ed4-447d-8c8f-daee2dd112bf
@@ -25,4 +33,12 @@
 :END:
 :EDGES:
 [2025-02-14 Fri 21:19] -- [[https://clang.llvm.org/docs/LanguageExtensions.html][Clang Language Extensions]]
+:END:
+* NVCC                                                           :gpu:nvidia:
+:PROPERTIES:
+:ID:       339518e9-2112-4c79-9471-ccc8f57b8105
+:CREATED:  <2025-03-02 Sun 21:30>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:30] -- [[https://developer.nvidia.com/cuda-llvm-compiler][CUDA LLVM Compiler | NVIDIA Developer]]
 :END:

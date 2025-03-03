@@ -1,2 +1,28 @@
 #+title: Java
 #+setupfile: ../../clean.theme
+* Java
+:PROPERTIES:
+:ID:       99715e32-2635-4425-b2b5-a1fcb4ddb9a5
+:CREATED:  <2025-03-02 Sun 21:00>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:01] -- [[https://en.wikipedia.org/wiki/Java_(programming_language)][Java (programming language) - Wikipedia]]
+[2025-03-02 Sun 21:01] -- [[https://java.com][Oracle Java]]
+[2025-03-02 Sun 21:01] -- [[https://jdk.java.net/][JDK Builds from Oracle]]
+:END:
+* Groovy
+:PROPERTIES:
+:ID:       84a7eea1-0059-4a07-945b-c4167ca38f26
+:CREATED:  <2025-03-02 Sun 21:02>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:03] -- [[https://groovy-lang.org/][The Apache Groovy programming language]]
+:END:
+* Kotlin
+:PROPERTIES:
+:ID:       daabdec4-5708-4bfe-ad37-41469d0dfe17
+:CREATED:  <2025-03-02 Sun 21:03>
+:END:
+:EDGES:
+[2025-03-02 Sun 21:03] -- [[https://kotlinlang.org/][Kotlin Programming Language]]
+:END:
