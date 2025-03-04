@@ -12,6 +12,16 @@
   Factor is a cool concatenative lang but unfortunately the C interface
   (vm/master.h) no longer exists on the master branch.
 - [[https://www.pbm.com/~lindahl/real.programmers.html][Real Programmers Don't Use Pascal]]
+** Gforth
+:PROPERTIES:
+:ID:       c8359e6e-401b-4c7a-915f-98dc2759c995
+:CREATED:  <2025-03-03 Mon 20:04>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:04] -- [[https://www.gnu.org/software/gforth/][Gforth - GNU Project - Free Software Foundation.]]
+[2025-03-03 Mon 20:05] -- [[info:gforth][info]]
+:END:
+
 ** Books
 :PROPERTIES:
 :ID:       35de6467-e9fc-49f4-b46b-0e05029f9f48

@@ -27,3 +27,8 @@ laptop.
 :EDGES:
 [2025-03-01 Sat 12:27] -- [[https://en.wikipedia.org/wiki/Rubber_duck_debugging][Rubber duck debugging - Wikipedia]]
 :END:
+* Scripting
+:PROPERTIES:
+:ID:       2ab524ef-e77e-4482-b563-123b556f431f
+:CREATED:  <2025-03-03 Mon 20:14>
+:END:

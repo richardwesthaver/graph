@@ -21,8 +21,8 @@ an interface for modifying the graph.
 #+end_src
 
 #+RESULTS:
-| nodes | 481 |
-| edges | 364 |
+| nodes | 485 |
+| edges | 367 |
 
 #+call: project-html-files()
 

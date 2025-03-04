@@ -2,8 +2,12 @@
 #+description: The C Language Paradigm
 #+setupfile: ../../clean.theme
 * C                                                                       :c:
+:PROPERTIES:
+:ID:       5479d877-2bd1-41d9-8409-1ff0436fcc59
+:END:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/c][C reference - cppreference.com]]
+[2025-03-03 Mon 20:11] << [[id:3021fa48-a98a-471f-896c-db237e97192b][Objective-C]]
 :END:
 [[https://en.cppreference.com/w/c/23][C23 - cppreference.com]]
 
@@ -57,3 +61,14 @@
 [2025-03-03 Mon 14:47] >> [[id:eaf2ecf5-7748-40e5-bd1b-c8fc2053d050][NVIDIA]]
 :END:
 - [[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html][1. Introduction — CUDA C++ Programming Guide]]
+
+* Objective-C
+:PROPERTIES:
+:ID:       3021fa48-a98a-471f-896c-db237e97192b
+:CREATED:  <2025-03-03 Mon 20:10>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:10] -- [[https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html][About Objective-C]]
+[2025-03-03 Mon 20:11] >> [[id:5479d877-2bd1-41d9-8409-1ff0436fcc59][C]]
+[2025-03-03 Mon 20:14] -> [[id:c5d7a7b3-09f1-4f0e-909a-63111c039cc3][Apple]]
+:END:

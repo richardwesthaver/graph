@@ -1,6 +1,6 @@
 #+title: Javascript
 #+setupfile: ../../clean.theme
-* Javascript
+* Javascript                                                             :js:
 :PROPERTIES:
 :ID:       d9226de2-4b80-4193-a06e-e3185ffb5217
 :CREATED:  <2025-01-18 Sat 20:46>
@@ -47,3 +47,11 @@
 - [[https://d3js.org/d3-force][d3-force]]
 - [[https://observablehq.com/@d3/gallery][D3 gallery / D3 | Observable]]
   - [[https://observablehq.com/@d3/word-cloud][Word cloud / D3 | Observable]]
+* TypeScript
+:PROPERTIES:
+:ID:       58d76125-7110-4c76-b8d4-7014d407cc1d
+:CREATED:  <2025-03-03 Mon 19:45>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:45] -- [[https://www.typescriptlang.org/][TypeScript: JavaScript With Syntax For Types.]]
+:END:

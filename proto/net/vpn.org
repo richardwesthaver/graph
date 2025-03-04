@@ -1,5 +1,5 @@
 #+title: Virtual Private Networking
-#+setupfile: ../../clean.theme
+#+setupfile: ../../../clean.theme
 * VPN                                                                   :vpn:
 :PROPERTIES:
 :ID:       17dd76c0-b08b-4df5-b9fb-c1dd6b84d812

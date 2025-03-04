@@ -9,4 +9,3 @@
 [2025-02-14 Fri 22:13] -- [[https://en.wikipedia.org/wiki/Microsoft_Windows][Microsoft Windows - Wikipedia]]
 [2025-03-03 Mon 18:05] -- [[https://learn.microsoft.com/en-us/windows/][Windows Documentation | Microsoft Learn]]
 :END:
-

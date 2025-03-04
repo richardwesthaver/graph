@@ -263,6 +263,20 @@ of a dedicated info node here.
 [2025-03-02 Sun 20:52] -- [[https://github.com/jscl-project/jscl][jscl-project/jscl: A Lisp-to-JavaScript compiler bootstrapped from Common Lisp]]
 :END:
 
+** Systems
+:PROPERTIES:
+:ID:       a6911466-c135-488c-a67e-689f22592a44
+:CREATED:  <2025-03-03 Mon 18:54>
+:END:
+** ASDF
+:PROPERTIES:
+:ID:       fb68413a-acd8-4107-bfb5-48ce32be8842
+:CREATED:  <2025-03-03 Mon 18:54>
+:END:
+:EDGES:
+[2025-03-03 Mon 18:54] -- [[info:asdf][info]]
+:END:
+
 ** Packages
 :PROPERTIES:
 :ID:       92dd3f0e-4789-4016-a623-48af3c45cd05
@@ -354,6 +368,16 @@ An alternative distribution for Quicklisp - tracks git branches.
 :END:
 - [cite/t/b:@super8-fp]
   from the PLT guys at NEU - Racket
+** Guile
+:PROPERTIES:
+:ID:       66e2ab9a-51e3-4360-b7ad-0b38eb0dd6e5
+:CREATED:  <2025-03-03 Mon 20:03>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:03] -- [[info:guile][info]]
+[2025-03-03 Mon 20:03] -- [[https://www.gnu.org/software/guile/][GNU's programming and extension language — GNU Guile]]
+:END:
+
 * Lisp Machine Lisp
 :PROPERTIES:
 :ID:       e21c02a5-5039-42c2-8416-aa5d45e70cb6
@@ -361,10 +385,11 @@ An alternative distribution for Quicklisp - tracks git branches.
 :END:
 :EDGES:
 [2025-02-26 Wed 20:49] -- [[https://en.wikipedia.org/wiki/Lisp_Machine_Lisp][Lisp Machine Lisp - Wikipedia]]
+[2025-03-03 Mon 20:02] -> [[id:bd25630a-b72a-46c5-abf1-733f5c892bf6][Lisp Machine]]
 :END:
 Maclisp->Zetalisp
 - [[http://www.jargon.net/jargon/jargonfile/c/chinenual.html][jargon, node: chine nual]]
-* Elisp                                                      :emacs:elisp:cl:
+* Elisp                                                :emacs:elisp:el:cl:cl:
 :PROPERTIES:
 :ID:       6c69c42b-3d0a-48bf-a5ad-43b350477387
 :CREATED:  <2025-03-01 Sat 16:35>
@@ -383,6 +408,106 @@ Maclisp->Zetalisp
 [2025-03-03 Mon 14:14] -- [[info:elisp#Threads][ref]]
 :END:
 
+** Widgets
+:PROPERTIES:
+:ID:       95427021-7e0c-4657-9b70-a7ed874fe35a
+:CREATED:  <2025-03-03 Mon 20:01>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:01] -- [[info:widget][info]]
+:END:
+#+name: elisp-widget-example
+#+begin_src emacs-lisp
+  (require 'widget)
+
+  (eval-when-compile
+    (require 'wid-edit))
+
+  (defvar widget-example-repeat)
+
+  (defun widget-example ()
+    "Create the widgets from the Widget manual."
+    (interactive)
+    (switch-to-buffer "*Widget Example*")
+    (kill-all-local-variables)
+    (make-local-variable 'widget-example-repeat)
+    (let ((inhibit-read-only t))
+      (erase-buffer))
+    (remove-overlays)
+    (widget-insert "Here is some documentation.\n\n")
+    (widget-create 'editable-field
+  		 :size 13
+  		 :format "Name: %v " ; Text after the field!
+  		 "My Name")
+    (widget-create 'menu-choice
+  		 :tag "Choose"
+  		 :value "This"
+  		 :help-echo "Choose me, please!"
+  		 :notify (lambda (widget &rest ignore)
+  			   (message "%s is a good choice!"
+  				    (widget-value widget)))
+  		 '(item :tag "This option" :value "This")
+  		 '(choice-item "That option")
+  		 '(editable-field :menu-tag "No option" "Thus option"))
+    (widget-create 'editable-field
+  		 :format "Address: %v"
+  		 "Some Place\nIn some City\nSome country.")
+    (widget-insert "\nSee also ")
+    (widget-create 'link
+  		 :notify (lambda (&rest ignore)
+  			   (widget-value-set widget-example-repeat
+  					     '("En" "To" "Tre"))
+  			   (widget-setup))
+  		 "other work")
+    (widget-insert
+     " for more information.\n\nNumbers: count to three below\n")
+    (setq widget-example-repeat
+  	(widget-create 'editable-list
+  		       :entry-format "%i %d %v"
+  		       :notify
+  		       (lambda (widget &rest ignore)
+  			 (let ((old (widget-get widget
+  						':example-length))
+  			       (new (length (widget-value widget))))
+  			   (unless (eq old new)
+  			     (widget-put widget ':example-length new)
+  			     (message "You can count to %d." new))))
+  		       :value '("One" "Eh, two?" "Five!")
+  		       '(editable-field :value "three")))
+    (widget-insert "\n\nSelect multiple:\n\n")
+    (widget-create 'checkbox t)
+    (widget-insert " This\n")
+    (widget-create 'checkbox nil)
+    (widget-insert " That\n")
+    (widget-create 'checkbox
+  		 :notify (lambda (&rest ignore) (message "Tickle"))
+  		 t)
+    (widget-insert " Thus\n\nSelect one:\n\n")
+    (widget-create 'radio-button-choice
+  		 :value "One"
+  		 :notify (lambda (widget &rest ignore)
+  			   (message "You selected %s"
+  				    (widget-value widget)))
+  		 '(item "One") '(item "Another One.")
+  		 '(item "A Final One."))
+    (widget-insert "\n")
+    (widget-create 'push-button
+  		 :notify (lambda (&rest ignore)
+  			   (if (= (length
+  				   (widget-value widget-example-repeat))
+  				  3)
+  			       (message "Congratulation!")
+  			     (error "Three was the count!")))
+  		 "Apply Form")
+    (widget-insert " ")
+    (widget-create 'push-button
+  		 :notify (lambda (&rest ignore)
+  			   (widget-example))
+  		 "Reset Form")
+    (widget-insert "\n")
+    (use-local-map widget-keymap)
+    (widget-setup))
+#+end_src
 ** EIEIO
 :PROPERTIES:
 :ID:       da96454b-fc70-4a5c-bd7a-e66d148eb1d9
@@ -432,4 +557,13 @@ Maclisp->Zetalisp
 :END:
 :EDGES:
 [2025-03-03 Mon 14:08] -- [[info:elisp#overlays][ref]]
+:END:
+* Clojure                                                               :clj:
+:PROPERTIES:
+:ID:       45c83abe-cff5-4d00-9f01-f61c55525ca9
+:CREATED:  <2025-03-03 Mon 19:36>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:37] -- [[https://clojure.org/][Clojure]]
+[2025-03-03 Mon 19:44] >> [[id:6819fc08-3199-49bc-9c5d-b19419118525][JVM]]
 :END:

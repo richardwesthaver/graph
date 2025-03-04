@@ -1,5 +1,5 @@
 #+title: JSON
-#+setupfile: ../../clean.theme
+#+setupfile: ../../../clean.theme
 * JSON
 :PROPERTIES:
 :ID:       f4898b34-2f02-4403-bd1a-3fc984007beb

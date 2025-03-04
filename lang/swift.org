@@ -1,0 +1,10 @@
+#+title: Swift
+* Swift
+:PROPERTIES:
+:ID:       d7b78cc9-8fa4-40ad-be46-ea205c59e3dd
+:CREATED:  <2025-03-03 Mon 18:52>
+:END:
+:EDGES:
+[2025-03-03 Mon 18:52] -- [[https://www.swift.org/][Swift.org - Welcome to Swift.org]]
+[2025-03-03 Mon 20:14] -> [[id:c5d7a7b3-09f1-4f0e-909a-63111c039cc3][Apple]]
+:END:

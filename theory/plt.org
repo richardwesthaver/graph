@@ -23,6 +23,9 @@ Object-Oriented Programming
 :ID:       7dfd88e4-5511-4ff8-99ce-0fbf464bde58
 :CREATED:  <2025-03-01 Sat 16:43>
 :END:
+:EDGES:
+[2025-03-03 Mon 20:09] <- [[id:917c397b-01f2-4f02-8b27-abeeeaa463ab][Haskell]]
+:END:
 - [[https://itnext.io/why-functional-programming-languages-will-never-be-mainstream-e1b5a8c9e4d8][Why Functional Programming Languages Will Never Be Mainstream | by Jeffrey Rennie | Jan, 2025 | ITNEXT]]
 ** Deductive Language
 :PROPERTIES:

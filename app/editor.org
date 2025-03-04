@@ -25,6 +25,22 @@
 [2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
 [2025-02-16 Sun 20:14] -- [[https://orgmode.org/manual/Library-of-Babel.html][Library of Babel (The Org Manual)]]
 :END:
+*** Org-roam
+:PROPERTIES:
+:ID:       3bb08e71-1ce9-46ed-844a-31305162645e
+:CREATED:  <2025-03-03 Mon 19:46>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:46] -- [[https://www.orgroam.com/][Org-roam]]
+[2025-03-03 Mon 19:47] -> [[id:8889ae64-a982-4f6c-a875-5cbae6dbb323][Knowledge System]]
+:END:
+#+begin_quote
+A plain-text personal knowledge management system.
+#+end_quote
+- Popular extension which uses a sqlite backend to persist a Roam-like
+  graph of Org-mode nodes.
+- Our own =graph.el= implementation in core/emacs is inspired by
+  org-roam
 
 ** Eww                                                              :browser:
 :PROPERTIES:
@@ -47,7 +63,7 @@ the Emacs Web Wowser, a browser written in elisp based on shr.el.
 :CREATED:  <2025-03-03 Mon 13:43>
 :END:
 :EDGES:
-[2025-03-03 Mon 13:44] -- [[https://www.gnu.org/software/emacs/manual/html_node/speedbar/index.html][Top (Speedbar: File/Tag summarizing utility)]]
+[2025-03-03 Mon 13:44] -- [[info:speedbar][info]]
 :END:
 
 ** ERC                                                                  :irc:
@@ -75,6 +91,7 @@ Emacs Unified Directory Client
 :END:
 :EDGES:
 [2025-03-03 Mon 17:46] -- [[info:eudc#bbdb][info]]
+[2025-03-03 Mon 20:19] -- [[https://savannah.nongnu.org/projects/bbdb/][Insidious Big Brother Database - Summary [Savannah]​]]
 :END:
 
 ** SLIME                                                            :lisp:cl:
@@ -85,6 +102,34 @@ Emacs Unified Directory Client
 :EDGES:
 [2025-03-03 Mon 17:46] -- [[info:slime][info]]
 :END:
+
+** Eshell
+:PROPERTIES:
+:ID:       86dbf792-301b-405e-806b-3df7e9531279
+:CREATED:  <2025-03-03 Mon 19:57>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:57] -- [[info:eshell][info]]
+:END:
+
+** Eglot
+:PROPERTIES:
+:ID:       8b1452eb-fc57-4026-8587-91ff8ebccba6
+:CREATED:  <2025-03-03 Mon 19:57>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:57] -- [[info:eglot][info]]
+:END:
+
+** SES
+:PROPERTIES:
+:ID:       c40383a3-c717-43c6-8188-e2a564a641a1
+:CREATED:  <2025-03-03 Mon 19:58>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:58] -- [[info:ses][info]]
+:END:
+Simple Emacs Spreadsheet
 
 ** Emacsen
 :PROPERTIES:
