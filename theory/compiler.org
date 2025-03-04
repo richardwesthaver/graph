@@ -1,5 +1,31 @@
 #+title: Compiler Theory
 #+setupfile: ../../clean.theme
+
+* Compiler
+:PROPERTIES:
+:ID:       439686d0-5275-4e0d-8eab-b6fd87d7a547
+:CREATED:  <2025-03-03 Mon 20:56>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:56] -- [[https://en.wikipedia.org/wiki/Compiler][Compiler - Wikipedia]]
+:END:
+** Optimizing Compiler
+:PROPERTIES:
+:ID:       3638f1d2-ebc8-4bbb-9242-4e6070a3b121
+:CREATED:  <2025-03-03 Mon 20:56>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:56] -- [[https://en.wikipedia.org/wiki/Optimizing_compiler][Optimizing compiler - Wikipedia]]
+:END:
+** IR
+:PROPERTIES:
+:ID:       9e3802e1-6e58-4a5a-9a30-509e25122d31
+:CREATED:  <2025-03-03 Mon 20:57>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:57] -- [[https://en.wikipedia.org/wiki/Intermediate_representation][Intermediate representation - Wikipedia]]
+:END:
+Intermediate Representationa
 * Tree Shaking
 :PROPERTIES:
 :ID:       23185c5d-7470-4bf5-a700-99752c334333

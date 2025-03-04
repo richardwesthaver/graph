@@ -20,6 +20,7 @@
 [2025-03-03 Mon 19:43] << [[id:84a7eea1-0059-4a07-945b-c4167ca38f26][Groovy]]
 [2025-03-03 Mon 19:44] << [[id:daabdec4-5708-4bfe-ad37-41469d0dfe17][Kotlin]]
 [2025-03-03 Mon 19:44] << [[id:45c83abe-cff5-4d00-9f01-f61c55525ca9][Clojure]]
+[2025-03-03 Mon 20:43] -- [[https://docs.oracle.com/javase/specs/jvms/se7/html/index.html][The Java® Virtual Machine Specification]]
 :END:
 The Java Virtual Machine
 * Groovy

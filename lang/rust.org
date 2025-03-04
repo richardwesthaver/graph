@@ -95,6 +95,13 @@ changing the calling-convention of functions with a type signature and
 editing the Cargo.toml file to produce a C-compatible ABI binary. The
 Rust default ABI is unstable and can't reliably be used like the C ABI
 can.
+** Articles
+:PROPERTIES:
+:ID:       b11ad05a-5d5f-4974-9364-c3eebb9d15d8
+:CREATED:  <2025-03-03 Mon 20:54>
+:END:
+- [[https://endler.dev/2019/tinysearch/][A Tiny, Static, Full-Text Search Engine using Rust and WebAssembly | Matthias Endler]]
+- [[https://healeycodes.com/webassembly-search-tools-for-static-websites][WebAssembly Search Tools for Static Sites — Andrew Healey]]
 ** best practices
 :PROPERTIES:
 :ID:       ea2f3f8e-1c8c-4c05-b16c-fb197d346409

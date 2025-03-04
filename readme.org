@@ -21,45 +21,93 @@ an interface for modifying the graph.
 #+end_src
 
 #+RESULTS:
-| nodes | 485 |
-| edges | 367 |
+| nodes | 499 |
+| edges | 381 |
 
 #+call: project-html-files()
 
 #+RESULTS:
 | file                | modified            |
 |---------------------+---------------------|
-| [[https://compiler.company/graph/app/gnu-radio.html][app/gnu-radio]]       | 2025-03-03 16:33:10 |
+| [[https://compiler.company/graph/lang/erlang.html][lang/erlang]]         | 2025-03-03 21:04:21 |
+| [[https://compiler.company/graph/lang/java.html][lang/java]]           | 2025-03-03 20:43:11 |
+| [[https://compiler.company/graph/lang/rust.html][lang/rust]]           | 2025-03-03 20:55:15 |
+| [[https://compiler.company/graph/math/compsci.html][math/compsci]]        | 2025-03-03 20:50:48 |
+| [[https://compiler.company/graph/index.html][index]]               | 2025-03-03 21:06:31 |
+| [[https://compiler.company/graph/refs.html][refs]]                | 2025-03-03 21:06:06 |
+| [[https://compiler.company/graph/theory/compiler.html][theory/compiler]]     | 2025-03-03 20:57:32 |
+| [[https://compiler.company/graph/app/desktop.html][app/desktop]]         | 2025-03-03 18:15:28 |
+| [[https://compiler.company/graph/app/editor.html][app/editor]]          | 2025-03-03 20:19:43 |
+| [[https://compiler.company/graph/app/gnu-radio.html][app/gnu-radio]]       | 2025-03-03 18:15:21 |
 | [[https://compiler.company/graph/app/mail.html][app/mail]]            | 2025-03-03 17:50:14 |
 | [[https://compiler.company/graph/app/package-manager.html][app/package-manager]] | 2025-03-03 16:29:25 |
 | [[https://compiler.company/graph/app/podman.html][app/podman]]          | 2025-03-03 17:25:04 |
+| [[https://compiler.company/graph/app/term.html][app/term]]            | 2025-03-03 18:15:36 |
+| [[https://compiler.company/graph/app/web.html][app/web]]             | 2025-03-03 18:15:25 |
+| [[https://compiler.company/graph/comp/ecl.html][comp/ecl]]            | 2025-03-03 18:18:29 |
 | [[https://compiler.company/graph/comp/gcc.html][comp/gcc]]            | 2025-03-03 16:39:45 |
+| [[https://compiler.company/graph/comp/ghc.html][comp/ghc]]            | 2025-02-21 22:34:46 |
 | [[https://compiler.company/graph/comp/llvm.html][comp/llvm]]           | 2025-03-03 16:41:14 |
 | [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]           | 2025-03-03 17:59:44 |
 | [[https://compiler.company/graph/hw/amd.html][hw/amd]]              | 2025-03-03 11:47:33 |
+| [[https://compiler.company/graph/hw/apple.html][hw/apple]]            | 2025-03-03 20:34:42 |
+| [[https://compiler.company/graph/hw/car.html][hw/car]]              | 2025-02-21 22:34:16 |
 | [[https://compiler.company/graph/hw/cpu.html][hw/cpu]]              | 2025-03-03 14:42:19 |
 | [[https://compiler.company/graph/hw/gpu.html][hw/gpu]]              | 2025-03-03 11:45:56 |
+| [[https://compiler.company/graph/hw/gsg.html][hw/gsg]]              | 2025-02-21 22:34:24 |
+| [[https://compiler.company/graph/hw/home.html][hw/home]]             | 2025-03-03 11:42:47 |
+| [[https://compiler.company/graph/hw/honda.html][hw/honda]]            | 2025-02-21 22:34:27 |
+| [[https://compiler.company/graph/hw/hydrabus.html][hw/hydrabus]]         | 2025-02-21 22:34:29 |
 | [[https://compiler.company/graph/hw/intel.html][hw/intel]]            | 2025-03-03 11:45:39 |
 | [[https://compiler.company/graph/hw/nvidia.html][hw/nvidia]]           | 2025-03-03 14:47:56 |
+| [[https://compiler.company/graph/hw/samsung.html][hw/samsung]]          | 2025-02-21 22:34:37 |
+| [[https://compiler.company/graph/hw/shop.html][hw/shop]]             | 2025-03-03 11:42:34 |
+| [[https://compiler.company/graph/hw/studio.html][hw/studio]]           | 2025-03-03 11:15:36 |
+| [[https://compiler.company/graph/hw/travel.html][hw/travel]]           | 2025-03-03 11:42:05 |
+| [[https://compiler.company/graph/lang/apl.html][lang/apl]]            | 2025-02-28 17:55:06 |
 | [[https://compiler.company/graph/lang/asm.html][lang/asm]]            | 2025-03-03 16:56:27 |
-| [[https://compiler.company/graph/lang/c.html][lang/c]]              | 2025-03-03 15:02:06 |
-| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]           | 2025-03-03 15:33:50 |
-| [[https://compiler.company/graph/lang/rust.html][lang/rust]]           | 2025-03-03 15:09:24 |
-| [[https://compiler.company/graph/math/algo.html][math/algo]]           | 2025-03-03 18:06:39 |
-| [[https://compiler.company/graph/math/struct.html][math/struct]]         | 2025-03-03 17:03:32 |
+| [[https://compiler.company/graph/lang/basic.html][lang/basic]]          | 2025-02-27 17:01:01 |
+| [[https://compiler.company/graph/lang/c.html][lang/c]]              | 2025-03-03 20:14:33 |
+| [[https://compiler.company/graph/lang/concat.html][lang/concat]]         | 2025-03-03 20:05:17 |
+| [[https://compiler.company/graph/lang/fortran.html][lang/fortran]]        | 2025-03-02 21:15:32 |
+| [[https://compiler.company/graph/lang/haskell.html][lang/haskell]]        | 2025-03-03 20:09:12 |
+| [[https://compiler.company/graph/lang/javascript.html][lang/javascript]]     | 2025-03-03 19:45:33 |
+| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]           | 2025-03-03 20:03:35 |
+| [[https://compiler.company/graph/lang/python.html][lang/python]]         | 2025-02-21 22:33:53 |
+| [[https://compiler.company/graph/lang/query.html][lang/query]]          | 2025-03-03 18:12:10 |
+| [[https://compiler.company/graph/lang/shell.html][lang/shell]]          | 2025-02-27 16:56:51 |
+| [[https://compiler.company/graph/lang/swift.html][lang/swift]]          | 2025-03-03 20:14:25 |
+| [[https://compiler.company/graph/lang/zig.html][lang/zig]]            | 2025-03-02 21:00:36 |
+| [[https://compiler.company/graph/math/algebra.html][math/algebra]]        | 2025-03-03 18:14:18 |
+| [[https://compiler.company/graph/math/algo.html][math/algo]]           | 2025-03-03 18:14:29 |
+| [[https://compiler.company/graph/math/calc.html][math/calc]]           | 2025-03-03 18:14:34 |
+| [[https://compiler.company/graph/math/dsp.html][math/dsp]]            | 2025-02-21 22:31:30 |
+| [[https://compiler.company/graph/math/logic.html][math/logic]]          | 2025-03-03 18:14:53 |
+| [[https://compiler.company/graph/math/ml.html][math/ml]]             | 2025-02-21 22:33:20 |
+| [[https://compiler.company/graph/math/physics.html][math/physics]]        | 2025-03-03 18:15:06 |
+| [[https://compiler.company/graph/math/stat.html][math/stat]]           | 2025-02-28 18:22:16 |
+| [[https://compiler.company/graph/math/struct.html][math/struct]]         | 2025-03-03 18:14:57 |
 | [[https://compiler.company/graph/notes.html][notes]]               | 2025-03-03 15:21:45 |
 | [[https://compiler.company/graph/os/linux.html][os/linux]]            | 2025-03-03 18:03:50 |
 | [[https://compiler.company/graph/os/mac.html][os/mac]]              | 2025-03-03 18:06:20 |
 | [[https://compiler.company/graph/os/mainframe.html][os/mainframe]]        | 2025-03-03 18:06:29 |
-| [[https://compiler.company/graph/os/win.html][os/win]]              | 2025-03-03 18:05:58 |
+| [[https://compiler.company/graph/os/win.html][os/win]]              | 2025-03-03 18:51:19 |
+| [[https://compiler.company/graph/proto/crypto.html][proto/crypto]]        | 2025-03-03 18:15:56 |
+| [[https://compiler.company/graph/proto/dat/json.html][proto/dat/json]]      | 2025-03-03 20:12:00 |
+| [[https://compiler.company/graph/proto/dat/parquet.html][proto/dat/parquet]]   | 2025-02-21 22:32:39 |
+| [[https://compiler.company/graph/proto/dat/rdf.html][proto/dat/rdf]]       | 2025-02-21 22:32:42 |
+| [[https://compiler.company/graph/proto/dat/sigmf.html][proto/dat/sigmf]]     | 2025-02-21 22:32:46 |
+| [[https://compiler.company/graph/proto/dat/xml.html][proto/dat/xml]]       | 2025-02-21 22:32:49 |
 | [[https://compiler.company/graph/proto/desktop.html][proto/desktop]]       | 2025-03-03 17:38:03 |
+| [[https://compiler.company/graph/proto/mail.html][proto/mail]]          | 2025-03-03 18:16:07 |
 | [[https://compiler.company/graph/proto/net/dns.html][proto/net/dns]]       | 2025-03-03 15:48:04 |
 | [[https://compiler.company/graph/proto/net/ip.html][proto/net/ip]]        | 2025-03-03 15:48:07 |
+| [[https://compiler.company/graph/proto/net/p2p.html][proto/net/p2p]]       | 2025-02-21 22:32:22 |
 | [[https://compiler.company/graph/proto/net/tcp.html][proto/net/tcp]]       | 2025-03-03 15:47:31 |
 | [[https://compiler.company/graph/proto/net/tls.html][proto/net/tls]]       | 2025-03-03 15:48:51 |
 | [[https://compiler.company/graph/proto/net/udp.html][proto/net/udp]]       | 2025-03-03 15:48:36 |
-| [[https://compiler.company/graph/index.html][index]]               | 2025-03-03 18:07:08 |
-| [[https://compiler.company/graph/refs.html][refs]]                | 2025-03-03 15:17:59 |
+| [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]       | 2025-03-03 20:12:14 |
+| [[https://compiler.company/graph/proto/web.html][proto/web]]           | 2025-02-21 22:32:12 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]              | 2025-03-03 17:51:56 |
 | [[https://compiler.company/graph/sys/fs.html][sys/fs]]              | 2025-03-03 14:49:54 |
 | [[https://compiler.company/graph/sys/mem.html][sys/mem]]             | 2025-03-03 17:53:12 |
@@ -67,49 +115,16 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/sys/vcs.html][sys/vcs]]             | 2025-03-03 14:49:14 |
 | [[https://compiler.company/graph/sys/virt.html][sys/virt]]            | 2025-03-03 17:52:24 |
 | [[https://compiler.company/graph/theory/ai.html][theory/ai]]           | 2025-03-03 17:53:33 |
-| [[https://compiler.company/graph/theory/compiler.html][theory/compiler]]     | 2025-03-03 18:07:30 |
-| [[https://compiler.company/graph/theory/plt.html][theory/plt]]          | 2025-03-03 17:04:59 |
-| [[https://compiler.company/graph/theory/system.html][theory/system]]       | 2025-03-03 17:06:08 |
-| [[https://compiler.company/graph/web/data.html][web/data]]            | 2025-03-03 18:03:37 |
-| [[https://compiler.company/graph/web/sites.html][web/sites]]           | 2025-03-03 18:03:19 |
-| [[https://compiler.company/graph/comp/ghc.html][comp/ghc]]            | 2025-02-21 22:34:46 |
-| [[https://compiler.company/graph/hw/car.html][hw/car]]              | 2025-02-21 22:34:16 |
-| [[https://compiler.company/graph/hw/gsg.html][hw/gsg]]              | 2025-02-21 22:34:24 |
-| [[https://compiler.company/graph/hw/honda.html][hw/honda]]            | 2025-02-21 22:34:27 |
-| [[https://compiler.company/graph/hw/hydrabus.html][hw/hydrabus]]         | 2025-02-21 22:34:29 |
-| [[https://compiler.company/graph/hw/samsung.html][hw/samsung]]          | 2025-02-21 22:34:37 |
-| [[https://compiler.company/graph/lang/apl.html][lang/apl]]            | 2025-02-28 17:55:06 |
-| [[https://compiler.company/graph/lang/basic.html][lang/basic]]          | 2025-02-27 17:01:01 |
-| [[https://compiler.company/graph/lang/concat.html][lang/concat]]         | 2025-02-21 22:33:33 |
-| [[https://compiler.company/graph/lang/erlang.html][lang/erlang]]         | 2025-03-02 21:04:46 |
-| [[https://compiler.company/graph/lang/fortran.html][lang/fortran]]        | 2025-03-02 21:15:32 |
-| [[https://compiler.company/graph/lang/haskell.html][lang/haskell]]        | 2025-03-02 21:16:25 |
-| [[https://compiler.company/graph/lang/java.html][lang/java]]           | 2025-03-02 21:03:36 |
-| [[https://compiler.company/graph/lang/javascript.html][lang/javascript]]     | 2025-03-02 21:10:27 |
-| [[https://compiler.company/graph/lang/python.html][lang/python]]         | 2025-02-21 22:33:53 |
-| [[https://compiler.company/graph/lang/query.html][lang/query]]          | 2025-03-02 21:33:42 |
-| [[https://compiler.company/graph/lang/shell.html][lang/shell]]          | 2025-02-27 16:56:51 |
-| [[https://compiler.company/graph/lang/zig.html][lang/zig]]            | 2025-03-02 21:00:36 |
-| [[https://compiler.company/graph/math/algebra.html][math/algebra]]        | 2025-02-28 19:22:02 |
-| [[https://compiler.company/graph/math/calc.html][math/calc]]           | 2025-03-03 18:07:00 |
-| [[https://compiler.company/graph/math/compsci.html][math/compsci]]        | 2025-02-28 19:20:18 |
-| [[https://compiler.company/graph/math/logic.html][math/logic]]          | 2025-02-28 18:55:11 |
-| [[https://compiler.company/graph/math/ml.html][math/ml]]             | 2025-02-21 22:33:20 |
-| [[https://compiler.company/graph/math/physics.html][math/physics]]        | 2025-02-28 18:51:47 |
-| [[https://compiler.company/graph/math/stat.html][math/stat]]           | 2025-02-28 18:22:16 |
-| [[https://compiler.company/graph/proto/dat/json.html][proto/dat/json]]      | 2025-03-02 21:37:44 |
-| [[https://compiler.company/graph/proto/dat/parquet.html][proto/dat/parquet]]   | 2025-02-21 22:32:39 |
-| [[https://compiler.company/graph/proto/dat/rdf.html][proto/dat/rdf]]       | 2025-02-21 22:32:42 |
-| [[https://compiler.company/graph/proto/dat/sigmf.html][proto/dat/sigmf]]     | 2025-02-21 22:32:46 |
-| [[https://compiler.company/graph/proto/dat/xml.html][proto/dat/xml]]       | 2025-02-21 22:32:49 |
-| [[https://compiler.company/graph/proto/net/p2p.html][proto/net/p2p]]       | 2025-02-21 22:32:22 |
-| [[https://compiler.company/graph/proto/web.html][proto/web]]           | 2025-02-21 22:32:12 |
 | [[https://compiler.company/graph/theory/econ.html][theory/econ]]         | 2025-02-21 22:30:21 |
-| [[https://compiler.company/graph/theory/hacking.html][theory/hacking]]      | 2025-03-01 12:27:45 |
+| [[https://compiler.company/graph/theory/hacking.html][theory/hacking]]      | 2025-03-03 20:14:59 |
 | [[https://compiler.company/graph/theory/maximalism.html][theory/maximalism]]   | 2025-02-21 22:30:28 |
 | [[https://compiler.company/graph/theory/money.html][theory/money]]        | 2025-02-21 22:30:37 |
+| [[https://compiler.company/graph/theory/plt.html][theory/plt]]          | 2025-03-03 20:33:58 |
 | [[https://compiler.company/graph/theory/process.html][theory/process]]      | 2025-02-21 22:31:00 |
 | [[https://compiler.company/graph/theory/style.html][theory/style]]        | 2025-02-27 17:04:03 |
+| [[https://compiler.company/graph/theory/system.html][theory/system]]       | 2025-03-03 20:34:10 |
+| [[https://compiler.company/graph/web/data.html][web/data]]            | 2025-03-03 18:03:37 |
+| [[https://compiler.company/graph/web/sites.html][web/sites]]           | 2025-03-03 18:03:19 |
 
 #+BEGIN: project-info :status nil :tasks nil
 #+CALL: project-details() :dir ~/comp/org/graph/
@@ -121,11 +136,11 @@ an interface for modifying the graph.
 | description | :description CC Org Files                           |
 | skel-id     | :id 1784914079056115652                             |
 | root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/18f8ebcb25de][18f8ebcb25de:36+]] |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/9022b833a981][9022b833a981:38+]] |
 | tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Sun Mar 02 21:46:38 2025 -0500                      |
-| langs       | html org                                            |
-| lines       | 6648 :λ 6355 :# 13 :_ 280                           |
+| updated     | Mon Mar 03 20:35:05 2025 -0500                      |
+| langs       | org                                                 |
+| lines       | 6605 :λ 6298 :# 12 :_ 295                           |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -133,96 +148,110 @@ an interface for modifying the graph.
 #+RESULTS:
 : 2025-01    426 *****
 : 2025-02   4435 *************************************************************
-: 2025-03   1541 *********************
+: 2025-03   3508 ************************************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                    | size | modified            |
 |-------------------------+------+---------------------|
-| [[https://github.com/richardwesthaver/graph/blob/default/app/emacs.org][app/emacs.org]]           | 2.5k | 2025-03-03 16:48:37 |
-| [[https://github.com/richardwesthaver/graph/blob/default/app/gnu-radio.org][app/gnu-radio.org]]       | 678  | 2025-03-03 16:33:10 |
-| [[https://github.com/richardwesthaver/graph/blob/default/app/mail.org][app/mail.org]]            | 330  | 2025-03-03 16:28:18 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/java.org][lang/java.org]]           | 1.8k | 2025-03-03 20:43:11 |
+| [[https://github.com/richardwesthaver/graph/blob/default/app/desktop.org][app/desktop.org]]         | 1.9k | 2025-03-03 18:15:28 |
+| [[https://github.com/richardwesthaver/graph/blob/default/app/editor.org][app/editor.org]]          | 4.6k | 2025-03-03 20:19:43 |
+| [[https://github.com/richardwesthaver/graph/blob/default/app/gnu-radio.org][app/gnu-radio.org]]       | 678  | 2025-03-03 18:15:21 |
+| [[https://github.com/richardwesthaver/graph/blob/default/app/mail.org][app/mail.org]]            | 347  | 2025-03-03 17:50:14 |
 | [[https://github.com/richardwesthaver/graph/blob/default/app/package-manager.org][app/package-manager.org]] | 1.5k | 2025-03-03 16:29:25 |
 | [[https://github.com/richardwesthaver/graph/blob/default/app/podman.org][app/podman.org]]          | 685  | 2025-03-03 17:25:04 |
+| [[https://github.com/richardwesthaver/graph/blob/default/app/term.org][app/term.org]]            | 1.4k | 2025-03-03 18:15:36 |
+| [[https://github.com/richardwesthaver/graph/blob/default/app/web.org][app/web.org]]             | 6k   | 2025-03-03 18:15:25 |
+| [[https://github.com/richardwesthaver/graph/blob/default/comp/ecl.org][comp/ecl.org]]            | 270  | 2025-03-03 18:18:29 |
 | [[https://github.com/richardwesthaver/graph/blob/default/comp/gcc.org][comp/gcc.org]]            | 1.6k | 2025-03-03 16:39:45 |
+| [[https://github.com/richardwesthaver/graph/blob/default/comp/ghc.org][comp/ghc.org]]            | 275  | 2025-02-21 22:34:46 |
 | [[https://github.com/richardwesthaver/graph/blob/default/comp/llvm.org][comp/llvm.org]]           | 1.7k | 2025-03-03 16:41:14 |
-| [[https://github.com/richardwesthaver/graph/blob/default/comp/sbcl.org][comp/sbcl.org]]           | 7.1k | 2025-03-03 16:34:37 |
+| [[https://github.com/richardwesthaver/graph/blob/default/comp/sbcl.org][comp/sbcl.org]]           | 7.4k | 2025-03-03 17:59:44 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/amd.org][hw/amd.org]]              | 292  | 2025-03-03 11:47:33 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/apple.org][hw/apple.org]]            | 463  | 2025-03-03 20:34:42 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/car.org][hw/car.org]]              | 393  | 2025-02-21 22:34:16 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/cpu.org][hw/cpu.org]]              | 2.4k | 2025-03-03 14:42:19 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/gpu.org][hw/gpu.org]]              | 482  | 2025-03-03 11:45:56 |
-| [[https://github.com/richardwesthaver/graph/blob/default/hw/intel.org][hw/intel.org]]            | 419  | 2025-03-03 11:45:39 |
-| [[https://github.com/richardwesthaver/graph/blob/default/hw/nvidia.org][hw/nvidia.org]]           | 316  | 2025-03-03 14:47:56 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/asm.org][lang/asm.org]]            | 5.6k | 2025-03-03 16:56:27 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/c.org][lang/c.org]]              | 1.9k | 2025-03-03 15:02:06 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/lisp.org][lang/lisp.org]]           | 15k  | 2025-03-03 15:33:50 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/rust.org][lang/rust.org]]           | 5.1k | 2025-03-03 15:09:24 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/struct.org][math/struct.org]]         | 2.3k | 2025-03-03 17:03:32 |
-| [[https://github.com/richardwesthaver/graph/blob/default/notes.org][notes.org]]               | 18k  | 2025-03-03 15:21:45 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/desktop.org][proto/desktop.org]]       | 2.5k | 2025-03-03 17:38:03 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/dns.org][proto/net/dns.org]]       | 667  | 2025-03-03 15:48:04 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/ip.org][proto/net/ip.org]]        | 908  | 2025-03-03 15:48:07 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/tcp.org][proto/net/tcp.org]]       | 2.6k | 2025-03-03 15:47:31 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/tls.org][proto/net/tls.org]]       | 1.6k | 2025-03-03 15:48:51 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/udp.org][proto/net/udp.org]]       | 4.8k | 2025-03-03 15:48:36 |
-| [[https://github.com/richardwesthaver/graph/blob/default/readme.org][readme.org]]              | 21k  | 2025-03-03 17:12:52 |
-| [[https://github.com/richardwesthaver/graph/blob/default/refs.bib][refs.bib]]                | 6.6k | 2025-03-03 15:17:18 |
-| [[https://github.com/richardwesthaver/graph/blob/default/refs.org][refs.org]]                | 8.4k | 2025-03-03 15:17:59 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/fs.org][sys/fs.org]]              | 7.9k | 2025-03-03 14:49:54 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/vcs.org][sys/vcs.org]]             | 11k  | 2025-03-03 14:49:14 |
-| [[https://github.com/richardwesthaver/graph/blob/default/theory/ai.org][theory/ai.org]]           | 723  | 2025-03-03 17:07:05 |
-| [[https://github.com/richardwesthaver/graph/blob/default/theory/plt.org][theory/plt.org]]          | 1.3k | 2025-03-03 17:04:59 |
-| [[https://github.com/richardwesthaver/graph/blob/default/theory/system.org][theory/system.org]]       | 2.1k | 2025-03-03 17:06:08 |
-| [[https://github.com/richardwesthaver/graph/blob/default/comp/ghc.org][comp/ghc.org]]            | 275  | 2025-02-21 22:34:46 |
-| [[https://github.com/richardwesthaver/graph/blob/default/hw/car.org][hw/car.org]]              | 393  | 2025-02-21 22:34:16 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/gsg.org][hw/gsg.org]]              | 515  | 2025-02-21 22:34:24 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/home.org][hw/home.org]]             | 247  | 2025-03-03 11:42:47 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/honda.org][hw/honda.org]]            | 1.2k | 2025-02-21 22:34:27 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/hydrabus.org][hw/hydrabus.org]]         | 650  | 2025-02-21 22:34:29 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/intel.org][hw/intel.org]]            | 419  | 2025-03-03 11:45:39 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/nvidia.org][hw/nvidia.org]]           | 316  | 2025-03-03 14:47:56 |
 | [[https://github.com/richardwesthaver/graph/blob/default/hw/samsung.org][hw/samsung.org]]          | 579  | 2025-02-21 22:34:37 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/shop.org][hw/shop.org]]             | 138  | 2025-03-03 11:42:34 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/studio.org][hw/studio.org]]           | 25   | 2025-03-03 11:15:36 |
+| [[https://github.com/richardwesthaver/graph/blob/default/hw/travel.org][hw/travel.org]]           | 25   | 2025-03-03 11:42:05 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/apl.org][lang/apl.org]]            | 12k  | 2025-02-28 17:55:06 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/asm.org][lang/asm.org]]            | 5.6k | 2025-03-03 16:56:27 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/basic.org][lang/basic.org]]          | 303  | 2025-02-27 17:01:01 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/concat.org][lang/concat.org]]         | 1.1k | 2025-02-21 22:33:33 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/c.org][lang/c.org]]              | 2.5k | 2025-03-03 20:14:33 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/concat.org][lang/concat.org]]         | 1.4k | 2025-03-03 20:05:17 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/erlang.org][lang/erlang.org]]         | 702  | 2025-03-02 21:04:46 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/fortran.org][lang/fortran.org]]        | 259  | 2025-03-02 21:15:32 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/haskell.org][lang/haskell.org]]        | 445  | 2025-03-02 21:16:25 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/java.org][lang/java.org]]           | 858  | 2025-03-02 21:03:36 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/javascript.org][lang/javascript.org]]     | 1.6k | 2025-03-02 21:10:27 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/haskell.org][lang/haskell.org]]        | 539  | 2025-03-03 20:09:12 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/javascript.org][lang/javascript.org]]     | 1.9k | 2025-03-03 19:45:33 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/lisp.org][lang/lisp.org]]           | 19k  | 2025-03-03 20:03:35 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/python.org][lang/python.org]]         | 157  | 2025-02-21 22:33:53 |
-| [[https://github.com/richardwesthaver/graph/blob/default/lang/query.org][lang/query.org]]          | 1.5k | 2025-03-02 21:33:42 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/query.org][lang/query.org]]          | 1.5k | 2025-03-03 18:12:10 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/rust.org][lang/rust.org]]           | 5.1k | 2025-03-03 15:09:24 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/shell.org][lang/shell.org]]          | 1.4k | 2025-02-27 16:56:51 |
+| [[https://github.com/richardwesthaver/graph/blob/default/lang/swift.org][lang/swift.org]]          | 302  | 2025-03-03 20:14:25 |
 | [[https://github.com/richardwesthaver/graph/blob/default/lang/zig.org][lang/zig.org]]            | 664  | 2025-03-02 21:00:36 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/algebra.org][math/algebra.org]]        | 4.7k | 2025-02-28 19:22:02 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/algo.org][math/algo.org]]           | 942  | 2025-02-28 18:21:08 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/calc.org][math/calc.org]]           | 1.7k | 2025-02-28 18:38:44 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/compsci.org][math/compsci.org]]        | 1.7k | 2025-02-28 19:20:18 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/logic.org][math/logic.org]]          | 1.3k | 2025-02-28 18:55:11 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/algebra.org][math/algebra.org]]        | 4.8k | 2025-03-03 18:14:18 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/algo.org][math/algo.org]]           | 1k   | 2025-03-03 18:14:29 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/calc.org][math/calc.org]]           | 1.7k | 2025-03-03 18:14:34 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/compsci.org][math/compsci.org]]        | 1.7k | 2025-03-03 18:15:03 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/dsp.org][math/dsp.org]]            | 312  | 2025-02-21 22:31:30 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/logic.org][math/logic.org]]          | 1.3k | 2025-03-03 18:14:53 |
 | [[https://github.com/richardwesthaver/graph/blob/default/math/ml.org][math/ml.org]]             | 1.6k | 2025-02-21 22:33:20 |
-| [[https://github.com/richardwesthaver/graph/blob/default/math/physics.org][math/physics.org]]        | 4k   | 2025-02-28 18:51:47 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/physics.org][math/physics.org]]        | 4k   | 2025-03-03 18:15:06 |
 | [[https://github.com/richardwesthaver/graph/blob/default/math/stat.org][math/stat.org]]           | 625  | 2025-02-28 18:22:16 |
-| [[https://github.com/richardwesthaver/graph/blob/default/os/linux.org][os/linux.org]]            | 8.6k | 2025-02-27 19:46:23 |
-| [[https://github.com/richardwesthaver/graph/blob/default/os/mac.org][os/mac.org]]              | 122  | 2025-02-21 22:33:09 |
-| [[https://github.com/richardwesthaver/graph/blob/default/os/mainframe.org][os/mainframe.org]]        | 774  | 2025-02-24 20:18:38 |
-| [[https://github.com/richardwesthaver/graph/blob/default/os/win.org][os/win.org]]              | 276  | 2025-02-21 22:33:12 |
-| [[https://github.com/richardwesthaver/graph/blob/default/proto/dat/json.org][proto/dat/json.org]]      | 353  | 2025-03-02 21:37:44 |
+| [[https://github.com/richardwesthaver/graph/blob/default/math/struct.org][math/struct.org]]         | 2.3k | 2025-03-03 18:14:57 |
+| [[https://github.com/richardwesthaver/graph/blob/default/notes.org][notes.org]]               | 18k  | 2025-03-03 15:21:45 |
+| [[https://github.com/richardwesthaver/graph/blob/default/os/linux.org][os/linux.org]]            | 8.7k | 2025-03-03 18:03:50 |
+| [[https://github.com/richardwesthaver/graph/blob/default/os/mac.org][os/mac.org]]              | 544  | 2025-03-03 18:06:20 |
+| [[https://github.com/richardwesthaver/graph/blob/default/os/mainframe.org][os/mainframe.org]]        | 846  | 2025-03-03 18:06:29 |
+| [[https://github.com/richardwesthaver/graph/blob/default/os/win.org][os/win.org]]              | 464  | 2025-03-03 18:51:19 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/crypto.org][proto/crypto.org]]        | 1.7k | 2025-03-03 18:15:56 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/dat/json.org][proto/dat/json.org]]      | 387  | 2025-03-03 20:12:00 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/dat/parquet.org][proto/dat/parquet.org]]   | 1.5k | 2025-02-21 22:32:39 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/dat/rdf.org][proto/dat/rdf.org]]       | 888  | 2025-02-21 22:32:42 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/dat/sigmf.org][proto/dat/sigmf.org]]     | 1.2k | 2025-02-21 22:32:46 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/dat/xml.org][proto/dat/xml.org]]       | 302  | 2025-02-21 22:32:49 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/desktop.org][proto/desktop.org]]       | 2.5k | 2025-03-03 17:38:03 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/mail.org][proto/mail.org]]          | 1.1k | 2025-03-03 18:16:07 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/dns.org][proto/net/dns.org]]       | 667  | 2025-03-03 15:48:04 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/ip.org][proto/net/ip.org]]        | 908  | 2025-03-03 15:48:07 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/net/p2p.org][proto/net/p2p.org]]       | 532  | 2025-02-21 22:32:22 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/tcp.org][proto/net/tcp.org]]       | 2.6k | 2025-03-03 15:47:31 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/tls.org][proto/net/tls.org]]       | 1.6k | 2025-03-03 15:48:51 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/udp.org][proto/net/udp.org]]       | 4.8k | 2025-03-03 15:48:36 |
+| [[https://github.com/richardwesthaver/graph/blob/default/proto/net/vpn.org][proto/net/vpn.org]]       | 1.1k | 2025-03-03 20:12:14 |
 | [[https://github.com/richardwesthaver/graph/blob/default/proto/web.org][proto/web.org]]           | 341  | 2025-02-21 22:32:12 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/db.org][sys/db.org]]              | 2.8k | 2025-02-27 18:02:41 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/mem.org][sys/mem.org]]             | 789  | 2025-02-21 22:31:38 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/srv.org][sys/srv.org]]             | 2.5k | 2025-02-21 22:31:42 |
-| [[https://github.com/richardwesthaver/graph/blob/default/sys/virt.org][sys/virt.org]]            | 2k   | 2025-03-03 17:24:45 |
-| [[https://github.com/richardwesthaver/graph/blob/default/theory/compiler.org][theory/compiler.org]]     | 349  | 2025-02-21 22:30:17 |
+| [[https://github.com/richardwesthaver/graph/blob/default/readme.org][readme.org]]              | 21k  | 2025-03-03 19:32:05 |
+| [[https://github.com/richardwesthaver/graph/blob/default/refs.bib][refs.bib]]                | 7.1k | 2025-03-03 20:17:03 |
+| [[https://github.com/richardwesthaver/graph/blob/default/refs.org][refs.org]]                | 8.4k | 2025-03-03 15:17:59 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/db.org][sys/db.org]]              | 3k   | 2025-03-03 17:51:56 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/fs.org][sys/fs.org]]              | 7.9k | 2025-03-03 14:49:54 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/mem.org][sys/mem.org]]             | 980  | 2025-03-03 17:53:12 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/srv.org][sys/srv.org]]             | 2.6k | 2025-03-03 17:52:46 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/vcs.org][sys/vcs.org]]             | 11k  | 2025-03-03 14:49:14 |
+| [[https://github.com/richardwesthaver/graph/blob/default/sys/virt.org][sys/virt.org]]            | 2.1k | 2025-03-03 17:52:24 |
+| [[https://github.com/richardwesthaver/graph/blob/default/theory/ai.org][theory/ai.org]]           | 796  | 2025-03-03 17:53:33 |
+| [[https://github.com/richardwesthaver/graph/blob/default/theory/compiler.org][theory/compiler.org]]     | 432  | 2025-03-03 18:07:30 |
 | [[https://github.com/richardwesthaver/graph/blob/default/theory/econ.org][theory/econ.org]]         | 969  | 2025-02-21 22:30:21 |
-| [[https://github.com/richardwesthaver/graph/blob/default/theory/hacking.org][theory/hacking.org]]      | 903  | 2025-03-01 12:27:45 |
+| [[https://github.com/richardwesthaver/graph/blob/default/theory/hacking.org][theory/hacking.org]]      | 1016 | 2025-03-03 20:14:59 |
 | [[https://github.com/richardwesthaver/graph/blob/default/theory/maximalism.org][theory/maximalism.org]]   | 319  | 2025-02-21 22:30:28 |
 | [[https://github.com/richardwesthaver/graph/blob/default/theory/money.org][theory/money.org]]        | 937  | 2025-02-21 22:30:37 |
+| [[https://github.com/richardwesthaver/graph/blob/default/theory/plt.org][theory/plt.org]]          | 1.4k | 2025-03-03 20:33:58 |
 | [[https://github.com/richardwesthaver/graph/blob/default/theory/process.org][theory/process.org]]      | 1.7k | 2025-02-21 22:31:00 |
 | [[https://github.com/richardwesthaver/graph/blob/default/theory/style.org][theory/style.org]]        | 778  | 2025-02-27 17:04:03 |
-| [[https://github.com/richardwesthaver/graph/blob/default/web/data.org][web/data.org]]            | 466  | 2025-02-22 20:01:53 |
-| [[https://github.com/richardwesthaver/graph/blob/default/web/sites.org][web/sites.org]]           | 8.5k | 2025-03-02 20:40:46 |
+| [[https://github.com/richardwesthaver/graph/blob/default/theory/system.org][theory/system.org]]       | 2.3k | 2025-03-03 20:34:10 |
+| [[https://github.com/richardwesthaver/graph/blob/default/web/data.org][web/data.org]]            | 526  | 2025-03-03 18:03:37 |
+| [[https://github.com/richardwesthaver/graph/blob/default/web/sites.org][web/sites.org]]           | 9.7k | 2025-03-03 18:03:19 |
 
 #+END:
 

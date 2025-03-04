@@ -24,6 +24,24 @@
 [2025-02-28 Fri 19:20] -- [[https://en.wikipedia.org/wiki/Array_(data_structure)][Array (data structure) - Wikipedia]]
 :END:
 
+*** Tree
+:PROPERTIES:
+:ID:       1e7845bb-a065-4e43-860b-6974ab9bbd5d
+:CREATED:  <2025-03-03 Mon 20:49>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:49] -- [[https://en.wikipedia.org/wiki/Tree_(abstract_data_type)][Tree (abstract data type) - Wikipedia]]
+:END:
+
+**** k-d tree
+:PROPERTIES:
+:ID:       91c3a4e5-b6c4-49e7-8b6e-eac6e88e0b67
+:CREATED:  <2025-03-03 Mon 20:50>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:50] -- [[https://en.wikipedia.org/wiki/K-d_tree][k-d tree - Wikipedia]]
+:END:
+- [[https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf][kd-Trees: CMSC 420]]
 ** Automata Theory
 :PROPERTIES:
 :ID:       6eeab81b-c95c-4991-9e0a-d3c565dc800d

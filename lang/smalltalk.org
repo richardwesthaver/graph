@@ -1,0 +1,10 @@
+#+title: Smalltalk
+#+setupfile: ../../clean.theme
+* Smalltalk
+:PROPERTIES:
+:ID:       ef41c99e-99fb-4a46-9578-73f8ed85b925
+:CREATED:  <2025-03-03 Mon 21:05>
+:END:
+:EDGES:
+[2025-03-03 Mon 21:05] -- [[https://en.wikipedia.org/wiki/Smalltalk][Smalltalk - Wikipedia]]
+:END:

@@ -11,4 +11,24 @@
 [2025-03-02 Sun 21:04] -- [[https://learnyousomeerlang.com/introduction][Introduction | Learn You Some Erlang for Great Good!]]
 [2025-03-02 Sun 21:04] -- [[https://github.com/erlang/otp][GitHub - erlang/otp: Erlang/OTP]]
 [2025-03-02 Sun 21:04] -- [[https://matthil.de/b/web_protocol.html][matt's web protocol experiments in erlang]]
+[2025-03-03 Mon 20:58] -- [[https://en.wikipedia.org/wiki/Open_Telecom_Platform][Open Telecom Platform - Wikipedia]]
+:END:
+** BEAM
+:PROPERTIES:
+:ID:       d3ec4a82-1ff7-44bc-b34f-6e2cc66dcc84
+:CREATED:  <2025-03-03 Mon 20:57>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:58] -- [[https://en.wikipedia.org/wiki/BEAM_(Erlang_virtual_machine)][BEAM (Erlang virtual machine) - Wikipedia]]
+[2025-03-03 Mon 21:04] << [[id:98bd675d-6c08-427c-acff-fecbd8dcb8b1][Elixir]]
+:END:
+* Elixir
+:PROPERTIES:
+:ID:       98bd675d-6c08-427c-acff-fecbd8dcb8b1
+:CREATED:  <2025-03-03 Mon 20:59>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:59] -- [[https://en.wikipedia.org/wiki/Elixir_(programming_language)][Elixir (programming language) - Wikipedia]]
+[2025-03-03 Mon 20:59] -- [[https://elixir-lang.org/][The Elixir programming language]]
+[2025-03-03 Mon 21:04] >> [[id:d3ec4a82-1ff7-44bc-b34f-6e2cc66dcc84][BEAM]]
 :END:
