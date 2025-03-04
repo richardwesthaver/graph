@@ -254,6 +254,16 @@ of a dedicated info node here.
 [2025-03-02 Sun 20:13] -- [[https://github.com/Shirakumo/framebuffers][Shirakumo/framebuffers: A library for portable framebuffer access]]
 :END:
 
+*** Gambol
+:PROPERTIES:
+:ID:       a911344d-aed1-4603-a46f-e8edf53756f5
+:CREATED:  <2025-03-04 Tue 18:09>
+:END:
+:EDGES:
+[2025-03-04 Tue 18:09] -- [[https://www.cliki.net/Gambol][CLiki: Gambol]]
+[2025-03-04 Tue 18:11] -> [[id:3ac23a84-ba2e-41a1-9ea4-268e01891930][Prolog]]
+:END:
+See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104.htm][A Common Prolog]]
 *** jscl
 :PROPERTIES:
 :ID:       3addee17-b990-4a6d-9767-071969ed9d0e
@@ -316,6 +326,41 @@ in the COMMON-LISP-USER package, avoiding any initial state issues.
   =sb-ext:remove-implementation-package= each package is its own
   (only) implementation package.
   #+end_quote
+** Books
+:PROPERTIES:
+:ID:       04d98054-94f2-47d1-8af4-751c10827ee8
+:CREATED:  <2025-03-04 Tue 15:57>
+:END:
+*** PAIP
+:PROPERTIES:
+:ID:       91c00d39-6541-4b29-8d6b-a5b8c770cab0
+:CREATED:  <2025-03-04 Tue 15:57>
+:END:
+:EDGES:
+[2025-03-04 Tue 16:04] >> [[id:dc13038b-91ba-4a5c-bc62-ad189033023d][Expert System]]
+:END:
+Paradigms of Artificial Intelligence Programming by Peter Norvig
+*** PCL
+:PROPERTIES:
+:ID:       53d96196-24d4-4737-93d0-a282f2cf5c0b
+:CREATED:  <2025-03-04 Tue 18:05>
+:END:
+:EDGES:
+[2025-03-04 Tue 18:05] -- [[https://gigamonkeys.com/book/][Practical Common Lisp]]
+[2025-03-04 Tue 18:06] -- [[https://www.cliki.net/practical%20common%20lisp][CLiki: Practical Common Lisp]]
+:END:
+Practical Common Lisp - Peter Seibel
+*** LoL
+:PROPERTIES:
+:ID:       11b9f51e-4d47-41ba-814f-aa6738a65881
+:CREATED:  <2025-03-04 Tue 15:57>
+:END:
+:EDGES:
+[2025-03-04 Tue 18:03] -- [[https://letoverlambda.com/][Let Over Lambda]]
+[2025-03-04 Tue 18:04] -- [[https://github.com/thephoeron/let-over-lambda/tree/master][thephoeron/let-over-lambda]]
+:END:
+Let Over Lambda by Doug Hoyte
+- [[https://letoverlambda.com/lol-orig.lisp][lol-orig.lisp]]
 ** Package Managers
 :PROPERTIES:
 :ID:       d41019fd-ca88-4608-af00-9e7a84dcd49f

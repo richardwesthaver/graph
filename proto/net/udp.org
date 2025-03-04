@@ -100,6 +100,15 @@ Async-friendly QUIC implementation in Rust
 [2025-03-03 Mon 15:45] -- [[https://medium.com/@venkatraghav2003/webrtc-an-overview-2b3dc7d5e1bf][WebRTC-An Overview | by Venkatakrishnan | Medium]]
 [2025-03-03 Mon 15:46] -> [[id:52a7cb9d-5b78-4681-9146-2d8f5707c1a3][WebSocket]]
 :END:
+*** Syslog                                                              :log:
+:PROPERTIES:
+:ID:       19c29790-17f3-40f2-aa2b-03bc7e0bad68
+:CREATED:  <2025-03-04 Tue 17:24>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:24] -- [[https://datatracker.ietf.org/doc/html/rfc5426][RFC 5426 - Transmission of Syslog Messages over UDP]]
+:END:
+
 *** RTP
 :PROPERTIES:
 :ID:       e7e88a43-5294-48fd-84dc-9f90a4ae193b

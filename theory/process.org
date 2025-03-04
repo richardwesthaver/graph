@@ -24,6 +24,15 @@
 :EDGES:
 [2025-02-14 Fri 22:38] -- [[https://en.wikipedia.org/wiki/Operations_management][Operations management - Wikipedia]]
 :END:
+* Content Management
+:PROPERTIES:
+:ID:       b597822b-b956-4959-a5e1-6bf42c191320
+:CREATED:  <2025-03-04 Tue 17:34>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:59] -> [[id:9574ca65-e7f3-40cf-94c1-f05bc6628fd0][Content]]
+:END:
+
 * Information Management
 :PROPERTIES:
 :ID:       4700f502-0bab-4887-b925-224003cc3663

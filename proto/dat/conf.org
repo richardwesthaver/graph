@@ -1,0 +1,28 @@
+#+title: Config File Formats
+#+setupfile: ../../../clean.theme
+#+filetags: config
+* TOML
+:PROPERTIES:
+:ID:       82949e4f-537a-4a3a-b901-06080eec82b1
+:CREATED:  <2025-03-04 Tue 17:27>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:27] -- [[https://toml.io/en/][TOML: Tom's Obvious Minimal Language]]
+:END:
+Toml's Obvious Minimal Language
+* YAML
+:PROPERTIES:
+:ID:       1507e902-f244-42d4-9bc5-c684162a3aa0
+:CREATED:  <2025-03-04 Tue 17:27>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:27] -- [[https://yaml.org/][The Official YAML Web Site]]
+:END:
+* INI
+:PROPERTIES:
+:ID:       e2e6f554-2d28-4474-a1ed-3df4557e091d
+:CREATED:  <2025-03-04 Tue 17:28>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:28] -- [[https://en.wikipedia.org/wiki/INI_file][INI file - Wikipedia]]
+:END:

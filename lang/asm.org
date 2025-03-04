@@ -45,7 +45,7 @@
 :ID:       9e9bfa13-eed1-49a8-bad1-bfa2f2dade86
 :CREATED:  <2025-03-03 Mon 14:33>
 :END:
-[[https://en.wikipedia.org/wiki/Advanced_Vector_Extensions][Advanced Vector Extensions - Wikipedia]]
+[2025-03-03 Mon 14:34] -- [[https://en.wikipedia.org/wiki/Advanced_Vector_Extensions][Advanced Vector Extensions - Wikipedia]]
 :END:
 
 **** SSE

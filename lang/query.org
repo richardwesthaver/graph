@@ -29,7 +29,10 @@ category.
 :END:
 :EDGES:
 [2025-03-02 Sun 21:07] -- [[https://en.wikipedia.org/wiki/Prolog][Prolog - Wikipedia]]
+[2025-03-04 Tue 18:08] -- [[https://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/prolog/][Index of /afs/cs/project/ai-repository/ai/lang/prolog]]
+[2025-03-04 Tue 18:11] <- [[id:a911344d-aed1-4603-a46f-e8edf53756f5][Gambol]]
 :END:
+
 - implementations
   - [[https://www.swi-prolog.org/][SWI-Prolog]]
   - [[https://www.scryer.pl/][Scryer Prolog]]

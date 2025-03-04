@@ -56,6 +56,54 @@ systems interconnection.'
 [2025-02-26 Wed 20:47] -- [[https://en.wikipedia.org/wiki/Lisp_machine][Lisp machine - Wikipedia]]
 [2025-03-03 Mon 20:02] <- [[id:e21c02a5-5039-42c2-8416-aa5d45e70cb6][Lisp Machine Lisp]]
 :END:
+* Operating Systems
+:PROPERTIES:
+:ID:       33392043-87af-4826-ae73-1d722ec650ee
+:CREATED:  <2025-03-04 Tue 15:30>
+:END:
+** UNIX
+:PROPERTIES:
+:ID:       7f92b7d3-8c42-4d25-849d-58928bc12ebb
+:CREATED:  <2025-03-04 Tue 15:29>
+:END:
+*** SUS
+:PROPERTIES:
+:ID:       d20534de-706b-43cb-b1e9-f054d534a848
+:CREATED:  <2025-03-04 Tue 15:29>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:30] -- [[https://en.wikipedia.org/wiki/Single_UNIX_Specification][Single UNIX Specification - Wikipedia]]
+[2025-03-04 Tue 15:30] -- [[https://unix.org/what_is_unix/single_unix_specification.html][The UNIX System -- The Single UNIX Specification]]
+:END:
+Single UNIX Specification
+** POSIX
+:PROPERTIES:
+:ID:       0881a735-21ea-4509-aa97-b2d239cbbaf0
+:CREATED:  <2025-03-04 Tue 15:31>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:31] -- [[https://en.wikipedia.org/wiki/POSIX][POSIX - Wikipedia]]
+[2025-03-04 Tue 15:33] -- [[https://posix.opengroup.org/prodstandards.html][POSIX Product Standards]]
+[2025-03-04 Tue 15:56] -- [[https://posix.opengroup.org/posixfaq.html][POSIX Frequently Asked Questions]]
+:END:
+The Portable Operating System Interface
+*** Tests
+:PROPERTIES:
+:ID:       188c1d7d-879b-4a72-a963-af278db56f99
+:CREATED:  <2025-03-04 Tue 15:56>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:56] -- [[https://posix.opengroup.org/testsuites.html][POSIX Test suites]]
+:END:
+*** Certification
+:PROPERTIES:
+:ID:       dbbe76e3-42ae-4cd3-b39a-a8c8d3a7c7c3
+:CREATED:  <2025-03-04 Tue 15:32>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:32] -- [[https://posix.opengroup.org/certification_guide.html][POSIX Certification Guide]]
+:END:
+
 * Knowledge System
 :PROPERTIES:
 :ID:       8889ae64-a982-4f6c-a875-5cbae6dbb323
@@ -73,4 +121,45 @@ systems interconnection.'
 :END:
 :EDGES:
 [2025-03-03 Mon 17:06] -- [[https://en.wikipedia.org/wiki/Expert_system][Expert system - Wikipedia]]
+[2025-03-04 Tue 16:04] << [[id:91c00d39-6541-4b29-8d6b-a5b8c770cab0][PAIP]]
+:END:
+* Frameworks
+:PROPERTIES:
+:ID:       7eb1d3c6-606d-425d-8c2b-3847e42f0134
+:CREATED:  <2025-03-04 Tue 17:33>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:33] -- [[https://en.wikipedia.org/wiki/Framework][Framework - Wikipedia]]
+:END:
+** Testing                                                             :test:
+:PROPERTIES:
+:ID:       10f68fe0-0451-4c43-b61a-69adf139f060
+:CREATED:  <2025-03-04 Tue 17:32>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:32] -- [[https://en.wikipedia.org/wiki/System_testing][System testing - Wikipedia]]
+[2025-03-04 Tue 17:32] -- [[https://en.wikipedia.org/wiki/System_integration_testing][System integration testing - Wikipedia]]
+:END:
+** Web
+:PROPERTIES:
+:ID:       1a791c60-412b-415d-89bc-06ff9d166931
+:CREATED:  <2025-03-04 Tue 17:33>
+:END:
+** Content
+:PROPERTIES:
+:ID:       9574ca65-e7f3-40cf-94c1-f05bc6628fd0
+:CREATED:  <2025-03-04 Tue 17:35>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:59] <- [[id:b597822b-b956-4959-a5e1-6bf42c191320][Content Management]]
+:END:
+Content Management Frameworks
+*** CMS
+:PROPERTIES:
+:ID:       9464f3df-5d9a-4ec8-a629-4c080399d664
+:CREATED:  <2025-03-04 Tue 17:36>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:35] -- [[https://en.wikipedia.org/wiki/List_of_content_management_systems][List of content management systems - Wikipedia]]
+[2025-03-04 Tue 17:36] -- [[https://www.ibm.com/think/topics/content-management-system][What is a Content Management System (CMS)? | IBM]]
 :END:

@@ -1,0 +1,24 @@
+#+title: Log Data Formats
+#+filetags: log
+#+setupfile: ../../../clean.theme
+* Syslog
+:PROPERTIES:
+:ID:       f8cdf36a-9bf4-46bf-b33d-8338274ff9da
+:CREATED:  <2025-03-04 Tue 17:23>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:24] -- [[https://datatracker.ietf.org/doc/html/rfc5424][RFC 5424 - The Syslog Protocol]]
+:END:
+#+begin_src picture
+              +----------+         +-----+                   +---------+
+              |Originator|---->----|Relay|---->--------------|Collector|
+              |          |-+       +-----+                +--|         |
+              +----------+  \                            /   +---------+
+                             \     +------------+       /
+                              \    |+----------+|      /
+                               +->-||Relay     ||->---/
+                                   |+----------||    /
+                                   ||Originator||->-/
+                                   |+----------+|
+                                   +------------+
+#+end_src

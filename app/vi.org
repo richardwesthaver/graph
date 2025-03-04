@@ -1,0 +1,19 @@
+#+title: Vi
+* Vi
+:PROPERTIES:
+:ID:       17d03ada-139b-4127-8865-df1b5b50eaba
+:CREATED:  <2025-03-04 Tue 15:14>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:14] -- [[https://en.wikipedia.org/wiki/Vi_(text_editor)][vi (text editor) - Wikipedia]]
+[2025-03-04 Tue 15:14] -- [[https://ex-vi.sourceforge.net/][The Traditional Vi]]
+:END:
+Standardized by the Single Unix Specification and POSIX
+** Vim
+:PROPERTIES:
+:ID:       df400751-0b3e-41a5-8512-a778a58cc1bd
+:CREATED:  <2025-03-04 Tue 18:02>
+:END:
+:EDGES:
+[2025-03-04 Tue 18:02] -- [[https://www.vim.org/][welcome home : vim online]]
+:END:

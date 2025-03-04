@@ -18,6 +18,38 @@ suits your needs best.
 :ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
 :CREATED:  <2025-02-14 Fri 22:11>
 :END:
+*** Ublk
+:PROPERTIES:
+:ID:       46fdde04-496d-45b4-a674-367edafb8054
+:CREATED:  <2025-03-04 Tue 17:46>
+:END:
+*** Tracing
+:PROPERTIES:
+:ID:       292a62ff-6d56-42e2-88fa-bd13ddbc2fb1
+:CREATED:  <2025-03-04 Tue 17:48>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:48] -- [[https://docs.kernel.org/trace/index.html][Linux Tracing Technologies — The Linux Kernel documentation]]
+:END:
+**** strace
+:PROPERTIES:
+:ID:       ef769379-7632-4c45-b933-1e3bfd858ea1
+:CREATED:  <2025-03-04 Tue 17:49>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:49] -- [[man:strace][man]]
+[2025-03-04 Tue 17:50] -- [[https://strace.io/][strace]]
+:END:
+**** perf
+:PROPERTIES:
+:ID:       da34bba6-7ca1-4836-91d8-e16ae2a8fcb7
+:CREATED:  <2025-03-04 Tue 17:49>
+:END:
+:EDGES:
+[2025-03-04 Tue 17:49] -- [[man:perf][man]]
+[2025-03-04 Tue 17:50] -- [[https://github.com/brendangregg/perf-tools][brendangregg/perf-tools]]
+:END:
+
 *** Keyutils
 :PROPERTIES:
 :ID:       5e859a3f-0c31-4796-85c6-7008b346f186
@@ -26,6 +58,7 @@ suits your needs best.
 :EDGES:
 [2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
 :END:
+
 ** Kernel
 :PROPERTIES:
 :ID:       caed860f-fcef-43a2-b080-94b01352cd43
@@ -258,6 +291,15 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:41] -- [[https://www.alpinelinux.org/][Alpine Linux]]
 :END:
+*** Adélie
+:PROPERTIES:
+:ID:       b54a3fef-192f-4767-bec2-c10058e69a89
+:CREATED:  <2025-03-04 Tue 15:27>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:27] -- [[https://www.adelielinux.org/][Adélie Linux | Welcome]]
+:END:
+
 *** Gentoo
 :PROPERTIES:
 :ID:       5cbe7ad4-008a-4ed7-889d-e7ec5663dfd1
