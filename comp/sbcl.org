@@ -18,6 +18,7 @@
 :END:
 :EDGES:
 [2025-03-03 Mon 17:58] -- [[info:sbcl#extensions][info]]
+[2025-03-06 Thu 14:07] << [[id:c33a5587-daab-4e61-a0df-fc6856b00f70][Contribs]]
 :END:
 *** ed functions
 :PROPERTIES:
@@ -44,6 +45,122 @@
 
       See function documentation for ed. 
 #+end_example
+*** Concurrency
+:PROPERTIES:
+:ID:       e99f0d2a-546a-479e-9014-3acdbcccd5ab
+:CREATED:  <2025-03-06 Thu 14:14>
+:END:
+#+name: sbcl-wait-queue
+#+begin_src lisp :eval no-export
+  (defvar *buffer-queue* (make-waitqueue))
+  (defvar *buffer-lock* (make-mutex :name "buffer lock"))
+
+  (defvar *buffer* (list nil))
+
+  (defun reader ()
+    (with-mutex (*buffer-lock*)
+      (loop
+       (condition-wait *buffer-queue* *buffer-lock*)
+       (loop
+        (unless *buffer* (return))
+        (let ((head (car *buffer*)))
+          (setf *buffer* (cdr *buffer*))
+          (format t "reader ~A woke, read ~A~%"
+                  ,*current-thread* head))))))
+
+  (defun writer ()
+    (loop
+     (sleep (random 5))
+     (with-mutex (*buffer-lock*)
+       (let ((el (intern
+                  (string (code-char
+                           (+ (char-code #\A) (random 26)))))))
+         (setf *buffer* (cons el *buffer*)))
+       (condition-notify *buffer-queue*))))
+
+  (make-thread #'writer)
+  (make-thread #'reader)
+  (make-thread #'reader)
+#+end_src
+
+#+RESULTS:
+: #<THREAD tid=0 RUNNING {100C873E73}>
+
+#+name: sbcl-condition-wait
+#+begin_src lisp
+  (defvar *data* nil)
+  (defvar *queue* (make-waitqueue))
+  (defvar *lock* (make-mutex))
+
+  ;; Consumer
+  (defun pop-data (&optional timeout)
+    (with-mutex (*lock*)
+        (loop until *data*
+              do (or (condition-wait *queue* *lock* :timeout timeout)
+                     ;; Lock not held, must unwind without touching *data*.
+                     (return-from pop-data nil)))
+        (pop *data*)))
+
+    ;; Producer
+    (defun push-data (data)
+      (with-mutex (*lock*)
+        (push data *data*)
+        (condition-notify *queue*)))
+#+end_src
+
+#+RESULTS: sbcl-condition-wait
+: PUSH-DATA
+**** Barriers
+:PROPERTIES:
+:ID:       dc91fb4a-adee-44ec-9bd8-cbfa10db8dca
+:CREATED:  <2025-03-06 Thu 14:19>
+:END:
+  #+begin_quote
+  These are based on the Linux kernel barrier design, which is in turn
+  based on the Alpha CPU memory model. They are presently implemented
+  for x86, x86-64, PPC, ARM64, and RISC-V systems, and behave as
+  compiler barriers on all other CPUs.
+
+  In addition to explicit use of the sb-thread:barrier macro, the
+  following functions and macros also serve as :memory barriers:
+
+  - sb-ext:atomic-decf, sb-ext:atomic-incf, sb-ext:atomic-push, and sb-ext:atomic-pop.
+  - sb-ext:compare-and-swap.
+  - sb-thread:grab-mutex, sb-thread:release-mutex, sb-thread:with-mutex and sb-thread:with-recursive-lock.
+  - sb-thread:signal-semaphore, sb-thread:try-semaphore and sb-thread:wait-on-semaphore.
+  - sb-thread:condition-wait, sb-thread:condition-notify and sb-thread:condition-broadcast.
+  #+end_quote
+**** Timers
+:PROPERTIES:
+:ID:       6ff7096f-a666-4103-8f32-1dc62c04cb35
+:CREATED:  <2025-03-06 Thu 14:19>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:19] -- [[info:sbcl#Timers][info]]
+:END:
+**** sb-thread
+:PROPERTIES:
+:ID:       7bf0993f-6212-4635-a071-bf2e7d9ba7f9
+:CREATED:  <2025-03-06 Thu 14:06>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:07] -> [[id:5fd4a7b5-2d71-4373-8c56-f65461e4d633][Asynchrony]]
+[2025-03-06 Thu 14:08] -- [[info:sbcl#Threading][info]]
+:END:
+#+begin_src lisp :eval no-export
+  (make-thread (lambda () (write-line "Hello, world")))
+#+end_src
+
+#+RESULTS:
+: #<THREAD tid=0 RUNNING {100933AD93}>
+**** Atomics
+:PROPERTIES:
+:ID:       bb27d9c3-513a-4ac6-8780-580c09257040
+:CREATED:  <2025-03-06 Thu 14:11>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:13] -- [[info:sbcl#Atomic Operations][info]]
+:END:
 ** Internals
 :PROPERTIES:
 :ID:       9aac997a-5d9c-43dd-b2ca-8b8b02d9f2dd
@@ -195,7 +312,9 @@ problem to design an effective tree-shaker.
 :ID:       c33a5587-daab-4e61-a0df-fc6856b00f70
 :CREATED:  <2025-02-11 Tue 20:55>
 :END:
-
+:EDGES:
+[2025-03-06 Thu 14:07] >> [[id:868e5534-1ab9-49aa-88c8-f9529b3dfc98][Extensions]]
+:END:
 *** sb-bsd-sockets
 :PROPERTIES:
 :ID:       0c2908c2-69d0-4866-b225-3d7eec026b76

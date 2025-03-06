@@ -16,5 +16,6 @@
 :END:
 :EDGES:
 [2025-02-22 Sat 19:48] -- [[https://www.ibm.com/products/zos][IBM z/OS operating system]]
+[2025-03-04 Tue 19:39] <- [[id:b350b221-28ed-4866-971a-f1a4dbe4f3b4][COBOL]]
 :END:
 [[https://discord.com/channels/880322471608344597/880322472161972260][Discord - System Z Enthusiasts]]

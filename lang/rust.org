@@ -1,5 +1,6 @@
 #+title: Rust
 #+setupfile: ../../clean.theme
+#+bibliography: ../refs.bib
 * Rust
 :PROPERTIES:
 :ID:       7dd61019-39f3-4706-bfc4-ea48bf76da9c
@@ -102,6 +103,10 @@ can.
 :END:
 - [[https://endler.dev/2019/tinysearch/][A Tiny, Static, Full-Text Search Engine using Rust and WebAssembly | Matthias Endler]]
 - [[https://healeycodes.com/webassembly-search-tools-for-static-websites][WebAssembly Search Tools for Static Sites — Andrew Healey]]
+- [[https://dawchihliou.github.io/articles/i-built-a-snappy-full-text-search-with-webassembly-rust-nextjs-and-xor-filters][I Built A Snappy Static Full-text Search with WebAssembly, Rust, Next.js, and Xor Filters]]
+  - [cite/t/b:@xor-filters]
+- [[https://arewefpgayet.rs/][Introduction to High-Level Synthesis from Rust]]
+- [[https://poplar.isaacwoods.dev/book/][Introduction - Poplar]]
 ** best practices
 :PROPERTIES:
 :ID:       ea2f3f8e-1c8c-4c05-b16c-fb197d346409

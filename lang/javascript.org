@@ -5,6 +5,9 @@
 :ID:       d9226de2-4b80-4193-a06e-e3185ffb5217
 :CREATED:  <2025-01-18 Sat 20:46>
 :END:
+:EDGES:
+[2025-03-06 Thu 14:51] <- [[id:09edda89-63e0-4496-84eb-764fb9b0b7c3][org-info.js]]
+:END:
 ** Libraries
 :PROPERTIES:
 :ID:       7ddd2d60-6a99-4948-aa7b-f36dc9839599
@@ -47,6 +50,22 @@
 - [[https://d3js.org/d3-force][d3-force]]
 - [[https://observablehq.com/@d3/gallery][D3 gallery / D3 | Observable]]
   - [[https://observablehq.com/@d3/word-cloud][Word cloud / D3 | Observable]]
+*** React
+:PROPERTIES:
+:ID:       05a83166-2afc-41b2-8b64-9fcb2a33a5d8
+:CREATED:  <2025-03-04 Tue 19:27>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:28] -- [[https://react.dev/][React]]
+:END:
+**** Next.js
+:PROPERTIES:
+:ID:       ccbf8bb8-4195-4e6a-8a72-87a7fed916b1
+:CREATED:  <2025-03-04 Tue 19:27>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:28] -- [[https://nextjs.org/][Next.js by Vercel - The React Framework]]
+:END:
 * TypeScript
 :PROPERTIES:
 :ID:       58d76125-7110-4c76-b8d4-7014d407cc1d

@@ -18,3 +18,12 @@
 [2025-02-14 Fri 22:01] -- [[https://en.wikipedia.org/wiki/Generative_artificial_intelligence][Generative artificial intelligence - Wikipedia]]
 :END:
 Generative AI
+** Kernel Machines
+:PROPERTIES:
+:ID:       789aa097-5f4a-4131-b9bd-0f153f8df88c
+:CREATED:  <2025-03-06 Thu 10:46>
+:END:
+:EDGES:
+[2025-03-06 Thu 10:48] -- [[https://en.wikipedia.org/wiki/Kernel_method][Kernel method - Wikipedia]]
+[2025-03-06 Thu 10:57] <- [[id:54831ddf-56d9-4307-a7e3-3790b13c6c9e][Kernelization]]
+:END:

@@ -1,6 +1,6 @@
 #+title: Programming Language Theory
 #+setupfile: ../../clean.theme
-* PLT
+* PLT                                                              :prog:plt:
 :PROPERTIES:
 :ID:       3a1058df-158c-49eb-bcc5-21b842ec966e
 :CREATED:  <2025-02-07 Fri 21:08>
@@ -9,7 +9,7 @@
 [2025-02-07 Fri 21:08] -- [[https://en.wikipedia.org/wiki/Programming_language_theory][Programming language theory - Wikipedia]]
 :END:
 - [[https://en.wikipedia.org/wiki/Programming_paradigm][Programming paradigm - Wikipedia]]
-** OOP
+** OOP                                                                  :obj:
 :PROPERTIES:
 :ID:       44659589-80a3-459b-ad29-d2e5b208b451
 :CREATED:  <2025-02-07 Fri 21:10>
@@ -18,7 +18,7 @@
 [2025-02-07 Fri 21:10] -- [[https://en.wikipedia.org/wiki/Object-oriented_programming][Object-oriented programming - Wikipedia]]
 :END:
 Object-Oriented Programming
-** Functional Programming
+** Functional Programming                                               :fun:
 :PROPERTIES:
 :ID:       7dfd88e4-5511-4ff8-99ce-0fbf464bde58
 :CREATED:  <2025-03-01 Sat 16:43>
@@ -35,4 +35,41 @@ Object-Oriented Programming
 :EDGES:
 [2025-03-03 Mon 17:04] -- [[https://en.wikipedia.org/wiki/Deductive_language][Deductive language - Wikipedia]]
 [2025-03-03 Mon 17:04] << [[id:da0aecca-6d5b-4719-9235-6a11fe978b11][DQL]]
+:END:
+** Asynchrony                                                         :async:
+:PROPERTIES:
+:ID:       5fd4a7b5-2d71-4373-8c56-f65461e4d633
+:CREATED:  <2025-03-06 Thu 11:09>
+:END:
+:EDGES:
+[2025-03-06 Thu 11:09] -- [[https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)][Asynchrony (computer programming) - Wikipedia]]
+[2025-03-06 Thu 14:00] <- [[id:79ecc4f2-f223-4045-a31a-565192efaf49][Concurrency]]
+[2025-03-06 Thu 14:02] <- [[id:d9062d16-09f0-4c48-99ac-2e26407fc75b][Concurrency]]
+[2025-03-06 Thu 14:03] <- [[id:c560dc07-8c9c-42bc-9ce1-634630d26981][lparallel]]
+[2025-03-06 Thu 14:07] <- [[id:7bf0993f-6212-4635-a071-bf2e7d9ba7f9][sb-thread]]
+:END:
+*** Async/Await
+:PROPERTIES:
+:ID:       e980058d-60f2-482e-96ef-5e7323ccebf7
+:CREATED:  <2025-03-06 Thu 11:01>
+:END:
+:EDGES:
+[2025-03-06 Thu 11:02] -- [[https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)][Multithreading (computer architecture) - Wikipedia]]
+:END:
+*** Promise/Future
+:PROPERTIES:
+:ID:       4bbc6288-b410-4171-aaca-db1c9bdec7e3
+:CREATED:  <2025-03-06 Thu 11:08>
+:END:
+:EDGES:
+[2025-03-06 Thu 13:49] -- [[https://en.wikipedia.org/wiki/Futures_and_promises][Futures and promises - Wikipedia]]
+:END:
+** Contract Programming
+:PROPERTIES:
+:ID:       f48341d3-f9ab-44ac-9387-4d32e92aa011
+:CREATED:  <2025-03-06 Thu 13:50>
+:END:
+:EDGES:
+[2025-03-06 Thu 13:51] -- [[https://en.wikipedia.org/wiki/Design_by_contract][Design by contract - Wikipedia]]
+[2025-03-06 Thu 14:00] <- [[id:c1fdfebb-0dec-420d-abf9-aec7a2de5633][Contracts]]
 :END:

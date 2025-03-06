@@ -1,0 +1,9 @@
+#+title: Plan 9
+* Plan 9
+:PROPERTIES:
+:ID:       3c707aa1-be3a-4258-bcd8-195216e658b5
+:CREATED:  <2025-03-06 Thu 09:11>
+:END:
+:EDGES:
+[2025-03-06 Thu 09:12] -- [[http://9p.io/plan9/][Plan 9 from Bell Labs]]
+[2025-03-06 Thu 09:12] -- [[http://9p.io/sys/doc/][Plan 9 — The Documents (Volume 2)]]

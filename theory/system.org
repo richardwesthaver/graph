@@ -56,7 +56,22 @@ systems interconnection.'
 [2025-02-26 Wed 20:47] -- [[https://en.wikipedia.org/wiki/Lisp_machine][Lisp machine - Wikipedia]]
 [2025-03-03 Mon 20:02] <- [[id:e21c02a5-5039-42c2-8416-aa5d45e70cb6][Lisp Machine Lisp]]
 :END:
-* Operating Systems
+** Maximalist
+:PROPERTIES:
+:ID:       e976f7ec-0ee0-46cc-8b5a-29afbd713fed
+:CREATED:  <2025-03-06 Thu 10:59>
+:END:
+*** Utena
+:PROPERTIES:
+:ID:       adcd747b-2fdf-4686-abbb-26940bbb1a20
+:CREATED:  <2025-01-17 Fri 18:38>
+:END:
+:EDGES:
+[2025-01-17 Fri 18:39] -- [[https://cal-coop.gitlab.io/utena/utena-specification/main.pdf][Draft Spec]]
+:END:
+A Maximalist Computing System
+
+* Operating Systems                                                      :os:
 :PROPERTIES:
 :ID:       33392043-87af-4826-ae73-1d722ec650ee
 :CREATED:  <2025-03-04 Tue 15:30>
@@ -65,6 +80,9 @@ systems interconnection.'
 :PROPERTIES:
 :ID:       7f92b7d3-8c42-4d25-849d-58928bc12ebb
 :CREATED:  <2025-03-04 Tue 15:29>
+:END:
+:EDGES:
+[2025-03-06 Thu 09:11] << [[id:ab57dccf-c9f3-4347-b9d0-5731904f3d67][Linux]]
 :END:
 *** SUS
 :PROPERTIES:
@@ -140,7 +158,7 @@ The Portable Operating System Interface
 [2025-03-04 Tue 17:32] -- [[https://en.wikipedia.org/wiki/System_testing][System testing - Wikipedia]]
 [2025-03-04 Tue 17:32] -- [[https://en.wikipedia.org/wiki/System_integration_testing][System integration testing - Wikipedia]]
 :END:
-** Web
+** Web                                                                  :web:
 :PROPERTIES:
 :ID:       1a791c60-412b-415d-89bc-06ff9d166931
 :CREATED:  <2025-03-04 Tue 17:33>

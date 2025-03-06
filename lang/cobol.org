@@ -1,0 +1,12 @@
+#+title: COBOL
+* COBOL
+:PROPERTIES:
+:ID:       b350b221-28ed-4866-971a-f1a4dbe4f3b4
+:CREATED:  <2025-03-04 Tue 19:35>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:36] -- [[https://en.wikipedia.org/wiki/COBOL][COBOL - Wikipedia]]
+[2025-03-04 Tue 19:36] -- [[https://www.ibm.com/docs/en/zos-basic-skills?topic=zos-cobol][COBOL on z/OS]]
+[2025-03-04 Tue 19:39] -> [[id:70fae18f-5a6e-4d1b-ba88-81339f13d0ec][z/OS]]
+:END:
+'Common Business-oriented Language'

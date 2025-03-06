@@ -32,3 +32,12 @@
 :EDGES:
 [2025-02-14 Fri 22:41] -- [[https://en.wikipedia.org/wiki/Game_theory][Game theory - Wikipedia]]
 :END:
+*** Conway's Game of Life
+:PROPERTIES:
+:ID:       d3a6a367-5817-4bec-911a-87610ec7de92
+:CREATED:  <2025-03-06 Thu 14:26>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:27] -- [[https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life][Conway's Game of Life - Wikipedia]]
+:END:
+- GoL

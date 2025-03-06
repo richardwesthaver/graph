@@ -6,24 +6,27 @@
 :ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
 :CREATED:  <2025-02-09 Sun 13:33>
 :END:
+:EDGES:
+[2025-03-06 Thu 09:11] >> [[id:7f92b7d3-8c42-4d25-849d-58928bc12ebb][UNIX]]
+:END:
 At this point, I don't really care what the non-believers think - if
-you are *not* running GNU/Linux, you are wrong. Of course I understand
-the need to run dedicated Windows and MacOS machines, when it is out
-of your control - say you have a Macbook or need to run it for
-%employer. No need to stress about that. But when you are given the
-opportunity - given a choice, you should pick whatever Linux-based OS
-suits your needs best.
+you are *not* running GNU/Linux as your daily driver, you are
+wrong. Of course I understand the need to run dedicated Windows and
+MacOS machines, when it is out of your control - say you have a
+Macbook or need to run it for %employer. No need to stress about
+that. But when you are given the opportunity - given a choice, you
+should pick whatever Linux-based OS suits your needs best.
 ** Libraries
 :PROPERTIES:
 :ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
 :CREATED:  <2025-02-14 Fri 22:11>
 :END:
-*** Ublk
+*** Ublk                                                                 :fs:
 :PROPERTIES:
 :ID:       46fdde04-496d-45b4-a674-367edafb8054
 :CREATED:  <2025-03-04 Tue 17:46>
 :END:
-*** Tracing
+*** Tracing                                                        :test:log:
 :PROPERTIES:
 :ID:       292a62ff-6d56-42e2-88fa-bd13ddbc2fb1
 :CREATED:  <2025-03-04 Tue 17:48>
@@ -48,9 +51,49 @@ suits your needs best.
 :EDGES:
 [2025-03-04 Tue 17:49] -- [[man:perf][man]]
 [2025-03-04 Tue 17:50] -- [[https://github.com/brendangregg/perf-tools][brendangregg/perf-tools]]
+[2025-03-04 Tue 18:58] -- [[https://www.brendangregg.com/perf.html][Linux perf Examples]]
 :END:
-
-*** Keyutils
+**** iostat
+:PROPERTIES:
+:ID:       7e8d965e-6b39-43bb-a69a-4747977b436f
+:CREATED:  <2025-03-04 Tue 18:59>
+:END:
+:EDGES:
+[2025-03-04 Tue 18:59] -- [[man:iostat][man]]
+:END:
+**** rv
+:PROPERTIES:
+:ID:       d77d5ce5-2857-4c17-bcaf-c3eb32f93bcc
+:CREATED:  <2025-03-04 Tue 19:40>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:40] -- [[https://www.kernel.org/doc/html/latest/trace/rv/index.html][Runtime Verification — The Linux Kernel documentation]]
+:END:
+*** BPF                                                                 :log:
+:PROPERTIES:
+:ID:       97d3d07c-e576-412b-a97a-2879efa998c5
+:CREATED:  <2025-03-04 Tue 19:02>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:02] -- [[https://docs.kernel.org/bpf/][BPF Documentation — The Linux Kernel documentation]]
+:END:
+**** eBPF
+:PROPERTIES:
+:ID:       cb4a79ea-64fa-4c3a-b4bf-f3f731bc04ad
+:CREATED:  <2025-03-04 Tue 19:03>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:03] -- [[https://www.brendangregg.com/ebpf.html][Linux eBPF Tracing Tools]]
+:END:
+*** RTLA                                                               :test:
+:PROPERTIES:
+:ID:       378227a0-d265-4272-8013-73df72b5e49a
+:CREATED:  <2025-03-04 Tue 19:06>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:06] -- [[https://docs.kernel.org/tools/rtla/index.html][The realtime Linux analysis tool — The Linux Kernel documentation]]
+:END:
+*** Keyutils                                                         :crypto:
 :PROPERTIES:
 :ID:       5e859a3f-0c31-4796-85c6-7008b346f186
 :CREATED:  <2025-02-14 Fri 22:12>
@@ -58,7 +101,15 @@ suits your needs best.
 :EDGES:
 [2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
 :END:
-
+*** Netlink
+:PROPERTIES:
+:ID:       25cc1e3f-60f0-401a-a8b6-ac8d5670233d
+:CREATED:  <2025-03-04 Tue 19:14>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:14] -- [[https://docs.kernel.org/userspace-api/netlink/intro.html][Introduction to Netlink — The Linux Kernel documentation]]
+[2025-03-04 Tue 19:14] -- [[https://docs.kernel.org/userspace-api/netlink/index.html][Netlink Handbook — The Linux Kernel documentation]]
+:END:
 ** Kernel
 :PROPERTIES:
 :ID:       caed860f-fcef-43a2-b080-94b01352cd43
@@ -181,7 +232,7 @@ https://github.com/ming1/ubdsrv
 [2025-02-27 Thu 19:44] -- [[https://linux-kernel-labs.github.io/refs/heads/master/lectures/syscalls.html][System Calls — The Linux Kernel documentation]]
 [2025-02-27 Thu 19:46] -- [[https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl][linux/arch/x86/entry/syscalls/syscall_64.tbl]]
 :END:
-**** Filesystem
+**** Filesystem                                                          :fs:
 :PROPERTIES:
 :ID:       1f938c20-8d8e-460c-8fb7-f4afaac432cc
 :CREATED:  <2025-02-22 Sat 19:04>
@@ -189,7 +240,33 @@ https://github.com/ming1/ubdsrv
 :EDGES:
 [2025-02-22 Sat 19:04] -- [[https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard][Filesystem Hierarchy Standard - Wikipedia]]
 :END:
-**** IO
+**** ACPI                                                                :hw:
+:PROPERTIES:
+:ID:       ac0ae4dd-21d4-4b45-9751-a102a48f30e6
+:CREATED:  <2025-03-04 Tue 19:16>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:16] -- [[https://en.wikipedia.org/wiki/ACP][ACP - Wikipedia]]
+[2025-03-04 Tue 19:16] -- [[https://docs.kernel.org/firmware-guide/acpi/index.html][ACPI Support — The Linux Kernel documentation]]
+:END:
+Advanced Configuration and Power Interface
+**** SPI
+:PROPERTIES:
+:ID:       cde3ff32-1ad9-43ab-9ac7-05efd3f88490
+:CREATED:  <2025-03-04 Tue 19:20>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:20] -- [[https://docs.kernel.org/spi/index.html][Serial Peripheral Interface (SPI) — The Linux Kernel documentation]]
+:END:
+**** DFL                                                                 :hw:
+:PROPERTIES:
+:ID:       5499a81e-1c6e-48d5-b906-9d2155afc562
+:CREATED:  <2025-03-04 Tue 19:19>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:19] -- [[https://docs.kernel.org/fpga/dfl.html][FPGA Device Feature List (DFL) Framework Overview — The Linux Kernel documentation]]
+:END:
+**** IO                                                                  :io:
 :PROPERTIES:
 :ID:       9d49d145-2c94-4d6f-a4e1-5016df6cbedc
 :CREATED:  <2025-02-27 Thu 19:39>

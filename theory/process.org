@@ -56,3 +56,29 @@
   - misinformation :: false, inaccurate, or misleading information
     that is communicated regardless of an intention to deceive.
   - [[https://en.wikipedia.org/wiki/Uncertainty][uncertainty]]
+* Performance Analysis
+:PROPERTIES:
+:ID:       d4140692-ebb8-478e-b933-062726efa859
+:CREATED:  <2025-03-04 Tue 19:03>
+:END:
+:EDGES:
+[2025-03-04 Tue 19:04] -- [[https://www.brendangregg.com/methodology.html][Performance Analysis Methodology]]
+:END:
+* Pattern Analysis
+:PROPERTIES:
+:ID:       bd66a9d3-9720-4db6-9d29-cb5ee241b8a5
+:CREATED:  <2025-03-06 Thu 10:47>
+:END:
+:EDGES:
+[2025-03-06 Thu 10:47] -- [[https://en.wikipedia.org/wiki/Pattern_recognition][Pattern recognition - Wikipedia]]
+:END:
+** Kernelization
+:PROPERTIES:
+:ID:       54831ddf-56d9-4307-a7e3-3790b13c6c9e
+:CREATED:  <2025-03-06 Thu 10:45>
+:END:
+:EDGES:
+[2025-03-06 Thu 10:45] -- [[https://en.wikipedia.org/wiki/Kernelization][Kernelization - Wikipedia]]
+[2025-03-06 Thu 10:47] -- [[https://en.wikipedia.org/wiki/Kernel_method][Kernel method - Wikipedia]]
+[2025-03-06 Thu 10:57] -> [[id:789aa097-5f4a-4131-b9bd-0f153f8df88c][Kernel Machines]]
+:END:

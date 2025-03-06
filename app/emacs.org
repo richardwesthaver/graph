@@ -25,6 +25,25 @@
 [2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
 [2025-02-16 Sun 20:14] -- [[https://orgmode.org/manual/Library-of-Babel.html][Library of Babel (The Org Manual)]]
 :END:
+*** Org Export
+:PROPERTIES:
+:ID:       d26e1dac-f9cc-47a0-9a61-f32463247ec9
+:CREATED:  <2025-03-06 Thu 14:44>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:45] -- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference Documentation]]
+[2025-03-06 Thu 14:45] -- [[info:org#Exporting][info]]
+:END:
+**** HTML
+:PROPERTIES:
+:ID:       9cb4a1c7-4798-4ac9-8958-9e3d86673d95
+:CREATED:  <2025-03-06 Thu 14:46>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:46] -- [[info:org#HTML Export][info]]
+:END:
+- [[info:org#text areas in html export][text areas in html export]] 
+- [[info:org#images in html export][images in html export]] 
 *** Refile and Copy
 :PROPERTIES:
 :ID:       f46c1c20-c958-4068-bf0c-bf6f4f77546f
@@ -34,7 +53,24 @@
 [2025-03-04 Tue 18:00] -- [[info:org#refile and copy][info]]
 [2025-03-04 Tue 18:01] -- [[https://yiming.dev/blog/2018/03/02/my-org-refile-workflow/][My org-refile workflow - Yiming Chen]]
 :END:
-
+*** org-info.js
+:PROPERTIES:
+:ID:       09edda89-63e0-4496-84eb-764fb9b0b7c3
+:CREATED:  <2025-03-06 Thu 14:49>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:49] -- [[info:org#javascript support][info]]
+[2025-03-06 Thu 14:49] -- [[https://orgmode.org/worg/code/org-info-js/][EMACS ORG-INFO.JS]]
+[2025-03-06 Thu 14:51] -> [[id:d9226de2-4b80-4193-a06e-e3185ffb5217][Javascript]]
+:END:
+*** Org Element API
+:PROPERTIES:
+:ID:       bdf4ac96-f9a6-47ea-a27a-89a8d2b20ba7
+:CREATED:  <2025-03-04 Tue 20:09>
+:END:
+:EDGES:
+[2025-03-04 Tue 20:10] -- [[https://orgmode.org/worg/dev/org-element-api.html][Org Element API]]
+:END:
 *** Org-roam
 :PROPERTIES:
 :ID:       3bb08e71-1ce9-46ed-844a-31305162645e
