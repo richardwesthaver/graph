@@ -72,6 +72,22 @@
 :EDGES:
 [2025-03-06 Thu 10:47] -- [[https://en.wikipedia.org/wiki/Pattern_recognition][Pattern recognition - Wikipedia]]
 :END:
+** DOPE
+:PROPERTIES:
+:ID:       e8371372-77fa-4e44-aca1-d2d5eacc7fb9
+:CREATED:  <2025-03-06 Thu 16:34>
+:END:
+Data on Previous Engagements
+
+[[https://www.peakperformanceammo.com/Creating-And-Maintaining-Dope-s/241.htm][Creating And Maintaining Dope]]
+
+[[http://www.whitleysiddons.com/DopeBook.aspx][Whitley & Siddons Dope Book]]
+
+[[https://primalrights.com/library/articles/rifle-data-book-a-lesson-dope][Rifle Data Book - A Lesson in DOPE :: Primal Rights, Inc]]
+
+- highly structured
+- highly auditable
+
 ** Kernelization
 :PROPERTIES:
 :ID:       54831ddf-56d9-4307-a7e3-3790b13c6c9e
