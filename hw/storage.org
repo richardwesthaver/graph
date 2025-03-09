@@ -1,0 +1,48 @@
+#+title: Data Storage Hardware
+
+* RAM                                                                   :mem:
+:PROPERTIES:
+:ID:       83089757-22c3-456d-9b2c-c119adefd8c2
+:CREATED:  <2025-03-08 Sat 01:12>
+:END:
+:EDGES:
+[2025-03-08 Sat 01:12] -- [[https://en.wikipedia.org/wiki/Random-access_memory][Random-access memory - Wikipedia]]
+:END:
+** NVRAM                                                                :mem:
+:PROPERTIES:
+:ID:       173d1ace-338d-4656-9cb6-39e974ce83d4
+:CREATED:  <2025-03-08 Sat 01:12>
+:END:
+:EDGES:
+[2025-03-08 Sat 01:12] -- [[https://en.wikipedia.org/wiki/Non-volatile_random-access_memory][Non-volatile random-access memory - Wikipedia]]
+:END:
+* SSD
+:PROPERTIES:
+:ID:       07ca16a0-8176-4270-baf7-8bf301cea669
+:CREATED:  <2025-03-08 Sat 01:12>
+:END:
+* NVMe
+:PROPERTIES:
+:ID:       8bbce9f1-fba5-4e4e-b4a8-f659d965ca59
+:CREATED:  <2025-03-08 Sat 01:13>
+:END:
+* HDD
+:PROPERTIES:
+:ID:       26d71779-e168-4836-93bc-7ea740beed3f
+:CREATED:  <2025-03-08 Sat 01:13>
+:END:
+* Tape Storage
+:PROPERTIES:
+:ID:       e8148b90-9924-4f5c-9a39-bbbc4eb1ca7e
+:CREATED:  <2025-03-08 Sat 01:13>
+:END:
+* USB Storage
+:PROPERTIES:
+:ID:       1671e1ee-864c-4165-8740-01e68d0dc942
+:CREATED:  <2025-03-08 Sat 01:13>
+:END:
+* Optical Storage
+:PROPERTIES:
+:ID:       e2726251-7ffc-44db-a609-fdb19729f89e
+:CREATED:  <2025-03-08 Sat 01:13>
+:END:

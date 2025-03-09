@@ -107,6 +107,19 @@ can.
   - [cite/t/b:@xor-filters]
 - [[https://arewefpgayet.rs/][Introduction to High-Level Synthesis from Rust]]
 - [[https://poplar.isaacwoods.dev/book/][Introduction - Poplar]]
+** RFCs
+:PROPERTIES:
+:ID:       85f9f317-c6ef-4085-98be-db982b27a193
+:CREATED:  <2025-03-07 Fri 21:52>
+:END:
+*** cargo-script
+:PROPERTIES:
+:ID:       5ffb08b8-d27d-4b1f-ae05-03da0207ccdf
+:CREATED:  <2025-03-07 Fri 22:03>
+:END:
+:EDGES:
+[2025-03-07 Fri 22:03] -- [[https://github.com/rust-lang/cargo/issues/12207][Tracking Issue for cargo-script RFC 3424]]
+:END:
 ** best practices
 :PROPERTIES:
 :ID:       ea2f3f8e-1c8c-4c05-b16c-fb197d346409

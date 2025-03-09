@@ -21,10 +21,20 @@
 :END:
 :EDGES:
 [2025-02-13 Thu 22:40] -- [[https://orgmode.org/][Org mode for GNU Emacs]]
-[2025-02-13 Thu 22:40] -- [[https://orgmode.org/org.html][The Org Manual]]
-[2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
-[2025-02-16 Sun 20:14] -- [[https://orgmode.org/manual/Library-of-Babel.html][Library of Babel (The Org Manual)]]
+[2025-03-07 Fri 10:02] -- [[info:org][info]]
 :END:
+- [[http://blog.lujun9972.win/emacs-document/blog/2018/02/14/emacs-org-mode-examples-and-cookbook/index.html][Emacs org-mode examples and cookbook]]
+
+** Org Babel
+:PROPERTIES:
+:ID:       9cfcee92-d862-400f-a80f-7bb538b27b45
+:CREATED:  <2025-03-07 Fri 10:01>
+:END:
+:EDGES:
+[2025-03-07 Fri 10:02] -- [[info:org#Library of Babel][info]]
+[2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
+:END:
+
 *** Org Export
 :PROPERTIES:
 :ID:       d26e1dac-f9cc-47a0-9a61-f32463247ec9

@@ -232,7 +232,23 @@ https://github.com/ming1/ubdsrv
 [2025-02-27 Thu 19:44] -- [[https://linux-kernel-labs.github.io/refs/heads/master/lectures/syscalls.html][System Calls — The Linux Kernel documentation]]
 [2025-02-27 Thu 19:46] -- [[https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl][linux/arch/x86/entry/syscalls/syscall_64.tbl]]
 :END:
-**** Filesystem                                                          :fs:
+**** Core
+:PROPERTIES:
+:ID:       c670fcee-f9b1-4acd-ab32-3b795748b544
+:CREATED:  <2025-03-07 Fri 15:35>
+:END:
+:EDGES:
+[2025-03-07 Fri 15:35] -- [[https://docs.kernel.org/subsystem-apis.html#core-subsystems][Core Subsystems]]
+:END:
+**** Storage
+:PROPERTIES:
+:ID:       f28b16e2-97e5-4575-a3d6-941efeb8942d
+:CREATED:  <2025-03-07 Fri 15:36>
+:END:
+:EDGES:
+[2025-03-07 Fri 15:36] -- [[https://docs.kernel.org/subsystem-apis.html#storage-interfaces][Storage interfaces]]
+:END:
+***** Filesystem                                                         :fs:
 :PROPERTIES:
 :ID:       1f938c20-8d8e-460c-8fb7-f4afaac432cc
 :CREATED:  <2025-02-22 Sat 19:04>
@@ -266,6 +282,36 @@ Advanced Configuration and Power Interface
 :EDGES:
 [2025-03-04 Tue 19:19] -- [[https://docs.kernel.org/fpga/dfl.html][FPGA Device Feature List (DFL) Framework Overview — The Linux Kernel documentation]]
 :END:
+**** Networking                                                         :net:
+:PROPERTIES:
+:ID:       8ed2735d-d259-4a78-8891-ded98f857846
+:CREATED:  <2025-03-07 Fri 15:31>
+:END:
+***** NAPI
+:PROPERTIES:
+:ID:       883daf4b-7084-4356-ab2d-877a8af2cd45
+:CREATED:  <2025-03-07 Fri 15:31>
+:END:
+:EDGES:
+[2025-03-07 Fri 15:31] -- [[https://docs.kernel.org/networking/napi.html][NAPI — The Linux Kernel documentation]]
+:END:
+**** Human Interfaces
+:PROPERTIES:
+:ID:       19f3c5da-0f20-4eca-b142-7fc71095ca18
+:CREATED:  <2025-03-07 Fri 15:38>
+:END:
+:EDGES:
+[2025-03-07 Fri 15:39] -- [[https://docs.kernel.org/subsystem-apis.html#human-interfaces][Human Interfaces]]
+:END:
+***** Frame Buffer
+:PROPERTIES:
+:ID:       0c37073d-0322-410b-8258-00ffd8215eaa
+:CREATED:  <2025-03-07 Fri 15:38>
+:END:
+:EDGES:
+[2025-03-07 Fri 15:40] -- [[https://docs.kernel.org/fb/index.html][Frame Buffer]]
+:END:
+
 **** IO                                                                  :io:
 :PROPERTIES:
 :ID:       9d49d145-2c94-4d6f-a4e1-5016df6cbedc
@@ -323,11 +369,57 @@ Linux Distributions
 :PROPERTIES:
 :ID:       ca6795ee-4b2c-4ec3-9bdc-f6be67c2f1ec
 :CREATED:  <2025-02-22 Sat 19:32>
+:AKA: FCOS
+:PROPERTIES: :header-args :export both :eval no-export :session coreos :async t
 :END:
 :EDGES:
 [2025-02-22 Sat 19:32] -- [[https://docs.fedoraproject.org/en-US/fedora-coreos/][Fedora CoreOS Documentation]]
 :END:
-[[https://coreos.github.io/ignition/][Ignition documentation]]
+- [[https://coreos.github.io/coreos-installer/][CoreOS Installer]]
+  #+begin_src shell :results silent
+    cargo install coreos-installer
+  #+end_src
+
+- default user :: ~core~
+- [[https://coreos.github.io/ignition/][Ignition documentation]]
+  - [[https://coreos.github.io/ignition/getting-started/][Getting Started | Ignition]]
+- [[https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-qemu/][Provisioning Fedora CoreOS on QEMU]]
+  - requires ignition config file
+  - should provide ssh key for core user
+  - fetch the qcow2 image
+    #+name: coreos-download-qcow2
+    #+begin_src shell :var stream="next"
+      # stream = stable,testing,next
+      coreos-installer download -s $stream -p qemu -f qcow2.xz --decompress -C ~/.stash/scratch/
+    #+end_src
+
+    #+RESULTS:
+    : /home/ellis/.stash/scratch/fedora-coreos-41.20250215.3.0-qemu.x86_64.qcow2
+
+  - setup a new vm
+    #+begin_src shell :var config="~/.stash/scratch/config.ign" :var image=coreos-download-qcow2()
+      IGNITION_CONFIG=$config
+      IMAGE=$image
+      # for x86/aarch64:
+      IGNITION_DEVICE_ARG="-fw_cfg name=opt/com.coreos/config,file=${IGNITION_CONFIG}"
+
+      # for s390x/ppc64le:
+      IGNITION_DEVICE_ARG="-drive file=${IGNITION_CONFIG},if=none,format=raw,readonly=on,id=ignition -device virtio-blk,serial=ignition,drive=ignition"
+
+      qemu-system-x86_64 -m 2048 -cpu host -nographic -snapshot \
+        -drive "if=virtio,file=${IMAGE}" ${IGNITION_DEVICE_ARG} \
+        -nic user,model=virtio,hostfwd=tcp::2222-:22
+    #+end_src
+
+    #+RESULTS:
+
+  - launch it
+    #+begin_src shell
+      qemu-img create -f qcow2 -F qcow2 -b "${IMAGE}" my-fcos-vm.qcow2
+      qemu-system-x86_64 -m 2048 -cpu host -nographic \
+        -drive if=virtio,file=my-fcos-vm.qcow2 ${IGNITION_DEVICE_ARG} \
+        -nic user,model=virtio,hostfwd=tcp::2222-:22
+    #+end_src
 **** IoT
 :PROPERTIES:
 :ID:       79c00d69-0624-4e85-a237-79e73e612dca

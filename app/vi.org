@@ -1,4 +1,5 @@
 #+title: Vi
+#+setupfile: ../../clean.theme
 * Vi
 :PROPERTIES:
 :ID:       17d03ada-139b-4127-8865-df1b5b50eaba

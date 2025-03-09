@@ -11,6 +11,67 @@
 :END:
 [[https://en.cppreference.com/w/c/23][C23 - cppreference.com]]
 
+#+name: c-helloworld
+#+begin_src c :eval no-export :export code
+  // gcc -O0 -g hello.c
+  #include <stdio.h>
+
+  int main(int argc, char* argv[])
+  {
+      printf("hello\n");
+
+      return 0;
+  }
+#+end_src
+** Macros
+:PROPERTIES:
+:ID:       93cddd0e-4189-4e78-a0e5-b3ceaf6b7d6e
+:CREATED:  <2025-03-07 Fri 18:44>
+:END:
+The C preprocessor is unhygienic (good) and fairly simple (at least
+compared to C)
+** libc
+:PROPERTIES:
+:ID:       d77ecb14-ecd4-4432-af2e-f431bf9ea18b
+:CREATED:  <2025-03-07 Fri 12:32>
+:END:
+:EDGES:
+[2025-03-07 Fri 12:32] -- [[info:libc][info]]
+:END:
+*** nostd
+:PROPERTIES:
+:ID:       c7e3f469-f1c9-4b9f-a104-72ae91abab21
+:CREATED:  <2025-03-07 Fri 12:33>
+:END:
+:EDGES:
+[2025-03-07 Fri 12:34] -- [[https://gist.github.com/tcoppex/443d1dd45f873d96260195d6431b0989][Writing C software without the standard library [Linux Edition] - Franc[e]sco's Gopherspace]]
+:END:
+- [[https://www.muppetlabs.com/~breadbox/software/tiny/teensy.html][A Whirlwind Tutorial on Creating Really Teensy ELF Executables for Linux]]
+
+Information about compiling /without/ libc.
+
+- compile with =gcc -nostdlib -m64= (64-bit)
+#+name: c-nostd
+#+begin_src c :eval never :export code
+  // Tell the compiler incoming stack alignment is not RSP%16==8 or ESP%16==12
+  __attribute__((force_align_arg_pointer))
+  void _start() {
+    /* call main(), etc */
+
+    /* exit system call */
+    // 32-bit
+    // asm("movl $1,%eax;xorl %ebx,%ebx;int  $0x80");
+    // 64-bit
+    asm("mov rax,60; mov rdi,0; syscall");
+    __builtin_unreachable();  // tell the compiler to make sure side effects are done before the asm statement
+  }
+#+end_src
+
+** Libraries
+:PROPERTIES:
+:ID:       b0ff5843-38de-4bd9-800a-728391dafc02
+:CREATED:  <2025-03-07 Fri 12:32>
+:END:
 * CPP                                                                   :cpp:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/][cppreference.com]]

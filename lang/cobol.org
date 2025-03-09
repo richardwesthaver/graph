@@ -1,4 +1,5 @@
 #+title: COBOL
+#+setupfile: ../../clean.theme
 * COBOL
 :PROPERTIES:
 :ID:       b350b221-28ed-4866-971a-f1a4dbe4f3b4

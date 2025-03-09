@@ -271,24 +271,17 @@
 :MONTH:    mar
 :PAGES:    1–16
 :END:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* A Multi-Language Computing Environment for Literate Programming and Reproducible Research
+:PROPERTIES:
+:TITLE:    A Multi-Language Computing Environment for Literate Programming and Reproducible Research
+:BTYPE:    article
+:CUSTOM_ID: JSSv046i03
+:VOLUME:   46
+:URL:      https://www.jstatsoft.org/index.php/jss/article/view/v046i03
+:DOI:      10.18637/jss.v046.i03
+:NUMBER:   3
+:JOURNAL:  Journal of Statistical Software
+:AUTHOR:   Schulte, Eric and Davison, Dan and Dye, Thomas and Dominik, Carsten
+:YEAR:     2012
+:PAGES:    1–24
+:END:

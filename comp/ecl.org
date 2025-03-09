@@ -7,5 +7,4 @@
 :END:
 :EDGES:
 [2025-03-03 Mon 16:56] -- [[info:ecl][info]]
-[2025-03-03 Mon 16:57] -- [[man:ecl][man]]
 :END:

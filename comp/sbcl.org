@@ -285,6 +285,31 @@ Virtual Operations
 [2025-02-28 Fri 19:10] -- [[https://www.sbcl.org/sbcl-internals/Linkage_002dtable.html#Linkage_002dtable][Linkage-table - SBCL Internals]]
 :END:
 
+*** SB-ASSEM                                                            :asm:
+:PROPERTIES:
+:ID:       86674fe2-4105-4246-9682-f6e3fb84f7de
+:CREATED:  <2025-03-08 Sat 20:24>
+:END:
+:EDGES:
+[2025-03-08 Sat 20:54] -> [[id:c57c2462-7e95-4e6b-9f5b-d7207aeda442][Assembly]]
+:END:
+- sb-assem, sb-vm, sb-c
+- =gen-label=
+  #+begin_src lisp :results output
+    (describe (sb-assem:gen-label "this is a label comment"))
+  #+end_src
+
+  #+RESULTS:
+  : #<SB-ASSEM:LABEL {1012471C13}>
+  :   [structure-object]
+  : 
+  : Slots with :INSTANCE allocation:
+  :   INDEX                          = 0
+  :   POSN                           = NIL
+  :   COMMENT                        = "this is a label comment"
+  :   USEDP                          = NIL
+- sb-assem:make-segment
+- emit, assemble
 *** Compiler                                                           :comp:
 :PROPERTIES:
 :ID:       624cbc9a-9797-4889-a8b5-8440b04d9c01

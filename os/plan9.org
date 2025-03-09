@@ -1,4 +1,5 @@
 #+title: Plan 9
+#+setupfile: ../../clean.theme
 * Plan 9
 :PROPERTIES:
 :ID:       3c707aa1-be3a-4258-bcd8-195216e658b5

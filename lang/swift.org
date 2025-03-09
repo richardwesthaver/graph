@@ -1,4 +1,5 @@
 #+title: Swift
+#+setupfile: ../../clean.theme
 * Swift
 :PROPERTIES:
 :ID:       d7b78cc9-8fa4-40ad-be46-ea205c59e3dd

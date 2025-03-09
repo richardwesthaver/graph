@@ -1,4 +1,4 @@
-#+title: Web Applications and Tools
+#+title: Web Applications
 #+setupfile: ../../clean.theme
 * Browser                                                           :browser:
 :PROPERTIES:

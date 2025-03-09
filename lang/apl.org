@@ -1,6 +1,6 @@
 #+title: APL Language Family
 #+setupfile: ../../clean.theme
-* APL
+* APL                                                                   :apl:
 :PROPERTIES:
 :ID:       eee94cd6-7a01-4bf1-8029-f98ba665e0b4
 :CREATED:  <2025-02-16 Sun 20:37>
@@ -217,6 +217,7 @@
 :END:
 - [[https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Programming.md][Programming in K]]
 - [[https://ngn.bitbucket.io/k.html][k impls]]
+- [[https://codeberg.org/growler/k][growler/k - Codeberg.org]]
 - [[https://github.com/kparc/ksimple][kparc/ksimple: k/simple is a bare minimum k interpreter for learning purposes by arthur whitney]]
 - http://nsl.com/k/training/idioms_K3.pdf - k2/k3 version
 - Arthur Whitney's array programming language
@@ -224,6 +225,7 @@
   alternatives.
 - wiki :: [[https://en.wikipedia.org/wiki/K_(programming_language)][K (programming language)]]
 - ngn/k is the dialect I'm using to learn
+  - [[https://codeberg.org/ngn/k][ngn/k - Codeberg.org]]
 - see [[https://github.com/tavmem/buddy][this repo]] for examples of Arthur Whitney's programming
   style. the side-by-side buddy allocator implementations are quite
   thought provoking. Arthur's version is 11 lines, the idiomatic
@@ -250,13 +252,14 @@
 - [[https://hackmd.io/@kelas/By2QFCkH_][k crash course - HackMD]]
   latest update of kcc from [[https://github.com/kparc/kcc][github]]
 - [[https://shakti.com/][shakti homepage]]
-   - you can download the evaluation version of shakti for 30-days
-     without charge. The enterprise version is where some of the
-     premium features are though.
+  - you can download the evaluation version of shakti for 30-days
+    without charge. The enterprise version is where some of the
+    premium features are though.
 - [[https://estradajke.github.io/k9-simples/kbu.pdf][Shakti k9 tutorials]] \\
   compared to the other dialects, this is a huge amount of docs.
-   - [[https://estradajke.github.io/k9-simples/k9/index.html][Shakti (k9) tutorial]]
+  - [[https://estradajke.github.io/k9-simples/k9/index.html][Shakti (k9) tutorial]]
 - there is also kdb/kdb+ with the Q programming language. Also proprietary.
   - As far as I know, Arthur is working more heavily on the DB side -
     kdb+ has web APIs, FFI (for Rust too!), IPC, ML, you name
     it. shakti plays well with these.
+    

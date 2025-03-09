@@ -40,3 +40,4 @@
 :EDGES:
 [2025-03-03 Mon 16:25] -- [[man:tmux][man]]
 :END:
+- [[https://ryan.himmelwright.net/post/scripting-tmux-workspaces/][Scripting A Tmux Work-space Start-up | λ ryan. himmelwright. net]]
