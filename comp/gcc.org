@@ -12,7 +12,7 @@
 [2025-03-03 Mon 16:38] -- [[info:gccinstall][gccinstall]]
 :END:
 - [[https://gcc.gnu.org/onlinedocs/gcc-8.1.0/gcc/Standards.html][GCC Supported Standards]]
-
+- [[https://wiki.osdev.org/GCC_Cross-Compiler][GCC Cross-Compiler - OSDev Wiki]]
 ** G++                                                                  :cpp:
 :PROPERTIES:
 :ID:       4b5e18bd-cb9b-4f83-a463-e4a95764104b

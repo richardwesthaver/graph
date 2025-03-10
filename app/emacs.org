@@ -25,7 +25,7 @@
 :END:
 - [[http://blog.lujun9972.win/emacs-document/blog/2018/02/14/emacs-org-mode-examples-and-cookbook/index.html][Emacs org-mode examples and cookbook]]
 
-** Org Babel
+*** Org Babel
 :PROPERTIES:
 :ID:       9cfcee92-d862-400f-a80f-7bb538b27b45
 :CREATED:  <2025-03-07 Fri 10:01>
@@ -81,22 +81,23 @@
 :EDGES:
 [2025-03-04 Tue 20:10] -- [[https://orgmode.org/worg/dev/org-element-api.html][Org Element API]]
 :END:
-*** Org-roam
+*** Org Protocol
 :PROPERTIES:
-:ID:       3bb08e71-1ce9-46ed-844a-31305162645e
-:CREATED:  <2025-03-03 Mon 19:46>
+:ID:       d0590d0b-4be3-447b-a549-1c927be0c745
+:CREATED:  <2025-03-09 Sun 18:57>
 :END:
-:EDGES:
-[2025-03-03 Mon 19:46] -- [[https://www.orgroam.com/][Org-roam]]
-[2025-03-03 Mon 19:47] -> [[id:8889ae64-a982-4f6c-a875-5cbae6dbb323][Knowledge System]]
-:END:
-#+begin_quote
-A plain-text personal knowledge management system.
-#+end_quote
-- Popular extension which uses a sqlite backend to persist a Roam-like
-  graph of Org-mode nodes.
-- Our own =graph.el= implementation in core/emacs is inspired by
-  org-roam
+#+begin_src js
+  javascript:location.href = 'org-protocol://capture?' +
+    new URLSearchParams({
+      template: "i",
+      url: location.href,
+      title: document.title,
+      body: window.getSelection()})
+#+end_src
+
+#+begin_src emacs-lisp
+org-protocol-protocol-alist
+#+end_src
 
 ** Eww                                                              :browser:
 :PROPERTIES:
@@ -190,6 +191,28 @@ Emacs Unified Directory Client
 [2025-03-03 Mon 19:58] -- [[info:ses][info]]
 :END:
 Simple Emacs Spreadsheet
+
+** Packages
+:PROPERTIES:
+:ID:       8b2930be-e877-4e6b-aea4-372be3c8340c
+:CREATED:  <2025-03-09 Sun 19:05>
+:END:
+*** Org-roam
+:PROPERTIES:
+:ID:       3bb08e71-1ce9-46ed-844a-31305162645e
+:CREATED:  <2025-03-03 Mon 19:46>
+:END:
+:EDGES:
+[2025-03-03 Mon 19:46] -- [[https://www.orgroam.com/][Org-roam]]
+[2025-03-03 Mon 19:47] -> [[id:8889ae64-a982-4f6c-a875-5cbae6dbb323][Knowledge System]]
+:END:
+#+begin_quote
+A plain-text personal knowledge management system.
+#+end_quote
+- Popular extension which uses a sqlite backend to persist a Roam-like
+  graph of Org-mode nodes.
+- Our own =graph.el= implementation in core/emacs is inspired by
+  org-roam
 
 ** Emacsen
 :PROPERTIES:

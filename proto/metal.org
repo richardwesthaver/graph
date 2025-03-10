@@ -7,5 +7,90 @@
 :EDGES:
 [2025-03-08 Sat 01:07] -- [[https://uefi.org/][~]]
 [2025-03-08 Sat 01:09] -- [[https://uefi.org/specs/UEFI/2.11/22_EFI_Byte_Code_Virtual_Machine.html][22. EFI Byte Code Virtual Machine — UEFI Specification 2.11 documentation]]
+[2025-03-09 Sun 20:56] -- [[https://wiki.osdev.org/Uefi.inc][Uefi.inc - OSDev Wiki]]
+[2025-03-09 Sun 20:57] -- [[https://wiki.osdev.org/GNU-EFI][GNU-EFI - OSDev Wiki]]
 :END:
 Unified Extensible Firmware Interface
+- [[https://uefi.org/sites/default/files/resources/UEFI_Shell_2_2.pdf][UEFI Shell Specification v2.2]]
+- [[https://mjg59.dreamwidth.org/27881.html][mjg59 | Implementing UEFI Boot to Zork]]
+- [[https://www.intel.com/content/www/us/en/docs/programmable/683134/current/building-the-uefi-boot-loader.html][3.3. Building the UEFI Boot Loader]]
+- [[https://github.com/KunYi/Simple-UEFI-Bootloader][KunYi/Simple-UEFI-Bootloader: A UEFI bootloader for bare-metal x86-64 applications]]
+- [[https://github.com/ajxs/uefi-elf-bootloader][GitHub - ajxs/uefi-elf-bootloader: UEFI ELF Bootloader example]]
+
+** OVMF
+:PROPERTIES:
+:ID:       6f908314-d6d8-471a-96c7-e388f6891fb0
+:CREATED:  <2025-03-09 Sun 19:40>
+:END:
+:EDGES:
+[2025-03-09 Sun 19:40] -- [[https://wiki.xenproject.org/wiki/OVMF][OVMF - Xen]]
+[2025-03-09 Sun 20:24] -- [[https://github.com/tianocore/tianocore.github.io/wiki/OVMF-FAQ][faq]]
+:END:
+Open Virtual Machine Firmware
+- [[https://github.com/tianocore/tianocore.github.io/wiki/How-to-run-OVMF][How to run OVMF · tianocore/tianocore.github.io Wiki]]
+  #+begin_src shell
+    # sudo pacman -Sy edk2-ovmf
+    mkdir ovmf && cd ovmf
+    mkdir a
+    mv /usr/share/ovmf/x64/OVMF.4m.fd bios.bin
+    qemu-system-x86_64 -L . -pflash bios.bin -hda fat:rw:a -net none
+  #+end_src
+- [[https://blog.3mdeb.com/2015/2015-11-21-uefi-application-development-in-ovmf/][UEFI Application development in OVMF]]
+* ACPI
+:PROPERTIES:
+:ID:       8992ac90-c5fc-468d-9c41-aa5388dcba80
+:CREATED:  <2025-03-09 Sun 20:03>
+:END:
+:EDGES:
+[2025-03-09 Sun 20:04] -- [[https://wiki.osdev.org/ACPI][ACPI - OSDev Wiki]]
+:END:
+
+** ACPICA
+:PROPERTIES:
+:ID:       fe64edb6-9f78-4ab7-b488-72b0f8232652
+:CREATED:  <2025-03-09 Sun 20:03>
+:END:
+:EDGES:
+[2025-03-09 Sun 20:04] -- [[https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/overview.html][Overview of ACPI Component Architecture (ACPICA)]]
+:END:
+ACPI Component Architecture - a reference impl of ACPI.
+
+* Multiboot
+:PROPERTIES:
+:ID:       aa3ebd09-d9f9-4917-936a-a784da9a8754
+:CREATED:  <2025-03-09 Sun 20:05>
+:END:
+:EDGES:
+[2025-03-09 Sun 20:05] -- [[https://wiki.osdev.org/Multiboot][Multiboot - OSDev Wiki]]
+[2025-03-09 Sun 20:05] -- [[https://www.gnu.org/software/grub/manual/multiboot/multiboot.html][Multiboot Specification version 0.6.96]]
+:END:
+
+* U-boot
+:PROPERTIES:
+:ID:       4748e13f-2f13-4718-96d0-7c1649f31de9
+:CREATED:  <2025-03-09 Sun 20:05>
+:END:
+:EDGES:
+[2025-03-09 Sun 20:05] -- [[https://www.u-boot.org/][U-Boot]]
+[2025-03-09 Sun 20:06] -- [[https://github.com/u-boot/u-boot]["Das U-Boot" Source Tree]]
+[2025-03-09 Sun 20:06] -- [[https://krinkinmu.github.io/2023/08/21/how-u-boot-loads-linux-kernel.html][How U-boot loads Linux kernel | Welcome to the Mike’s homepage!]]
+:END:
+
+* coreboot
+:PROPERTIES:
+:ID:       248f0dbf-971e-46e9-91a6-7f6d06356c19
+:CREATED:  <2025-03-09 Sun 20:06>
+:END:
+:EDGES:
+[2025-03-09 Sun 20:06] -- [[https://coreboot.org/][coreboot]]
+:END:
+
+* BIOS
+:PROPERTIES:
+:ID:       7f759436-4087-455f-92fa-1dc49d5dbcfe
+:CREATED:  <2025-03-09 Sun 20:50>
+:END:
+:EDGES:
+[2025-03-09 Sun 21:08] -- [[https://en.wikipedia.org/wiki/BIOS][BIOS - Wikipedia]]
+:END:
+- [[https://github.com/fsmv/bootstrap-os][fsmv/bootstrap-os: A bootable x86 lisp interpreter, assembler, and simple text editor that lets you run the code you type in so you can bootstrap anything]]
