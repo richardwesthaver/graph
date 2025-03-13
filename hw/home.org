@@ -1,4 +1,5 @@
 #+title: Home Hardware
+#+setupfile: ../../clean.theme
 * Storage
 :PROPERTIES:
 :ID:       e884de4b-3762-4991-bd24-58727c28de12

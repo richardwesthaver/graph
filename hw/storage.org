@@ -1,5 +1,5 @@
 #+title: Data Storage Hardware
-
+#+setupfile: ../../clean.theme
 * RAM                                                                   :mem:
 :PROPERTIES:
 :ID:       83089757-22c3-456d-9b2c-c119adefd8c2

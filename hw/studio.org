@@ -1,1 +1,2 @@
 #+title: Studio Hardware
+#+setupfile: ../../clean.theme
