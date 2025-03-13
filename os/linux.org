@@ -347,7 +347,21 @@ Input/Output operations
 :EDGES:
 [2025-02-27 Thu 19:43] -- [[https://man7.org/linux/man-pages/man2/poll.2.html][poll(2) - Linux manual page]]
 :END:
-
+** Community
+:PROPERTIES:
+:ID:       d494d0ab-53ee-4c01-8276-638351d86368
+:CREATED:  <2025-03-11 Tue 21:46>
+:END:
+*** UAPI Group
+:PROPERTIES:
+:ID:       1196e1fc-7d87-430d-9b68-c5a8a240b82e
+:CREATED:  <2025-03-11 Tue 21:46>
+:END:
+:EDGES:
+[2025-03-11 Tue 21:46] -- [[https://uapi-group.org/][The Linux Userspace API (UAPI) Group | The Linux Userspace API Group]]
+:END:
+The Linux Userspace API Group
+- [[https://uapi-group.org/specifications/specs/discoverable_partitions_specification/][Discoverable Partitions Specification | UAPI Group Specifications]]
 ** Distros
 :PROPERTIES:
 :ID:       34966e81-ab92-4b85-b11e-073784261db5

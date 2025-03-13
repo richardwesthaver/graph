@@ -16,7 +16,7 @@ Unified Extensible Firmware Interface
 - [[https://www.intel.com/content/www/us/en/docs/programmable/683134/current/building-the-uefi-boot-loader.html][3.3. Building the UEFI Boot Loader]]
 - [[https://github.com/KunYi/Simple-UEFI-Bootloader][KunYi/Simple-UEFI-Bootloader: A UEFI bootloader for bare-metal x86-64 applications]]
 - [[https://github.com/ajxs/uefi-elf-bootloader][GitHub - ajxs/uefi-elf-bootloader: UEFI ELF Bootloader example]]
-
+- [[https://www.kraxel.org/blog/2024/07/uefi-network-boot/][modern uefi network booting | 🇺🇦 kraxel’s news]]
 ** OVMF
 :PROPERTIES:
 :ID:       6f908314-d6d8-471a-96c7-e388f6891fb0

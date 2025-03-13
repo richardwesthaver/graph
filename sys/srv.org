@@ -75,3 +75,11 @@ service unit. See the respective man pages for more information:
 :EDGES:
 [2025-02-16 Sun 21:08] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#Service%20Templates][systemd.service]]
 :END:
+*** Credentials
+:PROPERTIES:
+:ID:       78c7aee5-76b4-4062-a8b1-5e04b252dda7
+:CREATED:  <2025-03-11 Tue 21:48>
+:END:
+:EDGES:
+[2025-03-11 Tue 21:48] -- [[https://systemd.io/CREDENTIALS/][Credentials]]
+:END:
