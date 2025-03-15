@@ -391,6 +391,7 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:32] -- [[https://docs.fedoraproject.org/en-US/fedora-coreos/][Fedora CoreOS Documentation]]
 :END:
+- [[https://docs.fedoraproject.org/en-US/fedora-coreos/authentication/][Configuring Users]]
 - [[https://coreos.github.io/coreos-installer/][CoreOS Installer]]
   #+begin_src shell :results silent
     cargo install coreos-installer

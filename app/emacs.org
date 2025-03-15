@@ -197,7 +197,7 @@ Simple Emacs Spreadsheet
 :ID:       8b2930be-e877-4e6b-aea4-372be3c8340c
 :CREATED:  <2025-03-09 Sun 19:05>
 :END:
-*** Org-roam
+*** Org-roam                                                            :org:
 :PROPERTIES:
 :ID:       3bb08e71-1ce9-46ed-844a-31305162645e
 :CREATED:  <2025-03-03 Mon 19:46>
@@ -213,7 +213,28 @@ A plain-text personal knowledge management system.
   graph of Org-mode nodes.
 - Our own =graph.el= implementation in core/emacs is inspired by
   org-roam
-
+*** emacs-scrum                                                         :org:
+:PROPERTIES:
+:ID:       947597c2-8f17-4ba8-8af7-6d5784219b0c
+:CREATED:  <2025-03-15 Sat 16:56>
+:END:
+:EDGES:
+[2025-03-15 Sat 16:58] -- [[https://github.com/ianxm/emacs-scrum][src]]
+:END:
+#+begin_quote
+dynamic scrum report generation for org-mode buffers
+#+end_quote
+*** kanban.el                                                           :org:
+:PROPERTIES:
+:ID:       5ff7407e-32a0-463b-bf59-9519875da655
+:CREATED:  <2025-03-15 Sat 16:57>
+:END:
+:EDGES:
+[2025-03-15 Sat 16:57] -- [[https://www.draketo.de/files/kanban.el][src]]
+:END:
+#+begin_quote
+Parse org-todo headlines to use org-tables as Kanban tables
+#+end_quote
 ** Emacsen
 :PROPERTIES:
 :ID:       68c578fc-020f-4751-a659-a05c979272c9

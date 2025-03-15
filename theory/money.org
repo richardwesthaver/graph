@@ -27,3 +27,19 @@
 3. a price at which the future transaction must take place, and
 4. a future date by which the act (such as a purchase or sale) must take place.
 #+end_quote
+*** Asset Allocation
+:PROPERTIES:
+:ID:       d542bce7-708d-4067-9d59-7835c64ce098
+:CREATED:  <2025-03-15 Sat 14:43>
+:END:
+:EDGES:
+[2025-03-15 Sat 14:45] -- [[https://www.bogleheads.org/wiki/Asset_allocation][Asset allocation - Bogleheads]]
+:END:
+**** Glide path
+:PROPERTIES:
+:ID:       fe283e63-250b-4772-a252-444f2cde0d3d
+:CREATED:  <2025-03-15 Sat 14:45>
+:END:
+:EDGES:
+[2025-03-15 Sat 14:45] -- [[https://www.bogleheads.org/wiki/Glide_paths][Glide paths - Bogleheads]]
+:END:

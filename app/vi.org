@@ -10,6 +10,9 @@
 [2025-03-04 Tue 15:14] -- [[https://ex-vi.sourceforge.net/][The Traditional Vi]]
 :END:
 Standardized by the Single Unix Specification and POSIX
+
+[[cdn:media/img/vi-cheat-sheet.gif]]
+
 ** Vim
 :PROPERTIES:
 :ID:       df400751-0b3e-41a5-8512-a778a58cc1bd

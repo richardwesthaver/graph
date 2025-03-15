@@ -1,0 +1,18 @@
+#+title: Integrated Development Environments
+* IDE
+:PROPERTIES:
+:ID:       eddaae08-a0c1-4413-9f0a-804f663ae176
+:CREATED:  <2025-03-15 Sat 17:33>
+:END:
+:EDGES:
+[2025-03-15 Sat 17:34] -- [[https://en.wikipedia.org/wiki/Integrated_development_environment][Integrated development environment - Wikipedia]]
+:END:
+IDEs come in many forms and without any clear boundaries between what
+is part of an IDE and what is not.
+
+#+begin_quote
+An integrated development environment (IDE) is a software application
+that provides comprehensive facilities for software development. An
+IDE normally consists of at least a source-code editor, build
+automation tools, and a debugger.
+#+end_quote
