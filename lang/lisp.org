@@ -332,6 +332,76 @@ of a dedicated info node here.
 [2025-03-02 Sun 20:13] -- [[https://github.com/Shirakumo/framebuffers][Shirakumo/framebuffers: A library for portable framebuffer access]]
 :END:
 
+*** Fukamachi
+:PROPERTIES:
+:ID:       0fa56fd5-0b93-4b2f-be00-8197275bb5ef
+:CREATED:  <2025-03-14 Fri 18:22>
+:END:
+:EDGES:
+[2025-03-14 Fri 18:22] -- [[https://github.com/fukamachi][fukamachi (Eitaro Fukamachi) · GitHub]]
+:END:
+Tokyo-based Lisp hacker and web developer with some excellent CL packages.
+
+**** quri
+:PROPERTIES:
+:ID:       df045d95-a55e-4e87-a450-cf683e0ebd19
+:CREATED:  <2025-03-14 Fri 19:04>
+:END:
+:EDGES:
+[2025-03-14 Fri 19:05] -- [[https://github.com/fukamachi/quri][GitHub - fukamachi/quri: Yet another URI library for Common Lisp]]
+:END:
+
+**** clack
+:PROPERTIES:
+:ID:       c9515816-fc3a-4976-a5ed-138cbec83aa9
+:CREATED:  <2025-03-14 Fri 19:04>
+:END:
+:EDGES:
+[2025-03-14 Fri 19:04] -- [[https://github.com/fukamachi/clack/][GitHub - fukamachi/clack: Web server abstraction layer for Common Lisp]]
+:END:
+- [[https://github.com/fukamachi/lack][lack]]
+  the core of clack
+  #+begin_quote
+  Lack is a Common Lisp library which allows web applications to be
+  constructed of modular components. It was originally a part of
+  Clack, however it's going to be rewritten as an individual project
+  since Clack v2 with performance and simplicity in mind.
+
+  The scope is defining Lack applications and wrapping it up with Lack
+  middlewares. On the other hand, Clack is an abstraction layer for
+  HTTP and HTTP servers and provides unified API.
+  #+end_quote
+**** woo
+:PROPERTIES:
+:ID:       98b691b5-a617-438e-80ec-fb31588bcc3e
+:CREATED:  <2025-03-14 Fri 19:04>
+:END:
+:EDGES:
+[2025-03-14 Fri 19:05] -- [[https://github.com/fukamachi/woo][GitHub - fukamachi/woo: A fast non-blocking HTTP server on top of libev]]
+:END:
+
+**** sxql
+:PROPERTIES:
+:ID:       ac5922a8-06c6-4608-8305-ec42ceea4ee9
+:CREATED:  <2025-03-14 Fri 19:04>
+:END:
+:EDGES:
+[2025-03-14 Fri 19:04] -- [[https://github.com/fukamachi/sxql][GitHub - fukamachi/sxql: An SQL generator for Common Lisp.]]
+:END:
+
+*** Coalton
+:PROPERTIES:
+:ID:       20ea4fcc-e435-4738-93f3-a29572f0919b
+:CREATED:  <2025-03-14 Fri 18:23>
+:END:
+:EDGES:
+[2025-03-14 Fri 18:23] -- [[https://github.com/coalton-lang/coalton][src]]
+[2025-03-14 Fri 18:24] -- [[https://coalton-lang.github.io/][The Coalton Language]]
+:END:
+#+begin_quote
+Coalton is an efficient, statically typed functional programming
+language that supercharges Common Lisp.
+#+end_quote
 *** Gambol
 :PROPERTIES:
 :ID:       a911344d-aed1-4603-a46f-e8edf53756f5
@@ -365,7 +435,23 @@ See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104
 :ID:       a6911466-c135-488c-a67e-689f22592a44
 :CREATED:  <2025-03-03 Mon 18:54>
 :END:
-** ASDF
+/Systems/ are not part of the ANSI CL spec. They are classes defined
+by the [[id:fb68413a-acd8-4107-bfb5-48ce32be8842][ASDF]] package.
+
+#+begin_quote
+A system is a collection of Lisp files that together constitute an
+application or a library, and that should therefore be managed as a
+whole. A system definition describes which source files make up the
+system, what the dependencies among them are, and the order they
+should be compiled and loaded in.
+#+end_quote
+-- [[https://lispcookbook.github.io/cl-cookbook/systems.html][Defining Systems]]
+
+- There are some other adhoc solutions out there but nothing that
+  caught steam. If you want to work with the rest of the CL ecosystem
+  you basically need to use ASDF.
+
+*** ASDF
 :PROPERTIES:
 :ID:       fb68413a-acd8-4107-bfb5-48ce32be8842
 :CREATED:  <2025-03-03 Mon 18:54>
@@ -508,6 +594,7 @@ of over 1,500 libraries with a few simple commands.
 #+end_quote
 - [[https://github.com/quicklisp/quicklisp-controller][quicklisp/quicklisp-controller: The software to build Quicklisp dists.]]
 - [[https://github.com/quicklisp/quicklisp-projects][quicklisp/quicklisp-projects: Metadata for projects tracked by Quicklisp.]]
+- [[https://github.com/quicklisp/quicklisp-client][quicklisp/quicklisp-client: Quicklisp client.]]
 - see also Shinmera's [[https://github.com/Shirakumo/redist][Shirakumo/redist: A project to handle the creation of Quicklisp dists]]
   - with a nice html page for the dist: [[https://dist.shirakumo.org/shirakumo/][shirakumo Distribution Index]]
 **** Ultralisp

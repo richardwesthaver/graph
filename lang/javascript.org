@@ -31,6 +31,14 @@
 :EDGES:
 [2025-03-02 Sun 20:48] -- [[https://js.cytoscape.org/][Cytoscape.js]]
 :END:
+*** Chart.js
+:PROPERTIES:
+:ID:       9be0cef1-830d-4d76-970e-f786cd60d48f
+:CREATED:  <2025-03-13 Thu 20:26>
+:END:
+:EDGES:
+[2025-03-13 Thu 20:26] -- [[https://www.chartjs.org/][Chart.js | Open source HTML5 Charts for your website]]
+:END:
 *** SVG.js
 :PROPERTIES:
 :ID:       b2f13ede-db9d-494b-a454-515496cb6b7e
@@ -50,6 +58,18 @@
 - [[https://d3js.org/d3-force][d3-force]]
 - [[https://observablehq.com/@d3/gallery][D3 gallery / D3 | Observable]]
   - [[https://observablehq.com/@d3/word-cloud][Word cloud / D3 | Observable]]
+- [[https://d3js.org/d3-hierarchy][d3-hierarchy | D3 by Observable]]
+  - [[https://observablehq.com/@d3/pack-component?collection=@d3/d3-hierarchy][Circle packing component / D3 | Observable]]
+  - [[https://observablehq.com/@d3/zoomable-circle-packing?collection=@d3/d3-hierarchy][Zoomable circle packing / D3 | Observable]]
+- [[https://d3js.org/d3-interpolate][d3-interpolate | D3 by Observable]]
+*** Three.js
+:PROPERTIES:
+:ID:       e0c38219-7b90-4981-a46f-d3fe92888996
+:CREATED:  <2025-03-13 Thu 20:31>
+:END:
+:EDGES:
+[2025-03-13 Thu 20:32] -- [[https://github.com/mrdoob/three.js/][GitHub - mrdoob/three.js: JavaScript 3D Library.]]
+:END:
 *** React
 :PROPERTIES:
 :ID:       05a83166-2afc-41b2-8b64-9fcb2a33a5d8

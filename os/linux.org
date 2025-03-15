@@ -379,6 +379,8 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:32] -- [[https://fedoraproject.org/][Fedora Linux | The Fedora Project]]
 :END:
+- RHEL is based on Fedora
+  - RH has influence over roadmap
 **** CoreOS
 :PROPERTIES:
 :ID:       ca6795ee-4b2c-4ec3-9bdc-f6be67c2f1ec
@@ -450,6 +452,14 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:40] -- [[https://archlinux.org/][Arch Linux]]
 :END:
+- Arch (btw)
+- jack of all trades master of none
+  - still, what I use for my daily driver since 2016
+- rolling release OS, relatively stable even when running bleeding edge
+- obviously there are harder setups to manage, but I find manually
+  installing Arch from scratch to be a good stat check for system
+  devs.
+- High quality Wiki
 *** Ubuntu
 :PROPERTIES:
 :ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02
@@ -474,6 +484,10 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:41] -- [[https://www.alpinelinux.org/][Alpine Linux]]
 :END:
+- [[https://amercader.net/blog/til-alpine-linux-does-not-ship-bash/][TIL (the hard way): Alpine Linux does not ship Bash by default - Adrià Mercader]]
+  - there's like a hundred different ways to encounter this error -
+    the default alpine shell is dash masquerading as sh. the error
+    message may also mention /bin/sh not found in $PATH.
 *** Adélie
 :PROPERTIES:
 :ID:       b54a3fef-192f-4767-bec2-c10058e69a89
@@ -482,7 +496,6 @@ Linux Distributions
 :EDGES:
 [2025-03-04 Tue 15:27] -- [[https://www.adelielinux.org/][Adélie Linux | Welcome]]
 :END:
-
 *** Gentoo
 :PROPERTIES:
 :ID:       5cbe7ad4-008a-4ed7-889d-e7ec5663dfd1
