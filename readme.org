@@ -25,42 +25,39 @@ an interface for modifying the graph.
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+-----------------------------------------------------|
-| name        | graph                                               |
-| version     | :version 0.1.0                                      |
-| description | :description CC Org Files                           |
-| skel-id     | :id 1784914079056115652                             |
-| root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/5d160d282c55][5d160d282c55:47+]] |
-| tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Fri Mar 14 23:29:08 2025 -0400                      |
-| langs       | html org                                            |
-| lines       | 9920 :λ 9227 :# 17 :_ 676                           |
-|-------------+-----------------------------------------------------|
+|-------------+----------------------------------------------------|
+| name        | graph                                              |
+| version     | :version 0.1.0                                     |
+| description | :description CC Org Files                          |
+| skel-id     | :id 1784914079056115652                            |
+| root        | ~/comp/org/graph/                                  |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/dc729cdbae9a][dc729cdbae9a:48]] |
+| tags        | :tags (org docs notes blog meta plan)              |
+| updated     | Sat Mar 15 19:12:29 2025 -0400                     |
+| langs       | html org                                           |
+| lines       | 8733 :λ 8256 :# 17 :_ 460                          |
+|-------------+----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
 #+RESULTS:
-: 2025-01    426 ****
-: 2025-02   4435 *****************************************
-: 2025-03   6475 *************************************************************
+: 2025-01    426 ***
+: 2025-02   4435 ***************************************
+: 2025-03   6881 *************************************************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                | modified            |
 |---------------------+---------------------|
-| [[file:app/emacs.org][app/emacs]]           | 2025-03-15 16:59:06 |
-| [[file:app/vi.org][app/vi]]              | 2025-03-15 15:58:34 |
-| [[file:os/linux.org][os/linux]]            | 2025-03-14 23:48:30 |
-| [[file:readme.org][readme]]              | 2025-03-15 18:03:04 |
-| [[file:theory/money.org][theory/money]]        | 2025-03-15 14:46:36 |
 | [[file:app/desktop.org][app/desktop]]         | 2025-03-03 18:15:28 |
+| [[file:app/emacs.org][app/emacs]]           | 2025-03-15 16:59:06 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]       | 2025-03-03 18:15:21 |
 | [[file:app/mail.org][app/mail]]            | 2025-03-03 17:50:14 |
 | [[file:app/package-manager.org][app/package-manager]] | 2025-03-04 15:54:45 |
 | [[file:app/podman.org][app/podman]]          | 2025-03-03 17:25:04 |
 | [[file:app/term.org][app/term]]            | 2025-03-07 11:31:08 |
+| [[file:app/vi.org][app/vi]]              | 2025-03-15 15:58:34 |
 | [[file:app/web.org][app/web]]             | 2025-03-07 22:58:11 |
 | [[file:comp/ecl.org][comp/ecl]]            | 2025-03-09 15:44:39 |
 | [[file:comp/gcc.org][comp/gcc]]            | 2025-03-09 21:08:14 |
@@ -113,6 +110,7 @@ an interface for modifying the graph.
 | [[file:math/stat.org][math/stat]]           | 2025-02-28 18:22:16 |
 | [[file:math/struct.org][math/struct]]         | 2025-03-03 18:14:57 |
 | [[file:notes.org][notes]]               | 2025-03-03 15:21:45 |
+| [[file:os/linux.org][os/linux]]            | 2025-03-14 23:48:30 |
 | [[file:os/mac.org][os/mac]]              | 2025-03-03 18:06:20 |
 | [[file:os/mainframe.org][os/mainframe]]        | 2025-03-04 19:43:31 |
 | [[file:os/plan9.org][os/plan9]]            | 2025-03-07 22:57:16 |
@@ -137,9 +135,11 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]       | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]          | 2025-03-04 15:30:25 |
 | [[file:proto/web.org][proto/web]]           | 2025-02-21 22:32:12 |
+| [[file:.][.]]                   | 2025-03-15 19:43:21 |
 | [[file:refs.org][refs]]                | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]              | 2025-03-03 17:51:56 |
 | [[file:sys/fs.org][sys/fs]]              | 2025-03-03 14:49:54 |
+| [[file:sys/ide.org][sys/ide]]             | 2025-03-15 17:41:59 |
 | [[file:sys/mem.org][sys/mem]]             | 2025-03-03 17:53:12 |
 | [[file:sys/srv.org][sys/srv]]             | 2025-03-11 21:48:21 |
 | [[file:sys/vcs.org][sys/vcs]]             | 2025-03-03 14:49:14 |
@@ -148,6 +148,7 @@ an interface for modifying the graph.
 | [[file:theory/compiler.org][theory/compiler]]     | 2025-03-03 20:57:32 |
 | [[file:theory/econ.org][theory/econ]]         | 2025-03-06 14:27:18 |
 | [[file:theory/hacking.org][theory/hacking]]      | 2025-03-03 20:14:59 |
+| [[file:theory/money.org][theory/money]]        | 2025-03-15 14:46:36 |
 | [[file:theory/plt.org][theory/plt]]          | 2025-03-06 16:35:28 |
 | [[file:theory/process.org][theory/process]]      | 2025-03-06 16:34:22 |
 | [[file:theory/style.org][theory/style]]        | 2025-02-27 17:04:03 |

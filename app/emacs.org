@@ -44,6 +44,7 @@
 [2025-03-06 Thu 14:45] -- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference Documentation]]
 [2025-03-06 Thu 14:45] -- [[info:org#Exporting][info]]
 :END:
+- [[https://blog.alex.balgavy.eu/writing-your-own-derived-org-export-backend/][Writing your own (derived) Emacs Org export backend]]
 **** HTML
 :PROPERTIES:
 :ID:       9cb4a1c7-4798-4ac9-8958-9e3d86673d95
