@@ -1,4 +1,5 @@
 #+title: Media Apps
+#+setupfile: ../../clean.theme
 * MPD
 :PROPERTIES:
 :ID:       9df7a344-14a4-4d14-939a-b59894d7e676
