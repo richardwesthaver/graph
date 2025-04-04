@@ -8,3 +8,27 @@
 :EDGES:
 [2025-02-14 Fri 22:35] -- [[https://en.wikipedia.org/wiki/Digital_signal_processing][Digital signal processing - Wikipedia]]
 :END:
+** FFT
+:PROPERTIES:
+:ID:       f0d573b1-ca28-48f5-b635-56b658e519a5
+:CREATED:  <2025-03-30 Sun 01:06>
+:END:
+:EDGES:
+[2025-03-30 Sun 01:08] -- [[https://en.wikipedia.org/wiki/Fast_Fourier_transform][Fast Fourier transform - Wikipedia]]
+:END:
+*** DFT
+:PROPERTIES:
+:ID:       1f95e329-908f-4262-ab07-542dda4d0938
+:CREATED:  <2025-03-30 Sun 01:06>
+:END:
+:EDGES:
+[2025-03-30 Sun 01:06] -- [[https://en.wikipedia.org/wiki/Discrete_Fourier_transform][Discrete Fourier transform - Wikipedia]]
+:END:
+*** Cooley-Turkey algorithm
+:PROPERTIES:
+:ID:       d9739496-e662-4fc6-b4e7-864dd19a2c7c
+:CREATED:  <2025-03-30 Sun 01:07>
+:END:
+:EDGES:
+[2025-03-30 Sun 01:07] -- [[https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm][Cooley–Tukey FFT algorithm - Wikipedia]]
+:END:

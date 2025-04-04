@@ -400,6 +400,7 @@ Linux Distributions
 - default user :: ~core~
 - [[https://coreos.github.io/ignition/][Ignition documentation]]
   - [[https://coreos.github.io/ignition/getting-started/][Getting Started | Ignition]]
+  - [[https://github.com/coreos/ignition/blob/main/docs/examples.md][examples]]
 - [[https://docs.fedoraproject.org/en-US/fedora-coreos/provisioning-qemu/][Provisioning Fedora CoreOS on QEMU]]
   - requires ignition config file
   - should provide ssh key for core user

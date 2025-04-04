@@ -17,41 +17,50 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 633 |
-| edges | 495 |
-| files | 104 |
+| nodes | 656 |
+| edges | 513 |
+| files | 107 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+----------------------------------------------------|
-| name        | graph                                              |
-| version     | :version 0.1.0                                     |
-| description | :description CC Org Files                          |
-| skel-id     | :id 1784914079056115652                            |
-| root        | ~/comp/org/graph/                                  |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/dc729cdbae9a][dc729cdbae9a:48]] |
-| tags        | :tags (org docs notes blog meta plan)              |
-| updated     | Sat Mar 15 19:12:29 2025 -0400                     |
-| langs       | html org                                           |
-| lines       | 8733 :λ 8256 :# 17 :_ 460                          |
-|-------------+----------------------------------------------------|
+|-------------+-----------------------------------------------------|
+| name        | graph                                               |
+| version     | :version 0.1.0                                      |
+| description | :description CC Org Files                           |
+| skel-id     | :id 1784914079056115652                             |
+| root        | ~/comp/org/graph/                                   |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/cc1d08cccd39][cc1d08cccd39:49+]] |
+| tags        | :tags (org docs notes blog meta plan)               |
+| updated     | Sat Mar 15 20:49:54 2025 -0400                      |
+| langs       | org                                                 |
+| lines       | 8319 :λ 7964 :# 16 :_ 339                           |
+|-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
 #+RESULTS:
 : 2025-01    426 ***
 : 2025-02   4435 ***************************************
-: 2025-03   6881 *************************************************************
+: 2025-03   6923 *************************************************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                | modified            |
 |---------------------+---------------------|
+| [[file:comp/sbcl.org][comp/sbcl]]           | 2025-03-23 15:06:41 |
+| [[file:lang/rust.org][lang/rust]]           | 2025-03-16 19:07:43 |
+| [[file:math/dsp.org][math/dsp]]            | 2025-03-30 01:08:05 |
+| [[file:notes.org][notes]]               | 2025-03-25 15:23:42 |
+| [[file:os/linux.org][os/linux]]            | 2025-03-16 13:43:41 |
+| [[file:.][.]]                   | 2025-03-24 20:59:56 |
+| [[file:app/media.org][app/media]]           | 2025-03-23 21:07:09 |
+| [[file:hw/fpga.org][hw/fpga]]             | 2025-03-16 19:12:30 |
+| [[file:hw/kbd.org][hw/kbd]]              | 2025-03-15 23:04:35 |
 | [[file:app/desktop.org][app/desktop]]         | 2025-03-03 18:15:28 |
-| [[file:app/emacs.org][app/emacs]]           | 2025-03-15 16:59:06 |
+| [[file:app/emacs.org][app/emacs]]           | 2025-03-15 20:35:11 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]       | 2025-03-03 18:15:21 |
 | [[file:app/mail.org][app/mail]]            | 2025-03-03 17:50:14 |
 | [[file:app/package-manager.org][app/package-manager]] | 2025-03-04 15:54:45 |
@@ -63,7 +72,6 @@ an interface for modifying the graph.
 | [[file:comp/gcc.org][comp/gcc]]            | 2025-03-09 21:08:14 |
 | [[file:comp/ghc.org][comp/ghc]]            | 2025-02-21 22:34:46 |
 | [[file:comp/llvm.org][comp/llvm]]           | 2025-03-03 16:41:14 |
-| [[file:comp/sbcl.org][comp/sbcl]]           | 2025-03-08 20:54:18 |
 | [[file:hw/amd.org][hw/amd]]              | 2025-03-03 11:47:33 |
 | [[file:hw/apple.org][hw/apple]]            | 2025-03-03 20:34:42 |
 | [[file:hw/car.org][hw/car]]              | 2025-02-21 22:34:16 |
@@ -94,7 +102,6 @@ an interface for modifying the graph.
 | [[file:lang/lisp.org][lang/lisp]]           | 2025-03-14 23:21:07 |
 | [[file:lang/python.org][lang/python]]         | 2025-02-21 22:33:53 |
 | [[file:lang/query.org][lang/query]]          | 2025-03-04 18:38:23 |
-| [[file:lang/rust.org][lang/rust]]           | 2025-03-07 22:03:32 |
 | [[file:lang/shell.org][lang/shell]]          | 2025-02-27 16:56:51 |
 | [[file:lang/smalltalk.org][lang/smalltalk]]      | 2025-03-03 21:05:21 |
 | [[file:lang/swift.org][lang/swift]]          | 2025-03-07 22:57:38 |
@@ -103,14 +110,11 @@ an interface for modifying the graph.
 | [[file:math/algo.org][math/algo]]           | 2025-03-03 18:14:29 |
 | [[file:math/calc.org][math/calc]]           | 2025-03-03 18:14:34 |
 | [[file:math/compsci.org][math/compsci]]        | 2025-03-03 20:50:48 |
-| [[file:math/dsp.org][math/dsp]]            | 2025-02-21 22:31:30 |
 | [[file:math/logic.org][math/logic]]          | 2025-03-07 09:39:52 |
 | [[file:math/ml.org][math/ml]]             | 2025-02-21 22:33:20 |
 | [[file:math/physics.org][math/physics]]        | 2025-03-03 18:15:06 |
 | [[file:math/stat.org][math/stat]]           | 2025-02-28 18:22:16 |
 | [[file:math/struct.org][math/struct]]         | 2025-03-03 18:14:57 |
-| [[file:notes.org][notes]]               | 2025-03-03 15:21:45 |
-| [[file:os/linux.org][os/linux]]            | 2025-03-14 23:48:30 |
 | [[file:os/mac.org][os/mac]]              | 2025-03-03 18:06:20 |
 | [[file:os/mainframe.org][os/mainframe]]        | 2025-03-04 19:43:31 |
 | [[file:os/plan9.org][os/plan9]]            | 2025-03-07 22:57:16 |
@@ -135,7 +139,6 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]       | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]          | 2025-03-04 15:30:25 |
 | [[file:proto/web.org][proto/web]]           | 2025-02-21 22:32:12 |
-| [[file:.][.]]                   | 2025-03-15 19:43:21 |
 | [[file:refs.org][refs]]                | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]              | 2025-03-03 17:51:56 |
 | [[file:sys/fs.org][sys/fs]]              | 2025-03-03 14:49:54 |

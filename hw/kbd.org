@@ -1,0 +1,16 @@
+#+title: Keyboards
+* ZSA
+:PROPERTIES:
+:ID:       dd783d1f-3fa9-4ab2-8c6c-766375a8c725
+:CREATED:  <2025-03-15 Sat 23:01>
+:END:
+** Moonlander
+:PROPERTIES:
+:ID:       84fe66ec-c16d-4d4d-bdeb-90b08ad73552
+:CREATED:  <2025-03-15 Sat 23:02>
+:END:
+:EDGES:
+[2025-03-15 Sat 23:03] -- [[https://www.zsa.io/moonlander][Moonlander]]
+:END:
+- my current daily driver
+- [[https://configure.zsa.io/moonlander/layouts/default/latest/0/][default config]]

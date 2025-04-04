@@ -1,0 +1,77 @@
+#+title: FPGA
+* FPGA
+:PROPERTIES:
+:ID:       2365bde4-4442-4fa7-a005-2ac7ad83192a
+:CREATED:  <2025-03-16 Sun 19:09>
+:END:
+:EDGES:
+[2025-03-16 Sun 19:09] -- [[https://en.wikipedia.org/wiki/Field-programmable_gate_array][wiki]]
+:END:
+Field-programmable gate arrays
+
+#+begin_quote
+What even is an FPGA?
+
+CPUs process their instructions one by one. They are purpose-built
+machines that are carefully designed for processing lots of
+instructions in sequence. Traditional programming languages reflect
+this design for the most part. They are designed to make it easy for
+humans to write programs that can be executed sequentially one
+instruction at a time. There are approaches to parallelism, but they
+are either limited to having multiple threads of execution that run
+from top to bottom simultaneously. Or they have some instructions that
+perform the same operation on a fixed amount of data elements at the
+same time.
+
+Field programmable gate arrays (FPGAs) on the other hand are not
+designed to process one instruction at a time. They are not even
+designed to process instructions at all. As the name field
+programmable gate array implies, it is just a lot of programmable
+logic gates with programmable connections between them. So while a CPU
+is a circuit designed to do one thing, an FPGA is a circuit designed
+to emulate other circuits.
+
+For example, you can define the logic gates for your CPU and program
+the FPGA with that design, so it will behave exactly like a CPU and
+can process instructions. Such a 'soft' CPU will be bigger and
+therefore slower than a real CPU because a circuit emulated on an FPGA
+takes up more space than an application-specific circuit. This is
+however really useful for prototyping because you can test the CPU
+design in hardware with external peripherals, like memory and I/O
+devices.
+
+In the past, FPGAs were mostly used like this for prototyping hardware
+development. Programmers designed a circuit in a hardware description
+language (HDL) and simulate it as a first stage of verification. If
+that works you can deploy it to an FPGA, and then test it there. If
+everything works as expected, you would produce that design as
+integrated circuits.
+
+This is still the most common use case for FPGAs, but it is not the
+only one. In recent years the usage of FPGAs as pseudo-general-purpose
+computational accelerators became more relevant. Here you do not use
+them to prototype circuits that will eventually be taped out but as
+the final platform. FPGAs used in this context are known as
+computational FPGAs. It is somewhat comparable to the use of GPUs as
+computing accelerators. But where GPUs excel at tasks that perform the
+same operations in parallel on massive amounts of data, FPGAs can be
+used for some kind of computations with irregular parallelism with
+static structure. In opposition to GPUs, we are not yet entirely sure
+what an appropriate abstraction for the computational pattern used
+with computational FPGAs is.
+
+    The world hasn’t settled yet on a succinct description of the
+    fundamental computational pattern that FPGAs are supposed to be
+    good at. But it has something to do with potentially-irregular
+    parallelism, data reuse, and mostly-static data flow.
+
+— Adrian Sampson
+FPGAs Have the Wrong Abstraction, 2019 
+
+Until that is settled, computational FPGAs will probably stay a niche
+application. There are currently multiple projects that try to find an
+answer to this problem, by developing a new type of programming
+language for designing these hardware accelerators. We will learn more
+about that in the next sections.
+#+end_quote
+-- [[https://arewefpgayet.rs/][Introduction to High-Level Synthesis from Rust]]

@@ -465,3 +465,34 @@ https://cl-net-snmp.common-lisp.dev/release/release.sh
 :LOGBOOK:
 - State "NOTE"       from              [2024-05-02 Thu 15:12]
 :END:
+* Identity
+:PROPERTIES:
+:ID:       1e0a7415-646d-470f-baf9-448f93cfef82
+:CREATED:  <2025-03-23 Sun 17:21>
+:END:
+** ID
+:PROPERTIES:
+:ID:       9e96df8f-0621-493f-bd3f-42e61b35d3cd
+:CREATED:  <2025-03-23 Sun 17:21>
+:END:
+*** Snowflake ID
+:PROPERTIES:
+:ID:       46c01200-2b85-47b6-a471-bc042613f41a
+:CREATED:  <2025-03-23 Sun 17:22>
+:END:
+:EDGES:
+[2025-03-23 Sun 17:22] -- [[https://en.wikipedia.org/wiki/Snowflake_ID][Snowflake ID - Wikipedia]]
+:END:
+* Media
+:PROPERTIES:
+:ID:       1aeda444-995e-4600-847e-4eea0c36a8fc
+:CREATED:  <2025-03-25 Tue 12:06>
+:END:
+** Image Warping
+:PROPERTIES:
+:ID:       5657cba6-ed19-4438-b5a5-22e9da9a98ba
+:CREATED:  <2025-03-25 Tue 12:06>
+:END:
+:EDGES:
+[2025-03-25 Tue 12:06] -- [[https://www-cs.ccny.cuny.edu/~wolberg/cs470/pdf/CSc470-16-Warping.pdf][Image Warping: A Review]]
+:END:

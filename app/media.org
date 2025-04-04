@@ -1,0 +1,86 @@
+#+title: Media Apps
+* MPD
+:PROPERTIES:
+:ID:       9df7a344-14a4-4d14-939a-b59894d7e676
+:CREATED:  <2025-03-22 Sat 20:57>
+:END:
+:EDGES:
+[2025-03-22 Sat 20:58] -- [[https://mpd.readthedocs.io/en/latest/][docs]]
+:END:
+Music Player Daemon
+* Bitwig Studio
+:PROPERTIES:
+:ID:       dce6eee4-1b5e-46b0-bc16-36803e3ca410
+:CREATED:  <2025-03-23 Sun 20:31>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:33] -- [[https://www.bitwig.com/][Bitwig | Home | Bitwig]]
+:END:
+* Ableton Live
+:PROPERTIES:
+:ID:       62dd0033-f7d3-47ba-a42a-b48a7bbbc11a
+:CREATED:  <2025-03-23 Sun 20:33>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:34] -- [[https://www.ableton.com/en/][Creative tools for music makers | Ableton]]
+:END:
+* Linux Sampler
+:PROPERTIES:
+:ID:       3364b5d7-d09c-4cba-97cf-0fb3d08a8e03
+:CREATED:  <2025-03-23 Sun 20:40>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:40] -- [[https://www.linuxsampler.org/][The Linux Sampler Project]]
+:END:
+* Schism Tracker
+:PROPERTIES:
+:ID:       c2070931-d7b2-4967-8839-a34fc07b740f
+:CREATED:  <2025-03-23 Sun 20:53>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:54] -- [[https://schismtracker.org/][Schism Tracker]]
+:END:
+- [[https://github.com/schismtracker/schismtracker/wiki/ITTECH.TXT][ITTECH.TXT · schismtracker/schismtracker Wiki · GitHub]]
+- [[https://dexp.in/articles/schism-intro/][Introduction to the Schism Tracker]]
+** Impulse Tracker                                               :ms:dos:asm:
+:PROPERTIES:
+:ID:       010ba610-1fcf-4d48-b030-35fa82fbf0ac
+:CREATED:  <2025-03-23 Sun 20:53>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:54] -- [[https://github.com/schismtracker/schismtracker/wiki/Impulse-Tracker][Impulse Tracker · schismtracker/schismtracker Wiki · GitHub]]
+:END:
+** MilkyTracker
+:PROPERTIES:
+:ID:       93ddb271-71b9-4e93-94f9-1eb421988f33
+:CREATED:  <2025-03-23 Sun 21:04>
+:END:
+:EDGES:
+[2025-03-23 Sun 21:04] -- [[https://github.com/milkytracker/MilkyTracker][GitHub - milkytracker/MilkyTracker: A Fasttracker II compatible music editor]]
+:END:
+* Renoise
+:PROPERTIES:
+:ID:       c0a50a82-a1bb-4dc6-a0f8-6191701ae69e
+:CREATED:  <2025-03-23 Sun 20:57>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:57] -- [[https://www.renoise.com/][Home | Renoise]]
+:END:
+- formerly a tracker?
+* FL Studio                                                             :win:
+:PROPERTIES:
+:ID:       0c1b92be-522e-43bc-a00d-c54e762dd399
+:CREATED:  <2025-03-23 Sun 20:58>
+:END:
+:EDGES:
+[2025-03-23 Sun 20:57] -- [[https://image-line.com][home]]
+:END:
+Fruity Loops
+* OpenMPT                                                               :win:
+:PROPERTIES:
+:ID:       2db1be6b-196a-4ba4-ba3d-c3440d314762
+:CREATED:  <2025-03-23 Sun 21:06>
+:END:
+:EDGES:
+[2025-03-23 Sun 21:07] -- [[https://openmpt.org/][OpenMPT - Discover the music inside... | OpenMPT - Open ModPlug Tracker]]
+:END:

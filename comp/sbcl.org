@@ -318,7 +318,21 @@ Virtual Operations
 :EDGES:
 [2025-02-28 Fri 19:14] -- [[https://cmucl.org/downloads/doc/cmu-user-2010-05-03/compiler-hint.html][CMUCL User's Manual: Advanced Compiler Use and Efficiency Hints]]
 :END:
-
+**** derive-function-types
+:PROPERTIES:
+:ID:       76c64438-4db7-4318-8701-241d4f253782
+:CREATED:  <2025-03-23 Sun 15:05>
+:END:
+#+begin_quote
+*DERIVE-FUNCTION-TYPES* names a special variable:
+  Value: NIL
+  Documentation:
+    Should the compiler assume that function types will never change,
+      so that it can use type information inferred from current definitions
+      to optimize code which uses those definitions? Setting this true
+      gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
+      the efficiency of stable code.
+#+end_quote
 ** Tree Shaker
 :PROPERTIES:
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49
