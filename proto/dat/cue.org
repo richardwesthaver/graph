@@ -1,0 +1,11 @@
+#+title: CUE File Format
+#+setupfile: ../../../clean.theme
+* CUE
+:PROPERTIES:
+:ID:       557af15d-fad4-41f8-b652-81b76d618401
+:CREATED:  <2025-04-05 Sat 20:23>
+:END:
+:EDGES:
+[2025-04-05 Sat 20:24] -- [[https://github.com/libyal/libodraw/blob/main/documentation/CUE%20sheet%20format.asciidoc][libodraw/documentation/CUE sheet format.asciidoc]]
+[2025-04-05 Sat 20:24] -- [[wikipedia:Cue_sheet_(computing)][wiki]]
+:END:

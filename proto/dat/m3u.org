@@ -1,0 +1,12 @@
+#+title: M3U File Format
+#+setupfile: ../../../clean.theme
+* M3U
+:PROPERTIES:
+:ID:       293bf186-aac4-4501-9267-08877fe0565c
+:CREATED:  <2025-04-05 Sat 20:25>
+:END:
+:EDGES:
+[2025-04-05 Sat 20:25] -- [[wikipedia:m3u][wiki]]
+:END:
+=Moving Picture Experts Group Audio Layer 3 Uniform Resource Locator=
+- utf-8 encoded = m3u8 technically

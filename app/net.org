@@ -1,4 +1,4 @@
-#+title: Web Applications
+#+title: Network Applications
 #+setupfile: ../../clean.theme
 * Browser                                                           :browser:
 :PROPERTIES:
@@ -76,12 +76,12 @@ system, but the code available has some goodies (json/nlp/etc)
 :END:
 :EDGES:
 [2025-03-03 Mon 17:14] -- [[https://transmissionbt.com/][Transmission]]
-[2025-03-03 Mon 17:17] -- [[https://github.com/transmission/transmission][transmission/transmission]]
+[2025-03-03 Mon 17:17] -- [[gh:transmission/transmission][src]]
 :END:
 #+begin_quote
 A Fast, Easy and Free Bittorrent Client For macOS, Windows and Linux
 #+end_quote
-* Server
+* Web Server                                                            :srv:
 :PROPERTIES:
 :ID:       f7a60f4c-2aa4-4330-95bb-7077ab534258
 :CREATED:  <2025-03-03 Mon 17:20>
