@@ -11,3 +11,4 @@ https://wiki.pathmind.com/open-datasets
 https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/
 https://www.opensourceshakespeare.org/
 [[https://registry.opendata.aws/][Registry of Open Data on AWS]]
+[[http://www.cs.toronto.edu/~kriz/cifar.html][CIFAR-10 and CIFAR-100 datasets]]

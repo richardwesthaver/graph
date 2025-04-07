@@ -1,6 +1,6 @@
 #+title: Media Apps
 #+setupfile: ../../clean.theme
-* MPD
+* MPD                                                                 :music:
 :PROPERTIES:
 :ID:       9df7a344-14a4-4d14-939a-b59894d7e676
 :CREATED:  <2025-03-22 Sat 20:57>
@@ -9,7 +9,7 @@
 [2025-03-22 Sat 20:58] -- [[https://mpd.readthedocs.io/en/latest/][docs]]
 :END:
 Music Player Daemon
-* Bitwig Studio
+* Bitwig Studio                                                         :daw:
 :PROPERTIES:
 :ID:       dce6eee4-1b5e-46b0-bc16-36803e3ca410
 :CREATED:  <2025-03-23 Sun 20:31>
@@ -17,7 +17,7 @@ Music Player Daemon
 :EDGES:
 [2025-03-23 Sun 20:33] -- [[https://www.bitwig.com/][Bitwig | Home | Bitwig]]
 :END:
-* Ableton Live
+* Ableton Live                                                          :daw:
 :PROPERTIES:
 :ID:       62dd0033-f7d3-47ba-a42a-b48a7bbbc11a
 :CREATED:  <2025-03-23 Sun 20:33>
@@ -25,6 +25,57 @@ Music Player Daemon
 :EDGES:
 [2025-03-23 Sun 20:34] -- [[https://www.ableton.com/en/][Creative tools for music makers | Ableton]]
 :END:
+- No Linux builds available - MacOS/Windows only :'C
+- As of [2025-04-06 Sun] I only use it for ocassional MIDI tracking of
+  sheet music
+- Some interesting [[https://help.ableton.com/hc/en-us/articles/209769625-Live-specific-file-types][file types]]:
+  - als :: Ableton Live Set or template set, used for Live Sets and Templates.
+  - alp :: Ableton Live Pack, a compressed version of an Ableton project containing the live set and related content.
+  - ams :: Ableton meta sound, used for user-created waveforms in Operator.
+  - amxd :: Ableton Max for Live device, used for Max for Live devices.
+  - asd :: Ableton sample analysis file, contains analyzed audio data.
+  - ask :: Ableton skin file, used for Live Themes.
+  - adg :: Ableton Device Group.
+  - adv :: Ableton Device Preset.
+  - agr :: Ableton Groove.
+  - alc :: Ableton Live Clip
+- The format of most interest is =asd=
+  #+begin_src txt
+Keys:
+TRANSIENTRESOLUTION;
+COMPLEXPROENVELOPE;
+COMPLEXPROFORMANTS;
+FLUCTUATIONTEXTURE;
+GRANULARITYTEXTURE;
+LAUNCHQUANTISATION;
+TRANSITIONENERGIES;
+MEANPROBABILITIES;
+TRANSIENTENVELOPE;
+TRANSIENTLOOPMODE;
+GRANULARITYTONES;
+MARKERSGENERATED; ORIGINALFILESIZE;
+HIDDENLOOPSTART; OVERVIEWVERSION;
+TRANSIENTVALUES; BEATTRACKSTATE;
+VELOCITYAMOUNT; CYCLEENERGIES;
+HASUSERONSETS; HIDDENLOOPEND;
+TIMESIGNATURE; TIMESIGNATUREDENOMINATOR;
+LASTINDICES5; REMOTEABLETIMESIGNATURE;
+SAMPLEOFFSET; SAMPLEVOLUME;
+TIMESIGNATURENUMERATOR; DENOMINATOR; EXTRALENGTH;
+INVNOTELENS; PITCHCOARSE; WARPMARKERS;
+COLORINDEX; INITIALBPM; ISVOLATILE;
+LASTINTERS; LAUNCHMODE; PITCHMARKS;
+POSITIONS5; TONALITIES; NEXTBEATS;
+NUMERATOR; OUTMARKER; PITCHFINE;
+REMOTEABLEDOUBLE; REMOTEABLESTRING; ISWARPED; REMOTEABLEARRAY;
+WARPMODE; BEATTRACKSTATE; REMOTEABLEBOOL; REMOTEABLEENUM;
+REMOTEABLELIST; REMOTEABLEINT; ENERGY; LOOPON; ONSETARRAY;
+ONSETEVENT; PITCHMARKS; SAMPLEDATA; ISSET; USERFLOAT; BPMS;
+FADE; LOCK; NAME; SYNC; ONSETS; HIQ
+  #+end_src
+  - When you open audio files in Ableton it automatically analyzes them
+  - Stores analysis data in .asd files including loop/transient
+    points, BPM, KEY, etc
 * Linux Sampler
 :PROPERTIES:
 :ID:       3364b5d7-d09c-4cba-97cf-0fb3d08a8e03
@@ -59,7 +110,7 @@ Music Player Daemon
 :EDGES:
 [2025-03-23 Sun 21:04] -- [[https://github.com/milkytracker/MilkyTracker][GitHub - milkytracker/MilkyTracker: A Fasttracker II compatible music editor]]
 :END:
-* Renoise
+* Renoise                                                               :daw:
 :PROPERTIES:
 :ID:       c0a50a82-a1bb-4dc6-a0f8-6191701ae69e
 :CREATED:  <2025-03-23 Sun 20:57>
@@ -77,6 +128,17 @@ Music Player Daemon
 [2025-03-23 Sun 20:57] -- [[https://image-line.com][home]]
 :END:
 Fruity Loops
+* Picard                                                              :music:
+:PROPERTIES:
+:ID:       d52e885a-ce1f-48b4-a111-73c04dcf7d3d
+:CREATED:  <2025-04-05 Sat 20:57>
+:END:
+:EDGES:
+[2025-04-05 Sat 20:58] -- [[https://github.com/metabrainz/picard-docs/blob/master/tag_mapping.py][docs]]
+[2025-04-05 Sat 20:59] -- [[https://picard.musicbrainz.org/][MusicBrainz Picard]]
+:END:
+- [[gh:metabrainz/picard-docs/blob/master/tag_mapping.py][tag_mapping.py]]
+
 * OpenMPT                                                               :win:
 :PROPERTIES:
 :ID:       2db1be6b-196a-4ba4-ba3d-c3440d314762

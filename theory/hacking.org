@@ -32,3 +32,19 @@ laptop.
 :ID:       2ab524ef-e77e-4482-b563-123b556f431f
 :CREATED:  <2025-03-03 Mon 20:14>
 :END:
+* CTF
+:PROPERTIES:
+:ID:       85167c32-6e64-4689-81f0-85ddbea58be6
+:CREATED:  <2025-04-06 Sun 17:41>
+:END:
+Cature the Flag hacking challenges and competitions
+- [[https://ctf101.org/][CTF Handbook]]
+* Exploitation
+:PROPERTIES:
+:ID:       86c6d5f6-4212-4def-8d24-ad872d73b55b
+:CREATED:  <2025-04-06 Sun 17:42>
+:END:
+Exploits are flaws in computer systems which can be leveraged.
+- [[https://guyinatuxedo.github.io/index.html][Nightmare intro course]]
+- [[https://github.com/shellphish/how2heap/tree/master][shellphish/how2heap]]
+- [[https://www.usenix.org/system/files/usenixsecurity24-guo-yanan.pdf][GPU Memory Exploitation for Fun and Profit]]

@@ -38,7 +38,7 @@ intuitive interface.
 + [[https://www.mercurial-scm.org/guide][guide]]
 + [[https://mozilla-version-control-tools.readthedocs.io/en/latest/index.html][mozilla tools]]
 + [[https://www.mercurial-scm.org/wiki/RepositoryCorruption][dealing with corruption]]
-
++ [[https://wiki.mercurial-scm.org/UnderstandingMercurial][understanding mercurial]]
 - Why Mercurial?
   [[https://git-scm.com/][Git]] and [[https://www.mercurial-scm.org/][Mercurial]] are two different tools with the same job, it has just been my
   experience that Mercurial does them a little bit better for my workflow, and I am able

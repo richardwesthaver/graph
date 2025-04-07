@@ -38,6 +38,7 @@
 :EDGES:
 [2025-03-02 Sun 21:19] -- [[https://www.cs.virginia.edu/~evans/cs216/guides/x86.html][Guide to x86 Assembly]]
 [2025-03-03 Mon 14:38] -- [[https://en.wikipedia.org/wiki/X86_instruction_listings][x86 instruction listings - Wikipedia]]
+[2025-04-06 Sun 17:52] -- [[https://en.wikipedia.org/wiki/X86_calling_conventions][x86 calling conventions - Wikipedia]]
 :END:
 *** x86_64                                                           :x86_64:
 :PROPERTIES:

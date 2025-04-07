@@ -81,6 +81,12 @@ system, but the code available has some goodies (json/nlp/etc)
 #+begin_quote
 A Fast, Easy and Free Bittorrent Client For macOS, Windows and Linux
 #+end_quote
+
+- As of [2025-04-06 Sun] the documentation is under construction, but good enough to get the gist
+- [[https://github.com/transmission/transmission/blob/main/docs/rpc-spec.md][rpc-spec]]
+- [[https://github.com/transmission/transmission/blob/main/docs/Peer-ID-and-User-Agent.md][peer id and user-agent]]
+- [[https://github.com/transmission/transmission/blob/main/docs/Configuration-Files.md][config files]]
+- [[https://github.com/transmission/transmission/blob/main/docs/Scripts.md][scripts]]
 * Web Server                                                            :srv:
 :PROPERTIES:
 :ID:       f7a60f4c-2aa4-4330-95bb-7077ab534258

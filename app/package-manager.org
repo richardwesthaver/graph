@@ -46,3 +46,13 @@ Dandified YUM
 :EDGES:
 [2025-03-04 Tue 15:54] -- [[https://docs.alpinelinux.org/user-handbook/0.1a/Working/apk.html][Working with the Alpine Package Keeper (apk) - Alpine Linux Documentation]]
 :END:
+* Flatpak
+:PROPERTIES:
+:ID:       8907d7fd-ae27-4a36-b7f0-3b3a8e6745c9
+:CREATED:  <2025-04-06 Sun 17:55>
+:END:
+:EDGES:
+[2025-04-06 Sun 17:55] -- [[https://flatpak.org/][Flatpak—the future of application distribution]]
+:END:
+- cross-Linux distro package manager
+- sandboxed

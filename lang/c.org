@@ -38,6 +38,28 @@ compared to C)
 :EDGES:
 [2025-03-07 Fri 12:32] -- [[info:libc][info]]
 :END:
+- [[https://man7.org/linux/man-pages/man3/system.3.html][system(3) - Linux manual page]]
+- [[https://man7.org/linux/man-pages/man3/execl.3.html][exec(3) - Linux manual page]]
+- [[https://man7.org/linux/man-pages/man2/sbrk.2.html][brk(2) - Linux manual page]]
+- [[https://man7.org/linux/man-pages/man2/mmap.2.html][mmap(2) - Linux manual page]]
+*** glibc
+:PROPERTIES:
+:ID:       1770afe7-1224-486b-bd35-2c24bb526ba7
+:CREATED:  <2025-04-06 Sun 17:47>
+:END:
+:EDGES:
+[2025-04-06 Sun 17:47] -- [[https://www.gnu.org/software/libc/][The GNU C Library - GNU Project - Free Software Foundation]]
+:END:
+The GNU C Library
+**** malloc
+:PROPERTIES:
+:ID:       e9bb191e-5226-4bff-b2ea-94716dac48e7
+:CREATED:  <2025-04-06 Sun 17:50>
+:END:
+:EDGES:
+[2025-04-06 Sun 17:51] -- [[https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/][Understanding glibc malloc – sploitF-U-N]]
+:END:
+
 *** nostd
 :PROPERTIES:
 :ID:       c7e3f469-f1c9-4b9f-a104-72ae91abab21
