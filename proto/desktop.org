@@ -63,6 +63,19 @@ The X Window System and the X.Org project.
 :EDGES:
 [2025-03-03 Mon 17:37] -- [[https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/master/randrproto.txt?ref_type=heads][randrproto.txt · master · xorg / proto / xorgproto]]
 :END:
+** Xterm
+:PROPERTIES:
+:ID:       0e881b59-dc08-4a50-bef3-f5e98b7a7b07
+:CREATED:  <2025-04-11 Fri 21:29>
+:END:
+*** Control Sequences
+:PROPERTIES:
+:ID:       77036a2b-8429-4ff0-97b0-d79166ec4028
+:CREATED:  <2025-04-11 Fri 21:29>
+:END:
+:EDGES:
+[2025-04-11 Fri 21:29] -- [[https://www.xfree86.org/4.8.0/ctlseqs.html][Xterm Control Sequences]]
+:END:
 ** XCB
 :PROPERTIES:
 :ID:       eabb4e88-738d-42d2-986d-e5ffdd4c6fb5

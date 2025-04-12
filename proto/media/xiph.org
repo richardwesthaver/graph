@@ -1,0 +1,50 @@
+#+title: Xiph.Org Media Formats
+#+setupfile: ../../../clean.theme
+* Xiph.Org
+:PROPERTIES:
+:ID:       baeb9eb2-4a29-48c8-ab6b-08d6435b3dfb
+:CREATED:  <2025-04-07 Mon 17:08>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:12] -- [[https://www.xiph.org/][Xiph.org]]
+:END:
+** FLAC
+:PROPERTIES:
+:ID:       4c24558c-d32f-4509-8ce2-ac8293664258
+:CREATED:  <2025-04-07 Mon 17:08>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:10] -- [[https://xiph.org/flac/][FLAC - What is FLAC?]]
+:END:
+** Ogg
+:PROPERTIES:
+:ID:       d903a0ad-3935-417f-ba42-2bc4b11032ed
+:CREATED:  <2025-04-07 Mon 17:08>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:11] -- [[https://www.xiph.org/ogg/][Xiph.org: Ogg]]
+:END:
+*** Ogg Metadata
+:PROPERTIES:
+:ID:       69073a0b-8da4-47aa-af0b-f068996c96d5
+:CREATED:  <2025-04-07 Mon 17:09>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:11] -- [[https://wiki.xiph.org/Metadata][Metadata - XiphWiki]]
+:END:
+** Vorbis
+:PROPERTIES:
+:ID:       f4ea47bc-df51-43e6-9cfb-ae654f89ecc0
+:CREATED:  <2025-04-07 Mon 17:08>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:10] -- [[https://xiph.org/vorbis/][Xiph.org]]
+:END:
+** Opus
+:PROPERTIES:
+:ID:       22f5eda2-007f-43f7-8924-10f551dd440a
+:CREATED:  <2025-04-07 Mon 17:09>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:09] -- [[https://opus-codec.org/][Opus Codec]]
+:END:

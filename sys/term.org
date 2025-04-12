@@ -1,0 +1,27 @@
+#+title: Terminals
+* Terminal
+:PROPERTIES:
+:ID:       b5f81528-c53c-49f2-b1c4-68d886b65408
+:CREATED:  <2025-04-11 Fri 21:32>
+:END:
+** TTY
+:PROPERTIES:
+:ID:       a9f72c53-352f-4856-a910-3664ce020e2a
+:CREATED:  <2025-04-11 Fri 21:34>
+:END:
+:EDGES:
+[2025-04-11 Fri 21:34] -- [[wikipedia:Teleprinter][wiki]]
+:END:
+[[man:stty][man:stty]]
+- raw mode
+  - no easy way to set it, achieved by setting off a bunch of flags
+- default = *canonical mode*, aka /cooked mode/
+- [[https://linux.die.net/man/3/tcgetattr][tcgetattr]]/[[https://linux.die.net/man/3/tcsetattr][tcsetattr]]
+** terminfo
+:PROPERTIES:
+:ID:       39f3feb3-7fb0-437d-8589-78d2cf4fda31
+:CREATED:  <2025-04-11 Fri 21:40>
+:END:
+:EDGES:
+[2025-04-11 Fri 21:40] -- [[man:terminfo][man]]
+:END:

@@ -1,1 +1,2 @@
 #+title: UNIX Specification
+#+setupfile: ../../clean.theme

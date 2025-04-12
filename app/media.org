@@ -147,3 +147,14 @@ Fruity Loops
 :EDGES:
 [2025-03-23 Sun 21:07] -- [[https://openmpt.org/][OpenMPT - Discover the music inside... | OpenMPT - Open ModPlug Tracker]]
 :END:
+
+* FFmpeg
+:PROPERTIES:
+:ID:       0df3a71a-f52b-4789-ae0c-ead38fb5ca35
+:CREATED:  <2025-04-07 Mon 19:27>
+:END:
+:EDGES:
+[2025-04-07 Mon 19:28] -- [[https://ffmpeg.org/][FFmpeg]]
+[2025-04-07 Mon 19:29] -- [[https://trac.ffmpeg.org/][FFmpeg Bug Tracker and Wiki]]
+[2025-04-07 Mon 19:30] -- [[https://ffmpeg.org/documentation.html][docs]]
+:END:

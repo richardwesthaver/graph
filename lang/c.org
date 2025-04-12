@@ -89,6 +89,12 @@ Information about compiling /without/ libc.
   }
 #+end_src
 
+** Articles
+:PROPERTIES:
+:ID:       ffb7ba79-a805-43b3-b304-0575005e19e1
+:CREATED:  <2025-04-11 Fri 21:28>
+:END:
+- [[https://viewsourcecode.org/snaptoken/kilo/index.html][Build Your Own Text Editor]]
 ** Libraries
 :PROPERTIES:
 :ID:       b0ff5843-38de-4bd9-800a-728391dafc02

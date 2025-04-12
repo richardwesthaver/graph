@@ -11,3 +11,12 @@
 [2025-03-03 Mon 16:28] -- [[info:notmuch][info]]
 :END:
 - [[https://notmuchmail.org/news/][News]]
+* Stalwart
+:PROPERTIES:
+:ID:       e95ceedd-8aa4-4084-bc32-2b91d1fd4f24
+:CREATED:  <2025-04-12 Sat 15:50>
+:END:
+:EDGES:
+[2025-04-12 Sat 15:50] -- [[https://stalw.art/][Stalwart Mail Server]]
+:END:
+- [[https://stalw.art/docs][docs]]

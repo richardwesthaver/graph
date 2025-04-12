@@ -1,0 +1,8 @@
+#+title: ISO
+#+setupfile: ../../clean.theme
+* ISO
+:PROPERTIES:
+:ID:       c0578a29-1c02-4bc9-8396-8ed5f637078a
+:CREATED:  <2025-04-12 Sat 14:40>
+:END:
+International Organization for Standardization

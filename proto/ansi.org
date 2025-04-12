@@ -1,0 +1,24 @@
+#+title: ANSI
+#+setupfile: ../../clean.theme
+* ANSI
+:PROPERTIES:
+:ID:       f9cab5e9-cd23-4ee3-b6f8-75d33257e4c9
+:CREATED:  <2025-04-11 Fri 21:24>
+:END:
+:EDGES:
+[2025-04-11 Fri 21:24] -- [[wikipedia:American_National_Standards_Institute][wiki]]
+:END:
+American National Standards Institute
+** Escape Sequences
+:PROPERTIES:
+:ID:       701737e0-2f23-48d6-98e3-316d472213c9
+:CREATED:  <2025-04-11 Fri 21:26>
+:END:
+:EDGES:
+[2025-04-11 Fri 21:26] -- [[wikipedia:ANSI_escape_code][wiki]]
+:END:
+- ANSI X3.64 
+- ECMA 48 
+- ISO/IEC 6429 
+- VT10X 
+- XTerm

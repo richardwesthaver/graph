@@ -1,0 +1,35 @@
+#+title: Matroska File Format
+#+setupfile: ../../../clean.theme
+* Matroska
+:PROPERTIES:
+:ID:       fe84eed7-478b-41b3-99ed-a2dac53e13e4
+:CREATED:  <2025-04-05 Sat 14:30>
+:END:
+:EDGES:
+[2025-04-05 Sat 14:30] -- [[https://www.matroska.org/][Matroska Media Container Homepage]]
+[2025-04-07 Mon 17:13] -- [[https://datatracker.ietf.org/doc/rfc9559/][RFC 9559 - Matroska Media Container Format Specification]]
+:END:
+- libmatroska/libebml are the C++ libraries used in the standard applications
+- libmatroska2/libebml2 are the low-level C libraries
+- https://www.matroska.org/technical/notes.html
+- [[https://github.com/ietf-wg-cellar/matroska-specification][ietf-wg-cellar/matroska-specification]]
+- [[https://datatracker.ietf.org/wg/cellar/charter/][Codec Encoding for LossLess Archiving and Realtime transmission (cellar)]]
+** EBML
+:PROPERTIES:
+:ID:       8c02db6e-9d72-4c4b-be22-01c279b2532b
+:CREATED:  <2025-04-07 Mon 17:13>
+:END:
+:EDGES:
+[2025-04-07 Mon 17:13] -- [[https://www.rfc-editor.org/rfc/rfc8794.html][RFC 8794: Extensible Binary Meta Language]]
+:END:
+Extensible Binary Meta Language
+** MKA
+:PROPERTIES:
+:ID:       a1270838-1777-428e-89eb-513e3f86c63c
+:CREATED:  <2025-04-12 Sat 17:28>
+:END:
+** MKV
+:PROPERTIES:
+:ID:       a4b8ed28-0e02-48c0-bd2b-fc05b05361d2
+:CREATED:  <2025-04-12 Sat 17:28>
+:END:

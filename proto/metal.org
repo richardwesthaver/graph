@@ -1,4 +1,5 @@
 #+title: (Bare) Metal Protocols
+#+setupfile: ../../clean.theme
 * UEFI                                                                 :uefi:
 :PROPERTIES:
 :ID:       533c2390-63c9-4cac-b0ff-2e7e93b4c60f

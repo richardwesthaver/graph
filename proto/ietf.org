@@ -1,0 +1,38 @@
+#+title: IETF
+#+setupfile: ../../clean.theme
+* IETF                                                                 :ietf:
+:PROPERTIES:
+:ID:       5289575f-f017-487e-9a42-5474b1688023
+:CREATED:  <2025-04-12 Sat 17:44>
+:END:
+:EDGES:
+[2025-04-12 Sat 17:45] -- [[https://ietf.org/][IETF | Internet Engineering Task Force]]
+:END:
+Internet Engineering Task Force
+- [[https://www.ietf.org/process/][IETF | Process]]
+** RFC                                                                  :rfc:
+:PROPERTIES:
+:ID:       3c8002da-be9e-4ab3-bb78-4bed103c87d9
+:CREATED:  <2025-04-12 Sat 17:46>
+:END:
+:EDGES:
+[2025-04-12 Sat 17:46] -- [[https://www.ietf.org/process/rfcs/][IETF | RFCs]]
+:END:
+** BOF
+:PROPERTIES:
+:ID:       c037e608-0dc9-410f-9891-a6a1fc9356b8
+:CREATED:  <2025-04-12 Sat 17:47>
+:END:
+:EDGES:
+[2025-04-12 Sat 17:47] -- [[https://www.ietf.org/process/bofs/][IETF | Birds of a Feather]]
+:END:
+Birds of a Feather sessions
+** IANA                                                                :iana:
+:PROPERTIES:
+:ID:       b1ade942-68e7-4bb3-8134-cd256ad5a428
+:CREATED:  <2025-04-12 Sat 17:47>
+:END:
+:EDGES:
+[2025-04-12 Sat 17:48] -- [[https://www.ietf.org/process/iana/][IETF | Internet Assigned Numbers Authority (IANA) functions]]
+:END:
+Internet Assigned Numbers Authority
