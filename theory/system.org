@@ -34,6 +34,14 @@ systems interconnection.'
 :ID:       ae2eadd2-e305-44b4-bff3-952aa09d2943
 :CREATED:  <2025-02-26 Wed 20:45>
 :END:
+** Bootstrappable
+:PROPERTIES:
+:ID:       3a641c7c-5532-483a-b64f-c0b401970a5d
+:CREATED:  <2025-04-16 Wed 20:26>
+:END:
+:EDGES:
+[2025-04-16 Wed 20:26] -- [[https://bootstrappable.org/][Bootstrappable builds]]
+:END:
 ** Von Neumann Machine
 :PROPERTIES:
 :ID:       0e6b0635-a1ed-41ff-9129-a2e72461dc0b

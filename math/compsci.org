@@ -8,13 +8,21 @@
 :EDGES:
 [2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Theory_of_computation][Theory of computation - Wikipedia]]
 [2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Theoretical_computer_science][Theoretical computer science - Wikipedia]]
+** Pipeline
+:PROPERTIES:
+:ID:       9c7d2d15-6d29-46d2-b6e9-e6b3670a6079
+:CREATED:  <2025-04-14 Mon 20:43>
+:END:
+:EDGES:
+[2025-04-14 Mon 20:43] -- [[wikipedia:Pipeline (computing)][wiki]]
+[2025-04-15 Tue 15:08] -> [[id:a24e5fac-1d67-4a47-99b6-c7aefa11644c][GStreamer]]
+:END:
 
 ** Data Structure
 :PROPERTIES:
 :ID:       956cb941-dd29-4b70-b0f7-53ad71362ed0
 :CREATED:  <2025-02-28 Fri 19:19>
 :END:
-
 *** Array
 :PROPERTIES:
 :ID:       825b2467-a397-4fcc-83b6-c3397e9cc091
@@ -22,8 +30,8 @@
 :END:
 :EDGES:
 [2025-02-28 Fri 19:20] -- [[https://en.wikipedia.org/wiki/Array_(data_structure)][Array (data structure) - Wikipedia]]
+[2025-04-15 Tue 15:07] -> [[id:eee94cd6-7a01-4bf1-8029-f98ba665e0b4][APL]]
 :END:
-
 *** Tree
 :PROPERTIES:
 :ID:       1e7845bb-a065-4e43-860b-6974ab9bbd5d
@@ -32,7 +40,6 @@
 :EDGES:
 [2025-03-03 Mon 20:49] -- [[https://en.wikipedia.org/wiki/Tree_(abstract_data_type)][Tree (abstract data type) - Wikipedia]]
 :END:
-
 **** k-d tree
 :PROPERTIES:
 :ID:       91c3a4e5-b6c4-49e7-8b6e-eac6e88e0b67
@@ -42,6 +49,35 @@
 [2025-03-03 Mon 20:50] -- [[https://en.wikipedia.org/wiki/K-d_tree][k-d tree - Wikipedia]]
 :END:
 - [[https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf][kd-Trees: CMSC 420]]
+**** LSM Tree
+:PROPERTIES:
+:ID:       03324c5d-0caa-493c-993a-175cb3c9548e
+:CREATED:  <2025-04-15 Tue 15:02>
+:END:
+:EDGES:
+[2025-04-15 Tue 15:02] -- [[wikipedia:Log-structured merge-tree][wiki]]
+[2025-04-15 Tue 15:04] -> [[id:b569a646-de4c-4287-8599-52b237a753b4][RocksDB]]
+[2025-04-15 Tue 15:05] -> [[id:4240d8d8-a646-4372-8bb5-37d029b325c2][B+ Tree]]
+:END:
+**** B Tree
+:PROPERTIES:
+:ID:       6dcb49d0-45e6-4c81-8299-d03ccdaf1633
+:CREATED:  <2025-04-14 Mon 19:10>
+:END:
+:EDGES:
+[2025-04-14 Mon 19:10] -- [[wikipedia:B-tree][wiki]]
+:END:
+- [[https://apps.state.or.us/tech/berkeleyDB/ref/am_conf/bt_compare.html][Berkeley DB Reference Guide: Btree comparison]]
+- [[https://docs.oracle.com/cd/E17275_01/html/gsg/C/btree.html][BTree Configuration]]
+***** B+ Tree
+:PROPERTIES:
+:ID:       4240d8d8-a646-4372-8bb5-37d029b325c2
+:CREATED:  <2025-04-14 Mon 19:10>
+:END:
+:EDGES:
+[2025-04-14 Mon 19:11] -- [[wikipedia:B+ tree][wiki]]
+[2025-04-15 Tue 15:05] <- [[id:03324c5d-0caa-493c-993a-175cb3c9548e][LSM Tree]]
+:END:
 ** Automata Theory
 :PROPERTIES:
 :ID:       6eeab81b-c95c-4991-9e0a-d3c565dc800d

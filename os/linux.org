@@ -381,6 +381,16 @@ Linux Distributions
 :END:
 - RHEL is based on Fedora
   - RH has influence over roadmap
+*** bootc
+:PROPERTIES:
+:ID:       101c2239-6e98-4899-b552-17e8ae9c55c8
+:CREATED:  <2025-04-16 Wed 18:52>
+:END:
+:EDGES:
+[2025-04-16 Wed 18:52] -- [[https://docs.fedoraproject.org/en-US/bootc/][Fedora/CentOS bootc Documentation :: Fedora Docs]]
+[2025-04-16 Wed 18:55] -- [[https://bootc-dev.github.io/bootc/][bootc-dev]]
+:END:
+- [[https://gitlab.com/fedora/bootc/tracker/-/issues/32][Supportable customizable base images (#32) · Issues · fedora / bootc / Issue Tracker · GitLab]]
 **** CoreOS
 :PROPERTIES:
 :ID:       ca6795ee-4b2c-4ec3-9bdc-f6be67c2f1ec

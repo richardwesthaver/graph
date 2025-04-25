@@ -18,5 +18,6 @@
 :END:
 :EDGES:
 [2025-04-12 Sat 15:50] -- [[https://stalw.art/][Stalwart Mail Server]]
+[2025-04-15 Tue 15:52] <- [[id:1cf5b67e-e476-48a9-9560-7e0d49de9768][JMAP]]
 :END:
 - [[https://stalw.art/docs][docs]]

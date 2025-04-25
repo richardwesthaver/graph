@@ -8,4 +8,5 @@
 :EDGES:
 [2025-02-13 Thu 22:48] -- [[https://gpuweb.github.io/gpuweb/][WebGPU]]
 [2025-02-13 Thu 22:48] -- [[https://sotrh.github.io/learn-wgpu/][Learn Wgpu]]
+[2025-04-15 Tue 15:46] -> [[id:05a6ae25-b2ed-4edb-9104-e6894819b96e][GPU]]
 :END:

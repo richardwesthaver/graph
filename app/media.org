@@ -9,6 +9,15 @@
 [2025-03-22 Sat 20:58] -- [[https://mpd.readthedocs.io/en/latest/][docs]]
 :END:
 Music Player Daemon
+* MPV                                                                 :video:
+:PROPERTIES:
+:ID:       349e75df-c3e3-4c1d-90e0-161e014ecaff
+:CREATED:  <2025-04-18 Fri 19:31>
+:END:
+:EDGES:
+[2025-04-18 Fri 19:32] -- [[archwiki:Mpv][archwiki]]
+:END:
+A Media player based on [[https://wiki.archlinux.org/title/MPlayer][MPlayer]] and the unmaintained mplayer2
 * Bitwig Studio                                                         :daw:
 :PROPERTIES:
 :ID:       dce6eee4-1b5e-46b0-bc16-36803e3ca410
@@ -76,7 +85,7 @@ FADE; LOCK; NAME; SYNC; ONSETS; HIQ
   - When you open audio files in Ableton it automatically analyzes them
   - Stores analysis data in .asd files including loop/transient
     points, BPM, KEY, etc
-* Linux Sampler
+* Linux Sampler                                                       :music:
 :PROPERTIES:
 :ID:       3364b5d7-d09c-4cba-97cf-0fb3d08a8e03
 :CREATED:  <2025-03-23 Sun 20:40>
@@ -84,7 +93,7 @@ FADE; LOCK; NAME; SYNC; ONSETS; HIQ
 :EDGES:
 [2025-03-23 Sun 20:40] -- [[https://www.linuxsampler.org/][The Linux Sampler Project]]
 :END:
-* Schism Tracker
+* Schism Tracker                                                      :music:
 :PROPERTIES:
 :ID:       c2070931-d7b2-4967-8839-a34fc07b740f
 :CREATED:  <2025-03-23 Sun 20:53>
@@ -148,7 +157,17 @@ Fruity Loops
 [2025-03-23 Sun 21:07] -- [[https://openmpt.org/][OpenMPT - Discover the music inside... | OpenMPT - Open ModPlug Tracker]]
 :END:
 
-* FFmpeg
+* GStreamer                                                     :audio:video:
+:PROPERTIES:
+:ID:       a24e5fac-1d67-4a47-99b6-c7aefa11644c
+:CREATED:  <2025-04-14 Mon 21:18>
+:END:
+:EDGES:
+[2025-04-14 Mon 21:19] -- [[https://gstreamer.freedesktop.org/][GStreamer: open source multimedia framework]]
+[2025-04-15 Tue 15:08] <- [[id:9c7d2d15-6d29-46d2-b6e9-e6b3670a6079][Pipeline]]
+:END:
+
+* FFmpeg                                                        :audio:video:
 :PROPERTIES:
 :ID:       0df3a71a-f52b-4789-ae0c-ead38fb5ca35
 :CREATED:  <2025-04-07 Mon 19:27>

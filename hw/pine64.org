@@ -1,0 +1,19 @@
+#+title: PINE64
+#+setupfile: ../../clean.theme
+* PINE64
+:PROPERTIES:
+:ID:       5271a4ad-b01c-4f3b-ab23-24a321bb3d30
+:CREATED:  <2025-04-15 Tue 16:00>
+:END:
+:EDGES:
+[2025-04-15 Tue 16:00] -- [[https://pine64.org/][PINE64]]
+:END:
+** PinePhone Pro
+:PROPERTIES:
+:ID:       7a6c02e7-88db-4de1-ad62-3a48717dfe5d
+:CREATED:  <2025-04-15 Tue 16:01>
+:END:
+:EDGES:
+[2025-04-15 Tue 16:01] -- [[https://pine64.org/devices/pinephone_pro/][PinePhone Pro - PINE64]]
+[2025-04-15 Tue 16:01] -- [[https://pine64.org/documentation/PinePhone_Pro/][docs]]
+:END:

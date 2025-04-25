@@ -14,6 +14,38 @@
 - https://www.matroska.org/technical/notes.html
 - [[https://github.com/ietf-wg-cellar/matroska-specification][ietf-wg-cellar/matroska-specification]]
 - [[https://datatracker.ietf.org/wg/cellar/charter/][Codec Encoding for LossLess Archiving and Realtime transmission (cellar)]]
+- [[https://www.matroska.org/technical/diagram.html][Data Layout]]
+** Tagging
+:PROPERTIES:
+:ID:       25692e81-f783-4706-9066-f30c13cd212f
+:CREATED:  <2025-04-15 Tue 15:13>
+:END:
+:EDGES:
+[2025-04-15 Tue 15:13] -- [[https://www.matroska.org/technical/tagging.html][Tags]]
+:END:
+#+begin_quote
+The TargetType element allows tagging of different parts that are
+inside or outside a given file. For example, in an audio file with one
+song you could have information about the album it comes from and even
+the CD set even if it’s not found in the file.
+
+For application to know what kind of information (like TITLE) relates
+to a certain level (CD title or track title), we also need a set of
+official TargetType names. For now audio and video will have different
+values & names. That also means the same tag name can have different
+meanings depending on where it is (otherwise we would end up with 15
+TITLE_ tags).
+#+end_quote
+
+| TargetTypeValue | Audio strings                   | Video strings             | Comment                                                                                |
+|              70 | COLLECTION                      | COLLECTION                | the high hierarchy consisting of many different lower items                            |
+|              60 | EDITION / ISSUE / VOLUME / OPUS | SEASON / SEQUEL / VOLUME  | a list of lower levels grouped together                                                |
+|              50 | ALBUM / OPERA / CONCERT         | MOVIE / EPISODE / CONCERT | the most common grouping level of music and video (equals to an episode for TV series) |
+|              40 | PART / SESSION                  | PART / SESSION            | when an album or episode has different logical parts                                   |
+|              30 | TRACK / SONG                    | CHAPTER                   | the common parts of an album or a movie                                                |
+|              20 | SUBTRACK / PART / MOVEMENT      | SCENE                     | corresponds to parts of a track for audio (like a movement)                            |
+|              10 | -                               | SHOT                      | the lowest hierarchy found in music or movies                                          |
+
 ** EBML
 :PROPERTIES:
 :ID:       8c02db6e-9d72-4c4b-be22-01c279b2532b
@@ -21,6 +53,7 @@
 :END:
 :EDGES:
 [2025-04-07 Mon 17:13] -- [[https://www.rfc-editor.org/rfc/rfc8794.html][RFC 8794: Extensible Binary Meta Language]]
+[2025-04-15 Tue 15:10] -> [[id:c73d296a-47fe-4769-9802-86cac8a86090][XML]]
 :END:
 Extensible Binary Meta Language
 ** MKA
@@ -28,8 +61,10 @@ Extensible Binary Meta Language
 :ID:       a1270838-1777-428e-89eb-513e3f86c63c
 :CREATED:  <2025-04-12 Sat 17:28>
 :END:
+Audio container format
 ** MKV
 :PROPERTIES:
 :ID:       a4b8ed28-0e02-48c0-bd2b-fc05b05361d2
 :CREATED:  <2025-04-12 Sat 17:28>
 :END:
+Video container format

@@ -5,6 +5,9 @@
 :ID:       eee94cd6-7a01-4bf1-8029-f98ba665e0b4
 :CREATED:  <2025-02-16 Sun 20:37>
 :END:
+:EDGES:
+[2025-04-15 Tue 15:07] <- [[id:825b2467-a397-4fcc-83b6-c3397e9cc091][Array]]
+:END:
 - APL is the OG array PL
   - inspired many other modern languages and concept models from
     spreadsheets to functional to DSLs.

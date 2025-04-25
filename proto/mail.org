@@ -16,7 +16,9 @@
 :EDGES:
 [2025-03-03 Mon 16:53] -- [[https://jmap.io/][JSON Meta Application Protocol Specification (JMAP)]]
 [2025-03-03 Mon 16:53] -- [[https://datatracker.ietf.org/group/jmap/about/][JSON Mail Access Protocol (jmap)]]
+[2025-04-15 Tue 15:52] -> [[id:e95ceedd-8aa4-4084-bc32-2b91d1fd4f24][Stalwart]]
 :END:
+
 * IMAP
 :PROPERTIES:
 :ID:       3bdc7566-668c-4332-8684-7cfdbcd71c8f

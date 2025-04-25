@@ -74,3 +74,11 @@ acyclic, etc)
 [2025-03-03 Mon 17:00] -- [[https://en.wikipedia.org/wiki/Elliptic_curve][Elliptic curve - Wikipedia]]
 [2025-03-03 Mon 17:01] << [[id:5add36a0-129f-466c-b493-b34aee8b99a6][ECC]]
 :END:
+* Tree
+:PROPERTIES:
+:ID:       9fffae3b-e504-46a3-8f30-9f47a00ec5ba
+:CREATED:  <2025-04-14 Mon 19:09>
+:END:
+:EDGES:
+[2025-04-14 Mon 19:09] -- [[wikipedia:Tree_(abstract_data_type)][wiki]]
+:END:

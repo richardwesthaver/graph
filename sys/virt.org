@@ -33,6 +33,14 @@ the host.
 [2025-01-18 Sat 19:57] -- [[https://opencontainers.org/][Open Container Initiative - Open Container Initiative]]
 [2025-01-18 Sat 20:41] << [[id:89199dcd-fabd-4952-b5e9-1b3ffaf06e6b][Podman]]
 :END:
+** Containerfile
+:PROPERTIES:
+:ID:       0d6ae769-8e04-4209-b34e-07ba8c9352ff
+:CREATED:  <2025-04-16 Wed 18:35>
+:END:
+- [[https://danishpraka.sh/posts/build-a-container-image-from-scratch/][Build a Container Image from Scratch]]
+  - container images are a 'filesystem changeset'
+    - A filesystem changeset is a diff between two filesystems serialized as a tar archive
 ** Docker
 :PROPERTIES:
 :ID:       c7733e64-1370-4586-94e1-dfad81080160

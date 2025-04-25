@@ -333,6 +333,24 @@ Virtual Operations
       gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
       the efficiency of stable code.
 #+end_quote
+**** Inlining
+#+begin_src lisp
+  ;;; An INLINEP value describes how a function is called. The values
+  ;;; have these meanings:
+  ;;;     NIL     No declaration seen: do whatever you feel like, but don't
+  ;;;             dump an inline expansion.
+  ;;; NOTINLINE  NOTINLINE declaration seen: always do full function call.
+  ;;;    INLINE  INLINE declaration seen: save expansion, expanding to it
+  ;;;             if policy favors.
+  ;;; MAYBE-INLINE
+  ;;;             Retain expansion, but only use it opportunistically.
+  ;;;             MAYBE-INLINE is quite different from INLINE. As explained
+  ;;;             by APD on #lisp 2005-11-26: "MAYBE-INLINE lambda is
+  ;;;             instantiated once per component, INLINE - for all
+  ;;;             references (even under #'without FUNCALL)."
+  (deftype inlinep () '(member inline maybe-inline notinline nil))
+#+end_src
+
 ** Tree Shaker
 :PROPERTIES:
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49
@@ -369,3 +387,12 @@ problem to design an effective tree-shaker.
     (:igmp ,sockint::ipproto_igmp "igmp" "IGMP")
     (:raw ,sockint::ipproto_raw "raw" "RAW")))
 #+end_src
+*** sb-cltl2
+:PROPERTIES:
+:ID:       d2269803-9084-4845-8860-047c37da36c7
+:CREATED:  <2025-04-23 Wed 15:21>
+:END:
+Deals with environments, closures, etc.
+
+- It seems that the =sb-kernel:closure= type applies to the result of
+  =sb-cltl2:enclose= - test with =sb-kernel:closurep=.

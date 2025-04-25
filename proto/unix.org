@@ -1,2 +1,21 @@
-#+title: UNIX Specification
+#+title: UNIX
 #+setupfile: ../../clean.theme
+* UNIX
+:PROPERTIES:
+:ID:       e7ca2d17-05fc-4262-a4ea-f6100f3b8b62
+:CREATED:  <2025-04-15 Tue 15:46>
+:END:
+:EDGES:
+[2025-04-15 Tue 15:48] -- [[wikipedia:Unix][wiki]]
+[2025-04-15 Tue 15:49] << [[id:ab57dccf-c9f3-4347-b9d0-5731904f3d67][Linux]]
+[2025-04-15 Tue 15:51] -- [[https://www.opengroup.org/membership/forums/platform/unix][The UNIX® Standard | www.opengroup.org]]
+:END:
+** SUS
+:PROPERTIES:
+:ID:       60ea3e74-f3fc-4a92-87fc-aaf62a8f532f
+:CREATED:  <2025-04-15 Tue 15:46>
+:END:
+:EDGES:
+[2025-04-15 Tue 15:47] -- [[wikipedia:Single UNIX Specification][wiki]]
+:END:
+Single UNIX Specification
