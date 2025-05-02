@@ -25,18 +25,18 @@ an interface for modifying the graph.
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+----------------------------------------------------|
-| name        | graph                                              |
-| version     | :version 0.1.0                                     |
-| description | :description CC Org Files                          |
-| skel-id     | :id 1784914079056115652                            |
-| root        | ~/comp/org/graph/                                  |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/93a60ddf8c3d][93a60ddf8c3d:58]] |
-| tags        | :tags (org docs notes blog meta plan)              |
-| updated     | Thu May 01 22:45:55 2025 -0400                     |
-| langs       | org                                                |
-| lines       | 8999 :λ 8622 :# 16 :_ 361                          |
-|-------------+----------------------------------------------------|
+|-------------+-----------------------------------------------------|
+| name        | graph                                               |
+| version     | :version 0.1.0                                      |
+| description | :description CC Org Files                           |
+| skel-id     | :id 1784914079056115652                             |
+| root        | ~/comp/org/graph/                                   |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/61b874edd191][61b874edd191:59+]] |
+| tags        | :tags (org docs notes blog meta plan)               |
+| updated     | Fri May 02 14:15:07 2025 -0400                      |
+| langs       | org                                                 |
+| lines       | 9000 :λ 8623 :# 16 :_ 361                           |
+|-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -45,13 +45,14 @@ an interface for modifying the graph.
 : 2025-02   4435 ***************************************
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
-: 2025-05     68 
+: 2025-05     99 
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
+| [[file:.][.]]                    | 2025-05-02 14:21:17 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-03-15 20:35:11 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
@@ -148,7 +149,6 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-04-15 15:46:17 |
-| [[file:.][.]]                    | 2025-04-30 22:26:56 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-04-15 15:05:02 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |

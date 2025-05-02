@@ -8,7 +8,9 @@
 :END:
 :EDGES:
 [2025-03-06 Thu 09:11] >> [[id:7f92b7d3-8c42-4d25-849d-58928bc12ebb][UNIX]]
+[2025-05-02 Fri 15:24] -- [[https://www.man7.org/linux/man-pages/man1/intro.1.html][intro(1)]]
 :END:
+:notes:
 At this point, I don't really care what the non-believers think - if
 you are *not* running GNU/Linux as your daily driver, you are
 wrong. Of course I understand the need to run dedicated Windows and
@@ -16,6 +18,20 @@ MacOS machines, when it is out of your control - say you have a
 Macbook or need to run it for %employer. No need to stress about
 that. But when you are given the opportunity - given a choice, you
 should pick whatever Linux-based OS suits your needs best.
+:end:
+** User Commands
+:PROPERTIES:
+:ID:       4e8a9455-f1ca-4654-8cfa-562735661d69
+:CREATED:  <2025-05-02 Fri 15:25>
+:END:
+#+begin_quote
+In order to start working, you'll probably first have to open a
+session.  The program login(1) will wait for you to type your username
+and password, and after that, it will start a shell (command
+interpreter) for you.  In case of a graphical login, you get a screen
+with menus or icons and a mouse click will start a shell in a window.
+See also xterm(1).
+#+end_quote
 ** Libraries
 :PROPERTIES:
 :ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
