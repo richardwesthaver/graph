@@ -17,7 +17,7 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 707 |
+| nodes | 708 |
 | edges | 555 |
 | files | 116 |
 
@@ -31,11 +31,11 @@ an interface for modifying the graph.
 | description | :description CC Org Files                           |
 | skel-id     | :id 1784914079056115652                             |
 | root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/75da64549b0e][75da64549b0e:56+]] |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/328f15151f74][328f15151f74:57+]] |
 | tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Thu Apr 24 21:40:29 2025 -0400                      |
+| updated     | Sun Apr 27 23:11:04 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 8945 :λ 8579 :# 16 :_ 350                           |
+| lines       | 8996 :λ 8620 :# 16 :_ 360                           |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -44,15 +44,15 @@ an interface for modifying the graph.
 : 2025-01    426 ***
 : 2025-02   4435 ***************************************
 : 2025-03   6923 *************************************************************
-: 2025-04   1859 ****************
+: 2025-04   1936 *****************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-04-27 16:01:58 |
-| [[file:.][.]]                    | 2025-04-26 23:51:56 |
+| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-04-28 18:13:50 |
+| [[file:.][.]]                    | 2025-04-27 23:17:59 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-03-15 20:35:11 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
