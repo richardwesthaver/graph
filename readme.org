@@ -25,18 +25,18 @@ an interface for modifying the graph.
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+-----------------------------------------------------|
-| name        | graph                                               |
-| version     | :version 0.1.0                                      |
-| description | :description CC Org Files                           |
-| skel-id     | :id 1784914079056115652                             |
-| root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/328f15151f74][328f15151f74:57+]] |
-| tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Sun Apr 27 23:11:04 2025 -0400                      |
-| langs       | org                                                 |
-| lines       | 8996 :λ 8620 :# 16 :_ 360                           |
-|-------------+-----------------------------------------------------|
+|-------------+----------------------------------------------------|
+| name        | graph                                              |
+| version     | :version 0.1.0                                     |
+| description | :description CC Org Files                          |
+| skel-id     | :id 1784914079056115652                            |
+| root        | ~/comp/org/graph/                                  |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/93a60ddf8c3d][93a60ddf8c3d:58]] |
+| tags        | :tags (org docs notes blog meta plan)              |
+| updated     | Thu May 01 22:45:55 2025 -0400                     |
+| langs       | org                                                |
+| lines       | 8999 :λ 8622 :# 16 :_ 361                          |
+|-------------+----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -45,14 +45,13 @@ an interface for modifying the graph.
 : 2025-02   4435 ***************************************
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
+: 2025-05     68 
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-04-28 18:13:50 |
-| [[file:.][.]]                    | 2025-04-27 23:17:59 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-03-15 20:35:11 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
@@ -67,6 +66,7 @@ an interface for modifying the graph.
 | [[file:comp/gcc.org][comp/gcc]]             | 2025-03-09 21:08:14 |
 | [[file:comp/ghc.org][comp/ghc]]             | 2025-02-21 22:34:46 |
 | [[file:comp/llvm.org][comp/llvm]]            | 2025-03-03 16:41:14 |
+| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-04-28 18:13:50 |
 | [[file:hw/amd.org][hw/amd]]               | 2025-03-03 11:47:33 |
 | [[file:hw/apple.org][hw/apple]]             | 2025-03-03 20:34:42 |
 | [[file:hw/car.org][hw/car]]               | 2025-02-21 22:34:16 |
@@ -97,7 +97,7 @@ an interface for modifying the graph.
 | [[file:lang/haskell.org][lang/haskell]]         | 2025-03-03 20:09:12 |
 | [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
 | [[file:lang/javascript.org][lang/javascript]]      | 2025-03-13 20:32:08 |
-| [[file:lang/lisp.org][lang/lisp]]            | 2025-03-14 23:21:07 |
+| [[file:lang/lisp.org][lang/lisp]]            | 2025-05-01 21:01:31 |
 | [[file:lang/python.org][lang/python]]          | 2025-02-21 22:33:53 |
 | [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
 | [[file:lang/rust.org][lang/rust]]            | 2025-03-16 19:07:43 |
@@ -148,6 +148,7 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-04-15 15:46:17 |
+| [[file:.][.]]                    | 2025-04-30 22:26:56 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-04-15 15:05:02 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
