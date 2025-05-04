@@ -9,6 +9,9 @@
 [2025-03-03 Mon 16:18] -- [[https://en.wikipedia.org/wiki/Terminal_emulator][Terminal emulator - Wikipedia]]
 :END:
 - [[https://en.wikipedia.org/wiki/Tty_(Unix)][tty (Unix) - Wikipedia]]
+- [[https://vt100.net/][Video Display Terminal Information]]
+- [[https://vt100.net/emu/][Terminal Emulation]]
+- [[https://viewsourcecode.org/snaptoken/kilo/03.rawInputAndOutput.html][raw-mode tutorial]]
 ** Alacritty
 :PROPERTIES:
 :ID:       b6cc9844-e152-4227-820d-d7d00c7381aa
