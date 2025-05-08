@@ -1,0 +1,19 @@
+#+title: Image File Formats
+#+setupfile: ../../../clean.theme
+* PNG
+:PROPERTIES:
+:ID:       589b5025-b95f-4271-806b-e6960c4fb0a0
+:CREATED:  <2025-05-05 Mon 18:16>
+:END:
+:EDGES:
+[2025-05-05 Mon 18:17] -- [[wikipedia:PNG][wiki]]
+:END:
+Portable Network Graphics, developed as an improvement to [[id:9fbe4894-4557-46c4-b602-99823bd2ea66][GIF]].
+* GIF
+:PROPERTIES:
+:ID:       9fbe4894-4557-46c4-b602-99823bd2ea66
+:CREATED:  <2025-05-05 Mon 18:17>
+:END:
+:EDGES:
+[2025-05-05 Mon 18:18] -- [[wikipedia:GIF][wiki]]
+:END:

@@ -33,14 +33,6 @@
 A link between vertices, often represented as a line optionally with
 arrows as allowed by the applicable graph model (directed, undirected,
 acyclic, etc)
-* Stack
-:PROPERTIES:
-:ID:       2b5b4c0a-c4e8-4d76-b71f-240d6707cb02
-:CREATED:  <2025-02-28 Fri 19:18>
-:END:
-:EDGES:
-[2025-02-28 Fri 19:18] -- [[https://en.wikipedia.org/wiki/Stack_(abstract_data_type)][Stack (abstract data type) - Wikipedia]]
-:END:
 * Linked List
 :PROPERTIES:
 :ID:       8805be63-567a-472d-a70c-6155ba2f3d02
@@ -74,6 +66,22 @@ acyclic, etc)
 [2025-03-03 Mon 17:00] -- [[https://en.wikipedia.org/wiki/Elliptic_curve][Elliptic curve - Wikipedia]]
 [2025-03-03 Mon 17:01] << [[id:5add36a0-129f-466c-b493-b34aee8b99a6][ECC]]
 :END:
+** Hilbert Curve
+:PROPERTIES:
+:ID:       67a3835e-7b81-4a16-9a79-c0673b4833f2
+:CREATED:  <2025-05-07 Wed 16:51>
+:END:
+:EDGES:
+[2025-05-07 Wed 16:52] -- [[wikipedia:Hilbert_curve][wiki]]
+:END:
+A popular type of /space-filling/ curve. Can be found in recursive and
+non-recursive variants. Used for mapping between 1d and 2d space while
+preserving locality fairly well.
+
+[[https://github.com/adishavit/hilbert/tree/master][adishavit/hilbert: Doug Moore's Fast Hilbert Curve Generation, Sorting, and Range Queries]]
+[[https://gist.github.com/axionbuster/ca88baa4039fdb8fbd86716e96424392][Efficient 3D Hilbert Curve Generation and Inverse (C99) · GitHub]]
+also in CL: [[https://github.com/Blue-Sky-Skunkworks/cl-ascii-art/blob/master/hilbert-space-filling-curve.lisp][cl-ascii-art/hilbert-space-filling-curve.lisp]]
+
 * Tree
 :PROPERTIES:
 :ID:       9fffae3b-e504-46a3-8f30-9f47a00ec5ba
@@ -81,4 +89,117 @@ acyclic, etc)
 :END:
 :EDGES:
 [2025-04-14 Mon 19:09] -- [[wikipedia:Tree_(abstract_data_type)][wiki]]
+:END:
+** k-d tree
+:PROPERTIES:
+:ID:       91c3a4e5-b6c4-49e7-8b6e-eac6e88e0b67
+:CREATED:  <2025-03-03 Mon 20:50>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:50] -- [[https://en.wikipedia.org/wiki/K-d_tree][k-d tree - Wikipedia]]
+:END:
+- [[https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf][kd-Trees: CMSC 420]]
+** LSM Tree
+:PROPERTIES:
+:ID:       03324c5d-0caa-493c-993a-175cb3c9548e
+:CREATED:  <2025-04-15 Tue 15:02>
+:END:
+:EDGES:
+[2025-04-15 Tue 15:02] -- [[wikipedia:Log-structured merge-tree][wiki]]
+[2025-04-15 Tue 15:04] -> [[id:b569a646-de4c-4287-8599-52b237a753b4][RocksDB]]
+[2025-04-15 Tue 15:05] -> [[id:4240d8d8-a646-4372-8bb5-37d029b325c2][B+ Tree]]
+:END:
+** B Tree
+:PROPERTIES:
+:ID:       6dcb49d0-45e6-4c81-8299-d03ccdaf1633
+:CREATED:  <2025-04-14 Mon 19:10>
+:END:
+:EDGES:
+[2025-04-14 Mon 19:10] -- [[wikipedia:B-tree][wiki]]
+[2025-05-07 Wed 17:17] <- [[id:0e58efd5-14fe-4562-b09f-a92519084ef9][R Tree]]
+:END:
+- [[https://apps.state.or.us/tech/berkeleyDB/ref/am_conf/bt_compare.html][Berkeley DB Reference Guide: Btree comparison]]
+- [[https://docs.oracle.com/cd/E17275_01/html/gsg/C/btree.html][BTree Configuration]]
+*** B+ Tree
+:PROPERTIES:
+:ID:       4240d8d8-a646-4372-8bb5-37d029b325c2
+:CREATED:  <2025-04-14 Mon 19:10>
+:END:
+:EDGES:
+[2025-04-14 Mon 19:11] -- [[wikipedia:B+ tree][wiki]]
+[2025-04-15 Tue 15:05] <- [[id:03324c5d-0caa-493c-993a-175cb3c9548e][LSM Tree]]
+[2025-05-07 Wed 17:15] <- [[id:9da67ff9-b19f-47a9-adee-59b660672adc][Hilbert R-Tree]]
+:END:
+** R Tree
+:PROPERTIES:
+:ID:       0e58efd5-14fe-4562-b09f-a92519084ef9
+:CREATED:  <2025-05-07 Wed 17:13>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:15] -- [[wikipedia:R-tree][wiki]]
+[2025-05-07 Wed 17:17] -> [[id:6dcb49d0-45e6-4c81-8299-d03ccdaf1633][B Tree]]
+:END:
+#+begin_quote
+Searching on one number is a solved problem; searching on two or more,
+and asking for locations that are nearby in both x and y directions,
+requires craftier algorithms.
+#+end_quote
+
+- used for spatial access methods
+  - indexing multi-dimensional info such as geocoordinates, polygons, etc.
+- key insight: group nearby objects and represent them with their
+  =minimum bounding rectangle= in the next higher level of the tree
+- like B-Tree, is a balanced search tree
+- [[https://en.wikipedia.org/wiki/Minimum_bounding_rectangle][Minimum bounding rectangle (MBR)]]
+*** Hilbert R-Tree
+:PROPERTIES:
+:ID:       9da67ff9-b19f-47a9-adee-59b660672adc
+:CREATED:  <2025-05-07 Wed 17:13>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:13] -- [[wikipedia:Hilbert R-tree][wiki]]
+[2025-05-07 Wed 17:15] -> [[id:4240d8d8-a646-4372-8bb5-37d029b325c2][B+ Tree]]
+:END:
+Can be thought of as an extension to B+ Trees for multidemnsional objects.
+- performance depends on the quality of the algorithm that clusters
+  the data rectangles on a node.
+  - Hilbert curve used for linear ordering on the data rectangles
+- two types: static and dynamic
+  - both use hilbert curve for better ordering
+    - optimize for minimizing the area  of the resulting MBRs
+- Packed Hilbert R-trees suitable for static DBs - very rare or no
+  updates at all
+- Dynamic Hilbert R-tree suitable for dynamic database with real-time
+  query/update/insertion/deletion
+  - every node has well-defined set of sibling nodes via proposed
+    ordering on the R-tree nodes
+  - sorts rectangles according to the hilbert value (lenght of the
+    hilbert curve from the origin to a point) of the center (MBR)
+  - given the ordering, and thus the set of siblings, deferred splitting can be used
+  - by adjusting the split policy, can achieve a degree of space
+    utilization as high as desired - unlike other R-tree variants.
+*** Z-order Curve
+:PROPERTIES:
+:ID:       61a74ac4-47ff-4f67-afea-e11bb4ebd809
+:CREATED:  <2025-05-07 Wed 17:37>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:37] -- [[wikipedia:Z-order curve][wiki]]
+:END:
+*** X Tree
+:PROPERTIES:
+:ID:       58645bde-a83e-468b-bf9f-1984eb517ba2
+:CREATED:  <2025-05-07 Wed 18:07>
+:END:
+:EDGES:
+[2025-05-07 Wed 18:08] -- [[https://www.vldb.org/conf/1996/P028.PDF][the X-tree: An Index Structure for High-Dimensional Data]]
+:END:
+[[https://github.com/rodp63/Xtree][rodp63/Xtree: X-tree data structure in c++ for high dimensional data indexing]]
+** Radix Tree
+:PROPERTIES:
+:ID:       1c3da977-929d-418f-9d3b-e59ac009c987
+:CREATED:  <2025-05-07 Wed 17:07>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:08] -- [[wikipedia:Radix tree][wiki]]
 :END:

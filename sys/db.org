@@ -30,6 +30,22 @@
 :EDGES:
 [2025-02-16 Sun 19:07] -- [[https://en.wikipedia.org/wiki/Shard_(database_architecture)][Shard (database architecture) - Wikipedia]]
 :END:
+** Spatial Database
+:PROPERTIES:
+:ID:       999c2245-1e81-49c5-a0a4-6ba4d18ee132
+:CREATED:  <2025-05-07 Wed 17:44>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:45] -- [[wikipedia:Spatial database][wiki]]
+:END:
+** Moving Object Database
+:PROPERTIES:
+:ID:       7f41f3ea-fd20-410a-9dc8-be188220a382
+:AKA: MOD
+:CREATED:  <2025-05-07 Wed 17:41>
+:END:
+Moving Object Database
+[[https://web.archive.org/web/20110611054912/http://www.comp.nus.edu.sg/~chensu/sigmod08.pdf]]
 ** DBMS                                                                :dbms:
 :PROPERTIES:
 :ID:       3bd5f5f8-956b-49a4-b280-eec4a8c0f85e

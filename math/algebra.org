@@ -102,6 +102,23 @@ Abstract Categories
 [2025-02-28 Fri 17:59] -- [[https://en.wikipedia.org/wiki/Algebraic_topology][Algebraic topology - Wikipedia]]
 [2025-02-28 Fri 18:13] -- [[https://en.wikipedia.org/wiki/Topological_space][Topological space - Wikipedia]]
 :END:
+
+*** Hausdorff Dimension
+:PROPERTIES:
+:ID:       4171e0af-f048-4973-9d33-96b1f2b17548
+:CREATED:  <2025-05-07 Wed 16:53>
+:AKA: Topological Dimension
+:END:
+:EDGES:
+[2025-05-07 Wed 16:53] -- [[wikipedia:Hausdorff_dimension][wiki]]
+:END:
+A /measure of roughness/, or more specifically *fractal dimension*
+introduced in 1918 by Felix Hausdorff.
+
+- single point = 0
+- line segment = 1
+- square = 2
+- cube = 3
 ** Algebraic Structure
 :PROPERTIES:
 :ID:       f66bf1e0-ef4f-4038-9da5-06dca676dba9

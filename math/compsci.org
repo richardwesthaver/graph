@@ -17,11 +17,42 @@
 [2025-04-14 Mon 20:43] -- [[wikipedia:Pipeline (computing)][wiki]]
 [2025-04-15 Tue 15:08] -> [[id:a24e5fac-1d67-4a47-99b6-c7aefa11644c][GStreamer]]
 :END:
-
+** Error Correction Codes
+:PROPERTIES:
+:ID:       08a0e9d0-870f-4e7a-b76c-dbcf4ac10f55
+:CREATED:  <2025-05-07 Wed 17:03>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:04] -- [[wikipedia:Error_correction_code][wiki]]
+:END:
+** Thread Pool
+:PROPERTIES:
+:ID:       1c09c413-4ece-462a-bdb1-4f306018a3b3
+:CREATED:  <2025-05-07 Wed 17:04>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:04] -- [[wikipedia:Thread pool][wiki]]
+:END:
 ** Data Structure
 :PROPERTIES:
 :ID:       956cb941-dd29-4b70-b0f7-53ad71362ed0
 :CREATED:  <2025-02-28 Fri 19:19>
+:END:
+*** Stack
+:PROPERTIES:
+:ID:       2b5b4c0a-c4e8-4d76-b71f-240d6707cb02
+:CREATED:  <2025-02-28 Fri 19:18>
+:END:
+:EDGES:
+[2025-02-28 Fri 19:18] -- [[https://en.wikipedia.org/wiki/Stack_(abstract_data_type)][Stack (abstract data type) - Wikipedia]]
+:END:
+*** Heap
+:PROPERTIES:
+:ID:       e488f62d-462c-42fb-b62c-bf890e26499e
+:CREATED:  <2025-05-07 Wed 17:05>
+:END:
+:EDGES:
+[2025-05-07 Wed 17:05] -- [[wikipedia:Heap (data structure)][wiki]]
 :END:
 *** Array
 :PROPERTIES:
@@ -32,83 +63,27 @@
 [2025-02-28 Fri 19:20] -- [[https://en.wikipedia.org/wiki/Array_(data_structure)][Array (data structure) - Wikipedia]]
 [2025-04-15 Tue 15:07] -> [[id:eee94cd6-7a01-4bf1-8029-f98ba665e0b4][APL]]
 :END:
-*** Tree
+**** Vector
 :PROPERTIES:
-:ID:       1e7845bb-a065-4e43-860b-6974ab9bbd5d
-:CREATED:  <2025-03-03 Mon 20:49>
+:ID:       a4a6aff3-4fbd-4436-ba98-09299b5a1e41
+:CREATED:  <2025-05-07 Wed 17:02>
+:END:
+**** String
+:PROPERTIES:
+:ID:       1df49c20-99b1-4f0e-bbb9-6617b20810dc
+:CREATED:  <2025-05-07 Wed 17:02>
+:END:
+*** Dictionary
+:PROPERTIES:
+:ID:       1336d625-e74f-42fd-b23c-292c07f9f029
+:CREATED:  <2025-05-07 Wed 17:11>
 :END:
 :EDGES:
-[2025-03-03 Mon 20:49] -- [[https://en.wikipedia.org/wiki/Tree_(abstract_data_type)][Tree (abstract data type) - Wikipedia]]
+[2025-05-07 Wed 17:11] -- [[wikipedia:Associative array][wiki]]
 :END:
-**** k-d tree
-:PROPERTIES:
-:ID:       91c3a4e5-b6c4-49e7-8b6e-eac6e88e0b67
-:CREATED:  <2025-03-03 Mon 20:50>
-:END:
-:EDGES:
-[2025-03-03 Mon 20:50] -- [[https://en.wikipedia.org/wiki/K-d_tree][k-d tree - Wikipedia]]
-:END:
-- [[https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf][kd-Trees: CMSC 420]]
-**** LSM Tree
-:PROPERTIES:
-:ID:       03324c5d-0caa-493c-993a-175cb3c9548e
-:CREATED:  <2025-04-15 Tue 15:02>
-:END:
-:EDGES:
-[2025-04-15 Tue 15:02] -- [[wikipedia:Log-structured merge-tree][wiki]]
-[2025-04-15 Tue 15:04] -> [[id:b569a646-de4c-4287-8599-52b237a753b4][RocksDB]]
-[2025-04-15 Tue 15:05] -> [[id:4240d8d8-a646-4372-8bb5-37d029b325c2][B+ Tree]]
-:END:
-**** B Tree
-:PROPERTIES:
-:ID:       6dcb49d0-45e6-4c81-8299-d03ccdaf1633
-:CREATED:  <2025-04-14 Mon 19:10>
-:END:
-:EDGES:
-[2025-04-14 Mon 19:10] -- [[wikipedia:B-tree][wiki]]
-:END:
-- [[https://apps.state.or.us/tech/berkeleyDB/ref/am_conf/bt_compare.html][Berkeley DB Reference Guide: Btree comparison]]
-- [[https://docs.oracle.com/cd/E17275_01/html/gsg/C/btree.html][BTree Configuration]]
-***** B+ Tree
-:PROPERTIES:
-:ID:       4240d8d8-a646-4372-8bb5-37d029b325c2
-:CREATED:  <2025-04-14 Mon 19:10>
-:END:
-:EDGES:
-[2025-04-14 Mon 19:11] -- [[wikipedia:B+ tree][wiki]]
-[2025-04-15 Tue 15:05] <- [[id:03324c5d-0caa-493c-993a-175cb3c9548e][LSM Tree]]
-:END:
-** Automata Theory
-:PROPERTIES:
-:ID:       6eeab81b-c95c-4991-9e0a-d3c565dc800d
-:CREATED:  <2025-02-28 Fri 18:56>
-:END:
-:EDGES:
-[2025-02-28 Fri 18:56] -- [[https://en.wikipedia.org/wiki/Automata_theory][Automata theory - Wikipedia]]
-:END:
-*** Abstract Machine
-:PROPERTIES:
-:ID:       160d9219-f9e4-4ab3-864d-5aa0df3f9099
-:CREATED:  <2025-02-28 Fri 18:56>
-:END:
-:EDGES:
-[2025-02-28 Fri 18:56] -- [[https://en.wikipedia.org/wiki/Abstract_machine][Abstract machine - Wikipedia]]
-:END:
-**** FSM
-:PROPERTIES:
-:ID:       4bec80fd-4547-462f-9945-e4e524a018c4
-:CREATED:  <2025-02-28 Fri 18:58>
-:END:
-:EDGES:
-[2025-02-28 Fri 18:58] -- [[https://en.wikipedia.org/wiki/Finite-state_machine][Finite-state machine - Wikipedia]]
-:END:
-Finite-State Machine
 
-*** Automaton
+*** Hash Table
 :PROPERTIES:
-:ID:       8259478a-d303-4d05-ac00-505decc39bb4
-:CREATED:  <2025-02-28 Fri 18:57>
-:END:
-:EDGES:
-[2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Automaton][Automaton - Wikipedia]]
+:ID:       b0300e61-d29b-4df4-940d-31257bf6a5f6
+:CREATED:  <2025-05-07 Wed 17:02>
 :END:
