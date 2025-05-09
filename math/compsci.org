@@ -87,3 +87,20 @@
 :ID:       b0300e61-d29b-4df4-940d-31257bf6a5f6
 :CREATED:  <2025-05-07 Wed 17:02>
 :END:
+
+** Symbolic Computation
+:PROPERTIES:
+:ID:       9c8b77f4-e67b-4470-b2d3-20e6d3807290
+:CREATED:  <2025-05-08 Thu 19:58>
+:END:
+:EDGES:
+[2025-05-08 Thu 19:58] -- [[wikipedia:Computer algebra][wiki]]
+:END:
+*** Risch algorithm
+:PROPERTIES:
+:ID:       a316971e-8f63-450e-b2d9-8ad89acaeaca
+:CREATED:  <2025-05-08 Thu 19:58>
+:END:
+:EDGES:
+[2025-05-08 Thu 19:58] -- [[wikipedia:Risch algorithm][wiki]]
+:END:

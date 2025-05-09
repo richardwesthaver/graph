@@ -6,3 +6,18 @@
 :CREATED:  <2025-03-02 Sun 21:14>
 :END:
 - llvm frontend :: [[https://flang.llvm.org/docs/][Flang’s documentation — The Flang Compiler]]
+** Libraries
+:PROPERTIES:
+:ID:       a005be33-aa42-4d92-8237-0ed5d791e8e8
+:CREATED:  <2025-05-08 Thu 20:18>
+:END:
+*** LAPACK
+:PROPERTIES:
+:ID:       449aad9e-abd1-4a10-a1a8-d6a1c3356542
+:CREATED:  <2025-05-08 Thu 20:18>
+:END:
+:EDGES:
+[2025-05-08 Thu 20:21] -- [[https://www.netlib.org/lapack/explore-html/][LAPACK: Main Page]]
+:END:
+Linear Algebra PACKage
+Includes a C API wrapper - LAPACKE

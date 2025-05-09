@@ -100,6 +100,12 @@ Information about compiling /without/ libc.
 :ID:       b0ff5843-38de-4bd9-800a-728391dafc02
 :CREATED:  <2025-03-07 Fri 12:32>
 :END:
+*** LAPACKE
+:PROPERTIES:
+:ID:       7f29ca19-b76c-40c0-981c-41c4034ecf4c
+:CREATED:  <2025-05-08 Thu 20:22>
+:END:
+Part of [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
 * CPP                                                                   :cpp:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/][cppreference.com]]

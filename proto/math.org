@@ -1,0 +1,20 @@
+#+title: Math Standards
+#+setupfile: ../../clean.theme
+* BLAS
+:PROPERTIES:
+:ID:       0de50ac1-75a1-440b-981f-83432258c1ce
+:CREATED:  <2025-05-08 Thu 20:20>
+:END:
+Basic Linear Algebra Subroutines
+- OG implementations in Fortran - see [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
+- C API = [[id:7f29ca19-b76c-40c0-981c-41c4034ecf4c][LAPACKE]]
+#+begin_quote
+BLAS are defined by three papers: Basic linear algebra subprograms for
+{FORTRAN} usage, Lawson et al, 1979. An extended set of {FORTRAN}
+basic linear algebra subprograms, Dongarra et al, 1988. A set of level
+3 basic linear algebra subprograms, Dongarra et al, 1990. Some
+BLAS-like routines (e.g., csymv, crot, csum1, icmax1) exist in LAPACK
+rather than the classic BLAS. These were extended by the Extra
+Precision BLAS (XBLAS, not documented here)
+https://www.netlib.org/xblas/
+#+end_quote
