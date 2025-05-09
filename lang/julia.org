@@ -1,0 +1,12 @@
+#+title: Julia
+#+setupfile: ../../clean.theme
+#+filetags: julia
+* Julia
+:PROPERTIES:
+:ID:       bbc7cf8a-268e-4627-8979-4438bf9786bf
+:CREATED:  <2025-05-08 Thu 20:36>
+:END:
+:EDGES:
+[2025-05-08 Thu 20:36] -- [[https://julialang.org/][The Julia Programming Language]]
+[2025-05-08 Thu 20:36] -- [[gh:JuliaLang/julia][src]]
+:END:

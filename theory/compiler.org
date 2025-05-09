@@ -36,3 +36,22 @@ Intermediate Representationa
 [2025-03-03 Mon 17:57] << [[id:6beca36e-6264-4741-9180-66e81bf58c49][Tree Shaker]]
 :END:
 A dead-code-elimination technique applied when optimizing code.
+* Polyhedral Model
+:PROPERTIES:
+:ID:       bbc6fa80-3c38-4efa-93fd-b0416d4ec16d
+:CREATED:  <2025-05-08 Thu 21:13>
+:AKA: Polytope Model
+:END:
+:EDGES:
+[2025-05-08 Thu 21:13] -- [[wikipedia:Polytope model][wiki]]
+:END:
+#+begin_quote
+The polyhedral method treats each loop iteration within nested loops
+as lattice points inside mathematical objects called polyhedra,
+performs affine transformations or more general non-affine
+transformations such as tiling on the polytopes, and then converts the
+transformed polytopes into equivalent, but optimized (depending on
+targeted optimization goal), loop nests through polyhedra scanning.
+#+end_quote
+
+- [[https://en.wikipedia.org/wiki/Frameworks_supporting_the_polyhedral_model][Frameworks supporting the polyhedral model - Wikipedia]]

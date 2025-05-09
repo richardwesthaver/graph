@@ -6,6 +6,7 @@
 :CREATED:  <2025-05-08 Thu 20:20>
 :END:
 Basic Linear Algebra Subroutines
+- [[https://www.netlib.org/blas/blasqr.pdf][Quick Reference]]
 - OG implementations in Fortran - see [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
 - C API = [[id:7f29ca19-b76c-40c0-981c-41c4034ecf4c][LAPACKE]]
 #+begin_quote
@@ -18,3 +19,6 @@ rather than the classic BLAS. These were extended by the Extra
 Precision BLAS (XBLAS, not documented here)
 https://www.netlib.org/xblas/
 #+end_quote
+
+- AO [2025-05-08 Thu] we currently prefer OpenBLAS which includes the
+  netlib LAPACK in addition to some [[http://www.openmathlib.org/OpenBLAS/docs/extensions/][Extensions]]
