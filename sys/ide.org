@@ -5,7 +5,9 @@
 :CREATED:  <2025-03-15 Sat 17:33>
 :END:
 :EDGES:
-[2025-03-15 Sat 17:34] -- [[https://en.wikipedia.org/wiki/Integrated_development_environment][Integrated development environment - Wikipedia]]
+[2025-03-15 Sat 17:34] -- [[wikipedia:Integrated development environment][wiki]]
+[2025-05-10 Sat 23:09] << [[id:df400751-0b3e-41a5-8512-a778a58cc1bd][Vim]]
+[2025-05-10 Sat 23:10] << [[id:5fc53135-1b6c-4260-b264-66be7a2b8ff0][Emacs]]
 :END:
 IDEs come in many forms and without any clear boundaries between what
 is part of an IDE and what is not.

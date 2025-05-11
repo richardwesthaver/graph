@@ -500,6 +500,48 @@ in the COMMON-LISP-USER package, avoiding any initial state issues.
   =sb-ext:remove-implementation-package= each package is its own
   (only) implementation package.
   #+end_quote
+** Tools
+:PROPERTIES:
+:ID:       7f63f416-efcb-4926-8370-b626c4349c45
+:CREATED:  <2025-05-10 Sat 23:01>
+:END:
+*** lisp-critic
+:PROPERTIES:
+:ID:       d0796fff-4a90-42a5-8213-93e2cb5c9465
+:CREATED:  <2025-05-10 Sat 23:03>
+:END:
+:EDGES:
+[2025-05-10 Sat 23:03] -- [[https://github.com/g000001/lisp-critic][src]]
+[2025-05-10 Sat 23:04] -- [[https://courses.cs.northwestern.edu/325/exercises/critic.html#critic][CS325 Code Testing Tools]]
+:END:
+The Lisp Critic scans your code for instances of bad Lisp programming
+practice.
+#+begin_example
+  ? (critique
+            (defun count-a (lst)
+              (setq n 0)
+              (dolist (x lst)
+                (if (equal x 'a)
+                  (setq n (+ n 1))))
+              n))
+      ----------------------------------------------------------------------
+      Don't use SETQ inside DOLIST to accumulate values for N.
+      Use DO. Make N a DO variable and don't use SETQ etc at all.
+      ----------------------------------------------------------------------
+      You have an IF with no else branch. If the return value of the IF
+      matters, you should explicitly say what the else returns, e.g., NIL.
+      If the return value doesn't matter, use WHEN or UNLESS.
+      ----------------------------------------------------------------------
+      INCF would be simpler to add 1 to N than SETQ
+      ----------------------------------------------------------------------
+      GLOBALS!! Don't use global variables, i.e., N
+      ----------------------------------------------------------------------
+      Unless something special is going on, use EQL, not EQUAL.
+      ----------------------------------------------------------------------
+      Don't use (+ N 1), use (1+ N) for its value or (INCF N) to change N,
+      whichever is appropriate here.
+      ----------------------------------------------------------------------
+#+end_example
 ** History
 :PROPERTIES:
 :ID:       fb444369-a3e2-4451-8afc-e29571e706de

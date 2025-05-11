@@ -42,6 +42,16 @@
 [2025-02-16 Sun 20:21] -- [[https://en.wikipedia.org/wiki/Information_management][Information management - Wikipedia]]
 [2025-02-16 Sun 20:22] -- [[https://en.wikipedia.org/wiki/Information_system][Information system - Wikipedia]]
 :END:
+
+** Chrestomathy
+:PROPERTIES:
+:ID:       c95bdab5-cb4a-4530-83b9-e152d0a2e41c
+:CREATED:  <2025-05-10 Sat 16:41>
+:END:
+:EDGES:
+[2025-05-10 Sat 16:41] -- [[wikipedia:Chrestomathy][wiki]]
+:END:
+
 ** Information
 :PROPERTIES:
 :ID:       d181e466-49d6-4421-9282-d227618c5188

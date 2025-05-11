@@ -10,6 +10,7 @@
 [2025-02-13 Thu 22:41] -- [[https://www.gnu.org/software/emacs/manual/][Online Manuals]]
 [2025-03-03 Mon 14:01] << [[id:6c69c42b-3d0a-48bf-a5ad-43b350477387][Elisp]]
 [2025-03-03 Mon 16:27] -- [[man:emacs][man]]
+[2025-05-10 Sat 23:10] >> [[id:eddaae08-a0c1-4413-9f0a-804f663ae176][IDE]]
 :END:
 - refer to the INSTALL file in the root of the emacs repo for an
   overview of install options
@@ -247,7 +248,6 @@ Parse org-todo headlines to use org-tables as Kanban tables
 :ID:       1bbc8529-d207-4a7e-a72a-b231316c90e6
 :CREATED:  <2025-03-03 Mon 15:54>
 :END:
-
 *** Cloudmacs
 :PROPERTIES:
 :ID:       defa663e-3522-475c-ad44-615b64edabf1

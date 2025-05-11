@@ -9,6 +9,32 @@
 [2025-02-28 Fri 17:49] -- [[https://en.wikipedia.org/wiki/Algebra][Algebra - Wikipedia]]
 :END:
 The study of generalizations of arithmetic operations.
+** Linear Algebra
+:PROPERTIES:
+:ID:       ff07df1a-5054-48af-8130-22534dde6bc0
+:CREATED:  <2025-05-10 Sat 16:49>
+:END:
+:EDGES:
+[2025-05-10 Sat 16:50] -- [[wikipedia:Linear algebra][wiki]]
+:END:
+*** Symmetric Matrix
+:PROPERTIES:
+:ID:       0bfe9ad0-706c-4f7e-8ccf-27a48e7d4da8
+:CREATED:  <2025-05-10 Sat 16:50>
+:END:
+:EDGES:
+[2025-05-10 Sat 16:50] -- [[wikipedia:Symmetric matrix][wiki]]
+:END:
+A square matrix that is equal to its transpose.
+**** Hermitian Matrix
+:PROPERTIES:
+:ID:       cf6bee91-6066-493e-941b-7171381ab508
+:AKA: Self-adjoint Matrix
+:CREATED:  <2025-05-10 Sat 16:51>
+:END:
+A complex square matrix that is equal to its own conjugate transpose.
+- element at (i j) is equal to the /complex conjugate/ of the element
+  at (j i)
 ** Abstract Algebra
 :PROPERTIES:
 :ID:       8208c5b8-462c-4f11-b935-246de88e6667
