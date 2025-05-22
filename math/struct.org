@@ -90,6 +90,7 @@ also in CL: [[https://github.com/Blue-Sky-Skunkworks/cl-ascii-art/blob/master/hi
 :EDGES:
 [2025-04-14 Mon 19:09] -- [[wikipedia:Tree_(abstract_data_type)][wiki]]
 :END:
+- [[https://en.wikipedia.org/wiki/Binary_search_tree][Binary search tree - Wikipedia]] (BST)
 ** k-d tree
 :PROPERTIES:
 :ID:       91c3a4e5-b6c4-49e7-8b6e-eac6e88e0b67
@@ -120,6 +121,19 @@ also in CL: [[https://github.com/Blue-Sky-Skunkworks/cl-ascii-art/blob/master/hi
 :END:
 - [[https://apps.state.or.us/tech/berkeleyDB/ref/am_conf/bt_compare.html][Berkeley DB Reference Guide: Btree comparison]]
 - [[https://docs.oracle.com/cd/E17275_01/html/gsg/C/btree.html][BTree Configuration]]
+
+A self-balancing tree that maintains /sorted/ data and allows search,
+seek, insert, and deletes in log n time.
+#+begin_quote
+While working at Boeing Research Labs, Rudolf Bayer and Edward
+M. McCreight invented B-trees to efficiently manage index pages for
+large random-access files. The basic assumption was that indices would
+be so voluminous that only small chunks of the tree could fit in main
+memory. Bayer and McCreight's paper Organization and maintenance of
+large ordered indices was first circulated in July 1970 and later
+published in Acta Informatica.
+#+end_quote
+- [[https://infolab.usc.edu/csci585/Spring2010/den_ar/indexing.pdf][Organization and Maintenance of Large Ordered Indices]]
 *** B+ Tree
 :PROPERTIES:
 :ID:       4240d8d8-a646-4372-8bb5-37d029b325c2

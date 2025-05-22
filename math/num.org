@@ -1,0 +1,21 @@
+#+title: Numbers
+#+setupfile: ../../clean.theme
+* Number Theory
+:PROPERTIES:
+:ID:       791caf84-afba-4d31-abab-5ef2c13d268a
+:CREATED:  <2025-05-18 Sun 17:14>
+:END:
+** Quaternion
+:PROPERTIES:
+:ID:       f1ba9490-104f-4253-a5ef-34f7bb20e38d
+:CREATED:  <2025-05-18 Sun 17:15>
+:END:
+:EDGES:
+[2025-05-18 Sun 17:16] -- [[wikipedia:Quaternion][wiki]]
+:END:
+#+begin_example
+  a + bi + cj + dk
+#+end_example
+
+where coeffs a b c d are reals and 1,i,j,k are basis vectors or bassis
+elements.

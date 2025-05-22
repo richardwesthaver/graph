@@ -17,8 +17,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 742 |
-| edges | 578 |
+| nodes | 743 |
+| edges | 579 |
 | files | 120 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t
@@ -31,11 +31,11 @@ an interface for modifying the graph.
 | description | :description CC Org Files                           |
 | skel-id     | :id 1784914079056115652                             |
 | root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/3202c74b595f][3202c74b595f:65+]] |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/e06df9453378][e06df9453378:66+]] |
 | tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Sun May 11 01:01:10 2025 -0400                      |
+| updated     | Tue May 13 17:59:10 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 9401 :λ 9014 :# 16 :_ 371                           |
+| lines       | 9411 :λ 9023 :# 16 :_ 372                           |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -45,14 +45,15 @@ an interface for modifying the graph.
 : 2025-02   4435 ***************************************
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
-: 2025-05    805 *******
+: 2025-05   1061 *********
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://compiler.company/graph/index.html][index]]                | 2025-05-13 17:34:37 |
+| [[https://compiler.company/graph/proto/net/udp.html][proto/net/udp]]        | 2025-05-13 19:22:07 |
+| [[https://compiler.company/graph/index.html][index]]                | 2025-05-17 15:25:45 |
 | [[https://compiler.company/graph/app/cas.html][app/cas]]              | 2025-05-08 18:07:31 |
 | [[https://compiler.company/graph/app/desktop.html][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[https://compiler.company/graph/app/emacs.html][app/emacs]]            | 2025-05-10 23:11:25 |
@@ -149,7 +150,6 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/net/p2p.html][proto/net/p2p]]        | 2025-02-21 22:32:22 |
 | [[https://compiler.company/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-03-03 15:47:31 |
 | [[https://compiler.company/graph/proto/net/tls.html][proto/net/tls]]        | 2025-03-03 15:48:51 |
-| [[https://compiler.company/graph/proto/net/udp.html][proto/net/udp]]        | 2025-03-04 17:24:51 |
 | [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2025-04-15 15:46:17 |

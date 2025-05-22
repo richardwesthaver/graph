@@ -1,0 +1,19 @@
+#+title: Mathematic Notation
+#+setupfile: ../../clean.theme
+* Mathematical Symbols
+:PROPERTIES:
+:ID:       1d101d10-7bea-44ee-b41e-0e64c29d999c
+:CREATED:  <2025-05-21 Wed 19:58>
+:END:
+:EDGES:
+[2025-05-21 Wed 19:59] -- [[wikipedia:Glossary of mathematical symbols][wiki]]
+:END:
+- used to represent /mathematical objects/
+* Set-builder notation
+:PROPERTIES:
+:ID:       3b09b899-c1d8-42ac-bf8f-15195d70dc54
+:CREATED:  <2025-05-21 Wed 19:59>
+:END:
+:EDGES:
+[2025-05-21 Wed 19:59] -- [[wikipedia:Set-builder notation][wiki]]
+:END:

@@ -88,6 +88,18 @@
 :CREATED:  <2025-05-07 Wed 17:02>
 :END:
 
+** Lambda Calculus
+:PROPERTIES:
+:ID:       2daeb26b-040d-4afe-ac65-76feb2aa2b09
+:CREATED:  <2025-05-18 Sun 17:44>
+:END:
+:EDGES:
+[2025-05-18 Sun 17:45] -- [[wikipedia:Lambda calculus][wiki]]
+:END:
+- [[https://crypto.stanford.edu/~blynn/lambda/][Lambda calculus - Lambda Calculus]]
+- [[https://crypto.stanford.edu/~blynn/lambda/sk.html][Lambda calculus - A Combinatory Compiler]]
+- [[https://crypto.stanford.edu/~blynn/lambda/kiselyov.html][Lambda calculus - Kiselyov Combinator Translation]]
+- [[https://crypto.stanford.edu/~blynn/lambda/systemf.html][Lambda calculus - System F]]
 ** Symbolic Computation
 :PROPERTIES:
 :ID:       9c8b77f4-e67b-4470-b2d3-20e6d3807290
@@ -104,3 +116,52 @@
 :EDGES:
 [2025-05-08 Thu 19:58] -- [[wikipedia:Risch algorithm][wiki]]
 :END:
+** Computability Theory
+:PROPERTIES:
+:ID:       fc02e09e-c2d2-4275-844b-2e104d6b6554
+:CREATED:  <2025-05-18 Sun 16:47>
+:AKA: Recursion Theory
+:END:
+:EDGES:
+[2025-05-18 Sun 16:47] -- [[wikipedia:Computability theory][wiki]]
+:END:
+
+** Information Theory
+:PROPERTIES:
+:ID:       60ab765c-7d94-43b8-adb1-fed951e87393
+:CREATED:  <2025-05-18 Sun 16:46>
+:END:
+:EDGES:
+[2025-05-18 Sun 16:46] -- [[wikipedia:Information theory][wiki]]
+:END:
+** Theoretical Computer Science
+:PROPERTIES:
+:ID:       df8b8dc1-5495-46d9-9cf3-7ee6e966f600
+:CREATED:  <2025-05-18 Sun 16:41>
+:END:
+:EDGES:
+[2025-05-18 Sun 16:41] -- [[wikipedia:Theoretical computer science][wiki]]
+:END:
+*** Algorithmic Information Theory
+:PROPERTIES:
+:ID:       695c0f61-3029-4ec0-a6a5-39a46a8885a2
+:CREATED:  <2025-05-18 Sun 16:41>
+:AKA: AIT
+:END:
+:EDGES:
+[2025-05-18 Sun 16:42] -- [[wikipedia:Algorithmic information theory][wiki]]
+:END:
+- https://tromp.github.io/cl/LC.pdf
+- [[https://doisinkidney.com/posts/2020-10-17-ski.html][Fun with Combinators - Donnacha Oisín Kidney]]
+- [[https://crypto.stanford.edu/~blynn/compiler/golf.html][Compilers - Combinator Golf]]
+- https://wiki.c2.com/?TuringTarpit
+**** Kolmogorov Complexity
+:PROPERTIES:
+:ID:       602cff40-8e74-4c4f-9baa-2c0d1bf5583f
+:CREATED:  <2025-05-18 Sun 16:43>
+:END:
+:EDGES:
+[2025-05-18 Sun 16:43] -- [[wikipedia:Kolmogorov complexity][wiki]]
+:END:
+- https://www.cs.cmu.edu/~venkatg/teaching/15252-sp20/notes/Kolmogorov-Complexity.pdf
+  

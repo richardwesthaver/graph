@@ -30,6 +30,7 @@ reference implementation (that I know of).
 Today ([2025-03-13 Thu]) the best implementation of ANSI CL available
 is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 
+- Haskeller's perspective on Lisp: [[https://crypto.stanford.edu/~blynn/lambda/lisp.html][Lambda calculus - Lisp]]
 ** Syntax
 :PROPERTIES:
 :ID:       df41336d-5185-4047-9644-e25925529f08
@@ -890,4 +891,12 @@ Maclisp->Zetalisp
 :EDGES:
 [2025-03-03 Mon 19:37] -- [[https://clojure.org/][Clojure]]
 [2025-03-03 Mon 19:44] >> [[id:6819fc08-3199-49bc-9c5d-b19419118525][JVM]]
+:END:
+* Arc
+:PROPERTIES:
+:ID:       2094bd8c-4a95-4430-a126-9a56255380f4
+:CREATED:  <2025-05-21 Wed 19:02>
+:END:
+:EDGES:
+[2025-05-21 Wed 19:02] -- [[https://arclanguage.github.io/ref/][Arc: Table of Contents]]
 :END:

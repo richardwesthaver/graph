@@ -17,6 +17,10 @@ The study of generalizations of arithmetic operations.
 :EDGES:
 [2025-05-10 Sat 16:50] -- [[wikipedia:Linear algebra][wiki]]
 :END:
+- [[https://en.wikipedia.org/wiki/Vector_space][Vector space]] = set whose elements (vectors) can be added and
+  multiplied by scalars.
+  - Real vector space
+  - Complex vector space
 *** Symmetric Matrix
 :PROPERTIES:
 :ID:       0bfe9ad0-706c-4f7e-8ccf-27a48e7d4da8
@@ -68,7 +72,7 @@ Abstract Categories
 :EDGES:
 [2025-02-28 Fri 18:08] -- [[https://en.wikipedia.org/wiki/Monoidal_category][Monoidal category - Wikipedia]]
 :END:
-
+- [[https://en.wikipedia.org/wiki/Monoid_(category_theory)][Monoid]]
 ***** Concrete Category
 :PROPERTIES:
 :ID:       14121452-3f4f-459f-9116-f8fdafd8cd73
@@ -76,6 +80,15 @@ Abstract Categories
 :END:
 :EDGES:
 [2025-02-28 Fri 18:07] -- [[https://en.wikipedia.org/wiki/Concrete_category][Concrete category - Wikipedia]]
+:END:
+
+***** Free Category
+:PROPERTIES:
+:ID:       757943f2-fe8b-4727-86d3-bcbda1dd2536
+:CREATED:  <2025-05-18 Sun 17:07>
+:END:
+:EDGES:
+[2025-05-18 Sun 17:08] -- [[wikipedia:Free category][wiki]]
 :END:
 
 **** Functor
@@ -109,7 +122,6 @@ Abstract Categories
 :EDGES:
 [2025-02-28 Fri 17:58] -- [[https://en.wikipedia.org/wiki/Universal_algebra][Universal algebra - Wikipedia]]
 :END:
-
 **** Partial Algebra
 :PROPERTIES:
 :ID:       2054dbdf-d464-44fb-96b9-c3f41e006ca3
@@ -118,7 +130,6 @@ Abstract Categories
 :EDGES:
 [2025-02-28 Fri 18:26] -- [[https://en.wikipedia.org/wiki/Partial_algebra][Partial algebra - Wikipedia]]
 :END:
-
 ** Algebraic Topology
 :PROPERTIES:
 :ID:       bcaa674a-b485-46db-955c-17ba5eec4592
@@ -128,7 +139,6 @@ Abstract Categories
 [2025-02-28 Fri 17:59] -- [[https://en.wikipedia.org/wiki/Algebraic_topology][Algebraic topology - Wikipedia]]
 [2025-02-28 Fri 18:13] -- [[https://en.wikipedia.org/wiki/Topological_space][Topological space - Wikipedia]]
 :END:
-
 *** Hausdorff Dimension
 :PROPERTIES:
 :ID:       4171e0af-f048-4973-9d33-96b1f2b17548
@@ -152,6 +162,16 @@ introduced in 1918 by Felix Hausdorff.
 :END:
 [[https://en.wikipedia.org/wiki/Algebraic_structure][Algebraic structure - Wikipedia]]
 :END:
+*** Ring
+:PROPERTIES:
+:ID:       cefe6101-7e04-451f-a69c-d831e5ddb4e1
+:CREATED:  <2025-05-18 Sun 17:25>
+:END:
+:EDGES:
+[2025-05-18 Sun 17:25] -- [[wikipedia:Ring (mathematics)][wiki]]
+:END:
+- [[https://en.wikipedia.org/wiki/Ring_theory][Ring theory - Wikipedia]]
+- [[https://en.wikipedia.org/wiki/Free_algebra][Free algebra - Wikipedia]]
 *** Group
 :PROPERTIES:
 :ID:       c93a7820-514e-422a-af95-1dd6f8846665
@@ -167,6 +187,14 @@ introduced in 1918 by Felix Hausdorff.
 :END:
 :EDGES:
 [2025-02-28 Fri 18:30] -- [[https://en.wikipedia.org/wiki/Set_(mathematics)][Set (mathematics) - Wikipedia]]
+:END:
+**** Monoid
+:PROPERTIES:
+:ID:       dc5499f7-fba9-469d-9e97-14ae866d01f1
+:CREATED:  <2025-05-18 Sun 17:10>
+:END:
+:EDGES:
+[2025-05-18 Sun 17:10] -- [[wikipedia:Monoid][wiki]]
 :END:
 *** Magma
 :PROPERTIES:
