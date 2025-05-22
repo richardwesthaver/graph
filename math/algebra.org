@@ -155,6 +155,14 @@ introduced in 1918 by Felix Hausdorff.
 - line segment = 1
 - square = 2
 - cube = 3
+*** Manifold
+:PROPERTIES:
+:ID:       df5c5eda-929c-4f96-bbb8-99a751eea4f6
+:CREATED:  <2025-05-22 Thu 19:54>
+:END:
+:EDGES:
+[2025-05-22 Thu 19:54] -- [[wikipedia:Manifold][wiki]]
+:END:
 ** Algebraic Structure
 :PROPERTIES:
 :ID:       f66bf1e0-ef4f-4038-9da5-06dca676dba9

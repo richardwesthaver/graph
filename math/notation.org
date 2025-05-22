@@ -9,6 +9,8 @@
 [2025-05-21 Wed 19:59] -- [[wikipedia:Glossary of mathematical symbols][wiki]]
 :END:
 - used to represent /mathematical objects/
+
+-- blackboard bold
 * Set-builder notation
 :PROPERTIES:
 :ID:       3b09b899-c1d8-42ac-bf8f-15195d70dc54
@@ -16,4 +18,25 @@
 :END:
 :EDGES:
 [2025-05-21 Wed 19:59] -- [[wikipedia:Set-builder notation][wiki]]
+:END:
+* Einstein Notation
+:PROPERTIES:
+:ID:       b73d35e4-7a0e-4079-b97e-9523799edc14
+:CREATED:  <2025-05-22 Thu 18:01>
+:AKA: Einstein summation notation
+:END:
+:EDGES:
+[2025-05-22 Thu 18:01] -- [[wikipedia:Einstein notation][wiki]]
+[2025-05-22 Thu 19:27] -> [[id:8ab1326b-f5a7-4f6d-a870-c6b3274a8797][Ricci calculus]]
+:END:
+- Implies summation over a set of indexed terms in a formula, thus
+  achieving brevity.
+- Introduced by Albert Einstein in 1916
+* Abstract Index Notation
+:PROPERTIES:
+:ID:       16525c34-797b-4166-b504-9372dbd4b2ce
+:CREATED:  <2025-05-22 Thu 19:31>
+:END:
+:EDGES:
+[2025-05-22 Thu 19:31] -- [[wikipedia:Abstract index notation][wiki]]
 :END:

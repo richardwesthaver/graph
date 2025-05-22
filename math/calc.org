@@ -58,3 +58,38 @@ The study of continuous change.
 :EDGES:
 [2025-02-28 Fri 18:32] -- [[https://en.wikipedia.org/wiki/Generalized_function][Generalized function - Wikipedia]]
 :END:
+
+** Tensor Theory
+:PROPERTIES:
+:ID:       c5b31660-aa39-4438-b3a9-28ca05368fe7
+:CREATED:  <2025-05-22 Thu 19:23>
+:END:
+:EDGES:
+[2025-05-22 Thu 19:25] -- [[wikipedia:Glossary of tensor theory][wiki]]
+:END:
+- [[https://en.wikipedia.org/wiki/Levi-Civita_symbol][Levi-Civita symbol - Wikipedia]]
+*** Ricci calculus
+:PROPERTIES:
+:ID:       8ab1326b-f5a7-4f6d-a870-c6b3274a8797
+:CREATED:  <2025-05-22 Thu 19:25>
+:END:
+:EDGES:
+[2025-05-22 Thu 19:25] -- [[wikipedia:Ricci calculus][wiki]]
+[2025-05-22 Thu 19:27] <- [[id:b73d35e4-7a0e-4079-b97e-9523799edc14][Einstein Notation]]
+:END:
+*** Tensor Field
+:PROPERTIES:
+:ID:       a0eddece-2818-4f67-b557-d35118097d93
+:CREATED:  <2025-05-22 Thu 19:53>
+:END:
+:EDGES:
+[2025-05-22 Thu 19:54] -- [[wikipedia:Tensor field][wiki]]
+:END:
+**** Tensor Density
+:PROPERTIES:
+:ID:       c4185461-4a5d-4343-842a-f1031cb85a25
+:CREATED:  <2025-05-22 Thu 19:28>
+:END:
+:EDGES:
+[2025-05-22 Thu 19:53] -- [[wikipedia:Tensor density][wiki]]
+:END:
