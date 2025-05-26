@@ -1,0 +1,26 @@
+#+title: DEFLATE Compression Formats
+#+setupfile: ../../../clean.theme
+* DEFLATE
+:PROPERTIES:
+:ID:       6f46c6f3-32a5-4932-b2db-687ea4c8e04f
+:CREATED:  <2025-05-26 Mon 00:52>
+:END:
+:EDGES:
+[2025-05-26 Mon 00:53] -- [[https://www.rfc-editor.org/rfc/rfc1951][RFC 1951: DEFLATE Compressed Data Format Specification version 1.3]]
+:END:
+** ZLIB
+:PROPERTIES:
+:ID:       cee22050-4aae-4735-bb53-5c6253aa21e7
+:CREATED:  <2025-05-26 Mon 00:53>
+:END:
+:EDGES:
+[2025-05-26 Mon 00:53] -- [[https://www.rfc-editor.org/rfc/rfc1950][RFC 1950: ZLIB Compressed Data Format Specification version 3.3]]
+:END:
+** GZIP
+:PROPERTIES:
+:ID:       7e74e117-69d3-4261-a869-6e7389769e4b
+:CREATED:  <2025-05-26 Mon 00:53>
+:END:
+:EDGES:
+[2025-05-26 Mon 00:53] -- [[https://www.rfc-editor.org/rfc/rfc1952][RFC 1952: GZIP file format specification version 4.3]]
+:END:

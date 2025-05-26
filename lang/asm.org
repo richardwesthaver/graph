@@ -147,7 +147,7 @@
 [2025-03-02 Sun 21:40] -- [[https://webassembly.org/][WebAssembly]]
 [2025-03-02 Sun 21:40] -- [[https://webassembly.github.io/spec/core/][WebAssembly Specification — WebAssembly 2.0 (Draft 2025-01-28)]]
 :END:
-
+- [[https://ktye.github.io/wa/][wa]] - ktye compilation strat for wasm
 ** LLVM IR                                                             :llvm:
 :PROPERTIES:
 :ID:       25754e07-2c57-4385-a52a-33b0179e2b85
