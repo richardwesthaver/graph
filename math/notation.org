@@ -11,6 +11,8 @@
 - used to represent /mathematical objects/
 
 -- blackboard bold
+
+- 8! = factorial of 8 (40320)
 * Set-builder notation
 :PROPERTIES:
 :ID:       3b09b899-c1d8-42ac-bf8f-15195d70dc54

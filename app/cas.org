@@ -16,3 +16,75 @@ Computer Algebra Systems
 [2025-05-08 Thu 18:06] -- [[wikipedia:Maxima (software)][wiki]]
 [2025-05-08 Thu 18:07] -- [[https://maxima.sourceforge.io/compalg.html][Maxima – Computer Algebra Systems]]
 :END:
+- [[https://arachnoid.com/maxima/][Symbolic Mathematics Using Maxima]]
+
+- Simplifier: https://maxima.sourceforge.io/misc/Fateman-Salz_Simplifier_Paper.pdf
+- Internal forms of data in Macsyma
+#+begin_quote
+
+There are two external forms of data in Macsyma visible to the user,
+and three (sometimes more) internal forms.  The external form for
+input is a string of ASCII characters as typed in by the user or read
+from a file. (For “example, the string "y+3/x+y”). The output display
+of characters on a two-dimensional "grid" is the other external form,
+for example,
+
+       3
+ 2y + ---.
+       x
+
+Between the external forms there are several internal forms. In
+actuality each is a Lisp "S-expression," a tree-like nested structure
+of list cells, pointers, and atomic names. The printed forms of these,
+expressed in the Lisp language, will usually look like parenthesized
+prefix strings. The different internal forms are:
+
+(1) The output from the parser, which is handed to the command interpreter.
+
+(2) The simplified form which most commands obtain by evaluating and simplifying their arguments.
+
+(3) The formatted form, which the display program uses to translate
+from the simplified form to a more "user oriented" expression. In the
+Berkeley VAX/UNIX version of the simplifier/display, a fourth form,
+namely typesetter code, is also used. (There can be other forms,
+e.g. TeX form, rational form..)
+
+Some commands, as have been previously noted, impose different notions
+of simplification on expressions. We will not deal with these in any
+detail, although it is part of the overall philosophy of Macsyma that
+alternative forms are allowed to co-exist, or can be converted to one
+another, in order to provide the most storage-efficient data structure
+and/or provide the fastest type of computation.
+
+By and large the data represents algebraic expressions, but sometimes
+represents programs, program fragments, messages, names of variables,
+files, or other information.
+
+The simplification program, SIMPLIFYA, is usually invoked by
+manipulatory functions such as the integration package. The input is
+an algebraic expression written in a type of parenthesized prefix
+notation. The input may have been partly simplified in the past, or
+may be "raw" from the parser.  An expression is either an integer or
+floating-point number, an atomic "indeterminate," or a Lisp
+Sexpression of the form (OPERATOR . ARGLIST). The ARGLIST is a list in
+the Lisp meaning, which contains the appropriate number of arguments
+for the associated OPERATOR. Each argument is itself (with a few
+exceptions having to do with the OPERATORs MRAT and $POIS) an
+algebraic expression. Many operators have a fixed number of
+arguments. The exceptions include "n-ary" operators like PLUS, TIMES
+and DERIVATIVE.
+
+There is an initial collection of OPERATORs known to the simplifier;
+these may be augmented by using the "TELLSIMP" commands in Macsyma
+discussed in section B.
+
+The symbols in the OPERATORs are a mixture of historical conventions,
+and several have two or more variants which are intended to signify
+the difference between a "verb" (e.g. Integrate this expression) and a
+"noun" (e.g. Consider the integral ...). The first part of each
+OPERATOR (the Lisp CAR) is indicative of the algebraic meaning. The
+rest of the OPERATOR consists of "flags" describing the arguments, or
+modifying the meaning of the OPERATOR. We make these notions more
+definite by examples in the next sections.
+
+#+end_quote

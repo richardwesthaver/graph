@@ -50,6 +50,14 @@ The study of continuous change.
 [2025-02-28 Fri 18:38] -- [[https://en.wikipedia.org/wiki/Stochastic_calculus][Stochastic calculus - Wikipedia]]
 :END:
 
+** Characteristic Equation
+:PROPERTIES:
+:ID:       4bfa694a-79db-4ef6-9d5c-45515f70cb96
+:CREATED:  <2025-05-26 Mon 19:02>
+:END:
+:EDGES:
+[2025-05-26 Mon 19:02] -- [[wikipedia:Characteristic equation (calculus)][wiki]]
+:END:
 ** Generalized Functions
 :PROPERTIES:
 :ID:       5bb49707-e877-45fd-b2e9-a04d80ab4eca
@@ -68,6 +76,9 @@ The study of continuous change.
 [2025-05-22 Thu 19:25] -- [[wikipedia:Glossary of tensor theory][wiki]]
 :END:
 - [[https://en.wikipedia.org/wiki/Levi-Civita_symbol][Levi-Civita symbol - Wikipedia]]
+- https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/33b21afab62ea8df6c7bd241240df60d_MIT18_06SCF11_Ses1.5sum.pdf
+- [[https://devblogs.microsoft.com/oldnewthing/20170102-00/?p=95095][Applying a permutation to a vector, part 1 - The Old New Thing]]
+- http://sporadic.stanford.edu/Math122/lecture9.pdf
 *** Ricci calculus
 :PROPERTIES:
 :ID:       8ab1326b-f5a7-4f6d-a870-c6b3274a8797

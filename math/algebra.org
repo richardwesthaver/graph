@@ -21,6 +21,38 @@ The study of generalizations of arithmetic operations.
   multiplied by scalars.
   - Real vector space
   - Complex vector space
+- [[https://en.wikipedia.org/wiki/Linear_map][Linear map]]
+- [[https://en.wikipedia.org/wiki/Permutation][Permutation]]
+*** Eigenvector
+:PROPERTIES:
+:ID:       fa086b68-f270-4bab-82da-ff78844e6bb9
+:CREATED:  <2025-05-26 Mon 19:03>
+:AKA: characteristic vector
+:END:
+:EDGES:
+[2025-05-26 Mon 19:03] -- [[wikipedia:Eigenvalues and eigenvectors][wiki]]
+:END:
+#+begin_quote
+A vector that has its direction unchanged (or reversed) by a given
+linear transformation. an eigenvector v of a linear transformation T
+is scaled by a constant factor \lambda when the linear transformation is
+applied to it: Tv = λv. The corresponding eigenvalue, characteristic
+value, or characteristic root is the multiplying factor λ (possibly
+negative).
+#+end_quote
+
+- The eigenvectors and eigenvalues of a linear transformation serve to
+  characterize it
+*** Permutation Matrix
+:PROPERTIES:
+:ID:       78dd3ccc-9f07-49b3-be76-4b133af679a4
+:CREATED:  <2025-05-26 Mon 19:28>
+:END:
+:EDGES:
+[2025-05-26 Mon 19:28] -- [[wikipedia:Permutation matrix][wiki]]
+:END:
+Square binary matrix with exactly one entry of 1 in each row and each
+column, with all other entries 0.
 *** Symmetric Matrix
 :PROPERTIES:
 :ID:       0bfe9ad0-706c-4f7e-8ccf-27a48e7d4da8

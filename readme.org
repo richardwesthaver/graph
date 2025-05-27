@@ -17,26 +17,26 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 774 |
-| edges | 609 |
-| files | 123 |
+| nodes | 777 |
+| edges | 612 |
+| files | 124 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+-----------------------------------------------------|
-| name        | graph                                               |
-| version     | :version 0.1.0                                      |
-| description | :description CC Org Files                           |
-| skel-id     | :id 1784914079056115652                             |
-| root        | ~/comp/org/graph/                                   |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/ec17119c8f34][ec17119c8f34:68+]] |
-| tags        | :tags (org docs notes blog meta plan)               |
-| updated     | Thu May 22 19:55:32 2025 -0400                      |
-| langs       | org                                                 |
-| lines       | 9718 :λ 9328 :# 16 :_ 374                           |
-|-------------+-----------------------------------------------------|
+|-------------+----------------------------------------------------|
+| name        | graph                                              |
+| version     | :version 0.1.0                                     |
+| description | :description CC Org Files                          |
+| skel-id     | :id 1784914079056115652                            |
+| root        | ~/comp/org/graph/                                  |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/a04a40f90b98][a04a40f90b98:69]] |
+| tags        | :tags (org docs notes blog meta plan)              |
+| updated     | Mon May 26 02:07:17 2025 -0400                     |
+| langs       | org                                                |
+| lines       | 9744 :λ 9354 :# 16 :_ 374                          |
+|-------------+----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -45,15 +45,13 @@ an interface for modifying the graph.
 : 2025-02   4435 ***************************************
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
-: 2025-05   1425 ************
+: 2025-05   1477 *************
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://compiler.company/graph/lang/asm.html][lang/asm]]             | 2025-05-23 23:27:22 |
-| [[https://compiler.company/graph/index.html][index]]                | 2025-05-24 22:39:04 |
 | [[https://compiler.company/graph/app/cas.html][app/cas]]              | 2025-05-08 18:07:31 |
 | [[https://compiler.company/graph/app/desktop.html][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[https://compiler.company/graph/app/emacs.html][app/emacs]]            | 2025-05-10 23:11:25 |
@@ -90,6 +88,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/hw/studio.html][hw/studio]]            | 2025-03-12 21:08:15 |
 | [[https://compiler.company/graph/hw/travel.html][hw/travel]]            | 2025-03-12 21:08:20 |
 | [[https://compiler.company/graph/lang/apl.html][lang/apl]]             | 2025-04-15 15:53:10 |
+| [[https://compiler.company/graph/lang/asm.html][lang/asm]]             | 2025-05-23 23:27:22 |
 | [[https://compiler.company/graph/lang/basic.html][lang/basic]]           | 2025-02-27 17:01:01 |
 | [[https://compiler.company/graph/lang/c.html][lang/c]]               | 2025-05-08 20:23:14 |
 | [[https://compiler.company/graph/lang/cobol.html][lang/cobol]]           | 2025-03-07 22:57:10 |
@@ -129,8 +128,9 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/os/win.html][os/win]]               | 2025-03-03 18:51:19 |
 | [[https://compiler.company/graph/proto/ansi.html][proto/ansi]]           | 2025-04-12 15:48:34 |
 | [[https://compiler.company/graph/proto/crypto.html][proto/crypto]]         | 2025-03-03 18:15:56 |
-| [[https://compiler.company/graph/proto/dat/config.html][proto/dat/config]]     | 2025-03-04 17:29:57 |
+| [[https://compiler.company/graph/proto/dat/config.html][proto/dat/config]]     | 2025-05-26 00:52:46 |
 | [[https://compiler.company/graph/proto/dat/cue.html][proto/dat/cue]]        | 2025-04-15 15:09:37 |
+| [[https://compiler.company/graph/proto/dat/deflate.html][proto/dat/deflate]]    | 2025-05-26 00:53:45 |
 | [[https://compiler.company/graph/proto/dat/json.html][proto/dat/json]]       | 2025-03-03 20:12:00 |
 | [[https://compiler.company/graph/proto/dat/m3u.html][proto/dat/m3u]]        | 2025-04-05 20:26:20 |
 | [[https://compiler.company/graph/proto/dat/parquet.html][proto/dat/parquet]]    | 2025-02-21 22:32:39 |
@@ -156,6 +156,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2025-04-15 15:46:17 |
+| [[https://compiler.company/graph/index.html][index]]                | 2025-05-25 01:14:23 |
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-03-07 10:04:41 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2025-05-07 17:46:07 |
 | [[https://compiler.company/graph/sys/fs.html][sys/fs]]               | 2025-03-03 14:49:54 |

@@ -219,7 +219,54 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
 :EDGES:
 [2025-01-17 Fri 15:50] -- [[https://simonsafar.com/2020/sbcl/][An exploration of SBCL internals - simonsafar.com]]
 [2025-01-17 Fri 19:03] -- [[https://github.com/guicho271828/sbcl-wiki/wiki/][guicho271828/sbcl-wiki]]
+[2025-05-26 Mon 20:39] -- [[https://pvk.ca/Blog/2013/04/13/starting-to-hack-on-sbcl/][Starting to hack on SBCL - Paul Khuong: some Lisp]]
 :END:
+DFO = Data Flow Optimization?
+*** CTYPE
+:PROPERTIES:
+:ID:       ed7c8a7c-0b0f-42f5-9e68-b2528ff26af9
+:CREATED:  <2025-05-26 Mon 21:47>
+:END:
+referred to globally as the internal name for Lisp types, and in SB-C
+as IR1 types.
+*** DEFTRANSFORM
+:PROPERTIES:
+:ID:       4f3868b5-131e-4d3d-9833-bbe00d0d6cde
+:CREATED:  <2025-05-26 Mon 20:30>
+:END:
+- [[https://stackoverflow.com/questions/44342104/using-deftransform-defknown-in-sbcl-internals-to-get-the-compiler-to-transform-u][so: define-compiler-macro vs deftransform/defknown]]
+- [[https://github.com/Bike/compiler-macro/tree/master/notes][compiler-macro/notes at master · Bike/compiler-macro]]
+- basically, compiler-macros don't quite give us enough info to make
+  useful source2source transformations
+  - possible to use sb-cltl2 envs to retrieve type info, but even then
+    we don't get to take full advantange of the compiler (type
+    propagation isn't automatic, etc)
+- deftransform is used for more complex transformations with direct
+  access to the compiler (operates on IR1)
+
+#+begin_src lisp
+(sb-c:defknown wat (T T) *)
+(sb-c:deftransform wat ((x y) (string string) *) 
+  `(string-wat x y))
+(defun wat (x y)
+  (if (and (numberp x)
+           (numberp y))
+      (+ x y)
+      (concatenate 'string x y)))
+
+(defun string-wat (x y)
+  (declare (optimize (speed 3) (safety 0))
+           (string x y))
+  (concatenate 'string x y "watpow"))
+
+(let ((a (concatenate 'string "bo" "b"))
+       (b (concatenate 'string "dole")))
+   (wat a b))
+#+end_src
+
+#+RESULTS:
+: bobdolewatpow
+
 *** Low Tags
 :PROPERTIES:
 :CREATED:  <2025-01-17 Fri 15:50>

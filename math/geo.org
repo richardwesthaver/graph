@@ -32,3 +32,11 @@
 :EDGES:
 [2025-05-20 Tue 17:42] -- [[wikipedia:Non-Euclidean geometry][wiki]]
 :END:
+** Trigonometry
+:PROPERTIES:
+:ID:       9787891c-464b-4efd-b0e4-ec973d7d0735
+:CREATED:  <2025-05-26 Mon 18:56>
+:END:
+:EDGES:
+[2025-05-26 Mon 18:57] -- [[wikipedia:Trigonometry][wiki]]
+:END:
