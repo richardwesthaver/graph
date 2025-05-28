@@ -53,6 +53,15 @@ negative).
 :END:
 Square binary matrix with exactly one entry of 1 in each row and each
 column, with all other entries 0.
+*** Sparse Matrix
+:PROPERTIES:
+:ID:       e2e44287-6cdc-46fc-9ac5-cb4678831233
+:CREATED:  <2025-05-27 Tue 20:11>
+:END:
+:EDGES:
+[2025-05-27 Tue 20:11] -- [[wikipedia:Sparse matrix][wiki]]
+:END:
+'sparsity' of a matrix is often (# of nil elements)/(m*n)
 *** Symmetric Matrix
 :PROPERTIES:
 :ID:       0bfe9ad0-706c-4f7e-8ccf-27a48e7d4da8

@@ -222,6 +222,31 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
 [2025-05-26 Mon 20:39] -- [[https://pvk.ca/Blog/2013/04/13/starting-to-hack-on-sbcl/][Starting to hack on SBCL - Paul Khuong: some Lisp]]
 :END:
 DFO = Data Flow Optimization?
+
+*** FREEZE-TYPE
+:PROPERTIES:
+:ID:       9aa17e32-5677-4ff1-9e85-6df91557cea1
+:CREATED:  <2025-05-27 Tue 22:04>
+:END:
+From CMUCL: 
+#+begin_quote
+
+The extensions:freeze-type declaration is a CMUCL extension that
+enables more efficient compilation of user-defined types by asserting
+that the definition is not going to change. This declaration may only
+be used globally (with declaim or proclaim). Currently freeze-type
+only affects structure type testing done by typep, typecase, etc. Here
+is an example:
+
+(declaim (freeze-type foo bar))
+
+This asserts that the types foo and bar and their subtypes are not
+going to change. This allows more efficient type testing, since the
+compiler can open-code a test for all possible subtypes, rather than
+having to examine the type hierarchy at run-time.
+#+end_quote
+
+- [[https://cmucl.common-lisp.dev/docs/cmu-user/html/Type-Style-Recommendations.html][Type Style Recommendations (CMUCL User’s Manual)]]
 *** CTYPE
 :PROPERTIES:
 :ID:       ed7c8a7c-0b0f-42f5-9e68-b2528ff26af9

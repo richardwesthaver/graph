@@ -11,6 +11,15 @@
 :ID:       a005be33-aa42-4d92-8237-0ed5d791e8e8
 :CREATED:  <2025-05-08 Thu 20:18>
 :END:
+*** BLAS
+:PROPERTIES:
+:ID:       f1143e94-aeb6-45cf-a072-317c3b9862c5
+:CREATED:  <2025-05-27 Tue 20:07>
+:END:
+:EDGES:
+[2025-05-27 Tue 20:07] -- [[https://netlib.org/blas/][BLAS (Basic Linear Algebra Subprograms)]]
+:END:
+Basic Linear Algebra Subprograms
 *** LAPACK
 :PROPERTIES:
 :ID:       449aad9e-abd1-4a10-a1a8-d6a1c3356542
@@ -21,3 +30,5 @@
 :END:
 Linear Algebra PACKage
 Includes a C API wrapper - LAPACKE
+
+we tend to prefer the fortran bindings

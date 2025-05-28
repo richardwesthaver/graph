@@ -68,3 +68,11 @@ elements.
 :EDGES:
 [2025-05-22 Thu 19:50] -- [[wikipedia:Hyperperfect number][wiki]]
 :END:
+* Combinatorics
+:PROPERTIES:
+:ID:       e02cdb53-6f30-4408-834a-71963374fbfd
+:CREATED:  <2025-05-27 Tue 20:13>
+:END:
+:EDGES:
+[2025-05-27 Tue 20:13] -- [[wikipedia:Combinatorics][wiki]]
+:END:
