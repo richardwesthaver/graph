@@ -31,7 +31,7 @@ Today ([2025-03-13 Thu]) the best implementation of ANSI CL available
 is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 
 - Haskeller's perspective on Lisp: [[https://crypto.stanford.edu/~blynn/lambda/lisp.html][Lambda calculus - Lisp]]
-** Syntax
+** Basic Syntax
 :PROPERTIES:
 :ID:       df41336d-5185-4047-9644-e25925529f08
 :CREATED:  <2025-02-25 Tue 16:05>
@@ -105,7 +105,16 @@ list, max, min, nconc, or, progn, and standard.
 :END:
 :EDGES:
 [2025-02-14 Fri 20:20] -- [[https://gist.github.com/WetHat/a49e6f2140b401a190d45d31e052af8f][Pretty Print Table Data in Common Lisp]]
+[2025-05-28 Wed 21:46] -- [[https://gigamonkeys.com/book/a-few-format-recipes.html][A Few FORMAT Recipes]]
 :END:
+#+begin_src lisp
+  (let ((list-fmt "~@{~a ~^~}"))
+    (format nil list-fmt) ;; ""
+    (format nil list-fmt 1 2 3))
+#+end_src
+
+#+RESULTS:
+: 1 2 3 
 
 ** Functions
 :PROPERTIES:
