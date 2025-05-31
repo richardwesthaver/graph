@@ -25,18 +25,18 @@ an interface for modifying the graph.
 #+CALL: project-details() :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+----------------------------------------------------|
-| name        | graph                                              |
-| version     | :version 0.1.0                                     |
-| description | :description CC Org Files                          |
-| skel-id     | :id 1784914079056115652                            |
-| root        | ~/comp/org/graph/                                  |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/406c0d32f485][406c0d32f485:71]] |
-| tags        | :tags (org docs notes blog meta plan)              |
-| updated     | Tue May 27 22:13:04 2025 -0400                     |
-| langs       | org                                                |
-| lines       | 9970 :λ 9554 :# 16 :_ 400                          |
-|-------------+----------------------------------------------------|
+|-------------+-----------------------------------------------------|
+| name        | graph                                               |
+| version     | :version 0.1.0                                      |
+| description | :description CC Org Files                           |
+| skel-id     | :id 1784914079056115652                             |
+| root        | ~/comp/org/graph/                                   |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/7cd87e9da2f9][7cd87e9da2f9:72+]] |
+| tags        | :tags (org docs notes blog meta plan)               |
+| updated     | Wed May 28 22:15:15 2025 -0400                      |
+| langs       | org                                                 |
+| lines       | 9979 :λ 9562 :# 16 :_ 401                           |
+|-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -45,13 +45,14 @@ an interface for modifying the graph.
 : 2025-02   4435 ***************************************
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
-: 2025-05   1767 ***************
+: 2025-05   1800 ***************
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
+| [[https://compiler.company/graph/index.html][index]]                | 2025-05-28 22:21:32 |
 | [[https://compiler.company/graph/app/cas.html][app/cas]]              | 2025-05-26 19:50:23 |
 | [[https://compiler.company/graph/app/desktop.html][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[https://compiler.company/graph/app/emacs.html][app/emacs]]            | 2025-05-10 23:11:25 |
@@ -99,7 +100,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/lang/java.html][lang/java]]            | 2025-03-03 20:43:11 |
 | [[https://compiler.company/graph/lang/javascript.html][lang/javascript]]      | 2025-03-13 20:32:08 |
 | [[https://compiler.company/graph/lang/julia.html][lang/julia]]           | 2025-05-08 20:37:12 |
-| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]            | 2025-05-21 19:02:45 |
+| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]            | 2025-05-28 21:52:37 |
 | [[https://compiler.company/graph/lang/python.html][lang/python]]          | 2025-02-21 22:33:53 |
 | [[https://compiler.company/graph/lang/query.html][lang/query]]           | 2025-03-04 18:38:23 |
 | [[https://compiler.company/graph/lang/rust.html][lang/rust]]            | 2025-03-16 19:07:43 |
@@ -156,7 +157,6 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2025-04-15 15:46:17 |
-| [[https://compiler.company/graph/index.html][index]]                | 2025-05-26 22:19:24 |
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-03-07 10:04:41 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2025-05-07 17:46:07 |
 | [[https://compiler.company/graph/sys/fs.html][sys/fs]]               | 2025-03-03 14:49:54 |

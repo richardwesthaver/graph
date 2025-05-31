@@ -73,6 +73,31 @@ school of thought to be considered one.
 :EDGES:
 [2025-04-15 Tue 15:04] <- [[id:03324c5d-0caa-493c-993a-175cb3c9548e][LSM Tree]]
 :END:
+- [[https://engineering.fb.com/2016/03/18/data-infrastructure/dragon-a-distributed-graph-query-engine/][Dragon: A distributed graph query engine - Engineering at Meta]]
+  - describes usage of TAO
+  #+begin_quote
+  Dragon is backed by a demand-filled, in-process key-value store,
+  updated in real time and eventually consistent. It uses a number of
+  optimization techniques to conserve storage, improve locality, and
+  execute queries in 1 ms or 2 ms with high availability and
+  consistency.
+
+  Even though some of the ideas have been around for a while, Dragon
+  combines them at scale and in novel ways to push down many complex
+  queries closer to storage. It’s structured more as a distributed
+  database engine that retrieves the requested results as efficiently as
+  possible along with any ranking signals stored in the index. This
+  allows applications to focus on business logic, privacy, static type
+  checking, and sophisticated ranking systems instead of spending a lot
+  of time worrying about the best way to retrieve graph data.
+  #+end_quote
+  =(->> ($alice) (assoc $friends) (assoc $friends) (filter (> age 20)) (count))=
+  #+begin_src lisp
+    (->> ($me) (assoc $groups)
+      (->> (assoc $members) (count))
+      (orderby (count))
+        (limit $count $offset))
+  #+end_src
 *** DataFusion                                                       :apache:
 :PROPERTIES:
 :ID:       3ce0b887-31ea-4a78-96a2-6671907a687a
