@@ -221,7 +221,95 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
 [2025-01-17 Fri 19:03] -- [[https://github.com/guicho271828/sbcl-wiki/wiki/][guicho271828/sbcl-wiki]]
 [2025-05-26 Mon 20:39] -- [[https://pvk.ca/Blog/2013/04/13/starting-to-hack-on-sbcl/][Starting to hack on SBCL - Paul Khuong: some Lisp]]
 :END:
-DFO = Data Flow Optimization?
+- DFO :: Data Flow Optimization?
+- [[https://www.reddit.com/r/lisp/comments/fkfgjn/sbcl_with_simd_how_to_optimize_sseavx2_to_pointer/][sbcl with simd]]
+  #+begin_quote
+  TN is, i think, a 'Temporary Name', i.e. an abstract register inside
+  VMR(IR2 represenation, i.e. VOPs). Names bound to VOP arguments,
+  results, temporary variables, etc are TNs. Specific registers could
+  also be used as TNs, those are suffixed with -tn, for ex. RAX-TN,
+  FLOAT[0-15]-TN etc.
+  #+end_quote
+- TN :: Temporary Name
+- SB :: storage base
+- SC :: storage class
+- sfunction
+  #+begin_src lisp
+    ;;; Similar to FUNCTION, but the result type is "exactly" specified:
+    ;;; if it is an object type, then the function returns exactly one
+    ;;; value, if it is a short form of VALUES, then this short form
+    ;;; specifies the exact number of values.
+    (def!type sfunction (args &optional result)
+      (let ((result (cond ((eq result '*) '*)
+                          ((or (atom result)
+                               (not (eq (car result) 'values)))
+                           `(values ,result &optional))
+                          ((intersection (cdr result) lambda-list-keywords)
+                           result)
+                          (t `(values ,@(cdr result) &optional)))))
+        `(function ,args ,result)))
+  #+end_src
+- msan :: Memory Sanitizer
+  #+begin_src lisp
+    ;; from 'llvm/projects/compiler-rt/lib/msan/msan.h':
+    ;;  "#define MEM_TO_SHADOW(mem) (((uptr)(mem)) ^ 0x500000000000ULL)"
+    ,#+linux ; shadow space differs by OS
+    (defconstant sb-vm::msan-mem-to-shadow-xor-const #x500000000000)
+  #+end_src
+- backend
+  #+begin_src lisp
+    ;;;; VM support routines which backends need to implement
+
+    ;;; from vm.lisp
+    ;;; immediate-constant-sc
+    ;;; location-print-name
+    ;;; convert-conditional-move-p
+    ;;; boxed-immediate-sc-p
+
+    ;;; from c-call.lisp
+    ;;; make-call-out-tns
+
+    ;;; from call.lisp
+    ;;; make-return-pc-passing-location
+    ;;; make-old-fp-passing-location
+    ;;; make-old-fp-save-location
+    ;;; make-return-pc-save-location
+    ;;; make-arg-count-location
+
+    ;;; from nlx.lisp
+    ;;; make-nlx-entry-arg-start-location
+
+    ;;; from pred.lisp
+    ;;; convert-conditional-move-p
+
+    ;;; from support.lisp
+    ;;; generate-call-sequence
+    ;;; generate-return-sequence
+
+    ;;; for use with scheduler
+    ;;; emit-nop
+    ;;; location-number
+  #+end_src
+- XSET
+  #+begin_src lisp
+    ;;;; XSET
+    ;;;;
+    ;;;; A somewhat efficient set implementation that can store arbitrary
+    ;;;; objects. For small sets the data is stored in a list, but when
+    ;;;; the amount of elements grows beyond +XSET-LIST-SIZE-LIMIT+, we
+    ;;;; switch to a hash-table instead.
+    ;;;;
+    ;;;; ALLOC-XSET allocates an empty XSET. ADD-TO-XSET adds an element
+    ;;;; to an XSET: it should be used only on freshly allocated XSETs.
+    ;;;;
+    ;;;; XSET-EMPTY-P, XSET-INTERSECTION, XSET-SUBSET-P, and XSET-MEMBER-P
+    ;;;; do the obvious things. MAP-XSET maps over the element, but
+    ;;;; requires a function as the first argument -- not a function
+    ;;;; designator.
+    ;;;;
+    ;;;; Note: XSET always uses EQL as the equivalence test
+  #+end_src
+- IDF :: Identical Code Folding (similar to what might be done by a C linker)
 
 *** FREEZE-TYPE
 :PROPERTIES:
@@ -254,6 +342,56 @@ having to examine the type hierarchy at run-time.
 :END:
 referred to globally as the internal name for Lisp types, and in SB-C
 as IR1 types.
+- compiler/ctype.lisp
+  #+begin_src lisp
+    ;;;; FIXME: This is a poor name for this file, since CTYPE is the name
+    ;;;; of the type used internally to represent Lisp types. It'd
+    ;;;; probably be good to rename this file to "call-type.lisp" or
+    ;;;; "ir1-type.lisp" or something.
+  #+end_src
+
+- type-class.lisp
+  #+begin_src lisp
+    ;;;; This file contains the definition of the CTYPE (Compiler TYPE)
+    ;;;; structure, as well as the TYPE-CLASS structure which is a metaobject
+    ;;;; that factors out commonality amongst the subtypes of CTYPE.
+    ;;;; Together they form a sort of mini object system with slightly
+    ;;;; odd dispatching rules. The TYPE-CLASS is a vtable, essentially.
+    ;;;; Various macros related to manipulating those things are here too.
+
+    ;; ...
+
+    ;;; the base class for the internal representation of types
+
+    ;;; Each CTYPE instance (all subtypes thereof) has a random opaque hash value.
+    ;;; Hashes are mixed together to form a lookup key in the memoization wrappers
+    ;;; for most operations on CTYPES. This works because CTYPEs are immutable.
+    ;;; No more than N-FIXNUM-BITS for 32-bit machines are used, even for 64-bit words.
+    ;;; It's easiest this way. It could be host-fixnum-sized for the host, and then
+    ;;; target-fixnum-sized for the target, but that's not easy to do with DEF!STRUCT.
+    ;;; (In fact I think it's probably infeasible but I'm not certain of it)
+    ;;; You could always make it SB-XC:FIXNUM at the risk of forcing the host to
+    ;;; deal in bignums. Why cause it undue slowness when we don't need so many bits?
+    ;;; NOTE: we _do_ use the sign bit, leaving us 25 pseudorandom bits, but
+    ;;; the 3 bits of least significance are NOT pseudorandom, so it's best
+    ;;; not to use them directly in the hash index.
+    (defconstant ctype-hash-size  30)  ; all significant bits, for the slot type specifier
+    (defconstant ctype-PRNG-nbits 25)  ; from pseudorandom number generator
+    (defconstant ctype-contains-unknown #b001)
+    (defconstant ctype-contains-hairy   #b010) ; any hairy type, including UNKNOWN
+    (defconstant ctype-contains-class   #b100) ; standard-class
+    (defconstant +ctype-flag-mask+ #b111)
+    (defconstant +ctype-hash-mask+ (logandc2 (1- (ash 1 ctype-PRNG-nbits)) #b111))
+
+    (defstruct (ctype (:conc-name type-)
+                       (:constructor nil)
+                       (:copier nil)
+                       #-sb-xc-host (:pure t))
+      ;; bits  0..24: pseudorandom hash
+      ;; bits 25..29: 5 bits for type-class index
+      (%bits (missing-arg) :type (signed-byte #.ctype-hash-size) :read-only t))
+#+end_src
+
 *** DEFTRANSFORM
 :PROPERTIES:
 :ID:       4f3868b5-131e-4d3d-9833-bbe00d0d6cde
@@ -385,7 +523,7 @@ as IR1 types.
 :END:
 [[https://github.com/sbcl/sbcl/blob/master/src/runtime/coreparse.c][sbcl/src/runtime/coreparse.c at master · sbcl/sbcl · GitHub]]
 [[https://github.com/sbcl/sbcl/blob/master/src/runtime/core.h][sbcl/src/runtime/core.h at master · sbcl/sbcl · GitHub]]
-*** VOP
+*** DEFINE-VOP
 :PROPERTIES:
 :ID:       f9bcac71-99b9-4375-9c23-8b650d21d86c
 :CREATED:  <2025-02-28 Fri 19:08>
@@ -396,7 +534,170 @@ as IR1 types.
 [2025-02-28 Fri 19:12] -- [[http://lisphacker.com/codex/001-sbcl-vops.txt][001-sbcl-vops.txt]]
 :END:
 Virtual Operations
+#+begin_src lisp
+  ;;; Define the symbol NAME to be a Virtual OPeration in the compiler.
+  ;;; If specified, INHERITS is the name of a VOP that we default
+  ;;; unspecified information from. Each SPEC is a list beginning with a
+  ;;; keyword indicating the interpretation of the other forms in the
+  ;;; SPEC:
+  ;;;
+  ;;; :ARGS {(Name {Key Value}*)}*
+  ;;; :RESULTS {(Name {Key Value}*)}*
+  ;;;     The Args and Results are specifications of the operand TNs passed
+  ;;;     to the VOP. If there is an inherited VOP, any unspecified options
+  ;;;     are defaulted from the inherited argument (or result) of the same
+  ;;;     name. The following operand options are defined:
+  ;;;
+  ;;;     :SCs (SC*)
+  ;;;         :SCs specifies good SCs for this operand. Other SCs will
+  ;;;         be penalized according to move costs. A load TN will be
+  ;;;         allocated if necessary, guaranteeing that the operand is
+  ;;;         always one of the specified SCs.
+  ;;;
+  ;;;     :LOAD-TN Load-Name
+  ;;;         Load-Name is bound to the load TN allocated for this
+  ;;;         operand, or to NIL if no load TN was allocated.
+  ;;;
+  ;;;     :LOAD-IF EXPRESSION
+  ;;;         Controls whether automatic operand loading is done.
+  ;;;         EXPRESSION is evaluated with the fixed operand TNs bound.
+  ;;;         If EXPRESSION is true, then loading is done and the variable
+  ;;;         is bound to the load TN in the generator body. Otherwise,
+  ;;;         loading is not done, and the variable is bound to the actual
+  ;;;         operand.
+  ;;;
+  ;;;     :MORE T-or-NIL
+  ;;;         If specified, NAME is bound to the TN-REF for the first
+  ;;;         argument or result following the fixed arguments or results.
+  ;;;         A :MORE operand must appear last, and cannot be targeted or
+  ;;;         restricted.
+  ;;;
+  ;;;     :TARGET Operand
+  ;;;         This operand is targeted to the named operand, indicating a
+  ;;;         desire to pack in the same location. Not legal for results.
+  ;;;
+  ;;;     :FROM Time-Spec
+  ;;;     :TO Time-Spec
+  ;;;         Specify the beginning or end of the operand's lifetime.
+  ;;;         :FROM can only be used with results, and :TO only with
+  ;;;         arguments. The default for the N'th argument/result is
+  ;;;         (:ARGUMENT N)/(:RESULT N). These options are necessary
+  ;;;         primarily when operands are read or written out of order.
+  ;;;
+  ;;; :CONDITIONAL [Condition-descriptor+]
+  ;;;     This is used in place of :RESULTS with conditional branch VOPs.
+  ;;;     There are no result values: the result is a transfer of control.
+  ;;;     The target label is passed as the first :INFO arg. The second
+  ;;;     :INFO arg is true if the sense of the test should be negated.
+  ;;;     A side effect is to set the PREDICATE attribute for functions
+  ;;;     in the :TRANSLATE option.
+  ;;;
+  ;;;     If some condition descriptors are provided, this is a flag-setting
+  ;;;     VOP. Descriptors are interpreted in an architecture-dependent
+  ;;;     manner. See the BRANCH-IF VOP in $ARCH/pred.lisp.
+  ;;;
+  ;;; :TEMPORARY ({Key Value}*) Name*
+  ;;;     Allocate a temporary TN for each Name, binding that variable to
+  ;;;     the TN within the body of the generators. In addition to :TARGET
+  ;;;     (which is is the same as for operands), the following options are
+  ;;;     defined:
+  ;;;
+  ;;;     :SC SC-Name
+  ;;;     :OFFSET SB-Offset
+  ;;;         Force the temporary to be allocated in the specified SC
+  ;;;         with the specified offset. Offset is evaluated at
+  ;;;         macroexpand time. If Offset is omitted, the register
+  ;;;         allocator chooses a free location in SC. If both SC and
+  ;;;         Offset are omitted, then the temporary is packed according
+  ;;;         to its primitive type.
+  ;;;
+  ;;;     :FROM Time-Spec
+  ;;;     :TO Time-Spec
+  ;;;         Similar to the argument/result option, this specifies the
+  ;;;         start and end of the temporaries' lives. The defaults are
+  ;;;         :LOAD and :SAVE, i.e. the duration of the VOP. The other
+  ;;;         intervening phases are :ARGUMENT, :EVAL and :RESULT.
+  ;;;         Non-zero sub-phases can be specified by a list, e.g. by
+  ;;;         default the second argument's life ends at (:ARGUMENT 1).
+  ;;;
+  ;;; :GENERATOR Cost Form*
+  ;;;     Specifies the translation into assembly code. Cost is the
+  ;;;     estimated cost of the code emitted by this generator. The body
+  ;;;     is arbitrary Lisp code that emits the assembly language
+  ;;;     translation of the VOP. An ASSEMBLE form is wrapped around
+  ;;;     the body, so code may be emitted by using the local INST macro.
+  ;;;     During the evaluation of the body, the names of the operands
+  ;;;     and temporaries are bound to the actual TNs.
+  ;;;
+  ;;; :INFO Name*
+  ;;;     Define some magic arguments that are passed directly to the code
+  ;;;     generator. The corresponding trailing arguments to VOP or
+  ;;;     %PRIMITIVE are stored in the VOP structure. Within the body
+  ;;;     of the generators, the named variables are bound to these
+  ;;;     values. Except in the case of :CONDITIONAL VOPs, :INFO arguments
+  ;;;     cannot be specified for VOPS that are the direct translation
+  ;;;     for a function (specified by :TRANSLATE).
+  ;;;
+  ;;; :IGNORE Name*
+  ;;;     Causes the named variables to be declared IGNORE in the
+  ;;;     generator body.
+  ;;;
+  ;;; :VARIANT Thing*
+  ;;; :VARIANT-VARS Name*
+  ;;;     These options provide a way to parameterize families of VOPs
+  ;;;     that differ only trivially. :VARIANT makes the specified
+  ;;;     evaluated Things be the "variant" associated with this VOP.
+  ;;;     :VARIANT-VARS causes the named variables to be bound to the
+  ;;;     corresponding Things within the body of the generator.
+  ;;;
+  ;;; :VARIANT-COST Cost
+  ;;;     Specifies the cost of this VOP, overriding the cost of any
+  ;;;     inherited generator.
+  ;;;
+  ;;; :NOTE {String | NIL}
+  ;;;     A short noun-like phrase describing what this VOP "does", i.e.
+  ;;;     the implementation strategy. If supplied, efficiency notes will
+  ;;;     be generated when type uncertainty prevents :TRANSLATE from
+  ;;;     working. NIL inhibits any efficiency note.
+  ;;;
+  ;;; :ARG-TYPES    {* | PType | (:OR PType*) | (:CONSTANT Type)}*
+  ;;; :RESULT-TYPES {* | PType | (:OR PType*)}*
+  ;;;     Specify the template type restrictions used for automatic
+  ;;;     translation. If there is a :MORE operand, the last type is the
+  ;;;     more type. :CONSTANT specifies that the argument must be a
+  ;;;     compile-time constant of the specified Lisp type. The constant
+  ;;;     values of :CONSTANT arguments are passed as additional :INFO
+  ;;;     arguments rather than as :ARGS.
+  ;;;
+  ;;; :TRANSLATE Name*
+  ;;;     This option causes the VOP template to be entered as an IR2
+  ;;;     translation for the named functions.
+  ;;;
+  ;;; :POLICY {:SMALL | :SMALL-SAFE | :FAST | :SAFE | :FAST-SAFE}
+  ;;;     Specifies the policy under which this VOP is the best translation.
+  ;;;
+  ;;; :GUARD Form
+  ;;;     Specifies a Form that is evaluated in the global environment.
+  ;;;     If form returns NIL, then emission of this VOP is prohibited
+  ;;;     even when all other restrictions are met.
+  ;;;     As an additional possibility, if Form is a lambda expression,
+  ;;;     then it is funcalled with the node under consideration.
+  ;;;
+  ;;; :VOP-VAR Name
+  ;;; :NODE-VAR Name
+  ;;;     In the generator, bind the specified variable to the VOP or
+  ;;;     the Node that generated this VOP.
+  ;;;
+  ;;; :SAVE-P {NIL | T | :COMPUTE-ONLY | :FORCE-TO-STACK}
+  ;;;     Indicates how a VOP wants live registers saved.
+  ;;;
+  ;;; :MOVE-ARGS {NIL | :FULL-CALL | :LOCAL-CALL | :KNOWN-RETURN}
+  ;;;     Indicates if and how the more args should be moved into a
+  ;;;     different frame.
+  (defmacro define-vop ((&optional name inherits) &body specs)
+    (%define-vop name inherits specs t))
 
+#+end_src
 *** Aliens                                                              :ffi:
 :PROPERTIES:
 :ID:       93e1ed13-dc82-4a9b-8b9e-f60f06b01a4f
