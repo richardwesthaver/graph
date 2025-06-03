@@ -304,3 +304,13 @@ US National Weather Service
 [2025-04-12 Sat 15:36] -- [[https://rutracker.org/][RuTracker.org]]
 :END:
 - see [[https://github.com/rederikgo/rutracker/blob/master/rutracker.py][rutracker/rutracker.py]]
+
+* github.com
+:PROPERTIES:
+:ID:       c90cebbe-e91a-4438-a21d-eefb707a6194
+:CREATED:  <2025-06-02 Mon 22:13>
+:END:
+- atom feeds at https://github.com/USER/PROJECT/commits/BRANCH.atom
+:investigate:
+https://github.com/_side-panels/user.json
+:end:

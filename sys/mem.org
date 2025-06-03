@@ -23,3 +23,13 @@
 :EDGES:
 [2025-02-13 Thu 22:29] -- [[https://jvernay.fr/en/blog/buddy-allocator/implementation/][How to implement a Buddy allocator]]
 :END:
+
+** Arena Allocator                                                    :alloc:
+:PROPERTIES:
+:ID:       e6c79b21-6762-48e4-9168-d314c5761f8f
+:CREATED:  <2025-06-02 Mon 21:51>
+:END:
+:EDGES:
+[2025-06-02 Mon 22:13] <- [[id:70679001-871e-40c6-a660-d766e355e871][Arenas]]
+:END:
+- [[https://www.mutablecode.com/articles/arena][Programming Gems: The Arena]]

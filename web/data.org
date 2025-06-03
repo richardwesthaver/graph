@@ -12,3 +12,9 @@ https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/
 https://www.opensourceshakespeare.org/
 [[https://registry.opendata.aws/][Registry of Open Data on AWS]]
 [[http://www.cs.toronto.edu/~kriz/cifar.html][CIFAR-10 and CIFAR-100 datasets]]
+* feeds
+:PROPERTIES:
+:ID:       a9659676-999f-4eb4-b841-dd3a2e383317
+:CREATED:  <2025-06-02 Mon 22:21>
+:END:
+[[https://github.com/plenaryapp/awesome-rss-feeds?tab=readme-ov-file][plenaryapp/awesome-rss-feeds]]

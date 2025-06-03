@@ -233,6 +233,7 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
 - TN :: Temporary Name
 - SB :: storage base
 - SC :: storage class
+- TLAB :: Thread-Local Allocation Buffer
 - sfunction
   #+begin_src lisp
     ;;; Similar to FUNCTION, but the result type is "exactly" specified:
@@ -523,6 +524,43 @@ as IR1 types.
 :END:
 [[https://github.com/sbcl/sbcl/blob/master/src/runtime/coreparse.c][sbcl/src/runtime/coreparse.c at master · sbcl/sbcl · GitHub]]
 [[https://github.com/sbcl/sbcl/blob/master/src/runtime/core.h][sbcl/src/runtime/core.h at master · sbcl/sbcl · GitHub]]
+*** Arenas
+:PROPERTIES:
+:ID:       70679001-871e-40c6-a660-d766e355e871
+:CREATED:  <2025-06-02 Mon 21:53>
+:END:
+:EDGES:
+[2025-06-02 Mon 21:53] -- [[https://github.com/sbcl/sbcl/blob/master/doc/internals-notes/arena-allocation.txt][sbcl/doc/internals-notes/arena-allocation.txt]]
+[2025-06-02 Mon 22:13] -> [[id:e6c79b21-6762-48e4-9168-d314c5761f8f][Arena Allocator]]
+:END:
+#+begin_quote
+It is possible for multiple threads to share one arena, or for threads
+to each get their own arena, or potentially even to have more than one
+arena controlled by a thread. The constraint is that in order to
+release all memory used by an arena without incurring a stop-the-world
+event there must be no heap-to-arena pointer reachable in a graph
+trace, supposing that the about-to-be-released memory is not a root.
+An arena has to be released in total, though in theory it could be
+possible to provide a partial release feature as well.  It thus
+becomes possible to discard large portions of the reachability graph
+under user control.
+#+end_quote
+
+- [2025-06-02 Mon]
+  #+begin_quote
+  Pending items
+  =============
+
+  ,* Some of the waste that comes from switching between arena and heap
+  can be avoided by adding more state to the thread structure.
+
+  ,* Background thread pools in particular are a problem. In one such
+  implementation, a thread which requests work to be performed by a
+  worker in a pool sends as part of the work request an identifier of
+  the arena in use by the requester. The worker will switch to that same
+  arena. The implication is that worker threads will constantly be
+  switching their arena, which as per above, is inefficient.
+  #+end_quote
 *** DEFINE-VOP
 :PROPERTIES:
 :ID:       f9bcac71-99b9-4375-9c23-8b650d21d86c
