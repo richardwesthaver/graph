@@ -24,12 +24,123 @@
 [2025-02-13 Thu 22:29] -- [[https://jvernay.fr/en/blog/buddy-allocator/implementation/][How to implement a Buddy allocator]]
 :END:
 
-** Arena Allocator                                                    :alloc:
+** Bump Allocator
+:PROPERTIES:
+:ID:       5ce30140-63e4-44de-b1a2-aeca8d967075
+:CREATED:  <2025-06-03 Tue 22:00>
+:END:
+- [[https://docs.rs/bumpalo/latest/bumpalo/][bumpalo - Rust]]
+  #+begin_quote
+  We have a chunk of memory, and we maintain a pointer within that
+  memory. Whenever we allocate an object, we do a quick check that we
+  have enough capacity left in our chunk to allocate the object and
+  then update the pointer by the object’s size. That’s it!
+
+  The disadvantage of bump allocation is that there is no general way
+  to deallocate individual objects or reclaim the memory region for a
+  no-longer-in-use object.
+  #+end_quote
+** Reference Counting
+:PROPERTIES:
+:ID:       613d9983-6681-4bf7-a99f-c098163f655c
+:CREATED:  <2025-06-03 Tue 21:59>
+:END:
+:EDGES:
+[2025-06-03 Tue 21:59] -- [[wikipedia:Reference counting][wiki]]
+:END:
+
+** Garbage Collection                                                    :gc:
+:PROPERTIES:
+:ID:       e87b4de2-e614-484b-a4ef-97d1180f1bd0
+:CREATED:  <2025-06-03 Tue 21:59>
+:END:
+
+** Arena Allocator                                              :alloc:arena:
 :PROPERTIES:
 :ID:       e6c79b21-6762-48e4-9168-d314c5761f8f
 :CREATED:  <2025-06-02 Mon 21:51>
 :END:
 :EDGES:
 [2025-06-02 Mon 22:13] <- [[id:70679001-871e-40c6-a660-d766e355e871][Arenas]]
+[2025-06-03 Tue 21:58] -- [[wikipedia:Region-based_memory_management][Region-based memory management]]
 :END:
 - [[https://www.mutablecode.com/articles/arena][Programming Gems: The Arena]]
+
+** Boundary Detection
+:PROPERTIES:
+:ID:       a6957fbd-69a1-4123-bf2d-31b98c38be02
+:CREATED:  <2025-06-03 Tue 19:33>
+:END:
+*** Watchpoints
+:PROPERTIES:
+:ID:       0494bab0-8676-472a-8eaa-1cff42b932d0
+:CREATED:  <2025-06-03 Tue 19:40>
+:END:
+- [[https://www.kernel.org/doc/ols/2009/ols2009-pages-149-158.pdf][Hardware Breakpoint (or watchpoint) usage in Linux Kernel]]
+- [[https://www.mutablecode.com/articles/watchpoints][mutablecode - watchpoints]]
+  #+begin_quote
+  Watchpoint-based bounds checking does offer free performance, but
+  comes with list of exceptions and conditions:
+
+  Watchpoints are dependent on both the processor and operating
+  system: the hardware must have the feature, and the software must
+  expose it
+
+  When they are supported, setup may be slow (eg many system calls) or
+  impose other requirements (eg forking on Linux)
+
+  Each side of a boundary check requires one watchpoint, of which
+  there are relatively few (4 on x86, 16 on Arm)
+
+  Each end must also be padded by at least a word; memory before and
+  after an array are used validly elsewhere
+
+  Only the boundary is checked: jumping past watchpoints is
+  undetectable
+
+  When errors are detected, signal-driven logic makes graceful
+  recovery difficult
+
+  Using a debugger is also difficult, as they too use the watchpoints
+
+  They add complexity
+
+  This list is not exhaustive; it shows watchpoints are nuanced and
+  require careful thought and planning for correct usage.
+
+  Looking forward, compilers could treat watchpoints like another
+  register resource, automatically using them for bounds checking and
+  other creative uses. Beyond twisting them into bounds checkers,
+  watchpoints are more commonly found in debuggers like lldb and gdb,
+  although a program could provide its own debugging capabilities; the
+  example code is essentially the skeleton of a debugger.
+  #+end_quote
+*** Guard Pages
+:PROPERTIES:
+:ID:       4d872f6f-61a0-42d5-a5c9-5325bd8f184c
+:CREATED:  <2025-06-03 Tue 21:52>
+:END:
+- [[https://www.mutablecode.com/articles/guard-pages][mutablecode - guard pages]]
+** Tagged Pointers
+:PROPERTIES:
+:ID:       03c44887-96f5-466a-8d42-7df51fd42eb5
+:CREATED:  <2025-06-03 Tue 21:50>
+:END:
+- [[https://www.mutablecode.com/articles/tagged-pointers][mutablecode - Tagged Pointers]]
+** NaN Boxing
+:PROPERTIES:
+:ID:       cffc8c70-d0bb-4af9-9b1c-f9fd7c5b081c
+:CREATED:  <2025-06-03 Tue 21:50>
+:END:
+- [[https://leonardschuetz.ch/blog/nan-boxing/][Dynamic Typing and NaN Boxing]]
+- NaN boxing allows you to cram extra information into the NaN value
+  that exists within the floating-point spectrum of numbers.
+- [[https://anniecherkaev.com/the-secret-life-of-nan][the secret life of NaN]]
+** Fragmentation
+:PROPERTIES:
+:ID:       eabf2d7b-c99f-4854-a64c-397ff8f90a2b
+:CREATED:  <2025-06-03 Tue 22:02>
+:END:
+:EDGES:
+[2025-06-03 Tue 22:02] -- [[wikipedia:Fragmentation (computing)][wiki]]
+:END:

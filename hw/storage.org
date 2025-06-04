@@ -46,3 +46,11 @@
 :ID:       e2726251-7ffc-44db-a609-fdb19729f89e
 :CREATED:  <2025-03-08 Sat 01:13>
 :END:
+* Magnetic-core memory
+:PROPERTIES:
+:ID:       f321298b-98b8-45f7-aea7-c68046f5e834
+:CREATED:  <2025-06-03 Tue 22:06>
+:END:
+:EDGES:
+[2025-06-03 Tue 22:06] -- [[wikipedia:Magnetic-core memory][wiki]]
+:END:

@@ -9,7 +9,7 @@
 [2025-01-17 Fri 22:59] -- [[https://en.wikipedia.org/wiki/Central_processing_unit][Central processing unit - Wikipedia]]
 :END:
 The 'Central' processing unit.
-* AMD Zen                                                               :amd:
+** AMD Zen                                                              :amd:
 :PROPERTIES:
 :ID:       1b41d186-948d-4ef1-b36d-f3e2fa14fa3d
 :CREATED:  <2025-03-03 Mon 12:10>
@@ -20,7 +20,7 @@ The 'Central' processing unit.
 - [[https://www.amd.com/en/developer/zendnn.html][ZenDNN]]
 - [[https://github.com/amd/ZenDNN][GitHub - amd/ZenDNN]]
 - [[https://docs.amd.com/r/en-US/57300-ZenDNN-user-guide/ZenDNN][ZenDNN User Guide]]
-** EPYC
+*** EPYC
 :PROPERTIES:
 :ID:       86c29a1a-359d-4049-816d-2ec56e6bdd5f
 :CREATED:  <2025-03-03 Mon 11:47>
@@ -34,7 +34,7 @@ The 'Central' processing unit.
 - [[https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/ai-inferencing-with-amd-epyc-processors-white-paper.pdf][AI Interencing with AMD EPYC Processors]]
 - [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/user-guides/58206_amd-epyc-9004-ug-virtual-machine-migration-guide.pdf][VM Migration Guide]]
 
-* Intel Core                                                          :intel:
+** Intel Core                                                         :intel:
 :PROPERTIES:
 :ID:       b64ab310-f4f1-4be7-991b-d38ef4ad686f
 :CREATED:  <2025-03-03 Mon 12:30>
@@ -42,7 +42,7 @@ The 'Central' processing unit.
 :EDGES:
 [2025-03-03 Mon 12:30] -- [[https://www.intel.com/content/www/us/en/products/details/processors/core.html][Intel® Core™ Processors]]
 :END:
-* Intel Xeon                                                          :intel:
+** Intel Xeon                                                         :intel:
 :PROPERTIES:
 :ID:       cf84218a-5bbc-4b73-919b-994cbd0e2845
 :CREATED:  <2025-03-03 Mon 12:30>

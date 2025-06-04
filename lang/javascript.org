@@ -8,6 +8,29 @@
 :EDGES:
 [2025-03-06 Thu 14:51] <- [[id:09edda89-63e0-4496-84eb-764fb9b0b7c3][org-info.js]]
 :END:
+** Runtimes
+:PROPERTIES:
+:ID:       f591261a-576f-4e4f-87c3-e19833b85eac
+:CREATED:  <2025-06-03 Tue 21:21>
+:END:
+*** Deno
+:PROPERTIES:
+:ID:       ce8b2093-0cd1-4d6f-b174-ba4c20124bb4
+:CREATED:  <2025-06-03 Tue 21:21>
+:END:
+:EDGES:
+[2025-06-03 Tue 21:21] -- [[https://deno.com/][Deno, the next-generation JavaScript runtime]]
+:END:
+- [[https://jsr.io/][JSR: the JavaScript Registry]]
+*** Node.js
+:PROPERTIES:
+:ID:       1252c186-c72a-4a0e-b2d9-b325b826cea5
+:CREATED:  <2025-06-03 Tue 21:21>
+:END:
+:EDGES:
+[2025-06-03 Tue 21:22] -- [[https://nodejs.org/][Node.js — Run JavaScript Everywhere]]
+:END:
+- [[https://www.npmjs.com/][npm | Home]]
 ** Libraries
 :PROPERTIES:
 :ID:       7ddd2d60-6a99-4948-aa7b-f36dc9839599
@@ -86,7 +109,7 @@
 :EDGES:
 [2025-03-04 Tue 19:28] -- [[https://nextjs.org/][Next.js by Vercel - The React Framework]]
 :END:
-* TypeScript
+** TypeScript                                                            :ts:
 :PROPERTIES:
 :ID:       58d76125-7110-4c76-b8d4-7014d407cc1d
 :CREATED:  <2025-03-03 Mon 19:45>

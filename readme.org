@@ -17,8 +17,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 787 |
-| edges | 619 |
+| nodes | 791 |
+| edges | 621 |
 | files | 124 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t
@@ -31,11 +31,11 @@ an interface for modifying the graph.
 | description | :description CC Org Files                          |
 | skel-id     | :id 1784914079056115652                            |
 | root        | ~/comp/org/graph/                                  |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/fef6d072ce08][fef6d072ce08:75]] |
+| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/878fa59bd937][878fa59bd937:76]] |
 | tags        | :tags (org docs notes blog meta plan)              |
-| updated     | Mon Jun 02 21:13:25 2025 -0400                     |
+| updated     | Mon Jun 02 22:24:23 2025 -0400                     |
 | langs       | org                                                |
-| lines       | 10306 :λ 9875 :# 16 :_ 415                         |
+| lines       | 10370 :λ 9934 :# 16 :_ 420                         |
 |-------------+----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -46,7 +46,7 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06    346 ***
+: 2025-06    420 ***
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
 
@@ -68,7 +68,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/comp/gcc.html][comp/gcc]]             | 2025-03-09 21:08:14 |
 | [[https://compiler.company/graph/comp/ghc.html][comp/ghc]]             | 2025-02-21 22:34:46 |
 | [[https://compiler.company/graph/comp/llvm.html][comp/llvm]]            | 2025-03-03 16:41:14 |
-| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]            | 2025-06-01 22:42:35 |
+| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]            | 2025-06-02 22:13:32 |
 | [[https://compiler.company/graph/hw/amd.html][hw/amd]]               | 2025-03-03 11:47:33 |
 | [[https://compiler.company/graph/hw/apple.html][hw/apple]]             | 2025-03-03 20:34:42 |
 | [[https://compiler.company/graph/hw/car.html][hw/car]]               | 2025-02-21 22:34:16 |
@@ -157,12 +157,12 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2025-04-15 15:46:17 |
-| [[https://compiler.company/graph/index.html][index]]                | 2025-06-01 22:58:50 |
+| [[https://compiler.company/graph/index.html][index]]                | 2025-06-02 21:19:41 |
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-03-07 10:04:41 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2025-05-30 22:55:07 |
 | [[https://compiler.company/graph/sys/fs.html][sys/fs]]               | 2025-03-03 14:49:54 |
 | [[https://compiler.company/graph/sys/ide.html][sys/ide]]              | 2025-05-10 23:10:39 |
-| [[https://compiler.company/graph/sys/mem.html][sys/mem]]              | 2025-03-03 17:53:12 |
+| [[https://compiler.company/graph/sys/mem.html][sys/mem]]              | 2025-06-02 22:24:11 |
 | [[https://compiler.company/graph/sys/srv.html][sys/srv]]              | 2025-03-11 21:48:21 |
 | [[https://compiler.company/graph/sys/term.html][sys/term]]             | 2025-04-11 21:40:34 |
 | [[https://compiler.company/graph/sys/vcs.html][sys/vcs]]              | 2025-04-05 21:27:43 |
@@ -176,7 +176,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/theory/process.html][theory/process]]       | 2025-05-10 16:41:40 |
 | [[https://compiler.company/graph/theory/style.html][theory/style]]         | 2025-02-27 17:04:03 |
 | [[https://compiler.company/graph/theory/system.html][theory/system]]        | 2025-04-16 20:26:59 |
-| [[https://compiler.company/graph/web/data.html][web/data]]             | 2025-04-06 17:54:41 |
-| [[https://compiler.company/graph/web/sites.html][web/sites]]            | 2025-04-12 15:37:25 |
+| [[https://compiler.company/graph/web/data.html][web/data]]             | 2025-06-02 22:21:32 |
+| [[https://compiler.company/graph/web/sites.html][web/sites]]            | 2025-06-02 22:19:17 |
 
 #+END:

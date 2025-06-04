@@ -62,6 +62,14 @@
 :ID:       d9641715-f038-4093-961d-87489fb2390d
 :CREATED:  <2025-03-03 Mon 14:34>
 :END:
+***** SWAR
+:PROPERTIES:
+:ID:       d47a1ee5-0cf8-4ea2-9d5f-4c2396f34bc8
+:CREATED:  <2025-06-03 Tue 19:29>
+:AKA: Packed SIMD
+:END:
+SIMD within a register
+- a technique used for performing SIMD ops on data contained in cpu registers
 ***** AVX
 :PROPERTIES:
 :ID:       9e9bfa13-eed1-49a8-bad1-bfa2f2dade86

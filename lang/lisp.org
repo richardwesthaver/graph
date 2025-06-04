@@ -711,7 +711,7 @@ An alternative distribution for Quicklisp - tracks git branches.
 [2025-03-03 Mon 20:03] -- [[info:guile][info]]
 [2025-03-03 Mon 20:03] -- [[https://www.gnu.org/software/guile/][GNU's programming and extension language — GNU Guile]]
 :END:
-
+- [[https://www.gnu.org/software/guile/manual/html_node/Compiler-Tower.html][Compiler Tower (Guile Reference Manual)]]
 * Lisp Machine Lisp
 :PROPERTIES:
 :ID:       e21c02a5-5039-42c2-8416-aa5d45e70cb6
