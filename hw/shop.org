@@ -5,3 +5,8 @@
 :ID:       6496205a-1dd9-4aec-9b32-ee5a44156839
 :CREATED:  <2025-03-03 Mon 11:42>
 :END:
+- vendors
+  - [[https://dragonfiretools.com/][dragonfire tools]]
+  - [[https://www.homedepot.com/b/Garage-Tool-Storage-Tool-Chests-Mobile-Workbenches/N-5yc1vZcerm][Mobile Workbenches - The Home Depot]]
+  - [[https://www.homedepot.com/b/Garage-Tool-Storage-Modular-Tool-Storage-Systems/N-5yc1vZ2fkpa0w][Modular Tool Storage Systems - The Home Depot]]
+  - [[https://www.homedepot.com/b/Garage-Tool-Storage-Jobsite-Boxes/N-5yc1vZc27g][Jobsite Boxes - The Home Depot]]

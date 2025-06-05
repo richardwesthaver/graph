@@ -7,6 +7,8 @@
 :END:
 :EDGES:
 [2025-03-06 Thu 14:51] <- [[id:09edda89-63e0-4496-84eb-764fb9b0b7c3][org-info.js]]
+[2025-06-04 Wed 14:15] <- [[id:c42732ce-9ef1-408b-a9dd-2424d05de398][parenscript]]
+[2025-06-04 Wed 14:15] <- [[id:3addee17-b990-4a6d-9767-071969ed9d0e][jscl]]
 :END:
 ** Runtimes
 :PROPERTIES:

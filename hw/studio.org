@@ -1,2 +1,42 @@
 #+title: Studio Hardware
 #+setupfile: ../../clean.theme
+* Desk
+:PROPERTIES:
+:ID:       42ccf6b6-930a-416a-a7bc-7e53b1d2e8c8
+:CREATED:  <2025-06-04 Wed 15:45>
+:END:
+* Audio Interface
+:PROPERTIES:
+:ID:       a8a508ae-1497-4000-b358-35f3c2997d37
+:CREATED:  <2025-06-04 Wed 15:46>
+:END:
+* Studio Monitors
+:PROPERTIES:
+:ID:       83ecacbe-757f-407d-b90a-8111fcf677d8
+:CREATED:  <2025-06-04 Wed 15:46>
+:END:
+* In-ear Monitors
+:PROPERTIES:
+:ID:       25271e2c-9741-43e9-94e0-fdc895f64d04
+:CREATED:  <2025-06-04 Wed 15:46>
+:END:
+* Headphones
+:PROPERTIES:
+:ID:       c2b003f2-54b9-4efc-ab9d-937dc2b90b2e
+:CREATED:  <2025-06-04 Wed 15:46>
+:END:
+* Microphone
+:PROPERTIES:
+:ID:       cde93921-a7a4-4ada-9c84-5656f5e22629
+:CREATED:  <2025-06-04 Wed 15:46>
+:END:
+* Amplifier
+:PROPERTIES:
+:ID:       282b432e-5fac-44bd-9017-719166a41726
+:CREATED:  <2025-06-04 Wed 15:46>
+:END:
+* Acoustic Treatment
+:PROPERTIES:
+:ID:       031dd5d9-6572-46b6-a73d-a2d31d9e23b9
+:CREATED:  <2025-06-04 Wed 15:47>
+:END:

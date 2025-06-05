@@ -10,3 +10,32 @@
 [2025-02-13 Thu 22:48] -- [[https://sotrh.github.io/learn-wgpu/][Learn Wgpu]]
 [2025-04-15 Tue 15:46] -> [[id:05a6ae25-b2ed-4edb-9104-e6894819b96e][GPU]]
 :END:
+* HTML
+:PROPERTIES:
+:ID:       48415094-068f-4956-b841-e84442747585
+:CREATED:  <2025-06-04 Wed 14:16>
+:END:
+:EDGES:
+[2025-06-04 Wed 14:16] -- [[https://html.spec.whatwg.org/multipage/][HTML Standard]]
+:END:
+
+* CSS
+:PROPERTIES:
+:ID:       bd9c1355-d21d-4f6c-ab60-042bd737de60
+:CREATED:  <2025-06-04 Wed 14:16>
+:END:
+:EDGES:
+[2025-06-04 Wed 14:17] -- [[https://developer.mozilla.org/en-US/docs/Web/CSS][CSS: Cascading Style Sheets | MDN]]
+[2025-06-04 Wed 14:17] -- [[https://www.w3.org/Style/CSS/][Cascading Style Sheets]]
+[2025-06-04 Wed 14:23] -- [[https://developer.mozilla.org/en-US/docs/Web/CSS/Reference][CSS reference - CSS: Cascading Style Sheets | MDN]]
+:END:
+- [[https://www.w3.org/TR/css-2024/][2024]]
+- [[https://www.w3.org/Style/CSS/Test/][css tests]]
+* EPUB
+:PROPERTIES:
+:ID:       602eead7-b934-4419-b3c2-276e90e91f7d
+:CREATED:  <2025-06-04 Wed 14:22>
+:END:
+:EDGES:
+[2025-06-04 Wed 14:22] -- [[https://www.w3.org/publishing/groups/epub-wg/][W3C EPUB 3 Working Group]]
+:END:

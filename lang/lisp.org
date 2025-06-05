@@ -432,6 +432,23 @@ See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104
 [2025-03-06 Thu 14:02] -- [[https://lparallel.org/][Lisp in Parallel : lparallel | (ql:quickload :lparallel)]]
 [2025-03-06 Thu 14:03] >> [[id:79ecc4f2-f223-4045-a31a-565192efaf49][Concurrency]]
 :END:
+*** parenscript
+:PROPERTIES:
+:ID:       c42732ce-9ef1-408b-a9dd-2424d05de398
+:CREATED:  <2025-06-04 Wed 14:07>
+:END:
+:EDGES:
+[2025-06-04 Wed 14:09] -- [[https://parenscript.common-lisp.dev/][Parenscript]]
+[2025-06-04 Wed 14:15] -> [[id:d9226de2-4b80-4193-a06e-e3185ffb5217][Javascript]]
+:END:
+- [[https://jsloop.net/2025/01/10/compiling-parenscript][Compiling Parenscript | jsloop]]
+  #+begin_quote
+  Parenscript is a subset of Common Lisp that compiles to
+  JavaScript. The emphasis is on the fact that it strives to produce
+  minimal JavaScript like 1:1 as much as possible. Unlike
+  ClojureScript which produces a lot of dependent code because of the
+  use of Google Closure library for everything.
+  #+end_quote
 *** jscl
 :PROPERTIES:
 :ID:       3addee17-b990-4a6d-9767-071969ed9d0e
@@ -439,8 +456,12 @@ See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104
 :END:
 :EDGES:
 [2025-03-02 Sun 20:52] -- [[https://github.com/jscl-project/jscl][jscl-project/jscl: A Lisp-to-JavaScript compiler bootstrapped from Common Lisp]]
+[2025-06-04 Wed 14:15] -> [[id:d9226de2-4b80-4193-a06e-e3185ffb5217][Javascript]]
 :END:
-
+A CL to JS compiler
+- supplies a light js runtime with a web worker
+- lisp code compiled directly to js stream
+- supports CL/JS ffi
 ** Systems
 :PROPERTIES:
 :ID:       a6911466-c135-488c-a67e-689f22592a44
@@ -909,3 +930,46 @@ Maclisp->Zetalisp
 :EDGES:
 [2025-05-21 Wed 19:02] -- [[https://arclanguage.github.io/ref/][Arc: Table of Contents]]
 :END:
+* MLisp
+:PROPERTIES:
+:ID:       b7c0c96b-2555-4436-9231-42670db24838
+:CREATED:  <2025-06-04 Wed 16:07>
+:END:
+:EDGES:
+[2025-06-04 Wed 16:07] -- [[wikipedia:MLisp][wiki]]
+:END:
+** M-expression
+:PROPERTIES:
+:ID:       c32b20a7-11fc-4ab6-ae55-cc121b423a66
+:CREATED:  <2025-06-04 Wed 16:15>
+:END:
+:EDGES:
+[2025-06-04 Wed 16:15] -- [[wikipedia:M-expression][wiki]]
+:END:
+- History of Lisp
+  #+begin_quote
+  The project of defining M-expressions precisely and compiling them or
+  at least translating them into S-expressions was neither finalized nor
+  explicitly abandoned. It just receded into the indefinite future, and
+  a new generation of programmers appeared who preferred internal
+  notation to any FORTRAN-like or ALGOL-like notation that could be
+  devised.
+  #+end_quote
+* CGOL
+:PROPERTIES:
+:ID:       f49136cd-0a8e-412b-9fc0-75afb70502e2
+:CREATED:  <2025-06-04 Wed 16:19>
+:END:
+:EDGES:
+[2025-06-04 Wed 16:20] -- [[wikipedia:CGOL][wiki]]
+:END:
+mm in cgol:
+#+begin_src lisp
+  for i in 1 to n do
+    for k in 1 to n do
+      (ac := 0;
+       for j in 1 to n do
+          ac := ac + a(i,j)*b(j,k);
+       c(i,k) := ac)
+#+end_src
+- [[https://dspace.mit.edu/bitstream/handle/1721.1/41951/AI_WP_121.pdf?sequence=1][CGOL - an Alternative External Representation For LISP users (1976)]]

@@ -50,3 +50,35 @@ The 'Central' processing unit.
 :EDGES:
 [2025-03-03 Mon 12:30] -- [[https://www.intel.com/content/www/us/en/products/details/processors/xeon.html][Intel® Xeon® Processors]]
 :END:
+* Microprocessor
+:PROPERTIES:
+:ID:       08a19348-2262-4bb8-b5bb-fc2d5982553f
+:CREATED:  <2025-06-04 Wed 15:05>
+:END:
+:EDGES:
+[2025-06-04 Wed 15:05] -- [[wikipedia:Microprocessor][wiki]]
+:END:
+** 6502
+:PROPERTIES:
+:ID:       c7d1e078-91a1-43f6-8269-3ce4c592db3a
+:CREATED:  <2025-06-04 Wed 15:05>
+:END:
+:EDGES:
+[2025-06-04 Wed 15:06] -- [[wikipedia:MOS Technology 6502][wiki]]
+:END:
+*** 6507
+:PROPERTIES:
+:ID:       c88d5ce8-3348-4347-b85b-15cf4ef61e4f
+:CREATED:  <2025-06-04 Wed 15:07>
+:END:
+:EDGES:
+[2025-06-04 Wed 15:07] -- [[wikipedia:MOS Technology 6507][wiki]]
+:END:
+** 6800
+:PROPERTIES:
+:ID:       f4e6553b-2e09-48b1-ac4f-a89fefab8be9
+:CREATED:  <2025-06-04 Wed 15:06>
+:END:
+:EDGES:
+[2025-06-04 Wed 15:06] -- [[wikipedia:Motorola 6800][wiki]]
+:END:
