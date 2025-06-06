@@ -1,0 +1,10 @@
+#+title: SSH Protocols
+* SSH
+:PROPERTIES:
+:ID:       f8d6dd49-942d-4621-94cb-d1b01032240e
+:CREATED:  <2025-06-05 Thu 18:31>
+:END:
+:EDGES:
+[2025-06-05 Thu 18:31] -- [[https://www.openssh.com/specs.html][OpenSSH: Specifications]]
+:END:
+- [[https://libssh2.org/][libssh2]]

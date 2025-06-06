@@ -98,6 +98,15 @@ list, max, min, nconc, or, progn, and standard.
   (define-method-combination xor :identity-with-one-argument t)
 #+end_src
 
+** Conditions
+:PROPERTIES:
+:ID:       1535ca58-7141-4886-a1c0-90e4f29fc2c9
+:CREATED:  <2025-06-05 Thu 22:00>
+:END:
+:EDGES:
+[2025-06-05 Thu 22:01] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/09_.htm][CLHS: Chapter 9]]
+:END:
+
 ** Format Directives
 :PROPERTIES:
 :ID:       852b2c7f-238e-480d-ad63-3b5b53c58929
