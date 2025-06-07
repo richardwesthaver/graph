@@ -1,0 +1,26 @@
+#+title: Materials
+#+setupfile: ../../clean.theme
+* G-10
+:PROPERTIES:
+:ID:       a10424e7-6e2d-4f4f-a232-53359d785e00
+:CREATED:  <2025-06-07 Sat 17:24>
+:AKA: garolite
+:END:
+:EDGES:
+[2025-06-07 Sat 17:24] -- [[wikipedia:G-10 (material)][wiki]]
+:END:
+- high-pressure fiberglass laminate created by stacking layers of
+  glass cloth soaked in epoxy resin and compressing under heat until
+  cured
+- similar to carbon fiber but less expensive
+- non-metallic
+* Bakelite
+:PROPERTIES:
+:ID:       162f375b-e3f5-414a-bfd4-939df34290bd
+:CREATED:  <2025-06-07 Sat 17:27>
+:END:
+- polyoxybenzylmethyleneglycolanhydride
+- thermosetting phenol formaldehyde resin
+- formed from a condensation reaction of phenol and formaldehyde
+- first plastic made from synthetic components
+- developed by Leo Baekeland in Yonkers NY in 1907, patented 1909
