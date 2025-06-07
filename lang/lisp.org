@@ -97,6 +97,161 @@ list, max, min, nconc, or, progn, and standard.
 #+begin_src lisp :package cl-user
   (define-method-combination xor :identity-with-one-argument t)
 #+end_src
+** Types
+:PROPERTIES:
+:ID:       3f613b5a-6aae-4852-a4d8-c322c271e6eb
+:CREATED:  <2025-06-06 Fri 18:42>
+:END:
+#+begin_src lisp :post transpose
+  '(arithmetic-error function simple-condition array generic-function
+    simple-error atom hash-table simple-string base-char integer
+    simple-type-error base-string keyword simple-vector bignum list
+    simple-warning bit logical-pathname single-float bit-vector long-float
+    standard-char broadcast-stream method standard-class built-in-class
+    method-combination standard-generic-function cell-error nil
+    standard-method character null standard-object class number
+    storage-condition compiled-function package stream complex
+    package-error stream-error concatenated-stream parse-error string
+    condition pathname string-stream cons print-not-readable
+    structure-class control-error program-error structure-object
+    division-by-zero random-state style-warning double-float ratio symbol
+    echo-stream rational synonym-stream end-of-file reader-error t error
+    readtable two-way-stream extended-char real type-error file-error
+    restart unbound-slot file-stream sequence unbound-variable fixnum
+    serious-condition undefined-function float short-float unsigned-byte
+    floating-point-inexact signed-byte vector
+    floating-point-invalid-operation simple-array warning
+    floating-point-overflow simple-base-string floating-point-underflow
+    simple-bit-vector)
+#+end_src
+
+#+RESULTS:
+| ARITHMETIC-ERROR                 |
+| FUNCTION                         |
+| SIMPLE-CONDITION                 |
+| ARRAY                            |
+| GENERIC-FUNCTION                 |
+| SIMPLE-ERROR                     |
+| ATOM                             |
+| HASH-TABLE                       |
+| SIMPLE-STRING                    |
+| BASE-CHAR                        |
+| INTEGER                          |
+| SIMPLE-TYPE-ERROR                |
+| BASE-STRING                      |
+| KEYWORD                          |
+| SIMPLE-VECTOR                    |
+| BIGNUM                           |
+| LIST                             |
+| SIMPLE-WARNING                   |
+| BIT                              |
+| LOGICAL-PATHNAME                 |
+| SINGLE-FLOAT                     |
+| BIT-VECTOR                       |
+| LONG-FLOAT                       |
+| STANDARD-CHAR                    |
+| BROADCAST-STREAM                 |
+| METHOD                           |
+| STANDARD-CLASS                   |
+| BUILT-IN-CLASS                   |
+| METHOD-COMBINATION               |
+| STANDARD-GENERIC-FUNCTION        |
+| CELL-ERROR                       |
+| NIL                              |
+| STANDARD-METHOD                  |
+| CHARACTER                        |
+| NULL                             |
+| STANDARD-OBJECT                  |
+| CLASS                            |
+| NUMBER                           |
+| STORAGE-CONDITION                |
+| COMPILED-FUNCTION                |
+| PACKAGE                          |
+| STREAM                           |
+| COMPLEX                          |
+| PACKAGE-ERROR                    |
+| STREAM-ERROR                     |
+| CONCATENATED-STREAM              |
+| PARSE-ERROR                      |
+| STRING                           |
+| CONDITION                        |
+| PATHNAME                         |
+| STRING-STREAM                    |
+| CONS                             |
+| PRINT-NOT-READABLE               |
+| STRUCTURE-CLASS                  |
+| CONTROL-ERROR                    |
+| PROGRAM-ERROR                    |
+| STRUCTURE-OBJECT                 |
+| DIVISION-BY-ZERO                 |
+| RANDOM-STATE                     |
+| STYLE-WARNING                    |
+| DOUBLE-FLOAT                     |
+| RATIO                            |
+| SYMBOL                           |
+| ECHO-STREAM                      |
+| RATIONAL                         |
+| SYNONYM-STREAM                   |
+| END-OF-FILE                      |
+| READER-ERROR                     |
+| T                                |
+| ERROR                            |
+| READTABLE                        |
+| TWO-WAY-STREAM                   |
+| EXTENDED-CHAR                    |
+| REAL                             |
+| TYPE-ERROR                       |
+| FILE-ERROR                       |
+| RESTART                          |
+| UNBOUND-SLOT                     |
+| FILE-STREAM                      |
+| SEQUENCE                         |
+| UNBOUND-VARIABLE                 |
+| FIXNUM                           |
+| SERIOUS-CONDITION                |
+| UNDEFINED-FUNCTION               |
+| FLOAT                            |
+| SHORT-FLOAT                      |
+| UNSIGNED-BYTE                    |
+| FLOATING-POINT-INEXACT           |
+| SIGNED-BYTE                      |
+| VECTOR                           |
+| FLOATING-POINT-INVALID-OPERATION |
+| SIMPLE-ARRAY                     |
+| WARNING                          |
+| FLOATING-POINT-OVERFLOW          |
+| SIMPLE-BASE-STRING               |
+| FLOATING-POINT-UNDERFLOW         |
+| SIMPLE-BIT-VECTOR                |
+
+*** Simple Types
+:PROPERTIES:
+:ID:       62417b14-efff-448d-92c0-5b0e99a180ee
+:CREATED:  <2025-06-06 Fri 18:42>
+:END:
+#+begin_src lisp :post transpose
+  '(simple-array
+    simple-base-string
+    simple-bit-vector
+    simple-string
+    simple-type-error
+    simple-vector
+
+    simple-condition
+    simple-error
+    simple-warning)
+#+end_src
+
+#+RESULTS:
+| SIMPLE-ARRAY       |
+| SIMPLE-BASE-STRING |
+| SIMPLE-BIT-VECTOR  |
+| SIMPLE-STRING      |
+| SIMPLE-TYPE-ERROR  |
+| SIMPLE-VECTOR      |
+| SIMPLE-CONDITION   |
+| SIMPLE-ERROR       |
+| SIMPLE-WARNING     |
 
 ** Conditions
 :PROPERTIES:

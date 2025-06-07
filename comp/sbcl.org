@@ -436,7 +436,44 @@ as IR1 types.
 :CREATED:  <2025-01-17 Fri 15:50>
 :ID:       fd50e430-8a51-406a-96bd-ae6a1cf73bdd
 :END:
-#+begin_src c
+#+begin_quote
+  Tags for the main low-level types are stored in the low n (usually three)
+  bits to identify the type of a machine word.  Certain constraints
+  apply:
+    ,* EVEN-FIXNUM-LOWTAG and ODD-FIXNUM-LOWTAG must be 0 and 4: code
+      which shifts left two places to convert raw integers to tagged
+      fixnums is ubiquitous.
+    ,* LIST-POINTER-LOWTAG + N-WORD-BYTES = OTHER-POINTER-LOWTAG: NIL
+      is both a cons and a symbol (at the same address) and depends on this.
+      See the definition of SYMBOL in objdef.lisp
+    ,* OTHER-IMMEDIATE-0-LOWTAG are spaced 4 apart: various code wants to
+      iterate through these.  (This is not true on PPC64)
+  (These are just the ones we know about as of sbcl-0.7.1.22. There
+  might easily be more, since these values have stayed highly
+  constrained for more than a decade, an inviting target for
+  inventive abstraction-phobic maintainers.:-)
+
+  Another way to look at lowtags is that there is no one lowtag
+  length.  On 32-bit platforms, fixnums and other-immediates have a
+  lowtag length of two bits, and pointers have a lowtag length of
+  three bits.  On 64-bit platforms, fixnums and pointers gain an
+  extra bit, and six "pad" lowtags waste the extra encoding space so
+  obtained.
+
+   x00 -- fixnum
+   x10 -- other-immediate
+   001 -- instance-pointer
+   011 -- list-pointer
+   101 -- fun-pointer
+   111 -- other-pointer
+
+  If you change the tag layout, check the various functions in
+  src/runtime/runtime.h to see if they need to be updated, along
+  with print_obj() in src/runtime/print.c, possibly 'late-objdef.lisp'
+  and possibly the code in src/code/room.
+#+end_quote
+
+#+begin_src c :eval never
   #define SBCL_GENESIS_CONSTANTS
   #define FIXNUM_TAG_MASK 1 /* 0x1 */
   #define N_FIXNUM_TAG_BITS 1 /* 0x1 */
