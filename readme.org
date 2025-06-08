@@ -17,12 +17,12 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 828 |
-| edges | 639 |
-| files | 125 |
+| nodes | 830 |
+| edges | 640 |
+| files | 126 |
 
-#+BEGIN: project-info :status nil :tasks nil :files t
-#+CALL: project-details() :dir ~/comp/org/graph/
+#+BEGIN: project-info :status nil :tasks nil :files t :vc nil
+#+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
 
 #+RESULTS:
 |-------------+-----------------------------------------------------------|
@@ -31,11 +31,10 @@ an interface for modifying the graph.
 | description | :description CC Org Files                                 |
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
-| vc          | :hg [[https://vc.compiler.company/graph][vc.compiler.company/graph]] :rev [[https://vc.compiler.company/graph/rev/0cc690053c9e][0cc690053c9e:80]]        |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Fri Jun 06 22:13:57 2025 -0400                            |
+| updated     | Sat Jun 07 18:19:15 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 10904 :λ 10446 :# 16 :_ 442                               |
+| lines       | 10932 :λ 10474 :# 16 :_ 442                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -46,138 +45,139 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   1082 *********
+: 2025-06   1124 *********
 
-#+CALL: project-html-files() :dir ~/comp/org/graph/
+#+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://compiler.company/graph/app/cas.html][app/cas]]              | 2025-05-26 19:50:23 |
-| [[https://compiler.company/graph/app/desktop.html][app/desktop]]          | 2025-03-03 18:15:28 |
-| [[https://compiler.company/graph/app/emacs.html][app/emacs]]            | 2025-05-10 23:11:25 |
-| [[https://compiler.company/graph/app/gnu-radio.html][app/gnu-radio]]        | 2025-03-03 18:15:21 |
-| [[https://compiler.company/graph/app/mail.html][app/mail]]             | 2025-04-15 18:24:21 |
-| [[https://compiler.company/graph/app/media.html][app/media]]            | 2025-04-18 19:33:21 |
-| [[https://compiler.company/graph/app/net.html][app/net]]              | 2025-04-06 18:08:34 |
-| [[https://compiler.company/graph/app/package-manager.html][app/package-manager]]  | 2025-04-06 17:55:58 |
-| [[https://compiler.company/graph/app/podman.html][app/podman]]           | 2025-03-03 17:25:04 |
-| [[https://compiler.company/graph/app/term.html][app/term]]             | 2025-05-03 12:08:28 |
-| [[https://compiler.company/graph/app/vi.html][app/vi]]               | 2025-05-10 23:09:51 |
-| [[https://compiler.company/graph/comp/ecl.html][comp/ecl]]             | 2025-03-09 15:44:39 |
-| [[https://compiler.company/graph/comp/gcc.html][comp/gcc]]             | 2025-03-09 21:08:14 |
-| [[https://compiler.company/graph/comp/ghc.html][comp/ghc]]             | 2025-02-21 22:34:46 |
-| [[https://compiler.company/graph/comp/llvm.html][comp/llvm]]            | 2025-03-03 16:41:14 |
-| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]            | 2025-06-06 19:12:22 |
-| [[https://compiler.company/graph/hw/amd.html][hw/amd]]               | 2025-03-03 11:47:33 |
-| [[https://compiler.company/graph/hw/apple.html][hw/apple]]             | 2025-03-03 20:34:42 |
-| [[https://compiler.company/graph/hw/car.html][hw/car]]               | 2025-02-21 22:34:16 |
-| [[https://compiler.company/graph/hw/cpu.html][hw/cpu]]               | 2025-06-04 15:07:23 |
-| [[https://compiler.company/graph/hw/fpga.html][hw/fpga]]              | 2025-03-16 19:12:30 |
-| [[https://compiler.company/graph/hw/gpu.html][hw/gpu]]               | 2025-04-15 15:54:27 |
-| [[https://compiler.company/graph/hw/gsg.html][hw/gsg]]               | 2025-02-21 22:34:24 |
-| [[https://compiler.company/graph/hw/home.html][hw/home]]              | 2025-03-12 21:08:35 |
-| [[https://compiler.company/graph/hw/honda.html][hw/honda]]             | 2025-02-21 22:34:27 |
-| [[https://compiler.company/graph/hw/hydrabus.html][hw/hydrabus]]          | 2025-02-21 22:34:29 |
-| [[https://compiler.company/graph/hw/intel.html][hw/intel]]             | 2025-03-03 11:45:39 |
-| [[https://compiler.company/graph/hw/kbd.html][hw/kbd]]               | 2025-03-15 23:04:35 |
-| [[https://compiler.company/graph/hw/nvidia.html][hw/nvidia]]            | 2025-03-03 14:47:56 |
-| [[https://compiler.company/graph/hw/pine64.html][hw/pine64]]            | 2025-04-15 16:02:06 |
-| [[https://compiler.company/graph/hw/samsung.html][hw/samsung]]           | 2025-02-21 22:34:37 |
-| [[https://compiler.company/graph/hw/shop.html][hw/shop]]              | 2025-06-04 15:42:47 |
-| [[https://compiler.company/graph/hw/storage.html][hw/storage]]           | 2025-06-03 22:06:35 |
-| [[https://compiler.company/graph/hw/studio.html][hw/studio]]            | 2025-06-04 15:47:43 |
-| [[https://compiler.company/graph/hw/travel.html][hw/travel]]            | 2025-03-12 21:08:20 |
-| [[https://compiler.company/graph/lang/apl.html][lang/apl]]             | 2025-04-15 15:53:10 |
-| [[https://compiler.company/graph/lang/asm.html][lang/asm]]             | 2025-06-03 19:30:32 |
-| [[https://compiler.company/graph/lang/basic.html][lang/basic]]           | 2025-02-27 17:01:01 |
-| [[https://compiler.company/graph/lang/c.html][lang/c]]               | 2025-05-08 20:23:14 |
-| [[https://compiler.company/graph/lang/cobol.html][lang/cobol]]           | 2025-03-07 22:57:10 |
-| [[https://compiler.company/graph/lang/concat.html][lang/concat]]          | 2025-03-09 20:55:24 |
-| [[https://compiler.company/graph/lang/erlang.html][lang/erlang]]          | 2025-03-03 21:04:21 |
-| [[https://compiler.company/graph/lang/fortran.html][lang/fortran]]         | 2025-05-27 20:08:17 |
-| [[https://compiler.company/graph/lang/haskell.html][lang/haskell]]         | 2025-03-03 20:09:12 |
-| [[https://compiler.company/graph/lang/java.html][lang/java]]            | 2025-03-03 20:43:11 |
-| [[https://compiler.company/graph/lang/javascript.html][lang/javascript]]      | 2025-06-04 14:15:39 |
-| [[https://compiler.company/graph/lang/julia.html][lang/julia]]           | 2025-05-08 20:37:12 |
-| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]            | 2025-06-06 18:50:47 |
-| [[https://compiler.company/graph/lang/python.html][lang/python]]          | 2025-02-21 22:33:53 |
-| [[https://compiler.company/graph/lang/query.html][lang/query]]           | 2025-03-04 18:38:23 |
-| [[https://compiler.company/graph/lang/rust.html][lang/rust]]            | 2025-03-16 19:07:43 |
-| [[https://compiler.company/graph/lang/shell.html][lang/shell]]           | 2025-02-27 16:56:51 |
-| [[https://compiler.company/graph/lang/smalltalk.html][lang/smalltalk]]       | 2025-03-03 21:05:21 |
-| [[https://compiler.company/graph/lang/swift.html][lang/swift]]           | 2025-03-07 22:57:38 |
-| [[https://compiler.company/graph/lang/zig.html][lang/zig]]             | 2025-03-02 21:00:36 |
-| [[https://compiler.company/graph/math/algebra.html][math/algebra]]         | 2025-05-27 20:12:36 |
-| [[https://compiler.company/graph/math/algo.html][math/algo]]            | 2025-05-08 20:19:53 |
-| [[https://compiler.company/graph/math/calc.html][math/calc]]            | 2025-05-26 19:16:01 |
-| [[https://compiler.company/graph/math/compsci.html][math/compsci]]         | 2025-05-18 18:35:46 |
-| [[https://compiler.company/graph/math/dsp.html][math/dsp]]             | 2025-03-30 01:08:05 |
-| [[https://compiler.company/graph/math/geo.html][math/geo]]             | 2025-05-26 18:57:04 |
-| [[https://compiler.company/graph/math/logic.html][math/logic]]           | 2025-05-07 17:01:02 |
-| [[https://compiler.company/graph/math/ml.html][math/ml]]              | 2025-02-21 22:33:20 |
-| [[https://compiler.company/graph/math/notation.html][math/notation]]        | 2025-05-26 19:34:05 |
-| [[https://compiler.company/graph/math/num.html][math/num]]             | 2025-05-27 20:14:07 |
-| [[https://compiler.company/graph/math/physics.html][math/physics]]         | 2025-03-03 18:15:06 |
-| [[https://compiler.company/graph/math/stat.html][math/stat]]            | 2025-02-28 18:22:16 |
-| [[https://compiler.company/graph/math/struct.html][math/struct]]          | 2025-05-21 19:01:44 |
-| [[https://compiler.company/graph/notes.html][notes]]                | 2025-03-25 15:23:42 |
-| [[https://compiler.company/graph/os/linux.html][os/linux]]             | 2025-05-02 15:25:56 |
-| [[https://compiler.company/graph/os/mac.html][os/mac]]               | 2025-03-03 18:06:20 |
-| [[https://compiler.company/graph/os/mainframe.html][os/mainframe]]         | 2025-03-04 19:43:31 |
-| [[https://compiler.company/graph/os/plan9.html][os/plan9]]             | 2025-03-07 22:57:16 |
-| [[https://compiler.company/graph/os/win.html][os/win]]               | 2025-03-03 18:51:19 |
-| [[https://compiler.company/graph/proto/ansi.html][proto/ansi]]           | 2025-04-12 15:48:34 |
-| [[https://compiler.company/graph/proto/crypto.html][proto/crypto]]         | 2025-03-03 18:15:56 |
-| [[https://compiler.company/graph/proto/dat/config.html][proto/dat/config]]     | 2025-05-26 00:52:46 |
-| [[https://compiler.company/graph/proto/dat/cue.html][proto/dat/cue]]        | 2025-04-15 15:09:37 |
-| [[https://compiler.company/graph/proto/dat/deflate.html][proto/dat/deflate]]    | 2025-05-26 00:53:45 |
-| [[https://compiler.company/graph/proto/dat/json.html][proto/dat/json]]       | 2025-03-03 20:12:00 |
-| [[https://compiler.company/graph/proto/dat/m3u.html][proto/dat/m3u]]        | 2025-04-05 20:26:20 |
-| [[https://compiler.company/graph/proto/dat/parquet.html][proto/dat/parquet]]    | 2025-02-21 22:32:39 |
-| [[https://compiler.company/graph/proto/dat/rdf.html][proto/dat/rdf]]        | 2025-02-21 22:32:42 |
-| [[https://compiler.company/graph/proto/dat/sigmf.html][proto/dat/sigmf]]      | 2025-02-21 22:32:46 |
-| [[https://compiler.company/graph/proto/dat/syslog.html][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
-| [[https://compiler.company/graph/proto/dat/xml.html][proto/dat/xml]]        | 2025-04-15 18:24:20 |
-| [[https://compiler.company/graph/proto/desktop.html][proto/desktop]]        | 2025-04-11 21:32:15 |
-| [[https://compiler.company/graph/proto/ietf.html][proto/ietf]]           | 2025-04-12 17:48:44 |
-| [[https://compiler.company/graph/proto/iso.html][proto/iso]]            | 2025-04-12 15:48:43 |
-| [[https://compiler.company/graph/proto/mail.html][proto/mail]]           | 2025-04-15 15:52:45 |
-| [[https://compiler.company/graph/proto/math.html][proto/math]]           | 2025-05-08 20:42:15 |
-| [[https://compiler.company/graph/proto/media/image.html][proto/media/image]]    | 2025-05-05 18:18:19 |
-| [[https://compiler.company/graph/proto/media/matroska.html][proto/media/matroska]] | 2025-04-15 15:15:25 |
-| [[https://compiler.company/graph/proto/media/xiph.html][proto/media/xiph]]     | 2025-04-07 17:12:30 |
-| [[https://compiler.company/graph/proto/metal.html][proto/metal]]          | 2025-04-12 17:32:01 |
-| [[https://compiler.company/graph/proto/net/dns.html][proto/net/dns]]        | 2025-03-03 15:48:04 |
-| [[https://compiler.company/graph/proto/net/ip.html][proto/net/ip]]         | 2025-03-03 15:48:07 |
-| [[https://compiler.company/graph/proto/net/p2p.html][proto/net/p2p]]        | 2025-02-21 22:32:22 |
-| [[https://compiler.company/graph/proto/net/ssh.html][proto/net/ssh]]        | 2025-06-05 18:32:19 |
-| [[https://compiler.company/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-03-03 15:47:31 |
-| [[https://compiler.company/graph/proto/net/tls.html][proto/net/tls]]        | 2025-03-03 15:48:51 |
-| [[https://compiler.company/graph/proto/net/udp.html][proto/net/udp]]        | 2025-05-13 19:22:07 |
-| [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-03-03 20:12:14 |
-| [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
-| [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2025-06-04 14:23:06 |
-| [[https://compiler.company/graph/index.html][index]]                | 2025-06-05 22:15:46 |
-| [[https://compiler.company/graph/refs.html][refs]]                 | 2025-03-07 10:04:41 |
-| [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2025-05-30 22:55:07 |
-| [[https://compiler.company/graph/sys/fs.html][sys/fs]]               | 2025-03-03 14:49:54 |
-| [[https://compiler.company/graph/sys/ide.html][sys/ide]]              | 2025-05-10 23:10:39 |
-| [[https://compiler.company/graph/sys/mem.html][sys/mem]]              | 2025-06-03 22:03:01 |
-| [[https://compiler.company/graph/sys/srv.html][sys/srv]]              | 2025-03-11 21:48:21 |
-| [[https://compiler.company/graph/sys/term.html][sys/term]]             | 2025-04-11 21:40:34 |
-| [[https://compiler.company/graph/sys/vcs.html][sys/vcs]]              | 2025-04-05 21:27:43 |
-| [[https://compiler.company/graph/sys/virt.html][sys/virt]]             | 2025-04-16 18:37:12 |
-| [[https://compiler.company/graph/theory/ai.html][theory/ai]]            | 2025-03-06 10:58:34 |
-| [[https://compiler.company/graph/theory/compiler.html][theory/compiler]]      | 2025-05-08 21:14:51 |
-| [[https://compiler.company/graph/theory/econ.html][theory/econ]]          | 2025-03-06 14:27:18 |
-| [[https://compiler.company/graph/theory/hacking.html][theory/hacking]]       | 2025-04-06 17:53:48 |
-| [[https://compiler.company/graph/theory/money.html][theory/money]]         | 2025-03-15 14:46:36 |
-| [[https://compiler.company/graph/theory/plt.html][theory/plt]]           | 2025-03-06 16:35:28 |
-| [[https://compiler.company/graph/theory/process.html][theory/process]]       | 2025-05-10 16:41:40 |
-| [[https://compiler.company/graph/theory/style.html][theory/style]]         | 2025-02-27 17:04:03 |
-| [[https://compiler.company/graph/theory/system.html][theory/system]]        | 2025-04-16 20:26:59 |
-| [[https://compiler.company/graph/web/data.html][web/data]]             | 2025-06-02 22:21:32 |
-| [[https://compiler.company/graph/web/sites.html][web/sites]]            | 2025-06-02 22:19:17 |
+| [[file:readme.org][readme]]               | 2025-06-08 15:27:58 |
+| [[file:app/cas.org][app/cas]]              | 2025-05-26 19:50:23 |
+| [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
+| [[file:app/emacs.org][app/emacs]]            | 2025-05-10 23:11:25 |
+| [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
+| [[file:app/mail.org][app/mail]]             | 2025-04-15 18:24:21 |
+| [[file:app/media.org][app/media]]            | 2025-04-18 19:33:21 |
+| [[file:app/net.org][app/net]]              | 2025-04-06 18:08:34 |
+| [[file:app/package-manager.org][app/package-manager]]  | 2025-04-06 17:55:58 |
+| [[file:app/podman.org][app/podman]]           | 2025-03-03 17:25:04 |
+| [[file:app/term.org][app/term]]             | 2025-05-03 12:08:28 |
+| [[file:app/vi.org][app/vi]]               | 2025-05-10 23:09:51 |
+| [[file:comp/ecl.org][comp/ecl]]             | 2025-03-09 15:44:39 |
+| [[file:comp/gcc.org][comp/gcc]]             | 2025-03-09 21:08:14 |
+| [[file:comp/ghc.org][comp/ghc]]             | 2025-02-21 22:34:46 |
+| [[file:comp/llvm.org][comp/llvm]]            | 2025-03-03 16:41:14 |
+| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-06-06 19:12:22 |
+| [[file:hw/amd.org][hw/amd]]               | 2025-03-03 11:47:33 |
+| [[file:hw/apple.org][hw/apple]]             | 2025-03-03 20:34:42 |
+| [[file:hw/car.org][hw/car]]               | 2025-02-21 22:34:16 |
+| [[file:hw/cpu.org][hw/cpu]]               | 2025-06-04 15:07:23 |
+| [[file:hw/fpga.org][hw/fpga]]              | 2025-03-16 19:12:30 |
+| [[file:hw/gpu.org][hw/gpu]]               | 2025-04-15 15:54:27 |
+| [[file:hw/gsg.org][hw/gsg]]               | 2025-02-21 22:34:24 |
+| [[file:hw/home.org][hw/home]]              | 2025-03-12 21:08:35 |
+| [[file:hw/honda.org][hw/honda]]             | 2025-02-21 22:34:27 |
+| [[file:hw/hydrabus.org][hw/hydrabus]]          | 2025-02-21 22:34:29 |
+| [[file:hw/intel.org][hw/intel]]             | 2025-03-03 11:45:39 |
+| [[file:hw/kbd.org][hw/kbd]]               | 2025-03-15 23:04:35 |
+| [[file:hw/material.org][hw/material]]          | 2025-06-07 17:33:12 |
+| [[file:hw/nvidia.org][hw/nvidia]]            | 2025-03-03 14:47:56 |
+| [[file:hw/pine64.org][hw/pine64]]            | 2025-04-15 16:02:06 |
+| [[file:hw/samsung.org][hw/samsung]]           | 2025-02-21 22:34:37 |
+| [[file:hw/shop.org][hw/shop]]              | 2025-06-04 15:42:47 |
+| [[file:hw/storage.org][hw/storage]]           | 2025-06-03 22:06:35 |
+| [[file:hw/studio.org][hw/studio]]            | 2025-06-04 15:47:43 |
+| [[file:hw/travel.org][hw/travel]]            | 2025-03-12 21:08:20 |
+| [[file:lang/apl.org][lang/apl]]             | 2025-04-15 15:53:10 |
+| [[file:lang/asm.org][lang/asm]]             | 2025-06-03 19:30:32 |
+| [[file:lang/basic.org][lang/basic]]           | 2025-02-27 17:01:01 |
+| [[file:lang/c.org][lang/c]]               | 2025-05-08 20:23:14 |
+| [[file:lang/cobol.org][lang/cobol]]           | 2025-03-07 22:57:10 |
+| [[file:lang/concat.org][lang/concat]]          | 2025-03-09 20:55:24 |
+| [[file:lang/erlang.org][lang/erlang]]          | 2025-03-03 21:04:21 |
+| [[file:lang/fortran.org][lang/fortran]]         | 2025-05-27 20:08:17 |
+| [[file:lang/haskell.org][lang/haskell]]         | 2025-03-03 20:09:12 |
+| [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
+| [[file:lang/javascript.org][lang/javascript]]      | 2025-06-04 14:15:39 |
+| [[file:lang/julia.org][lang/julia]]           | 2025-05-08 20:37:12 |
+| [[file:lang/lisp.org][lang/lisp]]            | 2025-06-06 18:50:47 |
+| [[file:lang/python.org][lang/python]]          | 2025-02-21 22:33:53 |
+| [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
+| [[file:lang/rust.org][lang/rust]]            | 2025-03-16 19:07:43 |
+| [[file:lang/shell.org][lang/shell]]           | 2025-02-27 16:56:51 |
+| [[file:lang/smalltalk.org][lang/smalltalk]]       | 2025-03-03 21:05:21 |
+| [[file:lang/swift.org][lang/swift]]           | 2025-03-07 22:57:38 |
+| [[file:lang/zig.org][lang/zig]]             | 2025-03-02 21:00:36 |
+| [[file:math/algebra.org][math/algebra]]         | 2025-05-27 20:12:36 |
+| [[file:math/algo.org][math/algo]]            | 2025-05-08 20:19:53 |
+| [[file:math/calc.org][math/calc]]            | 2025-05-26 19:16:01 |
+| [[file:math/compsci.org][math/compsci]]         | 2025-05-18 18:35:46 |
+| [[file:math/dsp.org][math/dsp]]             | 2025-03-30 01:08:05 |
+| [[file:math/geo.org][math/geo]]             | 2025-05-26 18:57:04 |
+| [[file:math/logic.org][math/logic]]           | 2025-05-07 17:01:02 |
+| [[file:math/ml.org][math/ml]]              | 2025-02-21 22:33:20 |
+| [[file:math/notation.org][math/notation]]        | 2025-05-26 19:34:05 |
+| [[file:math/num.org][math/num]]             | 2025-05-27 20:14:07 |
+| [[file:math/physics.org][math/physics]]         | 2025-03-03 18:15:06 |
+| [[file:math/stat.org][math/stat]]            | 2025-02-28 18:22:16 |
+| [[file:math/struct.org][math/struct]]          | 2025-05-21 19:01:44 |
+| [[file:notes.org][notes]]                | 2025-03-25 15:23:42 |
+| [[file:os/linux.org][os/linux]]             | 2025-05-02 15:25:56 |
+| [[file:os/mac.org][os/mac]]               | 2025-03-03 18:06:20 |
+| [[file:os/mainframe.org][os/mainframe]]         | 2025-03-04 19:43:31 |
+| [[file:os/plan9.org][os/plan9]]             | 2025-03-07 22:57:16 |
+| [[file:os/win.org][os/win]]               | 2025-03-03 18:51:19 |
+| [[file:proto/ansi.org][proto/ansi]]           | 2025-04-12 15:48:34 |
+| [[file:proto/crypto.org][proto/crypto]]         | 2025-03-03 18:15:56 |
+| [[file:proto/dat/config.org][proto/dat/config]]     | 2025-05-26 00:52:46 |
+| [[file:proto/dat/cue.org][proto/dat/cue]]        | 2025-04-15 15:09:37 |
+| [[file:proto/dat/deflate.org][proto/dat/deflate]]    | 2025-05-26 00:53:45 |
+| [[file:proto/dat/json.org][proto/dat/json]]       | 2025-03-03 20:12:00 |
+| [[file:proto/dat/m3u.org][proto/dat/m3u]]        | 2025-04-05 20:26:20 |
+| [[file:proto/dat/parquet.org][proto/dat/parquet]]    | 2025-02-21 22:32:39 |
+| [[file:proto/dat/rdf.org][proto/dat/rdf]]        | 2025-02-21 22:32:42 |
+| [[file:proto/dat/sigmf.org][proto/dat/sigmf]]      | 2025-02-21 22:32:46 |
+| [[file:proto/dat/syslog.org][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
+| [[file:proto/dat/xml.org][proto/dat/xml]]        | 2025-04-15 18:24:20 |
+| [[file:proto/desktop.org][proto/desktop]]        | 2025-04-11 21:32:15 |
+| [[file:proto/ietf.org][proto/ietf]]           | 2025-04-12 17:48:44 |
+| [[file:proto/iso.org][proto/iso]]            | 2025-04-12 15:48:43 |
+| [[file:proto/mail.org][proto/mail]]           | 2025-04-15 15:52:45 |
+| [[file:proto/math.org][proto/math]]           | 2025-05-08 20:42:15 |
+| [[file:proto/media/image.org][proto/media/image]]    | 2025-05-05 18:18:19 |
+| [[file:proto/media/matroska.org][proto/media/matroska]] | 2025-04-15 15:15:25 |
+| [[file:proto/media/xiph.org][proto/media/xiph]]     | 2025-04-07 17:12:30 |
+| [[file:proto/metal.org][proto/metal]]          | 2025-04-12 17:32:01 |
+| [[file:proto/net/dns.org][proto/net/dns]]        | 2025-03-03 15:48:04 |
+| [[file:proto/net/ip.org][proto/net/ip]]         | 2025-03-03 15:48:07 |
+| [[file:proto/net/p2p.org][proto/net/p2p]]        | 2025-02-21 22:32:22 |
+| [[file:proto/net/ssh.org][proto/net/ssh]]        | 2025-06-05 18:32:19 |
+| [[file:proto/net/tcp.org][proto/net/tcp]]        | 2025-03-03 15:47:31 |
+| [[file:proto/net/tls.org][proto/net/tls]]        | 2025-03-03 15:48:51 |
+| [[file:proto/net/udp.org][proto/net/udp]]        | 2025-05-13 19:22:07 |
+| [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
+| [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
+| [[file:proto/web.org][proto/web]]            | 2025-06-04 14:23:06 |
+| [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
+| [[file:sys/db.org][sys/db]]               | 2025-05-30 22:55:07 |
+| [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
+| [[file:sys/ide.org][sys/ide]]              | 2025-05-10 23:10:39 |
+| [[file:sys/mem.org][sys/mem]]              | 2025-06-03 22:03:01 |
+| [[file:sys/srv.org][sys/srv]]              | 2025-03-11 21:48:21 |
+| [[file:sys/term.org][sys/term]]             | 2025-04-11 21:40:34 |
+| [[file:sys/vcs.org][sys/vcs]]              | 2025-04-05 21:27:43 |
+| [[file:sys/virt.org][sys/virt]]             | 2025-04-16 18:37:12 |
+| [[file:theory/ai.org][theory/ai]]            | 2025-03-06 10:58:34 |
+| [[file:theory/compiler.org][theory/compiler]]      | 2025-05-08 21:14:51 |
+| [[file:theory/econ.org][theory/econ]]          | 2025-03-06 14:27:18 |
+| [[file:theory/hacking.org][theory/hacking]]       | 2025-04-06 17:53:48 |
+| [[file:theory/money.org][theory/money]]         | 2025-03-15 14:46:36 |
+| [[file:theory/plt.org][theory/plt]]           | 2025-03-06 16:35:28 |
+| [[file:theory/process.org][theory/process]]       | 2025-05-10 16:41:40 |
+| [[file:theory/style.org][theory/style]]         | 2025-02-27 17:04:03 |
+| [[file:theory/system.org][theory/system]]        | 2025-04-16 20:26:59 |
+| [[file:web/data.org][web/data]]             | 2025-06-02 22:21:32 |
+| [[file:web/sites.org][web/sites]]            | 2025-06-02 22:19:17 |
 
 #+END:
