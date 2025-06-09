@@ -479,6 +479,7 @@ Linux Distributions
 :END:
 :EDGES:
 [2025-02-22 Sat 19:40] -- [[https://archlinux.org/][Arch Linux]]
+[2025-06-08 Sun 19:28] -> [[id:3c814d4d-8635-4c6f-a849-5c7d72db20fe][Pacman]]
 :END:
 - Arch (btw)
 - jack of all trades master of none
@@ -488,6 +489,16 @@ Linux Distributions
   installing Arch from scratch to be a good stat check for system
   devs.
 - High quality Wiki
+**** Archiso
+:PROPERTIES:
+:ID:       06ee60a3-9a98-40d2-893b-39ce992fc0dc
+:CREATED:  <2025-06-08 Sun 19:23>
+:END:
+:EDGES:
+[2025-06-08 Sun 19:23] -- [[https://wiki.archlinux.org/title/Archiso][archiso - ArchWiki]]
+:END:
+- supports cloud-init service
+- sshd on by default
 *** Ubuntu
 :PROPERTIES:
 :ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02

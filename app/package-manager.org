@@ -37,7 +37,34 @@ Dandified YUM
 :EDGES:
 [2025-03-03 Mon 16:29] -- [[https://pacman.archlinux.page/][Pacman Home Page]]
 [2025-03-03 Mon 16:29] -- [[https://wiki.archlinux.org/title/Pacman][pacman - ArchWiki]]
+[2025-06-08 Sun 19:28] <- [[id:6ef3fb84-6805-46f7-ad13-8929a023b43c][Arch]]
 :END:
+** Pacman Hooks
+:PROPERTIES:
+:ID:       05cc62c7-db2a-4bf6-b94d-e04a2b17aed0
+:CREATED:  <2025-06-08 Sun 19:29>
+:END:
+:EDGES:
+[2025-06-08 Sun 19:29] -- [[https://wiki.archlinux.org/title/Pacman#Hooks][pacman hooks - ArchWiki]]
+:END:
+#+begin_quote
+Pacman can run pre- and post-transaction hooks from the
+/usr/share/libalpm/hooks/ directory; more directories can be specified
+with the HookDir option in pacman.conf, which defaults to
+/etc/pacman.d/hooks. Hook file names must be suffixed with
+.hook. Pacman hooks are not interactive.
+#+end_quote
+** Pactree
+:PROPERTIES:
+:ID:       219f8bb6-b324-4a33-87e0-69114948c0f6
+:CREATED:  <2025-06-08 Sun 19:31>
+:END:
+:EDGES:
+[2025-06-08 Sun 19:31] -- [[https://man.archlinux.org/man/pactree.8][pactree(8) — Arch manual pages]]
+:END:
+- show dependencies of a package
+- not included with pacman - install pacman-contrib
+
 * APK
 :PROPERTIES:
 :ID:       b52fdc61-2fcc-42e0-a1df-66ebd0ca0488

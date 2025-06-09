@@ -32,9 +32,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Sat Jun 07 18:19:15 2025 -0400                            |
+| updated     | Sun Jun 08 15:31:25 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 10932 :λ 10474 :# 16 :_ 442                               |
+| lines       | 10931 :λ 10473 :# 16 :_ 442                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -45,14 +45,14 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   1124 *********
+: 2025-06   1396 ************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:readme.org][readme]]               | 2025-06-08 15:27:58 |
+| [[file:readme.org][readme]]               | 2025-06-08 15:38:24 |
 | [[file:app/cas.org][app/cas]]              | 2025-05-26 19:50:23 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-05-10 23:11:25 |
