@@ -473,8 +473,71 @@ as IR1 types.
 
 #+RESULTS:
 : bobdolewatpow
+*** Heap Object Layout
+:PROPERTIES:
+:ID:       7ffb42f4-37f7-43ea-a252-21d00b0d6ab7
+:CREATED:  <2025-06-10 Tue 13:11>
+:END:
+#+begin_quote
+Objects stored in the heap are of two kinds: those with headers, and
+cons cells. If the first word of an object has a header widetag then
+the object has the type and layout associated with that
+widetag. Otherwise, the object is assumed to be a cons cell.
 
-*** Low Tags
+Some objects have “unboxed” words without any associated type
+information as well as the more usual “boxed” words with
+lowtags. Obvious cases include the specialized array types, some of
+the numeric types, system-area-pointers, and so on.
+
+The primitive object layouts are specified in
+src/compiler/generic/objdef.lisp.
+#+end_quote
+
+*** Code Component
+:PROPERTIES:
+:ID:       bc043c0e-2f31-4955-89d2-b3c4c158bf3b
+:CREATED:  <2025-06-10 Tue 13:10>
+:END:
+#+begin_quote
+All compiled code resides in code-component objects. These objects
+consist of a header, some number of boxed literal values, a “data
+block” containing machine code and simple-fun headers, and a “trace
+table” which is currently unused9.
+
+The simple-fun headers represent simple function objects (not
+funcallable-instances or closures), and each code-component will
+typically have one for the main entry point and one per closure entry
+point (as the function underlying the closure, not the closure object
+proper). In a compiler trace-file, the simple-fun headers are all
+listed as entries in the IR2 component.
+
+The simple-fun headers are held in a linked list per code-component in
+order to allow the garbage collector to find them during
+relocation. In order to be able to find the start of a code-component
+from a simple-fun, the header value is the offset in words from the
+start of the code-component to the start of the simple-fun.
+#+end_quote
+- regarding the trace table above - has this changed with the recent
+  trace update?
+
+*** Type Tags
+:PROPERTIES:
+:ID:       f80f9aac-24a7-41b2-a1d1-93dc59e19083
+:CREATED:  <2025-06-10 Tue 13:13>
+:END:
+:EDGES:
+[2025-06-10 Tue 13:14] -- [[https://www.chiark.greenend.org.uk/doc/sbcl/sbcl-internals/Type-tags.html][Type tags (SBCL Internals)]]
+:END:
+#+begin_quote
+The in-memory representation of Lisp data includes type information
+about each object. This type information takes the form of a lowtag in
+the low bits of each pointer to heap space, a widetag for each boxed
+immediate value and a header (also with a widetag) at the start of the
+allocated space for each object. These tags are used to inform both
+the GC and Lisp code about the type and allocated size of Lisp
+objects.
+#+end_quote
+**** Low Tags
 :PROPERTIES:
 :CREATED:  <2025-01-17 Fri 15:50>
 :ID:       fd50e430-8a51-406a-96bd-ae6a1cf73bdd
@@ -516,6 +579,7 @@ as IR1 types.
   and possibly the code in src/code/room.
 #+end_quote
 
+- see early-objdef.lisp
 #+begin_src c :eval never
   #define SBCL_GENESIS_CONSTANTS
   #define FIXNUM_TAG_MASK 1 /* 0x1 */
@@ -545,6 +609,92 @@ as IR1 types.
   #define PAD5_LOWTAG 14 /* 0xE */
   #define OTHER_POINTER_LOWTAG 15 /* 0xF */
 #+end_src
+
+#+begin_quote
+Objects allocated on the Lisp heap are aligned to a double-word
+boundary, leaving the low-order bits (which would normally identify a
+particular octet within the first two words) available for use to hold
+type information. This turns out to be three bits on 32-bit systems
+and four bits on 64-bit systems.
+
+Of these 8 or 16 tags, we have some constraints for allocation:
+
+We need 6 of the low 8 bits of the word for widetags, meaning that one
+out of every four lowtags must be an other-immediate lowtag.
+
+We have four pointer types. Instance (struct and CLOS) pointers,
+function pointers, list pointers, and other pointers.
+
+fixnums are required to have their lowtags be comprised entirely of
+zeros.
+
+There are additional constraints around the ordering of the pointer
+types, particularly with respect to list pointers (the NIL-cons hack).
+
+Complicating this issue is that while the lowtag space is three or
+four bits wide, some of the lowtags are effectively narrower. The
+other-immediate tags effectively have a two-bit lowtag, and fixnums
+have historically been one bit narrower than the other lowtags (thus
+even-fixnum-lowtag and odd-fixnum-lowtag) though with the recent work
+on wider fixnums on 64-bit systems this is no longer necessarily so.
+#+end_quote
+
+
+***** The NIL-cons Hack
+:PROPERTIES:
+:ID:       e345e677-e9e1-496f-8f58-2f77e3a44000
+:CREATED:  <2025-06-10 Tue 13:09>
+:END:
+#+begin_quote
+As an “optimization”, the symbol nil has list-pointer-lowtag rather
+than other-pointer-lowtag, and is aligned in memory so that the value
+and hash slots are the car and cdr of the cons, with both slots
+containing nil. This allows for car and cdr to simply do a lowtag test
+and slot access instead of having to explicitly test for nil, at the
+cost of requiring all symbol type tests and slot accesses to test for
+nil.
+#+end_quote
+**** Wide Tags
+:PROPERTIES:
+:ID:       57ff5711-3cb1-4602-bb74-5c6e46e152e7
+:CREATED:  <2025-06-10 Tue 13:04>
+:END:
+- bits = 8 (full octet)
+- mask = 255 ^
+- see early-objdef.lisp
+#+begin_quote
+As a widetag is only eight bits wide but a heap object header takes a
+full machine word, there is an extra 24 or 56 bits of space available
+for unboxed data storage in each heap object. This space is called the
+“header value”, and is used for various purposes depending on the type
+of heap object in question.
+#+end_quote
+
+#+begin_quote
+Widetags are used for three purposes. First, to provide type
+information for immediate (non-pointer) data such as
+characters. Second, to provide “marker” values for things such as
+unbound slots. Third, to provide type information for objects stored
+on the heap.
+
+*Because widetags are used for immediate data they must have a lowtag
+component.* This ends up being the other-immediate lowtags. For various
+reasons it was deemed convenient for widetags to be no more than eight
+bits wide, and with 27 or more distinct array types (depending on
+build-time configuration), seven numeric types, markers, and
+non-numeric heap object headers there ends up being more than 32
+widetags required (though less than 64). This combination of factors
+leads to the requirement that one out of every four lowtags be an
+other-immediate lowtag.
+#+end_quote
+
+#+begin_quote
+Other-immediates are the lowtag part of widetag values. Due to the
+constraints of widetag allocation, one out of every four lowtags must
+be a widetag (alternately, the width of the other-immediate lowtag is
+two bits).
+#+end_quote
+
 *** Bindings
 :PROPERTIES:
 :ID:       a4d05da6-b90d-4a9f-8237-67a10c8c4588

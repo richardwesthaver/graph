@@ -17,8 +17,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 833 |
-| edges | 643 |
+| nodes | 842 |
+| edges | 653 |
 | files | 126 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
@@ -32,9 +32,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Sun Jun 08 22:23:31 2025 -0400                            |
+| updated     | Tue Jun 10 12:36:21 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 10969 :λ 10510 :# 16 :_ 443                               |
+| lines       | 11168 :λ 10697 :# 16 :_ 455                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -45,16 +45,17 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   1442 ************
+: 2025-06   1677 **************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:app/cas.org][app/cas]]              | 2025-05-26 19:50:23 |
+| [[file:readme.org][readme]]               | 2025-06-10 12:43:41 |
+| [[file:app/cas.org][app/cas]]              | 2025-06-09 17:25:30 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
-| [[file:app/emacs.org][app/emacs]]            | 2025-05-10 23:11:25 |
+| [[file:app/emacs.org][app/emacs]]            | 2025-06-09 17:10:55 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
 | [[file:app/mail.org][app/mail]]             | 2025-04-15 18:24:21 |
 | [[file:app/media.org][app/media]]            | 2025-04-18 19:33:21 |
@@ -67,11 +68,11 @@ an interface for modifying the graph.
 | [[file:comp/gcc.org][comp/gcc]]             | 2025-03-09 21:08:14 |
 | [[file:comp/ghc.org][comp/ghc]]             | 2025-02-21 22:34:46 |
 | [[file:comp/llvm.org][comp/llvm]]            | 2025-03-03 16:41:14 |
-| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-06-06 19:12:22 |
-| [[file:hw/amd.org][hw/amd]]               | 2025-03-03 11:47:33 |
+| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-06-09 17:36:10 |
+| [[file:hw/amd.org][hw/amd]]               | 2025-06-09 17:13:00 |
 | [[file:hw/apple.org][hw/apple]]             | 2025-03-03 20:34:42 |
 | [[file:hw/car.org][hw/car]]               | 2025-02-21 22:34:16 |
-| [[file:hw/cpu.org][hw/cpu]]               | 2025-06-04 15:07:23 |
+| [[file:hw/cpu.org][hw/cpu]]               | 2025-06-09 17:14:12 |
 | [[file:hw/fpga.org][hw/fpga]]              | 2025-03-16 19:12:30 |
 | [[file:hw/gpu.org][hw/gpu]]               | 2025-04-15 15:54:27 |
 | [[file:hw/gsg.org][hw/gsg]]               | 2025-02-21 22:34:24 |
@@ -99,7 +100,7 @@ an interface for modifying the graph.
 | [[file:lang/haskell.org][lang/haskell]]         | 2025-03-03 20:09:12 |
 | [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
 | [[file:lang/javascript.org][lang/javascript]]      | 2025-06-04 14:15:39 |
-| [[file:lang/julia.org][lang/julia]]           | 2025-05-08 20:37:12 |
+| [[file:lang/julia.org][lang/julia]]           | 2025-06-09 15:05:43 |
 | [[file:lang/lisp.org][lang/lisp]]            | 2025-06-06 18:50:47 |
 | [[file:lang/python.org][lang/python]]          | 2025-02-21 22:33:53 |
 | [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
@@ -117,7 +118,7 @@ an interface for modifying the graph.
 | [[file:math/logic.org][math/logic]]           | 2025-05-07 17:01:02 |
 | [[file:math/ml.org][math/ml]]              | 2025-02-21 22:33:20 |
 | [[file:math/notation.org][math/notation]]        | 2025-05-26 19:34:05 |
-| [[file:math/num.org][math/num]]             | 2025-05-27 20:14:07 |
+| [[file:math/num.org][math/num]]             | 2025-06-09 12:29:29 |
 | [[file:math/physics.org][math/physics]]         | 2025-03-03 18:15:06 |
 | [[file:math/stat.org][math/stat]]            | 2025-02-28 18:22:16 |
 | [[file:math/struct.org][math/struct]]          | 2025-05-21 19:01:44 |
@@ -158,9 +159,8 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-04 14:23:06 |
-| [[file:readme.org][readme]]               | 2025-06-08 17:10:33 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
-| [[file:sys/db.org][sys/db]]               | 2025-05-30 22:55:07 |
+| [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
 | [[file:sys/ide.org][sys/ide]]              | 2025-05-10 23:10:39 |
 | [[file:sys/mem.org][sys/mem]]              | 2025-06-03 22:03:01 |
