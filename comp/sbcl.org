@@ -391,8 +391,51 @@ as IR1 types.
       ;; bits  0..24: pseudorandom hash
       ;; bits 25..29: 5 bits for type-class index
       (%bits (missing-arg) :type (signed-byte #.ctype-hash-size) :read-only t))
+
+    ;; ...
+
+      (defvar *type-class-list*
+        ;; type-class and ctype instance types in that class
+        ;; The instance types MUST be list in descending order of DEPTHOID.
+        ;; See CTYPE->HASHSET-NAME for the rationale for this constraint.
+        '((named         named-type)
+          (classoid      classoid)
+          (values        values-type)
+          (function      fun-designator-type fun-type)
+          (constant      constant-type)
+          (hairy         unknown-type hairy-type)
+          (intersection  intersection-type)
+          (union         union-type)
+          (negation      negation-type)
+          (numeric-union numeric-union-type)
+          (array         array-type)
+          (character-set character-set-type)
+          (member        member-type)
+          (cons          cons-type)
+          ,#+sb-simd-pack
+          (simd-pack     simd-pack-type)
+          ,#+sb-simd-pack-256
+          (simd-pack-256 simd-pack-256-type)
+          ;; clearly alien-type-type is not consistent with the (FOO FOO-TYPE) theme
+          (alien         alien-type-type)))
 #+end_src
 
+#+begin_quote
+;; There are 5 bits in a type-class index, so at most 32 type-classes
+;; of which about 17 are currently defined.
+
+;; We track for each type-class whether it has any descendant class.
+;; Inheritance is implemented by copying the vtable from an ancestor
+;; to the descendant at the time the descendant is defined.
+;; So the following minimal example might not do what you expect:
+;;  (DEFINE-TYPE-CLASS ROOT)
+;;  (DEFINE-TYPE-CLASS CHILD :INHERITS ROOT)
+;;  (DEFINE-TYPE-METHOD (ROOT :SOME-METHOD) ...)
+;; CHILD fails to copy a pointer to SOME-METHOD.
+;; This is subtle and perhaps unintuitive. As such, we guard against
+;; it by preventing DEFINE-TYPE-METHOD after use of :INHERITS.
+
+#+end_quote
 *** DEFTRANSFORM
 :PROPERTIES:
 :ID:       4f3868b5-131e-4d3d-9833-bbe00d0d6cde

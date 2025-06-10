@@ -13,7 +13,6 @@
 - [[https://en.wikipedia.org/wiki/Data_warehouse][Data Warehouse]]
 - [[https://en.wikipedia.org/wiki/Data_mart][Data Mart]]
 - [[https://en.wikipedia.org/wiki/Data_lake][Data Lake]]
-
 ** Partition
 :PROPERTIES:
 :ID:       f239f934-a477-4050-8d19-3c2597a64b34

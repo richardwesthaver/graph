@@ -10,3 +10,6 @@
 [2025-05-08 Thu 20:36] -- [[https://julialang.org/][The Julia Programming Language]]
 [2025-05-08 Thu 20:36] -- [[gh:JuliaLang/julia][src]]
 :END:
+- [[https://discourse.julialang.org/t/two-language-problem-what-is-it/82925/2][Two Language Problem. What is it? - #2 by jlchan - General Usage - Julia Programming Language]]
+  - https://github.com/JeffBezanson/phdthesis/blob/master/main.pdf
+  - [[https://scientificcoder.com/my-target-audience#heading-the-two-culture-problem][scientificcoder - My Target Audience : The Two Culture Problem]]

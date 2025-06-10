@@ -76,3 +76,11 @@ elements.
 :EDGES:
 [2025-05-27 Tue 20:13] -- [[wikipedia:Combinatorics][wiki]]
 :END:
+* Modular arithmetic
+:PROPERTIES:
+:ID:       9991da26-dac8-48c5-b47f-63b4c8b9ab5a
+:CREATED:  <2025-06-09 Mon 12:29>
+:END:
+:EDGES:
+[2025-06-09 Mon 12:29] -- [[wikipedia:Modular arithmetic][wiki]]
+:END:

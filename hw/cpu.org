@@ -20,20 +20,50 @@ The 'Central' processing unit.
 - [[https://www.amd.com/en/developer/zendnn.html][ZenDNN]]
 - [[https://github.com/amd/ZenDNN][GitHub - amd/ZenDNN]]
 - [[https://docs.amd.com/r/en-US/57300-ZenDNN-user-guide/ZenDNN][ZenDNN User Guide]]
-*** EPYC
+*** Zen 4
 :PROPERTIES:
-:ID:       86c29a1a-359d-4049-816d-2ec56e6bdd5f
-:CREATED:  <2025-03-03 Mon 11:47>
+:ID:       eac350d1-fecc-4b02-a933-acd6121789a8
+:CREATED:  <2025-06-09 Mon 13:35>
 :END:
 :EDGES:
-[2025-03-03 Mon 11:46] -- [[https://www.amd.com/en/products/processors/server/epyc.html][AMD EPYC]]
+[2025-06-09 Mon 13:37] -- [[https://en.wikichip.org/wiki/amd/microarchitectures/zen_4][Zen 4 - Microarchitectures - AMD - WikiChip]]
+[2025-06-09 Mon 13:44] <- [[id:812054ed-d108-43f5-bba7-e40f9604c0c8][9004]]
+[2025-06-09 Mon 17:12] -- [[wikipedia:Zen 4][wiki]]
 :END:
-- [[https://www.amd.com/en/developer.html][dev]]
-- [[https://www.amd.com/en/resources/epyc-tools.html][EPYC Tools]]
-- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/white-papers/amd-epyc-9004-wp-cpu-for-llm.pdf][Practical Strategies for Low-cost LLM Deployments Using 4th Gen AMD EPYC Processors]]
-- [[https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/ai-inferencing-with-amd-epyc-processors-white-paper.pdf][AI Interencing with AMD EPYC Processors]]
-- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/user-guides/58206_amd-epyc-9004-ug-virtual-machine-migration-guide.pdf][VM Migration Guide]]
+#+begin_quote
+Zen 4 introduced the following ISA enhancements:
 
+AVX-512 - 512-bit Vector Instructions
+AVX512F - Foundation (first introduced with Intel Skylake)
+AVX512CD - Conflict Detection Instructions (Skylake X)
+AVX512VL - Vector Length Extensions (Skylake X)
+AVX512DQ - Doubleword and Quadword Instructions (Skylake X)
+AVX512BW - Byte and Word Instructions (Skylake X)
+AVX512_IFMA - Integer Fused Multiply-Add (Cannon Lake)
+AVX512_VBMI - Vector Bit Manipulation Instructions (Cannon Lake)
+AVX512_VPOPCNTDQ - Vector Population Count Instructions (Ice Lake)
+AVX512_BITALG - Bit Algorithms (Ice Lake)
+AVX512_VBMI2 - Vector Bit Manipulation Instructions 2 (Ice Lake)
+AVX512_VNNI - Vector Neural Network Instructions (Ice Lake)
+AVX512_BF16 - BFloat16 Instructions (Cooper Lake)
+Not supported: AVX512ER, AVX512PF (Knights Landing); AVX512 4VNNIW, 4FMAPS (Knights Mill);
+VP2INTERSECT (Tiger Lake); FP16 (Sapphire Rapids)
+GFNI - Galois Field New Instructions (first introduced with Intel Ice Lake)
+VGF2P8AFFINEQB - Galois field affine transformation
+VGF2P8AFFINEINVQB - Galois field affine transformation inverse
+VGF2P8MULB - Galois field multiply bytes
+#+end_quote
+- [[https://chipsandcheese.com/p/amds-zen-4-part-1-frontend-and-execution-engine][chips and cheese - AMD's Zen 4]]
+*** Zen 5
+:PROPERTIES:
+:ID:       275c4cf2-2703-4261-a3c1-49720e9a61e4
+:CREATED:  <2025-06-09 Mon 13:35>
+:END:
+:EDGES:
+[2025-06-09 Mon 13:37] -- [[https://en.wikichip.org/wiki/amd/microarchitectures/zen_5][Zen 5 - Microarchitectures - AMD - WikiChip]]
+[2025-06-09 Mon 13:44] <- [[id:86c29a1a-359d-4049-816d-2ec56e6bdd5f][9005]]
+[2025-06-09 Mon 17:12] -- [[wikipedia:Zen 5][wiki]]
+:END:
 ** Intel Core                                                         :intel:
 :PROPERTIES:
 :ID:       b64ab310-f4f1-4be7-991b-d38ef4ad686f

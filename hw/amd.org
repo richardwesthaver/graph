@@ -8,3 +8,55 @@
 :EDGES:
 [2025-03-03 Mon 11:46] -- [[https://www.amd.com][AMD]]
 :END:
+** EPYC
+:PROPERTIES:
+:ID:       abec3188-a2e3-4abe-9b45-59985a6ca303
+:CREATED:  <2025-06-09 Mon 13:36>
+:END:
+:EDGES:
+[2025-03-03 Mon 11:46] -- [[https://www.amd.com/en/products/processors/server/epyc.html][AMD EPYC]]
+:END:
+- [[https://www.amd.com/en/developer.html][dev]]
+- [[https://www.amd.com/en/resources/epyc-tools.html][EPYC Tools]]
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/ai-inferencing-with-amd-epyc-processors-white-paper.pdf][AI Interencing with AMD EPYC Processors]]
+**** 9004
+:PROPERTIES:
+:ID:       812054ed-d108-43f5-bba7-e40f9604c0c8
+:CREATED:  <2025-06-09 Mon 13:36>
+:END:
+:EDGES:
+[2025-06-09 Mon 13:44] -> [[id:eac350d1-fecc-4b02-a933-acd6121789a8][Zen 4]]
+:END:
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/white-papers/amd-epyc-9004-wp-cpu-for-llm.pdf][Practical Strategies for Low-cost LLM Deployments Using 4th Gen AMD EPYC Processors]]
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/user-guides/58206_amd-epyc-9004-ug-virtual-machine-migration-guide.pdf][VM Migration Guide]]
+**** 9005
+:PROPERTIES:
+:ID:       86c29a1a-359d-4049-816d-2ec56e6bdd5f
+:CREATED:  <2025-03-03 Mon 11:47>
+:END:
+:EDGES:
+[2025-06-09 Mon 13:44] -> [[id:275c4cf2-2703-4261-a3c1-49720e9a61e4][Zen 5]]
+:END:
+- [[https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/user-guides/58462_amd-epyc-9005-tg-architecture-overview.pdf][EPYC 9005 Architecture Overview]]
+- Core Complex (CCX)
+  #+begin_quote
+  The term “Core Complex” refers to a set of cores sharing a last-level
+  (L3) cache. An AMD EPYC 9005 CCX will either have up to eight Zen5
+  (classic) or sixteen Zen5c (dense) cores sharing a 32MB L3
+  cache. Enabling SMT allows a single CCX to support twice that number,
+  i.e., 16 or 32 concurrent hardware threads.
+  #+end_quote
+- Core Complex Die (CCD)
+  #+begin_quote
+  Each Core Complex Die (CCD) of an AMD EPYC 9xx5 Series Processor
+  contains a single CCX. Cores can potentially be disabled in BIOS using
+  one or both of the following approaches:
+
+  • Reduce the cores per CCD while keeping the number of CCDs
+  constant. This approach increases the effective L3 cache per core
+  ratio but reduces the number of cores sharing the L3 cache.
+
+  • Reduce the number of active CCDs while keeping the cores per CCD
+  constant. This approach maintains the advantages of cache sharing
+  between the cores while maintaining the same cache per core ratio.
+  #+end_quote

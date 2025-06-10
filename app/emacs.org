@@ -184,6 +184,41 @@ Emacs Unified Directory Client
 [2025-03-03 Mon 19:57] -- [[info:eglot][info]]
 :END:
 
+** Calc
+:PROPERTIES:
+:ID:       92ad7518-cf81-4aca-9940-bd40fb02f5dd
+:CREATED:  <2025-06-09 Mon 17:00>
+:END:
+:EDGES:
+[2025-06-09 Mon 17:00] -- [[info:calc][info]]
+[2025-06-09 Mon 17:00] -> [[id:5b37c685-ab0a-4d3b-b278-c99f90292fcb][CAS]]
+[2025-06-09 Mon 17:02] -- [[https://www.emacswiki.org/emacs/Calc][EmacsWiki: Calc]]
+[2025-06-09 Mon 17:02] -- [[https://www.masteringemacs.org/article/fun-emacs-calc][Fun with Emacs Calc - Mastering Emacs]]
+[2025-06-09 Mon 17:03] -- [[https://www.gnu.org/software/emacs/refcards/pdf/calccard.pdf][calc cheatsheet]]
+:END:
+#+begin_src calc
+  24
+  3
+  '/
+#+end_src
+
+#+RESULTS:
+: 8
+
+#+begin_src calc
+  fsolve(x*2+x=4,x)
+#+end_src
+
+#+RESULTS:
+: x = 1.33333333333
+
+#+begin_src calc
+  fsolve([x + y = a, x - y = b],[x,y])
+#+end_src
+
+#+RESULTS:
+: [x = a + (b - a) / 2, y = (a - b) / 2]
+
 ** SES
 :PROPERTIES:
 :ID:       c40383a3-c717-43c6-8188-e2a564a641a1
@@ -226,6 +261,32 @@ A plain-text personal knowledge management system.
 #+begin_quote
 dynamic scrum report generation for org-mode buffers
 #+end_quote
+*** vertico
+:PROPERTIES:
+:ID:       b1c1d365-1983-4e63-8cf6-c032932ff1b9
+:CREATED:  <2025-06-09 Mon 17:08>
+:END:
+:EDGES:
+[2025-06-09 Mon 17:09] -- [[https://github.com/minad/vertico][src]]
+:END:
+*** corfu
+:PROPERTIES:
+:ID:       371ff3e8-d0e0-4260-bc41-4ba53d635ce5
+:CREATED:  <2025-06-09 Mon 17:09>
+:END:
+:EDGES:
+[2025-06-09 Mon 17:10] -- [[https://github.com/minad/corfu][src]]
+:END:
+Completion in Region Function
+*** cape
+:PROPERTIES:
+:ID:       c69f7d77-7ec1-4d7e-b70d-23e54cdced4b
+:CREATED:  <2025-06-09 Mon 17:10>
+:END:
+:EDGES:
+[2025-06-09 Mon 17:10] -- [[https://github.com/minad/cape][src]]
+:END:
+
 *** kanban.el                                                           :org:
 :PROPERTIES:
 :ID:       5ff7407e-32a0-463b-bf59-9519875da655
