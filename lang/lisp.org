@@ -655,6 +655,27 @@ should be compiled and loaded in.
 :EDGES:
 [2025-03-03 Mon 18:54] -- [[info:asdf][info]]
 :END:
+- makes use of (call-with-x thunk) -> (with-x ,@body) often
+- with-upgradability wrappers all over the place for backwards-compatibility
+**** Sessions
+:PROPERTIES:
+:ID:       2a62e513-65a6-49f0-9965-d25710186bc3
+:CREATED:  <2025-06-10 Tue 21:27>
+:END:
+- asdf:session :: An ASDF session with a cache to memoize some computations
+#+begin_quote
+The ASDF session cache is used to memoize some computations. It is
+instrumental in achieving:
+- Consistency in the view of the world relied on by ASDF within a
+  given session.  Inconsistencies in file stamps, system definitions,
+  etc., could cause infinite loops (a.k.a. stack overflows) and other
+  erratic behavior.
+- Speed and reliability of ASDF, with fewer side-effects from access
+  to the filesystem, and no expensive recomputations of transitive
+  dependencies for input-files or output-files.
+- Testability of ASDF with the ability to fake timestamps without
+  actually touching files.
+#+end_quote
 
 ** Packages
 :PROPERTIES:
