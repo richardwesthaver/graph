@@ -716,6 +716,9 @@ in the COMMON-LISP-USER package, avoiding any initial state issues.
   =sb-ext:remove-implementation-package= each package is its own
   (only) implementation package.
   #+end_quote
+
+- PLN :: Package-local nicknames
+  - [[https://gist.github.com/phoe/2b63f33a2a4727a437403eceb7a6b4a3][Package-local nicknames in Common Lisp - a semishitpost about PLNs by phoe]]
 ** Tools
 :PROPERTIES:
 :ID:       7f63f416-efcb-4926-8370-b626c4349c45
