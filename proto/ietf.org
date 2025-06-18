@@ -36,3 +36,4 @@ Birds of a Feather sessions
 [2025-04-12 Sat 17:48] -- [[https://www.ietf.org/process/iana/][IETF | Internet Assigned Numbers Authority (IANA) functions]]
 :END:
 Internet Assigned Numbers Authority
+- [[https://www.iana.org/assignments/]]

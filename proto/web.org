@@ -18,7 +18,6 @@
 :EDGES:
 [2025-06-04 Wed 14:16] -- [[https://html.spec.whatwg.org/multipage/][HTML Standard]]
 :END:
-
 * CSS
 :PROPERTIES:
 :ID:       bd9c1355-d21d-4f6c-ab60-042bd737de60
@@ -39,3 +38,15 @@
 :EDGES:
 [2025-06-04 Wed 14:22] -- [[https://www.w3.org/publishing/groups/epub-wg/][W3C EPUB 3 Working Group]]
 :END:
+* OpenAPI Specification
+:PROPERTIES:
+:ID:       bd692828-ec5d-41e8-bbd3-6dc0bdb61da5
+:CREATED:  <2025-06-17 Tue 23:07>
+:AKA: OAS
+:END:
+:EDGES:
+[2025-06-17 Tue 23:07] -- [[gh:OAI/OpenAPI-Specification][src]]
+[2025-06-17 Tue 23:09] -- [[https://spec.openapis.org/][specs]]
+[2025-06-17 Tue 23:09] -- [[https://learn.openapis.org/examples/][examples]]
+:END:
+- represented in yaml (ew) or json (phew) formats
