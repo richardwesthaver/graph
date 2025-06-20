@@ -15,10 +15,14 @@ parent node or file.
 These documents depend on the core =graph.el= package which provides
 an interface for modifying the graph.
 
+- [2025-06-19 Thu] - UI is WIP
+  - static SVG embedding
+  - d3-force-graph webui
+
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 848 |
-| edges | 654 |
+| nodes | 849 |
+| edges | 655 |
 | files | 126 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
@@ -32,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Tue Jun 17 19:45:38 2025 -0400                            |
+| updated     | Tue Jun 17 23:27:10 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 11342 :λ 10852 :# 16 :_ 474                               |
+| lines       | 11354 :λ 10865 :# 16 :_ 473                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -45,7 +49,7 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   1923 ****************
+: 2025-06   1943 *****************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
@@ -140,7 +144,7 @@ an interface for modifying the graph.
 | [[file:proto/dat/syslog.org][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
 | [[file:proto/dat/xml.org][proto/dat/xml]]        | 2025-04-15 18:24:20 |
 | [[file:proto/desktop.org][proto/desktop]]        | 2025-04-11 21:32:15 |
-| [[file:proto/ietf.org][proto/ietf]]           | 2025-04-12 17:48:44 |
+| [[file:proto/ietf.org][proto/ietf]]           | 2025-06-17 23:18:36 |
 | [[file:proto/iso.org][proto/iso]]            | 2025-04-12 15:48:43 |
 | [[file:proto/mail.org][proto/mail]]           | 2025-04-15 15:52:45 |
 | [[file:proto/math.org][proto/math]]           | 2025-05-08 20:42:15 |
@@ -157,8 +161,8 @@ an interface for modifying the graph.
 | [[file:proto/net/udp.org][proto/net/udp]]        | 2025-05-13 19:22:07 |
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
-| [[file:proto/web.org][proto/web]]            | 2025-06-04 14:23:06 |
-| [[file:readme.org][readme]]               | 2025-06-16 23:04:37 |
+| [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
+| [[file:readme.org][readme]]               | 2025-06-17 19:52:31 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |

@@ -30,6 +30,15 @@
 [2025-03-03 Mon 16:21] -- [[https://wezterm.org/][WezTerm - Wez's Terminal Emulator]]
 [2025-03-03 Mon 16:21] -- [[https://github.com/wezterm/wezterm][wezterm/wezterm]]
 :END:
+** fbterm
+:PROPERTIES:
+:ID:       391c9f4d-bead-4f9c-b946-0e2d191aa94b
+:CREATED:  <2025-06-20 Fri 13:40>
+:END:
+:EDGES:
+[2025-06-20 Fri 13:41] -- [[https://salsa.debian.org/debian/fbterm][src]]
+:END:
+
 ** Terminal Multiplexer
 :PROPERTIES:
 :ID:       528d0b97-b753-40b1-8db2-198ce59296a6
