@@ -21,8 +21,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 849 |
-| edges | 655 |
+| nodes | 850 |
+| edges | 656 |
 | files | 126 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Tue Jun 17 23:27:10 2025 -0400                            |
+| updated     | Fri Jun 20 19:48:23 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 11354 :λ 10865 :# 16 :_ 473                               |
+| lines       | 11367 :λ 10876 :# 16 :_ 475                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -49,7 +49,7 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   1943 *****************
+: 2025-06   1972 *****************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
@@ -65,7 +65,7 @@ an interface for modifying the graph.
 | [[file:app/net.org][app/net]]              | 2025-04-06 18:08:34 |
 | [[file:app/package-manager.org][app/package-manager]]  | 2025-06-08 19:31:45 |
 | [[file:app/podman.org][app/podman]]           | 2025-03-03 17:25:04 |
-| [[file:app/term.org][app/term]]             | 2025-05-03 12:08:28 |
+| [[file:app/term.org][app/term]]             | 2025-06-20 13:41:16 |
 | [[file:app/vi.org][app/vi]]               | 2025-05-10 23:09:51 |
 | [[file:comp/ecl.org][comp/ecl]]             | 2025-03-09 15:44:39 |
 | [[file:comp/gcc.org][comp/gcc]]             | 2025-03-09 21:08:14 |
@@ -162,7 +162,7 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-06-17 19:52:31 |
+| [[file:readme.org][readme]]               | 2025-06-19 18:20:24 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
