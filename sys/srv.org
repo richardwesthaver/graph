@@ -17,6 +17,7 @@ SystemV -> systemd, OpenRC
 :EDGES:
 [2025-02-16 Sun 18:55] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd#sect-Managing_Services_with_systemd-Introduction][Chapter 10. Managing Services with systemd | Red Hat Product Documentation]]
 [2025-02-16 Sun 18:55] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.html#][systemd]]
+[2025-06-22 Sun 00:21] <- [[id:0dcb6857-91e1-4319-ad00-97c742604593][systemd-udevd.service]]
 :END:
 *** Units
 :PROPERTIES:

@@ -1,7 +1,7 @@
 #+title: GNU/Linux
 #+description: A Free (as in Freedom) OS
 #+setupfile: ../../clean.theme
-* Linux                                                               :linux:
+* GNU/Linux                                                           :linux:
 :PROPERTIES:
 :ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
 :CREATED:  <2025-02-09 Sun 13:33>
@@ -598,4 +598,22 @@ Linux Distributions
 :END:
 :EDGES:
 [2025-02-22 Sat 19:43] -- [[http://www.slackware.com/][The Slackware Linux Project]]
+:END:
+
+* Plan 9
+:PROPERTIES:
+:ID:       3c707aa1-be3a-4258-bcd8-195216e658b5
+:CREATED:  <2025-03-06 Thu 09:11>
+:END:
+:EDGES:
+[2025-03-06 Thu 09:12] -- [[http://9p.io/plan9/][Plan 9 from Bell Labs]]
+[2025-03-06 Thu 09:12] -- [[http://9p.io/sys/doc/][Plan 9 — The Documents (Volume 2)]]
+
+* OpenBSD
+:PROPERTIES:
+:ID:       82110e71-748d-4dd6-ba91-22a6a41df76c
+:CREATED:  <2025-06-22 Sun 14:56>
+:END:
+:EDGES:
+[2025-06-22 Sun 14:56] -- [[https://www.openbsd.org/][OpenBSD]]
 :END:
