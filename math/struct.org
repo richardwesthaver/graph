@@ -57,6 +57,23 @@ acyclic, etc)
 :EDGES:
 [2025-03-03 Mon 16:59] -- [[https://en.wikipedia.org/wiki/Algebraic_curve][Algebraic curve - Wikipedia]]
 :END:
+** Curve Fitting
+:PROPERTIES:
+:ID:       df6fb174-7dab-41b1-88fb-2a36572b7935
+:CREATED:  <2025-06-23 Mon 18:37>
+:END:
+:EDGES:
+[2025-06-23 Mon 18:38] -- [[wikipedia:Curve fitting][wiki]]
+:END:
+*** Linear Interpolation
+:PROPERTIES:
+:ID:       be0fc074-2cda-4841-92a4-a16bc27e9ebf
+:CREATED:  <2025-06-23 Mon 18:38>
+:END:
+:EDGES:
+[2025-06-23 Mon 18:38] -- [[wikipedia:Linear interpolation][wiki]]
+:END:
+
 ** Elliptic Curve
 :PROPERTIES:
 :ID:       b4579e67-0855-44e1-971d-1a727694af17

@@ -5,3 +5,15 @@
 :ID:       43663178-a6db-4cd5-923f-612eaa8ae14a
 :CREATED:  <2025-01-18 Sat 20:45>
 :END:
+:EDGES:
+[2025-06-23 Mon 18:51] -- [[https://www.python.org/][Welcome to Python.org]]
+:END:
+** f-string
+:PROPERTIES:
+:ID:       aad902c0-22e0-48f2-af5e-43120ac3db10
+:CREATED:  <2025-06-23 Mon 18:50>
+:END:
+:EDGES:
+[2025-06-23 Mon 18:50] -- [[https://fstring.help/cheat/][Python f-string cheat sheet]]
+[2025-06-23 Mon 18:51] -- [[https://realpython.com/python-f-strings/][Python's F-String for String Interpolation and Formatting – Real Python]]
+:END:
