@@ -21,9 +21,9 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 855 |
-| edges | 662 |
-| files | 125 |
+| nodes | 865 |
+| edges | 669 |
+| files | 126 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Mon Jun 23 18:16:04 2025 -0400                            |
+| updated     | Tue Jun 24 00:25:01 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 11421 :λ 10925 :# 19 :_ 477                               |
+| lines       | 11506 :λ 11005 :# 19 :_ 482                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -49,7 +49,7 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   3283 ****************************
+: 2025-06   3323 *****************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
@@ -105,7 +105,7 @@ an interface for modifying the graph.
 | [[file:lang/javascript.org][lang/javascript]]      | 2025-06-04 14:15:39 |
 | [[file:lang/julia.org][lang/julia]]           | 2025-06-09 15:05:43 |
 | [[file:lang/lisp.org][lang/lisp]]            | 2025-06-16 16:59:00 |
-| [[file:lang/python.org][lang/python]]          | 2025-02-21 22:33:53 |
+| [[file:lang/python.org][lang/python]]          | 2025-06-23 18:51:58 |
 | [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
 | [[file:lang/rust.org][lang/rust]]            | 2025-03-16 19:07:43 |
 | [[file:lang/shell.org][lang/shell]]           | 2025-02-27 16:56:51 |
@@ -124,7 +124,7 @@ an interface for modifying the graph.
 | [[file:math/num.org][math/num]]             | 2025-06-09 12:29:29 |
 | [[file:math/physics.org][math/physics]]         | 2025-03-03 18:15:06 |
 | [[file:math/stat.org][math/stat]]            | 2025-02-28 18:22:16 |
-| [[file:math/struct.org][math/struct]]          | 2025-05-21 19:01:44 |
+| [[file:math/struct.org][math/struct]]          | 2025-06-23 18:38:45 |
 | [[file:notes.org][notes]]                | 2025-03-25 15:23:42 |
 | [[file:os/mac.org][os/mac]]               | 2025-03-03 18:06:20 |
 | [[file:os/mainframe.org][os/mainframe]]         | 2025-03-04 19:43:31 |
@@ -161,7 +161,7 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-06-22 20:35:43 |
+| [[file:readme.org][readme]]               | 2025-06-23 18:22:54 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
