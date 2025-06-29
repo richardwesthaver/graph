@@ -639,7 +639,6 @@ even-fixnum-lowtag and odd-fixnum-lowtag) though with the recent work
 on wider fixnums on 64-bit systems this is no longer necessarily so.
 #+end_quote
 
-
 ***** The NIL-cons Hack
 :PROPERTIES:
 :ID:       e345e677-e9e1-496f-8f58-2f77e3a44000
@@ -1025,6 +1024,145 @@ Virtual Operations
       gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
       the efficiency of stable code.
 #+end_quote
+**** Stack Allocation
+:PROPERTIES:
+:ID:       77d8f492-2707-43d5-893f-aeb14338568d
+:CREATED:  <2025-06-27 Fri 18:50>
+:END:
+:EDGES:
+[2025-06-27 Fri 18:52] -- [[info:sbcl#Stack Allocation][info]]
+:END:
+#+begin_quote
+ -- Variable: *stack-allocate-dynamic-extent*
+     If true (the default), the compiler believes ‘dynamic-extent’
+     declarations and stack allocates otherwise inaccessible parts of
+     the object whenever possible.
+#+end_quote
+
+SBCL implements stack alloc for these calues when they're recognized
+as having dynamic extent:
+
+#+begin_quote
+   • ‘&rest’ lists
+
+   • the results of ‘cons’, ‘list’, ‘list*’, and ‘vector’
+
+   • the result of simple forms of ‘make-array’: stack allocation is
+     possible only if the resulting array is known to be both simple and
+     one-dimensional, and has a constant ‘:element-type’.
+
+     *Note*: stack space is limited, so allocation of a large vector may
+     cause stack overflow.  Stack overflow checks are done except in
+     zero ‘safety’ policies.
+
+   • closures defined with ‘flet’ or ‘labels’ with a bound
+     ‘dynamic-extent’ declaration.
+
+   • anonymous closures defined with ‘lambda’
+
+   • user-defined structures when the structure constructor defined
+     using ‘defstruct’ has been declared ‘inline’
+
+     *Note*: structures with "raw" slots can currently be
+     stack-allocated only on x86 and x86-64.  A "raw" slot is one whose
+     declared type is a subtype of exactly one of: ‘double-float’,
+     ‘single-float’, ‘(complex double-float)’, ‘(complex single-float)’,
+     or ‘sb-ext:word’; but as an exception to the preceding, any subtype
+     of ‘fixnum’ is not stored as raw despite also being a subtype of
+     ‘sb-ext:word’.
+
+   • otherwise-inaccessible parts of objects recognized to be dynamic
+     extent.  The support for detecting when this applies is very
+     sophisticated.  The compiler can do this detection when any value
+     form for a variable contains conditional allocations, function
+     calls, inlined functions, anonymous closures, or even other
+     variables.  This allows stack allocation of complex structures.
+
+#+end_quote
+#+begin_src lisp
+  ;;; Declaiming a structure constructor inline before definition makes
+  ;;; stack allocation possible.
+  (declaim (inline make-thing))
+  (defstruct thing obj next)
+
+  ;;; Stack allocation of various objects bound to DYNAMIC-EXTENT
+  ;;; variables.
+  (let* ((list (list 1 2 3))
+         (nested (cons (list 1 2) (list* 3 4 (list 5))))
+         (vector (make-array 3 :element-type 'single-float))
+         (thing (make-thing :obj list
+  			  :next (make-thing :obj (make-array 3))))
+         (closure (let ((y ...)) (lambda () y))))
+    (declare (dynamic-extent list nested vector thing closure))
+    ...)
+
+  ;;; Stack allocation of objects assigned to DYNAMIC-EXTENT variables.
+  (let ((x nil))
+    (declare (dynamic-extent x))
+    (setq x (list 1 2 3))
+    (dotimes (i 10)
+      (setq x (cons i x)))
+    ...)
+
+  ;;; Stack allocation of arguments to a local function is equivalent
+  ;;; to stack allocation of local variable values.
+  (flet ((f (x)
+  	 (declare (dynamic-extent x))
+  	 ...))
+    ...
+    (f (list 1 2 3))
+    (f (cons (cons 1 2) (cons 3 4)))
+    ...)
+
+  ;;; Stack allocation of &REST lists
+  (defun foo (&rest args)
+    (declare (dynamic-extent args))
+    ...)
+
+#+end_src
+
+#+begin_quote
+   As a notable exception to recognizing otherwise inaccessible parts of
+other recognized dynamic extent values, SBCL does not as of 1.0.48.21
+propagate dynamic-extentness through ‘&rest’ arguments - but another
+conforming implementation might, so portable code should not rely on
+this.
+
+     (declaim (inline foo))
+     (defun foo (fun &rest arguments)
+       (declare (dynamic-extent arguments))
+       (apply fun arguments))
+
+     (defun bar (a)
+       ;; SBCL will heap allocate the result of (LIST A), and stack allocate
+       ;; only the spine of the &rest list -- so this is safe, but unportable.
+       ;;
+       ;; Another implementation, including earlier versions of SBCL might consider
+       ;; (LIST A) to be otherwise inaccessible and stack-allocate it as well!
+       (foo #'car (list a)))
+
+   If dynamic extent constraints specified in the Common Lisp standard
+are violated, the best that can happen is for the program to have
+garbage in variables and return values; more commonly, the system will
+crash.
+
+   In particular, it is important to realize that this can interact in
+suprising ways with the otherwise inaccessible parts criterion:
+#+end_quote
+
+#+begin_src lisp
+  (let* ((a (list 1 2 3))
+         (b (cons a a)))
+    (declare (dynamic-extent b))
+    ;; Unless A is accessed elsewhere as well, SBCL will consider
+    ;; it to be otherwise inaccessible -- it can only be accessed
+    ;; through B, after all -- and stack allocate it as well.
+    ;;
+    ;; Hence returning (CAR B) here is unsafe.
+    ...)
+
+
+#+end_src
 **** Inlining
 #+begin_src lisp
   ;;; An INLINEP value describes how a function is called. The values

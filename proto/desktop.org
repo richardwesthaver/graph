@@ -18,6 +18,14 @@
 :EDGES:
 [2025-02-09 Sun 13:38] -- [[http://freedesktop.org/wiki/Software/xdg-user-dirs][xdg-user-dirs]]
 :END:
+** Desktop Entries
+:PROPERTIES:
+:ID:       460bcb30-97c5-4a69-ac91-bb357ea7c238
+:CREATED:  <2025-06-28 Sat 21:46>
+:END:
+:EDGES:
+[2025-06-28 Sat 21:46] -- [[https://specifications.freedesktop.org/desktop-entry-spec/latest/][Desktop Entry Specification]]
+:END:
 * Secret Service                                                     :crypto:
 :PROPERTIES:
 :ID:       6f534214-a89d-4cec-9c29-0f345fdc2199

@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Tue Jun 24 00:25:01 2025 -0400                            |
+| updated     | Tue Jun 24 22:49:08 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 11506 :λ 11005 :# 19 :_ 482                               |
+| lines       | 11507 :λ 11006 :# 19 :_ 482                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -49,7 +49,7 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   3323 *****************************
+: 2025-06   3396 *****************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
@@ -131,6 +131,7 @@ an interface for modifying the graph.
 | [[file:os/unix.org][os/unix]]              | 2025-06-22 14:57:00 |
 | [[file:os/win.org][os/win]]               | 2025-03-03 18:51:19 |
 | [[file:proto/ansi.org][proto/ansi]]           | 2025-04-12 15:48:34 |
+| [[file:proto/color.org][proto/color]]          | 2025-06-23 20:17:55 |
 | [[file:proto/crypto.org][proto/crypto]]         | 2025-03-03 18:15:56 |
 | [[file:proto/dat/config.org][proto/dat/config]]     | 2025-05-26 00:52:46 |
 | [[file:proto/dat/cue.org][proto/dat/cue]]        | 2025-04-15 15:09:37 |
@@ -161,7 +162,7 @@ an interface for modifying the graph.
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-06-23 18:22:54 |
+| [[file:readme.org][readme]]               | 2025-06-24 00:31:35 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |

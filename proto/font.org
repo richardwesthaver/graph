@@ -1,0 +1,27 @@
+#+title: Fonts
+* TrueType
+:PROPERTIES:
+:ID:       d53d8503-a27c-4556-95df-45ccca5e33b0
+:CREATED:  <2025-06-28 Sat 14:39>
+:END:
+:EDGES:
+[2025-06-28 Sat 14:40] -- [[https://www.truetype-typography.com/ttspec.htm][The TrueType Specification]]
+:END:
+- [[https://developer.apple.com/fonts/][Fonts - Apple Developer]]
+- [[https://learn.microsoft.com/en-us/typography/][Microsoft Typography documentation - Typography | Microsoft Learn]]
+** TTF
+:PROPERTIES:
+:ID:       4ec4c00d-ba44-4b58-bc37-aa92437c0608
+:CREATED:  <2025-06-28 Sat 14:44>
+:END:
+:EDGES:
+[2025-06-28 Sat 14:44] -- [[https://developer.apple.com/fonts/TrueType-Reference-Manual/][Fonts - TrueType Reference Manual - Apple Developer]]
+:END:
+** OTF
+:PROPERTIES:
+:ID:       4f5f11e2-3ffd-4523-97c9-d5bf17a64eef
+:CREATED:  <2025-06-28 Sat 14:39>
+:END:
+:EDGES:
+[2025-06-28 Sat 14:43] -- [[https://learn.microsoft.com/en-us/typography/opentype/spec/][OpenType specification (OpenType 1.9.1) - Typography | Microsoft Learn]]
+:END:

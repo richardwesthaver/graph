@@ -164,4 +164,27 @@
 [2025-05-18 Sun 16:43] -- [[wikipedia:Kolmogorov complexity][wiki]]
 :END:
 - https://www.cs.cmu.edu/~venkatg/teaching/15252-sp20/notes/Kolmogorov-Complexity.pdf
-  
+* Computer Graphics
+:PROPERTIES:
+:ID:       c934b053-1f34-4b81-b63a-ccc7cde98b34
+:CREATED:  <2025-06-28 Sat 15:46>
+:END:
+** Rasterization
+:PROPERTIES:
+:ID:       959cc0bc-9021-465a-94f2-8314cc4ea07c
+:AKA: Rasterisation
+:CREATED:  <2025-06-28 Sat 15:46>
+:END:
+:EDGES:
+[2025-06-28 Sat 15:46] -- [[wikipedia:Rasterisation][wiki]]
+:END:
+- [[https://agg.sourceforge.net/antigrain.com/][Anti-Grain Geometry -]]
+*** Anti-aliasing
+:PROPERTIES:
+:ID:       0cd94421-590f-4935-b992-6290f1862483
+:CREATED:  <2025-06-28 Sat 15:47>
+:END:
+:EDGES:
+[2025-06-28 Sat 15:47] -- [[wikipedia:Spatial anti-aliasing][wiki]]
+:END:
+- [[https://github.com/fjolliton/cl-vectors/blob/master/aa.lisp][cl-vectors/aa.lisp]]
