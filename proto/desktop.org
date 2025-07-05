@@ -71,6 +71,24 @@ The X Window System and the X.Org project.
 :EDGES:
 [2025-03-03 Mon 17:37] -- [[https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/master/randrproto.txt?ref_type=heads][randrproto.txt · master · xorg / proto / xorgproto]]
 :END:
+*** Render
+:PROPERTIES:
+:ID:       1e4e50f6-1336-4d5f-9d3b-8f361214b523
+:CREATED:  <2025-07-04 Fri 18:04>
+:END:
+- https://www.x.org/releases/current/doc/renderproto/renderproto.txt
+*** DRI
+:PROPERTIES:
+:ID:       0217d049-0ca6-42ed-91f5-682bd9b8bae2
+:CREATED:  <2025-07-04 Fri 18:04>
+:END:
+- current version is 3
+*** Keyboard
+:PROPERTIES:
+:ID:       379eecf3-be0e-454b-b733-6f9aaecfc83f
+:CREATED:  <2025-07-04 Fri 19:53>
+:END:
+- https://www.x.org/releases/current/doc/renderproto/renderproto.txt
 ** Xterm
 :PROPERTIES:
 :ID:       0e881b59-dc08-4a50-bef3-f5e98b7a7b07

@@ -36,7 +36,7 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Sat Jun 28 23:31:26 2025 -0400                            |
+| updated     | Sun Jun 29 23:02:00 2025 -0400                            |
 | langs       | org                                                       |
 | lines       | 11706 :λ 11183 :# 19 :_ 504                               |
 |-------------+-----------------------------------------------------------|
@@ -49,14 +49,14 @@ an interface for modifying the graph.
 : 2025-03   6923 *************************************************************
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
-: 2025-06   3605 *******************************
+: 2025-06   3626 *******************************
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:readme.org][readme]]               | 2025-06-28 23:39:39 |
+| [[file:readme.org][readme]]               | 2025-06-29 23:10:16 |
 | [[file:app/cas.org][app/cas]]              | 2025-06-09 17:25:30 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-06-09 17:10:55 |

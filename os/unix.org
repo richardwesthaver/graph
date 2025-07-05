@@ -121,6 +121,13 @@ umount .stash/
 :EDGES:
 [2025-03-04 Tue 19:06] -- [[https://docs.kernel.org/tools/rtla/index.html][The realtime Linux analysis tool — The Linux Kernel documentation]]
 :END:
+*** ioctl
+:PROPERTIES:
+:ID:       94f363d8-45a2-4d48-9e25-17b1ac50771a
+:CREATED:  <2025-07-04 Fri 20:10>
+:END:
+- [[https://www.man7.org/linux/man-pages/man2/ioctl.2.html][ioctl(2) - Linux manual page]]
+- [[https://www.kernel.org/doc/html/latest/driver-api/ioctl.html][ioctl based interfaces — The Linux Kernel documentation]]
 *** Keyutils                                                         :crypto:
 :PROPERTIES:
 :ID:       5e859a3f-0c31-4796-85c6-7008b346f186
@@ -129,6 +136,12 @@ umount .stash/
 :EDGES:
 [2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
 :END:
+*** spidev
+:PROPERTIES:
+:ID:       93c4f02f-2b00-4741-98e4-f427530f4875
+:CREATED:  <2025-07-04 Fri 20:02>
+:END:
+- [[https://www.kernel.org/doc/Documentation/spi/spidev]]
 *** Netlink
 :PROPERTIES:
 :ID:       25cc1e3f-60f0-401a-a8b6-ac8d5670233d
