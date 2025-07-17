@@ -47,6 +47,8 @@
 The X Window System and the X.Org project.
 [[https://www.x.org/wiki/Documentation/][Documentation]]
 [[https://www.x.org/wiki/guide/][Guide]]
+- [[https://decuser.github.io/development/x-windows/xlib/2023/01/31/xlib-basics.html][Xlib basics | decuser’s blog]]
+- [[https://www.d.umn.edu/~tcolburn/cs2511/discussions/Motif/text0.htm][Introduction to X]]
 ** Extensions
 :PROPERTIES:
 :ID:       f0a4403d-d5f1-4f7c-8d56-ab235ecb16dd
@@ -71,6 +73,7 @@ The X Window System and the X.Org project.
 :EDGES:
 [2025-03-03 Mon 17:37] -- [[https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/master/randrproto.txt?ref_type=heads][randrproto.txt · master · xorg / proto / xorgproto]]
 :END:
+- [[https://i3wm.org/docs/multi-monitor.html#_the_explanation][i3: The multi-monitor situation]]
 *** Render
 :PROPERTIES:
 :ID:       1e4e50f6-1336-4d5f-9d3b-8f361214b523
@@ -83,6 +86,7 @@ The X Window System and the X.Org project.
 :CREATED:  <2025-07-04 Fri 18:04>
 :END:
 - current version is 3
+- strong relationship with the [[id:e26ff2e1-3481-478f-853a-f72fb9d5da6e][Present]] extension
 *** Keyboard
 :PROPERTIES:
 :ID:       379eecf3-be0e-454b-b733-6f9aaecfc83f
@@ -102,6 +106,25 @@ The X Window System and the X.Org project.
 :EDGES:
 [2025-04-11 Fri 21:29] -- [[https://www.xfree86.org/4.8.0/ctlseqs.html][Xterm Control Sequences]]
 :END:
+*** Present
+:PROPERTIES:
+:ID:       e26ff2e1-3481-478f-853a-f72fb9d5da6e
+:CREATED:  <2025-07-10 Thu 16:06>
+:END:
+- [[https://cgit.freedesktop.org/xorg/proto/presentproto/tree/presentproto.txt][presentproto.txt]]
+*** Xinerama
+:PROPERTIES:
+:ID:       83a5dd29-c5c7-48c3-8c66-d4f151261818
+:CREATED:  <2025-07-10 Thu 16:49>
+:END:
+[[https://wiki.archlinux.org/title/Multihead][Multihead - ArchWiki]]
+- basically superseded by RandR
+*** Record
+:PROPERTIES:
+:ID:       b2202607-e3d6-4e1d-b71a-1b0b3befe1dc
+:CREATED:  <2025-07-10 Thu 16:50>
+:END:
+[[https://www.x.org/releases/X11R7.6/doc/libXtst/recordlib.html][X Record Extension Library]]
 ** XCB
 :PROPERTIES:
 :ID:       eabb4e88-738d-42d2-986d-e5ffdd4c6fb5

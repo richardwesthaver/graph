@@ -10,6 +10,15 @@
 :ID:       a8a508ae-1497-4000-b358-35f3c2997d37
 :CREATED:  <2025-06-04 Wed 15:46>
 :END:
+** Bitwig Connect 4/12
+:PROPERTIES:
+:ID:       6f28587a-20e1-4e80-85ea-4ac0f1c1d13e
+:CREATED:  <2025-07-15 Tue 20:28>
+:END:
+:EDGES:
+[2025-07-15 Tue 20:28] -- [[https://www.bitwig.com/connect/][Bitwig Connect | Bitwig]]
+:END:
+
 * Studio Monitors
 :PROPERTIES:
 :ID:       83ecacbe-757f-407d-b90a-8111fcf677d8
@@ -20,11 +29,35 @@
 :ID:       25271e2c-9741-43e9-94e0-fdc895f64d04
 :CREATED:  <2025-06-04 Wed 15:46>
 :END:
+
 * Headphones
 :PROPERTIES:
 :ID:       c2b003f2-54b9-4efc-ab9d-937dc2b90b2e
 :CREATED:  <2025-06-04 Wed 15:46>
 :END:
+** AKG K712 Pro
+:PROPERTIES:
+:ID:       8b498584-c5b9-433a-965c-047ed5a49d44
+:CREATED:  <2025-07-15 Tue 18:41>
+:END:
+- [[https://www.akg.com/headphones/professional-headphones/K712PRO.html][akg]]
+** Sennheiser HE 1
+:PROPERTIES:
+:ID:       969ff16e-1d67-4b6d-b4c6-a5fbe0c7ea15
+:CREATED:  <2025-07-15 Tue 18:55>
+:END:
+:EDGES:
+[2025-07-15 Tue 18:55] -- [[https://www.sennheiser-hearing.com/en-US/p/sennheiser-he-1/][HE 1 | Sennheiser United States]]
+:END:
+** Hiffiman HE1000 V2
+:PROPERTIES:
+:ID:       2cbc0ebc-361c-4bbe-940b-3c676a392a3a
+:CREATED:  <2025-07-15 Tue 18:58>
+:END:
+:EDGES:
+[2025-07-15 Tue 18:58] -- [[https://www.hifiman.com/products/detail/267][Headphones & portable audio - HIFIMAN.com]]
+:END:
+
 * Microphone
 :PROPERTIES:
 :ID:       cde93921-a7a4-4ada-9c84-5656f5e22629

@@ -260,6 +260,12 @@ public.
     }
   }
     #+end_example
+*** Merging
+:PROPERTIES:
+:ID:       0de5a5a3-0c2b-4f98-9777-65a88ee0febe
+:CREATED:  <2025-07-10 Thu 18:10>
+:END:
+- [[https://book.mercurial-scm.org/read/merge.html][Merging changes — Mercurial: the definitive guide 1.90-ebb51bf94742 (for Mercurial 4.2) documentation]]
 
 *** Extensions
 :PROPERTIES:

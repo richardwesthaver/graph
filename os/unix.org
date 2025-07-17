@@ -533,7 +533,7 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:34] -- [[https://docs.fedoraproject.org/en-US/iot/][Fedora IoT Documentation]]
 :END:
-*** Arch
+*** Arch Linux
 :PROPERTIES:
 :ID:       6ef3fb84-6805-46f7-ad13-8929a023b43c
 :CREATED:  <2025-02-22 Sat 19:39>
@@ -560,6 +560,48 @@ Linux Distributions
 :END:
 - supports cloud-init service
 - sshd on by default
+**** ABS
+:PROPERTIES:
+:ID:       03215632-83da-48c0-9f36-df72a9e956b5
+:CREATED:  <2025-07-09 Wed 17:04>
+:AKA: Arch build system
+:END:
+:EDGES:
+[2025-07-09 Wed 17:05] -- [[https://wiki.archlinux.org/title/Arch_build_system][Arch build system - ArchWiki]]
+:END:
+- [[https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot][DeveloperWiki:Building in a clean chroot - ArchWiki]]
+#+begin_quote
+The Arch build system (ABS) is a system for building and packaging
+software from source code. While pacman is the specialized Arch tool
+for binary package management, the Arch build system is a collection
+of tools for compiling source into installable .pkg.tar.zst packages.
+
+The Arch build system can be compared to ports for *BSD, which
+automates the process of building software from source code. The
+system uses a port to download, unpack, patch, compile, and install
+the given software. A port is merely a small directory on the user's
+computer, named after the corresponding software to be installed, that
+contains a few files with the instructions for building and installing
+the software from source. This makes installing software as simple as
+typing make or make install clean within the port's directory.
+
+The Arch build system is based on a similar concept. It comprises a
+collection of git repositories for every package available in Arch
+Linux. Each repository contains a PKGBUILD file (and sometimes other
+files), and does not contain the software source nor binary. By
+running makepkg inside a directory, the software sources are
+downloaded, the software is compiled, and then packaged within the
+build directory. Then you can use pacman to install the package.
+#+end_quote
+**** Pacman
+:PROPERTIES:
+:ID:       8bbcda66-0611-42a8-9f99-10d1cd7d82e2
+:CREATED:  <2025-07-09 Wed 17:06>
+:END:
+:EDGES:
+[2025-07-09 Wed 17:06] -- [[https://wiki.archlinux.org/title/Pacman][pacman - ArchWiki]]
+:END:
+
 *** Ubuntu
 :PROPERTIES:
 :ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02
