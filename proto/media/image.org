@@ -7,6 +7,7 @@
 :END:
 :EDGES:
 [2025-05-05 Mon 18:17] -- [[wikipedia:PNG][wiki]]
+[2025-07-18 Fri 23:31] -- [[https://w3c.github.io/png/][spec]]
 :END:
 Portable Network Graphics, developed as an improvement to [[id:9fbe4894-4557-46c4-b602-99823bd2ea66][GIF]].
 * GIF
@@ -16,4 +17,25 @@ Portable Network Graphics, developed as an improvement to [[id:9fbe4894-4557-46c
 :END:
 :EDGES:
 [2025-05-05 Mon 18:18] -- [[wikipedia:GIF][wiki]]
+[2025-07-18 Fri 23:32] -- [[https://www.w3.org/Graphics/GIF/spec-gif89a.txt][spec]]
 :END:
+jiffy
+* JPG
+:PROPERTIES:
+:ID:       ee2a3b64-3a16-4056-a6b4-2514495f7ccb
+:CREATED:  <2025-07-18 Fri 23:38>
+:AKA: JPEG
+:END:
+:EDGES:
+[2025-07-18 Fri 23:39] -- [[https://jpeg.org/jpeg/][JPEG - JPEG 1]]
+[2025-07-18 Fri 23:39] -- [[https://vicente-gonzalez-ruiz.github.io/JPEG/][The JPEG standard (ISO/IEC 10918-1)]]
+[2025-07-18 Fri 23:46] <- [[id:e25fd7f1-8387-4572-8cee-f2da0183d5e2][libjpeg-turbo]]
+:END:
+- JPEG = Joint Photographic Experts Group
+- Developed in 1992 by the ISO
+- True color (up to 24 bits/pixel) and grayscale (up to 8 bits/pixel) images
+- Eligible compression quality between 
+- Visually lossless reconstructions of color images for compression
+  ratios about bits/pixel (bpp)
+- Based on the Discrete Cosine Transform (DCT)
+- Several working modes: lossy, lossless and hierarchical

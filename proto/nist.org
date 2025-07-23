@@ -1,0 +1,18 @@
+#+title: NIST
+#+setupfile: ../../clean.theme
+* NIST
+:PROPERTIES:
+:ID:       f017b5d9-67c1-4f7b-9e59-f3ec8c4ea65c
+:CREATED:  <2025-07-20 Sun 21:43>
+:END:
+:EDGES:
+[2025-07-20 Sun 21:43] -- [[https://www.nist.gov/][National Institute of Standards and Technology]]
+:END:
+** FIPS
+:PROPERTIES:
+:ID:       f7405f68-480a-4228-b3ab-ab35d73a7c25
+:CREATED:  <2025-07-20 Sun 21:43>
+:END:
+:EDGES:
+[2025-07-20 Sun 21:43] -- [[https://www.nist.gov/itl/fips-general-information][FIPS General Information | NIST]]
+:END:

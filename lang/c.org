@@ -12,7 +12,7 @@
 [[https://en.cppreference.com/w/c/23][C23 - cppreference.com]]
 
 #+name: c-helloworld
-#+begin_src c :eval no-export :export code
+#+begin_src c :eval never :export code
   // gcc -O0 -g hello.c
   #include <stdio.h>
 
@@ -100,6 +100,16 @@ Information about compiling /without/ libc.
 :ID:       b0ff5843-38de-4bd9-800a-728391dafc02
 :CREATED:  <2025-03-07 Fri 12:32>
 :END:
+*** libjpeg-turbo
+:PROPERTIES:
+:ID:       e25fd7f1-8387-4572-8cee-f2da0183d5e2
+:CREATED:  <2025-07-18 Fri 23:43>
+:END:
+:EDGES:
+[2025-07-18 Fri 23:43] -- [[https://www.libjpeg-turbo.org/][libjpeg-turbo | Main / libjpeg-turbo]]
+[2025-07-18 Fri 23:46] -> [[id:ee2a3b64-3a16-4056-a6b4-2514495f7ccb][JPG]]
+:END:
+
 *** LAPACKE
 :PROPERTIES:
 :ID:       7f29ca19-b76c-40c0-981c-41c4034ecf4c

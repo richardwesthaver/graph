@@ -1093,6 +1093,20 @@ Maclisp->Zetalisp
 :EDGES:
 [2025-03-03 Mon 14:08] -- [[info:elisp#svg images][ref]]
 :END:
+** Faces
+:PROPERTIES:
+:ID:       291cd491-b88c-4d52-b500-e7cc3095b3f1
+:CREATED:  <2025-07-22 Tue 22:31>
+:END:
+:EDGES:
+[2025-07-22 Tue 22:33] -- [[info:elisp#Faces][info]]
+:END:
+#+begin_quote
+A “face” is a collection of graphical attributes for displaying text:
+font, foreground color, background color, optional underlining, etc.
+Faces control how Emacs displays text in buffers, as well as other
+parts of the frame such as the mode line.
+#+end_quote
 ** Overlays
 :PROPERTIES:
 :ID:       358a0e2b-b5e0-47ad-9c70-7bb72b1c548f

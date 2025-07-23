@@ -87,6 +87,15 @@ The X Window System and the X.Org project.
 :END:
 - current version is 3
 - strong relationship with the [[id:e26ff2e1-3481-478f-853a-f72fb9d5da6e][Present]] extension
+*** Embed
+:PROPERTIES:
+:ID:       f8211c8e-3f31-490f-a5f6-89b1d963c4f1
+:CREATED:  <2025-07-19 Sat 20:30>
+:END:
+:EDGES:
+[2025-07-19 Sat 20:31] -- [[https://specifications.freedesktop.org/xembed-spec/latest/][spec]]
+:END:
+
 *** Keyboard
 :PROPERTIES:
 :ID:       379eecf3-be0e-454b-b733-6f9aaecfc83f

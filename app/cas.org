@@ -8,7 +8,12 @@
 :EDGES:
 [2025-06-09 Mon 17:00] <- [[id:92ad7518-cf81-4aca-9940-bd40fb02f5dd][Calc]]
 :END:
-Computer Algebra Systems
+#+begin_quote
+A computer algebra system (CAS) is a software package with the ability
+to manipulate mathematical expressions in a way similar to the way a
+scientist would do calculations on paper.
+#+end_quote
+- [[https://maxima.sourceforge.io/compalg.html][Maxima – Computer Algebra Systems]]
 - [[https://en.wikipedia.org/wiki/List_of_computer_algebra_systems][List of computer algebra systems - Wikipedia]]
 ** Maxima                                                              :lisp:
 :PROPERTIES:
