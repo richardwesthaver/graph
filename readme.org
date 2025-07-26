@@ -21,8 +21,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 896 |
-| edges | 688 |
+| nodes | 897 |
+| edges | 689 |
 | files | 128 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | :id 1784914079056115652                                   |
 | root        | ~/comp/org/graph/                                         |
 | tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Wed Jul 16 23:04:28 2025 -0400                            |
+| updated     | Tue Jul 22 22:40:34 2025 -0400                            |
 | langs       | org                                                       |
-| lines       | 11928 :λ 11397 :# 19 :_ 512                               |
+| lines       | 11949 :λ 11418 :# 19 :_ 512                               |
 |-------------+-----------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -50,19 +50,15 @@ an interface for modifying the graph.
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
 : 2025-06   3626 *******************************
-: 2025-07    198 *
+: 2025-07    329 **
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:lang/c.org][lang/c]]               | 2025-07-18 23:50:50 |
-| [[file:proto/desktop.org][proto/desktop]]        | 2025-07-19 20:31:18 |
-| [[file:proto/media/image.org][proto/media/image]]    | 2025-07-18 23:47:28 |
-| [[file:proto/net/tls.org][proto/net/tls]]        | 2025-07-20 21:42:01 |
-| [[file:readme.org][readme]]               | 2025-07-19 01:49:14 |
-| [[file:app/cas.org][app/cas]]              | 2025-06-09 17:25:30 |
+| [[file:readme.org][readme]]               | 2025-07-22 22:49:00 |
+| [[file:app/cas.org][app/cas]]              | 2025-07-22 21:09:44 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-06-09 17:10:55 |
 | [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
@@ -101,6 +97,7 @@ an interface for modifying the graph.
 | [[file:lang/apl.org][lang/apl]]             | 2025-04-15 15:53:10 |
 | [[file:lang/asm.org][lang/asm]]             | 2025-06-03 19:30:32 |
 | [[file:lang/basic.org][lang/basic]]           | 2025-02-27 17:01:01 |
+| [[file:lang/c.org][lang/c]]               | 2025-07-18 23:50:50 |
 | [[file:lang/cobol.org][lang/cobol]]           | 2025-03-07 22:57:10 |
 | [[file:lang/concat.org][lang/concat]]          | 2025-03-09 20:55:24 |
 | [[file:lang/erlang.org][lang/erlang]]          | 2025-03-03 21:04:21 |
@@ -109,7 +106,7 @@ an interface for modifying the graph.
 | [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
 | [[file:lang/javascript.org][lang/javascript]]      | 2025-06-04 14:15:39 |
 | [[file:lang/julia.org][lang/julia]]           | 2025-06-09 15:05:43 |
-| [[file:lang/lisp.org][lang/lisp]]            | 2025-06-16 16:59:00 |
+| [[file:lang/lisp.org][lang/lisp]]            | 2025-07-22 22:35:38 |
 | [[file:lang/python.org][lang/python]]          | 2025-06-23 18:51:58 |
 | [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
 | [[file:lang/rust.org][lang/rust]]            | 2025-03-16 19:07:43 |
@@ -148,11 +145,13 @@ an interface for modifying the graph.
 | [[file:proto/dat/sigmf.org][proto/dat/sigmf]]      | 2025-02-21 22:32:46 |
 | [[file:proto/dat/syslog.org][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
 | [[file:proto/dat/xml.org][proto/dat/xml]]        | 2025-04-15 18:24:20 |
+| [[file:proto/desktop.org][proto/desktop]]        | 2025-07-19 20:31:18 |
 | [[file:proto/font.org][proto/font]]           | 2025-06-28 14:44:28 |
 | [[file:proto/ietf.org][proto/ietf]]           | 2025-06-17 23:18:36 |
 | [[file:proto/iso.org][proto/iso]]            | 2025-04-12 15:48:43 |
 | [[file:proto/mail.org][proto/mail]]           | 2025-04-15 15:52:45 |
 | [[file:proto/math.org][proto/math]]           | 2025-05-08 20:42:15 |
+| [[file:proto/media/image.org][proto/media/image]]    | 2025-07-18 23:47:28 |
 | [[file:proto/media/matroska.org][proto/media/matroska]] | 2025-04-15 15:15:25 |
 | [[file:proto/media/xiph.org][proto/media/xiph]]     | 2025-04-07 17:12:30 |
 | [[file:proto/metal.org][proto/metal]]          | 2025-04-12 17:32:01 |
@@ -161,8 +160,10 @@ an interface for modifying the graph.
 | [[file:proto/net/p2p.org][proto/net/p2p]]        | 2025-02-21 22:32:22 |
 | [[file:proto/net/ssh.org][proto/net/ssh]]        | 2025-06-05 18:32:19 |
 | [[file:proto/net/tcp.org][proto/net/tcp]]        | 2025-03-03 15:47:31 |
+| [[file:proto/net/tls.org][proto/net/tls]]        | 2025-07-20 21:42:01 |
 | [[file:proto/net/udp.org][proto/net/udp]]        | 2025-05-13 19:22:07 |
 | [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-03-03 20:12:14 |
+| [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
