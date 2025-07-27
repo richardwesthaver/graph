@@ -49,6 +49,8 @@ The X Window System and the X.Org project.
 [[https://www.x.org/wiki/guide/][Guide]]
 - [[https://decuser.github.io/development/x-windows/xlib/2023/01/31/xlib-basics.html][Xlib basics | decuser’s blog]]
 - [[https://www.d.umn.edu/~tcolburn/cs2511/discussions/Motif/text0.htm][Introduction to X]]
+- [[https://github.com/smysloff/xlib-examples][smysloff/xlib-examples: Xlib basic code examples]]
+- https://tronche.com/gui/x/xlib/
 ** Extensions
 :PROPERTIES:
 :ID:       f0a4403d-d5f1-4f7c-8d56-ab235ecb16dd
