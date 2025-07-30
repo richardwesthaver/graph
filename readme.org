@@ -29,17 +29,17 @@ an interface for modifying the graph.
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+-----------------------------------------------------------|
-| name        | graph                                                     |
-| version     | :version 0.1.0                                            |
-| description | :description CC Org Files                                 |
-| skel-id     | :id 1784914079056115652                                   |
-| root        | ~/comp/org/graph/                                         |
-| tags        | :tags (org docs notes blog meta plan archive notes graph) |
-| updated     | Fri Jul 25 23:57:30 2025 -0400                            |
-| langs       | org                                                       |
-| lines       | 11949 :λ 11418 :# 19 :_ 512                               |
-|-------------+-----------------------------------------------------------|
+|-------------+-----------------------------------------------------|
+| name        | graph                                               |
+| version     | 0.1.0                                               |
+| description | CC Org Files                                        |
+| skel-id     | 1784914079056115652                                 |
+| root        | ~/comp/org/graph/                                   |
+| tags        | (org docs notes blog meta plan archive notes graph) |
+| updated     | Sun Jul 27 00:11:44 2025 -0400                      |
+| langs       | org                                                 |
+| lines       | 11951 :λ 11420 :# 19 :_ 512                         |
+|-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -50,7 +50,7 @@ an interface for modifying the graph.
 : 2025-04   1936 *****************
 : 2025-05   1855 ****************
 : 2025-06   3626 *******************************
-: 2025-07    354 ***
+: 2025-07    362 ***
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
@@ -144,7 +144,7 @@ an interface for modifying the graph.
 | [[file:proto/dat/sigmf.org][proto/dat/sigmf]]      | 2025-02-21 22:32:46 |
 | [[file:proto/dat/syslog.org][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
 | [[file:proto/dat/xml.org][proto/dat/xml]]        | 2025-04-15 18:24:20 |
-| [[file:proto/desktop.org][proto/desktop]]        | 2025-07-19 20:31:18 |
+| [[file:proto/desktop.org][proto/desktop]]        | 2025-07-26 02:28:46 |
 | [[file:proto/font.org][proto/font]]           | 2025-06-28 14:44:28 |
 | [[file:proto/ietf.org][proto/ietf]]           | 2025-06-17 23:18:36 |
 | [[file:proto/iso.org][proto/iso]]            | 2025-04-12 15:48:43 |
@@ -165,7 +165,7 @@ an interface for modifying the graph.
 | [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-07-24 23:45:14 |
+| [[file:readme.org][readme]]               | 2025-07-26 00:06:01 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
 | [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
