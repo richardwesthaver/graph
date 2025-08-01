@@ -61,3 +61,15 @@ Edwards-curve Digital Signature Algorithm
 :EDGES:
 [2025-03-03 Mon 15:13] -- [[https://cr.yp.to/rumba20.html][~]]
 :END:
+* PGP
+:PROPERTIES:
+:ID:       ed65b25b-8c80-4209-a490-0e9f18b9bcd3
+:CREATED:  <2025-07-31 Thu 11:28>
+:AKA: OpenPGP
+:END:
+:EDGES:
+[2025-07-31 Thu 11:28] -- [[https://en.wikipedia.org/wiki/Pretty_Good_Privacy][wiki]]
+[2025-07-31 Thu 11:29] -- [[https://www.latacora.com/blog/2019/07/16/the-pgp-problem/][The PGP Problem | Latacora]]
+[2025-07-31 Thu 11:30] -- [[https://gnupg.org/][The GNU Privacy Guard]]
+[2025-07-31 Thu 11:39] -- [[https://sequoia-pgp.org/][Sequoia-PGP]]
+:END:
