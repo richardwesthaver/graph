@@ -13,6 +13,15 @@
 :END:
 - [[https://gcc.gnu.org/onlinedocs/gcc-8.1.0/gcc/Standards.html][GCC Supported Standards]]
 - [[https://wiki.osdev.org/GCC_Cross-Compiler][GCC Cross-Compiler - OSDev Wiki]]
+** AVR-GCC
+:PROPERTIES:
+:ID:       7f1c6b41-a71d-46ac-b48e-e45ec3f44db9
+:CREATED:  <2025-08-08 Fri 21:51>
+:END:
+:EDGES:
+[2025-08-08 Fri 21:51] -- [[https://gcc.gnu.org/wiki/avr-gcc][avr-gcc - GCC Wiki]]
+[2025-08-08 Fri 22:04] -> [[id:ec0316f3-db1a-4bcd-966c-2ac0bb3458f0][AVR]]
+:END:
 ** G++                                                                  :cpp:
 :PROPERTIES:
 :ID:       4b5e18bd-cb9b-4f83-a463-e4a95764104b

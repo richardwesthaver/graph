@@ -11,6 +11,7 @@
 [2025-03-08 Sat 20:54] <- [[id:86674fe2-4105-4246-9682-f6e3fb84f7de][SB-ASSEM]]
 :END:
 - [[https://www.realdigital.org/doc/be12d58c3c6e45932a27e8c034e821a4][Assembly Data Segments]]
+- [[https://dercuano.github.io/notes/computer-algebras-ii.html][Further notes on algebras for dark silicon ⁑ Dercuano]]
 ** FASM
 :PROPERTIES:
 :ID:       e4f61fa4-82c8-47c4-8eaf-0c6f6cd6c347
@@ -21,7 +22,6 @@
 [2025-03-09 Sun 20:59] -- [[https://flatassembler.net/docs.php?article=manual][man]]
 [2025-03-09 Sun 21:00] -- [[https://flatassembler.net/docs.php?article=ufasm][ufasm]]
 :END:
-
 ** NASM
 :PROPERTIES:
 :ID:       5f4daaa9-8536-4051-b2b3-b4669f7960ee
@@ -30,6 +30,55 @@
 :EDGES:
 [2025-01-17 Fri 18:23] -- [[https://www.nasm.us/][NASM]]
 :END:
+- hello world
+    #+begin_src asm
+      section.data
+           msg db 'Hello, World!', 0
+
+      section.text
+           global _start
+      _start:
+           mov rax, 1 ; syscall: write
+           mov rdi, 1 ; file descriptor: stdout
+           mov rsi, msg ; pointer to message
+           mov rdx, 13 ; message length
+           syscall; make the syscall
+           mov rax, 60 ; syscall: exit
+           xor rdi, rdi ; status: 0
+           syscall; make the syscall
+    #+end_src
+
+** GAS
+:PROPERTIES:
+:ID:       2a7304bc-b666-4ea6-a37d-64487875ff4e
+:CREATED:  <2025-08-08 Fri 22:08>
+:END:
+:EDGES:
+[2025-08-08 Fri 22:08] -- [[https://wiki.osdev.org/GAS][GAS - OSDev Wiki]]
+:END:
+- [[https://www.gnu.org/software/binutils/][Binutils - GNU Project - Free Software Foundation]]
+- [[https://terminalroot.com/x8664-assembly-tutorial-with-gnu-assembler-gas-for-beginners/][x86_64 Assembly Tutorial with GNU Assembler (GAS) for Beginners]]
+- hello world
+    #+begin_src asm
+    .section.data
+    hello:
+         .ascii "Hello, World!\0"
+
+    .section.text
+    .globl_start
+
+    _start:
+         mov $1, %rax # syscall: sys_write
+         mov $1, %rdi # file descriptor: stdout
+         mov $hello, %rsi # string address
+         mov $13, %rdx # string length
+         syscall # calls the kernel
+
+         mov $60, %rax # syscall: sys_exit
+         xor %rdi, %rdi # exit status: 0
+         syscall # calls the kernel
+    #+end_src
+
 ** x86                                                                  :x86:
 :PROPERTIES:
 :ID:       3eec30c3-ab67-42f1-b77f-191905d43c6c

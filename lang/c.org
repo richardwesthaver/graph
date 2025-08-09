@@ -89,6 +89,16 @@ Information about compiling /without/ libc.
   }
 #+end_src
 
+*** avr-libc
+:PROPERTIES:
+:ID:       75819bf7-326d-49e1-8a4b-b93e1336b7db
+:CREATED:  <2025-08-08 Fri 22:15>
+:END:
+:EDGES:
+[2025-08-08 Fri 22:15] -- [[https://github.com/avrdudes/avr-libc][avrdudes/avr-libc: The AVR-LibC package provides a subset of the standard C library for AVR 8-bit RISC microcontrollers.]]
+[2025-08-08 Fri 22:16] -- [[https://avrdudes.github.io/avr-libc/][AVR-LibC]]
+[2025-08-09 Sat 00:56] -> [[id:ec0316f3-db1a-4bcd-966c-2ac0bb3458f0][AVR]]
+:END:
 ** Articles
 :PROPERTIES:
 :ID:       ffb7ba79-a805-43b3-b304-0575005e19e1

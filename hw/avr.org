@@ -1,0 +1,36 @@
+#+title: AVR
+#+setupfile: ../../clean.theme
+* AVR
+:PROPERTIES:
+:ID:       ec0316f3-db1a-4bcd-966c-2ac0bb3458f0
+:CREATED:  <2025-08-08 Fri 21:28>
+:END:
+:EDGES:
+[2025-08-08 Fri 21:29] -- [[wikipedia:AVR microcontrollers][wiki]]
+[2025-08-08 Fri 21:45] -- [[https://wiki.archlinux.org/title/AVR][AVR - ArchWiki]]
+[2025-08-08 Fri 22:04] <- [[id:7f1c6b41-a71d-46ac-b48e-e45ec3f44db9][AVR-GCC]]
+[2025-08-08 Fri 22:04] <- [[id:8263ab5f-ced9-4bc6-b22c-2d1f319394ee][avrforth]]
+[2025-08-09 Sat 00:56] <- [[id:75819bf7-326d-49e1-8a4b-b93e1336b7db][avr-libc]]
+:END:
+| flash size | freq     | package            | sram            | eeprom         |
+|------------+----------+--------------------+-----------------+----------------|
+| tinyAVR    | (ATtiny) |                    |                 |                |
+| 0.5–32 KB  | 1.6–20   | 6–32-pin package   | 32–3072 bytes   | 64–512 bytes   |
+|------------+----------+--------------------+-----------------+----------------|
+| megaAVR    | (ATmega) |                    |                 |                |
+| 4–256 KB   | 1.6–20   | 28–100-pin package | 256–16384 bytes | 256–4096 bytes |
+
+- [[https://github.com/m3y54m/start-avr][m3y54m/start-avr: Getting started with AVR programming using AVR-GCC and Makefile]]
+- [[https://github.com/hexagon5un/AVR-Programming][hexagon5un/AVR-Programming: Code examples for the book "Make: AVR Programming"]]
+- [[https://github.com/avrdudes/avrdude][avrdudes/avrdude: AVRDUDE is a utility to program AVR microcontrollers]]
+AVR chips require a 'programmer' and some software. 
+- programmers
+  - [[https://www.fischl.de/usbasp/][USBasp - USB programmer for Atmel AVR controllers - fischl.de]]
+  - [[https://www.microchip.com/en-us/development-tool/ATAVRISP2][AVRISP MK2]]
+  - [[https://www.microchip.com/en-us/development-tool/ATATMEL-ICE][ATMEL-ICE]]
+  - [[https://www.microchip.com/en-us/development-tool/ATSTK500][STK500]]
+- to run avrdude without superuser, a udev rule like the following is needed (common group name is =uucp=)
+  #+begin_example
+    # Set group for a programmer matching with vendor and product IDs
+     SUBSYSTEM=="usb", ATTRS{idVendor}=="your Vendor ID", ATTRS{idProduct}=="your Product ID", GROUP="uucp", MODE="0666"
+  #+end_example

@@ -1,0 +1,10 @@
+#+title: Binary
+* GNU Binutils
+:PROPERTIES:
+:ID:       a5dbd081-a23f-4a78-b2dd-f32af6eba984
+:CREATED:  <2025-08-09 Sat 00:51>
+:END:
+:EDGES:
+[2025-08-09 Sat 00:51] -- [[https://sourceware.org/binutils/][GNU Binutils]]
+:END:
+Includes =ld=, =as=, =gold=.

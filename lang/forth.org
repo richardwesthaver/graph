@@ -1,0 +1,112 @@
+#+title: Forth
+#+setupfile: ../../clean.theme
+* Forth
+:PROPERTIES:
+:ID:       ffb8be57-d874-4540-9fe0-9efea6559185
+:CREATED:  <2025-01-18 Sat 20:44>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:33] -- [[https://www.forth.com/][forth.com]]
+[2025-03-09 Sun 20:54] -- [[https://raw.githubusercontent.com/nornagon/jonesforth/master/jonesforth.S][jonesforth.S]]
+[2025-03-09 Sun 20:55] -- [[https://github.com/c2d7fa/jonasforth][c2d7fa/jonasforth: Forth interpreter written in bare-metal assembly running on UEFI (unfinished)]]
+:END:
+- [2023-07-04 Tue]
+  Factor is a cool concatenative lang but unfortunately the C interface
+  (vm/master.h) no longer exists on the master branch.
+- [[https://www.pbm.com/~lindahl/real.programmers.html][Real Programmers Don't Use Pascal]]
+- [[https://piembsystech.com/assembly-and-machine-code-interfacing-in-forth-programming/][Assembly and Machine Code Interfacing in Forth Programming - PiEmbSysTech]]
+** gforth
+:PROPERTIES:
+:ID:       c8359e6e-401b-4c7a-915f-98dc2759c995
+:CREATED:  <2025-03-03 Mon 20:04>
+:END:
+:EDGES:
+[2025-03-03 Mon 20:04] -- [[https://www.gnu.org/software/gforth/][Gforth - GNU Project - Free Software Foundation.]]
+[2025-03-03 Mon 20:05] -- [[info:gforth][info]]
+:END:
+** avrforth
+:PROPERTIES:
+:ID:       8263ab5f-ced9-4bc6-b22c-2d1f319394ee
+:CREATED:  <2025-08-08 Fri 21:38>
+:END:
+:EDGES:
+[2025-08-08 Fri 21:38] -- [[http://krue.net/avrforth/][krüe :: avrforth]]
+[2025-08-08 Fri 22:04] -> [[id:ec0316f3-db1a-4bcd-966c-2ac0bb3458f0][AVR]]
+:END:
+- [[https://github.com/kristianlm/avr-emacs][kristianlm/avr-emacs: A proof of concept text editor from scratch on a breadboard using ATmega328 and avrforth]]
+#+begin_quote
+- overview
+avrforth is a 16-bit subroutine threaded forth kernel for atmel's avr
+series of microcontrollers. Current development is done for the
+at90can128 (my cansynth board, to be exact), but it will run on most
+any mega device with minimal adjustments.
+
+avrforth borrows some ideas from Terry Loveall's 4word. It is a
+colorless colorforth. The interpreter only interprets. Words must be
+compiled explicitly using the ] operator. Numeric input is handled by
+$, which parses the next word as a hexidecimal number.
+
+avrforth uses null-terminated strings internally against tradition. I
+may switch to counted strings if they prove easier to deal with.
+
+avrforth supports using the entire 128k instruction address space of
+the atmega128 and at90can128 for code.
+
+avrforth has an interactive interpreter. It interprets input from the
+uart and compiles directly to flash. avrforth does not require
+separate memory to store program tokens.
+
+avrforth has an integrated assembler. Assembly code words can be added
+without recompiling the kernel.
+
+avrforth is public domain.
+
+- requirements
+You need a host forth system to assemble avrforth. Development is done
+with gforth. You also need a utility to program the flash and a
+terminal program to communicate with the kernel through the avr's
+uart. I use avrdude and picocom for those tasks.
+#+end_quote
+- [[https://dercuano.github.io/notes/forth-assembling.html][Forth assembling ⁑ Dercuano]]
+** flashforth
+:PROPERTIES:
+:ID:       3f65cfc7-f3b0-4b50-b20a-d775936ad08f
+:CREATED:  <2025-08-08 Fri 21:39>
+:END:
+:EDGES:
+[2025-08-08 Fri 21:39] -- [[https://www.flashforth.com/][FlashForth]]
+:END:
+
+** colorforth
+:PROPERTIES:
+:ID:       2a285bbe-715d-49a5-8fcb-df9921c3352b
+:CREATED:  <2025-08-08 Fri 21:40>
+:END:
+:EDGES:
+[2025-08-08 Fri 21:40] -- [[https://colorforth.github.io/][Chuck Moore's colorForth, OKAD and S40 Forth Multicomputer chip]]
+:END:
+** Books
+:PROPERTIES:
+:ID:       35de6467-e9fc-49f4-b46b-0e05029f9f48
+:CREATED:  <2025-02-13 Thu 22:32>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:33] -- [[https://vfxforth.com/arena/ProgramForth.pdf][Programming Forth]]
+:END:
+* Factor
+:PROPERTIES:
+:CREATED:  <2025-01-18 Sat 20:44>
+:ID:       b0f61b51-fbd8-4b45-a8cd-0a2e08864fed
+:END:
+:EDGES:
+[2025-02-13 Thu 22:34] -- [[https://factorcode.org/][Factor programming language]]
+:END:
+
+* Joy
+:PROPERTIES:
+:CREATED:  <2025-01-18 Sat 20:44>
+:ID:       39af0f8f-aff7-40f3-a139-e1338a6bb966
+:END:
+:EDGES:
+[2025-02-06 Thu 18:55] -- [[https://hypercubed.github.io/joy/html/j02maf.html][Mathematical foundations of Joy]]
+:END:
