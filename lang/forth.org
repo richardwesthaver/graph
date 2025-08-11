@@ -9,6 +9,7 @@
 [2025-02-13 Thu 22:33] -- [[https://www.forth.com/][forth.com]]
 [2025-03-09 Sun 20:54] -- [[https://raw.githubusercontent.com/nornagon/jonesforth/master/jonesforth.S][jonesforth.S]]
 [2025-03-09 Sun 20:55] -- [[https://github.com/c2d7fa/jonasforth][c2d7fa/jonasforth: Forth interpreter written in bare-metal assembly running on UEFI (unfinished)]]
+[2025-08-10 Sun 18:52] -- [[https://forth-standard.org/][Forth]]
 :END:
 - [2023-07-04 Tue]
   Factor is a cool concatenative lang but unfortunately the C interface
