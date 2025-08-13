@@ -37,6 +37,36 @@ is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 :CREATED:  <2025-02-25 Tue 16:05>
 :END:
 - Pragmatic Parsing in Common Lisp - [[https://www.plover.com/misc/hbaker-archive/Prag-Parse.html][ACM Lisp Pointers 4, 2 (Apr/Jun 1991), 3-15.]]
+- [[https://www.cliki.net/case%20sensitivity][CLiki: Case sensitivity]]
+  #+begin_quote
+  The common misconception is that Common Lisp is case insensitive. This
+  is not true - symbols in Common Lisp are case sensitive.
+
+  By default, the Common Lisp reader is case-converting: all unescaped
+  characters in a symbol name get upper-cased. This gives the
+  practical effect of making it seem as though symbol case doesn't
+  matter. This is desirable behavior for interfacing with other
+  case-insensitive languages (such as Fortran), but a pain to
+  interface with case-sensitive ones (such as C).
+
+  Luckily the behavior of the reader can be customized via
+  readtable-case.
+
+  The one that might seem to be most useful for having case-sensitive
+  symbols at first glance is :preserve, however remember that all code
+  read in with the default setting (:upcase) is in upper-case, as are
+  all the standard Common Lisp symbols (this is defined by the
+  standard), so this means you will need to spell out all CL and
+  external symbols IN ALL UPPERCASE. To make this less annoying, the
+  :invert readtable-case is the most practical: all-lowercase symbol
+  names become uppercase, all-uppercase become lowercase, and
+  mixed-case stays mixed-case (the important part for case
+  sensitivity). The Lisp printer outputs symbol names correctly this
+  way by default. The only problem now becomes inconsistent spelling
+  of a symbol in all lowercase or all uppercase in old code that
+  expects case conversion. But otherwise you can get case sensitivity
+  for your software by setting readtable-case to :invert today.
+  #+end_quote
 *** S-Expressions
 :PROPERTIES:
 :ID:       4e502dc1-c22d-444e-b4c0-864876f0cdf5

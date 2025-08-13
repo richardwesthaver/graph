@@ -68,6 +68,24 @@ systems interconnection.'
 - [[https://github.com/fare/moll][fare/moll: My Own Linear Lisp]]
 - [[https://lispforum.com/viewtopic.php?t=622][Lisp as assembly language?? - LispForum]]
 - [[https://github.com/ghosthamlet/awesome-lisp-machine][ghosthamlet/awesome-lisp-machine: A curated list of awesome Lisp Machine and Lisp Operating System]]
+- https://users.cs.utah.edu/~mflatt/past-courses/cs6510/public_html/lispm.pdf
+  - SECD Abstract Machine
+    - S stack register
+    - E env register
+    - C control register
+    - D dump register
+  - closely resembles the MIT CADR machine (1984)
+- http://www.bitsavers.org/pdf/symbolics/Sunstone_Architecture_198711.pdf
+  - Sunstone Architecture
+**** LispOS
+:PROPERTIES:
+:ID:       b6486b7b-506a-42a3-aaed-7cd476884340
+:CREATED:  <2025-08-12 Tue 13:04>
+:END:
+:EDGES:
+[2025-08-12 Tue 13:04] -- [[http://metamodular.com/lispos.pdf][CLOSOS]]
+:END:
+
 ** Maximalist
 :PROPERTIES:
 :ID:       e976f7ec-0ee0-46cc-8b5a-29afbd713fed

@@ -472,7 +472,7 @@ as IR1 types.
 #+end_src
 
 #+RESULTS:
-: bobdolewatpow
+: bobdole
 *** Heap Object Layout
 :PROPERTIES:
 :ID:       7ffb42f4-37f7-43ea-a252-21d00b0d6ab7
@@ -1180,6 +1180,42 @@ suprising ways with the otherwise inaccessible parts criterion:
   ;;;             references (even under #'without FUNCALL)."
   (deftype inlinep () '(member inline maybe-inline notinline nil))
 #+end_src
+*** LVARs
+:PROPERTIES:
+:ID:       1f626e1c-10df-4297-a2e7-3bde34c4ee0f
+:CREATED:  <2025-08-12 Tue 18:07>
+:END:
+- [[https://pvk.ca/Blog/2013/11/22/the-weaknesses-of-sbcls-type-propagation/][The weaknesses of SBCL's type propagation - Paul Khuong: some Lisp]]
+Linear Vars
+#+begin_quote
+The compiler in SBCL, Python, doesn’t work on an IR in SSA form, nor
+does it convert internally to CPS à la Rabbit/Orbit. However, a clever
+– I don’t recall seeing it described anywhere else – design decision
+achieves similar effects. Operations receive their arguments as linear
+vars (LVARs) and write their results to an LVAR. Each LVAR has exactly
+one destination (one reader node), and, on any execution path, can
+only be used (written to) by one node. LVARs may nevertheless have
+multiple uses: these correspond to the value of conditionals and of
+conditional non-local exits. Assignment and access to lexical
+variables are represented as SET and REF nodes that receive and
+produce values through LVARs. This means that nearly everything can
+work in terms of LVARs when manipulating code and reasoning about
+dataflow. The conversion of read-once lexical variables to LVARs
+further simplifies a lot of mostly functional code.
+
+Python takes this split to the extreme: only the constraint (type)
+propagation pass really handles full-blown lexical
+variables. Everything else depends on the flow-sensitive type
+information summarised in CFG nodes and joined in LVARs. Want to check
+whether a given argument is always positive? Simply test for subtyping
+on the LVAR’s derived type to implicitly leverage flow-sensitive type
+information. Want to insert some computation (e.g. a type assertion or
+an explicit modulo for overflowing arithmetic) between a value and its
+destination? Insert a new node in the CFG and substitute around
+nothing but opaque LVARs. These operations are so natural in Python
+that I only recently realised the design decision that makes them so
+easy.
+#+end_quote
 *** SB-KERNEL
 :PROPERTIES:
 :ID:       31cebf6f-e67c-4289-a75e-ad012b4bbe5d
