@@ -21,8 +21,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 911 |
-| edges | 702 |
+| nodes | 913 |
+| edges | 703 |
 | files | 130 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Sun Aug 10 21:37:52 2025 -0400                      |
+| updated     | Tue Aug 12 20:12:08 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 12299 :λ 11742 :# 22 :_ 535                         |
+| lines       | 12384 :λ 11822 :# 22 :_ 540                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -51,13 +51,14 @@ an interface for modifying the graph.
 : 2025-05   1855 ****************
 : 2025-06   3626 *******************************
 : 2025-07    559 ****
-: 2025-08    327 **
+: 2025-08    424 ***
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
+| [[file:readme.org][readme]]               | 2025-08-12 20:22:07 |
 | [[file:app/cas.org][app/cas]]              | 2025-07-22 21:09:44 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-06-09 17:10:55 |
@@ -73,7 +74,7 @@ an interface for modifying the graph.
 | [[file:comp/gcc.org][comp/gcc]]             | 2025-08-09 00:58:05 |
 | [[file:comp/ghc.org][comp/ghc]]             | 2025-02-21 22:34:46 |
 | [[file:comp/llvm.org][comp/llvm]]            | 2025-03-03 16:41:14 |
-| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-06-27 18:58:46 |
+| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-08-12 18:14:42 |
 | [[file:hw/amd.org][hw/amd]]               | 2025-06-09 17:13:00 |
 | [[file:hw/apple.org][hw/apple]]             | 2025-03-03 20:34:42 |
 | [[file:hw/avr.org][hw/avr]]               | 2025-08-09 01:07:47 |
@@ -93,7 +94,7 @@ an interface for modifying the graph.
 | [[file:hw/samsung.org][hw/samsung]]           | 2025-02-21 22:34:37 |
 | [[file:hw/shop.org][hw/shop]]              | 2025-06-04 15:42:47 |
 | [[file:hw/storage.org][hw/storage]]           | 2025-06-03 22:06:35 |
-| [[file:hw/studio.org][hw/studio]]            | 2025-07-15 20:51:01 |
+| [[file:hw/studio.org][hw/studio]]            | 2025-08-12 12:37:44 |
 | [[file:hw/travel.org][hw/travel]]            | 2025-03-12 21:08:20 |
 | [[file:lang/apl.org][lang/apl]]             | 2025-07-31 22:59:47 |
 | [[file:lang/asm.org][lang/asm]]             | 2025-08-08 22:29:54 |
@@ -107,7 +108,7 @@ an interface for modifying the graph.
 | [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
 | [[file:lang/javascript.org][lang/javascript]]      | 2025-06-04 14:15:39 |
 | [[file:lang/julia.org][lang/julia]]           | 2025-06-09 15:05:43 |
-| [[file:lang/lisp.org][lang/lisp]]            | 2025-07-22 22:35:38 |
+| [[file:lang/lisp.org][lang/lisp]]            | 2025-08-12 11:42:51 |
 | [[file:lang/python.org][lang/python]]          | 2025-06-23 18:51:58 |
 | [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
 | [[file:lang/rust.org][lang/rust]]            | 2025-03-16 19:07:43 |
@@ -167,7 +168,6 @@ an interface for modifying the graph.
 | [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-08-09 15:14:33 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/bin.org][sys/bin]]              | 2025-08-09 00:52:09 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
@@ -186,7 +186,7 @@ an interface for modifying the graph.
 | [[file:theory/plt.org][theory/plt]]           | 2025-03-06 16:35:28 |
 | [[file:theory/process.org][theory/process]]       | 2025-05-10 16:41:40 |
 | [[file:theory/style.org][theory/style]]         | 2025-02-27 17:04:03 |
-| [[file:theory/system.org][theory/system]]        | 2025-04-16 20:26:59 |
+| [[file:theory/system.org][theory/system]]        | 2025-08-12 13:04:45 |
 | [[file:web/data.org][web/data]]             | 2025-06-02 22:21:32 |
 | [[file:web/sites.org][web/sites]]            | 2025-06-02 22:19:17 |
 

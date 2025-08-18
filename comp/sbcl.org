@@ -702,6 +702,161 @@ two bits).
 :EDGES:
 [2025-02-09 Sun 14:22] -- [[https://www.sbcl.org/sbcl-internals/Binding-and-unbinding.html][Binding and unbinding - SBCL Internals]]
 :END:
+*** Data Structures
+:PROPERTIES:
+:ID:       7ac78145-d44b-425f-b155-65057c2d0735
+:CREATED:  <2025-08-17 Sun 17:40>
+:END:
+**** Trees
+:PROPERTIES:
+:ID:       ce61d665-fb20-44fb-990b-2ebdd11a038a
+:CREATED:  <2025-08-17 Sun 17:41>
+:END:
+***** Brother Tree
+:PROPERTIES:
+:ID:       39a7e730-9190-4ad1-a309-aef4c9af2d4a
+:CREATED:  <2025-08-17 Sun 17:41>
+:END:
+:EDGES:
+[2025-08-17 Sun 17:41] -- [[https://www.cs.ox.ac.uk/ralf.hinze/publications/Brother12.pdf][1-2 Brother Trees]]
+:END:
+in general these are better than redblack trees
+
+An element of type Tree T is called a brother tree iff:
+- a :: all nullary nodes have the same depth (height condition)
+- b :: each unary node has a binary brother (brother condition)
+
+#+begin_quote
+This implies that the root of a brother tree is not unary and that
+a unary node has not a unary child. Put positively, a unary node
+only occurs as the child of a binary node. 
+
+-- Ralf Hinze, Purely Functional 1-2 Brother Trees
+#+end_quote
+
+***** AVL Tree
+:PROPERTIES:
+:ID:       21d645aa-940e-454d-8f86-4df8d9084a8c
+:CREATED:  <2025-08-17 Sun 17:41>
+:END:
+
+***** Red-Black Tree
+:PROPERTIES:
+:ID:       32e166aa-add7-490c-83da-246d2cccd011
+:CREATED:  <2025-08-17 Sun 17:42>
+:END:
+:EDGES:
+[2025-08-17 Sun 17:42] -- [[https://www.seas.upenn.edu/~cis552/13fa/lectures/RedBlack.html][UPenn Red-Black Trees Lecture]]
+:END:
+
+**** SB-LOCKLESS
+:PROPERTIES:
+:ID:       7ce03245-5fe3-4e8a-90b5-833fd4c53803
+:CREATED:  <2025-08-17 Sun 18:21>
+:END:
+
+***** Lockfree List
+:PROPERTIES:
+:ID:       2a85508c-7f32-4dca-98e8-e89b2ffde3ff
+:CREATED:  <2025-08-17 Sun 18:21>
+:END:
+- target-lflist.lisp
+  #+begin_quote
+  Lockfree singly-linked lists
+  using the algorithm of https://timharris.uk/papers/2001-disc.pdf.
+  The algorithm as described requires being able to change the
+  low-order bit of a pointer from 0 to 1 to mark pending deletions.
+  Java implementations support this through a wrapper object
+  known as AtomicMarkableReference.
+  SBCL directly supports the mark bit by using the lowtag.
+  #+end_quote
+  #+begin_quote
+The changes to GC to support this code were as follows:
+
+,* If an instance is flagged as being a LFlist node, then the first data slot
+  is treated as an instance pointer even if it missing its tag bits.
+
+,* Since you can't pin an object that you don't a-priori have a tagged pointer
+  to, pinning a lockfree list node may implicitly pin not only that node but
+  also the successor node, since there would otherwise be no way to reconstruct
+  (in Lisp) a tagged pointer to the successor of a node pending deletion.
+  Pinning a node always binds *PINNED-OBJECTS* and never relies on conservative
+  stack scan even for the architectures that have conservative stack.
+  arm64 and x86-64 uses PSEUDO-ATOMIC, which produces shorter code than
+  WITH-PINNED-OBJECTS.
+
+,* Copying a lockfree list node tries to copy the successor nodes into adjacent
+  memory just like copying a chain of cons cells. This is inessential but nice.
+
+,* verify_range() knows how to verify the 'next' pointer even when it looks like
+  a fixnum. Without this it would have been more difficult to test the above.
+
+The remaining issue is relatively unimportant: neither traceroot nor
+DO-REFERENCED-OBJECT can follow untagged pointers.
+This is potentially more of an annoyance than it is a bug.
+
+  #+end_quote
+***** Lockfree Hash Tables
+:PROPERTIES:
+:ID:       618f6721-594c-42a5-8d7d-61445861e4d8
+:CREATED:  <2025-08-17 Sun 18:21>
+:END:
+- target-lfhash.lisp
+  http://trac.clozure.com/ccl/wiki/Internals/LockFreeHashTables
+  https://github.com/boundary/high-scale-lib/blob/master/src/main/java/org/cliffc/high_scale_lib/NonBlockingHashMap.java
+  #+begin_quote
+The basic hashable is a lightweight one using prime number sizing strategy,
+and a secondary hash for re-probing that is not necessarily co-prime with
+the table size (as it would be, ideally), and no support for deletion.
+
+The lock-free logic differs from each of the preceding reference algorithms.
+The Java algorithm is truly lock-free: death of any thread will never impede
+progress in other threads. The CCL algorithm is only quasi-lock-free, as is
+ours. Were a rehashing thread to terminate abnormally while holding the
+rehash mutex, all other threads will likely starve at some point.
+
+Unlike the CCL algorithm, we allow reading/writing concurrently with rehash.
+Most operations will never notice that the rehasher has acquired a mutex,
+because the only case where writers compete for the mutex is in trying
+to claim a new cell in a storage vector that is being transported, and where
+the rehasher has already visited the desired cell. Since the rehasher will
+never re-visit a cell, it disallows updates that it could not perceive.
+The Java algorithm has additional complexity imposed upon it by the
+feature that rehashing work is parceling out fairly to threads,
+whereas we avoid that by having one rehasher transport all cells.
+  #+end_quote
+****** Split Ordered List
+:PROPERTIES:
+:ID:       9c11fbb6-0e98-4e46-9248-b706ae1624a1
+:CREATED:  <2025-08-17 Sun 18:29>
+:END:
+- solist.lisp
+  #+begin_quote
+Lockfree hash table and hash set based on Shalev & Shavit paper
+https://www.cs.tau.ac.il/~afek/SplitOrderListHashSS03.pdf
+
+This table never uses a mutex for any operation, including resizing.
+The paper does not describe in detail how to deal with hash collisions,
+so this implementation imposes a requirement that either there be no
+hash collisions, or there be a partial order on keys such that any keys
+whose hashes collide can be ordered. Usually there would be a total order.
+
+Also we change the way a hash implies a bucket. Instead of reversing
+the bits of the hash, we use bits from left-to-right, so that as the
+bucket vector doubles, one more bit of lesser significance comes into play.
+
+Some possible uses:
+,* classoid -> layout hash-tables in classoid-subclasses
+  will maybe fix some deadlock issues by removing locks?
+  total ordering by an opaque globally unique ID.
+  (These are currently not created as :synchronized
+  because access is guarded by the world lock)
+  If all of the table are replaced by split-ordered lists,
+  the net memory used decreases, although at larger sizes
+  the split-ordered list consumes more memory.
+
+ ,* exact remembered sets for GC in immobile space
+  #+end_quote
 *** Symbols of Interest
 :PROPERTIES:
 :ID:       a8ee911d-6d19-452b-b03a-249a446c1b20
@@ -975,7 +1130,12 @@ Virtual Operations
 [2025-02-28 Fri 19:10] -- [[https://www.sbcl.org/sbcl-internals/Callbacks.html][Callbacks - SBCL Internals]]
 [2025-02-28 Fri 19:10] -- [[https://www.sbcl.org/sbcl-internals/Linkage_002dtable.html#Linkage_002dtable][Linkage-table - SBCL Internals]]
 :END:
-
+- [2025-08-17 Sun] - passing structs by value is currently unsupported
+  - a few folks have taken a stab at implementation - there is a test
+    for it in master now
+  - bounty offered on it by fosskers
+  - for now we make wrappers in C which wrap raw structs in pointers
+  - important for some libraries which rely on struct passing, most notably raylib
 *** SB-ASSEM                                                            :asm:
 :PROPERTIES:
 :ID:       86674fe2-4105-4246-9682-f6e3fb84f7de

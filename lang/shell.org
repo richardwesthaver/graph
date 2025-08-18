@@ -1,11 +1,33 @@
 #+title: Shell langs
 #+setupfile: ../../clean.theme
+* Lisp shells
+:PROPERTIES:
+:ID:       eedc1bf5-44a9-4580-8e79-3b83718e6a3b
+:CREATED:  <2025-08-17 Sun 21:20>
+:END:
+:EDGES:
+[2025-08-17 Sun 21:24] -- [[https://www.cliki.net/Lisp%20as%20a%20shell][CLiki: Lisp as a shell]]
+:END:
+- scsh
+- [[https://shcl.io/][Hey! Its SHCL!]]
+- [[https://clisp.sourceforge.io/clash.html][CLASH: CLisp As SHell]]
 * Bash
 :PROPERTIES:
 :ID:       603a9a84-70ee-437b-9419-06e99fe431f3
 :CREATED:  <2025-01-18 Sat 20:46>
 :END:
-
+:EDGES:
+[2025-08-17 Sun 21:20] -> [[id:0881a735-21ea-4509-aa97-b2d239cbbaf0][POSIX]]
+:END:
+* Zsh
+:PROPERTIES:
+:ID:       761baf51-4774-4954-be97-7b3aa53cb4d1
+:CREATED:  <2025-08-17 Sun 21:28>
+:END:
+:EDGES:
+[2025-08-17 Sun 21:29] -- [[https://www.zsh.org/][Zsh]]
+:END:
+- often used with [[https://ohmyz.sh/][Oh My Zsh - a delightful & open source framework for Zsh]]
 * Nu
 :PROPERTIES:
 :ID:       b4048114-ec39-4e53-816f-2f1319d404ee

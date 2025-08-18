@@ -290,6 +290,40 @@ list, max, min, nconc, or, progn, and standard.
 :END:
 :EDGES:
 [2025-06-05 Thu 22:01] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/09_.htm][CLHS: Chapter 9]]
+[2025-08-17 Sun 18:58] -- [[https://oleksii.shmalko.com/20210928142831/][Common Lisp: condition system]]
+[2025-08-17 Sun 18:59] -- [[https://mmontone.github.io/dpans2texi/Conditions.html][Conditions (ANSI Common Lisp)]]
+[2025-08-17 Sun 18:59] -- [[https://lisper.in/restarts][Common Lisp: A Tutorial on Conditions and Restarts]]
+[2025-08-17 Sun 19:00] -- [[https://z0ltan.wordpress.com/2016/08/06/conditions-and-restarts-in-common-lisp/][Conditions and Restarts in Common Lisp – Talking with a Lisp]]
+[2025-08-17 Sun 19:00] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node312.html][29. Conditions]]
+[2025-08-17 Sun 19:01] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/09_.htm][CLHS: Chapter 9]]
+:END:
+- [2025-08-17 Sun] - the CL condition still baffles me - it is deeply
+  expressive but I find it difficult to use. This might just be
+  because there's nothing nearly as capable in other langs I've used.
+- =serious-condition= implies the need for user input, signaled with
+  =error= instead of =signal= or =warn=.
+- CLHS style recommendations [[https://www.lispworks.com/documentation/HyperSpec/Body/09_aca.htm][CLHS: Section 9.1.3.1]]
+  - uppercase first letter, use complete sentences and correct punctuation.
+  - don't prefix the message with things like 'Error: ' or even a
+    newline. That's the job of the /condition reporter/
+  - it is permissible to embed newlines in messages (just not before or after)
+  - Avoid use of the #\Tab character
+  - Don't mention the containing function. That's the job of the /debugger/
+** Printer
+:PROPERTIES:
+:ID:       0cdc5eb0-a12a-4276-8382-0b81f661a2a8
+:CREATED:  <2025-08-17 Sun 20:12>
+:END:
+:EDGES:
+[2025-08-17 Sun 20:12] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/22_.htm][CLHS: Chapter 22]]
+:END:
+*** Pretty Printer
+:PROPERTIES:
+:ID:       681706ba-d885-46bf-93ba-c8e051c79aeb
+:CREATED:  <2025-08-17 Sun 20:13>
+:END:
+:EDGES:
+[2025-08-17 Sun 20:13] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/22_b.htm][CLHS: Section 22.2]]
 :END:
 
 ** Format Directives
@@ -510,7 +544,7 @@ Shinmera runs an indie-game studio based on CL and has contributed
 well over 10% of the Quicklisp ecosystem. Impressive effort and worthy
 of a dedicated info node here.
 
-**** Radiance
+**** Radiance                                                           :web:
 :PROPERTIES:
 :ID:       1beb282b-8c4d-4561-a293-07439d0367ae
 :CREATED:  <2025-03-02 Sun 20:11>
@@ -519,7 +553,7 @@ of a dedicated info node here.
 [2025-03-02 Sun 20:11] -- [[https://github.com/Shirakumo/radiance][Shirakumo/radiance: A Common Lisp web application environment]]
 :END:
 
-**** Alloy
+**** Alloy                                                              :gui:
 :PROPERTIES:
 :ID:       8af234c8-1455-4dc8-a2df-e6d5b5777606
 :CREATED:  <2025-03-02 Sun 20:12>
@@ -556,7 +590,7 @@ Tokyo-based Lisp hacker and web developer with some excellent CL packages.
 [2025-03-14 Fri 19:05] -- [[https://github.com/fukamachi/quri][GitHub - fukamachi/quri: Yet another URI library for Common Lisp]]
 :END:
 
-**** clack
+**** clack                                                              :web:
 :PROPERTIES:
 :ID:       c9515816-fc3a-4976-a5ed-138cbec83aa9
 :CREATED:  <2025-03-14 Fri 19:04>
@@ -576,7 +610,7 @@ Tokyo-based Lisp hacker and web developer with some excellent CL packages.
   middlewares. On the other hand, Clack is an abstraction layer for
   HTTP and HTTP servers and provides unified API.
   #+end_quote
-**** woo
+**** woo                                                                :web:
 :PROPERTIES:
 :ID:       98b691b5-a617-438e-80ec-fb31588bcc3e
 :CREATED:  <2025-03-14 Fri 19:04>
@@ -585,7 +619,7 @@ Tokyo-based Lisp hacker and web developer with some excellent CL packages.
 [2025-03-14 Fri 19:05] -- [[https://github.com/fukamachi/woo][GitHub - fukamachi/woo: A fast non-blocking HTTP server on top of libev]]
 :END:
 
-**** sxql
+**** sxql                                                               :sql:
 :PROPERTIES:
 :ID:       ac5922a8-06c6-4608-8305-ec42ceea4ee9
 :CREATED:  <2025-03-14 Fri 19:04>
@@ -607,7 +641,7 @@ Tokyo-based Lisp hacker and web developer with some excellent CL packages.
 Coalton is an efficient, statically typed functional programming
 language that supercharges Common Lisp.
 #+end_quote
-*** Gambol
+*** Gambol                                                           :prolog:
 :PROPERTIES:
 :ID:       a911344d-aed1-4603-a46f-e8edf53756f5
 :CREATED:  <2025-03-04 Tue 18:09>
@@ -617,6 +651,8 @@ language that supercharges Common Lisp.
 [2025-03-04 Tue 18:11] -> [[id:3ac23a84-ba2e-41a1-9ea4-268e01891930][Prolog]]
 :END:
 See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104.htm][A Common Prolog]]
+ - in any case we basically always want to drop into a Read-Query-Print loop
+ - in Common Prolog this function is called =RQP=
 *** lparallel
 :PROPERTIES:
 :ID:       c560dc07-8c9c-42bc-9ce1-634630d26981
@@ -626,7 +662,14 @@ See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104
 [2025-03-06 Thu 14:02] -- [[https://lparallel.org/][Lisp in Parallel : lparallel | (ql:quickload :lparallel)]]
 [2025-03-06 Thu 14:03] >> [[id:79ecc4f2-f223-4045-a31a-565192efaf49][Concurrency]]
 :END:
-*** parenscript
+- provides thread-pools in the form of kernels
+- [2025-08-17 Sun] our implementation in the core is very similar but
+  we use the 'thread-pool' terminology. We also provide a general
+  purpose KERNEL slot for many types of objects including thread-pools
+  and workers. For workers the kernel is called to start the worker
+  loop and in thread-pools it is called with a single keyword argument
+  to change the state of the thread-pool.
+*** parenscript                                                          :js:
 :PROPERTIES:
 :ID:       c42732ce-9ef1-408b-a9dd-2424d05de398
 :CREATED:  <2025-06-04 Wed 14:07>
@@ -643,7 +686,8 @@ See also [[https://www.lispworks.com/documentation/lw70/KW-U/html/kwprolog-u-104
   ClojureScript which produces a lot of dependent code because of the
   use of Google Closure library for everything.
   #+end_quote
-*** jscl
+- [2025-08-17 Sun] 
+*** jscl                                                                 :js:
 :PROPERTIES:
 :ID:       3addee17-b990-4a6d-9767-071969ed9d0e
 :CREATED:  <2025-03-02 Sun 20:51>
@@ -714,6 +758,7 @@ instrumental in achieving:
 :END:
 :EDGES:
 [2025-03-01 Sat 15:51] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/m_defpkg.htm][CLHS: Macro DEFPACKAGE]]
+[2025-08-17 Sun 21:17] -> [[id:d41019fd-ca88-4608-af00-9e7a84dcd49f][Package Managers]]
 :END:
 - [[https://www.lispworks.com/documentation/HyperSpec/Body/f_shadow.htm][CLHS: Function SHADOW]]
 
@@ -804,6 +849,8 @@ practice.
 :EDGES:
 [2025-03-07 Fri 23:32] -- [[https://www.paulgraham.com/thist.html][History of T]]
 :END:
+- [2025-08-17 Sun] interesting to note the dualities in 'truthiness'
+  across different runtimes. 'YES' 'NO', 'TRUE' 'FALSE', 1 0, 'OK' 'ERR'
 *** CAR and CDR
 :PROPERTIES:
 :ID:       377a92dd-8e6e-4183-bd8a-70c47902d4d8
@@ -870,6 +917,28 @@ Let Over Lambda by Doug Hoyte
 :ID:       d41019fd-ca88-4608-af00-9e7a84dcd49f
 :CREATED:  <2025-02-26 Wed 20:53>
 :END:
+:EDGES:
+[2025-08-17 Sun 21:17] <- [[id:92dd3f0e-4789-4016-a623-48af3c45cd05][Packages]]
+:END:
+- Quicklisp is the defacto standard
+- ASDF compatibility is assumed
+- Package and System namespace separation is a problem
+*** Qlot
+:PROPERTIES:
+:ID:       e310d8ec-2a13-4a8e-aa15-db29738656b9
+:CREATED:  <2025-08-17 Sun 21:05>
+:END:
+:EDGES:
+[2025-08-17 Sun 21:06] -- [[https://github.com/fukamachi/qlot][GitHub - fukamachi/qlot: A project-local library installer for Common Lisp]]
+:END:
+*** Vend
+:PROPERTIES:
+:ID:       6027aa9f-e3f6-4cf8-8c20-caef166a5126
+:CREATED:  <2025-08-17 Sun 21:07>
+:END:
+:EDGES:
+[2025-08-17 Sun 21:07] -- [[https://github.com/fosskers/vend][GitHub - fosskers/vend: Manage your Common Lisp project dependencies.]]
+:END:
 *** Quicklisp
 :PROPERTIES:
 :ID:       0b568dbe-fc89-4ce6-be86-fd18d1d2d5c0
@@ -907,7 +976,6 @@ An alternative distribution for Quicklisp - tracks git branches.
 [2025-03-03 Mon 14:20] -- [[https://www.scheme.org/][The Scheme Programming Language]]
 [2025-05-01 Thu 20:59] -- [[https://srfi.schemers.org/][Scheme Requests for Implementation]]
 :END:
-
 #+cite_export: csl
 #+print_bibliography:
 ** Racket
@@ -951,6 +1019,16 @@ An alternative distribution for Quicklisp - tracks git branches.
 [2025-03-03 Mon 20:03] -- [[https://www.gnu.org/software/guile/][GNU's programming and extension language — GNU Guile]]
 :END:
 - [[https://www.gnu.org/software/guile/manual/html_node/Compiler-Tower.html][Compiler Tower (Guile Reference Manual)]]
+** scsh
+:PROPERTIES:
+:ID:       c37d4dc5-0b09-4908-ab0a-e36f51f7d624
+:CREATED:  <2025-08-17 Sun 21:22>
+:END:
+:EDGES:
+[2025-08-17 Sun 21:22] -- [[https://github.com/scheme/scsh][scheme/scsh]]
+:END:
+A Unix shell embedded in scheme
+- [[https://scsh.net/][scsh.net]]
 * Lisp Machine Lisp
 :PROPERTIES:
 :ID:       e21c02a5-5039-42c2-8416-aa5d45e70cb6

@@ -133,6 +133,7 @@ Single UNIX Specification
 [2025-03-04 Tue 15:31] -- [[https://en.wikipedia.org/wiki/POSIX][POSIX - Wikipedia]]
 [2025-03-04 Tue 15:33] -- [[https://posix.opengroup.org/prodstandards.html][POSIX Product Standards]]
 [2025-03-04 Tue 15:56] -- [[https://posix.opengroup.org/posixfaq.html][POSIX Frequently Asked Questions]]
+[2025-08-17 Sun 21:20] <- [[id:603a9a84-70ee-437b-9419-06e99fe431f3][Bash]]
 :END:
 The Portable Operating System Interface
 *** Tests

@@ -33,6 +33,7 @@
 :EDGES:
 [2025-08-08 Fri 21:38] -- [[http://krue.net/avrforth/][krüe :: avrforth]]
 [2025-08-08 Fri 22:04] -> [[id:ec0316f3-db1a-4bcd-966c-2ac0bb3458f0][AVR]]
+[2025-08-17 Sun 21:19] -> [[id:75819bf7-326d-49e1-8a4b-b93e1336b7db][avr-libc]]
 :END:
 - [[https://github.com/kristianlm/avr-emacs][kristianlm/avr-emacs: A proof of concept text editor from scratch on a breadboard using ATmega328 and avrforth]]
 #+begin_quote
@@ -76,6 +77,7 @@ uart. I use avrdude and picocom for those tasks.
 :END:
 :EDGES:
 [2025-08-08 Fri 21:39] -- [[https://www.flashforth.com/][FlashForth]]
+[2025-08-17 Sun 21:19] -> [[id:75819bf7-326d-49e1-8a4b-b93e1336b7db][avr-libc]]
 :END:
 
 ** colorforth

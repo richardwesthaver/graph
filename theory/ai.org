@@ -27,3 +27,9 @@ Generative AI
 [2025-03-06 Thu 10:48] -- [[https://en.wikipedia.org/wiki/Kernel_method][Kernel method - Wikipedia]]
 [2025-03-06 Thu 10:57] <- [[id:54831ddf-56d9-4307-a7e3-3790b13c6c9e][Kernelization]]
 :END:
+** Articles
+:PROPERTIES:
+:ID:       69642814-c551-45d7-997e-ce068ccace02
+:CREATED:  <2025-08-17 Sun 21:30>
+:END:
+- Ada: [[https://squircle.space/ai-and-the-arch/][AI and the Arch]]
