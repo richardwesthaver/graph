@@ -101,6 +101,50 @@
 org-protocol-protocol-alist
 #+end_src
 
+** Faces
+:PROPERTIES:
+:ID:       ddc59062-bd64-431c-80bb-1e423cf40212
+:CREATED:  <2025-08-19 Tue 17:59>
+:END:
+:EDGES:
+[2025-08-19 Tue 17:59] -- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Faces.html][Faces (GNU Emacs Manual)]]
+:END:
+#+begin_quote
+Emacs can display text in several different styles, called faces. Each
+face can specify various face attributes, such as the font, height,
+weight, slant, foreground and background color, and underlining or
+overlining. Most major modes assign faces to the text automatically,
+via Font Lock mode.
+#+end_quote
+
+#+begin_src emacs-lisp
+  (describe-function 'list-faces-display)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+list-faces-display is an interactive native-comp-function in
+‘faces.el’.
+
+It is bound to C-<down-mouse-2> <df>.
+It can also be invoked from the menu: Edit → Text Properties.
+
+(list-faces-display &optional REGEXP)
+
+Inferred type: (function (&optional t) boolean)
+
+List all faces, using the same sample text in each.
+The sample text is a string that comes from the variable
+‘list-faces-sample-text’.
+
+If REGEXP is non-nil, list only those faces with names matching
+this regular expression.  When called interactively with a prefix
+argument, prompt for a regular expression using ‘read-regexp’.
+
+  Probably introduced at or before Emacs version 19.17.
+
+#+end_example
+
 ** Eww                                                              :browser:
 :PROPERTIES:
 :ID:       21adcc1c-67ee-4f50-9049-12794824b2c7
