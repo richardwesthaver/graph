@@ -127,6 +127,18 @@ list, max, min, nconc, or, progn, and standard.
 #+begin_src lisp :package cl-user
   (define-method-combination xor :identity-with-one-argument t)
 #+end_src
+*** MOP
+:PROPERTIES:
+:ID:       f9d8eead-51ab-4589-a5c2-2569ea1b7abd
+:CREATED:  <2025-08-20 Wed 21:46>
+:AKA: Meta-Object Protocol
+:END:
+- [[https://allegrograph.com/fixed-indices-speed-up-slot-access-in-allegro-cl/][fixed-indices allegro]]
+  - What sort of type checking is performed on slot-access, when that
+    slot has type information? Does this vary at different compile levels?
+  - What is the performance impact of injecting additional
+    slot-accessor type information? For example, declare as
+    function-type with a typed result.
 ** Types
 :PROPERTIES:
 :ID:       3f613b5a-6aae-4852-a4d8-c322c271e6eb
@@ -309,6 +321,31 @@ list, max, min, nconc, or, progn, and standard.
   - it is permissible to embed newlines in messages (just not before or after)
   - Avoid use of the #\Tab character
   - Don't mention the containing function. That's the job of the /debugger/
+** Reader
+:PROPERTIES:
+:ID:       d185b690-d2f8-46b9-a32d-2a95f0ee6d82
+:CREATED:  <2025-08-22 Fri 16:53>
+:END:
+- quick tip for reader macros - don't forget importance of the =.=
+  syntactic sugar
+  #+begin_src lisp :results replace
+    '(foo . #.(list 1 2 3))
+  #+end_src
+
+  #+RESULTS:
+  | FOO | 1 | 2 | 3 |
+
+  #+begin_src lisp :results replace
+    (let ((a (list 1 2 3)))
+      (equalp
+       `(0 . ,a)
+       ;; OR
+       `(0 ,@a)))
+  #+end_src
+
+  #+RESULTS:
+  : T
+
 ** Printer
 :PROPERTIES:
 :ID:       0cdc5eb0-a12a-4276-8382-0b81f661a2a8
@@ -325,7 +362,41 @@ list, max, min, nconc, or, progn, and standard.
 :EDGES:
 [2025-08-17 Sun 20:13] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/22_b.htm][CLHS: Section 22.2]]
 :END:
+Permits programs to redefine the way in which code is displayed and
+allow pretty printing to be applied to complex data structures.
 
+The 'prettiness' of any particular output is somewhat subjective but
+in general the pretty printer allows individual programs to achieve an
+arbitrary degree of aesthetic control.
+
+The pretty printer is driven entirely by dispatch based on the value
+of =*PRINT-PPRINT-DISPATCH*= which is modified using
+=SET-PPRINT-DISPATCH=.
+
+- Dynamic Control of the Arrangement of Output
+  #+begin_quote
+  The actions of the pretty printer when a piece of output is too
+  large to fit in the space available can be precisely
+  controlled. Three concepts underlie the way these operations
+  work---logical blocks, conditional newlines, and sections.
+
+  Whenever possible, the pretty printer displays the entire contents
+  of a section on a single line. However, if the section is too long
+  to fit in the space available, line breaks are inserted at
+  conditional newline positions within the section.
+  #+end_quote
+
+- tip: make sure to use the variables in code - for example the
+  =*PRINT-PRETTY*= var can be used to indicate color output is
+  allowed in =PRINT-OBJECT= methods.
+
+#+begin_quote
+A primary goal of pretty printing is to keep the output between a pair
+of margins. The column where the output begins is taken as the left
+margin. If the current column cannot be determined at the time output
+begins, the left margin is assumed to be zero. The right margin is
+controlled by *print-right-margin*.
+#+end_quote
 ** Format Directives
 :PROPERTIES:
 :ID:       852b2c7f-238e-480d-ad63-3b5b53c58929
