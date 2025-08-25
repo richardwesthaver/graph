@@ -21,9 +21,9 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 932 |
+| nodes | 933 |
 | edges | 715 |
-| files | 130 |
+| files | 131 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Tue Aug 19 21:18:18 2025 -0400                      |
+| updated     | Sat Aug 23 14:34:16 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 12712 :λ 12123 :# 22 :_ 567                         |
+| lines       | 12759 :λ 12161 :# 22 :_ 576                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -51,15 +51,14 @@ an interface for modifying the graph.
 : 2025-05   1855 ****************
 : 2025-06   3626 *******************************
 : 2025-07    559 ****
-: 2025-08    808 *******
+: 2025-08    895 *******
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:lang/lisp.org][lang/lisp]]            | 2025-08-20 21:47:24 |
-| [[file:readme.org][readme]]               | 2025-08-19 21:26:31 |
+| [[file:readme.org][readme]]               | 2025-08-24 11:10:12 |
 | [[file:app/cas.org][app/cas]]              | 2025-07-22 21:09:44 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-08-19 18:17:36 |
@@ -109,6 +108,7 @@ an interface for modifying the graph.
 | [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
 | [[file:lang/javascript.org][lang/javascript]]      | 2025-06-04 14:15:39 |
 | [[file:lang/julia.org][lang/julia]]           | 2025-06-09 15:05:43 |
+| [[file:lang/lisp.org][lang/lisp]]            | 2025-08-22 19:29:45 |
 | [[file:lang/python.org][lang/python]]          | 2025-06-23 18:51:58 |
 | [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
 | [[file:lang/rust.org][lang/rust]]            | 2025-03-16 19:07:43 |
