@@ -543,6 +543,31 @@ of "think" at two in the morning'.
 :END:
 A Screenshot Testing service to tie with your existing Android, iOS
 and Web screenshot tests.
+*** Nyxt
+:PROPERTIES:
+:ID:       c57d3869-02d6-4e5d-bb09-804d18c07124
+:CREATED:  <2025-08-30 Sat 21:37>
+:END:
+:EDGES:
+[2025-08-30 Sat 21:38] -- [[https://nyxt-browser.com/][Nyxt browser: The hacker's browser]]
+:END:
+*** Lem
+:PROPERTIES:
+:ID:       10097b58-8a54-4ce2-84e9-ff15d4d0f5bf
+:CREATED:  <2025-08-30 Sat 21:37>
+:END:
+:EDGES:
+[2025-08-30 Sat 21:38] -- [[https://lem-project.github.io/][Lem]]
+:END:
+
+*** StumpWM
+:PROPERTIES:
+:ID:       abcd966f-fd1b-4679-b956-fc4891647668
+:CREATED:  <2025-08-30 Sat 21:38>
+:END:
+:EDGES:
+[2025-08-30 Sat 21:39] -- [[https://stumpwm.github.io/][Stump Window Manager]]
+:END:
 ** Libraries
 :PROPERTIES:
 :ID:       82d4dffa-070c-4ead-b317-9f9b6820e2c1

@@ -654,7 +654,38 @@ build directory. Then you can use pacman to install the package.
 :EDGES:
 [2025-02-22 Sat 19:43] -- [[http://www.slackware.com/][The Slackware Linux Project]]
 :END:
-
+** Fundamentals
+:PROPERTIES:
+:ID:       7c93b796-dc69-451f-9d70-bfb831f0e2fe
+:CREATED:  <2025-08-29 Fri 19:54>
+:END:
+*** Processes
+:PROPERTIES:
+:ID:       45978aae-af9d-440a-93c7-c1d004b1f3a6
+:CREATED:  <2025-08-29 Fri 19:54>
+:END:
+- https://www.cs.kent.edu/~ruttan/sysprog/lectures/processes.pdf
+#+begin_quote
+AME
+       fork ­ create a child process
+SYNOPSIS
+      #include <sys/types.h>
+       #include <unistd.h>
+       pid_t fork(void);
+DESCRIPTION
+      fork  creates a child process that differs from the parent process only
+       in its PID and PPID, and in the fact that resource utilizations are set
+       to 0.  File locks and pending signals are not inherited.
+       Under Linux, fork is implemented using copy­on­write pages, so the only
+       penalty incurred by fork is the time and memory required  to  duplicate
+       the parent's page tables, and to create a unique task structure for the
+       child.
+RETURN VALUE
+       On success, the PID of the child process is returned  in  the  parent's
+       thread  of execution, and a 0 is returned in the child's thread of exe­
+       cution.  On failure, a ­1 will be returned in the parent's context,  no
+       child process will be created, and errno will be set appropriately.
+#+end_quote
 * Plan 9
 :PROPERTIES:
 :ID:       3c707aa1-be3a-4258-bcd8-195216e658b5
