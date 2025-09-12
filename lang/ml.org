@@ -1,0 +1,21 @@
+#+title: ML
+#+setupfile: ../../clean.theme
+* ML
+:PROPERTIES:
+:ID:       ed77c217-12a9-41fe-aa06-0b48fff1febb
+:CREATED:  <2025-09-08 Mon 14:48>
+:END:
+:EDGES:
+[2025-09-08 Mon 14:49] -- [[wikipedia:ML (programming language)][wiki]]
+:END:
+'Meta Language'
+
+* OCaml
+:PROPERTIES:
+:ID:       83455e9b-53f4-46d5-af17-1a9d732a7b2d
+:CREATED:  <2025-09-08 Mon 14:48>
+:END:
+:EDGES:
+[2025-09-08 Mon 14:49] -- [[https://ocaml.org/][Welcome to a World of OCaml]]
+:END:
+- [[https://blog.janestreet.com/extension-points-or-how-ocaml-is-becoming-more-like-lisp/][Jane Street Blog - Extension Points, or how OCaml is becoming more like Lisp]]

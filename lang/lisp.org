@@ -37,7 +37,7 @@ is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 :CREATED:  <2025-02-25 Tue 16:05>
 :END:
 - Pragmatic Parsing in Common Lisp - [[https://www.plover.com/misc/hbaker-archive/Prag-Parse.html][ACM Lisp Pointers 4, 2 (Apr/Jun 1991), 3-15.]]
-- [[https://www.cliki.net/case%20sensitivity][CLiki: Case sensitivity]]
+- [[https://www.cliki.net/case sensitivity][CLiki: Case sensitivity]]
   #+begin_quote
   The common misconception is that Common Lisp is case insensitive. This
   is not true - symbols in Common Lisp are case sensitive.
@@ -985,7 +985,7 @@ Paradigms of Artificial Intelligence Programming by Peter Norvig
 :END:
 :EDGES:
 [2025-03-04 Tue 18:05] -- [[https://gigamonkeys.com/book/][Practical Common Lisp]]
-[2025-03-04 Tue 18:06] -- [[https://www.cliki.net/practical%20common%20lisp][CLiki: Practical Common Lisp]]
+[2025-03-04 Tue 18:06] -- [[https://www.cliki.net/practical common lisp][CLiki: Practical Common Lisp]]
 :END:
 Practical Common Lisp - Peter Seibel
 *** LoL

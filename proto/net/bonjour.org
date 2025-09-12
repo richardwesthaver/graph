@@ -1,0 +1,23 @@
+#+title: Bonjour
+#+setupfile: ../../../clean.theme
+* Bonjour
+:PROPERTIES:
+:ID:       53c882fb-18fa-4f6c-9150-00c0769f834a
+:AKA: Zeroconf
+:CREATED:  <2025-09-12 Fri 19:25>
+:END:
+:EDGES:
+[2025-09-12 Fri 19:26] -- [[https://developer.apple.com/bonjour/][Bonjour - Apple Developer]]
+[2025-09-12 Fri 19:27] -- [[http://zeroconf.org/][Zero Configuration Networking (Zeroconf)]]
+:END:
+#+begin_quote
+Bonjour lets you create an instant network of computers and smart
+devices just by getting them connected to each other. The computers
+and devices take over from there, automatically broadcasting and
+discovering what services each is offering for the use of others. The
+network could be as simple as two AirPort Extreme-equipped PowerBook
+users sitting in a hotel meeting room miles from the nearest !AirPort
+Extreme Base Station with some large files they need to share. Before
+Bonjour, frustration. With Bonjour, your computer will discover
+others, making file sharing completely simple.
+#+end_quote

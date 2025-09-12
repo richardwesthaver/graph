@@ -1,0 +1,11 @@
+#+title: Audio File Formats
+#+setupfile: ../../../clean.theme
+* FLAC
+:PROPERTIES:
+:ID:       0fbd2a5d-7aec-47fb-b896-588908cee38b
+:CREATED:  <2025-09-12 Fri 19:30>
+:END:
+:EDGES:
+[2025-09-12 Fri 19:30] -- [[https://www.rfc-editor.org/rfc/rfc9639.html][RFC 9639: Free Lossless Audio Codec (FLAC)]]
+:END:
+Free Lossless Audio Codec
