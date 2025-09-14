@@ -314,3 +314,12 @@ US National Weather Service
 :investigate:
 https://github.com/_side-panels/user.json
 :end:
+
+* inovelli.com
+:PROPERTIES:
+:ID:       aa602235-4216-4b15-aa1a-48fea48f7a25
+:CREATED:  <2025-09-13 Sat 15:58>
+:END:
+:EDGES:
+[2025-09-13 Sat 15:59] -- [[https://inovelli.com][home]]
+:END:
