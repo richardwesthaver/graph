@@ -21,25 +21,25 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 942 |
-| edges | 722 |
-| files | 133 |
+| nodes | 947 |
+| edges | 727 |
+| files | 134 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+-----------------------------------------------------|
-| name        | graph                                               |
-| version     | 0.1.0                                               |
-| description | CC Org Files                                        |
-| skel-id     | 1784914079056115652                                 |
-| root        | ~/comp/org/graph/                                   |
-| tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Fri Sep 12 19:41:22 2025 -0400                      |
-| langs       | org                                                 |
-| lines       | 12885 :λ 12286 :# 22 :_ 577                         |
-|-------------+-----------------------------------------------------|
+|-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name        | graph                                                                                                                                                                                                                           |
+| version     | (("When" "attempting" "to" "read" "the" "slot's" "value" "(slot-value)," "the" "slot") ("CLI/CLAP/OBJ::KIND" "is" "missing" "from" "the" "object" "" "" "" "") ("#<CLI-OPT" "file" ":active" "NIL" ":val" "NIL>." "" "" "" "")) |
+| description | (("When" "attempting" "to" "read" "the" "slot's" "value" "(slot-value)," "the" "slot") ("CLI/CLAP/OBJ::KIND" "is" "missing" "from" "the" "object" "" "" "" "") ("#<CLI-OPT" "file" ":active" "NIL" ":val" "NIL>." "" "" "" "")) |
+| skel-id     | (("When" "attempting" "to" "read" "the" "slot's" "value" "(slot-value)," "the" "slot") ("CLI/CLAP/OBJ::KIND" "is" "missing" "from" "the" "object" "" "" "" "") ("#<CLI-OPT" "file" ":active" "NIL" ":val" "NIL>." "" "" "" "")) |
+| root        | ~/comp/org/graph/                                                                                                                                                                                                               |
+| tags        | (("When" "attempting" "to" "read" "the" "slot's" "value" "(slot-value)," "the" "slot") ("CLI/CLAP/OBJ::KIND" "is" "missing" "from" "the" "object" "" "" "" "") ("#<CLI-OPT" "file" ":active" "NIL" ":val" "NIL>." "" "" "" "")) |
+| updated     | Sat Sep 13 22:57:54 2025 -0400                                                                                                                                                                                                  |
+| langs       | org                                                                                                                                                                                                                             |
+| lines       | 12951 :λ 12348 :# 22 :_ 581                                                                                                                                                                                                     |
+|-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -52,13 +52,14 @@ an interface for modifying the graph.
 : 2025-06   3626 *******************************
 : 2025-07    559 ****
 : 2025-08    909 ********
-: 2025-09    153 *
+: 2025-09    236 **
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
+| [[file:readme.org][readme]]               | 2025-09-13 23:08:12 |
 | [[file:app/cas.org][app/cas]]              | 2025-07-22 21:09:44 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-08-19 18:17:36 |
@@ -161,6 +162,7 @@ an interface for modifying the graph.
 | [[file:proto/metal.org][proto/metal]]          | 2025-04-12 17:32:01 |
 | [[file:proto/net/bonjour.org][proto/net/bonjour]]    | 2025-09-12 19:27:04 |
 | [[file:proto/net/dns.org][proto/net/dns]]        | 2025-03-03 15:48:04 |
+| [[file:proto/net/iot.org][proto/net/iot]]        | 2025-09-13 15:58:13 |
 | [[file:proto/net/ip.org][proto/net/ip]]         | 2025-03-03 15:48:07 |
 | [[file:proto/net/p2p.org][proto/net/p2p]]        | 2025-02-21 22:32:22 |
 | [[file:proto/net/ssh.org][proto/net/ssh]]        | 2025-06-05 18:32:19 |
@@ -171,7 +173,6 @@ an interface for modifying the graph.
 | [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-09-11 22:54:08 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/bin.org][sys/bin]]              | 2025-08-09 00:52:09 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
@@ -192,6 +193,6 @@ an interface for modifying the graph.
 | [[file:theory/style.org][theory/style]]         | 2025-02-27 17:04:03 |
 | [[file:theory/system.org][theory/system]]        | 2025-08-17 21:38:37 |
 | [[file:web/data.org][web/data]]             | 2025-06-02 22:21:32 |
-| [[file:web/sites.org][web/sites]]            | 2025-06-02 22:19:17 |
+| [[file:web/sites.org][web/sites]]            | 2025-09-13 15:59:33 |
 
 #+END:
