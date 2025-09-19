@@ -1,0 +1,15 @@
+#+title: LoRa
+* LoRa
+:PROPERTIES:
+:ID:       b611b0f0-9dcb-447b-adda-1bff7c61bb9b
+:CREATED:  <2025-09-18 Thu 20:40>
+:END:
+Long Range radio protocol
+* Meshtastic
+:PROPERTIES:
+:ID:       ca1597b0-7bf5-48a5-af93-6cc2a573aca3
+:CREATED:  <2025-09-18 Thu 20:40>
+:END:
+:EDGES:
+[2025-09-18 Thu 20:40] -- [[https://meshtastic.org/][Meshtastic]]
+:END:
