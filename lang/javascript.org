@@ -10,11 +10,102 @@
 [2025-06-04 Wed 14:15] <- [[id:c42732ce-9ef1-408b-a9dd-2424d05de398][parenscript]]
 [2025-06-04 Wed 14:15] <- [[id:3addee17-b990-4a6d-9767-071969ed9d0e][jscl]]
 :END:
+I don't have much direct use for javascript, but given its popularity
+and status as the de-facto web language it is necessary learning for
+all students of the internet.
+- on javascript versions
+  - JS has been around since the 90s where it was introduce with a
+    typical versioning scheme starting at 1.0. Some transpilers such
+    as [[id:c42732ce-9ef1-408b-a9dd-2424d05de398][parenscript]] reference this versioning scheme
+    (=*js-target-version*= is "1.3")
+    #+begin_quote
+    The most significant change in JavaScript 1.3 was compliance with
+    ECMA-262 and Unicode by removing inconsistencies between JavaScript
+    1.2 and the new ECMA standard (which was published in June
+    1997). Additional features of version 1.2, at the time not specified
+    by ECMA-262 were kept in the JavaScript language
+    #+end_quote
+  - ECMA took over in the late 90s and it became ES1-ES6, but now it
+    seems there is a yearly cadence and they should use a simple
+    integer??
+  - ES5 seems to be the minimum for web browsers - 2009 version
+  - ES6 is generally supported by all versions - 2015 version
+  - AFTER 2015, went to a yearly release cadence (JS 2016 - JS 2025)
+  - as of 2025 we are on the /16th Edition/ of ECMAScript
+- [[https://tc39.es/ecma262/][ECMAScript® 2026 Language Specification]] (latest draft)
+- [[https://github.com/tc39/test262][tc39/test262: Official ECMAScript Conformance Test Suite]]
+- *version detection is a waste of time in JS*
+  - instead, use feature detection
+  - [[https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection][Implementing feature detection - Learn web development | MDN]]
+  - [[https://johnresig.com/blog/future-proofing-javascript-libraries/][John Resig: Future-Proofing Javascript Libraries]]
+  - [[https://code-boxx.com/check-javascript-version/][Checking Javascript Version (Why It Makes No Sense)]]
+  #+begin_src js
+    function supports_canvas() {
+      return !!document.createElement("canvas").getContext;
+    }
+
+    if (supports_canvas()) {
+      // Create and draw on canvas elements
+    }
+  #+end_src
+  The double NOT in the above example (!!) is a way to force a return
+  value to become a "proper" boolean value, rather than a Truthy/Falsy
+  value that may skew the results.
+  - see also [[https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia][Window: matchMedia() method - Web APIs | MDN]]
+  #+begin_src js
+    if (window.matchMedia("(width <= 480px)").matches) {
+      // run JavaScript in here.
+    }
+  #+end_src
+    - [[https://developer.mozilla.org/en-US/docs/Web/CSS/@supports][@supports - CSS | MDN]]
+  - we always want to avoid this stuff (just upgrade your browser
+    silly) [[https://developer.mozilla.org/en-US/docs/Glossary/Polyfill][Polyfill - Glossary | MDN]]
+  - [[https://medium.com/@AlexanderObregon/detecting-feature-support-in-javascript-using-css-supports-and-other-checks-2a7d073f22d4][Feature Detection in JavaScript | Medium]]
+  #+begin_src js
+    if (typeof fetch === "function") {
+      fetch("/data.json")
+        .then(res => res.json())
+        .then(data => {
+          console.log("Fetched data:", data);
+        });
+    }
+
+    // check for web share API
+    if (typeof navigator.share === "function") {
+      navigator.share({
+        title: "Web Feature Example",
+        text: "This device supports sharing",
+        url: window.location.href
+      });
+    }
+
+    // using the ?. operator
+    const penSupported =
+      (navigator?.maxTouchPoints ?? 0) > 0 &&
+      ("PointerEvent" in window);
+    if (penSupported) {
+      console.log("Device supports pointer input.");
+    }
+
+    // check color-scheme
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (prefersDark) {
+      document.documentElement.classList.add("dark-theme");
+    }
+
+    // check hover input
+    const hasHover = window.matchMedia("(hover: hover)").matches;
+    if (hasHover) {
+      document.body.classList.add("hover-supported");
+    }
+  #+end_src
 ** Runtimes
 :PROPERTIES:
 :ID:       f591261a-576f-4e4f-87c3-e19833b85eac
 :CREATED:  <2025-06-03 Tue 21:21>
 :END:
+JS is a broad ecosystem with several runtimes, usually (but not
+always) associated with major web browsers.
 *** Deno
 :PROPERTIES:
 :ID:       ce8b2093-0cd1-4d6f-b174-ba4c20124bb4
@@ -33,6 +124,24 @@
 [2025-06-03 Tue 21:22] -- [[https://nodejs.org/][Node.js — Run JavaScript Everywhere]]
 :END:
 - [[https://www.npmjs.com/][npm | Home]]
+*** SpiderMonkey
+:PROPERTIES:
+:ID:       66853806-45a7-4e01-be31-29c6f76d8f6d
+:CREATED:  <2025-09-21 Sun 17:51>
+:END:
+- used in Mozilla Firefox
+*** V8
+:PROPERTIES:
+:ID:       ba734e40-8fff-43b1-a68d-3d7a1c2afe8d
+:CREATED:  <2025-09-21 Sun 17:52>
+:END:
+- used in Google Chrome
+*** JavaScriptCore
+:PROPERTIES:
+:ID:       302ab51f-539e-400e-8f59-124f1cb89676
+:CREATED:  <2025-09-21 Sun 17:52>
+:END:
+- used in Apple Safari
 ** Libraries
 :PROPERTIES:
 :ID:       7ddd2d60-6a99-4948-aa7b-f36dc9839599
@@ -111,6 +220,23 @@
 :EDGES:
 [2025-03-04 Tue 19:28] -- [[https://nextjs.org/][Next.js by Vercel - The React Framework]]
 :END:
+*** Feature.js
+:PROPERTIES:
+:ID:       fdf7f4ee-049d-4050-ac28-501726b0e2a5
+:CREATED:  <2025-09-21 Sun 18:18>
+:END:
+:EDGES:
+[2025-09-21 Sun 18:18] -- [[https://featurejs.com/][Feature.js]]
+:END:
+*** Modernizr
+:PROPERTIES:
+:ID:       53ba1f16-8e99-427f-8456-fce832f57e1c
+:CREATED:  <2025-09-21 Sun 18:18>
+:END:
+:EDGES:
+[2025-09-21 Sun 18:18] -- [[https://modernizr.com/][Modernizr: the feature detection library for HTML5/CSS3]]
+:END:
+
 ** TypeScript                                                            :ts:
 :PROPERTIES:
 :ID:       58d76125-7110-4c76-b8d4-7014d407cc1d

@@ -129,6 +129,26 @@ Information about compiling /without/ libc.
 :CREATED:  <2025-05-08 Thu 20:22>
 :END:
 Part of [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
+*** libcrypto
+:PROPERTIES:
+:ID:       ea07b1ac-7e78-48be-a192-41b52a08002b
+:CREATED:  <2025-09-19 Fri 21:06>
+:END:
+:EDGES:
+[2025-09-19 Fri 21:07] -- [[github:openssl/openssl][src]]
+[2025-09-19 Fri 21:10] -- [[https://wiki.openssl.org/index.php/Libcrypto_API][Libcrypto API - OpenSSLWiki]]
+:END:
+- [[https://github.com/openssl/openssl/blob/master/NOTES-UNIX.md][openssl/NOTES-UNIX.md at master · openssl/openssl · GitHub]]
+
+**** aws-lc
+:PROPERTIES:
+:ID:       6e354901-1b1d-43f3-b299-1fc8c67aa45a
+:CREATED:  <2025-09-19 Fri 21:08>
+:END:
+:EDGES:
+[2025-09-19 Fri 21:08] -- [[github:aws/aws-lc][src]]
+:END:
+
 * CPP                                                                   :cpp:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/][cppreference.com]]

@@ -1,5 +1,6 @@
 #+title: Podman
 #+setupfile: ../../clean.theme
+#+filetags: virt
 * Podman
 :PROPERTIES:
 :ID:       89199dcd-fabd-4952-b5e9-1b3ffaf06e6b

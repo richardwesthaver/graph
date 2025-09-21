@@ -8,6 +8,19 @@
 :EDGES:
 [2025-02-01 Sat 20:57] -- [[https://github.com/libp2p/specs][GitHub - libp2p/specs]]
 :END:
+** Multiformats
+:PROPERTIES:
+:ID:       2a37ff6f-3a34-4659-9c93-e72c86dad411
+:CREATED:  <2025-09-19 Fri 19:11>
+:END:
+*** Multiaddr
+:PROPERTIES:
+:ID:       9d5ebb0c-2354-4522-a652-b60dba0ffab7
+:CREATED:  <2025-09-19 Fri 19:11>
+:END:
+- [[https://docs.libp2p.io/concepts/fundamentals/addressing/][Addressing - libp2p]]
+- [[https://diligence.consensys.io/blog/2020/09/libp2p-multiaddr-enode-enr/][LibP2P: Multiaddr - Enode - ENR ?! | Consensys Diligence]]
+
 * Kademlia
 :PROPERTIES:
 :ID:       df23c94a-ed42-4be5-b7d9-351a4205b4d7

@@ -21,9 +21,9 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 947 |
-| edges | 727 |
-| files | 134 |
+| nodes | 949 |
+| edges | 728 |
+| files | 135 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Wed Sep 17 20:18:09 2025 -0400                      |
+| updated     | Thu Sep 18 23:33:52 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 12951 :λ 12348 :# 22 :_ 581                         |
+| lines       | 12966 :λ 12363 :# 22 :_ 581                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -52,7 +52,7 @@ an interface for modifying the graph.
 : 2025-06   3626 *******************************
 : 2025-07    559 ****
 : 2025-08    909 ********
-: 2025-09    297 **
+: 2025-09    318 **
 
 #+CALL: project-files() :dir ~/comp/org/graph/
 
@@ -163,6 +163,7 @@ an interface for modifying the graph.
 | [[file:proto/net/dns.org][proto/net/dns]]        | 2025-03-03 15:48:04 |
 | [[file:proto/net/iot.org][proto/net/iot]]        | 2025-09-13 15:58:13 |
 | [[file:proto/net/ip.org][proto/net/ip]]         | 2025-03-03 15:48:07 |
+| [[file:proto/net/lora.org][proto/net/lora]]       | 2025-09-18 21:44:32 |
 | [[file:proto/net/p2p.org][proto/net/p2p]]        | 2025-02-21 22:32:22 |
 | [[file:proto/net/ssh.org][proto/net/ssh]]        | 2025-06-05 18:32:19 |
 | [[file:proto/net/tcp.org][proto/net/tcp]]        | 2025-03-03 15:47:31 |
@@ -172,7 +173,7 @@ an interface for modifying the graph.
 | [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-09-16 18:59:48 |
+| [[file:readme.org][readme]]               | 2025-09-17 20:26:56 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/bin.org][sys/bin]]              | 2025-08-09 00:52:09 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |

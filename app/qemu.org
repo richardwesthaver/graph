@@ -1,0 +1,42 @@
+#+title: QEMU
+#+setupfile: ../../clean.theme
+#+filetags: virt
+* QEMU
+:PROPERTIES:
+:ID:       c4f26ef4-a936-4cf3-8218-4d23dbd9b33a
+:CREATED:  <2025-09-19 Fri 18:56>
+:END:
+:EDGES:
+[2025-09-19 Fri 18:56] -- [[man:qemu][man]]
+[2025-09-19 Fri 18:57] -- [[https://www.qemu.org/docs/master/index.html][docs]]
+:END:
+#+begin_quote
+QEMU is a generic and open source machine emulator and virtualizer.
+
+QEMU can be used in several different ways. The most common is for
+System Emulation, where it provides a virtual model of an entire
+machine (CPU, memory and emulated devices) to run a guest OS. In this
+mode the CPU may be fully emulated, or it may work with a hypervisor
+such as KVM, Xen or Hypervisor.Framework to allow the guest to run
+directly on the host CPU.
+
+The second supported way to use QEMU is User Mode Emulation, where
+QEMU can launch processes compiled for one CPU on another CPU. In this
+mode the CPU is always emulated.
+
+QEMU also provides a number of standalone command line utilities, such
+as the qemu-img disk image utility that allows you to create, convert
+and modify disk images.
+#+end_quote
+
+- [[https://www.qemu.org/docs/master/tools/index.html][Tools — QEMU documentation]]
+
+#+begin_example
+$ qemu-system-x86_64 [machine opts] \
+                [cpu opts] \
+                [accelerator opts] \
+                [device opts] \
+                [backend opts] \
+                [interface opts] \
+                [boot opts]
+#+end_example
