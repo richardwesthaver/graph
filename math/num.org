@@ -84,3 +84,59 @@ elements.
 :EDGES:
 [2025-06-09 Mon 12:29] -- [[wikipedia:Modular arithmetic][wiki]]
 :END:
+** Collatz Conjecture
+:PROPERTIES:
+:ID:       a466c60b-d698-47c6-b28f-d8a341faef51
+:CREATED:  <2025-09-29 Mon 13:19>
+:AKA: Hailstone Sequence
+:END:
+:EDGES:
+[2025-09-29 Mon 13:20] -- [[wikipedia:Collatz Conjecture][wiki]]
+:END:
+The 3x+1 problem:
+
+#+begin_quote
+Consider the following operation on an arbitrary positive integer:
+
+If the number is even, divide it by two.
+If the number is odd, triple it and add one.
+#+end_quote
+
+#+begin_quote
+The Collatz conjecture is: This process will eventually reach the
+number 1, regardless of which positive integer is chosen
+initially. That is, for each n, there is some i with a i = 1.
+
+
+If the conjecture is false, it can only be because there is some
+starting number which gives rise to a sequence that does not
+contain 1. Such a sequence would either enter a repeating cycle that
+excludes 1, or increase without bound. No such sequence has been
+found.
+
+The smallest i such that ai < a0 is called the stopping time of
+n. Similarly, the smallest k such that ak = 1 is called the total
+stopping time of n. If one of the indexes i or k does not exist, we
+say that the stopping time or the total stopping time, respectively,
+is infinite.
+
+The Collatz conjecture asserts that the total stopping time of every n
+is finite. It is also equivalent to saying that every n ≥ 2 has a
+finite stopping time.
+#+end_quote
+
+#+begin_quote
+Mathematics may not be ready for such problems.
+#+end_quote
+- Paul Erdos
+
+- shortcut form \\
+  This definition yields smaller values for the stopping time and
+  total stopping time without changing the overall dynamics of the
+  process.
+  #+begin_src lisp
+    (defun f (n)
+      (case (mod n 2)
+        (0 (/ n 2))
+        (1 (/ (1+ (* 3 n)) 2))))
+  #+end_src

@@ -28,8 +28,19 @@
 :ID:       93cddd0e-4189-4e78-a0e5-b3ceaf6b7d6e
 :CREATED:  <2025-03-07 Fri 18:44>
 :END:
+- [[https://gcc.gnu.org/onlinedocs/cpp/Macros.html][Macros (The C Preprocessor)]]
 The C preprocessor is unhygienic (good) and fairly simple (at least
 compared to C)
+** Types
+:PROPERTIES:
+:ID:       3aa8b635-2c81-4992-8e65-fb2b0dee7b06
+:CREATED:  <2025-09-29 Mon 17:58>
+:END:
+:EDGES:
+[2025-09-29 Mon 17:59] -- [[wikipedia:C data types][wiki]]
+:END:
+- [[https://www.geeksforgeeks.org/c/c-typecasting/][C- TypeCasting - GeeksforGeeks]]
+- [[http://blog.hostilefork.com/c-casts-for-the-masses/][c++ : Casts for the Masses (in C)]]
 ** libc
 :PROPERTIES:
 :ID:       d77ecb14-ecd4-4432-af2e-f431bf9ea18b

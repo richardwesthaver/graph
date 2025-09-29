@@ -56,3 +56,19 @@ update of UDP — is a suitable alternative.
 :END:
 - HTTPS consists of HTTP with the addition of [[file:../../../../Z/core/notes/tls.org][TLS]]
 - HTTP/S is used as a blanket statement for both HTTP and HTTPS
+*** REST
+:PROPERTIES:
+:ID:       c0cc13d2-f8c2-4772-9a1e-86e406e118bf
+:CREATED:  <2025-09-29 Mon 19:40>
+:END:
+:EDGES:
+[2025-09-29 Mon 19:40] -- [[https://restfulapi.net/][What is REST?: REST API Tutorial]]
+:END:
+*** GraphQL
+:PROPERTIES:
+:ID:       3cf5d8cb-c70b-4ba3-a166-d69e740a5505
+:CREATED:  <2025-09-29 Mon 19:40>
+:END:
+:EDGES:
+[2025-09-29 Mon 19:40] -- [[https://graphql.org/][GraphQL | A query language for your API]]
+:END:
