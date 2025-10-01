@@ -8,6 +8,7 @@
 :EDGES:
 [2025-03-03 Mon 15:36] -- [[https://en.wikipedia.org/wiki/Virtual_private_network][Virtual private network - Wikipedia]]
 :END:
+- more than just a proxy
 ** WireGuard                                                             :wg:
 :PROPERTIES:
 :ID:       b01ba656-940f-43bd-ae92-e0ac3b142028

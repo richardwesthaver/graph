@@ -796,6 +796,96 @@ A CL to JS compiler
 - supplies a light js runtime with a web worker
 - lisp code compiled directly to js stream
 - supports CL/JS ffi
+*** C-mera
+:PROPERTIES:
+:ID:       26cd6032-0e6e-4f9b-ae9f-2b88aa95dafc
+:CREATED:  <2025-09-30 Tue 18:08>
+:END:
+:EDGES:
+[2025-09-30 Tue 18:08] -- [[github:kiselgra/c-mera][src]]
+:END:
+C-Mera is a particularly powerful Lisp system - it's a source2source
+transpiler built entirely on Lisp Macros.
+
+It can be a bit difficult to navigate the source, and in our case
+mimick it in our own implementation - our fork is in =SYN/GEN=, and
+utilizes AST nodes from =OBJ/AST= - it is not limited to just C
+languages and so the design may be quite different in some places.
+
+The first oddity in C-Mera's source comes in the system definition
+=c-mera.asd=. All packages and symbol exports are set here with
+several variables defined for lists of symbols.
+
+- CL-SYMBOLS :: all external symbols in the COMMON-LISP package
+- DEFAULT-EXPORTS :: default package exports
+- C-MERA-BACKEND :: global ast + slot symbols
+
+In the case of C we have the following symbols bound:
+- C-BACKEND :: ast + slot symbols
+- C-SYMBOLS :: list used for package definition with shadowed symbols
+  and for the cm/lisp scope switch
+- C-SYNTAX :: symbols not shadowed but exported
+- C-EXPORTS :: the full list of exports - includes C-SYMBOLS,
+  C-SYNTAX, DEFAULT-EXPORTS, and CL-SYMBOLS
+- C-SWAP :: (append C-SYMBOLS C-SYNTAX)
+
+Next the actual packages are defined with the help of a =DEFPACKAGE*=
+macro. There are four variations - the core package (C-MERA), the
+backend package (CM-C), the user package (CMU-C), and swap packages
+(CMS-C). The core package never changes and is used by the backend
+packages, but NOT by the user packages. In both cases the C variants
+of the backend and user packages are imported into subsequent packages
+defined and swap packages are defined as empty.
+
+ALL PACKAGES then get their own systems defined with dependencies assigned like so:
+C-MERA - CM-C - CMU-C - CMS-C
+#+begin_src lisp
+(asdf:defsystem c-mera
+  :name "c-mera"
+  :version "1.1.0"
+  :serial t
+  :components ((:file "src/c-mera/version")
+	       (:file "src/c-mera/cmd")
+	       (:file "src/c-mera/nodes")
+	       (:file "src/c-mera/utils")
+	       (:file "src/c-mera/traverser")
+	       (:file "src/c-mera/pretty")
+	       (:file "src/c-mera/c-mera"))
+  :depends-on ("net.didierverna.clon.core"))
+
+;; ...
+
+(asdf:defsystem cm-c
+  :name "c-mera c"
+  :version "1.1.0"
+  :serial t
+  :components ((:file "src/c-mera/c-mera")
+	       (:file "src/c/utils")
+	       (:file "src/c/nodes")
+               (:file "src/c/traverser")
+               (:file "src/c/pretty")
+	       (:file "src/c/syntax")
+	       (:file "src/c/reader")
+	       (:file "src/c/cm-c"))
+  :depends-on ("c-mera"))
+
+;; ...
+
+(asdf:defsystem cmu-c
+  :name "c-mera user c"
+  :version "1.1.0"
+  :components ((:file "src/c/cmu-c"))
+  :depends-on ("c-mera"
+	       "cm-c"))
+
+;; ...
+
+(asdf:defsystem cms-c
+  :name "c-mera swap c"
+  :version "1.1.0"
+  :depends-on ("cmu-c"))
+#+end_src
+
 ** Systems
 :PROPERTIES:
 :ID:       a6911466-c135-488c-a67e-689f22592a44

@@ -91,6 +91,18 @@ XOR Filters
 [2025-03-03 Mon 15:09] -- [[http://dalek.rs/][dalek cryptography]]
 :END:
 
+*** Quinn                                                              :rust:
+:PROPERTIES:
+:ID:       f10769f7-cf9b-4bb5-ada9-d499af348f9d
+:CREATED:  <2025-01-17 Fri 23:14>
+:END:
+:LOGBOOK:
+- Refiled on [2025-09-30 Tue 15:55]
+:END:
+[[https://github.com/quinn-rs/quinn/tree/main][GitHub - quinn-rs/quinn]]
+:END:
+Async-friendly QUIC implementation in Rust
+
 ** Rust != C
 :PROPERTIES:
 :ID:       bb68152d-1794-47d8-86c0-03eb7f9256d7

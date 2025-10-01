@@ -27,6 +27,7 @@
 :END:
 :EDGES:
 [2025-03-03 Mon 15:40] -- [[https://developer.mozilla.org/en-US/docs/Web/HTTP][HTTP | MDN]]
+[2025-09-30 Tue 15:51] -- [[https://http.dev/][HyperText Transfer Protocol (HTTP) explained]]
 :END:
 #+begin_quote
 Hypertext Transfer Protocol (HTTP) is an application-layer protocol
@@ -44,6 +45,23 @@ update of UDP — is a suitable alternative.
 #+begin_center
 -- [[https://developer.mozilla.org/en-US/docs/Web/HTTP][MDN web docs]]
 #+end_center
+- [[https://http.dev/1.0][HTTP/1.0 explained]]
+*** HTTP/1.1
+:PROPERTIES:
+:ID:       95274690-c607-4c94-9416-707f478814ae
+:CREATED:  <2025-09-30 Tue 15:40>
+:END:
+:EDGES:
+[2025-09-30 Tue 15:41] -- [[https://http.dev/1.1][HTTP/1.1 explained]]
+:END:
+*** HTTP/2
+:PROPERTIES:
+:ID:       2d727cb5-b30c-47f8-b208-eccd1d32d40d
+:CREATED:  <2025-09-30 Tue 15:40>
+:END:
+:EDGES:
+[2025-09-30 Tue 15:41] -- [[https://http.dev/2][HTTP/2 explained]]
+:END:
 *** HTTPS                                                               :tls:
 :PROPERTIES:
 :ID:       81e78198-a5ed-4fdd-b487-1bb3874ffa71
