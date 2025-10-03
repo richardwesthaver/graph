@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Wed Oct 01 19:37:49 2025 -0400                      |
+| updated     | Thu Oct 02 22:37:20 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 13382 :λ 12742 :# 22 :_ 618                         |
+| lines       | 13386 :λ 12746 :# 22 :_ 618                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -54,7 +54,7 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10     16 
+2025-10     42 
 #+end_example
 
 #+CALL: project-files() :dir ~/comp/org/graph/
@@ -91,7 +91,7 @@ an interface for modifying the graph.
 | [[file:hw/honda.org][hw/honda]]             | 2025-02-21 22:34:27 |
 | [[file:hw/hydrabus.org][hw/hydrabus]]          | 2025-02-21 22:34:29 |
 | [[file:hw/intel.org][hw/intel]]             | 2025-03-03 11:45:39 |
-| [[file:hw/kbd.org][hw/kbd]]               | 2025-03-15 23:04:35 |
+| [[file:hw/kbd.org][hw/kbd]]               | 2025-10-01 20:35:48 |
 | [[file:hw/material.org][hw/material]]          | 2025-06-07 17:33:12 |
 | [[file:hw/nvidia.org][hw/nvidia]]            | 2025-03-03 14:47:56 |
 | [[file:hw/pine64.org][hw/pine64]]            | 2025-04-15 16:02:06 |
@@ -178,7 +178,7 @@ an interface for modifying the graph.
 | [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-06-17 23:09:32 |
-| [[file:readme.org][readme]]               | 2025-09-30 22:08:20 |
+| [[file:readme.org][readme]]               | 2025-10-01 20:03:47 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/bin.org][sys/bin]]              | 2025-08-09 00:52:09 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
