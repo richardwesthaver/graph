@@ -1,4 +1,5 @@
 #+title: Keyboards
+#+setupfile: ../../clean.theme
 * ZSA
 :PROPERTIES:
 :ID:       dd783d1f-3fa9-4ab2-8c6c-766375a8c725
