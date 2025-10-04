@@ -2,7 +2,7 @@
 #+bibliography: ../refs.bib
 #+setupfile: ../../clean.theme
 #+filetags: lisp
-* Common Lisp                                                            :cl:
+* Common Lisp                                                :cl:common:lisp:
 :PROPERTIES:
 :ID:       af0ed8bb-4b45-42f9-b8be-82b8ea7935a3
 :CREATED:  <2025-02-16 Sun 20:04>
@@ -572,6 +572,15 @@ and Web screenshot tests.
 :PROPERTIES:
 :ID:       82d4dffa-070c-4ead-b317-9f9b6820e2c1
 :CREATED:  <2025-02-22 Sat 15:15>
+:END:
+*** one-more-re-nightmare
+:PROPERTIES:
+:ID:       cc72c2c8-8a05-432e-8e7a-844eb6c9ac15
+:CREATED:  <2025-10-03 Fri 12:26>
+:END:
+:EDGES:
+[2025-10-03 Fri 12:27] -- [[https://applied-langua.ge/posts/omrn-compiler.html][The one-more-re-nightmare compiler]]
+[2025-10-03 Fri 12:27] -- [[github:telekons/one-more-re-nightmare?][src]]
 :END:
 *** CLIM                                                                :gui:
 :PROPERTIES:
@@ -1226,7 +1235,7 @@ A Unix shell embedded in scheme
 :END:
 Maclisp->Zetalisp
 - [[http://www.jargon.net/jargon/jargonfile/c/chinenual.html][jargon, node: chine nual]]
-* Elisp                                                :emacs:elisp:el:cl:cl:
+* Elisp                                                :emacs:elisp:el:
 :PROPERTIES:
 :ID:       6c69c42b-3d0a-48bf-a5ad-43b350477387
 :CREATED:  <2025-03-01 Sat 16:35>
@@ -1345,6 +1354,10 @@ Maclisp->Zetalisp
     (use-local-map widget-keymap)
     (widget-setup))
 #+end_src
+
+#+RESULTS: elisp-widget-example
+: widget-example
+
 ** EIEIO
 :PROPERTIES:
 :ID:       da96454b-fc70-4a5c-bd7a-e66d148eb1d9
