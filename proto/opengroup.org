@@ -1,0 +1,11 @@
+#+title: The Open Group Library
+#+setupfile: ../../clean.theme
+* Open Group
+:PROPERTIES:
+:ID:       ab5e5bea-2600-4bcc-b0ac-bb4a9a6c6d0f
+:CREATED:  <2025-10-03 Fri 12:29>
+:END:
+:EDGES:
+[2025-10-03 Fri 12:29] -- [[https://publications.opengroup.org/][The Open Group Library]]
+:END:
+- [[https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap09.html][Regular Expressions]]
