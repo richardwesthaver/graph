@@ -161,6 +161,9 @@ Part of [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
 :END:
 
 * CPP                                                                   :cpp:
+:PROPERTIES:
+:ID:       be1c5802-61bd-4b32-9566-03cef321236e
+:END:
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/][cppreference.com]]
 :END:
