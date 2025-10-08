@@ -29,7 +29,7 @@ as the qemu-img disk image utility that allows you to create, convert
 and modify disk images.
 #+end_quote
 
-- [[https://www.qemu.org/docs/master/tools/index.html][Tools — QEMU documentation]]
+- [[https://www.qemu.org/docs/master/tools/index.html][Tools - QEMU documentation]]
 
 #+begin_example
 $ qemu-system-x86_64 [machine opts] \

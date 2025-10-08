@@ -60,7 +60,7 @@ with the HookDir option in pacman.conf, which defaults to
 :CREATED:  <2025-06-08 Sun 19:31>
 :END:
 :EDGES:
-[2025-06-08 Sun 19:31] -- [[https://man.archlinux.org/man/pactree.8][pactree(8) — Arch manual pages]]
+[2025-06-08 Sun 19:31] -- [[https://man.archlinux.org/man/pactree.8][pactree(8) - Arch manual pages]]
 :END:
 - show dependencies of a package
 - not included with pacman - install pacman-contrib
@@ -79,7 +79,7 @@ with the HookDir option in pacman.conf, which defaults to
 :CREATED:  <2025-04-06 Sun 17:55>
 :END:
 :EDGES:
-[2025-04-06 Sun 17:55] -- [[https://flatpak.org/][Flatpak—the future of application distribution]]
+[2025-04-06 Sun 17:55] -- [[https://flatpak.org/][Flatpak-the future of application distribution]]
 :END:
 - cross-Linux distro package manager
 - sandboxed

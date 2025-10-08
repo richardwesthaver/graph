@@ -68,7 +68,7 @@ The GNU C Library
 :CREATED:  <2025-04-06 Sun 17:50>
 :END:
 :EDGES:
-[2025-04-06 Sun 17:51] -- [[https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/][Understanding glibc malloc – sploitF-U-N]]
+[2025-04-06 Sun 17:51] -- [[https://sploitfun.wordpress.com/2015/02/10/understanding-glibc-malloc/][Understanding glibc malloc - sploitF-U-N]]
 :END:
 
 *** nostd
@@ -212,7 +212,7 @@ Part of [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
 [2025-03-03 Mon 14:46] -> [[id:339518e9-2112-4c79-9471-ccc8f57b8105][NVCC]]
 [2025-03-03 Mon 14:47] >> [[id:eaf2ecf5-7748-40e5-bd1b-c8fc2053d050][NVIDIA]]
 :END:
-- [[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html][1. Introduction — CUDA C++ Programming Guide]]
+- [[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html][1. Introduction - CUDA C++ Programming Guide]]
 
 * Objective-C
 :PROPERTIES:

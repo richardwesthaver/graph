@@ -21,8 +21,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 970 |
-| edges | 744 |
+| nodes | 971 |
+| edges | 745 |
 | files | 138 |
 
 #+BEGIN: project-info :status nil :tasks nil :files t :vc nil
@@ -36,9 +36,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Sat Oct 04 14:29:08 2025 -0400                      |
+| updated     | Sun Oct 05 22:37:43 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 13415 :λ 12773 :# 22 :_ 620                         |
+| lines       | 13435 :λ 12792 :# 22 :_ 621                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -54,7 +54,7 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10    113 
+2025-10    150 *
 #+end_example
 
 #+CALL: project-files() :dir ~/comp/org/graph/
@@ -62,8 +62,6 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:lang/c.org][lang/c]]               | 2025-10-04 14:42:34 |
-| [[file:readme.org][readme]]               | 2025-10-04 18:14:58 |
 | [[file:app/cas.org][app/cas]]              | 2025-07-22 21:09:44 |
 | [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
 | [[file:app/emacs.org][app/emacs]]            | 2025-08-19 18:17:36 |
@@ -105,6 +103,7 @@ an interface for modifying the graph.
 | [[file:lang/apl.org][lang/apl]]             | 2025-07-31 22:59:47 |
 | [[file:lang/asm.org][lang/asm]]             | 2025-08-08 22:29:54 |
 | [[file:lang/basic.org][lang/basic]]           | 2025-02-27 17:01:01 |
+| [[file:lang/c.org][lang/c]]               | 2025-10-04 14:42:34 |
 | [[file:lang/cobol.org][lang/cobol]]           | 2025-03-07 22:57:10 |
 | [[file:lang/erlang.org][lang/erlang]]          | 2025-03-03 21:04:21 |
 | [[file:lang/forth.org][lang/forth]]           | 2025-08-17 21:19:31 |
@@ -156,7 +155,7 @@ an interface for modifying the graph.
 | [[file:proto/desktop.org][proto/desktop]]        | 2025-07-26 02:28:46 |
 | [[file:proto/font.org][proto/font]]           | 2025-06-28 14:44:28 |
 | [[file:proto/ietf.org][proto/ietf]]           | 2025-06-17 23:18:36 |
-| [[file:proto/iso.org][proto/iso]]            | 2025-04-12 15:48:43 |
+| [[file:proto/iso.org][proto/iso]]            | 2025-10-05 22:35:50 |
 | [[file:proto/mail.org][proto/mail]]           | 2025-04-15 15:52:45 |
 | [[file:proto/math.org][proto/math]]           | 2025-05-08 20:42:15 |
 | [[file:proto/media/audio.org][proto/media/audio]]    | 2025-09-12 19:30:46 |
@@ -180,6 +179,7 @@ an interface for modifying the graph.
 | [[file:proto/opengroup.org][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[file:proto/web.org][proto/web]]            | 2025-10-03 12:30:21 |
+| [[file:readme.org][readme]]               | 2025-10-04 22:09:29 |
 | [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
 | [[file:sys/bin.org][sys/bin]]              | 2025-08-09 00:52:09 |
 | [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |

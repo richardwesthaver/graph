@@ -269,8 +269,8 @@ languages there is also a soft division between those more like NARS
      more than about three values are active at once. One consequence
      is that tacit code won't cause confusion by modifying far-away
      variables. But something unique to the tacit paradigm is that
-     when only a small number of values are active—which is always
-     true in a small enough portion of a program!—it has more powerful
+     when only a small number of values are active-which is always
+     true in a small enough portion of a program!-it has more powerful
      ways to describe the way these values flow through the
      program. The main way it achieves this is with combinators.
      #+end_quote
@@ -353,7 +353,7 @@ languages there is also a soft division between those more like NARS
   bqn("×´1+↕6") to compute six factorial. But how do you get JS and
   BQN to talk to each other, for example to compute the factorial of a
   number n? Constructing a source string with bqn("×´1+↕"+n) isn't the
-  best way—in fact I would recommend you never use this strategy.
+  best way-in fact I would recommend you never use this strategy.
 
   Instead, return a function from BQN and call it:
   bqn("{×´1+↕𝕩}")(n). This strategy also has the advantage that you
@@ -399,7 +399,7 @@ languages there is also a soft division between those more like NARS
 
   Although little is known about what transpired during his brief
   visit to the Northern Venice, the idea Arthur conceived during that
-  trip is much better known — he had a clear and uncompromising vision
+  trip is much better known - he had a clear and uncompromising vision
   of a new system.
 
   In 1992, Whitney departed from Morgan Stanley to fully concentrate

@@ -7,7 +7,7 @@
 :END:
 :EDGES:
 [2025-03-08 Sat 01:07] -- [[https://uefi.org/][~]]
-[2025-03-08 Sat 01:09] -- [[https://uefi.org/specs/UEFI/2.11/22_EFI_Byte_Code_Virtual_Machine.html][22. EFI Byte Code Virtual Machine — UEFI Specification 2.11 documentation]]
+[2025-03-08 Sat 01:09] -- [[https://uefi.org/specs/UEFI/2.11/22_EFI_Byte_Code_Virtual_Machine.html][22. EFI Byte Code Virtual Machine - UEFI Specification 2.11 documentation]]
 [2025-03-09 Sun 20:56] -- [[https://wiki.osdev.org/Uefi.inc][Uefi.inc - OSDev Wiki]]
 [2025-03-09 Sun 20:57] -- [[https://wiki.osdev.org/GNU-EFI][GNU-EFI - OSDev Wiki]]
 :END:
@@ -17,7 +17,7 @@ Unified Extensible Firmware Interface
 - [[https://www.intel.com/content/www/us/en/docs/programmable/683134/current/building-the-uefi-boot-loader.html][3.3. Building the UEFI Boot Loader]]
 - [[https://github.com/KunYi/Simple-UEFI-Bootloader][KunYi/Simple-UEFI-Bootloader: A UEFI bootloader for bare-metal x86-64 applications]]
 - [[https://github.com/ajxs/uefi-elf-bootloader][GitHub - ajxs/uefi-elf-bootloader: UEFI ELF Bootloader example]]
-- [[https://www.kraxel.org/blog/2024/07/uefi-network-boot/][modern uefi network booting | 🇺🇦 kraxel’s news]]
+- [[https://www.kraxel.org/blog/2024/07/uefi-network-boot/][modern uefi network booting | kraxel's news]]
 ** OVMF
 :PROPERTIES:
 :ID:       6f908314-d6d8-471a-96c7-e388f6891fb0

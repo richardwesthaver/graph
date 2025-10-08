@@ -38,7 +38,6 @@
 :EDGES:
 [2025-06-20 Fri 13:41] -- [[https://salsa.debian.org/debian/fbterm][src]]
 :END:
-
 * Terminal Multiplexer
 :PROPERTIES:
 :ID:       528d0b97-b753-40b1-8db2-198ce59296a6
@@ -57,5 +56,5 @@
 :ID:       cf221f30-3844-4b94-8e73-b8bdeb80f8db
 :CREATED:  <2025-07-06 Sun 00:21>
 :END:
-- [[https://ryan.himmelwright.net/post/scripting-tmux-workspaces/][Scripting A Tmux Work-space Start-up | λ ryan. himmelwright. net]]
+- [[https://ryan.himmelwright.net/post/scripting-tmux-workspaces/][Scripting A Tmux Work-space Start-up | ryan. himmelwright. net]]
 - tmux sets two environment variables in each pane, TMUX and TMUX_PANE

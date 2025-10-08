@@ -103,7 +103,7 @@ school of thought to be considered one.
 :CREATED:  <2025-02-16 Sun 19:09>
 :END:
 :EDGES:
-[2025-02-16 Sun 19:16] -- [[https://datafusion.apache.org/][Apache DataFusion — Apache DataFusion documentation]]
+[2025-02-16 Sun 19:16] -- [[https://datafusion.apache.org/][Apache DataFusion - Apache DataFusion documentation]]
 :END:
 **** Arrow
 :PROPERTIES:

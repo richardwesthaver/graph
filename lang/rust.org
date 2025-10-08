@@ -123,7 +123,7 @@ can.
 :ID:       b11ad05a-5d5f-4974-9364-c3eebb9d15d8
 :CREATED:  <2025-03-03 Mon 20:54>
 :END:
-- [[https://healeycodes.com/webassembly-search-tools-for-static-websites][WebAssembly Search Tools for Static Sites — Andrew Healey]]
+- [[https://healeycodes.com/webassembly-search-tools-for-static-websites][WebAssembly Search Tools for Static Sites - Andrew Healey]]
 - [cite/t/b:@xor-filters]
   - [[https://endler.dev/2019/tinysearch/][A Tiny, Static, Full-Text Search Engine using Rust and WebAssembly | Matthias Endler]]
     - uses [[id:c36a08f7-5fbe-4313-928b-a55636aaf20a][XOR Filters]] HashProxies and bincode to serialize storage from a json file

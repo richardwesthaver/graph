@@ -8,5 +8,5 @@
 [2025-09-19 Fri 19:04] -- [[https://en.wikipedia.org/wiki/ISCSI][wiki]]
 :END:
 Internet Small Computer Systems Interface (eye-SKUZ-ee)
-- [[https://linuxvox.com/blog/iscsi-linux/][iSCSI in Linux: A Comprehensive Guide — linuxvox.com]]
+- [[https://linuxvox.com/blog/iscsi-linux/][iSCSI in Linux: A Comprehensive Guide - linuxvox.com]]
 =tgt=

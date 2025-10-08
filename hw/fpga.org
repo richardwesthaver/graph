@@ -60,12 +60,12 @@ static structure. In opposition to GPUs, we are not yet entirely sure
 what an appropriate abstraction for the computational pattern used
 with computational FPGAs is.
 
-    The world hasn’t settled yet on a succinct description of the
+    The world hasn't settled yet on a succinct description of the
     fundamental computational pattern that FPGAs are supposed to be
     good at. But it has something to do with potentially-irregular
     parallelism, data reuse, and mostly-static data flow.
 
-— Adrian Sampson
+- Adrian Sampson
 FPGAs Have the Wrong Abstraction, 2019 
 
 Until that is settled, computational FPGAs will probably stay a niche

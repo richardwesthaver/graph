@@ -30,7 +30,7 @@
 :CREATED:  <2025-03-03 Mon 17:33>
 :END:
 :EDGES:
-[2025-03-03 Mon 17:33] -- [[https://www.hack.org/mc/hacks/mcwm/][mcwm — a minimalist window manager]]
+[2025-03-03 Mon 17:33] -- [[https://www.hack.org/mc/hacks/mcwm/][mcwm - a minimalist window manager]]
 :END:
 *** i3
 :PROPERTIES:

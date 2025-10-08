@@ -39,8 +39,8 @@ request, then waiting until it receives a response. HTTP is a
 stateless protocol, meaning that the server does not keep any data
 (state) between two requests. Though often based on a TCP/IP layer, it
 can be used on any reliable transport layer, that is, a protocol that
-doesn't lose messages silently like UDP does. RUDP — the reliable
-update of UDP — is a suitable alternative.
+doesn't lose messages silently like UDP does. RUDP - the reliable
+update of UDP - is a suitable alternative.
 #+end_quote
 #+begin_center
 -- [[https://developer.mozilla.org/en-US/docs/Web/HTTP][MDN web docs]]

@@ -121,7 +121,7 @@ always) associated with major web browsers.
 :CREATED:  <2025-06-03 Tue 21:21>
 :END:
 :EDGES:
-[2025-06-03 Tue 21:22] -- [[https://nodejs.org/][Node.js — Run JavaScript Everywhere]]
+[2025-06-03 Tue 21:22] -- [[https://nodejs.org/][Node.js - Run JavaScript Everywhere]]
 :END:
 - [[https://www.npmjs.com/][npm | Home]]
 *** SpiderMonkey

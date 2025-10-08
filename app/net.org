@@ -35,11 +35,11 @@
 :CREATED:  <2025-02-13 Thu 22:38>
 :END:
 :EDGES:
-[2025-03-03 Mon 12:31] -- [[https://www.mozilla.org/en-US/firefox/][Get Firefox browser — Mozilla (US)]]
+[2025-03-03 Mon 12:31] -- [[https://www.mozilla.org/en-US/firefox/][Get Firefox browser - Mozilla (US)]]
 :END:
-- [[https://firefox-source-docs.mozilla.org/devtools-user/index.html][Firefox DevTools User Docs — Firefox Source Docs documentation]]
-- [[https://firefox-source-docs.mozilla.org/remote/index.html][Remote Protocols — Firefox Source Docs documentation]]
-  - [[https://firefox-source-docs.mozilla.org/remote/cdp/][Remote Protocol (CDP) — Firefox Source Docs documentation]]
+- [[https://firefox-source-docs.mozilla.org/devtools-user/index.html][Firefox DevTools User Docs - Firefox Source Docs documentation]]
+- [[https://firefox-source-docs.mozilla.org/remote/index.html][Remote Protocols - Firefox Source Docs documentation]]
+  - [[https://firefox-source-docs.mozilla.org/remote/cdp/][Remote Protocol (CDP) - Firefox Source Docs documentation]]
 
 ** Nyxt                                                                  :cl:
 :PROPERTIES:

@@ -9,7 +9,6 @@
 [2025-09-08 Mon 14:49] -- [[wikipedia:ML (programming language)][wiki]]
 :END:
 'Meta Language'
-
 * OCaml
 :PROPERTIES:
 :ID:       83455e9b-53f4-46d5-af17-1a9d732a7b2d
