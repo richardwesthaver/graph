@@ -4,6 +4,12 @@
 #+email: richard.westhaver@gmail.com
 #+html_link_up: ..
 #+setupfile: ../clean.theme
+#+html_head: <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+#+html_head:  <style>
+#+html_head: .node-label {
+#+html_head:      font-size: 0.5em;
+#+html_head:    }
+#+html_head:  </style>
 #+export_file_name: index
 #+bibliography: refs.bib
 The CC =graph= is a collection of org documents representing a network
@@ -23,9 +29,9 @@ an interface for modifying the graph.
 #+RESULTS:
 | nodes | 971 |
 | edges | 745 |
-| files | 138 |
+| files | 139 |
 
-#+BEGIN: project-info :status nil :tasks nil :files t :vc nil
+#+BEGIN: project-info :status nil :tasks nil :html t :vc nil
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
 
 #+RESULTS:
@@ -36,9 +42,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Sun Oct 05 22:37:43 2025 -0400                      |
+| updated     | Tue Oct 07 21:37:22 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 13435 :λ 12792 :# 22 :_ 621                         |
+| lines       | 13536 :λ 12892 :# 22 :_ 622                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -54,152 +60,182 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10    150 *
+2025-10    295 **
 #+end_example
 
-#+CALL: project-files() :dir ~/comp/org/graph/
+#+CALL: project-html-files() :dir ~/comp/org/graph/
 
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[file:app/cas.org][app/cas]]              | 2025-07-22 21:09:44 |
-| [[file:app/desktop.org][app/desktop]]          | 2025-03-03 18:15:28 |
-| [[file:app/emacs.org][app/emacs]]            | 2025-08-19 18:17:36 |
-| [[file:app/gnu-radio.org][app/gnu-radio]]        | 2025-03-03 18:15:21 |
-| [[file:app/mail.org][app/mail]]             | 2025-04-15 18:24:21 |
-| [[file:app/media.org][app/media]]            | 2025-04-18 19:33:21 |
-| [[file:app/net.org][app/net]]              | 2025-04-06 18:08:34 |
-| [[file:app/package-manager.org][app/package-manager]]  | 2025-06-08 19:31:45 |
-| [[file:app/podman.org][app/podman]]           | 2025-09-19 18:56:27 |
-| [[file:app/qemu.org][app/qemu]]             | 2025-09-19 19:02:15 |
-| [[file:app/term.org][app/term]]             | 2025-07-06 00:22:45 |
-| [[file:app/vi.org][app/vi]]               | 2025-05-10 23:09:51 |
-| [[file:comp/ecl.org][comp/ecl]]             | 2025-03-09 15:44:39 |
-| [[file:comp/gcc.org][comp/gcc]]             | 2025-08-09 00:58:05 |
-| [[file:comp/ghc.org][comp/ghc]]             | 2025-02-21 22:34:46 |
-| [[file:comp/llvm.org][comp/llvm]]            | 2025-03-03 16:41:14 |
-| [[file:comp/sbcl.org][comp/sbcl]]            | 2025-08-17 18:30:02 |
-| [[file:hw/amd.org][hw/amd]]               | 2025-06-09 17:13:00 |
-| [[file:hw/apple.org][hw/apple]]             | 2025-03-03 20:34:42 |
-| [[file:hw/avr.org][hw/avr]]               | 2025-08-09 01:07:47 |
-| [[file:hw/car.org][hw/car]]               | 2025-02-21 22:34:16 |
-| [[file:hw/cpu.org][hw/cpu]]               | 2025-06-09 17:14:12 |
-| [[file:hw/fpga.org][hw/fpga]]              | 2025-03-16 19:12:30 |
-| [[file:hw/gpu.org][hw/gpu]]               | 2025-04-15 15:54:27 |
-| [[file:hw/gsg.org][hw/gsg]]               | 2025-02-21 22:34:24 |
-| [[file:hw/home.org][hw/home]]              | 2025-03-12 21:08:35 |
-| [[file:hw/honda.org][hw/honda]]             | 2025-02-21 22:34:27 |
-| [[file:hw/hydrabus.org][hw/hydrabus]]          | 2025-02-21 22:34:29 |
-| [[file:hw/intel.org][hw/intel]]             | 2025-03-03 11:45:39 |
-| [[file:hw/kbd.org][hw/kbd]]               | 2025-10-01 20:35:48 |
-| [[file:hw/material.org][hw/material]]          | 2025-06-07 17:33:12 |
-| [[file:hw/nvidia.org][hw/nvidia]]            | 2025-03-03 14:47:56 |
-| [[file:hw/pine64.org][hw/pine64]]            | 2025-04-15 16:02:06 |
-| [[file:hw/samsung.org][hw/samsung]]           | 2025-02-21 22:34:37 |
-| [[file:hw/shop.org][hw/shop]]              | 2025-06-04 15:42:47 |
-| [[file:hw/storage.org][hw/storage]]           | 2025-06-03 22:06:35 |
-| [[file:hw/studio.org][hw/studio]]            | 2025-08-12 12:37:44 |
-| [[file:hw/travel.org][hw/travel]]            | 2025-03-12 21:08:20 |
-| [[file:lang/apl.org][lang/apl]]             | 2025-07-31 22:59:47 |
-| [[file:lang/asm.org][lang/asm]]             | 2025-08-08 22:29:54 |
-| [[file:lang/basic.org][lang/basic]]           | 2025-02-27 17:01:01 |
-| [[file:lang/c.org][lang/c]]               | 2025-10-04 14:42:34 |
-| [[file:lang/cobol.org][lang/cobol]]           | 2025-03-07 22:57:10 |
-| [[file:lang/erlang.org][lang/erlang]]          | 2025-03-03 21:04:21 |
-| [[file:lang/forth.org][lang/forth]]           | 2025-08-17 21:19:31 |
-| [[file:lang/fortran.org][lang/fortran]]         | 2025-05-27 20:08:17 |
-| [[file:lang/haskell.org][lang/haskell]]         | 2025-03-03 20:09:12 |
-| [[file:lang/java.org][lang/java]]            | 2025-03-03 20:43:11 |
-| [[file:lang/javascript.org][lang/javascript]]      | 2025-09-21 18:18:31 |
-| [[file:lang/julia.org][lang/julia]]           | 2025-06-09 15:05:43 |
-| [[file:lang/lisp.org][lang/lisp]]            | 2025-10-03 20:03:04 |
-| [[file:lang/ml.org][lang/ml]]              | 2025-09-12 19:27:38 |
-| [[file:lang/python.org][lang/python]]          | 2025-06-23 18:51:58 |
-| [[file:lang/query.org][lang/query]]           | 2025-03-04 18:38:23 |
-| [[file:lang/rust.org][lang/rust]]            | 2025-09-30 16:08:23 |
-| [[file:lang/shell.org][lang/shell]]           | 2025-08-17 21:30:22 |
-| [[file:lang/smalltalk.org][lang/smalltalk]]       | 2025-03-03 21:05:21 |
-| [[file:lang/swift.org][lang/swift]]           | 2025-03-07 22:57:38 |
-| [[file:lang/zig.org][lang/zig]]             | 2025-03-02 21:00:36 |
-| [[file:math/algebra.org][math/algebra]]         | 2025-05-27 20:12:36 |
-| [[file:math/algo.org][math/algo]]            | 2025-05-08 20:19:53 |
-| [[file:math/calc.org][math/calc]]            | 2025-05-26 19:16:01 |
-| [[file:math/compsci.org][math/compsci]]         | 2025-06-28 15:49:52 |
-| [[file:math/dsp.org][math/dsp]]             | 2025-03-30 01:08:05 |
-| [[file:math/geo.org][math/geo]]             | 2025-05-26 18:57:04 |
-| [[file:math/logic.org][math/logic]]           | 2025-05-07 17:01:02 |
-| [[file:math/ml.org][math/ml]]              | 2025-02-21 22:33:20 |
-| [[file:math/notation.org][math/notation]]        | 2025-05-26 19:34:05 |
-| [[file:math/num.org][math/num]]             | 2025-09-29 13:28:20 |
-| [[file:math/physics.org][math/physics]]         | 2025-03-03 18:15:06 |
-| [[file:math/stat.org][math/stat]]            | 2025-02-28 18:22:16 |
-| [[file:math/struct.org][math/struct]]          | 2025-06-23 18:38:45 |
-| [[file:notes.org][notes]]                | 2025-03-25 15:23:42 |
-| [[file:os/mac.org][os/mac]]               | 2025-03-03 18:06:20 |
-| [[file:os/mainframe.org][os/mainframe]]         | 2025-03-04 19:43:31 |
-| [[file:os/unix.org][os/unix]]              | 2025-08-29 19:55:24 |
-| [[file:os/win.org][os/win]]               | 2025-03-03 18:51:19 |
-| [[file:proto/ansi.org][proto/ansi]]           | 2025-04-12 15:48:34 |
-| [[file:proto/color.org][proto/color]]          | 2025-06-23 20:17:55 |
-| [[file:proto/crypto.org][proto/crypto]]         | 2025-07-31 11:39:25 |
-| [[file:proto/dat/config.org][proto/dat/config]]     | 2025-05-26 00:52:46 |
-| [[file:proto/dat/cue.org][proto/dat/cue]]        | 2025-04-15 15:09:37 |
-| [[file:proto/dat/deflate.org][proto/dat/deflate]]    | 2025-05-26 00:53:45 |
-| [[file:proto/dat/json.org][proto/dat/json]]       | 2025-03-03 20:12:00 |
-| [[file:proto/dat/m3u.org][proto/dat/m3u]]        | 2025-04-05 20:26:20 |
-| [[file:proto/dat/parquet.org][proto/dat/parquet]]    | 2025-02-21 22:32:39 |
-| [[file:proto/dat/rdf.org][proto/dat/rdf]]        | 2025-02-21 22:32:42 |
-| [[file:proto/dat/sigmf.org][proto/dat/sigmf]]      | 2025-02-21 22:32:46 |
-| [[file:proto/dat/syslog.org][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
-| [[file:proto/dat/xml.org][proto/dat/xml]]        | 2025-04-15 18:24:20 |
-| [[file:proto/desktop.org][proto/desktop]]        | 2025-07-26 02:28:46 |
-| [[file:proto/font.org][proto/font]]           | 2025-06-28 14:44:28 |
-| [[file:proto/ietf.org][proto/ietf]]           | 2025-06-17 23:18:36 |
-| [[file:proto/iso.org][proto/iso]]            | 2025-10-05 22:35:50 |
-| [[file:proto/mail.org][proto/mail]]           | 2025-04-15 15:52:45 |
-| [[file:proto/math.org][proto/math]]           | 2025-05-08 20:42:15 |
-| [[file:proto/media/audio.org][proto/media/audio]]    | 2025-09-12 19:30:46 |
-| [[file:proto/media/image.org][proto/media/image]]    | 2025-07-18 23:47:28 |
-| [[file:proto/media/matroska.org][proto/media/matroska]] | 2025-04-15 15:15:25 |
-| [[file:proto/media/xiph.org][proto/media/xiph]]     | 2025-04-07 17:12:30 |
-| [[file:proto/metal.org][proto/metal]]          | 2025-04-12 17:32:01 |
-| [[file:proto/net/bonjour.org][proto/net/bonjour]]    | 2025-09-12 19:27:04 |
-| [[file:proto/net/dns.org][proto/net/dns]]        | 2025-03-03 15:48:04 |
-| [[file:proto/net/iot.org][proto/net/iot]]        | 2025-09-13 15:58:13 |
-| [[file:proto/net/ip.org][proto/net/ip]]         | 2025-03-03 15:48:07 |
-| [[file:proto/net/iscsi.org][proto/net/iscsi]]      | 2025-09-19 19:08:17 |
-| [[file:proto/net/lora.org][proto/net/lora]]       | 2025-09-18 21:44:32 |
-| [[file:proto/net/p2p.org][proto/net/p2p]]        | 2025-09-19 19:12:08 |
-| [[file:proto/net/ssh.org][proto/net/ssh]]        | 2025-06-05 18:32:19 |
-| [[file:proto/net/tcp.org][proto/net/tcp]]        | 2025-09-30 15:51:39 |
-| [[file:proto/net/tls.org][proto/net/tls]]        | 2025-07-20 21:42:01 |
-| [[file:proto/net/udp.org][proto/net/udp]]        | 2025-09-30 15:55:18 |
-| [[file:proto/net/vpn.org][proto/net/vpn]]        | 2025-09-30 16:41:04 |
-| [[file:proto/nist.org][proto/nist]]           | 2025-07-20 21:43:41 |
-| [[file:proto/opengroup.org][proto/opengroup]]      | 2025-10-03 12:30:24 |
-| [[file:proto/unix.org][proto/unix]]           | 2025-04-15 15:51:44 |
-| [[file:proto/web.org][proto/web]]            | 2025-10-03 12:30:21 |
-| [[file:readme.org][readme]]               | 2025-10-04 22:09:29 |
-| [[file:refs.org][refs]]                 | 2025-03-07 10:04:41 |
-| [[file:sys/bin.org][sys/bin]]              | 2025-08-09 00:52:09 |
-| [[file:sys/db.org][sys/db]]               | 2025-06-09 16:59:15 |
-| [[file:sys/fs.org][sys/fs]]               | 2025-03-03 14:49:54 |
-| [[file:sys/ide.org][sys/ide]]              | 2025-05-10 23:10:39 |
-| [[file:sys/mem.org][sys/mem]]              | 2025-06-03 22:03:01 |
-| [[file:sys/srv.org][sys/srv]]              | 2025-06-22 00:23:09 |
-| [[file:sys/term.org][sys/term]]             | 2025-04-11 21:40:34 |
-| [[file:sys/vcs.org][sys/vcs]]              | 2025-07-10 18:10:44 |
-| [[file:sys/virt.org][sys/virt]]             | 2025-04-16 18:37:12 |
-| [[file:theory/ai.org][theory/ai]]            | 2025-08-17 21:31:09 |
-| [[file:theory/compiler.org][theory/compiler]]      | 2025-05-08 21:14:51 |
-| [[file:theory/econ.org][theory/econ]]          | 2025-03-06 14:27:18 |
-| [[file:theory/hacking.org][theory/hacking]]       | 2025-04-06 17:53:48 |
-| [[file:theory/money.org][theory/money]]         | 2025-03-15 14:46:36 |
-| [[file:theory/plt.org][theory/plt]]           | 2025-03-06 16:35:28 |
-| [[file:theory/process.org][theory/process]]       | 2025-05-10 16:41:40 |
-| [[file:theory/style.org][theory/style]]         | 2025-02-27 17:04:03 |
-| [[file:theory/system.org][theory/system]]        | 2025-08-17 21:38:37 |
-| [[file:web/data.org][web/data]]             | 2025-06-02 22:21:32 |
-| [[file:web/sites.org][web/sites]]            | 2025-09-13 15:59:33 |
+| [[https://otom8.dev/graph/comp/sbcl.html][comp/sbcl]]            | 2025-10-09 20:40:40 |
+| [[https://otom8.dev/graph/lang/forth.html][lang/forth]]           | 2025-10-10 18:15:11 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-10 19:44:31 |
+| [[https://otom8.dev/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
+| [[https://otom8.dev/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
+| [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-08-19 18:17:36 |
+| [[https://otom8.dev/graph/app/gnu-radio.html][app/gnu-radio]]        | 2025-03-03 18:15:21 |
+| [[https://otom8.dev/graph/app/mail.html][app/mail]]             | 2025-04-15 18:24:21 |
+| [[https://otom8.dev/graph/app/media.html][app/media]]            | 2025-04-18 19:33:21 |
+| [[https://otom8.dev/graph/app/net.html][app/net]]              | 2025-10-07 17:12:02 |
+| [[https://otom8.dev/graph/app/package-manager.html][app/package-manager]]  | 2025-10-07 17:11:49 |
+| [[https://otom8.dev/graph/app/podman.html][app/podman]]           | 2025-09-19 18:56:27 |
+| [[https://otom8.dev/graph/app/qemu.html][app/qemu]]             | 2025-10-07 17:12:09 |
+| [[https://otom8.dev/graph/app/term.html][app/term]]             | 2025-10-07 17:26:15 |
+| [[https://otom8.dev/graph/app/vi.html][app/vi]]               | 2025-05-10 23:09:51 |
+| [[https://otom8.dev/graph/comp/ecl.html][comp/ecl]]             | 2025-03-09 15:44:39 |
+| [[https://otom8.dev/graph/comp/gcc.html][comp/gcc]]             | 2025-08-09 00:58:05 |
+| [[https://otom8.dev/graph/comp/ghc.html][comp/ghc]]             | 2025-02-21 22:34:46 |
+| [[https://otom8.dev/graph/comp/llvm.html][comp/llvm]]            | 2025-03-03 16:41:14 |
+| [[https://otom8.dev/graph/hw/amd.html][hw/amd]]               | 2025-06-09 17:13:00 |
+| [[https://otom8.dev/graph/hw/apple.html][hw/apple]]             | 2025-03-03 20:34:42 |
+| [[https://otom8.dev/graph/hw/avr.html][hw/avr]]               | 2025-08-09 01:07:47 |
+| [[https://otom8.dev/graph/hw/car.html][hw/car]]               | 2025-02-21 22:34:16 |
+| [[https://otom8.dev/graph/hw/cpu.html][hw/cpu]]               | 2025-06-09 17:14:12 |
+| [[https://otom8.dev/graph/hw/fpga.html][hw/fpga]]              | 2025-10-07 17:11:41 |
+| [[https://otom8.dev/graph/hw/gpu.html][hw/gpu]]               | 2025-04-15 15:54:27 |
+| [[https://otom8.dev/graph/hw/gsg.html][hw/gsg]]               | 2025-02-21 22:34:24 |
+| [[https://otom8.dev/graph/hw/home.html][hw/home]]              | 2025-03-12 21:08:35 |
+| [[https://otom8.dev/graph/hw/honda.html][hw/honda]]             | 2025-02-21 22:34:27 |
+| [[https://otom8.dev/graph/hw/hydrabus.html][hw/hydrabus]]          | 2025-02-21 22:34:29 |
+| [[https://otom8.dev/graph/hw/intel.html][hw/intel]]             | 2025-03-03 11:45:39 |
+| [[https://otom8.dev/graph/hw/kbd.html][hw/kbd]]               | 2025-10-01 20:35:48 |
+| [[https://otom8.dev/graph/hw/material.html][hw/material]]          | 2025-06-07 17:33:12 |
+| [[https://otom8.dev/graph/hw/nvidia.html][hw/nvidia]]            | 2025-03-03 14:47:56 |
+| [[https://otom8.dev/graph/hw/pine64.html][hw/pine64]]            | 2025-04-15 16:02:06 |
+| [[https://otom8.dev/graph/hw/samsung.html][hw/samsung]]           | 2025-02-21 22:34:37 |
+| [[https://otom8.dev/graph/hw/shop.html][hw/shop]]              | 2025-06-04 15:42:47 |
+| [[https://otom8.dev/graph/hw/storage.html][hw/storage]]           | 2025-06-03 22:06:35 |
+| [[https://otom8.dev/graph/hw/studio.html][hw/studio]]            | 2025-08-12 12:37:44 |
+| [[https://otom8.dev/graph/hw/travel.html][hw/travel]]            | 2025-03-12 21:08:20 |
+| [[https://otom8.dev/graph/lang/apl.html][lang/apl]]             | 2025-10-07 17:11:16 |
+| [[https://otom8.dev/graph/lang/asm.html][lang/asm]]             | 2025-10-07 17:10:58 |
+| [[https://otom8.dev/graph/lang/basic.html][lang/basic]]           | 2025-02-27 17:01:01 |
+| [[https://otom8.dev/graph/lang/c.html][lang/c]]               | 2025-10-07 17:09:44 |
+| [[https://otom8.dev/graph/lang/cobol.html][lang/cobol]]           | 2025-03-07 22:57:10 |
+| [[https://otom8.dev/graph/lang/erlang.html][lang/erlang]]          | 2025-03-03 21:04:21 |
+| [[https://otom8.dev/graph/lang/fortran.html][lang/fortran]]         | 2025-10-07 17:11:30 |
+| [[https://otom8.dev/graph/lang/haskell.html][lang/haskell]]         | 2025-03-03 20:09:12 |
+| [[https://otom8.dev/graph/lang/java.html][lang/java]]            | 2025-03-03 20:43:11 |
+| [[https://otom8.dev/graph/lang/javascript.html][lang/javascript]]      | 2025-10-07 17:11:12 |
+| [[https://otom8.dev/graph/lang/julia.html][lang/julia]]           | 2025-06-09 15:05:43 |
+| [[https://otom8.dev/graph/lang/lisp.html][lang/lisp]]            | 2025-10-07 17:10:37 |
+| [[https://otom8.dev/graph/lang/ml.html][lang/ml]]              | 2025-10-07 17:29:56 |
+| [[https://otom8.dev/graph/lang/python.html][lang/python]]          | 2025-06-23 18:51:58 |
+| [[https://otom8.dev/graph/lang/query.html][lang/query]]           | 2025-03-04 18:38:23 |
+| [[https://otom8.dev/graph/lang/rust.html][lang/rust]]            | 2025-10-07 17:10:47 |
+| [[https://otom8.dev/graph/lang/shell.html][lang/shell]]           | 2025-08-17 21:30:22 |
+| [[https://otom8.dev/graph/lang/smalltalk.html][lang/smalltalk]]       | 2025-03-03 21:05:21 |
+| [[https://otom8.dev/graph/lang/swift.html][lang/swift]]           | 2025-03-07 22:57:38 |
+| [[https://otom8.dev/graph/lang/zig.html][lang/zig]]             | 2025-03-02 21:00:36 |
+| [[https://otom8.dev/graph/math/algebra.html][math/algebra]]         | 2025-05-27 20:12:36 |
+| [[https://otom8.dev/graph/math/algo.html][math/algo]]            | 2025-05-08 20:19:53 |
+| [[https://otom8.dev/graph/math/calc.html][math/calc]]            | 2025-05-26 19:16:01 |
+| [[https://otom8.dev/graph/math/compsci.html][math/compsci]]         | 2025-06-28 15:49:52 |
+| [[https://otom8.dev/graph/math/dsp.html][math/dsp]]             | 2025-03-30 01:08:05 |
+| [[https://otom8.dev/graph/math/geo.html][math/geo]]             | 2025-05-26 18:57:04 |
+| [[https://otom8.dev/graph/math/logic.html][math/logic]]           | 2025-05-07 17:01:02 |
+| [[https://otom8.dev/graph/math/ml.html][math/ml]]              | 2025-02-21 22:33:20 |
+| [[https://otom8.dev/graph/math/notation.html][math/notation]]        | 2025-05-26 19:34:05 |
+| [[https://otom8.dev/graph/math/num.html][math/num]]             | 2025-09-29 13:28:20 |
+| [[https://otom8.dev/graph/math/physics.html][math/physics]]         | 2025-03-03 18:15:06 |
+| [[https://otom8.dev/graph/math/stat.html][math/stat]]            | 2025-02-28 18:22:16 |
+| [[https://otom8.dev/graph/math/struct.html][math/struct]]          | 2025-06-23 18:38:45 |
+| [[https://otom8.dev/graph/notes.html][notes]]                | 2025-03-25 15:23:42 |
+| [[https://otom8.dev/graph/os/mac.html][os/mac]]               | 2025-03-03 18:06:20 |
+| [[https://otom8.dev/graph/os/mainframe.html][os/mainframe]]         | 2025-03-04 19:43:31 |
+| [[https://otom8.dev/graph/os/unix.html][os/unix]]              | 2025-10-07 17:12:13 |
+| [[https://otom8.dev/graph/os/win.html][os/win]]               | 2025-03-03 18:51:19 |
+| [[https://otom8.dev/graph/proto/ansi.html][proto/ansi]]           | 2025-04-12 15:48:34 |
+| [[https://otom8.dev/graph/proto/color.html][proto/color]]          | 2025-06-23 20:17:55 |
+| [[https://otom8.dev/graph/proto/crypto.html][proto/crypto]]         | 2025-07-31 11:39:25 |
+| [[https://otom8.dev/graph/proto/dat/config.html][proto/dat/config]]     | 2025-05-26 00:52:46 |
+| [[https://otom8.dev/graph/proto/dat/cue.html][proto/dat/cue]]        | 2025-04-15 15:09:37 |
+| [[https://otom8.dev/graph/proto/dat/deflate.html][proto/dat/deflate]]    | 2025-05-26 00:53:45 |
+| [[https://otom8.dev/graph/proto/dat/json.html][proto/dat/json]]       | 2025-03-03 20:12:00 |
+| [[https://otom8.dev/graph/proto/dat/m3u.html][proto/dat/m3u]]        | 2025-04-05 20:26:20 |
+| [[https://otom8.dev/graph/proto/dat/parquet.html][proto/dat/parquet]]    | 2025-02-21 22:32:39 |
+| [[https://otom8.dev/graph/proto/dat/rdf.html][proto/dat/rdf]]        | 2025-02-21 22:32:42 |
+| [[https://otom8.dev/graph/proto/dat/sigmf.html][proto/dat/sigmf]]      | 2025-02-21 22:32:46 |
+| [[https://otom8.dev/graph/proto/dat/syslog.html][proto/dat/syslog]]     | 2025-03-04 17:26:02 |
+| [[https://otom8.dev/graph/proto/dat/xml.html][proto/dat/xml]]        | 2025-04-15 18:24:20 |
+| [[https://otom8.dev/graph/proto/desktop.html][proto/desktop]]        | 2025-07-26 02:28:46 |
+| [[https://otom8.dev/graph/proto/font.html][proto/font]]           | 2025-06-28 14:44:28 |
+| [[https://otom8.dev/graph/proto/ietf.html][proto/ietf]]           | 2025-06-17 23:18:36 |
+| [[https://otom8.dev/graph/proto/iso.html][proto/iso]]            | 2025-10-05 22:35:50 |
+| [[https://otom8.dev/graph/proto/mail.html][proto/mail]]           | 2025-04-15 15:52:45 |
+| [[https://otom8.dev/graph/proto/math.html][proto/math]]           | 2025-05-08 20:42:15 |
+| [[https://otom8.dev/graph/proto/media/audio.html][proto/media/audio]]    | 2025-09-12 19:30:46 |
+| [[https://otom8.dev/graph/proto/media/image.html][proto/media/image]]    | 2025-07-18 23:47:28 |
+| [[https://otom8.dev/graph/proto/media/matroska.html][proto/media/matroska]] | 2025-04-15 15:15:25 |
+| [[https://otom8.dev/graph/proto/media/xiph.html][proto/media/xiph]]     | 2025-04-07 17:12:30 |
+| [[https://otom8.dev/graph/proto/metal.html][proto/metal]]          | 2025-10-07 17:12:52 |
+| [[https://otom8.dev/graph/proto/net/bonjour.html][proto/net/bonjour]]    | 2025-09-12 19:27:04 |
+| [[https://otom8.dev/graph/proto/net/dns.html][proto/net/dns]]        | 2025-03-03 15:48:04 |
+| [[https://otom8.dev/graph/proto/net/iot.html][proto/net/iot]]        | 2025-09-13 15:58:13 |
+| [[https://otom8.dev/graph/proto/net/ip.html][proto/net/ip]]         | 2025-03-03 15:48:07 |
+| [[https://otom8.dev/graph/proto/net/iscsi.html][proto/net/iscsi]]      | 2025-10-07 17:12:45 |
+| [[https://otom8.dev/graph/proto/net/lora.html][proto/net/lora]]       | 2025-09-18 21:44:32 |
+| [[https://otom8.dev/graph/proto/net/p2p.html][proto/net/p2p]]        | 2025-09-19 19:12:08 |
+| [[https://otom8.dev/graph/proto/net/ssh.html][proto/net/ssh]]        | 2025-06-05 18:32:19 |
+| [[https://otom8.dev/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-10-07 17:12:34 |
+| [[https://otom8.dev/graph/proto/net/tls.html][proto/net/tls]]        | 2025-10-07 17:12:41 |
+| [[https://otom8.dev/graph/proto/net/udp.html][proto/net/udp]]        | 2025-09-30 15:55:18 |
+| [[https://otom8.dev/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-09-30 16:41:04 |
+| [[https://otom8.dev/graph/proto/nist.html][proto/nist]]           | 2025-07-20 21:43:41 |
+| [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
+| [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
+| [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-03 12:30:21 |
+| [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-03-07 10:04:41 |
+| [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-08-09 00:52:09 |
+| [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |
+| [[https://otom8.dev/graph/sys/fs.html][sys/fs]]               | 2025-03-03 14:49:54 |
+| [[https://otom8.dev/graph/sys/ide.html][sys/ide]]              | 2025-05-10 23:10:39 |
+| [[https://otom8.dev/graph/sys/mem.html][sys/mem]]              | 2025-06-03 22:03:01 |
+| [[https://otom8.dev/graph/sys/srv.html][sys/srv]]              | 2025-06-22 00:23:09 |
+| [[https://otom8.dev/graph/sys/term.html][sys/term]]             | 2025-04-11 21:40:34 |
+| [[https://otom8.dev/graph/sys/vcs.html][sys/vcs]]              | 2025-10-07 17:12:49 |
+| [[https://otom8.dev/graph/sys/virt.html][sys/virt]]             | 2025-04-16 18:37:12 |
+| [[https://otom8.dev/graph/theory/ai.html][theory/ai]]            | 2025-10-07 17:08:27 |
+| [[https://otom8.dev/graph/theory/compiler.html][theory/compiler]]      | 2025-05-08 21:14:51 |
+| [[https://otom8.dev/graph/theory/econ.html][theory/econ]]          | 2025-03-06 14:27:18 |
+| [[https://otom8.dev/graph/theory/hacking.html][theory/hacking]]       | 2025-04-06 17:53:48 |
+| [[https://otom8.dev/graph/theory/money.html][theory/money]]         | 2025-03-15 14:46:36 |
+| [[https://otom8.dev/graph/theory/plt.html][theory/plt]]           | 2025-03-06 16:35:28 |
+| [[https://otom8.dev/graph/theory/process.html][theory/process]]       | 2025-05-10 16:41:40 |
+| [[https://otom8.dev/graph/theory/style.html][theory/style]]         | 2025-02-27 17:04:03 |
+| [[https://otom8.dev/graph/theory/system.html][theory/system]]        | 2025-08-17 21:38:37 |
+| [[https://otom8.dev/graph/web/data.html][web/data]]             | 2025-10-07 15:08:08 |
+| [[https://otom8.dev/graph/web/sites.html][web/sites]]            | 2025-10-07 15:35:05 |
 
 #+END:
+
+#+call: org-graph-ui()
+
+#+RESULTS:
+#+begin_export html
+<div id='3d-graph'></div>
+
+<script type='module'>
+    import { CSS2DRenderer, CSS2DObject } from 'https://esm.sh/three/examples/jsm/renderers/CSS2DRenderer.js';
+    const Graph = new ForceGraph3D(document.getElementById('3d-graph'),
+      { extraRenderers: [new CSS2DRenderer()] })
+      .jsonUrl('https://cdn.otom8.dev/data/org-graph.json')
+      .nodeId('id')
+      .nodeLabel('id')
+      .nodeAutoColorBy('path')
+      .linkSource('in')
+      .linkTarget('out')
+    .nodeThreeObject(node => {
+      const e = document.createElement('a');
+      e.href = node.path;
+      e.textContent = node.name;
+      e.style.color = node.color;
+      e.className = 'node-label';
+      return new CSS2DObject(e);
+    })
+    .onNodeClick(node => { window.open(node.path); })
+    .nodeThreeObjectExtend(true);
+    Graph.d3Force('charge').strength(-140);
+  </script>
+#+end_export

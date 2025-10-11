@@ -16,6 +16,76 @@
   (vm/master.h) no longer exists on the master branch.
 - [[https://www.pbm.com/~lindahl/real.programmers.html][Real Programmers Don't Use Pascal]]
 - [[https://piembsystech.com/assembly-and-machine-code-interfacing-in-forth-programming/][Assembly and Machine Code Interfacing in Forth Programming - PiEmbSysTech]]
+- [[https://forth-standard.org/standard/testsuite][Annex F: Test Suite]]
+  - test harness: http://www.forth200x.org/tests/ttester.fs
+  - tests [[https://github.com/gerryjackson/forth2012-test-suite/][gerryjackson/forth2012-test-suite: Test programs for Forth 2012 and ANS Forth]]
+:notes:
+_implementation/_
+- data stack - one-cell wide
+- control-flow stack
+- return stack - one or more cells
+  - rules:
+    #+begin_quote
+    A program shall not access values on the return stack (using R@,
+    R>, 2R@, 2R> or NR>) that it did not place there using >R, 2>R or
+    N>R;
+
+    A program shall not access from within a do-loop values placed on
+    the return stack before the loop was entered;
+
+    All values placed on the return stack within a do-loop shall be
+    removed before I, J, LOOP, +LOOP, UNLOOP, or LEAVE is executed;
+
+    All values placed on the return stack within a definition shall be
+    removed before the definition is terminated or before EXIT is
+    executed.
+    #+end_quote
+
+    #+begin_quote
+    Forth words are organized into a structure called the
+    dictionary. While the form of this structure is not specified by
+    the standard, it can be described as consisting of three logical
+    parts: a name space, a code space, and a data space. The logical
+    separation of these parts does not require their physical
+    separation.
+
+    A program shall not fetch from or store into locations outside
+    data space. An ambiguous condition exists if a program addresses
+    name space or code spac
+    #+end_quote
+    
+    names = 1-31 chars
+
+    #+begin_quote
+    The relationship between code space and data space is
+    implementation dependent.
+
+
+    Data space is the only logical area of the dictionary for which
+    standard words are provided to allocate and access regions of
+    memory. These regions are: contiguous regions, variables,
+    text-literal regions, input buffers, and other transient regions,
+    each of which is described in the following sections. A program
+    may read from or write into these regions unless otherwise
+    specified.
+    #+end_quote
+
+  - text-interpreter (repl) = 3.4
+
+  - syntax
+  #+begin_quote
+  Forth has a simple, operator-ordered syntax. The phrase A B C
+  returns values as if A were executed first, then B and finally
+  C. Words that cause deviations from this linear flow of control are
+  called control-flow words. Combinations of control-flow words whose
+  stack effects are compatible form control-flow structures. Examples
+  of typical use are given for each control-flow word in Annex A.
+
+  Forth syntax is extensible; for example, new control-flow words can
+  be defined in terms of existing ones. This standard does not require
+  a syntax or program-construct checker.
+  #+end_quote
+:end:
 ** gforth
 :PROPERTIES:
 :ID:       c8359e6e-401b-4c7a-915f-98dc2759c995

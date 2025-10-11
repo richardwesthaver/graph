@@ -1434,6 +1434,20 @@ problem to design an effective tree-shaker.
 :ID:       0c2908c2-69d0-4866-b225-3d7eec026b76
 :CREATED:  <2025-02-11 Tue 20:55>
 :END:
+:notes:
+- errors are returned instead of returning -1 and setting =errno=
+  (like in C)
+  - all errors subclass =sb-bsd-sockets:socket-condition=
+- MRVs in many places intead of pass-by-reference in C
+- IPv4 is a 4 byte vector =inet-socket=
+- IPv6 is a 16 byte vector =inet6-socket= (not subclass of =inet-socket=, =socket= is the superclass)
+- ports are integers
+- sockets are two values for address and port (=(socket-connect socket #(127 0 0 1) 80)=)
+- a local (unix) socket address is a string used to create a node in
+  the local filesystem (=local-socket=)
+  - A =local-abstract-socket= is similar but no corresponding filesystem node
+- nameservice is implemented by calling out to =getaddrinfo= and =gethostinfo=
+:end:
 #+begin_src lisp
 (defvar *protocols*
   `((:tcp ,sockint::ipproto_tcp "tcp" "TCP")
@@ -1444,6 +1458,16 @@ problem to design an effective tree-shaker.
     (:igmp ,sockint::ipproto_igmp "igmp" "IGMP")
     (:raw ,sockint::ipproto_raw "raw" "RAW")))
 #+end_src
+
+#+begin_quote
+The =sb-bsd-sockets= module provides a thinly disguised BSD socket API
+for SBCL. Ideas have been stolen from the BSD socket API for C and
+Graham Barr's IO::Socket classes for Perl.
+
+Sockets are represented as CLOS objects, and the API naming
+conventions attempt to balance between the BSD names and good lisp
+style.
+#+end_quote
 *** sb-cltl2
 :PROPERTIES:
 :ID:       d2269803-9084-4845-8860-047c37da36c7
