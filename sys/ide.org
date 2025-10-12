@@ -1,4 +1,6 @@
 #+title: Integrated Development Environments
+#+setupfile: ../../clean.theme
+#+filetags: ide
 * IDE
 :PROPERTIES:
 :ID:       eddaae08-a0c1-4413-9f0a-804f663ae176

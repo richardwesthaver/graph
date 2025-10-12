@@ -6,6 +6,9 @@
 :ID:       8ff74861-a0bc-49e1-83eb-3a32f8f8fb78
 :CREATED:  <2025-02-15 Sat 16:31>
 :END:
+:EDGES:
+[2025-10-11 Sat 21:59] -- [[man:file-hierarchy][man]]
+:END:
 #+cite_export: csl
 #+print_bibliography:
 ** BTRFS                                                              :btrfs:
@@ -169,4 +172,36 @@ servers. This entails challenges on many different fronts.
 :END:
 -- [cite/t/f:@zfs]
 - core component of TrueNAS software
-
+** XFS
+:PROPERTIES:
+:ID:       a5dab699-aa5f-4862-a733-90e62efbeaf4
+:CREATED:  <2025-10-11 Sat 21:59>
+:END:
+:EDGES:
+[2025-10-11 Sat 22:00] -- [[wikipedia:XFS][wiki]]
+[2025-10-11 Sat 22:00] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs][Chapter 3. The XFS File System | Storage Administration Guide | Red Hat Enterprise Linux | 7 | Red Hat Documentation]]
+[2025-10-11 Sat 22:00] -- [[https://linuxvox.com/blog/linux-xfs/#google_vignette][Unveiling the Power of Linux XFS: A Comprehensive Guide — linuxvox.com]]
+:END:
+XFS is a high-performance 64-bit journaling file system created by
+Silicon Graphics, Inc (SGI) in 1993.
+** ext4
+:PROPERTIES:
+:ID:       a879d61f-2ac0-4755-8e1b-c80b2477bbd6
+:CREATED:  <2025-10-11 Sat 22:01>
+:END:
+:EDGES:
+[2025-10-11 Sat 22:01] -- [[wikipedia:Ext4][wiki]]
+:END:
+ext4 (fourth extended filesystem) is a journaling file system for
+Linux, developed as the successor to ext3.
+** bcachefs
+:PROPERTIES:
+:ID:       55db3738-f09f-46d6-99e3-be4232cc14ad
+:CREATED:  <2025-10-11 Sat 22:02>
+:END:
+:EDGES:
+[2025-10-11 Sat 22:02] -- [[https://bcachefs.org/][bcachefs]]
+[2025-10-11 Sat 22:03] -- [[archwiki:bcachefs][archwiki]]
+:END:
+Another COW, more robust and fresher impl than BTRFS
+- [[https://linuxiac.com/torvalds-drops-bcachefs-from-linux-6-17-amid-maintainer-dispute/][Torvalds Drops Bcachefs from Linux 6.17 Amid Maintainer Dispute]]

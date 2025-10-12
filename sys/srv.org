@@ -9,7 +9,136 @@
 [2025-02-16 Sun 18:52] -- [[https://en.wikipedia.org/wiki/Init][init - Wikipedia]]
 :END:
 SystemV -> systemd, OpenRC
-** systemd                                                          :systemd:
+* Daemons
+:PROPERTIES:
+:ID:       65e192ad-9468-4c16-884a-470a2930471e
+:CREATED:  <2025-10-11 Sat 21:50>
+:END:
+:EDGES:
+[2025-10-11 Sat 21:52] -- [[man:daemon][man]]
+:END:
+- [[https://pavaka.github.io/simple-linux-daemon-tutorial/][Simple Linux Daemon Tutorial - Hello, world! I'm Pavel Dimitrov]]
+- SysV is old-style, Systemd is new-style
+  - see recommendations section, similar but not identical to Apple
+    MacOS X Daemon Requirements.
+#+begin_quote
+It is recommended for new-style daemons to implement the
+following:
+
+ 1. If applicable, the daemon should notify the service manager
+    about startup completion or status updates via the
+    sd_notify(3) interface, in particular READY=1 and STATUS=....
+
+ 2. If SIGTERM is received, shut down the daemon and exit cleanly.
+    A STOPPING=1 notification should be sent via sd_notify(3).
+
+ 3. If SIGHUP is received, reload the configuration files, if this
+    applies. This should be combined with notifications via
+    sd_notify(3): RELOADING=1 and READY=1.
+
+ 4. Provide a correct exit code from the main daemon process, as
+    this is used by the service manager to detect service errors
+    and problems. It is recommended to follow the exit code scheme
+    as defined in the LSB recommendations for SysV init
+    scripts[1].
+
+ 5. If possible and applicable, expose the daemon's control
+    interface via the D-Bus IPC system and grab a bus name as last
+    step of initialization.
+
+ 6. For integration in systemd, provide a .service unit file that
+    carries information about starting, stopping and otherwise
+    maintaining the daemon. See systemd.service(5) for details.
+
+ 7. As much as possible, rely on the service manager's
+    functionality to limit the access of the daemon to files,
+    services, and other resources, i.e. in the case of systemd,
+    rely on systemd's resource limit control instead of
+    implementing your own, rely on systemd's privilege dropping
+    code instead of implementing it in the daemon, and so on. See
+    systemd.exec(5) for the available controls.
+
+ 8. If D-Bus is used, make your daemon bus-activatable by
+    supplying a D-Bus service activation configuration file. This
+    has multiple advantages: your daemon may be started lazily
+    on-demand; it may be started in parallel to other daemons
+    requiring it — which maximizes parallelization and boot-up
+    speed; your daemon can be restarted on failure without losing
+    any bus requests, as the bus queues requests for activatable
+    services. See below for details.
+
+ 9. If your daemon provides services to other local processes or
+    remote clients via a socket, it should be made
+    socket-activatable following the scheme pointed out below.
+    Like D-Bus activation, this enables on-demand starting of
+    services as well as it allows improved parallelization of
+    service start-up. Also, for state-less protocols (such as
+    syslog, DNS), a daemon implementing socket-based activation
+    can be restarted without losing a single request. See below
+    for details.
+
+10. If the service opens sockets or other files on it own, and
+    those file descriptors shall survive a restart, the daemon
+    should store them in the service manager via sd_notify(3) with
+    FDSTORE=1.
+
+11. Instead of using the syslog() call to log directly to the
+    system syslog service, a new-style daemon may choose to simply
+    log to standard error via fprintf(), which is then forwarded
+    to syslog. If log levels are necessary, these can be encoded
+    by prefixing individual log lines with strings like "<4>" (for
+    log level 4 "WARNING" in the syslog priority scheme),
+    following a similar style as the Linux kernel's printk() level
+    system. For details, see sd-daemon(3) and systemd.exec(5).
+
+12. As new-style daemons are invoked without a controlling TTY
+    (but as their own session leaders) care should be taken to
+    always specify O_NOCTTY on open(2) calls that possibly
+    reference a TTY device node, so that no controlling TTY is
+    accidentally acquired.
+#+end_quote
+- _activation options_
+  - on boot
+  - socket-based
+  - bus-based
+  - path-based
+  - timer-based
+  - misc
+systemd unit file reccs:
+#+begin_quote
+1. If possible, do not use the Type=forking setting in service
+   files. But if you do, make sure to set the PID file path using
+   PIDFile=. See systemd.service(5) for details.
+
+2. If your daemon registers a D-Bus name on the bus, make sure to
+   use Type=dbus in the service file if possible.
+
+3. Make sure to set a good human-readable description string with
+   Description=.
+
+4. Do not disable DefaultDependencies=, unless you really know
+   what you do and your unit is involved in early boot or late
+   system shutdown.
+
+5. Normally, little if any dependencies should need to be defined
+   explicitly. However, if you do configure explicit
+   dependencies, only refer to unit names listed on
+   systemd.special(7) or names introduced by your own package to
+   keep the unit file operating system-independent.
+
+6. Make sure to include an [Install] section including
+   installation information for the unit file. See
+   systemd.unit(5) for details. To activate your service on boot,
+   make sure to add a WantedBy=multi-user.target or
+   WantedBy=graphical.target directive. To activate your socket
+   on boot, make sure to add WantedBy=sockets.target. Usually,
+   you also want to make sure that when your service is
+   installed, your socket is installed too, hence add
+   Also=foo.socket in your service file foo.service, for a
+   hypothetical program foo.
+#+end_quote
+
+** Systemd                                                          :systemd:
 :PROPERTIES:
 :ID:       27dd8c6f-e018-4c91-9113-325be8ee483a
 :CREATED:  <2025-02-16 Sun 18:55>
@@ -19,6 +148,7 @@ SystemV -> systemd, OpenRC
 [2025-02-16 Sun 18:55] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.html#][systemd]]
 [2025-06-22 Sun 00:21] <- [[id:0dcb6857-91e1-4319-ad00-97c742604593][systemd-udevd.service]]
 :END:
+- [[https://blog.alphabravo.io/systemd-zero-to-hero-part-1-understanding-the-modern-linux-init-system/][Systemd: Zero to Hero – Part 1: Understanding the Modern Linux Init System]]
 *** Units
 :PROPERTIES:
 :ID:       5fb03f4f-e7ba-47fe-a502-185348417aa4
@@ -83,4 +213,12 @@ service unit. See the respective man pages for more information:
 :END:
 :EDGES:
 [2025-03-11 Tue 21:48] -- [[https://systemd.io/CREDENTIALS/][Credentials]]
+:END:
+** GNU Shepherd
+:PROPERTIES:
+:ID:       c98f568b-46d1-4a82-9322-caa73cc0a38a
+:CREATED:  <2025-10-11 Sat 21:50>
+:END:
+:EDGES:
+[2025-10-11 Sat 21:50] -- [[https://www.gnu.org/software/shepherd/][The GNU Shepherd]]
 :END:

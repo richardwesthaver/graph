@@ -1,4 +1,6 @@
 #+title: Binary
+#+setupfile: ../../clean.theme
+#+filetags: bin
 * GNU Binutils
 :PROPERTIES:
 :ID:       a5dbd081-a23f-4a78-b2dd-f32af6eba984

@@ -1,4 +1,6 @@
 #+title: Terminals
+#+setupfile: ../../clean.theme
+#+filetags: term
 * Terminal
 :PROPERTIES:
 :ID:       b5f81528-c53c-49f2-b1c4-68d886b65408
