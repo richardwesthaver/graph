@@ -263,6 +263,12 @@ Emacs Unified Directory Client
 #+RESULTS:
 : [x = a + (b - a) / 2, y = (a - b) / 2]
 
+** dictionary
+:PROPERTIES:
+:ID:       c344fc40-d6d8-4553-885b-fe8c55d6aa98
+:CREATED:  <2025-10-11 Sat 22:36>
+:END:
+- see also [[https://www.masteringemacs.org/article/wordsmithing-in-emacs][Wordsmithing in Emacs - Mastering Emacs]]
 ** SES
 :PROPERTIES:
 :ID:       c40383a3-c717-43c6-8188-e2a564a641a1
@@ -360,4 +366,25 @@ Parse org-todo headlines to use org-tables as Kanban tables
 :END:
 :EDGES:
 [2025-03-03 Mon 13:44] -- [[https://beepb00p.xyz/cloudmacs.html][Cloudmacs: Emacs in your web browser | beepb00p]]
+:END:
+** Blogs
+:PROPERTIES:
+:ID:       4d72736e-f3c1-4b6f-839d-474710771d78
+:CREATED:  <2025-10-11 Sat 22:33>
+:END:
+*** Mastering Emacs
+:PROPERTIES:
+:ID:       cf98496a-d864-4878-8401-ffaa73aa7d04
+:CREATED:  <2025-10-11 Sat 22:33>
+:END:
+:EDGES:
+[2025-10-11 Sat 22:34] -- [[https://www.masteringemacs.org/][Mastering Emacs]]
+:END:
+*** Sacha Chua
+:PROPERTIES:
+:ID:       c6d79f1d-e5bd-479e-82fa-20df7e5dd83f
+:CREATED:  <2025-10-11 Sat 22:34>
+:END:
+:EDGES:
+[2025-10-11 Sat 22:34] -- [[https://sachachua.com/][Home :: Sacha Chua]]
 :END:

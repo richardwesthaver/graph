@@ -4,7 +4,7 @@
 #+email: richard.westhaver@gmail.com
 #+html_link_up: ..
 #+setupfile: ../clean.theme
-#+html_head: <script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+#+html_head: <script src="https://cdn.otom8.dev/js/3d-force-graph.mjs"></script>
 #+html_head:  <style>
 #+html_head: .node-label {
 #+html_head:      font-size: 0.5em;
@@ -27,8 +27,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 971 |
-| edges | 745 |
+| nodes | 981 |
+| edges | 754 |
 | files | 138 |
 
 #+BEGIN: project-info :status nil :tasks nil :html t :vc nil
@@ -42,9 +42,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Fri Oct 10 22:27:27 2025 -0400                      |
+| updated     | Sat Oct 11 22:15:56 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 13554 :λ 12911 :# 22 :_ 621                         |
+| lines       | 13801 :λ 13137 :# 22 :_ 642                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -60,7 +60,7 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10    715 ******
+2025-10   1238 **********
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -68,14 +68,11 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-10 22:36:56 |
-| [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-10-11 19:32:59 |
-| [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
-| [[https://otom8.dev/graph/sys/ide.html][sys/ide]]              | 2025-10-11 19:32:15 |
-| [[https://otom8.dev/graph/sys/term.html][sys/term]]             | 2025-10-11 19:31:58 |
+| [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-10-11 22:36:25 |
+| [[https://otom8.dev/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-10-11 22:35:36 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-12 00:05:35 |
 | [[https://otom8.dev/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
 | [[https://otom8.dev/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
-| [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-08-19 18:17:36 |
 | [[https://otom8.dev/graph/app/gnu-radio.html][app/gnu-radio]]        | 2025-03-03 18:15:21 |
 | [[https://otom8.dev/graph/app/mail.html][app/mail]]             | 2025-04-15 18:24:21 |
 | [[https://otom8.dev/graph/app/media.html][app/media]]            | 2025-04-18 19:33:21 |
@@ -182,7 +179,6 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/net/lora.html][proto/net/lora]]       | 2025-09-18 21:44:32 |
 | [[https://otom8.dev/graph/proto/net/p2p.html][proto/net/p2p]]        | 2025-09-19 19:12:08 |
 | [[https://otom8.dev/graph/proto/net/ssh.html][proto/net/ssh]]        | 2025-06-05 18:32:19 |
-| [[https://otom8.dev/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-10-07 17:12:34 |
 | [[https://otom8.dev/graph/proto/net/tls.html][proto/net/tls]]        | 2025-10-07 17:12:41 |
 | [[https://otom8.dev/graph/proto/net/udp.html][proto/net/udp]]        | 2025-09-30 15:55:18 |
 | [[https://otom8.dev/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-09-30 16:41:04 |
@@ -190,10 +186,14 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-03 12:30:21 |
+| [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-10-11 19:32:59 |
+| [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |
-| [[https://otom8.dev/graph/sys/fs.html][sys/fs]]               | 2025-03-03 14:49:54 |
+| [[https://otom8.dev/graph/sys/fs.html][sys/fs]]               | 2025-10-11 22:04:35 |
+| [[https://otom8.dev/graph/sys/ide.html][sys/ide]]              | 2025-10-11 19:32:15 |
 | [[https://otom8.dev/graph/sys/mem.html][sys/mem]]              | 2025-06-03 22:03:01 |
-| [[https://otom8.dev/graph/sys/srv.html][sys/srv]]              | 2025-06-22 00:23:09 |
+| [[https://otom8.dev/graph/sys/srv.html][sys/srv]]              | 2025-10-11 21:58:32 |
+| [[https://otom8.dev/graph/sys/term.html][sys/term]]             | 2025-10-11 19:31:58 |
 | [[https://otom8.dev/graph/sys/vcs.html][sys/vcs]]              | 2025-10-07 17:12:49 |
 | [[https://otom8.dev/graph/sys/virt.html][sys/virt]]             | 2025-04-16 18:37:12 |
 | [[https://otom8.dev/graph/theory/ai.html][theory/ai]]            | 2025-10-07 17:08:27 |
@@ -210,14 +210,14 @@ an interface for modifying the graph.
 
 #+END:
 
-#+call: org-graph-ui()
+#+call: org-graph-3d()
 
 #+RESULTS:
 #+begin_export html
 <div id='3d-graph'></div>
 
 <script type='module'>
-    import { CSS2DRenderer, CSS2DObject } from 'https://esm.sh/three/examples/jsm/renderers/CSS2DRenderer.js';
+    import { CSS2DRenderer, CSS2DObject } from 'https://cdn.otom8.dev/js/CSS2DRenderer.mjs';
     const Graph = new ForceGraph3D(document.getElementById('3d-graph'),
       { extraRenderers: [new CSS2DRenderer()] })
       .jsonUrl('https://cdn.otom8.dev/data/org-graph.json')

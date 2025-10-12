@@ -90,3 +90,50 @@ update of UDP - is a suitable alternative.
 :EDGES:
 [2025-09-29 Mon 19:40] -- [[https://graphql.org/][GraphQL | A query language for your API]]
 :END:
+** DICT
+:PROPERTIES:
+:ID:       407f25fd-aab0-4aa5-a994-abb1be11fae5
+:CREATED:  <2025-10-11 Sat 22:30>
+:AKA: Dictionary Server Protocol
+:END:
+:EDGES:
+[2025-10-11 Sat 22:30] -- [[man:dictd][man]]
+[2025-10-11 Sat 22:32] -- [[archwiki:Dictd][archwiki]]
+:END:
+Query/Response protocol which allows a client to access dictionary
+definitions from a set of natural language dictionary databases.
+
+#+begin_quote
+For many years, the Internet community has relied on the "webster"
+protocol for access to natural language definitions. The webster
+protocol supports access to a single dictionary and (optionally) to a
+single thesaurus. In recent years, the number of publicly available
+webster servers on the Internet has dramatically decreased.
+
+Fortunately, several freely-distributable dictionaries and lexicons
+have recently become available on the Internet. However, these
+freely-distributable databases are not accessible via a uniform
+interface, and are not accessible from a single site. They are often
+small and incomplete individually, but would collectively provide an
+interesting and useful database of English words. Examples include the
+Jargon file, the WordNet database, MICRA's version of the 1913
+Webster's Revised Unabridged Dictionary, and the Free Online
+Dictionary of Computing. (See the DICT protocol specification (RFC)
+for references.) Translating and non-English dictionaries are also
+becoming available (for example, the FOLDOC dictionary is being
+translated into Spanish).
+
+The webster protocol is not suitable for providing access to a large
+number of separate dictionary databases, and extensions to the current
+webster protocol were not felt to be a clean solution to the
+dictionary database problem.
+
+The DICT protocol is designed to provide access to multiple
+databases. Word definitions can be requested, the word index can be
+searched (using an easily extended set of algorithms), information
+about the server can be provided (e.g., which index search strategies
+are supported, or which databases are available), and information
+about a database can be provided (e.g., copyright, citation, or
+distribution information). Further, the DICT protocol has hooks that
+can be used to restrict access to some or all of the databases.
+#+end_quote
