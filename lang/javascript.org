@@ -147,6 +147,33 @@ always) associated with major web browsers.
 :ID:       7ddd2d60-6a99-4948-aa7b-f36dc9839599
 :CREATED:  <2025-03-02 Sun 20:46>
 :END:
+*** Minisearch
+:PROPERTIES:
+:ID:       fe82f0c8-b506-46b6-8384-d9439baad99c
+:CREATED:  <2025-10-12 Sun 22:44>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:44] -- [[github:lucaong/minisearch][src]]
+[2025-10-12 Sun 22:44] -- [[https://lucaong.github.io/minisearch/][MiniSearch]]
+:END:
+*** Folk.js
+:PROPERTIES:
+:ID:       54f1f814-5b88-4f46-83aa-cd26841b1dfa
+:CREATED:  <2025-10-12 Sun 22:45>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:45] -- [[https://folkjs.org/][folkjs]]
+[2025-10-12 Sun 22:45] -- [[github:folk-js/folkjs][src]]
+:END:
+*** 3d-force-graph
+:PROPERTIES:
+:ID:       ff42d3aa-94cf-4f88-8fe7-9f54fcaf95f6
+:CREATED:  <2025-10-12 Sun 22:45>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:46] -- [[github:vasturiano/3d-force-graph][src]]
+:END:
+
 *** WebCola
 :PROPERTIES:
 :ID:       1dd1ff5b-c2bb-47ff-96d0-f56d2fac465b
@@ -196,6 +223,16 @@ always) associated with major web browsers.
   - [[https://observablehq.com/@d3/pack-component?collection=@d3/d3-hierarchy][Circle packing component / D3 | Observable]]
   - [[https://observablehq.com/@d3/zoomable-circle-packing?collection=@d3/d3-hierarchy][Zoomable circle packing / D3 | Observable]]
 - [[https://d3js.org/d3-interpolate][d3-interpolate | D3 by Observable]]
+**** d3-force-3d
+:PROPERTIES:
+:ID:       3f02fc98-932e-41da-a810-2b8c4b31083f
+:CREATED:  <2025-10-12 Sun 22:47>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:47] -- [[github:vasturiano/d3-force-3d][src]]
+[2025-10-12 Sun 22:47] -- [[https://observablehq.com/@vasturiano/multi-dimensional-d3-force-simulation][Multi-Dimensional D3 Force Simulation / Vasco Asturiano | Observable]]
+:END:
+
 *** Three.js
 :PROPERTIES:
 :ID:       e0c38219-7b90-4981-a46f-d3fe92888996
@@ -235,6 +272,28 @@ always) associated with major web browsers.
 :END:
 :EDGES:
 [2025-09-21 Sun 18:18] -- [[https://modernizr.com/][Modernizr: the feature detection library for HTML5/CSS3]]
+:END:
+
+** Utils
+:PROPERTIES:
+:ID:       103a7228-964b-4075-98e1-1e3ca730dc52
+:CREATED:  <2025-10-12 Sun 22:30>
+:END:
+*** Uglify
+:PROPERTIES:
+:ID:       f2570e7e-b15d-4e75-9ae9-a12e581cb510
+:CREATED:  <2025-10-12 Sun 22:30>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:31] -- [[https://lisperator.net/uglifyjs/][UglifyJS — JavaScript parser, compressor, minifier written in JS]]
+:END:
+*** Minify
+:PROPERTIES:
+:ID:       161d575a-30e7-466c-bff8-df5d05b21d8a
+:CREATED:  <2025-10-12 Sun 22:43>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:43] -- [[https://kinsta.com/blog/minify-javascript/][How to Minify JavaScript — Recommended Tools and Methods]]
 :END:
 
 ** TypeScript                                                            :ts:

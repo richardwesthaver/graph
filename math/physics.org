@@ -110,6 +110,17 @@ related entities of energy and force.
 :EDGES:
 [2025-02-28 Fri 18:45] -- [[https://en.wikipedia.org/wiki/Particle_physics][Particle physics - Wikipedia]]
 :END:
+*** Verlet integration
+:PROPERTIES:
+:ID:       6d1698ad-b03b-4616-8d67-3987b1a83531
+:CREATED:  <2025-10-12 Sun 22:49>
+:END:
+:EDGES:
+[2025-10-12 Sun 22:49] -- [[wikipedia:Verlet integration][wiki]]
+:END:
+A numerical method used to integration Notion's equations of motion.
+- frequently used to calculate trajectories of particles in molecular
+  dynamics simulations and computer graphics.
 ** Nuclear Physics
 :PROPERTIES:
 :ID:       90300edf-9fa4-438b-8f34-65a6857cfdab
