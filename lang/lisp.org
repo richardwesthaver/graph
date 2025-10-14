@@ -1134,6 +1134,16 @@ Let Over Lambda by Doug Hoyte
 :EDGES:
 [2025-08-17 Sun 21:07] -- [[https://github.com/fosskers/vend][GitHub - fosskers/vend: Manage your Common Lisp project dependencies.]]
 :END:
+*** OCICL
+:PROPERTIES:
+:ID:       1f1a5a5d-de86-461f-a209-9d81298d9a7c
+:CREATED:  <2025-10-13 Mon 17:30>
+:END:
+:EDGES:
+[2025-10-13 Mon 17:31] -- [[github:ocicl/ocicl][src]]
+:END:
+An OCI-based ASDF system distribution and management tool for Common Lisp
+- [[https://github.com/ocicl/ocicl/tree/main/lint][ocicl/lint]]
 *** Quicklisp
 :PROPERTIES:
 :ID:       0b568dbe-fc89-4ce6-be86-fd18d1d2d5c0

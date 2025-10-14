@@ -75,6 +75,41 @@
 [2025-03-06 Thu 14:49] -- [[https://orgmode.org/worg/code/org-info-js/][EMACS ORG-INFO.JS]]
 [2025-03-06 Thu 14:51] -> [[id:d9226de2-4b80-4193-a06e-e3185ffb5217][Javascript]]
 :END:
+*** Syntax                                                              :syn:
+:PROPERTIES:
+:ID:       e1ef06a0-2c19-44fe-9afc-c216671c9ca4
+:CREATED:  <2025-10-13 Mon 19:46>
+:END:
+:EDGES:
+[2025-10-13 Mon 19:46] -- [[https://orgmode.org/worg/org-syntax.html][Org Syntax]]
+:END:
+#+begin_quote
+Elements can be stratified into “headings”, “sections”, “greater
+elements”, and “lesser elements”, from broadest scope to
+narrowest. Along with objects, these sub-classes define categories of
+syntactic environments. Only headings, sections, property drawers, and
+planning lines are context-free1, 2, every other syntactic component
+only exists within specific environments. This is a core concept of
+the syntax.
+
+Expanding on the stratification of elements, lesser elements are
+elements that cannot contain any other elements. As such, a paragraph
+is considered a lesser element. Greater elements can themselves
+contain greater elements or lesser elements. Sections contain both
+greater and lesser elements, and headings can contain a section and
+other headings.
+#+end_quote
+
+- Blank lines are considered a part of a preceding element.
+
+#+begin_quote
+To simplify references to common collections of objects, we define two
+useful sets. The minimal set of objects refers to plain text, text
+markup, entities, LaTeX fragments, superscripts and subscripts. The
+standard set of objects refers to the entire set of objects, excluding
+citation references and table cells.
+#+end_quote
+
 *** Org Element API
 :PROPERTIES:
 :ID:       bdf4ac96-f9a6-47ea-a27a-89a8d2b20ba7
@@ -83,6 +118,7 @@
 :EDGES:
 [2025-03-04 Tue 20:10] -- [[https://orgmode.org/worg/dev/org-element-api.html][Org Element API]]
 :END:
+
 *** Org Protocol
 :PROPERTIES:
 :ID:       d0590d0b-4be3-447b-a549-1c927be0c745
