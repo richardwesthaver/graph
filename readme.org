@@ -5,6 +5,7 @@
 #+html_link_up: ..
 #+setupfile: ../clean.theme
 #+html_head: <script src="https://cdn.otom8.dev/js/3d-force-graph.mjs"></script>
+#+html_head: <script src="https://cdn.otom8.dev/js/minisearch.mjs"></script>
 #+html_head:  <style>
 #+html_head: .node-label {
 #+html_head:      font-size: 0.5em;
@@ -12,6 +13,7 @@
 #+html_head:  </style>
 #+export_file_name: index
 #+bibliography: refs.bib
+#+comment: #+call: org-graph-search()
 The CC =graph= is a collection of org documents representing a network
 of /nodes/ and /edges/. Nodes are typically represented as Org
 headlines and the Edges are dynamically built from dedicated =EDGES=
@@ -27,8 +29,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 990 |
-| edges | 762 |
+| nodes | 991 |
+| edges | 763 |
 | files | 138 |
 
 #+BEGIN: project-info :status nil :tasks nil :html t :vc nil
@@ -42,9 +44,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Mon Oct 13 01:11:13 2025 -0400                      |
+| updated     | Mon Oct 13 20:30:00 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 13883 :λ 13216 :# 22 :_ 645                         |
+| lines       | 13919 :λ 13247 :# 22 :_ 650                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -60,7 +62,7 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10   1446 ************
+2025-10   1510 *************
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -68,12 +70,9 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://otom8.dev/graph/lang/lisp.html][lang/lisp]]            | 2025-10-13 17:32:03 |
-| [[https://otom8.dev/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-10-13 17:38:59 |
-| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-13 01:22:53 |
 | [[https://otom8.dev/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
 | [[https://otom8.dev/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
-| [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-10-11 22:36:25 |
+| [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-10-13 19:49:30 |
 | [[https://otom8.dev/graph/app/gnu-radio.html][app/gnu-radio]]        | 2025-03-03 18:15:21 |
 | [[https://otom8.dev/graph/app/mail.html][app/mail]]             | 2025-04-15 18:24:21 |
 | [[https://otom8.dev/graph/app/media.html][app/media]]            | 2025-04-18 19:33:21 |
@@ -121,6 +120,7 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/lang/java.html][lang/java]]            | 2025-03-03 20:43:11 |
 | [[https://otom8.dev/graph/lang/javascript.html][lang/javascript]]      | 2025-10-12 22:47:27 |
 | [[https://otom8.dev/graph/lang/julia.html][lang/julia]]           | 2025-06-09 15:05:43 |
+| [[https://otom8.dev/graph/lang/lisp.html][lang/lisp]]            | 2025-10-13 17:32:03 |
 | [[https://otom8.dev/graph/lang/ml.html][lang/ml]]              | 2025-10-07 17:29:56 |
 | [[https://otom8.dev/graph/lang/python.html][lang/python]]          | 2025-06-23 18:51:58 |
 | [[https://otom8.dev/graph/lang/query.html][lang/query]]           | 2025-03-04 18:38:23 |
@@ -179,6 +179,7 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/net/lora.html][proto/net/lora]]       | 2025-09-18 21:44:32 |
 | [[https://otom8.dev/graph/proto/net/p2p.html][proto/net/p2p]]        | 2025-09-19 19:12:08 |
 | [[https://otom8.dev/graph/proto/net/ssh.html][proto/net/ssh]]        | 2025-06-05 18:32:19 |
+| [[https://otom8.dev/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-10-13 17:38:59 |
 | [[https://otom8.dev/graph/proto/net/tls.html][proto/net/tls]]        | 2025-10-07 17:12:41 |
 | [[https://otom8.dev/graph/proto/net/udp.html][proto/net/udp]]        | 2025-09-30 15:55:18 |
 | [[https://otom8.dev/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-09-30 16:41:04 |
@@ -186,6 +187,7 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-03 12:30:21 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-13 18:05:59 |
 | [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-10-11 19:32:59 |
 | [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |
