@@ -13,7 +13,6 @@
 #+html_head:  </style>
 #+export_file_name: index
 #+bibliography: refs.bib
-#+comment: #+call: org-graph-search()
 The CC =graph= is a collection of org documents representing a network
 of /nodes/ and /edges/. Nodes are typically represented as Org
 headlines and the Edges are dynamically built from dedicated =EDGES=
@@ -24,8 +23,8 @@ These documents depend on the core =graph.el= package which provides
 an interface for modifying the graph.
 
 - [2025-06-19 Thu] - UI is WIP
-  - static SVG embedding
-  - d3-force-graph webui
+  - static SVG embedding (first: [[id:d9e4736c-5902-4b40-840a-faf48d67ea27][org-heading refinement]])
+  - d3-force-graph webui (scroll down)
 
 #+call: org-graph-info()
 #+RESULTS:
@@ -44,9 +43,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Mon Oct 13 20:30:00 2025 -0400                      |
+| updated     | Tue Oct 14 20:20:58 2025 -0400                      |
 | langs       | org                                                 |
-| lines       | 13919 :λ 13247 :# 22 :_ 650                         |
+| lines       | 13921 :λ 13249 :# 22 :_ 650                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -62,7 +61,7 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10   1510 *************
+2025-10   1530 *************
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -187,7 +186,7 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-03 12:30:21 |
-| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-13 18:05:59 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-14 20:19:22 |
 | [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-10-11 19:32:59 |
 | [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |
@@ -241,3 +240,5 @@ an interface for modifying the graph.
     Graph.d3Force('charge').strength(-140);
   </script>
 #+end_export
+
+#+comment: #+call: org-graph-search()
