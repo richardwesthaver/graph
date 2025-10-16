@@ -1,4 +1,5 @@
 #+title: FPGA
+#+setupfile: ../../clean.theme
 * FPGA
 :PROPERTIES:
 :ID:       2365bde4-4442-4fa7-a005-2ac7ad83192a

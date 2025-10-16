@@ -1,0 +1,18 @@
+#+title: Zstd
+#+setupfile: ../../../clean.theme
+* Zstd
+:PROPERTIES:
+:ID:       237f6fda-1b69-4ed3-a58b-28473c9eb3b0
+:CREATED:  <2025-10-16 Thu 18:35>
+:END:
+:EDGES:
+[2025-10-16 Thu 18:35] -- [[wikipedia:Zstd][wiki]]
+[2025-10-16 Thu 18:36] -- [[https://www.rfc-editor.org/rfc/rfc8478][RFC 8478: Zstandard Compression and the application/zstd Media Type]]
+:END:
+Fast and flexible compression format, our personal preference (most of
+the time).
+- developed at Facebook
+- designed to give compression ratio comparable to DEFLATE but faster
+  (especially for decompression).
+- open-sourced C reference impl [2016-08-31 Wed]
+- at max compression levels gets close to lzma,lzham, and ppmx. performs better than lza or bzip2.

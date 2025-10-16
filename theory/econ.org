@@ -1,6 +1,6 @@
 #+title: Economic Theory
 #+setupfile: ../../clean.theme
-* Economics
+* Economics                                                            :econ:
 :PROPERTIES:
 :ID:       f21933e9-5fd6-4cc8-a964-2b75c753c8d4
 :CREATED:  <2025-02-14 Fri 22:39>
@@ -8,7 +8,7 @@
 :EDGES:
 [2025-02-14 Fri 22:57] -- [[https://en.wikipedia.org/wiki/Economics][Economics - Wikipedia]]
 :END:
-** Microeconomics
+** Microeconomics                                                     :micro:
 :PROPERTIES:
 :ID:       6e111491-9ca8-4535-9642-d0bec178eed2
 :CREATED:  <2025-02-14 Fri 22:39>
@@ -16,7 +16,7 @@
 :EDGES:
 [2025-02-14 Fri 22:40] -- [[https://en.wikipedia.org/wiki/Microeconomics][Microeconomics - Wikipedia]]
 :END:
-** Macroeconomics
+** Macroeconomics                                                     :macro:
 :PROPERTIES:
 :ID:       b579b27e-6057-4012-9503-0eb710490ec1
 :CREATED:  <2025-02-14 Fri 22:39>
@@ -36,8 +36,106 @@
 :PROPERTIES:
 :ID:       d3a6a367-5817-4bec-911a-87610ec7de92
 :CREATED:  <2025-03-06 Thu 14:26>
+:AKA: GoL
 :END:
 :EDGES:
 [2025-03-06 Thu 14:27] -- [[https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life][Conway's Game of Life - Wikipedia]]
 :END:
-- GoL
+*** Prisoner's Dilemma
+:PROPERTIES:
+:ID:       6ae0c23a-7bad-4d49-a816-ebe403a65009
+:CREATED:  <2025-10-16 Thu 18:45>
+:END:
+:EDGES:
+[2025-10-16 Thu 18:45] -- [[wikipedia:Prisoner's Dilemma][wiki]]
+:END:
+- two-player game
+- thought experiment involves two 'rational agents' with two choices: cooperate (stay silent) or defect (testify)
+- /typical contemporary version/
+  #+begin_quote
+  Two members of a criminal gang are arrested and imprisoned. Each
+  prisoner is in solitary confinement with no means of speaking to or
+  exchanging messages with the other. The police admit they don't have
+  enough evidence to convict the pair on the principal charge. They
+  plan to sentence both to a year in prison on a lesser
+  charge. Simultaneously, the police offer each prisoner a Faustian
+  bargain. If he testifies against his partner, he will go free while
+  the partner will get three years in prison on the main charge. Oh,
+  yes, there is a catch ... If both prisoners testify against each
+  other, both will be sentenced to two years in jail. The prisoners
+  are given a little time to think this over, but in no case may
+  either learn what the other has decided until he has irrevocably
+  made his decision. Each is informed that the other prisoner is being
+  offered the very same deal. Each prisoner is concerned only with his
+  own welfare—with minimizing his own prison sentence.
+  #+end_quote
+  - possible outcomes:
+    - If A and B both remain silent, they will each serve one year in
+      prison.
+    - If one testifies against the other but the other doesn’t, the
+      one testifying will be set free while the other serves three
+      years in prison.
+    - If A and B testify against each other, they will each serve two
+      years.
+
+The /iterated Prisoner's dilemma/ gained popularity thanks to
+Axelrod's book /The Evolution of Cooperation/ where he reports on the
+results of a N-step prisoner's dilemma tournament he organized.
+
+interesting strategies include:
+- tit-for-tat :: the winner (in the simplest of cases...), always
+  cooperate until opponent defects, then defect until opponent
+  cooperates. The choice on whether to restart cooperation is based on
+  a property called /forgiveness/. 
+  - Typically the most *robust* strategy
+- multi-agent :: when /communication/ comes into play, for example if
+  you are able to submit multiple colluding strategies, as
+  Southamption University in England did at the 20th-anniversary
+  iterated prisoner's dilemma competition.. you can develop a /minmax/
+  strategy which benefits a select few. The Southampton strategy
+  (2004) took the top 3 spots by submitting 60 programs to the
+  competition. These programs identified eachother through the
+  /ten-move dance/ - a handshake which defected unrecognized opponents
+  and funneled points to co-conspirators.
+- bayesian nash equilibrium
+- monte carlo
+- win-stay, lose-switch :: face with failure to cooperate, player
+  switches strat next turn.
+- grim :: a /trigger strategy/ - basically tit-for-tat but no forgiveness.
+
+- Stochastic iterated prisoner's dilemma
+  - strategies specified in terms of /cooperation probabilities/
+  - memory-n strat = fn of most recent /n/ encounters
+  - memory-1 strat = fn of last encounter specified by 4 probabilities
+    (p(xx) p(xy) p(yx) p(yy))
+    - called /deterministic/ if all probabilities == 1,0
+    - for example, tit-for-tat: =(1 0 1 0)=
+    - win-stay,lose-switch: =(1 0 0 1)=
+  - has been shown for any memory-n strategy there is a corresponding
+    memory-1 strategy
+
+- Zero-determinant strategies
+  - 2012, William H. Press, Freeman Dyson
+
+- Asymmetric prisoner's dilemmas
+  - alibi game
+
+** Pareto optimization                                                  :opt:
+:PROPERTIES:
+:ID:       4e85cc82-77a3-4722-b31d-d172baa2374b
+:CREATED:  <2025-10-16 Thu 18:42>
+:AKA: Multi-objective optimization
+:END:
+:EDGES:
+[2025-10-16 Thu 18:43] -- [[wikipedia:Multi-objective optimization][wiki]]
+:END:
+*** Pareto Front
+:PROPERTIES:
+:ID:       a95711f7-05c1-4156-900f-5b7644413090
+:CREATED:  <2025-10-16 Thu 18:43>
+:AKA: Pareto curve
+:END:
+:EDGES:
+[2025-10-16 Thu 18:44] -- [[wikipedia:Pareto front][wiki]]
+[2025-10-16 Thu 18:44] -> [[id:51e7d9ad-28a2-4284-94a1-18a642d0cf3d][Curve]]
+:END:

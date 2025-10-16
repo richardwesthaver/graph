@@ -32,3 +32,34 @@
 :EDGES:
 [2025-02-24 Mon 21:34] -- [[https://en.wikipedia.org/wiki/Hopscotch_hashing][Hopscotch hashing - Wikipedia]]
 :END:
+** Compression
+:PROPERTIES:
+:ID:       c49d25f8-f2c5-462e-9742-cacc3796da12
+:CREATED:  <2025-10-16 Thu 18:19>
+:END:
+:EDGES:
+[2025-10-16 Thu 18:20] -- [[wikipedia:Data compression][wiki]]
+:END:
+** Lossless Compression
+:PROPERTIES:
+:ID:       299246fd-5153-4fc9-a8b8-0ce0fd097a88
+:CREATED:  <2025-10-16 Thu 18:20>
+:END:
+:EDGES:
+[2025-10-16 Thu 18:20] -- [[wikipedia:Lossless compression][wiki]]
+:END:
+*** Lempel-Ziv
+:PROPERTIES:
+:ID:       c2198cb0-16f1-4df5-9671-6fc366116589
+:CREATED:  <2025-10-16 Thu 18:17>
+:AKA: LZ1 LZ2 LZ77 LZ78
+:END:
+:EDGES:
+[2025-10-16 Thu 18:19] -- [[wikipedia:LZ77 and LZ78][wiki]]
+[2025-10-16 Thu 18:31] <- [[id:6f46c6f3-32a5-4932-b2db-687ea4c8e04f][DEFLATE]]
+:END:
+Published in papers by Abraham Lempel and Jacob Ziv in 1977 and 1978.
+- form the basis for many variants - LZW LZSS LZMA and more
+- also serve as basis of compression schemes of GIF and DEFLATE
+- uses a sliding window over previous characters
+- LZ1 and LZ2 are both theoretically /dictionary coders/
