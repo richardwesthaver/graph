@@ -40,7 +40,7 @@
 :EDGES:
 [2025-10-16 Thu 18:20] -- [[wikipedia:Data compression][wiki]]
 :END:
-** Lossless Compression
+*** Lossless Compression
 :PROPERTIES:
 :ID:       299246fd-5153-4fc9-a8b8-0ce0fd097a88
 :CREATED:  <2025-10-16 Thu 18:20>
@@ -48,7 +48,7 @@
 :EDGES:
 [2025-10-16 Thu 18:20] -- [[wikipedia:Lossless compression][wiki]]
 :END:
-*** Lempel-Ziv
+**** Lempel-Ziv
 :PROPERTIES:
 :ID:       c2198cb0-16f1-4df5-9671-6fc366116589
 :CREATED:  <2025-10-16 Thu 18:17>
@@ -63,3 +63,25 @@ Published in papers by Abraham Lempel and Jacob Ziv in 1977 and 1978.
 - also serve as basis of compression schemes of GIF and DEFLATE
 - uses a sliding window over previous characters
 - LZ1 and LZ2 are both theoretically /dictionary coders/
+** Congestion Control
+:PROPERTIES:
+:ID:       6c336300-0bf2-4370-86e4-d670c079032a
+:CREATED:  <2025-10-18 Sat 16:57>
+:END:
+*** Nagle's Algorithm
+:PROPERTIES:
+:ID:       c6dd57ac-90ab-475e-bdff-70698ab5a679
+:CREATED:  <2025-10-18 Sat 16:58>
+:END:
+:EDGES:
+[2025-10-18 Sat 16:58] -- [[wikipedia:Nagle's algorithm][wiki]]
+:END:
+A means of improving efficiency of TCP networks by reducing the number
+of packets that need to be sent. Defined by John Nagle while working
+for Ford Aerospace. Published in 1984 as RFC 896.
+
+Especially useful in eliminating overhead in protocols such as telnet.
+
+- Can be dynamically toggled based on platform support and
+  sockopts. In CL see the ~nodelay~ keyword arg to
+  =USOCKET:SOCKET-CONNECT=.
