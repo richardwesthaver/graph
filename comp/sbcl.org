@@ -8,6 +8,7 @@
 [2025-03-01 Sat 19:51] -- [[https://www.sbcl.org/getting.html][Getting Started - Steel Bank Common Lisp]]
 [2025-03-03 Mon 16:33] -- [[info:sbcl][info]]
 [2025-03-03 Mon 16:34] -- [[man:sbcl][man]]
+[2025-10-18 Sat 20:28] -> [[id:af0ed8bb-4b45-42f9-b8be-82b8ea7935a3][Common Lisp]]
 :END:
 - [[https://github.com/sbcl/sbcl/blob/master/INSTALL][sbcl/INSTALL]]
 - [[https://www.sbcl.org/news.html][News - Steel Bank Common Lisp]]
@@ -1407,7 +1408,6 @@ do type testing inside %WITH-ARRAY-DATA instead of outside, and
 the DEFTRANSFORM can't tell that that's going on, so it can make
 sense to use FORCE-INLINE option in that case.
 #+end_example
-
 ** Tree Shaker
 :PROPERTIES:
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49

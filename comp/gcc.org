@@ -10,6 +10,7 @@
 [2025-03-03 Mon 16:34] -- [[info:gcc][info]]
 [2025-03-03 Mon 16:37] -- [[info:gccint][gccint]]
 [2025-03-03 Mon 16:38] -- [[info:gccinstall][gccinstall]]
+[2025-10-18 Sat 20:26] <- [[id:5479d877-2bd1-41d9-8409-1ff0436fcc59][C]]
 :END:
 - [[https://gcc.gnu.org/onlinedocs/gcc-8.1.0/gcc/Standards.html][GCC Supported Standards]]
 - [[https://wiki.osdev.org/GCC_Cross-Compiler][GCC Cross-Compiler - OSDev Wiki]]

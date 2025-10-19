@@ -8,6 +8,8 @@
 :EDGES:
 [2025-02-16 Sun 20:35] -- [[https://www.haskell.org/][Haskell Language]]
 [2025-03-03 Mon 20:09] -> [[id:7dfd88e4-5511-4ff8-99ce-0fbf464bde58][Functional Programming]]
+[2025-10-18 Sat 20:21] -- [[https://wiki.haskell.org/Definition#bodyContent][Language and library specification - HaskellWiki]]
+[2025-10-18 Sat 20:25] -> [[id:9a00b903-ea15-48d3-8440-025998ca857b][GHC]]
 :END:
 - [[https://blog.akquinet.de/2021/01/03/haskell-is-faster-than-rust-wait-a-sec/][Haskell is Faster than Rust! … Wait a Sec! – akquinet AG – Blog]]
 - [[https://hledger.org/index.html][hledger]]

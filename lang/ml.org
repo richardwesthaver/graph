@@ -7,8 +7,10 @@
 :END:
 :EDGES:
 [2025-09-08 Mon 14:49] -- [[wikipedia:ML (programming language)][wiki]]
+[2025-10-18 Sat 20:29] -> [[id:7dd61019-39f3-4706-bfc4-ea48bf76da9c][Rust]]
 :END:
 'Meta Language'
+
 * OCaml
 :PROPERTIES:
 :ID:       83455e9b-53f4-46d5-af17-1a9d732a7b2d

@@ -8,6 +8,8 @@
 :EDGES:
 [2025-01-16 Thu 22:31] -- [[https://en.cppreference.com/w/c][C reference - cppreference.com]]
 [2025-03-03 Mon 20:11] << [[id:3021fa48-a98a-471f-896c-db237e97192b][Objective-C]]
+[2025-10-18 Sat 20:26] -> [[id:b3639401-b960-42d3-8325-7b5e056e3478][GCC]]
+[2025-10-18 Sat 20:26] -> [[id:496b952f-4c98-4303-92b4-1c766565092c][LLVM]]
 :END:
 [[https://en.cppreference.com/w/c/23][C23 - cppreference.com]]
 

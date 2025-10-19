@@ -7,4 +7,5 @@
 :END:
 :EDGES:
 [2025-03-03 Mon 16:56] -- [[info:ecl][info]]
+[2025-10-18 Sat 20:28] -> [[id:af0ed8bb-4b45-42f9-b8be-82b8ea7935a3][Common Lisp]]
 :END:

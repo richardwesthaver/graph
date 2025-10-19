@@ -9,6 +9,7 @@
 [2025-03-02 Sun 21:12] -- [[https://llvm.org/][The LLVM Compiler Infrastructure Project]]
 [2025-03-02 Sun 21:13] -- [[https://github.com/llvm/llvm-project][llvm/llvm-project]]
 [2025-03-03 Mon 14:32] << [[id:25754e07-2c57-4385-a52a-33b0179e2b85][LLVM IR]]
+[2025-10-18 Sat 20:26] <- [[id:5479d877-2bd1-41d9-8409-1ff0436fcc59][C]]
 :END:
 - [[https://blog.llvm.org/][The LLVM Project Blog]]
 - [[https://llvm.org/devmtg/][Dev Meetings]]
