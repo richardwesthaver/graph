@@ -44,9 +44,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (org docs notes blog meta plan archive notes graph) |
-| updated     | Sat Oct 18 18:56:33 2025 -0400                      |
-| langs       | html org                                            |
-| lines       | 15008 :λ 14155 :# 23 :_ 830                         |
+| updated     | Sat Oct 18 20:30:14 2025 -0400                      |
+| langs       | org                                                 |
+| lines       | 14139 :λ 13455 :# 22 :_ 662                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -62,7 +62,7 @@ an interface for modifying the graph.
 2025-07    559 ****
 2025-08    909 ********
 2025-09    817 *******
-2025-10   1838 ****************
+2025-10   1870 ****************
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -82,11 +82,11 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/app/qemu.html][app/qemu]]             | 2025-10-07 17:12:09 |
 | [[https://otom8.dev/graph/app/term.html][app/term]]             | 2025-10-07 17:26:15 |
 | [[https://otom8.dev/graph/app/vi.html][app/vi]]               | 2025-05-10 23:09:51 |
-| [[https://otom8.dev/graph/comp/ecl.html][comp/ecl]]             | 2025-03-09 15:44:39 |
-| [[https://otom8.dev/graph/comp/gcc.html][comp/gcc]]             | 2025-08-09 00:58:05 |
-| [[https://otom8.dev/graph/comp/ghc.html][comp/ghc]]             | 2025-02-21 22:34:46 |
-| [[https://otom8.dev/graph/comp/llvm.html][comp/llvm]]            | 2025-03-03 16:41:14 |
-| [[https://otom8.dev/graph/comp/sbcl.html][comp/sbcl]]            | 2025-10-09 20:40:40 |
+| [[https://otom8.dev/graph/comp/ecl.html][comp/ecl]]             | 2025-10-18 20:28:25 |
+| [[https://otom8.dev/graph/comp/gcc.html][comp/gcc]]             | 2025-10-18 20:27:28 |
+| [[https://otom8.dev/graph/comp/ghc.html][comp/ghc]]             | 2025-10-18 20:27:19 |
+| [[https://otom8.dev/graph/comp/llvm.html][comp/llvm]]            | 2025-10-18 20:27:33 |
+| [[https://otom8.dev/graph/comp/sbcl.html][comp/sbcl]]            | 2025-10-18 20:28:16 |
 | [[https://otom8.dev/graph/hw/amd.html][hw/amd]]               | 2025-06-09 17:13:00 |
 | [[https://otom8.dev/graph/hw/apple.html][hw/apple]]             | 2025-03-03 20:34:42 |
 | [[https://otom8.dev/graph/hw/avr.html][hw/avr]]               | 2025-08-09 01:07:47 |
@@ -111,20 +111,20 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/lang/apl.html][lang/apl]]             | 2025-10-07 17:11:16 |
 | [[https://otom8.dev/graph/lang/asm.html][lang/asm]]             | 2025-10-07 17:10:58 |
 | [[https://otom8.dev/graph/lang/basic.html][lang/basic]]           | 2025-02-27 17:01:01 |
-| [[https://otom8.dev/graph/lang/c.html][lang/c]]               | 2025-10-07 17:09:44 |
+| [[https://otom8.dev/graph/lang/c.html][lang/c]]               | 2025-10-18 20:27:00 |
 | [[https://otom8.dev/graph/lang/cobol.html][lang/cobol]]           | 2025-03-07 22:57:10 |
 | [[https://otom8.dev/graph/lang/erlang.html][lang/erlang]]          | 2025-03-03 21:04:21 |
 | [[https://otom8.dev/graph/lang/forth.html][lang/forth]]           | 2025-10-10 18:15:11 |
 | [[https://otom8.dev/graph/lang/fortran.html][lang/fortran]]         | 2025-10-07 17:11:30 |
-| [[https://otom8.dev/graph/lang/haskell.html][lang/haskell]]         | 2025-03-03 20:09:12 |
+| [[https://otom8.dev/graph/lang/haskell.html][lang/haskell]]         | 2025-10-18 20:27:11 |
 | [[https://otom8.dev/graph/lang/java.html][lang/java]]            | 2025-03-03 20:43:11 |
 | [[https://otom8.dev/graph/lang/javascript.html][lang/javascript]]      | 2025-10-12 22:47:27 |
 | [[https://otom8.dev/graph/lang/julia.html][lang/julia]]           | 2025-06-09 15:05:43 |
-| [[https://otom8.dev/graph/lang/lisp.html][lang/lisp]]            | 2025-10-13 17:32:03 |
-| [[https://otom8.dev/graph/lang/ml.html][lang/ml]]              | 2025-10-07 17:29:56 |
+| [[https://otom8.dev/graph/lang/lisp.html][lang/lisp]]            | 2025-10-18 20:28:37 |
+| [[https://otom8.dev/graph/lang/ml.html][lang/ml]]              | 2025-10-18 20:29:18 |
 | [[https://otom8.dev/graph/lang/python.html][lang/python]]          | 2025-06-23 18:51:58 |
-| [[https://otom8.dev/graph/lang/query.html][lang/query]]           | 2025-03-04 18:38:23 |
-| [[https://otom8.dev/graph/lang/rust.html][lang/rust]]            | 2025-10-07 17:10:47 |
+| [[https://otom8.dev/graph/lang/query.html][lang/query]]           | 2025-10-18 20:29:00 |
+| [[https://otom8.dev/graph/lang/rust.html][lang/rust]]            | 2025-10-18 20:29:22 |
 | [[https://otom8.dev/graph/lang/shell.html][lang/shell]]           | 2025-08-17 21:30:22 |
 | [[https://otom8.dev/graph/lang/smalltalk.html][lang/smalltalk]]       | 2025-03-03 21:05:21 |
 | [[https://otom8.dev/graph/lang/swift.html][lang/swift]]           | 2025-03-07 22:57:38 |
@@ -188,7 +188,7 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-03 12:30:21 |
-| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-17 20:07:35 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-10-18 19:16:26 |
 | [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-10-11 19:32:59 |
 | [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |
