@@ -533,7 +533,7 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:34] -- [[https://docs.fedoraproject.org/en-US/iot/][Fedora IoT Documentation]]
 :END:
-*** Arch Linux
+*** Arch Linux                                                         :arch:
 :PROPERTIES:
 :ID:       6ef3fb84-6805-46f7-ad13-8929a023b43c
 :CREATED:  <2025-02-22 Sat 19:39>
@@ -560,6 +560,74 @@ Linux Distributions
 :END:
 - supports cloud-init service
 - sshd on by default
+#+begin_src sh :results output :export both :eval never
+  mkarchiso -h
+#+end_src
+
+#+RESULTS:
+#+begin_example
+usage: mkarchiso [options] <profile_dir>
+  options:
+     -A <application> Set an application name for the ISO
+                      Default: ''
+     -C <file>        pacman configuration file.
+                      Default: ''
+     -D <install_dir> Set an install_dir. All files will be located here.
+                      Default: ''
+                      NOTE: Max 8 characters, use only [a-z0-9]
+     -L <label>       Set the ISO volume label
+                      Default: ''
+     -P <publisher>   Set the ISO publisher
+                      Default: ''
+     -c [cert ..]     Provide certificates for codesigning of netboot artifacts as
+                      well as the rootfs artifact.
+                      Multiple files are provided as quoted, space delimited list.
+                      The first file is considered as the signing certificate,
+                      the second as the key and the third as the optional certificate authority.
+     -g <gpg_key>     Set the PGP key ID to be used for signing the rootfs image.
+                      Passed to gpg as the value for --default-key
+     -G <mbox>        Set the PGP signer (must include an email address)
+                      Passed to gpg as the value for --sender
+     -h               This message
+     -m [mode ..]     Build mode(s) to use (valid modes are: 'bootstrap', 'iso' and 'netboot').
+                      Multiple build modes are provided as quoted, space delimited list.
+     -o <out_dir>     Set the output directory
+                      Default: ''
+     -p [package ..]  Package(s) to install.
+                      Multiple packages are provided as quoted, space delimited list.
+     -r               Delete the working directory at the end.
+     -v               Enable verbose output
+     -w <work_dir>    Set the working directory
+                      Default: ''
+
+  profile_dir:        Directory of the archiso profile to build
+#+end_example
+
+#+begin_src sh :results output :export both :eval never
+  run_archiso -h
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Usage:
+    run_archiso [options]
+
+Options:
+    -a              set accessibility support using brltty
+    -b              set boot type to 'BIOS'
+    -d              set image type to hard disk instead of optical disc
+    -h              print help
+    -i [image]      image to boot into
+    -s              use Secure Boot (only relevant when using UEFI)
+    -u              set boot type to 'UEFI' (default)
+    -v              use VNC display (instead of default SDL)
+    -c [image]      attach an additional optical disc image (e.g. for cloud-init)
+
+Example:
+    Run an image using UEFI:
+    $ run_archiso -i archiso-2020.05.23-x86_64.iso
+#+end_example
+
 **** ABS
 :PROPERTIES:
 :ID:       03215632-83da-48c0-9f36-df72a9e956b5
@@ -601,7 +669,11 @@ build directory. Then you can use pacman to install the package.
 :EDGES:
 [2025-07-09 Wed 17:06] -- [[https://wiki.archlinux.org/title/Pacman][pacman - ArchWiki]]
 :END:
-
+**** Configuration
+:PROPERTIES:
+:ID:       85f0992c-fc87-42dc-8946-0384dfe1ccb8
+:CREATED:  <2025-10-26 Sun 20:28>
+:END:
 *** Ubuntu
 :PROPERTIES:
 :ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02

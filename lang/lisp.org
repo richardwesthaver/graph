@@ -135,12 +135,17 @@ list, max, min, nconc, or, progn, and standard.
 :CREATED:  <2025-08-20 Wed 21:46>
 :AKA: Meta-Object Protocol
 :END:
+:EDGES:
+[2025-10-20 Mon 19:01] -- [[https://franz.com/support/documentation/11.0/mop/concepts.html][MOP: Concepts]]
+:END:
 - [[https://allegrograph.com/fixed-indices-speed-up-slot-access-in-allegro-cl/][fixed-indices allegro]]
   - What sort of type checking is performed on slot-access, when that
     slot has type information? Does this vary at different compile levels?
   - What is the performance impact of injecting additional
     slot-accessor type information? For example, declare as
     function-type with a typed result.
+- https://www.reddit.com/r/lisp/comments/n88x59/metaclasses_using_structures_or_speeding_up_slot/
+
 ** Types
 :PROPERTIES:
 :ID:       3f613b5a-6aae-4852-a4d8-c322c271e6eb

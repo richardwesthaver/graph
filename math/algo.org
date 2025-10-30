@@ -8,6 +8,46 @@
 :EDGES:
 [2025-02-28 Fri 17:39] -- [[https://en.wikipedia.org/wiki/Algorithm][Algorithm - Wikipedia]]
 :END:
+** Search
+:PROPERTIES:
+:ID:       40c56580-d939-4985-be31-ff7499ce7beb
+:CREATED:  <2025-10-26 Sun 20:41>
+:END:
+*** Binary Search :search:
+:PROPERTIES:
+:ID:       c963428d-b5b5-4a9b-9912-ab8b17e3cf46
+:END:
+:EDGES:
+[2025-10-26 Sun 20:41] -- [[wikipedia:Binary search algorithm][wiki]]
+:END:
+- A very common algorithm used to find the index of a specific item in a
+/sorted/ array.
+- Array must be sorted
+- Executes in logarithmic time
+- Faster than linear search (except for very small arrays)
+- Can be applied easily in many situations
+- There are many variations of binary search such as fractional
+  cascading and exponential search
+- Many data structures provide a better overall design for fast
+  optimal searches, such as Hash Tables
+- [[https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/][Binary Search Tutorials & Notes | Algorithms | HackerEarth]]
+** RNG
+:PROPERTIES:
+:ID:       1e99acf3-3bf4-49e0-ab2c-57c35341a7ad
+:CREATED:  <2025-10-26 Sun 20:42>
+:AKA: Random Number Generator
+:END:
+- TODO: [[https://github.com/apple/swift/pull/39143][An optimal algorithm for bounded random integers]]
+*** PCG
+:PROPERTIES:
+:ID:       3942e7ba-1e6c-4497-9460-853f433cdae0
+:CREATED:  <2025-10-26 Sun 20:42>
+:AKA: Permuted Congruential Generator
+:END:
+:EDGES:
+[2025-10-26 Sun 20:43] -- [[wikipedia:Permuted Congruential Generator][wiki]]
+:END:
+
 ** Sort
 :PROPERTIES:
 :ID:       0205d00e-3ba5-4016-afcf-03f888f5bd18
@@ -16,6 +56,34 @@
 :EDGES:
 [2025-02-28 Fri 18:20] -- [[https://en.wikipedia.org/wiki/Sorting_algorithm][Sorting algorithm - Wikipedia]]
 :END:
+
+*** Quicksort
+:PROPERTIES:
+:ID:       3b982e80-df78-423a-ba80-444954468057
+:CREATED:  <2025-10-26 Sun 20:45>
+:END:
+:EDGES:
+[2025-10-26 Sun 20:45] -- [[wikipedia:Quicksort][wiki]]
+:END:
+
+** Selection
+:PROPERTIES:
+:ID:       4e47c5ec-17fc-4bef-b7e4-847957be147f
+:CREATED:  <2025-10-26 Sun 20:45>
+:END:
+:EDGES:
+[2025-10-26 Sun 20:45] -- [[wikipedia:Selection algorithm][wiki]]
+:END:
+
+*** Quickselect
+:PROPERTIES:
+:ID:       4e5355b6-8f08-44dc-a3c3-799019a9104b
+:CREATED:  <2025-10-26 Sun 20:45>
+:END:
+:EDGES:
+[2025-10-26 Sun 20:45] -- [[wikipedia:Quickselect][wiki]]
+:END:
+
 ** Hash
 :PROPERTIES:
 :ID:       0756b187-0c00-434e-98a5-75e06cb3f01b
@@ -40,6 +108,22 @@
 :EDGES:
 [2025-10-16 Thu 18:20] -- [[wikipedia:Data compression][wiki]]
 :END:
+*** Lubachevsky–Stillinger                                    :granular-flow:
+  :PROPERTIES:
+  :ID:       7e986f85-e6ca-4f76-b667-bea7fe128b8b
+  :END:
+- https://en.wikipedia.org/wiki/Lubachevsky%E2%80%93Stillinger_algorithm
+#+begin_quote
+Lubachevsky-Stillinger (compression) algorithm (LS algorithm, LSA, or
+LS protocol) is a numerical procedure suggested by F. H. Stillinger
+and B.D. Lubachevsky that simulates or imitates a physical process of
+compressing an assembly of hard particles. As the LSA may need
+thousands of arithmetic operations even for a few particles, it is
+usually carried out on a computer.
+#+end_quote
+
+An acoustic phenomena of interest: [[https://en.wikipedia.org/wiki/Singing_sand][Singing sand]]
+
 *** Lossless Compression
 :PROPERTIES:
 :ID:       299246fd-5153-4fc9-a8b8-0ce0fd097a88
@@ -85,3 +169,20 @@ Especially useful in eliminating overhead in protocols such as telnet.
 - Can be dynamically toggled based on platform support and
   sockopts. In CL see the ~nodelay~ keyword arg to
   =USOCKET:SOCKET-CONNECT=.
+** Cipher
+:PROPERTIES:
+:ID:       2f14f7d9-a306-44ba-b879-5c211f189f91
+:CREATED:  <2025-10-26 Sun 20:44>
+:END:
+*** ROT13
+:PROPERTIES:
+:ID:       364ba4c0-2ad9-4965-ade3-301efb3406d3
+:CREATED:  <2025-10-26 Sun 20:44>
+:END:
+:EDGES:
+[2025-10-26 Sun 20:44] -- [[wikipedia:ROT13][wiki]]
+:END:
+A very simple, symmetrical substition cipher that shifts a character
+by 13 positions. Since the standard alphabet has 26 characters, this
+operation is its own inverse.
+- The canonical example of weak encryption.

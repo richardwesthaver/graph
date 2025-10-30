@@ -1,0 +1,18 @@
+#+title: Executable File Formats
+#+setupfile: ../../../clean.theme
+* ELF
+:PROPERTIES:
+:ID:       f24fc678-8fe5-4625-8f57-f1ca6465d007
+:CREATED:  <2025-10-26 Sun 20:36>
+:AKA: Executable and Linkable Format
+:END:
+:EDGES:
+[2025-10-26 Sun 20:36] -- [[wikipedia:Executable and Linkable Format][wiki]]
+:END:
+- linker sections:
+  - text contains the program instructions
+  - rodata contains constant values like strings
+  - data contains statically allocated variables whose initial values are not zero
+  - bss also contains statically allocated variables whose initial values are zero
+  - vector_table is a non-standard section that we use to store the vector (interrupt) table
+  - ARM.attributes and the .debug_* sections contain metadata and will not be loaded onto the target when flashing the binary.

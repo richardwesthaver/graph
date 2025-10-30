@@ -64,6 +64,11 @@ Object-Oriented Programming
 :EDGES:
 [2025-03-06 Thu 13:49] -- [[https://en.wikipedia.org/wiki/Futures_and_promises][Futures and promises - Wikipedia]]
 :END:
+** Effectful Programming
+:PROPERTIES:
+:ID:       84cee9fa-d517-40e9-a7b9-8d8dd5d84dec
+:CREATED:  <2025-10-26 Sun 20:47>
+:END:
 ** Contract Programming
 :PROPERTIES:
 :ID:       f48341d3-f9ab-44ac-9387-4d32e92aa011
@@ -72,4 +77,9 @@ Object-Oriented Programming
 :EDGES:
 [2025-03-06 Thu 13:51] -- [[https://en.wikipedia.org/wiki/Design_by_contract][Design by contract - Wikipedia]]
 [2025-03-06 Thu 14:00] <- [[id:c1fdfebb-0dec-420d-abf9-aec7a2de5633][Contracts]]
+:END:
+** Macros
+:PROPERTIES:
+:ID:       aef61327-6c27-466e-b7c1-5663998a0824
+:CREATED:  <2025-10-26 Sun 20:47>
 :END:
