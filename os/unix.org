@@ -674,6 +674,31 @@ build directory. Then you can use pacman to install the package.
 :ID:       85f0992c-fc87-42dc-8946-0384dfe1ccb8
 :CREATED:  <2025-10-26 Sun 20:28>
 :END:
+***** Bootstrapping
+:PROPERTIES:
+:ID:       a3078d9b-457c-4545-a058-098ad1bed196
+:CREATED:  <2025-10-30 Thu 20:21>
+:END:
+I like Arch everywhere so we ought to have a good way of bootstrapping
+images for different machines and containers.
+
+- [[https://gitlab.archlinux.org/archlinux/arch-install-scripts][Arch Linux / arch-install-scripts · GitLab]]
+- use pacstrap to provision, need at least the =base= package
+  #+begin_src shell :eval never
+    pacstrap -K -c ~/foo-container base # [additional packages/groups]
+  #+end_src
+***** Networking
+:PROPERTIES:
+:ID:       6c02fd4a-b7dd-4838-b39f-b84f6ba20e97
+:CREATED:  <2025-10-30 Thu 20:13>
+:END:
+- just use systemd: [[https://wiki.archlinux.org/title/Systemd-networkd#Configuration][systemd-networkd - ArchWiki]]
+- check =/usr/lib/systemd/network/= for network file examples - add to
+  =/etc/systemd/network/=.
+- for wireless use iwd: [[https://wiki.archlinux.org/title/Iwd#Network_configuration][iwd - ArchWiki]]
+- sudoedit the files in =/var/lib/iwd/= after initial setup with iwctl
+- for encryption check [[archwiki:Iwd#Encrypted_network_profiles][iwd - Encrypted network profiles]]
+- [[https://wiki.archlinux.org/title/Systemd-networkd#Usage_with_containers][systemd-networkd - ArchWiki]] set up a bridge to ethernet for containers
 *** Ubuntu
 :PROPERTIES:
 :ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02

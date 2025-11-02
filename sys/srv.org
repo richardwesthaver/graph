@@ -145,10 +145,12 @@ systemd unit file reccs:
 :END:
 :EDGES:
 [2025-02-16 Sun 18:55] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd#sect-Managing_Services_with_systemd-Introduction][Chapter 10. Managing Services with systemd | Red Hat Product Documentation]]
-[2025-02-16 Sun 18:55] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.html#][systemd]]
+[2025-02-16 Sun 18:55] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.html][systemd]]
 [2025-06-22 Sun 00:21] <- [[id:0dcb6857-91e1-4319-ad00-97c742604593][systemd-udevd.service]]
 :END:
 - [[https://blog.alphabravo.io/systemd-zero-to-hero-part-1-understanding-the-modern-linux-init-system/][Systemd: Zero to Hero – Part 1: Understanding the Modern Linux Init System]]
+- [[https://0pointer.de/blog/projects/systemd.html][Rethinking PID 1]]
+- [[github:systemd/systemd-ui][systemd-ui]]
 *** Units
 :PROPERTIES:
 :ID:       5fb03f4f-e7ba-47fe-a502-185348417aa4
@@ -177,7 +179,7 @@ service unit. See the respective man pages for more information:
 - systemd.scope(5)
 
 #+name: emacs-unit-file-example
-#+begin_src conf :exports code
+#+begin_src conf :exports code :eval no
   [Unit]
   Description=Emacs text editor
   Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
@@ -198,14 +200,31 @@ service unit. See the respective man pages for more information:
   [Install]
   WantedBy=default.target
 #+end_src
-**** Templates
-:PROPERTIES:
-:ID:       55bce339-207c-47fc-b829-7567d95e46fa
-:CREATED:  <2025-02-16 Sun 21:08>
-:END:
-:EDGES:
-[2025-02-16 Sun 21:08] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#Service%20Templates][systemd.service]]
-:END:
+
+- run with =sudo systemctl start <unit-name>.timer=
+#+name: man-db-timer-example
+#+begin_src conf :exports code :eval no
+[Unit]
+Description=Daily man-db regeneration
+Documentation=man:mandb(8)
+
+[Timer]
+OnCalendar=daily
+AccuracySec=12h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+#+end_src
+- can also run 'transient timers' without creating a dedicated timer
+  and service units by using =systemd-run= (creates temporary units
+  that will not survive reboot in the ~/run/systemd/transient~
+  directory or ~/run/user/<uid>/systemd/transient~ if launched as a
+  specific user.
+  #+begin_src sh :eval no
+    systemd-run --user --on-calendar '*:0/1' /bin/sh -c "date >> ~/log.txt"
+    # systemctl --user stop run-r81a4fef38154401bbd8cdbd1e5c19d04.timer
+  #+end_src
 *** Credentials
 :PROPERTIES:
 :ID:       78c7aee5-76b4-4062-a8b1-5e04b252dda7

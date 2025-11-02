@@ -295,7 +295,6 @@ always) associated with major web browsers.
 :EDGES:
 [2025-10-12 Sun 22:43] -- [[https://kinsta.com/blog/minify-javascript/][How to Minify JavaScript — Recommended Tools and Methods]]
 :END:
-
 ** TypeScript                                                            :ts:
 :PROPERTIES:
 :ID:       58d76125-7110-4c76-b8d4-7014d407cc1d

@@ -580,6 +580,27 @@ and Web screenshot tests.
 :ID:       82d4dffa-070c-4ead-b317-9f9b6820e2c1
 :CREATED:  <2025-02-22 Sat 15:15>
 :END:
+*** CL-PPCRE
+:PROPERTIES:
+:ID:       f666c1b5-2900-44a2-85ba-2afb029d32ab
+:CREATED:  <2025-11-01 Sat 02:44>
+:END:
+:EDGES:
+[2025-11-01 Sat 02:44] -- [[github:edicl/cl-ppcre][src]]
+[2025-11-01 Sat 02:44] -- [[https://edicl.github.io/cl-ppcre/][doc]]
+:END:
+#+begin_quote
+CL-PPCRE is a portable regular expression library for Common Lisp
+which has the following features:
+- It is *compatible with Perl* (especially when used in conjunction
+  with [[http://weitz.de/cl-interpol/][cl-interpol]], to allow compatible parsing of regexp strings).
+- It is pretty *fast*.
+- It is *portable* between ANSI-compliant Common Lisp implementations.
+- It is *thread-safe*.
+- In addition to specifying regular expressions as strings like in
+  Perl you can also use *S-expressions*.
+- It comes with a [[http://www.opensource.org/licenses/bsd-license.php][BSD-style license]] so you can basically do with it whatever you want.
+#+end_quote
 *** one-more-re-nightmare
 :PROPERTIES:
 :ID:       cc72c2c8-8a05-432e-8e7a-844eb6c9ac15
@@ -1426,11 +1447,291 @@ Maclisp->Zetalisp
 [2025-07-22 Tue 22:33] -- [[info:elisp#Faces][info]]
 :END:
 #+begin_quote
+Emacs can display text in several different styles, called faces. Each
+face can specify various face attributes, such as the font, height,
+weight, slant, foreground and background color, and underlining or
+overlining. Most major modes assign faces to the text automatically,
+via Font Lock mode.
+#+end_quote
+
+#+begin_src emacs-lisp
+  (describe-function 'list-faces-display)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+list-faces-display is an interactive native-comp-function in
+‘faces.el’.
+
+It is bound to C-<down-mouse-2> <df>.
+It can also be invoked from the menu: Edit → Text Properties.
+
+(list-faces-display &optional REGEXP)
+
+Inferred type: (function (&optional t) boolean)
+
+List all faces, using the same sample text in each.
+The sample text is a string that comes from the variable
+‘list-faces-sample-text’.
+
+If REGEXP is non-nil, list only those faces with names matching
+this regular expression.  When called interactively with a prefix
+argument, prompt for a regular expression using ‘read-regexp’.
+
+  Probably introduced at or before Emacs version 19.17.
+
+#+end_example
+
+#+begin_quote
 A “face” is a collection of graphical attributes for displaying text:
 font, foreground color, background color, optional underlining, etc.
 Faces control how Emacs displays text in buffers, as well as other
 parts of the frame such as the mode line.
 #+end_quote
+** Modes
+:PROPERTIES:
+:ID:       8e912802-3969-4352-9a13-25f434bb1402
+:CREATED:  <2025-11-01 Sat 02:24>
+:END:
+*** Outline
+:PROPERTIES:
+:ID:       e69bdfe7-3e00-4c67-a5ec-8cd86e117db8
+:CREATED:  <2025-11-01 Sat 02:24>
+:END:
+*** Allout
+:PROPERTIES:
+:ID:       40e5417f-6830-4cb7-8353-4b5a7a08010c
+:CREATED:  <2025-11-01 Sat 02:24>
+:END:
+A minor mode similar to [[id:e69bdfe7-3e00-4c67-a5ec-8cd86e117db8][Outline]] mode but with more features and
+different syntax.
+
+Headings are denoted by the underscore character =_= in a comment line
+followed by a heading character - the simplest of which are the
+alternating pair =.= and =,=.
+
+In allout-mode headings *space is significant* - it is used to
+determine the nesting level of each heading. Add a space to shift
+inward, delete a space (relative to the previous heading) to shift
+outward.
+
+#+begin_quote
+This is how an outline can look (but sans indentation) with stylish
+prefixes:
+
+    * Top level
+    .* A topic
+    . + One level 3 subtopic
+    .  . One level 4 subtopic
+    .  . A second 4 subtopic
+    . + Another level 3 subtopic
+    .  #1 A numbered level 4 subtopic
+    .  #2 Another
+    .  ! Another level 4 subtopic with a different distinctive bullet
+    .  #4 And another numbered level 4 subtopic
+
+This would be an outline with stylish prefixes inhibited (but the
+numbered and other distinctive bullets retained):
+
+    * Top level
+    .* A topic
+    . * One level 3 subtopic
+    .  * One level 4 subtopic
+    .  * A second 4 subtopic
+    . * Another level 3 subtopic
+    .  #1 A numbered level 4 subtopic
+    .  #2 Another
+    .  ! Another level 4 subtopic with a different distinctive bullet
+    .  #4 And another numbered level 4 subtopic
+
+Stylish and constant prefixes (as well as old-style prefixes) are
+always respected by the topic maneuvering functions, regardless of
+this variable setting.
+#+end_quote
+
+#+begin_quote
+`comment-start' strings that do not end in spaces are tripled in
+the header-prefix, and an `_' underscore is tacked on the end, to
+distinguish them from regular comment strings.  `comment-start'
+strings that do end in spaces are not tripled, but an underscore
+is substituted for the space.
+#+end_quote
+
+#+begin_quote
+Allout outline mode is a minor mode that provides extensive
+outline oriented formatting and manipulation.  It enables
+structural editing of outlines, as well as navigation and
+exposure.  It also is specifically aimed at accommodating
+syntax-sensitive text like programming languages.  (For example,
+see the allout code itself, which is organized as an allout
+outline.)
+
+In addition to typical outline navigation and exposure, allout includes:
+
+ - topic-oriented authoring, including keystroke-based topic creation,
+   repositioning, promotion/demotion, cut, and paste
+ - incremental search with dynamic exposure and reconcealment of hidden text
+ - adjustable format, so programming code can be developed in outline-structure
+ - easy topic encryption and decryption, symmetric or key-pair
+ - "Hot-spot" operation, for single-keystroke maneuvering and exposure control
+ - integral outline layout, for automatic initial exposure when visiting a file
+ - independent extensibility, using comprehensive exposure and authoring hooks
+
+and many other features.
+#+end_quote
+
+#+begin_quote
+Distinctive bullets are not cycled when topics are shifted or
+otherwise automatically rebulleted, so their marking is
+persistent until deliberately changed.  Their significance is
+purely by convention, however.  Some conventions suggest
+themselves:
+
+ `(' - open paren -- an aside or incidental point
+ `?' - question mark -- uncertain or outright question
+ `!' - exclamation point/bang -- emphatic
+ `[' - open square bracket -- meta-note, about item instead of item's subject
+ `\"' - double quote -- a quotation or other citation
+ `=' - equal sign -- an assignment, some kind of definition
+ `^' - carat -- relates to something above
+
+Some are more elusive, but their rationale may be recognizable:
+
+ `+' - plus -- pending consideration, completion
+ `_' - underscore -- done, completed
+ `&' - ampersand -- addendum, furthermore
+
+\(Some other non-plain bullets have special meaning to the
+software.  By default:
+
+ `~' marks encryptable topics -- see `allout-topic-encryption-bullet'
+ `#' marks auto-numbered bullets -- see `allout-numbered-bullet'.)
+
+See `allout-plain-bullets-string' for the standard, alternating
+bullets.
+#+end_quote
+*** Org                                                                 :org:
+:PROPERTIES:
+:ID:       cea03181-b97b-494d-b362-28056416469d
+:CREATED:  <2025-02-13 Thu 22:39>
+:END:
+:EDGES:
+[2025-02-13 Thu 22:40] -- [[https://orgmode.org/][Org mode for GNU Emacs]]
+[2025-03-07 Fri 10:02] -- [[info:org][info]]
+:END:
+- [[http://blog.lujun9972.win/emacs-document/blog/2018/02/14/emacs-org-mode-examples-and-cookbook/index.html][Emacs org-mode examples and cookbook]]
+
+**** Org Babel
+:PROPERTIES:
+:ID:       9cfcee92-d862-400f-a80f-7bb538b27b45
+:CREATED:  <2025-03-07 Fri 10:01>
+:END:
+:EDGES:
+[2025-03-07 Fri 10:02] -- [[info:org#Library of Babel][info]]
+[2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
+:END:
+
+**** Org Export
+:PROPERTIES:
+:ID:       d26e1dac-f9cc-47a0-9a61-f32463247ec9
+:CREATED:  <2025-03-06 Thu 14:44>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:45] -- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference Documentation]]
+[2025-03-06 Thu 14:45] -- [[info:org#Exporting][info]]
+:END:
+- [[https://blog.alex.balgavy.eu/writing-your-own-derived-org-export-backend/][Writing your own (derived) Emacs Org export backend]]
+***** HTML
+:PROPERTIES:
+:ID:       9cb4a1c7-4798-4ac9-8958-9e3d86673d95
+:CREATED:  <2025-03-06 Thu 14:46>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:46] -- [[info:org#HTML Export][info]]
+:END:
+- [[info:org#text areas in html export][text areas in html export]] 
+- [[info:org#images in html export][images in html export]] 
+**** Refile and Copy
+:PROPERTIES:
+:ID:       f46c1c20-c958-4068-bf0c-bf6f4f77546f
+:CREATED:  <2025-03-04 Tue 18:00>
+:END:
+:EDGES:
+[2025-03-04 Tue 18:00] -- [[info:org#refile and copy][info]]
+[2025-03-04 Tue 18:01] -- [[https://yiming.dev/blog/2018/03/02/my-org-refile-workflow/][My org-refile workflow - Yiming Chen]]
+:END:
+**** org-info.js
+:PROPERTIES:
+:ID:       09edda89-63e0-4496-84eb-764fb9b0b7c3
+:CREATED:  <2025-03-06 Thu 14:49>
+:END:
+:EDGES:
+[2025-03-06 Thu 14:49] -- [[info:org#javascript support][info]]
+[2025-03-06 Thu 14:49] -- [[https://orgmode.org/worg/code/org-info-js/][EMACS ORG-INFO.JS]]
+[2025-03-06 Thu 14:51] -> [[id:d9226de2-4b80-4193-a06e-e3185ffb5217][Javascript]]
+:END:
+**** Syntax                                                             :syn:
+:PROPERTIES:
+:ID:       e1ef06a0-2c19-44fe-9afc-c216671c9ca4
+:CREATED:  <2025-10-13 Mon 19:46>
+:END:
+:EDGES:
+[2025-10-13 Mon 19:46] -- [[https://orgmode.org/worg/org-syntax.html][Org Syntax]]
+:END:
+#+begin_quote
+Elements can be stratified into “headings”, “sections”, “greater
+elements”, and “lesser elements”, from broadest scope to
+narrowest. Along with objects, these sub-classes define categories of
+syntactic environments. Only headings, sections, property drawers, and
+planning lines are context-free1, 2, every other syntactic component
+only exists within specific environments. This is a core concept of
+the syntax.
+
+Expanding on the stratification of elements, lesser elements are
+elements that cannot contain any other elements. As such, a paragraph
+is considered a lesser element. Greater elements can themselves
+contain greater elements or lesser elements. Sections contain both
+greater and lesser elements, and headings can contain a section and
+other headings.
+#+end_quote
+
+- Blank lines are considered a part of a preceding element.
+
+#+begin_quote
+To simplify references to common collections of objects, we define two
+useful sets. The minimal set of objects refers to plain text, text
+markup, entities, LaTeX fragments, superscripts and subscripts. The
+standard set of objects refers to the entire set of objects, excluding
+citation references and table cells.
+#+end_quote
+
+**** Org Element API
+:PROPERTIES:
+:ID:       bdf4ac96-f9a6-47ea-a27a-89a8d2b20ba7
+:CREATED:  <2025-03-04 Tue 20:09>
+:END:
+:EDGES:
+[2025-03-04 Tue 20:10] -- [[https://orgmode.org/worg/dev/org-element-api.html][Org Element API]]
+:END:
+
+**** Org Protocol
+:PROPERTIES:
+:ID:       d0590d0b-4be3-447b-a549-1c927be0c745
+:CREATED:  <2025-03-09 Sun 18:57>
+:END:
+#+begin_src js
+  javascript:location.href = 'org-protocol://capture?' +
+    new URLSearchParams({
+      template: "i",
+      url: location.href,
+      title: document.title,
+      body: window.getSelection()})
+#+end_src
+
+#+begin_src emacs-lisp
+org-protocol-protocol-alist
+#+end_src
+
 ** Overlays
 :PROPERTIES:
 :ID:       358a0e2b-b5e0-47ad-9c70-7bb72b1c548f
@@ -1499,3 +1800,26 @@ mm in cgol:
        c(i,k) := ac)
 #+end_src
 - [[https://dspace.mit.edu/bitstream/handle/1721.1/41951/AI_WP_121.pdf?sequence=1][CGOL - an Alternative External Representation For LISP users (1976)]]
+* Cursed Lisp                                                            :cc:
+:PROPERTIES:
+:ID:       22821eaa-7457-4dfd-b150-cd5835ae05d4
+:CREATED:  <2025-11-01 Sat 02:30>
+:END:
+The designated name for the specific flavor of [[id:af0ed8bb-4b45-42f9-b8be-82b8ea7935a3][Common Lisp]] used and
+developed by [[comp:][The Compiler Company]].
+
+Our language is /cursed/ because it is _non-portable_ - as in the
+language provided is not built with the typical Lisper's idea of
+/portability/. We do not limit ourselves to the CL ANSI specification,
+and /never/ support implementations beyond our own selection of [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]]
+builds.
+
+When using the term /Cursed Lisp/ in place of Common Lisp we are most
+likely trying to highlight specific capabilities of the /Cursed Lisp/
+environment which should not be considered in a 'pure ANSI CL'
+context.
+
+Similarly, when referring to a language with the prefix /Cursed/ like
+/Cursed C/ or /Cursed Rust/, we are referring to our internal syntax
+specifications of these languages which have a special relationship
+with Cursed Lisp and contain 'symbolic bridges' between each other.

@@ -1325,6 +1325,9 @@ suprising ways with the otherwise inaccessible parts criterion:
 
 #+end_src
 **** Inlining
+:PROPERTIES:
+:ID:       b260f2db-6eec-4f79-9f4f-f6e080062442
+:END:
 #+begin_src lisp
   ;;; An INLINEP value describes how a function is called. The values
   ;;; have these meanings:

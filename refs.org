@@ -14,6 +14,7 @@
 :AUTHOR:   Schulte, Eric and Davison, Dan and Dye, Thomas and Dominik, Carsten
 :YEAR:     2012
 :PAGES:    1–24
+:ID:       23d6a3ca-50a1-4116-a4dd-baa3eb190e8f
 :END:
 * BTRFS: The linux B-tree filesystem
 :PROPERTIES:
@@ -27,6 +28,7 @@
 :PAGES:
 :MONTH:    08
 :DOI:      10.1145/2501620.2501623
+:ID:       7e2728a6-a6ba-46fc-9521-04640150902a
 :END:
 * Cosmos+ OpenSSD: Rapid Prototype for Flash Storage Systems
 :PROPERTIES:
@@ -40,6 +42,7 @@
 :NUMBER:   3
 :MONTH:    jul
 :DOI:      10.1145/3385073
+:ID:       4b57d0d4-99a5-4eed-93cc-65aa5ec501de
 :END:
 * Ext4 File System Performance Analysis in Linux Environment
 :PROPERTIES:
@@ -53,6 +56,7 @@
 :PAGES:    288 293
 :ADDRESS:  Stevens Point, Wisconsin, USA
 :PUBLISHER: World Scientific and Engineering Academy and Society (WSEAS)
+:ID:       38641abe-2d29-42fa-be0d-2ed2587ac85d
 :END:
 * Extending the Salsa20 nonce
 :PROPERTIES:
@@ -64,6 +68,7 @@
 :MONTH:    05
 :PAGES:
 :URL:      https://cr.yp.to/snuffle/xsalsa-20110204.pdf
+:ID:       838a2cab-5459-4b85-9db2-045e57ce4b2b
 :END:
 * Hard Disk Failure Prediction Based on Blending Ensemble Learning
 :PROPERTIES:
@@ -76,6 +81,7 @@
 :VOLUME:   13
 :NUMBER:   5
 :DOI:      10.3390/app13053288
+:ID:       75e6f448-883a-4a7e-bd2b-81a567aa6936
 :END:
 * I/O Characteristics of Smartphone Applications and Their Implications for eMMC Design
 :PROPERTIES:
@@ -89,6 +95,7 @@
 :NUMBER:
 :PAGES:    12-21
 :DOI:      10.1109/IISWC.2015.8
+:ID:       05943a28-0a59-4ea6-98cb-a7c994a55a0c
 :END:
 * Measuring Dependency Freshness in Software Systems
 :PROPERTIES:
@@ -103,6 +110,7 @@
 :PAGES:    109-118
 :KEYWORDS: Software engineering;Software systems;Security;Context;Industries;Software measurement;software metrics;software maintenance
 :DOI:      10.1109/ICSE.2015.140
+:ID:       914b352a-2261-4be5-8a78-3e82dffaa3ee
 :END:
 * Practical Algorithms for Incremental Software Development Environments
 :PROPERTIES:
@@ -115,6 +123,7 @@
 :MONTH:    Mar
 :URL:      http://www2.eecs.berkeley.edu/Pubs/TechRpts/1997/5885.html
 :NUMBER:   UCB/CSD-97-946
+:ID:       4b4f817a-bc65-4e2b-b12d-d80c271f0a8b
 :END:
 * Practical Enhancement of User Experience in NVMe SSDs
 :PROPERTIES:
@@ -127,6 +136,7 @@
 :VOLUME:   10
 :NUMBER:   14
 :DOI:      10.3390/app10144765
+:ID:       49778b54-1643-4427-bdcd-d4d271ddcc7e
 :END:
 * Query Processing on Smart SSDs: Opportunities and Challenges
 :PROPERTIES:
@@ -141,6 +151,7 @@
 :ADDRESS:  New York, NY, USA
 :PUBLISHER: Association for Computing Machinery
 :DOI:      10.1145/2463676.2465295
+:ID:       87030924-1e5a-4654-9fc4-4c8f493e5e80
 :END:
 * Scalability in the {XFS} File System
 :PROPERTIES:
@@ -152,6 +163,7 @@
 :YEAR:     1996
 :PAGES:    1--14
 :PUBLISHER: {USENIX} Association
+:ID:       d6b642f6-4743-47ef-abd7-0989b6b12751
 :END:
 * Scripting: higher level programming for the 21st Century
 :PROPERTIES:
@@ -166,6 +178,7 @@
 :PAGES:    23-30
 :KEYWORDS: Computer languages;Assembly systems;Programming profession;Application software;Computer aided instruction;Registers;Program processors;Automatic generation control;Algorithm design and analysis;Buildings
 :DOI:      10.1109/2.660187
+:ID:       1acac1ad-4d03-416a-9161-eee23dc93ed5
 :END:
 * Super 8 languages for making movies (functional pearl)
 :PROPERTIES:
@@ -186,6 +199,7 @@
 :ARTICLENO: 30
 :NUMPAGES: 29
 :KEYWORDS: Declarative Languages, Domain-Specific Language, Integrated Development Environment, Language Oriented Design, Movies, Syntax Elaboration, Video Editing
+:ID:       b3a9de3b-e367-4b3c-9db6-664bc4060af5
 :END:
 * tmpfs: A Virtual Memory File System
 :PROPERTIES:
@@ -194,6 +208,7 @@
 :CUSTOM_ID: tmpfs
 :AUTHOR:   Peter Snyder
 :YEAR:     1990
+:ID:       c96448fc-fb08-4f6d-8219-d6bfed913d26
 :END:
 * Using a hierarchy of Domain Specific Languages in complex software systems design
 :PROPERTIES:
@@ -206,6 +221,7 @@
 :ARCHIVEPREFIX: arXiv
 :PRIMARYCLASS: cs.PL
 :URL:      https://arxiv.org/abs/cs/0409016
+:ID:       d61cc9ed-13e4-40fd-a1dd-6e23422643de
 :END:
 * Warren's Abstract Machine: A Tutorial Reconstruction
 :PROPERTIES:
@@ -218,6 +234,7 @@
 :PAGES:    939
 :ISBN:     9780262255585
 :DOI:      10.7551/mitpress/7160.001.0001
+:ID:       54dc4914-97f1-4fd0-acaa-c8abf4460765
 :END:
 * Why and How to Increase SSD Performance Transparency
 :PROPERTIES:
@@ -232,6 +249,7 @@
 :ADDRESS:  New York, NY, USA
 :PUBLISHER: Association for Computing Machinery
 :DOI:      10.1145/3317550.3321430
+:ID:       e8926b3f-20c5-4447-ab8a-319e565923f0
 :END:
 * xFS: A wide area mass storage file system
 :PROPERTIES:
@@ -243,6 +261,7 @@
 :YEAR:     1993
 :PAGES:    71--78
 :ORGANIZATION: IEEE
+:ID:       7b6fa71a-ebaf-4e47-92e7-2ece601c52ef
 :END:
 * Xor Filters: Faster and Smaller Than Bloom and Cuckoo Filters
 :PROPERTIES:
@@ -259,6 +278,7 @@
 :YEAR:     2020
 :MONTH:    mar
 :PAGES:    1–16
+:ID:       9e7a4c5c-168a-4d9c-95ca-7a51cf20bcd0
 :END:
 * zFS - a scalable distributed file system using object disks
 :PROPERTIES:
@@ -272,6 +292,7 @@
 :NUMBER:
 :PAGES:    207-218
 :DOI:      10.1109/MASS.2003.1194858
+:ID:       2efb21f7-bc3f-4c74-9757-0620d5a7ce8f
 :END:
 * {ZNS}: Avoiding the Block Interface Tax for Flash-based {SSDs}
 :PROPERTIES:
@@ -284,4 +305,5 @@
 :PAGES:    689--703
 :MONTH:    jul
 :PUBLISHER: USENIX Association
+:ID:       8c4460c8-f01b-40f9-bee9-b1a7be141c2d
 :END:

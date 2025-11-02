@@ -1,4 +1,4 @@
-#+title: Emacs-like Editors
+#+title: Emacs and Emacsen
 #+setupfile: ../../clean.theme
 * Emacs                                                               :emacs:
 :PROPERTIES:
@@ -15,7 +15,7 @@
 - refer to the INSTALL file in the root of the emacs repo for an
   overview of install options
 - releases are hosted at [[https://ftp.gnu.org/gnu/emacs/]]
-* Releases
+** Releases
 :PROPERTIES:
 :CUSTOM_ID: releases
 :ID:       cfe9d1b9-f6f4-4866-8291-d125fc8b3eb6
@@ -32,7 +32,7 @@ aria2c https://ftp.gnu.org/gnu/emacs/emacs-${VERSION}.tar.xz -d /tmp/
 tar -xf emacs-${VERSION}.tar.xz
    #+end_src
 
-* Building from Source
+** Building from Source
 :PROPERTIES:
 :CUSTOM_ID: building_from_source
 :ID:       31710a0d-bd27-4549-894e-62bb8ceaa015
@@ -68,172 +68,6 @@ make install
    - --with-x-toolkit=no
    - --without-x
    - --without-dbus --without-gconf --without-gsettings
-
-** Org Mode                                                             :org:
-:PROPERTIES:
-:ID:       cea03181-b97b-494d-b362-28056416469d
-:CREATED:  <2025-02-13 Thu 22:39>
-:END:
-:EDGES:
-[2025-02-13 Thu 22:40] -- [[https://orgmode.org/][Org mode for GNU Emacs]]
-[2025-03-07 Fri 10:02] -- [[info:org][info]]
-:END:
-- [[http://blog.lujun9972.win/emacs-document/blog/2018/02/14/emacs-org-mode-examples-and-cookbook/index.html][Emacs org-mode examples and cookbook]]
-
-*** Org Babel
-:PROPERTIES:
-:ID:       9cfcee92-d862-400f-a80f-7bb538b27b45
-:CREATED:  <2025-03-07 Fri 10:01>
-:END:
-:EDGES:
-[2025-03-07 Fri 10:02] -- [[info:org#Library of Babel][info]]
-[2025-02-16 Sun 20:13] -- [[https://orgmode.org/worg/library-of-babel.html][The Library of Babel]]
-:END:
-
-*** Org Export
-:PROPERTIES:
-:ID:       d26e1dac-f9cc-47a0-9a61-f32463247ec9
-:CREATED:  <2025-03-06 Thu 14:44>
-:END:
-:EDGES:
-[2025-03-06 Thu 14:45] -- [[https://orgmode.org/worg/dev/org-export-reference.html][Org Export Reference Documentation]]
-[2025-03-06 Thu 14:45] -- [[info:org#Exporting][info]]
-:END:
-- [[https://blog.alex.balgavy.eu/writing-your-own-derived-org-export-backend/][Writing your own (derived) Emacs Org export backend]]
-**** HTML
-:PROPERTIES:
-:ID:       9cb4a1c7-4798-4ac9-8958-9e3d86673d95
-:CREATED:  <2025-03-06 Thu 14:46>
-:END:
-:EDGES:
-[2025-03-06 Thu 14:46] -- [[info:org#HTML Export][info]]
-:END:
-- [[info:org#text areas in html export][text areas in html export]] 
-- [[info:org#images in html export][images in html export]] 
-*** Refile and Copy
-:PROPERTIES:
-:ID:       f46c1c20-c958-4068-bf0c-bf6f4f77546f
-:CREATED:  <2025-03-04 Tue 18:00>
-:END:
-:EDGES:
-[2025-03-04 Tue 18:00] -- [[info:org#refile and copy][info]]
-[2025-03-04 Tue 18:01] -- [[https://yiming.dev/blog/2018/03/02/my-org-refile-workflow/][My org-refile workflow - Yiming Chen]]
-:END:
-*** org-info.js
-:PROPERTIES:
-:ID:       09edda89-63e0-4496-84eb-764fb9b0b7c3
-:CREATED:  <2025-03-06 Thu 14:49>
-:END:
-:EDGES:
-[2025-03-06 Thu 14:49] -- [[info:org#javascript support][info]]
-[2025-03-06 Thu 14:49] -- [[https://orgmode.org/worg/code/org-info-js/][EMACS ORG-INFO.JS]]
-[2025-03-06 Thu 14:51] -> [[id:d9226de2-4b80-4193-a06e-e3185ffb5217][Javascript]]
-:END:
-*** Syntax                                                              :syn:
-:PROPERTIES:
-:ID:       e1ef06a0-2c19-44fe-9afc-c216671c9ca4
-:CREATED:  <2025-10-13 Mon 19:46>
-:END:
-:EDGES:
-[2025-10-13 Mon 19:46] -- [[https://orgmode.org/worg/org-syntax.html][Org Syntax]]
-:END:
-#+begin_quote
-Elements can be stratified into “headings”, “sections”, “greater
-elements”, and “lesser elements”, from broadest scope to
-narrowest. Along with objects, these sub-classes define categories of
-syntactic environments. Only headings, sections, property drawers, and
-planning lines are context-free1, 2, every other syntactic component
-only exists within specific environments. This is a core concept of
-the syntax.
-
-Expanding on the stratification of elements, lesser elements are
-elements that cannot contain any other elements. As such, a paragraph
-is considered a lesser element. Greater elements can themselves
-contain greater elements or lesser elements. Sections contain both
-greater and lesser elements, and headings can contain a section and
-other headings.
-#+end_quote
-
-- Blank lines are considered a part of a preceding element.
-
-#+begin_quote
-To simplify references to common collections of objects, we define two
-useful sets. The minimal set of objects refers to plain text, text
-markup, entities, LaTeX fragments, superscripts and subscripts. The
-standard set of objects refers to the entire set of objects, excluding
-citation references and table cells.
-#+end_quote
-
-*** Org Element API
-:PROPERTIES:
-:ID:       bdf4ac96-f9a6-47ea-a27a-89a8d2b20ba7
-:CREATED:  <2025-03-04 Tue 20:09>
-:END:
-:EDGES:
-[2025-03-04 Tue 20:10] -- [[https://orgmode.org/worg/dev/org-element-api.html][Org Element API]]
-:END:
-
-*** Org Protocol
-:PROPERTIES:
-:ID:       d0590d0b-4be3-447b-a549-1c927be0c745
-:CREATED:  <2025-03-09 Sun 18:57>
-:END:
-#+begin_src js
-  javascript:location.href = 'org-protocol://capture?' +
-    new URLSearchParams({
-      template: "i",
-      url: location.href,
-      title: document.title,
-      body: window.getSelection()})
-#+end_src
-
-#+begin_src emacs-lisp
-org-protocol-protocol-alist
-#+end_src
-
-** Faces
-:PROPERTIES:
-:ID:       ddc59062-bd64-431c-80bb-1e423cf40212
-:CREATED:  <2025-08-19 Tue 17:59>
-:END:
-:EDGES:
-[2025-08-19 Tue 17:59] -- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Faces.html][Faces (GNU Emacs Manual)]]
-:END:
-#+begin_quote
-Emacs can display text in several different styles, called faces. Each
-face can specify various face attributes, such as the font, height,
-weight, slant, foreground and background color, and underlining or
-overlining. Most major modes assign faces to the text automatically,
-via Font Lock mode.
-#+end_quote
-
-#+begin_src emacs-lisp
-  (describe-function 'list-faces-display)
-#+end_src
-
-#+RESULTS:
-#+begin_example
-list-faces-display is an interactive native-comp-function in
-‘faces.el’.
-
-It is bound to C-<down-mouse-2> <df>.
-It can also be invoked from the menu: Edit → Text Properties.
-
-(list-faces-display &optional REGEXP)
-
-Inferred type: (function (&optional t) boolean)
-
-List all faces, using the same sample text in each.
-The sample text is a string that comes from the variable
-‘list-faces-sample-text’.
-
-If REGEXP is non-nil, list only those faces with names matching
-this regular expression.  When called interactively with a prefix
-argument, prompt for a regular expression using ‘read-regexp’.
-
-  Probably introduced at or before Emacs version 19.17.
-
-#+end_example
 
 ** Eww                                                              :browser:
 :PROPERTIES:
@@ -438,12 +272,6 @@ Completion in Region Function
 #+begin_quote
 Parse org-todo headlines to use org-tables as Kanban tables
 #+end_quote
-** Emacsen
-:PROPERTIES:
-:ID:       68c578fc-020f-4751-a659-a05c979272c9
-:CREATED:  <2025-03-03 Mon 15:54>
-:END:
-
 ** Apps
 :PROPERTIES:
 :ID:       1bbc8529-d207-4a7e-a72a-b231316c90e6
