@@ -4,14 +4,6 @@
 #+email: richard.westhaver@gmail.com
 #+html_link_up: ..
 #+setupfile: ../clean.theme
-#+html_head: <script src="https://cdn.otom8.dev/js/3d-force-graph.mjs"></script>
-#+html_head: <script src="https://cdn.otom8.dev/js/minisearch.mjs"></script>
-#+html_head: <script src="https://cdn.otom8.dev/js/search.js"></script>
-#+html_head:  <style>
-#+html_head: .node-label {
-#+html_head:      font-size: 0.5em;
-#+html_head:    }
-#+html_head:  </style>
 #+export_file_name: index
 #+bibliography: refs.bib
 The CC =graph= is a collection of org documents representing a network
@@ -23,9 +15,10 @@ parent node or file.
 These documents depend on the core =graph.el= package which provides
 an interface for modifying the graph.
 
-- [2025-06-19 Thu] - UI is WIP
-  - static SVG embedding (first: [[id:d9e4736c-5902-4b40-840a-faf48d67ea27][org-heading refinement]])
-  - d3-force-graph webui (scroll down)
+- WIP :: [[file:ui][UI]]
+  - d3-force-graph webui
+  - todo: search
+  - todo: static SVG embedding (first: [[id:d9e4736c-5902-4b40-840a-faf48d67ea27][org-heading refinement]])
 
 #+call: org-graph-info()
 #+RESULTS:
@@ -215,45 +208,3 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/web/sites.html][web/sites]]            | 2025-10-07 15:35:05 |
 
 #+END:
-
-#+call: org-graph-3d()
-
-#+RESULTS:
-#+begin_export html
-<div id='3d-graph'></div>
-
-<script type='module'>
-    import SpriteText from 'https://esm.sh/three-spritetext';
-    const Graph = new ForceGraph3D(document.getElementById('3d-graph'),{controlType: 'orbit'})
-      .jsonUrl('https://cdn.otom8.dev/data/org-graph.json')
-      .showNavInfo(false)
-      .nodeId('id')
-      .nodeLabel('id')
-      .nodeAutoColorBy('path')
-      .linkSource('in')
-      .linkTarget('out')
-      .onNodeClick(node => window.open(node.path,'_blank'))
-      .linkWidth(4)
-      .linkDirectionalParticles(8)
-      .nodeThreeObject(node => {
-        const sprite = new SpriteText(node.name);
-        sprite.material.depthWrite = false; // make sprite background transparent
-        sprite.color = node.color;
-        sprite.textHeight = 8;
-        sprite.center.y = -0.6; // shift above node
-        return sprite;
-      })
-      .nodeThreeObjectExtend(true);
-</script>
-#+end_export
-
-#+call: org-graph-search()
-
-#+RESULTS:
-#+begin_export html
-<div class='search'>
-  <input type='text' placeholder='search' name='graph' autoComplete='none' autoCorrect='none' autoCapitalize='none' spellCheck='false'/>
-  <button class='clear'>&times;</button>
-</div>
-<ul class='suggestions'></ul>
-#+end_export
