@@ -6,7 +6,7 @@
 :CREATED:  <2025-02-01 Sat 16:51>
 :END:
 :EDGES:
-[2025-02-01 Sat 16:51] -- [[https://www.ozbargain.com.au/node/675611][OzBargain - RSS Feed - Accessing The Deals Comments? - OzBargain Forums]]
+[2025-02-01 Sat 16:51] -- [[https://www.ozbargain.com.au/node/675611][OzBargain - RSS Feed]]
 :END:
 - https://www.ozbargain.com.au/ozbapi/block/forum_new
 - https://www.ozbargain.com.au/deals/feed
@@ -57,7 +57,7 @@ crawler.pcpartpicker.com
 :END:
 :EDGES:
 [2025-02-11 Tue 19:22] -- [[https://www.nytimes.com/][The New York Times - Breaking News, US News, World News and Videos]]
-[2025-02-11 Tue 19:29] -- [[https://open.nytimes.com/abra-an-enterprise-framework-for-experimentation-at-the-times-57f8931449cd][ABRA: An enterprise framework for experimentation at The Times | by The NYT Open Team | NYT Open]]
+[2025-02-11 Tue 19:29] -- [[https://open.nytimes.com/abra-an-enterprise-framework-for-experimentation-at-the-times-57f8931449cd][ABRA - An enterprise framework for experimentation at The Times | by The NYT Open Team | NYT Open]]
 :END:
 #+begin_src js
   _f.apply(null,["url":url,"body":body,"headers":{nyt-app-type,nyt-app-version,nyt-token,x-nyt-targeting-dimensions-map:"newsTenure=anon_user"}]]

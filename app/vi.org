@@ -19,6 +19,6 @@ Standardized by the Single Unix Specification and POSIX
 :CREATED:  <2025-03-04 Tue 18:02>
 :END:
 :EDGES:
-[2025-03-04 Tue 18:02] -- [[https://www.vim.org/][welcome home : vim online]]
+[2025-03-04 Tue 18:02] -- [[https://www.vim.org/][home]]
 [2025-05-10 Sat 23:09] >> [[id:eddaae08-a0c1-4413-9f0a-804f663ae176][IDE]]
 :END:

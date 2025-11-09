@@ -12,7 +12,7 @@
 [2025-01-17 Fri 15:49] -- [[https://lisp-lang.org/][Common Lisp]]
 [2025-01-17 Fri 19:19] -- [[https://common-lisp-libraries.readthedocs.io/][common-lisp-libraries]]
 [2025-02-13 Thu 22:42] -- [[https://franz.com/support/documentation/cl-ansi-standard-draft-w-sidebar.pdf][CL ANSI Standard Draft]]
-[2025-02-13 Thu 22:43] -- [[https://www.lispworks.com/documentation/HyperSpec/Front/StartPts.htm][CLHS: Starting Points]]
+[2025-02-13 Thu 22:43] -- [[https://www.lispworks.com/documentation/HyperSpec/Front/StartPts.htm][CLHS Starting Points]]
 [2025-03-07 Fri 09:56] -- [[https://en.wikiquote.org/wiki/Lisp_(programming_language)][quotes]]
 [2025-05-01 Thu 21:01] -- [[https://cdr.common-lisp.dev/][CDR - Common Lisp Document Repository]]
 [2025-10-18 Sat 20:28] <- [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]]
@@ -106,7 +106,7 @@ is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 :EDGES:
 [2025-02-07 Fri 21:00] -- [[https://lispcookbook.github.io/cl-cookbook/clos.html][Fundamentals of CLOS]]
 [2025-02-07 Fri 21:01] -- [[https://gigamonkeys.com/book/object-reorientation-generic-functions][Object Reorientation: Generic Functions]]
-[2025-02-07 Fri 21:02] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/07_.htm][CLHS: Chapter 7]]
+[2025-02-07 Fri 21:02] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/07_.htm][CLHS Chapter 7]]
 [2025-03-03 Mon 14:03] <- [[id:da96454b-fc70-4a5c-bd7a-e66d148eb1d9][EIEIO]]
 :END:
 *** Method Combination
@@ -118,7 +118,7 @@ is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 [2025-02-07 Fri 21:00] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node285.html][28.1.7.2. Standard Method Combination]]
 [2025-02-07 Fri 21:06] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node286.html][28.1.7.3. Declarative Method Combination]]
 [2025-02-07 Fri 21:05] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node287.html][28.1.7.4. Built-in Method Combination Types]]
-[2025-02-07 Fri 21:16] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/m_defi_4.htm][CLHS: Macro DEFINE-METHOD-COMBINATION]]
+[2025-02-07 Fri 21:16] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/m_defi_4.htm][CLHS Macro DEFINE-METHOD-COMBINATION]]
 :END:
 - /simple built-in method combination types/
 #+begin_quote
@@ -546,7 +546,7 @@ of "think" at two in the morning'.
 :CREATED:  <2025-01-17 Fri 19:20>
 :END:
 :EDGES:
-[2025-01-17 Fri 19:20] -- [[https://github.com/screenshotbot/screenshotbot-oss][GitHub - screenshotbot/screenshotbot-oss]]
+[2025-01-17 Fri 19:20] -- [[https://github.com/screenshotbot/screenshotbot-oss][screenshotbot/screenshotbot-oss]]
 :END:
 A Screenshot Testing service to tie with your existing Android, iOS
 and Web screenshot tests.

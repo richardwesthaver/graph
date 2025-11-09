@@ -1,0 +1,55 @@
+#+title: Graph UI
+#+description: CC Knowledge Graph UI
+#+author: Richard Westhaver
+#+email: richard.westhaver@gmail.com
+#+html_link_up: ..
+#+setupfile: ../clean.theme
+#+html_head: <script src="https://cdn.otom8.dev/js/3d-force-graph.mjs"></script>
+#+html_head: <script src="https://cdn.otom8.dev/js/minisearch.mjs"></script>
+#+html_head: <script src="https://cdn.otom8.dev/js/search.js"></script>
+#+html_head:  <style>
+#+html_head: .node-label {
+#+html_head:      font-size: 0.5em;
+#+html_head:    }
+#+html_head:  </style>
+#+call: org-graph-3d()
+
+#+RESULTS:
+#+begin_export html
+<div id='3d-graph'></div>
+
+<script type='module'>
+    import SpriteText from 'https://esm.sh/three-spritetext';
+    const Graph = new ForceGraph3D(document.getElementById('3d-graph'),{controlType: 'orbit'})
+      .jsonUrl('https://cdn.otom8.dev/data/org-graph.json')
+      .showNavInfo(false)
+      .nodeId('id')
+      .nodeLabel('id')
+      .nodeAutoColorBy('path')
+      .linkSource('in')
+      .linkTarget('out')
+      .onNodeClick(node => window.open(node.path,'_blank'))
+      .linkWidth(4)
+      .linkDirectionalParticles(8)
+      .nodeThreeObject(node => {
+        const sprite = new SpriteText(node.name);
+        sprite.material.depthWrite = false; // make sprite background transparent
+        sprite.color = node.color;
+        sprite.textHeight = 8;
+        sprite.center.y = -0.6; // shift above node
+        return sprite;
+      })
+      .nodeThreeObjectExtend(true);
+</script>
+#+end_export
+
+#+call: org-graph-search()
+
+#+RESULTS:
+#+begin_export html
+<div class='search'>
+  <input type='text' placeholder='search' name='graph' autoComplete='none' autoCorrect='none' autoCapitalize='none' spellCheck='false'/>
+  <button class='clear'>&times;</button>
+</div>
+<ul class='suggestions'></ul>
+#+end_export
