@@ -575,6 +575,14 @@ and Web screenshot tests.
 :EDGES:
 [2025-08-30 Sat 21:39] -- [[https://stumpwm.github.io/][Stump Window Manager]]
 :END:
+*** Genera
+:PROPERTIES:
+:ID:       b34c6e3f-6559-4d7e-a554-b7b83ccc4d8c
+:CREATED:  <2025-11-09 Sun 01:13>
+:END:
+:EDGES:
+[2025-11-09 Sun 01:24] >> [[id:b8d8538c-7be9-4271-bf8e-897e9ba5b6ad][Symbolics]]
+:END:
 ** Libraries
 :PROPERTIES:
 :ID:       82d4dffa-070c-4ead-b317-9f9b6820e2c1
@@ -833,6 +841,21 @@ A CL to JS compiler
 - supplies a light js runtime with a web worker
 - lisp code compiled directly to js stream
 - supports CL/JS ffi
+*** Symbolics
+:PROPERTIES:
+:ID:       b8d8538c-7be9-4271-bf8e-897e9ba5b6ad
+:CREATED:  <2025-11-09 Sun 01:14>
+:END:
+:EDGES:
+[2025-11-09 Sun 01:24] << [[id:b34c6e3f-6559-4d7e-a554-b7b83ccc4d8c][Genera]]
+:END:
+- TODO find web source to link to
+
+- /var/lib/symbolics/sys.sct
+  - demo/organ.lisp
+  - io/iterators.lisp
+  - io/rtc.lisp (fsm)
+
 *** C-mera
 :PROPERTIES:
 :ID:       26cd6032-0e6e-4f9b-ae9f-2b88aa95dafc
