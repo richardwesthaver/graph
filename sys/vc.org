@@ -1,4 +1,4 @@
-#+title: Version Control Systems
+#+title: Version Control
 #+setupfile: ../../clean.theme
 * VCS                                                                    :vc:
 :PROPERTIES:
@@ -275,7 +275,20 @@ public.
 :EDGES:
 [2025-02-14 Fri 21:21] -- [[https://wiki.mercurial-scm.org/UsingExtensions][Using Mercurial Extensions]]
 :END:
-
+**** Hg-Git
+:PROPERTIES:
+:ID:       e3da871b-420e-4221-889c-ffb62e928776
+:CREATED:  <2025-11-11 Tue 18:43>
+:END:
+:EDGES:
+[2025-11-11 Tue 20:32] -- [[https://hg-git.github.io/][Hg-Git Mercurial Plugin]]
+[2025-11-11 Tue 20:32] -- [[https://foss.heptapod.net/mercurial/hg-git][mercurial / hg-git · GitLab]]
+:END:
+#+begin_example
+[extensions]
+hgext.bookmarks =
+hggit = ~/.data/skel/ext/hg-git/hggit
+#+end_example
 **** Evolve
 :PROPERTIES:
 :ID:       f8829131-67eb-4d4d-a101-28f08eced9ae
