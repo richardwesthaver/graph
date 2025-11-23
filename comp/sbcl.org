@@ -713,6 +713,28 @@ even-fixnum-lowtag and odd-fixnum-lowtag) though with the recent work
 on wider fixnums on 64-bit systems this is no longer necessarily so.
 #+end_quote
 
+#+begin_src lisp :post transpose
+  +lowtags+
+#+end_src
+
+#+RESULTS:
+| SB-VM:EVEN-FIXNUM-LOWTAG       |
+| SB-VM:OTHER-IMMEDIATE-0-LOWTAG |
+| SB-VM:PAD0-LOWTAG              |
+| SB-VM:INSTANCE-POINTER-LOWTAG  |
+| SB-VM:PAD1-LOWTAG              |
+| SB-VM:OTHER-IMMEDIATE-1-LOWTAG |
+| SB-VM:PAD2-LOWTAG              |
+| SB-VM:LIST-POINTER-LOWTAG      |
+| SB-VM:ODD-FIXNUM-LOWTAG        |
+| SB-VM:OTHER-IMMEDIATE-2-LOWTAG |
+| SB-VM:PAD3-LOWTAG              |
+| SB-VM:FUN-POINTER-LOWTAG       |
+| SB-VM:PAD4-LOWTAG              |
+| SB-VM:OTHER-IMMEDIATE-3-LOWTAG |
+| SB-VM:PAD5-LOWTAG              |
+| SB-VM:OTHER-POINTER-LOWTAG     |
+
 ***** The NIL-cons Hack
 :PROPERTIES:
 :ID:       e345e677-e9e1-496f-8f58-2f77e3a44000
@@ -767,6 +789,65 @@ constraints of widetag allocation, one out of every four lowtags must
 be a widetag (alternately, the width of the other-immediate lowtag is
 two bits).
 #+end_quote
+
+#+begin_src lisp :post transpose
+  +widetags+
+#+end_src
+
+#+RESULTS:
+| SB-VM:UNBOUND-MARKER-WIDETAG                    |
+| SB-VM:BIGNUM-WIDETAG                            |
+| SB-VM:RATIO-WIDETAG                             |
+| SB-VM:SINGLE-FLOAT-WIDETAG                      |
+| SB-VM:DOUBLE-FLOAT-WIDETAG                      |
+| SB-VM:COMPLEX-RATIONAL-WIDETAG                  |
+| SB-VM:COMPLEX-SINGLE-FLOAT-WIDETAG              |
+| SB-VM:COMPLEX-DOUBLE-FLOAT-WIDETAG              |
+| SB-VM:SYMBOL-WIDETAG                            |
+| SB-VM:SAP-WIDETAG                               |
+| SB-VM:CODE-HEADER-WIDETAG                       |
+| SB-VM:INSTANCE-WIDETAG                          |
+| SB-VM:FUNCALLABLE-INSTANCE-WIDETAG              |
+| SB-VM:SIMPLE-FUN-WIDETAG                        |
+| SB-VM:CLOSURE-WIDETAG                           |
+| SB-VM:VALUE-CELL-WIDETAG                        |
+| SB-VM:CHARACTER-WIDETAG                         |
+| SB-VM:WEAK-POINTER-WIDETAG                      |
+| SB-VM:FDEFN-WIDETAG                             |
+| SB-VM:SIMD-PACK-WIDETAG                         |
+| SB-VM:SIMD-PACK-256-WIDETAG                     |
+| SB-VM:FILLER-WIDETAG                            |
+| SB-VM:SIMPLE-ARRAY-WIDETAG                      |
+| SB-VM:SIMPLE-ARRAY-NIL-WIDETAG                  |
+| SB-VM:SIMPLE-VECTOR-WIDETAG                     |
+| SB-VM:SIMPLE-BIT-VECTOR-WIDETAG                 |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-2-WIDETAG      |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-4-WIDETAG      |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-7-WIDETAG      |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-8-WIDETAG      |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-15-WIDETAG     |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-16-WIDETAG     |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-31-WIDETAG     |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-32-WIDETAG     |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-FIXNUM-WIDETAG      |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-63-WIDETAG     |
+| SB-VM:SIMPLE-ARRAY-UNSIGNED-BYTE-64-WIDETAG     |
+| SB-VM:SIMPLE-ARRAY-SIGNED-BYTE-8-WIDETAG        |
+| SB-VM:SIMPLE-ARRAY-SIGNED-BYTE-16-WIDETAG       |
+| SB-VM:SIMPLE-ARRAY-SIGNED-BYTE-32-WIDETAG       |
+| SB-VM:SIMPLE-ARRAY-FIXNUM-WIDETAG               |
+| SB-VM:SIMPLE-ARRAY-SIGNED-BYTE-64-WIDETAG       |
+| SB-VM:SIMPLE-ARRAY-SINGLE-FLOAT-WIDETAG         |
+| SB-VM:SIMPLE-ARRAY-DOUBLE-FLOAT-WIDETAG         |
+| SB-VM:SIMPLE-ARRAY-COMPLEX-SINGLE-FLOAT-WIDETAG |
+| SB-VM:SIMPLE-ARRAY-COMPLEX-DOUBLE-FLOAT-WIDETAG |
+| SB-VM:SIMPLE-BASE-STRING-WIDETAG                |
+| SB-VM:SIMPLE-CHARACTER-STRING-WIDETAG           |
+| SB-VM:COMPLEX-BASE-STRING-WIDETAG               |
+| SB-VM:COMPLEX-CHARACTER-STRING-WIDETAG          |
+| SB-VM:COMPLEX-BIT-VECTOR-WIDETAG                |
+| SB-VM:COMPLEX-VECTOR-WIDETAG                    |
+| SB-VM:COMPLEX-ARRAY-WIDETAG                     |
 
 *** Bindings
 :PROPERTIES:
@@ -1210,6 +1291,145 @@ Virtual Operations
   - bounty offered on it by fosskers
   - for now we make wrappers in C which wrap raw structs in pointers
   - important for some libraries which rely on struct passing, most notably raylib
+**** Implementation
+:PROPERTIES:
+:ID:       4614d042-f2ae-49ea-a7d9-a29c4aed3210
+:CREATED:  <2025-11-22 Sat 20:37>
+:END:
+The implementation of Aliens in SBCL is extremely complex and not well
+documented. It has received minor updates over the years and is
+derived from the CMU CL alien internals. Much of the original CMU
+documentation does not apply or has been deleted.
+- files
+  - compiler/saptrans.lisp,{target}/sap.lisp (sap)
+  - compiler/aliencomp.lisp
+  - type-class.lisp (alien-type)
+  - globaldb.lisp (info)
+  - alien-type.lisp (earlyish alien-type def)
+  - alieneval.lisp (Alien parts which are not part of the compiler)
+  - alien-callback.lisp (Callback-specific parts which are not part of the compiler)
+
+:notes:
+- type-class.lisp
+  - alien-type (struct)
+    #+begin_src lisp :eval no
+      (defstruct (alien-type
+                   (:copier nil)
+                   (:constructor make-alien-type
+                                 (&key hash bits alignment
+                                  &aux (alignment
+                                        (or alignment (guess-alignment bits))))))
+        ;; HASH is a derived from the contents, not just a pseudo-random number.
+        ;; The highest 5 bits of it imply the alien-type-class.
+        ;; (There are curretly 16 type-classes with room for expansion)
+        ;; These slots should be read-only, but alas they get modified by
+        ;; the parsers for ENUM and RECORD types.
+        ;; Maybe the sign bit could be used to indicate hash-consed versus non-hash-consed
+        ;; and so we can know whether it is a safe operation to mutate the thing?
+        (hash 0 :type (and sb-xc:fixnum unsigned-byte))
+        ;; It's quasi-bogus that these can be NULL - it occurs when and only when parsing
+        ;; a structure type that involves self-recursion I think. The :type option is inadequate
+        ;; to enforce that atoms like {SINGLE,DOUBLE-}FLOAT always have an integer here.
+        (bits nil :type (or null unsigned-byte))
+        (alignment nil :type (or null unsigned-byte)))
+    #+end_src
+  - alien-type-type (type-model)
+- globaldb.lisp
+  - heap-alien-info (struct)
+    - type, alien-name, datap (data or code?)
+  - :alien-info (info-type)
+- alieneval.lisp
+  - alien-type (these are defined by the user via DEFINE-ALIEN-TYPE)
+    - ROOT (inaccessible)
+  - alien-type-class (class templates for ALIEN-TYPE)
+    - alien-value (most alien-types include this)
+    - =*=
+      #+begin_src lisp :eval never
+	(define-alien-type-translator * (to &environment env)
+	  (make-alien-pointer-type :to (if (eq to t) nil (parse-alien-type to env))))
+      #+end_src
+    - pointer, c-string
+    - mem-block (includes alien-value)
+      - array
+      - record
+	- alien-record-field (a plain struct with name,type,offset)
+	- =*struct-type-cache*=, =*union-type-cache*=
+	- type-translators: =struct= =union=
+      - function/values
+	#+begin_src lisp :eval never
+	  ;;; not documented in CMU CL:-(
+	  ;;;
+	  ;;; reverse engineering observations:
+	  ;;;   * seems to be set when translating return values
+	  ;;;   * seems to enable the translation of (VALUES), which is the
+	  ;;;     Lisp idiom for C's return type "void" (which is likely
+	  ;;;     why it's set when when translating return values)
+	  (defvar *values-type-okay* nil)
+
+	  ;;; Calling-convention spec, typically one of predefined keywords.
+	  ;;; Add or remove as needed for target platform.  It makes sense to
+	  ;;; support :cdecl everywhere.
+	  ;;;
+	  ;;; Null convention is supposed to be platform-specific most-universal
+	  ;;; callout convention. For x86, SBCL calls foreign functions in a way
+	  ;;; allowing them to be either stdcall or cdecl; null convention is
+	  ;;; appropriate here, as it is for specifying callbacks that could be
+	  ;;; accepted by foreign code both in cdecl and stdcall form.
+	  (def!type calling-convention () `(or null (member :stdcall :cdecl)))
+	  ;;; ...
+	  ;;; The safe default is to assume that everything is varargs.
+	  ;;; On x86-64 we have to emit a spurious instruction because of it.
+	  ;;; So until all users fix their lambda lists to be explicit about &REST
+	  ;;; (which is never gonna happen), be backward-compatible, unless
+	  ;;; locally toggled to get rid of noise instructions if so inclined.
+	  (defglobal *alien-fun-type-varargs-default* :unspecified)
+	#+end_src
+	- function type-class inherits from mem-block
+	  - type-translator for function
+	- values does not
+	  - type-translator for values
+    - alien variables
+      - (uses =heap-alien-info= from globaldb.lisp)
+
+      - local-alien-info (plain struct)
+	- info about local aliens (stack or register) - WITH-ALIEN
+          builds one of these structs and LOCAL-ALIEN and friends
+          communicate info about how it is represented.
+    - cas-alien
+    - sb-sys:extern-alien-name
+    - caching constructors (hashsets) - one for each alien-type
+    - acyclic-type-p
+    - helpers
+      #+begin_src lisp :eval no
+	(defun integer-type (bits signed) ; trivial helpers
+	  (make-alien-integer-type :bits bits :signed signed))
+	(defun boolean-type (bits)
+	  (make-alien-boolean-type :bits bits :signed nil))
+	(defun single-float-type () (parse-alien-type 'single-float nil))
+	(defun double-float-type () (parse-alien-type 'double-float nil))
+	(defun sap-type () (parse-alien-type 'system-area-pointer nil))
+      #+end_src
+    - make-type-load-form
+      - emit single sexpr to handle all levels of structure nesting
+- alien-callback.lisp
+  - =*alien-callbacks*= =*alien-callback-functions*=
+  - =free-alien-callable=
+  - =parse-alien-fun-type=
+  - =alien-lambda2= ?
+  - =*alien-callables*= (lisp symbols -> alien callable functions)
+  - =define-alien-callable= / =with-alien-callable=
+  - =make-alien-callable-function-unbound= =alien-callable-function=
+  - =sb-thread::enter-foreign-callback=
+
+- KINDS are KEYWORDS
+  #+begin_src lisp :eval no
+    (defun unparse-alien-record-kind (kind)
+      (case kind
+        (:struct 'struct)
+        (:union 'union)
+        (t '???)))
+  #+end_src
+:end:
 *** SB-ASSEM                                                            :asm:
 :PROPERTIES:
 :ID:       86674fe2-4105-4246-9682-f6e3fb84f7de
