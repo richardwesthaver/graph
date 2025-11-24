@@ -1087,6 +1087,60 @@ under user control.
 
 - [2025-06-02 Mon]
   #+begin_quote
+  Thread interaction
+  ==================
+  A created thread inherits the arena of its creator.
+  
+  At present, threads do not maintain enough state to know where
+  they were allocating in both the arena and the dynamic space.
+  Consequently, each "switch" from arena to dynamic space and back
+  incurs a small amount of waste, as the last chunk of memory claimed
+  for that thread in a particular TLAB is discarded.
+  
+  Control mechanisms
+  ==================
+  SB-VM:WITH-ARENA
+     specifies that all allocations within its dynamic scope
+     (i.e. regardless of where in the program allocation occurs)
+     are to be directed to the arena, with the exception that
+     code which was compiled to use the system TLAB will only
+     allocate to the heap.
+  SB-VM:WITHOUT-ARENA
+     specifies that all allocations within its dynamic scope
+     are to be directed to the dynamic space.
+  SB-VM:IN-SAME-ARENA (X)
+     specifies that allocation should occur where object X
+     was allocated.
+  (DECLARE (SB-C::TLAB :SYSTEM))
+     specifies that within its lexical scope, all allocations
+     should go to the heap.  This works as intended _only _if_
+     all allocations within the scope are handled as
+     "inline" allocations.  Code that is called from within
+     the scope of this declaration does not see the declaration
+     (as is to be expected per the language semantics)
+     and therefore uses the dynamic mechanism.
+  
+  Best practice
+  =============
+  Based on the preceding description of the control mechanisms
+  and the limitation upon switching in terms of memory waste,
+  it should be evident that code which uses the lexical declaration
+  is slightly to be preferred.
+  It is often possible to avoid use of the dynamic mechanism
+  by replacing an allocation point with the following pattern:
+  
+   (if (should-allocate-to-heap)
+       (locally (declare (sb-c::tlab :system)) (do-allocation))
+       (do-allocation))
+  
+  So despite the "doubling" of the allocator form, this is potentially
+  more efficient. Most likely the user would wrap this idiom in a macro.
+  
+  In practice, all mechanisms of control are necessary. Within a
+  lexically scoped usage, there might be a hidden call to a builtin
+  function such as REVERSE that would cons a new list using
+  the dynamic choice of heap or arena.
+
   Pending items
   =============
 
@@ -1299,7 +1353,7 @@ Virtual Operations
 The implementation of Aliens in SBCL is extremely complex and not well
 documented. It has received minor updates over the years and is
 derived from the CMU CL alien internals. Much of the original CMU
-documentation does not apply or has been deleted.
+documentation does not apply or is missing.
 - files
   - compiler/saptrans.lisp,{target}/sap.lisp (sap)
   - compiler/aliencomp.lisp
@@ -1308,7 +1362,6 @@ documentation does not apply or has been deleted.
   - alien-type.lisp (earlyish alien-type def)
   - alieneval.lisp (Alien parts which are not part of the compiler)
   - alien-callback.lisp (Callback-specific parts which are not part of the compiler)
-
 :notes:
 - type-class.lisp
   - alien-type (struct)
@@ -1334,10 +1387,40 @@ documentation does not apply or has been deleted.
         (alignment nil :type (or null unsigned-byte)))
     #+end_src
   - alien-type-type (type-model)
+    - from what I understand this is effectively the 'ctype'
+      designator for 'alien' specifically - see =*type-class-list*=
 - globaldb.lisp
   - heap-alien-info (struct)
     - type, alien-name, datap (data or code?)
   - :alien-info (info-type)
+    - :kind (:primitive (in sbcl) :defined (user) or :unknown)
+    - :translator 
+      #+begin_src lisp :eval no
+	(info :alien-type :translator '*)
+      #+end_src
+
+      #+RESULTS:
+      : #<FUNCTION SB-ALIEN::ALIEN-*-TYPE-TRANSLATOR>
+      : T
+    - :definition (only for user defined types)
+      #+begin_src lisp :eval no
+	(info :alien-type :definition 'rocksdb:rocksdb)
+      #+end_src
+
+      #+RESULTS:
+      : #<SB-ALIEN-INTERNALS:ALIEN-TYPE (:STRUCT ROCKSDB::ROCKSDB-T) NIL {1203FE4073}>
+      : T
+    - :source-location :alien-type
+      #+begin_src lisp
+	(info :source-location :alien-type 'rocksdb:rocksdb)
+      #+end_src
+      #+RESULTS:
+      : #S(SB-C:DEFINITION-SOURCE-LOCATION
+      :    :NAMESTRING "/home/ellis/comp/core/ffi/rocksdb/types.lisp"
+      :    :INDICES 98305)
+      : T
+   - :variable :kind (eq kind :alien)
+   - info :variable :alien-info form
 - alieneval.lisp
   - alien-type (these are defined by the user via DEFINE-ALIEN-TYPE)
     - ROOT (inaccessible)
@@ -1429,6 +1512,163 @@ documentation does not apply or has been deleted.
         (:union 'union)
         (t '???)))
   #+end_src
+  - i guess just for alien-enum-type-kind (vector or alist) and alien-record-type-kind
+
+#+begin_src lisp :results output
+  (let ((atyp (sb-alien::parse-alien-type 'sb-alien:int nil)))
+    (print atyp)
+    (print (sb-alien::unparse-alien-type atyp))
+    ;; second arg accepts :NORMAL (the default) or :RESULT (alien function
+    ;; return values) - see :ALIEN-REP method for INTEGER (listed below).
+    (print (sb-alien::compute-alien-rep-type atyp))
+    (print (sb-alien::compute-lisp-rep-type atyp)))
+#+end_src
+
+#+RESULTS:
+: 
+: #<ALIEN-TYPE (SB-ALIEN:SIGNED 32)> 
+: (SB-ALIEN:SIGNED 32) 
+: (SIGNED-BYTE 32) 
+: (SIGNED-BYTE 32) 
+
+#+begin_src lisp :eval no
+(define-alien-type-method (integer :alien-rep) (type context)
+  ;; When returning integer values that are narrower than a machine
+  ;; register from a function, some platforms leave the higher bits of
+  ;; the register uninitialized.  On those platforms, we use an
+  ;; alien-rep of the full register width when checking for purposes
+  ;; of return values and override the naturalize method to perform
+  ;; the sign extension (in compiler/{arch}/c-call.lisp).
+  (ecase context
+    ((:normal #-(or x86 x86-64) :result)
+     (list (if (alien-integer-type-signed type) 'signed-byte 'unsigned-byte)
+           (alien-integer-type-bits type)))
+    #+(or x86 x86-64)
+    (:result
+     (list (if (alien-integer-type-signed type) 'signed-byte 'unsigned-byte)
+           (max (alien-integer-type-bits type)
+                sb-vm:n-machine-word-bits)))))
+
+;;; As per the comment in the :ALIEN-REP method above, this is defined
+;;; elsewhere for x86oids.
+#-(or x86 x86-64)
+(define-alien-type-method (integer :naturalize-gen) (type alien)
+  (declare (ignore type))
+  alien)
+#+end_src
+
+#+begin_src lisp :eval no
+(defconstant-eqx +method-slot-alist+
+  '((:unparse . alien-type-class-unparse)
+    (:type= . alien-type-class-type=)
+    (:subtypep . alien-type-class-subtypep)
+    (:lisp-rep . alien-type-class-lisp-rep)
+    (:alien-rep . alien-type-class-alien-rep)
+    (:extract-gen . alien-type-class-extract-gen)
+    (:deposit-gen . alien-type-class-deposit-gen)
+    (:naturalize-gen . alien-type-class-naturalize-gen)
+    (:deport-gen . alien-type-class-deport-gen)
+    (:deport-alloc-gen . alien-type-class-deport-alloc-gen)
+    (:deport-pin-p . alien-type-class-deport-pin-p)
+    ;; cast?
+    (:arg-tn . alien-type-class-arg-tn)
+    (:result-tn . alien-type-class-result-tn))
+  #'equal)
+#+end_src
+
+- compute-extract-lambda
+  #+begin_src lisp :eval no
+    (sb-alien::compute-extract-lambda (parse-alien-type 'c-string nil))
+  #+end_src
+
+  #+RESULTS:
+  : (LAMBDA (SB-ALIEN::SAP SB-ALIEN::OFFSET IGNORE)
+  :   (DECLARE (TYPE SYSTEM-AREA-POINTER SB-ALIEN::SAP)
+  :            (TYPE UNSIGNED-BYTE SB-ALIEN::OFFSET)
+  :            (IGNORE IGNORE))
+  :   (SB-ALIEN-INTERNALS:NATURALIZE
+  :    (SB-SYS:SAP-REF-SAP SB-ALIEN::SAP (/ SB-ALIEN::OFFSET SB-VM:N-BYTE-BITS))
+  :    '#<ALIEN-TYPE C-STRING>))
+
+- compute-naturalize-lambda
+  #+begin_src lisp :eval no
+    (sb-alien::compute-naturalize-lambda (parse-alien-type 'c-string nil))
+  #+end_src
+
+  #+RESULTS:
+  : (LAMBDA (ALIEN IGNORE)
+  :   (DECLARE (IGNORE IGNORE))
+  :   (IF (ZEROP (SB-SYS:SAP-INT ALIEN))
+  :       NIL
+  :       (SB-ALIEN::C-STRING-TO-STRING ALIEN
+  :                                     (SB-ALIEN::C-STRING-EXTERNAL-FORMAT
+  :                                      #<ALIEN-TYPE C-STRING>)
+  :                                     (SB-ALIEN::ALIEN-C-STRING-TYPE-ELEMENT-TYPE
+  :                                      #<ALIEN-TYPE C-STRING>))))
+
+- compute-deposit-lambda
+  #+begin_src lisp :eval no
+    (sb-alien::compute-deposit-lambda (parse-alien-type 'c-string nil))
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  (LAMBDA (SB-ALIEN::VALUE SB-ALIEN::SAP SB-ALIEN::OFFSET IGNORE)
+    (DECLARE (TYPE SYSTEM-AREA-POINTER SB-ALIEN::SAP)
+	     (TYPE UNSIGNED-BYTE SB-ALIEN::OFFSET)
+	     (IGNORE IGNORE))
+    (LET ((SB-ALIEN::ALLOC-TMP
+	   (SB-ALIEN-INTERNALS:DEPORT-ALLOC SB-ALIEN::VALUE
+					    '#<ALIEN-TYPE C-STRING>)))
+      (SB-ALIEN-INTERNALS:MAYBE-WITH-PINNED-OBJECTS (SB-ALIEN::ALLOC-TMP)
+	  (#<ALIEN-TYPE C-STRING>)
+	(LET ((SB-ALIEN::VALUE
+	       (SB-ALIEN-INTERNALS:DEPORT SB-ALIEN::ALLOC-TMP
+					  '#<ALIEN-TYPE C-STRING>)))
+	  (SETF (SB-SYS:SAP-REF-SAP SB-ALIEN::SAP
+				    (/ SB-ALIEN::OFFSET SB-VM:N-BYTE-BITS))
+		  SB-ALIEN::VALUE)
+	  (SB-ALIEN-INTERNALS:NATURALIZE SB-ALIEN::VALUE
+					 '#<ALIEN-TYPE C-STRING>)))))
+  #+end_example
+
+- compute-deport-lambda
+  #+begin_src lisp :results output replace :eval no
+    (print (sb-alien::compute-deport-lambda (parse-alien-type 'c-string nil)))
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+
+  (LAMBDA (SB-ALIEN::VALUE IGNORE)
+    (DECLARE
+     (TYPE
+      (OR NULL SIMPLE-STRING (ALIEN (* CHAR)) (SIMPLE-ARRAY (UNSIGNED-BYTE 8)))
+      SB-ALIEN::VALUE)
+     (IGNORE IGNORE))
+    (ETYPECASE SB-ALIEN::VALUE
+      (NULL (INT-SAP 0))
+      ((ALIEN (* CHAR)) (SB-ALIEN:ALIEN-SAP SB-ALIEN::VALUE))
+      (VECTOR (SB-SYS:VECTOR-SAP SB-ALIEN::VALUE)))) 
+  #+end_example
+
+- compute-deport-alloc-lambda
+  #+begin_src lisp :eval no
+    (sb-alien::compute-deport-alloc-lambda (parse-alien-type 'c-string nil))
+  #+end_src
+
+  #+RESULTS:
+  : (LAMBDA (SB-ALIEN::VALUE IGNORE)
+  :   (DECLARE (IGNORE IGNORE))
+  :   (ETYPECASE SB-ALIEN::VALUE
+  :     (NULL NIL)
+  :     ((ALIEN (* CHAR)) SB-ALIEN::VALUE)
+  :     (T
+  :      (SB-ALIEN::STRING-TO-C-STRING SB-ALIEN::VALUE
+  :                                    (SB-ALIEN::C-STRING-EXTERNAL-FORMAT
+  :                                     #<ALIEN-TYPE C-STRING>)))))
+
+- DEPORT and NATURALIZE translate between SAPs and lisp rep?
 :end:
 *** SB-ASSEM                                                            :asm:
 :PROPERTIES:
