@@ -61,23 +61,23 @@
   (defun reader ()
     (with-mutex (*buffer-lock*)
       (loop
-       (condition-wait *buffer-queue* *buffer-lock*)
-       (loop
-        (unless *buffer* (return))
-        (let ((head (car *buffer*)))
-          (setf *buffer* (cdr *buffer*))
-          (format t "reader ~A woke, read ~A~%"
-                  ,*current-thread* head))))))
+        (condition-wait *buffer-queue* *buffer-lock*)
+        (loop
+          (unless *buffer* (return))
+          (let ((head (car *buffer*)))
+            (setf *buffer* (cdr *buffer*))
+            (format t "reader ~A woke, read ~A~%"
+                    ,*current-thread* head))))))
 
   (defun writer ()
     (loop
-     (sleep (random 5))
-     (with-mutex (*buffer-lock*)
-       (let ((el (intern
-                  (string (code-char
-                           (+ (char-code #\A) (random 26)))))))
-         (setf *buffer* (cons el *buffer*)))
-       (condition-notify *buffer-queue*))))
+      (sleep (random 5))
+      (with-mutex (*buffer-lock*)
+        (let ((el (intern
+                   (string (code-char
+                            (+ (char-code #\A) (random 26)))))))
+          (setf *buffer* (cons el *buffer*)))
+        (condition-notify *buffer-queue*))))
 
   (make-thread #'writer)
   (make-thread #'reader)
@@ -96,17 +96,17 @@
   ;; Consumer
   (defun pop-data (&optional timeout)
     (with-mutex (*lock*)
-        (loop until *data*
-              do (or (condition-wait *queue* *lock* :timeout timeout)
-                     ;; Lock not held, must unwind without touching *data*.
-                     (return-from pop-data nil)))
-        (pop *data*)))
+      (loop until *data*
+            do (or (condition-wait *queue* *lock* :timeout timeout)
+                   ;; Lock not held, must unwind without touching *data*.
+                   (return-from pop-data nil)))
+      (pop *data*)))
 
-    ;; Producer
-    (defun push-data (data)
-      (with-mutex (*lock*)
-        (push data *data*)
-        (condition-notify *queue*)))
+  ;; Producer
+  (defun push-data (data)
+    (with-mutex (*lock*)
+      (push data *data*)
+      (condition-notify *queue*)))
 #+end_src
 
 #+RESULTS: sbcl-condition-wait
@@ -116,21 +116,21 @@
 :ID:       dc91fb4a-adee-44ec-9bd8-cbfa10db8dca
 :CREATED:  <2025-03-06 Thu 14:19>
 :END:
-  #+begin_quote
-  These are based on the Linux kernel barrier design, which is in turn
-  based on the Alpha CPU memory model. They are presently implemented
-  for x86, x86-64, PPC, ARM64, and RISC-V systems, and behave as
-  compiler barriers on all other CPUs.
+#+begin_quote
+These are based on the Linux kernel barrier design, which is in turn
+based on the Alpha CPU memory model. They are presently implemented
+for x86, x86-64, PPC, ARM64, and RISC-V systems, and behave as
+compiler barriers on all other CPUs.
 
-  In addition to explicit use of the sb-thread:barrier macro, the
-  following functions and macros also serve as :memory barriers:
+In addition to explicit use of the sb-thread:barrier macro, the
+following functions and macros also serve as :memory barriers:
 
-  - sb-ext:atomic-decf, sb-ext:atomic-incf, sb-ext:atomic-push, and sb-ext:atomic-pop.
-  - sb-ext:compare-and-swap.
-  - sb-thread:grab-mutex, sb-thread:release-mutex, sb-thread:with-mutex and sb-thread:with-recursive-lock.
-  - sb-thread:signal-semaphore, sb-thread:try-semaphore and sb-thread:wait-on-semaphore.
-  - sb-thread:condition-wait, sb-thread:condition-notify and sb-thread:condition-broadcast.
-  #+end_quote
+- sb-ext:atomic-decf, sb-ext:atomic-incf, sb-ext:atomic-push, and sb-ext:atomic-pop.
+- sb-ext:compare-and-swap.
+- sb-thread:grab-mutex, sb-thread:release-mutex, sb-thread:with-mutex and sb-thread:with-recursive-lock.
+- sb-thread:signal-semaphore, sb-thread:try-semaphore and sb-thread:wait-on-semaphore.
+- sb-thread:condition-wait, sb-thread:condition-notify and sb-thread:condition-broadcast.
+#+end_quote
 **** Timers
 :PROPERTIES:
 :ID:       6ff7096f-a666-4103-8f32-1dc62c04cb35
@@ -235,6 +235,22 @@
   #+RESULTS:
   : (:COUNT . 1000000)
 
+*** Sequence Protocol
+:PROPERTIES:
+:ID:       660a290f-e3d8-4568-b431-104a9e79956c
+:CREATED:  <2025-11-26 Wed 21:39>
+:END:
+Sequence protocol is contained in the SBCL =SB-SEQUENCE= package.
+
+**** Iterator Protocol
+:PROPERTIES:
+:ID:       5a3debd1-9b38-48f0-bbcd-8cf3f18e8407
+:CREATED:  <2025-11-26 Wed 21:41>
+:END:
+The iterator protocol is a bit clunky and doesn't appear that useful
+out of context. Upon investigation it seems the most effective context
+is in fact the standard LOOP macro where there is a built-in ELEMENTS
+iteration path.
 *** global vars
 :PROPERTIES:
 :ID:       c33d77c8-188c-4ba0-90ff-f49fac6468c2
@@ -365,31 +381,15 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
     ;;; emit-nop
     ;;; location-number
   #+end_src
-- XSET
-  #+begin_src lisp
-    ;;;; XSET
-    ;;;;
-    ;;;; A somewhat efficient set implementation that can store arbitrary
-    ;;;; objects. For small sets the data is stored in a list, but when
-    ;;;; the amount of elements grows beyond +XSET-LIST-SIZE-LIMIT+, we
-    ;;;; switch to a hash-table instead.
-    ;;;;
-    ;;;; ALLOC-XSET allocates an empty XSET. ADD-TO-XSET adds an element
-    ;;;; to an XSET: it should be used only on freshly allocated XSETs.
-    ;;;;
-    ;;;; XSET-EMPTY-P, XSET-INTERSECTION, XSET-SUBSET-P, and XSET-MEMBER-P
-    ;;;; do the obvious things. MAP-XSET maps over the element, but
-    ;;;; requires a function as the first argument -- not a function
-    ;;;; designator.
-    ;;;;
-    ;;;; Note: XSET always uses EQL as the equivalence test
-  #+end_src
 - IDF :: Identical Code Folding (similar to what might be done by a C linker)
 
 *** SB-LOOP
 :PROPERTIES:
 :ID:       fe6f9aac-d7c6-497e-9ebc-a284c67466a0
 :CREATED:  <2025-11-25 Tue 20:04>
+:END:
+:EDGES:
+[2025-11-29 Sat 18:51] <- [[id:439a02f1-afcf-4ba3-bdf4-0304d152ba6f][Loop]]
 :END:
 :notes:
 - src/code/loop.lisp
@@ -443,9 +443,9 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
   #+end_quote
   #+begin_src lisp :eval no
     (defstruct (loop-universe
-                 (:constructor !make-loop-universe)
-                 (:copier nil)
-                 (:predicate nil))
+                (:constructor !make-loop-universe)
+                (:copier nil)
+                (:predicate nil))
       (keywords nil :read-only t)             ; hash table, value = (fn-name . extra-data)
       (iteration-keywords nil :read-only t)   ; hash table, value = (fn-name . extra-data)
       (for-keywords nil :read-only t)         ; hash table, value = (fn-name . extra-data)
@@ -554,7 +554,7 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
       ;;; This is the "current" loop context in use when we are expanding a
       ;;; loop. It gets bound on each invocation of LOOP.
         (universe nil :type loop-universe))
-      #+end_src
+    #+end_src
     - =*loop*= =*loop-body*= =*loop-inside-conditional*=
   - SB-LOOP::LOOP-PATH
     - iteration paths
@@ -596,6 +596,42 @@ DEFINE-LOAD-TIME-GLOBAL names a macro:
 - The =*LOOP-EPILOGUE*= Hack
   - noted at the bottom of src/code/loop.lisp
   - defined as symbol macro =(epilogue *loop*)=
+
+#+begin_src lisp :results output replace
+  (print (sb-loop::loop-translate (sb-loop::make-loop '(for i from 0 below 4) nil sb-loop::*loop-ansi-universe*)))
+#+end_src
+
+#+RESULTS:
+#+begin_example
+
+(BLOCK NIL
+  (LET ((I 0))
+    (DECLARE (IGNORABLE I)
+             (TYPE (AND REAL NUMBER) I))
+    (TAGBODY
+     SB-LOOP::NEXT-LOOP
+      (WHEN (>= I '4) (GO SB-LOOP::END-LOOP))
+      (SB-LOOP::LOOP-DESETQ I (1+ I))
+      (GO SB-LOOP::NEXT-LOOP)
+     SB-LOOP::END-LOOP)))
+#+end_example
+
+**** Loop Paths
+:PROPERTIES:
+:ID:       d3503f8e-eebb-4c8c-8ebe-a343dbc9e0e0
+:CREATED:  <2025-11-26 Wed 21:33>
+:END:
+- loop paths tie in with the sequence and in particular the
+  iterator/simple-iterator protocols
+- historically ANSI CL supports 'inclusive' iteration, although very
+  uncommon/extinct in modern code
+- exclusive iteration :: for X being the Y of Z
+- inclusive iteration :: for X being Z and its Ys
+- built-in paths implemented for:
+  - hash-table-keys
+  - hash-table-values
+  - external-symbols/present-symbols
+  - elements (sequences)
 *** FREEZE-TYPE
 :PROPERTIES:
 :ID:       9aa17e32-5677-4ff1-9e85-6df91557cea1
@@ -669,40 +705,40 @@ as IR1 types.
     (defconstant +ctype-hash-mask+ (logandc2 (1- (ash 1 ctype-PRNG-nbits)) #b111))
 
     (defstruct (ctype (:conc-name type-)
-                       (:constructor nil)
-                       (:copier nil)
-                       #-sb-xc-host (:pure t))
+                      (:constructor nil)
+                      (:copier nil)
+                      #-sb-xc-host (:pure t))
       ;; bits  0..24: pseudorandom hash
       ;; bits 25..29: 5 bits for type-class index
       (%bits (missing-arg) :type (signed-byte #.ctype-hash-size) :read-only t))
 
     ;; ...
 
-      (defvar *type-class-list*
-        ;; type-class and ctype instance types in that class
-        ;; The instance types MUST be list in descending order of DEPTHOID.
-        ;; See CTYPE->HASHSET-NAME for the rationale for this constraint.
-        '((named         named-type)
-          (classoid      classoid)
-          (values        values-type)
-          (function      fun-designator-type fun-type)
-          (constant      constant-type)
-          (hairy         unknown-type hairy-type)
-          (intersection  intersection-type)
-          (union         union-type)
-          (negation      negation-type)
-          (numeric-union numeric-union-type)
-          (array         array-type)
-          (character-set character-set-type)
-          (member        member-type)
-          (cons          cons-type)
-          ,#+sb-simd-pack
-          (simd-pack     simd-pack-type)
-          ,#+sb-simd-pack-256
-          (simd-pack-256 simd-pack-256-type)
-          ;; clearly alien-type-type is not consistent with the (FOO FOO-TYPE) theme
-          (alien         alien-type-type)))
-#+end_src
+    (defvar *type-class-list*
+      ;; type-class and ctype instance types in that class
+      ;; The instance types MUST be list in descending order of DEPTHOID.
+      ;; See CTYPE->HASHSET-NAME for the rationale for this constraint.
+      '((named         named-type)
+        (classoid      classoid)
+        (values        values-type)
+        (function      fun-designator-type fun-type)
+        (constant      constant-type)
+        (hairy         unknown-type hairy-type)
+        (intersection  intersection-type)
+        (union         union-type)
+        (negation      negation-type)
+        (numeric-union numeric-union-type)
+        (array         array-type)
+        (character-set character-set-type)
+        (member        member-type)
+        (cons          cons-type)
+        ,#+sb-simd-pack
+        (simd-pack     simd-pack-type)
+        ,#+sb-simd-pack-256
+        (simd-pack-256 simd-pack-256-type)
+        ;; clearly alien-type-type is not consistent with the (FOO FOO-TYPE) theme
+        (alien         alien-type-type)))
+  #+end_src
 
 #+begin_quote
 ;; There are 5 bits in a type-class index, so at most 32 type-classes
@@ -736,23 +772,23 @@ as IR1 types.
   access to the compiler (operates on IR1)
 
 #+begin_src lisp
-(sb-c:defknown wat (T T) *)
-(sb-c:deftransform wat ((x y) (string string) *) 
-  `(string-wat x y))
-(defun wat (x y)
-  (if (and (numberp x)
-           (numberp y))
-      (+ x y)
-      (concatenate 'string x y)))
+  (sb-c:defknown wat (T T) *)
+  (sb-c:deftransform wat ((x y) (string string) *) 
+    `(string-wat x y))
+  (defun wat (x y)
+    (if (and (numberp x)
+             (numberp y))
+        (+ x y)
+        (concatenate 'string x y)))
 
-(defun string-wat (x y)
-  (declare (optimize (speed 3) (safety 0))
-           (string x y))
-  (concatenate 'string x y "watpow"))
+  (defun string-wat (x y)
+    (declare (optimize (speed 3) (safety 0))
+             (string x y))
+    (concatenate 'string x y "watpow"))
 
-(let ((a (concatenate 'string "bo" "b"))
-       (b (concatenate 'string "dole")))
-   (wat a b))
+  (let ((a (concatenate 'string "bo" "b"))
+        (b (concatenate 'string "dole")))
+    (wat a b))
 #+end_src
 
 #+RESULTS:
@@ -827,40 +863,40 @@ objects.
 :ID:       fd50e430-8a51-406a-96bd-ae6a1cf73bdd
 :END:
 #+begin_quote
-  Tags for the main low-level types are stored in the low n (usually three)
-  bits to identify the type of a machine word.  Certain constraints
-  apply:
-    ,* EVEN-FIXNUM-LOWTAG and ODD-FIXNUM-LOWTAG must be 0 and 4: code
-      which shifts left two places to convert raw integers to tagged
-      fixnums is ubiquitous.
-    ,* LIST-POINTER-LOWTAG + N-WORD-BYTES = OTHER-POINTER-LOWTAG: NIL
-      is both a cons and a symbol (at the same address) and depends on this.
-      See the definition of SYMBOL in objdef.lisp
-    ,* OTHER-IMMEDIATE-0-LOWTAG are spaced 4 apart: various code wants to
-      iterate through these.  (This is not true on PPC64)
-  (These are just the ones we know about as of sbcl-0.7.1.22. There
-  might easily be more, since these values have stayed highly
-  constrained for more than a decade, an inviting target for
-  inventive abstraction-phobic maintainers.:-)
+Tags for the main low-level types are stored in the low n (usually three)
+bits to identify the type of a machine word.  Certain constraints
+apply:
+,* EVEN-FIXNUM-LOWTAG and ODD-FIXNUM-LOWTAG must be 0 and 4: code
+which shifts left two places to convert raw integers to tagged
+fixnums is ubiquitous.
+,* LIST-POINTER-LOWTAG + N-WORD-BYTES = OTHER-POINTER-LOWTAG: NIL
+is both a cons and a symbol (at the same address) and depends on this.
+See the definition of SYMBOL in objdef.lisp
+,* OTHER-IMMEDIATE-0-LOWTAG are spaced 4 apart: various code wants to
+iterate through these.  (This is not true on PPC64)
+(These are just the ones we know about as of sbcl-0.7.1.22. There
+might easily be more, since these values have stayed highly
+constrained for more than a decade, an inviting target for
+inventive abstraction-phobic maintainers.:-)
 
-  Another way to look at lowtags is that there is no one lowtag
-  length.  On 32-bit platforms, fixnums and other-immediates have a
-  lowtag length of two bits, and pointers have a lowtag length of
-  three bits.  On 64-bit platforms, fixnums and pointers gain an
-  extra bit, and six "pad" lowtags waste the extra encoding space so
-  obtained.
+Another way to look at lowtags is that there is no one lowtag
+length.  On 32-bit platforms, fixnums and other-immediates have a
+lowtag length of two bits, and pointers have a lowtag length of
+three bits.  On 64-bit platforms, fixnums and pointers gain an
+extra bit, and six "pad" lowtags waste the extra encoding space so
+obtained.
 
-   x00 -- fixnum
-   x10 -- other-immediate
-   001 -- instance-pointer
-   011 -- list-pointer
-   101 -- fun-pointer
-   111 -- other-pointer
+x00 -- fixnum
+x10 -- other-immediate
+001 -- instance-pointer
+011 -- list-pointer
+101 -- fun-pointer
+111 -- other-pointer
 
-  If you change the tag layout, check the various functions in
-  src/runtime/runtime.h to see if they need to be updated, along
-  with print_obj() in src/runtime/print.c, possibly 'late-objdef.lisp'
-  and possibly the code in src/code/room.
+If you change the tag layout, check the various functions in
+src/runtime/runtime.h to see if they need to be updated, along
+with print_obj() in src/runtime/print.c, possibly 'late-objdef.lisp'
+and possibly the code in src/code/room.
 #+end_quote
 
 - see early-objdef.lisp
@@ -1136,12 +1172,12 @@ only occurs as the child of a binary node.
   SBCL directly supports the mark bit by using the lowtag.
   #+end_quote
   #+begin_quote
-The changes to GC to support this code were as follows:
+  The changes to GC to support this code were as follows:
 
-,* If an instance is flagged as being a LFlist node, then the first data slot
+  ,* If an instance is flagged as being a LFlist node, then the first data slot
   is treated as an instance pointer even if it missing its tag bits.
 
-,* Since you can't pin an object that you don't a-priori have a tagged pointer
+  ,* Since you can't pin an object that you don't a-priori have a tagged pointer
   to, pinning a lockfree list node may implicitly pin not only that node but
   also the successor node, since there would otherwise be no way to reconstruct
   (in Lisp) a tagged pointer to the successor of a node pending deletion.
@@ -1150,15 +1186,15 @@ The changes to GC to support this code were as follows:
   arm64 and x86-64 uses PSEUDO-ATOMIC, which produces shorter code than
   WITH-PINNED-OBJECTS.
 
-,* Copying a lockfree list node tries to copy the successor nodes into adjacent
+  ,* Copying a lockfree list node tries to copy the successor nodes into adjacent
   memory just like copying a chain of cons cells. This is inessential but nice.
 
-,* verify_range() knows how to verify the 'next' pointer even when it looks like
+  ,* verify_range() knows how to verify the 'next' pointer even when it looks like
   a fixnum. Without this it would have been more difficult to test the above.
 
-The remaining issue is relatively unimportant: neither traceroot nor
-DO-REFERENCED-OBJECT can follow untagged pointers.
-This is potentially more of an annoyance than it is a bug.
+  The remaining issue is relatively unimportant: neither traceroot nor
+  DO-REFERENCED-OBJECT can follow untagged pointers.
+  This is potentially more of an annoyance than it is a bug.
 
   #+end_quote
 ***** Lockfree Hash Tables
@@ -1170,25 +1206,25 @@ This is potentially more of an annoyance than it is a bug.
   http://trac.clozure.com/ccl/wiki/Internals/LockFreeHashTables
   https://github.com/boundary/high-scale-lib/blob/master/src/main/java/org/cliffc/high_scale_lib/NonBlockingHashMap.java
   #+begin_quote
-The basic hashable is a lightweight one using prime number sizing strategy,
-and a secondary hash for re-probing that is not necessarily co-prime with
-the table size (as it would be, ideally), and no support for deletion.
+  The basic hashable is a lightweight one using prime number sizing strategy,
+  and a secondary hash for re-probing that is not necessarily co-prime with
+  the table size (as it would be, ideally), and no support for deletion.
 
-The lock-free logic differs from each of the preceding reference algorithms.
-The Java algorithm is truly lock-free: death of any thread will never impede
-progress in other threads. The CCL algorithm is only quasi-lock-free, as is
-ours. Were a rehashing thread to terminate abnormally while holding the
-rehash mutex, all other threads will likely starve at some point.
+  The lock-free logic differs from each of the preceding reference algorithms.
+  The Java algorithm is truly lock-free: death of any thread will never impede
+  progress in other threads. The CCL algorithm is only quasi-lock-free, as is
+  ours. Were a rehashing thread to terminate abnormally while holding the
+  rehash mutex, all other threads will likely starve at some point.
 
-Unlike the CCL algorithm, we allow reading/writing concurrently with rehash.
-Most operations will never notice that the rehasher has acquired a mutex,
-because the only case where writers compete for the mutex is in trying
-to claim a new cell in a storage vector that is being transported, and where
-the rehasher has already visited the desired cell. Since the rehasher will
-never re-visit a cell, it disallows updates that it could not perceive.
-The Java algorithm has additional complexity imposed upon it by the
-feature that rehashing work is parceling out fairly to threads,
-whereas we avoid that by having one rehasher transport all cells.
+  Unlike the CCL algorithm, we allow reading/writing concurrently with rehash.
+  Most operations will never notice that the rehasher has acquired a mutex,
+  because the only case where writers compete for the mutex is in trying
+  to claim a new cell in a storage vector that is being transported, and where
+  the rehasher has already visited the desired cell. Since the rehasher will
+  never re-visit a cell, it disallows updates that it could not perceive.
+  The Java algorithm has additional complexity imposed upon it by the
+  feature that rehashing work is parceling out fairly to threads,
+  whereas we avoid that by having one rehasher transport all cells.
   #+end_quote
 ****** Split Ordered List
 :PROPERTIES:
@@ -1197,21 +1233,21 @@ whereas we avoid that by having one rehasher transport all cells.
 :END:
 - solist.lisp
   #+begin_quote
-Lockfree hash table and hash set based on Shalev & Shavit paper
-https://www.cs.tau.ac.il/~afek/SplitOrderListHashSS03.pdf
+  Lockfree hash table and hash set based on Shalev & Shavit paper
+  https://www.cs.tau.ac.il/~afek/SplitOrderListHashSS03.pdf
 
-This table never uses a mutex for any operation, including resizing.
-The paper does not describe in detail how to deal with hash collisions,
-so this implementation imposes a requirement that either there be no
-hash collisions, or there be a partial order on keys such that any keys
-whose hashes collide can be ordered. Usually there would be a total order.
+  This table never uses a mutex for any operation, including resizing.
+  The paper does not describe in detail how to deal with hash collisions,
+  so this implementation imposes a requirement that either there be no
+  hash collisions, or there be a partial order on keys such that any keys
+  whose hashes collide can be ordered. Usually there would be a total order.
 
-Also we change the way a hash implies a bucket. Instead of reversing
-the bits of the hash, we use bits from left-to-right, so that as the
-bucket vector doubles, one more bit of lesser significance comes into play.
+  Also we change the way a hash implies a bucket. Instead of reversing
+  the bits of the hash, we use bits from left-to-right, so that as the
+  bucket vector doubles, one more bit of lesser significance comes into play.
 
-Some possible uses:
-,* classoid -> layout hash-tables in classoid-subclasses
+  Some possible uses:
+  ,* classoid -> layout hash-tables in classoid-subclasses
   will maybe fix some deadlock issues by removing locks?
   total ordering by an opaque globally unique ID.
   (These are currently not created as :synchronized
@@ -1220,7 +1256,7 @@ Some possible uses:
   the net memory used decreases, although at larger sizes
   the split-ordered list consumes more memory.
 
- ,* exact remembered sets for GC in immobile space
+  ,* exact remembered sets for GC in immobile space
   #+end_quote
 *** Symbols of Interest
 :PROPERTIES:
@@ -1310,25 +1346,25 @@ under user control.
   Control mechanisms
   ==================
   SB-VM:WITH-ARENA
-     specifies that all allocations within its dynamic scope
-     (i.e. regardless of where in the program allocation occurs)
-     are to be directed to the arena, with the exception that
-     code which was compiled to use the system TLAB will only
-     allocate to the heap.
+  specifies that all allocations within its dynamic scope
+  (i.e. regardless of where in the program allocation occurs)
+  are to be directed to the arena, with the exception that
+  code which was compiled to use the system TLAB will only
+  allocate to the heap.
   SB-VM:WITHOUT-ARENA
-     specifies that all allocations within its dynamic scope
-     are to be directed to the dynamic space.
+  specifies that all allocations within its dynamic scope
+  are to be directed to the dynamic space.
   SB-VM:IN-SAME-ARENA (X)
-     specifies that allocation should occur where object X
-     was allocated.
+  specifies that allocation should occur where object X
+  was allocated.
   (DECLARE (SB-C::TLAB :SYSTEM))
-     specifies that within its lexical scope, all allocations
-     should go to the heap.  This works as intended _only _if_
-     all allocations within the scope are handled as
-     "inline" allocations.  Code that is called from within
-     the scope of this declaration does not see the declaration
-     (as is to be expected per the language semantics)
-     and therefore uses the dynamic mechanism.
+  specifies that within its lexical scope, all allocations
+  should go to the heap.  This works as intended _only _if_
+  all allocations within the scope are handled as
+  "inline" allocations.  Code that is called from within
+  the scope of this declaration does not see the declaration
+  (as is to be expected per the language semantics)
+  and therefore uses the dynamic mechanism.
   
   Best practice
   =============
@@ -1339,9 +1375,9 @@ under user control.
   It is often possible to avoid use of the dynamic mechanism
   by replacing an allocation point with the following pattern:
   
-   (if (should-allocate-to-heap)
-       (locally (declare (sb-c::tlab :system)) (do-allocation))
-       (do-allocation))
+  (if (should-allocate-to-heap)
+  (locally (declare (sb-c::tlab :system)) (do-allocation))
+  (do-allocation))
   
   So despite the "doubling" of the allocator form, this is potentially
   more efficient. Most likely the user would wrap this idiom in a macro.
@@ -1364,6 +1400,80 @@ under user control.
   arena. The implication is that worker threads will constantly be
   switching their arena, which as per above, is inefficient.
   #+end_quote
+*** Early Extensions
+:PROPERTIES:
+:ID:       5aea02c4-e9d4-41e2-81a1-d1bdfaeae05f
+:CREATED:  <2025-11-27 Thu 21:01>
+:END:
+**** Binding*
+:PROPERTIES:
+:ID:       36fc490c-6af2-477b-9d69-67aec305bb26
+:CREATED:  <2025-11-27 Thu 21:01>
+:END:
+#+begin_quote
+(binding* ({(names initial-value [flag])}*) body)
+FLAG may be NIL or :EXIT-IF-NULL
+
+This form unites LET*, MULTIPLE-VALUE-BIND and AWHEN.
+Any name in a list of names may be NIL to ignore the respective value.
+If NAMES itself is nil, the initial-value form is evaluated only for effect.
+
+Clauses with no flag and one binding are equivalent to LET.
+
+Caution: don't use declarations of the form (<non-builtin-type-id> <var>)
+before the INFO database is set up in building the cross-compiler,
+or you will probably lose.
+Of course, since some other host Lisps don't seem to think that's
+acceptable syntax anyway, you're pretty much prevented from writing it.
+#+end_quote
+**** Hash Cache Utility
+:PROPERTIES:
+:ID:       f66c31eb-099e-4245-aab1-b397c1dda900
+:CREATED:  <2025-11-27 Thu 20:50>
+:END:
+- src/code/early-extensions.lisp
+  #+begin_quote
+  Define a hash cache that associates some number of argument values
+  with a result value. The TEST-FUNCTION paired with each ARG-NAME
+  is used to compare the value for that arg in a cache entry with a
+  supplied arg. The TEST-FUNCTION must not error when passed NIL as
+  its first arg, but need not return any particular value.
+  TEST-FUNCTION may be any thing that can be placed in CAR position.
+
+  This code used to store all the arguments / return values directly
+  in the cache vector. This was both interrupt- and thread-unsafe, since
+  it was possible that *-CACHE-ENTER would scribble over a region of the
+  cache vector which *-CACHE-LOOKUP had only partially processed. Instead
+  we now store the contents of each cache bucket as a separate array, which
+  is stored in the appropriate cell in the cache vector. A new bucket array
+  is created every time *-CACHE-ENTER is called, and the old ones are never
+  modified. This means that *-CACHE-LOOKUP will always work with a set
+  of consistent data. The overhead caused by consing new buckets seems to
+  be insignificant on the grand scale of things. -- JES, 2006-11-02
+
+  NAME is used to define these functions:
+  <name>-CACHE-LOOKUP Arg*
+  See whether there is an entry for the specified ARGs in the
+  cache. If not present, the :DEFAULT keyword (default NIL)
+  determines the result(s).
+  <name>-CACHE-ENTER Arg* Value*
+  Encache the association of the specified args with VALUE.
+  <name>-CACHE-CLEAR
+  Reinitialize the cache, invalidating all entries and allowing
+  the arguments and result values to be GC'd.
+
+  These other keywords are defined:
+  :HASH-BITS <n>
+  The size of the cache as a power of 2.
+  :HASH-FUNCTION function
+  Some thing that can be placed in CAR position which will compute
+  a fixnum with at least (* 2 <hash-bits>) of information in it.
+  :VALUES <n>
+  the number of return values cached for each function call
+  #+end_quote
+  - !DEFINE-HASH-CACHE, WITH-CACHE, DEFUN-CACHED aren't exported but various other symbols are:
+    - DROP-ALL-HASH-CACHES
+    - ALLOC-HASH-CACHE
 *** DEFINE-VOP
 :PROPERTIES:
 :ID:       f9bcac71-99b9-4375-9c23-8b650d21d86c
@@ -1578,11 +1688,11 @@ documentation does not apply or is missing.
   - alien-type (struct)
     #+begin_src lisp :eval no
       (defstruct (alien-type
-                   (:copier nil)
-                   (:constructor make-alien-type
-                                 (&key hash bits alignment
-                                  &aux (alignment
-                                        (or alignment (guess-alignment bits))))))
+                  (:copier nil)
+                  (:constructor make-alien-type
+                      (&key hash bits alignment
+                       &aux (alignment
+                             (or alignment (guess-alignment bits))))))
         ;; HASH is a derived from the contents, not just a pseudo-random number.
         ;; The highest 5 bits of it imply the alien-type-class.
         ;; (There are curretly 16 type-classes with room for expansion)
@@ -1630,8 +1740,8 @@ documentation does not apply or is missing.
       :    :NAMESTRING "/home/ellis/comp/core/ffi/rocksdb/types.lisp"
       :    :INDICES 98305)
       : T
-   - :variable :kind (eq kind :alien)
-   - info :variable :alien-info form
+    - :variable :kind (eq kind :alien)
+    - info :variable :alien-info form
 - alieneval.lisp
   - alien-type (these are defined by the user via DEFINE-ALIEN-TYPE)
     - ROOT (inaccessible)
@@ -1743,48 +1853,48 @@ documentation does not apply or is missing.
 : (SIGNED-BYTE 32) 
 
 #+begin_src lisp :eval no
-(define-alien-type-method (integer :alien-rep) (type context)
-  ;; When returning integer values that are narrower than a machine
-  ;; register from a function, some platforms leave the higher bits of
-  ;; the register uninitialized.  On those platforms, we use an
-  ;; alien-rep of the full register width when checking for purposes
-  ;; of return values and override the naturalize method to perform
-  ;; the sign extension (in compiler/{arch}/c-call.lisp).
-  (ecase context
-    ((:normal #-(or x86 x86-64) :result)
-     (list (if (alien-integer-type-signed type) 'signed-byte 'unsigned-byte)
-           (alien-integer-type-bits type)))
-    #+(or x86 x86-64)
-    (:result
-     (list (if (alien-integer-type-signed type) 'signed-byte 'unsigned-byte)
-           (max (alien-integer-type-bits type)
-                sb-vm:n-machine-word-bits)))))
+  (define-alien-type-method (integer :alien-rep) (type context)
+    ;; When returning integer values that are narrower than a machine
+    ;; register from a function, some platforms leave the higher bits of
+    ;; the register uninitialized.  On those platforms, we use an
+    ;; alien-rep of the full register width when checking for purposes
+    ;; of return values and override the naturalize method to perform
+    ;; the sign extension (in compiler/{arch}/c-call.lisp).
+    (ecase context
+      ((:normal #-(or x86 x86-64) :result)
+       (list (if (alien-integer-type-signed type) 'signed-byte 'unsigned-byte)
+             (alien-integer-type-bits type)))
+      ,#+(or x86 x86-64)
+      (:result
+       (list (if (alien-integer-type-signed type) 'signed-byte 'unsigned-byte)
+             (max (alien-integer-type-bits type)
+                  sb-vm:n-machine-word-bits)))))
 
-;;; As per the comment in the :ALIEN-REP method above, this is defined
-;;; elsewhere for x86oids.
-#-(or x86 x86-64)
-(define-alien-type-method (integer :naturalize-gen) (type alien)
-  (declare (ignore type))
-  alien)
+  ;;; As per the comment in the :ALIEN-REP method above, this is defined
+  ;;; elsewhere for x86oids.
+  #-(or x86 x86-64)
+  (define-alien-type-method (integer :naturalize-gen) (type alien)
+    (declare (ignore type))
+    alien)
 #+end_src
 
 #+begin_src lisp :eval no
-(defconstant-eqx +method-slot-alist+
-  '((:unparse . alien-type-class-unparse)
-    (:type= . alien-type-class-type=)
-    (:subtypep . alien-type-class-subtypep)
-    (:lisp-rep . alien-type-class-lisp-rep)
-    (:alien-rep . alien-type-class-alien-rep)
-    (:extract-gen . alien-type-class-extract-gen)
-    (:deposit-gen . alien-type-class-deposit-gen)
-    (:naturalize-gen . alien-type-class-naturalize-gen)
-    (:deport-gen . alien-type-class-deport-gen)
-    (:deport-alloc-gen . alien-type-class-deport-alloc-gen)
-    (:deport-pin-p . alien-type-class-deport-pin-p)
-    ;; cast?
-    (:arg-tn . alien-type-class-arg-tn)
-    (:result-tn . alien-type-class-result-tn))
-  #'equal)
+  (defconstant-eqx +method-slot-alist+
+      '((:unparse . alien-type-class-unparse)
+        (:type= . alien-type-class-type=)
+        (:subtypep . alien-type-class-subtypep)
+        (:lisp-rep . alien-type-class-lisp-rep)
+        (:alien-rep . alien-type-class-alien-rep)
+        (:extract-gen . alien-type-class-extract-gen)
+        (:deposit-gen . alien-type-class-deposit-gen)
+        (:naturalize-gen . alien-type-class-naturalize-gen)
+        (:deport-gen . alien-type-class-deport-gen)
+        (:deport-alloc-gen . alien-type-class-deport-alloc-gen)
+        (:deport-pin-p . alien-type-class-deport-pin-p)
+        ;; cast?
+        (:arg-tn . alien-type-class-arg-tn)
+        (:result-tn . alien-type-class-result-tn))
+    #'equal)
 #+end_src
 
 - compute-extract-lambda
@@ -1925,13 +2035,13 @@ documentation does not apply or is missing.
 :END:
 #+begin_quote
 *DERIVE-FUNCTION-TYPES* names a special variable:
-  Value: NIL
-  Documentation:
-    Should the compiler assume that function types will never change,
-      so that it can use type information inferred from current definitions
-      to optimize code which uses those definitions? Setting this true
-      gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
-      the efficiency of stable code.
+Value: NIL
+Documentation:
+Should the compiler assume that function types will never change,
+so that it can use type information inferred from current definitions
+to optimize code which uses those definitions? Setting this true
+gives non-ANSI, early-CMU-CL behavior. It can be useful for improving
+the efficiency of stable code.
 #+end_quote
 **** Stack Allocation
 :PROPERTIES:
@@ -1942,50 +2052,50 @@ documentation does not apply or is missing.
 [2025-06-27 Fri 18:52] -- [[info:sbcl#Stack Allocation][info]]
 :END:
 #+begin_quote
- -- Variable: *stack-allocate-dynamic-extent*
-     If true (the default), the compiler believes ‘dynamic-extent’
-     declarations and stack allocates otherwise inaccessible parts of
-     the object whenever possible.
+-- Variable: *stack-allocate-dynamic-extent*
+If true (the default), the compiler believes ‘dynamic-extent’
+declarations and stack allocates otherwise inaccessible parts of
+the object whenever possible.
 #+end_quote
 
 SBCL implements stack alloc for these calues when they're recognized
 as having dynamic extent:
 
 #+begin_quote
-   • ‘&rest’ lists
+• ‘&rest’ lists
 
-   • the results of ‘cons’, ‘list’, ‘list*’, and ‘vector’
+• the results of ‘cons’, ‘list’, ‘list*’, and ‘vector’
 
-   • the result of simple forms of ‘make-array’: stack allocation is
-     possible only if the resulting array is known to be both simple and
-     one-dimensional, and has a constant ‘:element-type’.
+• the result of simple forms of ‘make-array’: stack allocation is
+possible only if the resulting array is known to be both simple and
+one-dimensional, and has a constant ‘:element-type’.
 
-     *Note*: stack space is limited, so allocation of a large vector may
-     cause stack overflow.  Stack overflow checks are done except in
-     zero ‘safety’ policies.
+*Note*: stack space is limited, so allocation of a large vector may
+cause stack overflow.  Stack overflow checks are done except in
+zero ‘safety’ policies.
 
-   • closures defined with ‘flet’ or ‘labels’ with a bound
-     ‘dynamic-extent’ declaration.
+• closures defined with ‘flet’ or ‘labels’ with a bound
+‘dynamic-extent’ declaration.
 
-   • anonymous closures defined with ‘lambda’
+• anonymous closures defined with ‘lambda’
 
-   • user-defined structures when the structure constructor defined
-     using ‘defstruct’ has been declared ‘inline’
+• user-defined structures when the structure constructor defined
+using ‘defstruct’ has been declared ‘inline’
 
-     *Note*: structures with "raw" slots can currently be
-     stack-allocated only on x86 and x86-64.  A "raw" slot is one whose
-     declared type is a subtype of exactly one of: ‘double-float’,
-     ‘single-float’, ‘(complex double-float)’, ‘(complex single-float)’,
-     or ‘sb-ext:word’; but as an exception to the preceding, any subtype
-     of ‘fixnum’ is not stored as raw despite also being a subtype of
-     ‘sb-ext:word’.
+*Note*: structures with "raw" slots can currently be
+stack-allocated only on x86 and x86-64.  A "raw" slot is one whose
+declared type is a subtype of exactly one of: ‘double-float’,
+‘single-float’, ‘(complex double-float)’, ‘(complex single-float)’,
+or ‘sb-ext:word’; but as an exception to the preceding, any subtype
+of ‘fixnum’ is not stored as raw despite also being a subtype of
+‘sb-ext:word’.
 
-   • otherwise-inaccessible parts of objects recognized to be dynamic
-     extent.  The support for detecting when this applies is very
-     sophisticated.  The compiler can do this detection when any value
-     form for a variable contains conditional allocations, function
-     calls, inlined functions, anonymous closures, or even other
-     variables.  This allows stack allocation of complex structures.
+• otherwise-inaccessible parts of objects recognized to be dynamic
+extent.  The support for detecting when this applies is very
+sophisticated.  The compiler can do this detection when any value
+form for a variable contains conditional allocations, function
+calls, inlined functions, anonymous closures, or even other
+variables.  This allows stack allocation of complex structures.
 
 #+end_quote
 #+begin_src lisp
@@ -2031,31 +2141,31 @@ as having dynamic extent:
 #+end_src
 
 #+begin_quote
-   As a notable exception to recognizing otherwise inaccessible parts of
+As a notable exception to recognizing otherwise inaccessible parts of
 other recognized dynamic extent values, SBCL does not as of 1.0.48.21
 propagate dynamic-extentness through ‘&rest’ arguments - but another
 conforming implementation might, so portable code should not rely on
 this.
 
-     (declaim (inline foo))
-     (defun foo (fun &rest arguments)
-       (declare (dynamic-extent arguments))
-       (apply fun arguments))
+(declaim (inline foo))
+(defun foo (fun &rest arguments)
+(declare (dynamic-extent arguments))
+(apply fun arguments))
 
-     (defun bar (a)
-       ;; SBCL will heap allocate the result of (LIST A), and stack allocate
-       ;; only the spine of the &rest list -- so this is safe, but unportable.
-       ;;
-       ;; Another implementation, including earlier versions of SBCL might consider
-       ;; (LIST A) to be otherwise inaccessible and stack-allocate it as well!
-       (foo #'car (list a)))
+(defun bar (a)
+;; SBCL will heap allocate the result of (LIST A), and stack allocate
+;; only the spine of the &rest list -- so this is safe, but unportable.
+;;
+;; Another implementation, including earlier versions of SBCL might consider
+;; (LIST A) to be otherwise inaccessible and stack-allocate it as well!
+(foo #'car (list a)))
 
-   If dynamic extent constraints specified in the Common Lisp standard
+If dynamic extent constraints specified in the Common Lisp standard
 are violated, the best that can happen is for the program to have
 garbage in variables and return values; more commonly, the system will
 crash.
 
-   In particular, it is important to realize that this can interact in
+In particular, it is important to realize that this can interact in
 suprising ways with the otherwise inaccessible parts criterion:
 #+end_quote
 
@@ -2133,32 +2243,49 @@ easy.
 :ID:       31cebf6f-e67c-4289-a75e-ad012b4bbe5d
 :CREATED:  <2025-04-27 Sun 16:01>
 :END:
-#+begin_example
-WITH-ARRAY-DATA
+- WITH-ARRAY-DATA
+  #+begin_quote
+  This checks to see whether the array is simple and the start and
+  end are in bounds. If so, it proceeds with those values.
+  Otherwise, it calls %WITH-ARRAY-DATA. Note that %WITH-ARRAY-DATA
+  may be further optimized.
 
-This checks to see whether the array is simple and the start and
-end are in bounds. If so, it proceeds with those values.
-Otherwise, it calls %WITH-ARRAY-DATA. Note that %WITH-ARRAY-DATA
-may be further optimized.
+  Given any ARRAY, bind DATA-VAR to the array's data vector and
+  START-VAR and END-VAR to the start and end of the designated
+  portion of the data vector. SVALUE and EVALUE are any start and
+  end specified to the original operation, and are factored into the
+  bindings of START-VAR and END-VAR. OFFSET-VAR is the cumulative
+  offset of all displacements encountered, and does not include
+  SVALUE.
 
-Given any ARRAY, bind DATA-VAR to the array's data vector and
-START-VAR and END-VAR to the start and end of the designated
-portion of the data vector. SVALUE and EVALUE are any start and
-end specified to the original operation, and are factored into the
-bindings of START-VAR and END-VAR. OFFSET-VAR is the cumulative
-offset of all displacements encountered, and does not include
-SVALUE.
+  When FORCE-INLINE is set, the underlying %WITH-ARRAY-DATA form is
+  forced to be inline, overriding the ordinary judgment of the
+  %WITH-ARRAY-DATA DEFTRANSFORMs. Ordinarily the DEFTRANSFORMs are
+  fairly picky about their arguments, figuring that if you haven't
+  bothered to get all your ducks in a row, you probably don't care
+  that much about speed anyway! But in some cases it makes sense to
+  do type testing inside %WITH-ARRAY-DATA instead of outside, and
+  the DEFTRANSFORM can't tell that that's going on, so it can make
+  sense to use FORCE-INLINE option in that case.
+  #+end_quote
 
-When FORCE-INLINE is set, the underlying %WITH-ARRAY-DATA form is
-forced to be inline, overriding the ordinary judgment of the
-%WITH-ARRAY-DATA DEFTRANSFORMs. Ordinarily the DEFTRANSFORMs are
-fairly picky about their arguments, figuring that if you haven't
-bothered to get all your ducks in a row, you probably don't care
-that much about speed anyway! But in some cases it makes sense to
-do type testing inside %WITH-ARRAY-DATA instead of outside, and
-the DEFTRANSFORM can't tell that that's going on, so it can make
-sense to use FORCE-INLINE option in that case.
-#+end_example
+- XSET
+  #+begin_quote
+  A somewhat efficient set implementation that can store arbitrary
+  objects. For small sets the data is stored in a list, but when
+  the amount of elements grows beyond +XSET-LIST-SIZE-LIMIT+, we
+  switch to a hash-table instead.
+
+  ALLOC-XSET allocates an empty XSET. ADD-TO-XSET adds an element
+  to an XSET: it should be used only on freshly allocated XSETs.
+
+  XSET-EMPTY-P, XSET-INTERSECTION, XSET-SUBSET-P, and XSET-MEMBER-P
+  do the obvious things. MAP-XSET maps over the element, but
+  requires a function as the first argument -- not a function
+  designator.
+
+  Note: XSET always uses EQL as the equivalence test
+  #+end_quote
 ** Tree Shaker
 :PROPERTIES:
 :ID:       6beca36e-6264-4741-9180-66e81bf58c49
@@ -2200,14 +2327,14 @@ problem to design an effective tree-shaker.
 - nameservice is implemented by calling out to =getaddrinfo= and =gethostinfo=
 :end:
 #+begin_src lisp
-(defvar *protocols*
-  `((:tcp ,sockint::ipproto_tcp "tcp" "TCP")
-    (:udp ,sockint::ipproto_udp "udp" "UDP")
-    (:ip ,sockint::ipproto_ip "ip" "IP")
-    (:ipv6 ,sockint::ipproto_ipv6 "ipv6" "IPV6")
-    (:icmp ,sockint::ipproto_icmp "icmp" "ICMP")
-    (:igmp ,sockint::ipproto_igmp "igmp" "IGMP")
-    (:raw ,sockint::ipproto_raw "raw" "RAW")))
+  (defvar *protocols*
+    `((:tcp ,sockint::ipproto_tcp "tcp" "TCP")
+      (:udp ,sockint::ipproto_udp "udp" "UDP")
+      (:ip ,sockint::ipproto_ip "ip" "IP")
+      (:ipv6 ,sockint::ipproto_ipv6 "ipv6" "IPV6")
+      (:icmp ,sockint::ipproto_icmp "icmp" "ICMP")
+      (:igmp ,sockint::ipproto_igmp "igmp" "IGMP")
+      (:raw ,sockint::ipproto_raw "raw" "RAW")))
 #+end_src
 
 #+begin_quote
@@ -2233,8 +2360,11 @@ style.
   compiler (GCC)
 - not actually doing anything with the header files themselves,
   relying completely on the C compiler to determine results at C
-  runtime.
-- This is something we would generally like to avoid..
+  runtime (Lisp compile-time).
+- This is something we would generally like to avoid.. The [[vc:core][core]] offers
+  a replacement groveler - once the SYN system is loaded (after
+  tree-sitter) the new groveler may be used in system definitions and
+  SB-GROVEL will only be needed for bootstrapping.
 *** sb-cltl2
 :PROPERTIES:
 :ID:       d2269803-9084-4845-8860-047c37da36c7

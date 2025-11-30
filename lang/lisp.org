@@ -508,6 +508,157 @@ of "think" at two in the morning'.
 :ID:       439a02f1-afcf-4ba3-bdf4-0304d152ba6f
 :CREATED:  <2025-02-16 Sun 19:40>
 :END:
+:EDGES:
+[2025-11-29 Sat 18:51] -> [[id:fe6f9aac-d7c6-497e-9ebc-a284c67466a0][SB-LOOP]]
+[2025-11-29 Sat 18:53] -- [[https://gigamonkeys.com/book/loop-for-black-belts.html][LOOP for Black Belts]]
+:END:
+#+begin_quote
+Most of the so-called iteration control clauses start with the loop keyword for, or its synonym as,2 followed by the
+name of a variable. What follows after the variable name depends on the type of for clause.
+
+The subclauses of a for clause can iterate over the following:
+
+,* Ranges of numbers, up or down, by specified intervals
+,* The individual items of a list
+,* The cons cells that make up a list
+,* The elements of a vector, including subtypes such as strings and bit vectors
+,* The pairs of a hash table
+,* The symbols in a package
+,* The results of repeatedly evaluating a given form
+
+A single loop can have multiple for clauses with each clause naming
+its own variable. When a loop has multiple for clauses, the loop
+terminates as soon as any for clause reaches its end condition. For
+instance, the following loop:
+
+(loop
+  for item in list
+  for i from 1 to 10
+  do (something))
+
+will iterate at most ten times but may stop sooner if list contains
+fewer than ten items.
+#+end_quote
+#+begin_quote
+The Parts of a LOOP
+
+You can do the following in a LOOP:
+
+,* Step variables numerically and over various data structures
+,* Collect, count, sum, minimize, and maximize values seen while looping
+,* Execute arbitrary Lisp expressions
+,* Decide when to terminate the loop
+,* Conditionally do any of these
+
+Additionally, LOOP provides syntax for the following:
+
+,* Creating local variables for use within the loop
+,* Specifying arbitrary Lisp expressions to run before and after the loop proper
+
+The basic structure of a LOOP is a set of clauses, each of which
+begins with a loop keyword.1 How each clause is parsed by the LOOP
+macro depends on the keyword. Some of the main keywords, which you saw
+in Chapter 7, are for, collecting, summing, counting, do, and finally.
+#+end_quote
+
+#+begin_quote
+Iterating over a hash table or package is slightly more complicated
+because hash tables and packages have different sets of values you
+might want to iterate over--the keys or values in a hash table and the
+different kinds of symbols in a package. Both kinds of iteration
+follow the same pattern. The basic pattern looks like this:
+
+(loop for var being the things in hash-or-package ...)
+
+For hash tables, the possible values for things are hash-keys and
+hash-values, which cause var to be bound to successive values of
+either the keys or the values of the hash table. The hash-or-package
+form is evaluated once to produce a value, which must be a hash table.
+
+To iterate over a package, things can be symbols, present-symbols, and
+external-symbols, which cause var to be bound to each of the symbols
+accessible in a package, each of the symbols present in a package (in
+other words, interned or imported into that package), or each of the
+symbols that have been exported from the package. The hash-or-package
+form is evaluated to produce the name of a package, which is looked up
+as if by FIND-PACKAGE or a package object. Synonyms are also available
+for parts of the for clause. In place of the, you can use each; you
+can use of instead of in; and you can write the things in the singular
+(for example, hash-key or symbol).
+
+Finally, since you'll often want both the keys and the values when
+iterating over a hash table, the hash table clauses support a using
+subclause at the end of the hash table clause.
+
+(loop for k being the hash-keys in h using (hash-value v) ...)
+(loop for v being the hash-values in h using (hash-key k) ...)
+
+Both of these loops will bind k to each key in the hash table and v to
+the corresponding value. Note that the first element of the using
+subclause must be in the singular form.4
+#+end_quote
+
+#+begin_quote
+If none of the other for clauses supports exactly the form of variable
+stepping you need, you can take complete control over stepping with an
+equals-then clause. This clause is similar to the binding clauses in a
+DO loop but cast in a more Algolish syntax. The template is as
+follows:
+
+(loop for var = initial-value-form [ then step-form ] ...)
+
+As usual, var is the name of the variable to be stepped. Its initial
+value is obtained by evaluating initial-value-form once before the
+first iteration. In each subsequent iteration, step-form is evaluated,
+and its value becomes the new value of var. With no then part to the
+clause, the initial-value-form is reevaluated on each iteration to
+provide the new value. Note that this is different from a DO binding
+clause with no step form.
+
+The step-form can refer to other loop variables, including variables
+created by other for clauses later in the loop.  For instance:
+
+(loop repeat 5 
+      for x = 0 then y
+      for y = 1 then (+ x y)
+      collect y) ==> (1 2 4 8 16)
+
+However, note that each for clause is evaluated separately in the
+order it appears. So in the previous loop, on the second iteration x
+is set to the value of y before y changes (in other words, 1). But y
+is then set to the sum of its old value (still 1) and the new value of
+x. If the order of the for clauses is reversed, the results change.
+
+(loop repeat 5
+      for y = 1 then (+ x y)
+      for x = 0 then y
+      collect y) ==> (1 1 2 4 8)
+
+Often, however, you'll want the step forms for multiple variables to
+be evaluated before any of the variables is given its new value
+(similar to how DO steps its variables). In that case, you can join
+multiple for clauses by replacing all but the first for with and. You
+saw this formulation already in the LOOP version of the Fibonacci
+computation in Chapter 7. Here's another variant, based on the two
+previous examples:
+
+(loop repeat 5 
+      for x = 0 then y
+      and y = 1 then (+ x y)
+      collect y) ==> (1 1 2 3 5)
+#+end_quote
+
+- The possible verbs are collect, append, nconc, count, sum, maximize,
+  and minimize. Also available as synonyms are the present participle
+  forms: collecting, appending, nconcing, counting, summing,
+  maximizing, and minimizing.
+
+- As an extra bit of syntactic sugar, within the first loop clause,
+  after the test form, you can use the variable it to refer to the
+  value returned by the test form. For instance, the following loop
+  collects the non-NIL values found in some-hash when looking up the
+  keys in some-list:
+  =(loop for key in some-list when (gethash key some-hash) collect it)=
 ** Concurrency
 :PROPERTIES:
 :ID:       d9062d16-09f0-4c48-99ac-2e26407fc75b
