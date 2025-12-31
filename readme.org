@@ -37,9 +37,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                                 |
 | root        | ~/comp/org/graph/                                   |
 | tags        | (ORG DOCS NOTES BLOG META PLAN ARCHIVE NOTES GRAPH) |
-| updated     | Sat Nov 29 19:13:54 2025 -0500                      |
+| updated     | Fri Dec 05 00:01:53 2025 -0500                      |
 | langs       | org                                                 |
-| lines       | 15944 :λ 15060 :# 30 :_ 854                         |
+| lines       | 15945 :λ 15061 :# 30 :_ 854                         |
 |-------------+-----------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -57,6 +57,7 @@ an interface for modifying the graph.
 2025-09    817 *******
 2025-10   2381 ********************
 2025-11   3240 ****************************
+2025-12     16 
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -64,6 +65,7 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-12-08 21:37:46 |
 | [[https://otom8.dev/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
 | [[https://otom8.dev/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
 | [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-11-01 02:29:43 |
@@ -183,7 +185,6 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-26 20:35:20 |
-| [[https://otom8.dev/graph/index.html][index]]                | 2025-11-23 18:26:10 |
 | [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-11-01 02:17:43 |
 | [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |
