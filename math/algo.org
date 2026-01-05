@@ -31,6 +31,36 @@
 - Many data structures provide a better overall design for fast
   optimal searches, such as Hash Tables
 - [[https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/][Binary Search Tutorials & Notes | Algorithms | HackerEarth]]
+*** Graph Search
+:PROPERTIES:
+:ID:       16ca04ab-5406-4460-90a3-4d770babfdf6
+:CREATED:  <2025-12-31 Wed 20:55>
+:END:
+**** Dijkstra's Algorithm
+:PROPERTIES:
+:ID:       3d34c56d-8411-4fcd-9fbc-8594a971da50
+:CREATED:  <2025-12-31 Wed 20:55>
+:END:
+:EDGES:
+[2025-12-31 Wed 20:55] -- [[wikipedia:Dijkstra's Algorithm][wiki]]
+[2025-12-31 Wed 20:57] <- [[id:762dd80b-bf45-4daa-b693-2f34f1a61d3f][Fibonacci Heap]]
+:END:
+- shortest path on weighted graph
+
+- Fredman & Tarjan 1984 proposed a Fibonacci heap priority queue to
+  optimize the running time complexity to O(|E|+|V|log|V|). This is
+  asymptotically the fastest known single-source shortest-path
+  algorithm for arbitrary directed graphs with unbounded non-negative
+  weights. However, specialized cases (such as bounded/integer
+  weights, directed acyclic graphs etc.) can be improved further. If
+  preprocessing is allowed, algorithms such as contraction hierarchies
+  can be up to seven orders of magnitude faster.
+
+- Dijkstra's algorithm is commonly used on graphs where the edge weights
+  are positive integers or real numbers. It can be generalized to any
+  graph where the edge weights are partially ordered, provided the
+  subsequent labels (a subsequent label is produced when traversing an
+  edge) are monotonically non-decreasing.
 ** RNG
 :PROPERTIES:
 :ID:       1e99acf3-3bf4-49e0-ab2c-57c35341a7ad
@@ -74,7 +104,6 @@
 :EDGES:
 [2025-10-26 Sun 20:45] -- [[wikipedia:Selection algorithm][wiki]]
 :END:
-
 *** Quickselect
 :PROPERTIES:
 :ID:       4e5355b6-8f08-44dc-a3c3-799019a9104b

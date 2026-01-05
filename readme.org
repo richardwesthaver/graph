@@ -30,17 +30,17 @@ an interface for modifying the graph.
 #+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
 
 #+RESULTS:
-|-------------+-----------------------------------------------------|
-| name        | graph                                               |
-| version     | 0.1.0                                               |
-| description | CC Org Files                                        |
-| skel-id     | 1784914079056115652                                 |
-| root        | ~/comp/org/graph/                                   |
-| tags        | (ORG DOCS NOTES BLOG META PLAN ARCHIVE NOTES GRAPH) |
-| updated     | Fri Dec 05 00:01:53 2025 -0500                      |
-| langs       | org                                                 |
-| lines       | 15945 :λ 15061 :# 30 :_ 854                         |
-|-------------+-----------------------------------------------------|
+|-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name        | graph                                                                                                                                                                                                |
+| version     | (("#:fatal" 0.061999 "") ("unknown" "argument:" "show") ("0.1.0" "" ""))                                                                                                                             |
+| description | (("#:fatal" 0.062999 "") ("unknown" "argument:" "show") ("CC" "Org" "Files"))                                                                                                                        |
+| skel-id     | (("#:fatal" 0.063999 "") ("unknown" "argument:" "show") (1784914079056115652 "" ""))                                                                                                                 |
+| root        | ~/comp/org/graph/                                                                                                                                                                                    |
+| tags        | (("#:fatal" 0.061999 "") ("unknown" "argument:" "show") ("ORG" "" "") ("DOCS" "" "") ("NOTES" "" "") ("BLOG" "" "") ("META" "" "") ("PLAN" "" "") ("ARCHIVE" "" "") ("NOTES" "" "") ("GRAPH" "" "")) |
+| updated     | Tue Dec 30 21:00:06 2025 -0500                                                                                                                                                                       |
+| langs       | org                                                                                                                                                                                                  |
+| lines       | 15945 :λ 15061 :# 30 :_ 854                                                                                                                                                                     |
+|-------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
 
@@ -57,7 +57,7 @@ an interface for modifying the graph.
 2025-09    817 *******
 2025-10   2381 ********************
 2025-11   3240 ****************************
-2025-12     16 
+2025-12     23 
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -65,7 +65,7 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://otom8.dev/graph/index.html][index]]                | 2025-12-08 21:37:46 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2025-12-30 21:38:27 |
 | [[https://otom8.dev/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
 | [[https://otom8.dev/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
 | [[https://otom8.dev/graph/app/emacs.html][app/emacs]]            | 2025-11-01 02:29:43 |

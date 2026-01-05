@@ -54,6 +54,82 @@
 :EDGES:
 [2025-05-07 Wed 17:05] -- [[wikipedia:Heap (data structure)][wiki]]
 :END:
+**** Fibonacci Heap
+:PROPERTIES:
+:ID:       762dd80b-bf45-4daa-b693-2f34f1a61d3f
+:CREATED:  <2025-12-31 Wed 20:24>
+:END:
+:EDGES:
+[2025-12-31 Wed 20:24] -- [[wikipedia:Fibonacci Heap][wiki]]
+[2025-12-31 Wed 20:57] -> [[id:3d34c56d-8411-4fcd-9fbc-8594a971da50][Dijkstra's Algorithm]]
+:END:
+- A collection of [[id:ce61d665-fb20-44fb-990b-2ebdd11a038a][trees]] satisfying the minimum-heap property:
+  - The key of a child is always greater than or equal to the key of a
+    parent. The minimum element is always at the root of one of the trees.
+
+- used as a min-priority queue 
+  - an abstract data type that provides 3 basic operations:
+    add_with_priority(), decrease_priority() and extract_min().
+
+- typically used to implement the priority queue element of Dijkrsta's
+  algorithm
+- While Fibonacci heaps have very good theoretical complexities, in
+  practice, other heap types such as pairing heaps are faster. This is
+  because even in the simplest implementation, Fibonacci heaps require
+  four pointers for each node, other heaps need two or three.
+
+#+begin_quote
+Compared with binomial heaps, the structure of a Fibonacci heap is
+more flexible. The trees do not have a prescribed shape and in the
+extreme case the heap can have every element in a separate tree. This
+flexibility allows some operations to be executed in a lazy manner,
+postponing the work for later operations. For example, merging heaps
+is done simply by concatenating the two lists of trees, and operation
+decrease key sometimes cuts a node from its parent and forms a new
+tree.
+#+end_quote
+
+- amortized runtime analysis performed on /potential value/ given by:
+  \phi = t+2m
+  - where /t/ is the number of trees and /m/ is the number of marked nodes
+
+- Operations
+  - find-min O(1)
+  - merge O(1)
+  - insert O(1)
+  - delete-min O(log n)
+  - decrease-key O(k) + c(-k + 4)
+    - where k is the number of new trees inserted during the series of /cascading cuts/
+
+#+begin_quote
+Although the total running time of a sequence of operations starting
+with an empty structure is bounded by the bounds given above, some
+(very few) operations in the sequence can take very long to complete
+(in particular, delete-min has linear running time in the worst
+case). For this reason, Fibonacci heaps and other amortized data
+structures may not be appropriate for real-time systems.
+#+end_quote
+
+- [[https://arxiv.org/abs/1403.0252][[1403.0252] A Back-to-Basics Empirical Study of Priority Queues]]
+  - Recent experimental results suggest that the Fibonacci heap is
+    more efficient in practice than most of its later derivatives,
+    including quake heaps, violation heaps, strict Fibonacci heaps,
+    and rank pairing heaps, but less efficient than pairing heaps or
+    array-based heaps.
+
+**** Brodal Queue
+:PROPERTIES:
+:ID:       db309f05-7563-47a6-8205-901e4be3f68a
+:CREATED:  <2025-12-31 Wed 20:42>
+:END:
+:EDGES:
+[2025-12-31 Wed 20:42] -- [[wikipedia:Brodal queue][wiki]]
+:END:
+- O(1) for insertion, find-minimum, meld (merge two queues) and decrease-key
+- O(log(n)) for delete-minimum and general deletion.
+- First heap variant to achieve these bounds without resorting to
+  amortization of operational costs.
+
 *** Array
 :PROPERTIES:
 :ID:       825b2467-a397-4fcc-83b6-c3397e9cc091

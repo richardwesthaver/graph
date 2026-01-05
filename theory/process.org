@@ -66,6 +66,24 @@
   - misinformation :: false, inaccurate, or misleading information
     that is communicated regardless of an intention to deceive.
   - [[https://en.wikipedia.org/wiki/Uncertainty][uncertainty]]
+
+*** Content
+:PROPERTIES:
+:ID:       567cf0ed-447c-4eeb-807b-99f3376ca508
+:CREATED:  <2025-12-31 Wed 22:22>
+:END:
+:EDGES:
+[2025-12-31 Wed 22:24] -- [[wikipedia:Content creation][wiki]]
+:END:
+**** User-generated content
+:PROPERTIES:
+:ID:       49dc5fa2-ea40-4532-91ec-d3c00ca9df6b
+:CREATED:  <2025-12-31 Wed 22:22>
+:AKA: UGC
+:END:
+:EDGES:
+[2025-12-31 Wed 22:23] -- [[wiki:User-generated_content][wiki]]
+:END:
 * Performance Analysis
 :PROPERTIES:
 :ID:       d4140692-ebb8-478e-b933-062726efa859
