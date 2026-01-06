@@ -12,7 +12,7 @@
 :AKA: Symbolic Logic
 :END:
 :EDGES:
-[2025-02-28 Fri 18:53] -- [[https://en.wikipedia.org/wiki/Logic][Logic - Wikipedia]]
+[2025-02-28 Fri 18:53] -- [[wiki:Logic][wiki]]
 :END:
 *** Formal Language
 :PROPERTIES:
@@ -20,7 +20,7 @@
 :CREATED:  <2025-02-28 Fri 18:54>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:54] -- [[https://en.wikipedia.org/wiki/Formal_language][Formal language - Wikipedia]]
+[2025-02-28 Fri 18:54] -- [[wiki:Formal language][wiki]]
 :END:
 *** Formal System
 :PROPERTIES:
@@ -28,25 +28,16 @@
 :CREATED:  <2025-02-28 Fri 18:24>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:24] -- [[https://en.wikipedia.org/wiki/Formal_system][Formal system - Wikipedia]]
+[2025-02-28 Fri 18:24] -- [[wiki:Formal system][wiki]]
 :END:
-**** Lambda Calculus
-:PROPERTIES:
-:ID:       68ab28bf-45b9-4d51-90d0-8fb77017ec62
-:CREATED:  <2025-02-28 Fri 18:24>
-:END:
-:EDGES:
-[2025-02-28 Fri 18:24] -- [[https://en.wikipedia.org/wiki/Lambda_calculus][Lambda calculus - Wikipedia]]
-:END:
-- [[https://en.wikipedia.org/wiki/Alonzo_Church][Alonzo Church - Wikipedia]]
-- [[https://en.wikipedia.org/wiki/Richard_Montague][Richard Montague - Wikipedia]]
+
 ** Automata
 :PROPERTIES:
 :ID:       6eeab81b-c95c-4991-9e0a-d3c565dc800d
 :CREATED:  <2025-02-28 Fri 18:56>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:56] -- [[https://en.wikipedia.org/wiki/Automata_theory][Automata theory - Wikipedia]]
+[2025-02-28 Fri 18:56] -- [[wiki:Automata theory][wiki]]
 :END:
 *** Abstract Machine
 :PROPERTIES:
@@ -54,7 +45,7 @@
 :CREATED:  <2025-02-28 Fri 18:56>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:56] -- [[https://en.wikipedia.org/wiki/Abstract_machine][Abstract machine - Wikipedia]]
+[2025-02-28 Fri 18:56] -- [[wiki:Abstract machine][wiki]]
 :END:
 **** FSM
 :PROPERTIES:
@@ -62,7 +53,7 @@
 :CREATED:  <2025-02-28 Fri 18:58>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:58] -- [[https://en.wikipedia.org/wiki/Finite-state_machine][Finite-state machine - Wikipedia]]
+[2025-02-28 Fri 18:58] -- [[wiki:Finite-state machine][wiki]]
 :END:
 Finite-State Machine
 **** Turing Machine
@@ -107,7 +98,7 @@ Finite-State Machine
 :CREATED:  <2025-02-28 Fri 18:57>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Automaton][Automaton - Wikipedia]]
+[2025-02-28 Fri 18:57] -- [[wiki:Automaton][wiki]]
 :END:
 - A self-operating machine
 - plural: automata
@@ -160,7 +151,7 @@ its neighborhood.
 [2026-01-05 Mon 18:47] -- [[https://paulcousin.net/graph-rewriting-automata/graphs.html][Graphs — Graph-Rewriting Automata]]
 :END:
 
-**** Interaction Nets
+***** Interaction Nets
 :PROPERTIES:
 :ID:       a714eb13-728c-4aaf-8185-c18370fe427e
 :CREATED:  <2026-01-05 Mon 18:53>
@@ -168,6 +159,7 @@ its neighborhood.
 :EDGES:
 [2026-01-05 Mon 18:55] -- [[wikipedia:Interaction nets][wiki]]
 [2026-01-05 Mon 18:57] <- [[id:04f5c842-e24d-455c-be60-e0813825c14d][Interaction Calculus]]
+[2026-01-05 Mon 20:43] -- [[https://community.wolfram.com/groups/-/m/t/3528318][Exploring the space of interaction nets (a graph rewrite based computer language)]]
 :END:
 A graphical model of computation by Yves Lafont in 1990.
 ** Paradox
@@ -175,6 +167,18 @@ A graphical model of computation by Yves Lafont in 1990.
 :ID:       23328bba-a55c-475a-9438-8f86f5df6f2a
 :CREATED:  <2025-02-28 Fri 18:55>
 :END:
+:EDGES:
+[2026-01-05 Mon 20:50] -- [[wikipedia:Paradox][wiki]]
+:END:
+- a statement that, despite apparently valid reasoning from true or
+  apparently true premises, leads to a seemingly self-contradictory or
+  a logically unacceptable conclusion
+  - a self-contradictory statement
+- non-par Self-reference: "This statement is written in English."
+- paradoxical self-reference: "This statement is false." (liar's
+  paradox, see also barber's paradox)
+- Contradiction: (liar's and barber's)
+- non-par contradiction: "This statement is written in French"
 *** Von Neumann paradox
 :PROPERTIES:
 :ID:       ced95c20-cf43-491d-9f73-d53bb01da9d5
@@ -192,5 +196,4 @@ two disks, using area-preserving affine transformations instead of
 translations and rotations. The result depended on finding free groups
 of affine transformations, an important technique extended later by
 von Neumann in his work on measure theory.
-
 #+end_quote
