@@ -21,12 +21,17 @@
 :EDGES:
 [2025-02-14 Fri 21:55] -- [[https://en.wikipedia.org/wiki/Large_language_model][Large language model - Wikipedia]]
 :END:
-Large language models.
+'Large language models'.
+**** Transformer
+:PROPERTIES:
+:ID:       21d6af11-b53b-4e9c-a64a-35d9a223f479
+:CREATED:  <2026-01-05 Mon 21:14>
+:END:
+:EDGES:
+[2026-01-05 Mon 21:14] -- [[wikipedia:Transformer (deep learning)][wiki]]
+:END:
+- [[https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf][Attention is all you need]] 2017
 
-:note:
-I have a very negative opinion of the current AI-product paradigm
-which is dominated by chatbots.
-:end:
 **** GPT
 :PROPERTIES:
 :ID:       7a50d672-f3b9-4606-b4b7-3a6133c9b076

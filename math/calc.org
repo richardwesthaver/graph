@@ -26,12 +26,14 @@ The study of continuous change.
 - [[https://crypto.stanford.edu/~blynn/lambda/systemf.html][Lambda calculus - System F]]
 - [[https://en.wikipedia.org/wiki/Alonzo_Church][Alonzo Church - Wikipedia]]
 - [[https://en.wikipedia.org/wiki/Richard_Montague][Richard Montague - Wikipedia]]
-** Geometrical Calculus
+** Geometric Calculus
 :PROPERTIES:
 :ID:       c832a0d6-26ee-456c-9bca-4ad9b9d2a975
 :CREATED:  <2026-01-05 Mon 19:13>
 :END:
-
+:EDGES:
+[2026-01-05 Mon 21:40] -- [[wikipedia:Geometric calculus][wiki]]
+:END:
 ** Differential Calculus
 :PROPERTIES:
 :ID:       d0976b17-9de6-4c85-9ae5-8f1e89c4941a
@@ -72,7 +74,6 @@ The study of continuous change.
 :EDGES:
 [2025-02-28 Fri 18:37] -- [[wiki:Vector calculus][wiki]]
 :END:
-
 ** Stochastic Calculus
 :PROPERTIES:
 :ID:       8f56ea7b-0b22-4620-a454-a7ff9d9b5a5c
@@ -81,7 +82,6 @@ The study of continuous change.
 :EDGES:
 [2025-02-28 Fri 18:38] -- [[wiki:Stochastic calculus][wiki]]
 :END:
-
 ** Characteristic Equation
 :PROPERTIES:
 :ID:       4bfa694a-79db-4ef6-9d5c-45515f70cb96

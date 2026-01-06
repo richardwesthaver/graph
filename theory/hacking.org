@@ -48,3 +48,50 @@ Exploits are flaws in computer systems which can be leveraged.
 - [[https://guyinatuxedo.github.io/index.html][Nightmare intro course]]
 - [[https://github.com/shellphish/how2heap/tree/master][shellphish/how2heap]]
 - [[https://www.usenix.org/system/files/usenixsecurity24-guo-yanan.pdf][GPU Memory Exploitation for Fun and Profit]]
+** Return-oriented Programming
+:PROPERTIES:
+:ID:       305a678b-80e2-4c27-8aa6-f3895aee3415
+:CREATED:  <2026-01-05 Mon 21:38>
+:END:
+:EDGES:
+[2026-01-05 Mon 21:38] -- [[wikipedia:Return-oriented programming][wiki]]
+[2026-01-05 Mon 21:38] -> [[id:b8b4da43-18a1-469c-a256-8336fde50db8][Disassembler]]
+:END:
+* Honeypot
+:PROPERTIES:
+:ID:       a3dbce54-1677-4d11-9716-13574d25ed65
+:CREATED:  <2026-01-05 Mon 21:32>
+:END:
+:EDGES:
+[2026-01-05 Mon 21:32] -- [[wikipedia:Honeypot (computing)][wiki]]
+:END:
+#+begin_quote
+The goal of honeypots is to attract and engage attackers for a
+sufficiently long period to obtain high-level Indicators of Compromise
+(IoC) such as attack tools and Tactics, Techniques, and Procedures
+(TTPs). Thus, a honeypot needs to emulate essential services in the
+production network and grant the attacker the freedom to perform
+adversarial activities to increase its attractiveness to the
+attacker. Although the honeypot is a controlled environment and can be
+monitored by using tools such as honeywall, attackers may still be
+able to use some honeypots as pivot nodes to penetrate production
+systems.
+#+end_quote
+* Reverse Engineering
+:PROPERTIES:
+:ID:       c6df0de5-0b3b-4e6b-8f82-b44859e2310e
+:CREATED:  <2026-01-05 Mon 21:35>
+:END:
+:EDGES:
+[2026-01-05 Mon 21:36] -- [[wikipedia:Reverse engineering][wiki]]
+[2026-01-05 Mon 21:36] -> [[id:bd66a9d3-9720-4db6-9d29-cb5ee241b8a5][Pattern Analysis]]
+:END:
+** Disassembler
+:PROPERTIES:
+:ID:       b8b4da43-18a1-469c-a256-8336fde50db8
+:CREATED:  <2026-01-05 Mon 21:37>
+:END:
+:EDGES:
+[2026-01-05 Mon 21:37] -- [[wikipedia:Disassembler][wiki]]
+[2026-01-05 Mon 21:38] <- [[id:305a678b-80e2-4c27-8aa6-f3895aee3415][Return-oriented Programming]]
+:END:

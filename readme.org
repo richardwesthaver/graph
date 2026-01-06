@@ -22,8 +22,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 1239 |
-| edges |  809 |
+| nodes | 1243 |
+| edges |  810 |
 | files |  142 |
 
 #+BEGIN: project-info :status nil :tasks nil :html t :vc nil
@@ -37,9 +37,9 @@ an interface for modifying the graph.
 | skel-id     | 1784914079056115652                               |
 | root        | ~/comp/org/graph/                                 |
 | tags        | ORG DOCS NOTES BLOG META PLAN ARCHIVE NOTES GRAPH |
-| updated     | Mon Jan 05 20:06:38 2026 -0500                    |
+| updated     | Mon Jan 05 20:58:42 2026 -0500                    |
 | langs       | org                                               |
-| lines       | 16352 :code 15449 :comment 30 :blank 873          |
+| lines       | 16360 :code 15457 :comment 30 :blank 873          |
 |-------------+---------------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -58,7 +58,7 @@ an interface for modifying the graph.
 2025-10   2381 ********************
 2025-11   3240 ****************************
 2025-12     23 
-2026-01    511 ****
+2026-01    583 *****
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -127,11 +127,11 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/lang/zig.html][lang/zig]]             | 2025-03-02 21:00:36 |
 | [[https://otom8.dev/graph/math/algebra.html][math/algebra]]         | 2026-01-05 19:22:28 |
 | [[https://otom8.dev/graph/math/algo.html][math/algo]]            | 2026-01-05 18:40:18 |
-| [[https://otom8.dev/graph/math/calc.html][math/calc]]            | 2026-01-05 19:13:24 |
+| [[https://otom8.dev/graph/math/calc.html][math/calc]]            | 2026-01-05 20:58:28 |
 | [[https://otom8.dev/graph/math/compsci.html][math/compsci]]         | 2026-01-05 18:54:16 |
 | [[https://otom8.dev/graph/math/dsp.html][math/dsp]]             | 2025-03-30 01:08:05 |
 | [[https://otom8.dev/graph/math/geo.html][math/geo]]             | 2025-05-26 18:57:04 |
-| [[https://otom8.dev/graph/math/logic.html][math/logic]]           | 2026-01-05 20:04:20 |
+| [[https://otom8.dev/graph/math/logic.html][math/logic]]           | 2026-01-05 20:58:17 |
 | [[https://otom8.dev/graph/math/ml.html][math/ml]]              | 2025-02-21 22:33:20 |
 | [[https://otom8.dev/graph/math/notation.html][math/notation]]        | 2026-01-05 19:51:24 |
 | [[https://otom8.dev/graph/math/num.html][math/num]]             | 2025-09-29 13:28:20 |
@@ -185,7 +185,7 @@ an interface for modifying the graph.
 | [[https://otom8.dev/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://otom8.dev/graph/proto/unix.html][proto/unix]]           | 2025-04-15 15:51:44 |
 | [[https://otom8.dev/graph/proto/web.html][proto/web]]            | 2025-10-26 20:35:20 |
-| [[https://otom8.dev/graph/index.html][index]]                | 2026-01-04 20:48:17 |
+| [[https://otom8.dev/graph/index.html][index]]                | 2026-01-05 20:31:36 |
 | [[https://otom8.dev/graph/refs.html][refs]]                 | 2025-11-01 02:17:43 |
 | [[https://otom8.dev/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://otom8.dev/graph/sys/db.html][sys/db]]               | 2025-10-07 17:12:23 |

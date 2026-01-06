@@ -368,6 +368,7 @@ list, max, min, nconc, or, progn, and standard.
 :END:
 :EDGES:
 [2025-08-17 Sun 20:13] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/22_b.htm][CLHS: Section 22.2]]
+[2026-01-05 Mon 21:18] -- [[https://dspace.mit.edu/bitstream/handle/1721.1/6503/AIM-1102.pdf?sequence=2][XP: A Common Lisp Pretty Printing System (1989)]]
 :END:
 Permits programs to redefine the way in which code is displayed and
 allow pretty printing to be applied to complex data structures.
@@ -422,6 +423,14 @@ controlled by *print-right-margin*.
 #+RESULTS:
 : 1 2 3 
 
+- Note that the extension mechanism (=~/foo/=) is clunky - the
+  character =/= isn't allowed in the function designator.
+- The [[comp:docs/core][core]] includes an annotation system ([[id:0c6d3580-78e8-42d4-8472-1d336c31aa73][WIP]] [2026-01-05 Mon])
+  - annotations are similar to format directives, just with a
+    different prefix character - usually =%= (emacs style).
+  - annotations are expanded as early as possible into a FORMAT
+    control-string
+
 ** Functions
 :PROPERTIES:
 :ID:       ebbc665a-10c3-46a3-8052-4f46bc9ac2b1
@@ -431,6 +440,7 @@ controlled by *print-right-margin*.
 [2025-02-25 Tue 16:08] -- [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node62.html][5.2. Functions]]
 :END:
 - [[https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node63.html#SECTION00921000000000000000][5.2.1. Named Functions]]
+
 *** Lambda Expressions
 :PROPERTIES:
 :ID:       7555f8c6-5dd5-4607-ae1f-32643bf03ba9
