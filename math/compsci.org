@@ -73,6 +73,7 @@
 
 - typically used to implement the priority queue element of Dijkrsta's
   algorithm
+
 - While Fibonacci heaps have very good theoretical complexities, in
   practice, other heap types such as pairing heaps are faster. This is
   because even in the simplest implementation, Fibonacci heaps require
@@ -144,11 +145,18 @@ structures may not be appropriate for real-time systems.
 :ID:       a4a6aff3-4fbd-4436-ba98-09299b5a1e41
 :CREATED:  <2025-05-07 Wed 17:02>
 :END:
+:EDGES:
+[2026-01-05 Mon 18:35] -- [[wikipedia:Vector (mathematics and physics)][wiki]]
+:END:
 **** String
 :PROPERTIES:
 :ID:       1df49c20-99b1-4f0e-bbb9-6617b20810dc
 :CREATED:  <2025-05-07 Wed 17:02>
 :END:
+:EDGES:
+[2026-01-05 Mon 18:36] -- [[wikipedia:String (computer science)][wiki]]
+:END:
+
 *** Dictionary
 :PROPERTIES:
 :ID:       1336d625-e74f-42fd-b23c-292c07f9f029
@@ -162,20 +170,11 @@ structures may not be appropriate for real-time systems.
 :PROPERTIES:
 :ID:       b0300e61-d29b-4df4-940d-31257bf6a5f6
 :CREATED:  <2025-05-07 Wed 17:02>
-:END:
-
-** Lambda Calculus
-:PROPERTIES:
-:ID:       2daeb26b-040d-4afe-ac65-76feb2aa2b09
-:CREATED:  <2025-05-18 Sun 17:44>
+:AKA: Hash Map
 :END:
 :EDGES:
-[2025-05-18 Sun 17:45] -- [[wikipedia:Lambda calculus][wiki]]
+[2026-01-05 Mon 18:36] -- [[wikipedia:Hash table][wiki]]
 :END:
-- [[https://crypto.stanford.edu/~blynn/lambda/][Lambda calculus - Lambda Calculus]]
-- [[https://crypto.stanford.edu/~blynn/lambda/sk.html][Lambda calculus - A Combinatory Compiler]]
-- [[https://crypto.stanford.edu/~blynn/lambda/kiselyov.html][Lambda calculus - Kiselyov Combinator Translation]]
-- [[https://crypto.stanford.edu/~blynn/lambda/systemf.html][Lambda calculus - System F]]
 ** Symbolic Computation
 :PROPERTIES:
 :ID:       9c8b77f4-e67b-4470-b2d3-20e6d3807290

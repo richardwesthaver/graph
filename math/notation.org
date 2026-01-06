@@ -21,11 +21,15 @@
 :EDGES:
 [2025-05-21 Wed 19:59] -- [[wikipedia:Set-builder notation][wiki]]
 :END:
+- a notation for specifying a set by a property that characterizes its
+  members
+- allowed by the axiom schema of specification (AKA set comprehension
+  or set abstraction)
 * Einstein Notation
 :PROPERTIES:
 :ID:       b73d35e4-7a0e-4079-b97e-9523799edc14
 :CREATED:  <2025-05-22 Thu 18:01>
-:AKA: Einstein summation notation
+:AKA: Einstein summation convention
 :END:
 :EDGES:
 [2025-05-22 Thu 18:01] -- [[wikipedia:Einstein notation][wiki]]
@@ -38,7 +42,14 @@
 :PROPERTIES:
 :ID:       16525c34-797b-4166-b504-9372dbd4b2ce
 :CREATED:  <2025-05-22 Thu 19:31>
+:AKA: slot-naming index notation
 :END:
 :EDGES:
 [2025-05-22 Thu 19:31] -- [[wikipedia:Abstract index notation][wiki]]
 :END:
+- Notation for tensor and spinors that uses indices to indicate their
+  types rather than their components in a particular basis
+- Introduced by Roger Penrose to compensate for the difficulty of
+  describing contractions and covariant differentiation in modern
+  abstract tensor notation, while preserving the explicit covariance
+  of the expressions involved

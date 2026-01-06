@@ -129,6 +129,15 @@
 :EDGES:
 [2025-02-24 Mon 21:34] -- [[https://en.wikipedia.org/wiki/Hopscotch_hashing][Hopscotch hashing - Wikipedia]]
 :END:
+*** Perfect Hash
+:PROPERTIES:
+:ID:       1bf44929-d8bf-40bb-b475-94ca1c631497
+:CREATED:  <2026-01-05 Mon 18:37>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:38] -- [[wikipedia:Perfect hash function][wiki]]
+:END:
+
 ** Compression
 :PROPERTIES:
 :ID:       c49d25f8-f2c5-462e-9742-cacc3796da12
@@ -198,6 +207,15 @@ Especially useful in eliminating overhead in protocols such as telnet.
 - Can be dynamically toggled based on platform support and
   sockopts. In CL see the ~nodelay~ keyword arg to
   =USOCKET:SOCKET-CONNECT=.
+*** Round Robin
+:PROPERTIES:
+:ID:       a4b11c78-468b-40d4-ac37-9ddfc804a572
+:CREATED:  <2026-01-05 Mon 18:39>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:40] -- [[wikipedia:Round-robin scheduling][wiki]]
+:END:
+
 ** Cipher
 :PROPERTIES:
 :ID:       2f14f7d9-a306-44ba-b879-5c211f189f91

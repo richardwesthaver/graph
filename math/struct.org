@@ -33,6 +33,24 @@
 A link between vertices, often represented as a line optionally with
 arrows as allowed by the applicable graph model (directed, undirected,
 acyclic, etc)
+** Diameter
+:PROPERTIES:
+:ID:       a70a5d06-b227-4fac-98eb-b371c5331217
+:CREATED:  <2026-01-05 Mon 18:28>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:28] -- [[wikipedia:Diameter (Graph theory)][wiki]]
+:END:
+In Graph Theory, the diameter of a connected undirected graph is the
+farthest distance between any two of its vertices.
+** Girth
+:PROPERTIES:
+:ID:       1e885a7a-5d8a-4674-b471-db3e56837169
+:CREATED:  <2026-01-05 Mon 18:30>
+:END:
+The girth of an undirected graph is the length of the shortest cycle
+contained in the graph. If the graph is a tree (no cycles), the Girth
+is defined to be infinity.
 * Linked List
 :PROPERTIES:
 :ID:       8805be63-567a-472d-a70c-6155ba2f3d02
@@ -41,6 +59,15 @@ acyclic, etc)
 :EDGES:
 [2025-02-28 Fri 19:18] -- [[https://en.wikipedia.org/wiki/Linked_list][Linked list - Wikipedia]]
 :END:
+** Doubly Linked List
+:PROPERTIES:
+:ID:       e2a9a550-500a-4e1b-b901-c988572fc587
+:CREATED:  <2026-01-05 Mon 18:33>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:33] -- [[wikipedia:Doubly linked list][wiki]]
+:END:
+
 * Tuple
 :PROPERTIES:
 :ID:       2616620b-782c-4c1f-97f9-e8f2d4fb8a38
@@ -49,6 +76,9 @@ acyclic, etc)
 :EDGES:
 [2025-02-28 Fri 19:19] -- [[https://en.wikipedia.org/wiki/Tuple][Tuple - Wikipedia]]
 :END:
+- an ordered list
+- 1-tuple = singleton
+- 2-tuple = ordered pair
 * Curve
 :PROPERTIES:
 :ID:       51e7d9ad-28a2-4284-94a1-18a642d0cf3d

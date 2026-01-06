@@ -65,7 +65,42 @@
 [2025-02-28 Fri 18:58] -- [[https://en.wikipedia.org/wiki/Finite-state_machine][Finite-state machine - Wikipedia]]
 :END:
 Finite-State Machine
-
+**** Turing Machine
+:PROPERTIES:
+:ID:       deb87bb6-f5a9-455e-89a8-d539831d4d1a
+:CREATED:  <2026-01-05 Mon 19:58>
+:END:
+:EDGES:
+[2026-01-05 Mon 19:58] -- [[wikipedia:Turing machine][wiki]]
+:END:
+**** Warren Abstract Machine
+:PROPERTIES:
+:ID:       98845111-2516-41ac-822c-34de16845340
+:CREATED:  <2026-01-05 Mon 19:59>
+:AKA: WAM
+:END:
+:EDGES:
+[2026-01-05 Mon 19:59] -- [[wikipedia:Warren Abstract Machine][wiki]]
+:END:
+- memory areas
+  - The global stack or heap, used to store compound terms
+  - The local stack for environment frames and choice-points
+  - The trail to record which variables bindings ought to be undone on backtracking
+**** von Neumann architecture
+:PROPERTIES:
+:ID:       f159f005-c94a-4d35-8211-7355c2d8cdb2
+:CREATED:  <2026-01-05 Mon 20:02>
+:END:
+:EDGES:
+[2026-01-05 Mon 20:03] -- [[wikipedia:von Neumann architecture][wiki]]
+:END:
+***** IAS Machine
+:PROPERTIES:
+:ID:       5bf53e1b-c866-4ee3-a5cb-53f56bba9988
+:CREATED:  <2026-01-05 Mon 20:03>
+:END:
+- first electronic computer built at IAS, sometimes referred to as the
+  von Neumann machine
 *** Automaton
 :PROPERTIES:
 :ID:       8259478a-d303-4d05-ac00-505decc39bb4
@@ -74,9 +109,88 @@ Finite-State Machine
 :EDGES:
 [2025-02-28 Fri 18:57] -- [[https://en.wikipedia.org/wiki/Automaton][Automaton - Wikipedia]]
 :END:
+- A self-operating machine
+- plural: automata
+#+begin_quote
+Some automata, such as bellstrikers in mechanical clocks, are designed
+to give the illusion to the casual observer that they are operating
+under their own power or will, like a mechanical robot. The term has
+long been commonly associated with automated puppets that resemble
+moving humans or animals, built to impress and/or to entertain people.
+#+end_quote
+**** Cellular Automata
+:PROPERTIES:
+:ID:       a27fea24-770c-4af0-870a-8b697f97f884
+:CREATED:  <2026-01-05 Mon 18:46>
+:AKA: Cellular spaces, tesselation automata
+:END:
+:EDGES:
+[2026-01-05 Mon 18:46] -- [[wikipedia:Cellular automaton][wiki]]
+:END:
+- discrete model of computation studied in automata theory.
+#+begin_quote
+A cellular automaton consists of a regular grid of cells, each in one
+of a finite number of states, such as on and off (in contrast to a
+coupled map lattice). The grid can be in any finite number of
+dimensions. For each cell, a set of cells called its neighborhood is
+defined relative to the specified cell. An initial state (time t = 0)
+is selected by assigning a state for each cell. A new generation is
+created (advancing t by 1), according to some fixed rule (generally, a
+mathematical function) that determines the new state of each cell in
+terms of the current state of the cell and the states of the cells in
+its neighborhood.
+#+end_quote
 
+- classifications of cellular automata according to Wolfram:
+  1. automata in which patterns generally stabilize into homogeneity 
+  2. automata in which patterns evolve into mostly stable or
+     oscillating structures 
+  3. automata in which patterns evolve in a seemingly chaotic fashion
+  4. automata in which patterns become extremely complex and may last
+     for a long time, with stable local structures.
+     - thought to be computationally universal (capable of simulating
+       a Turing machine)
+
+**** Graph Rewrite Automata
+:PROPERTIES:
+:ID:       a6beb83d-4595-4a76-b76b-aa72c91895e4
+:CREATED:  <2026-01-05 Mon 18:46>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:47] -- [[https://paulcousin.net/graph-rewriting-automata/graphs.html][Graphs — Graph-Rewriting Automata]]
+:END:
+
+**** Interaction Nets
+:PROPERTIES:
+:ID:       a714eb13-728c-4aaf-8185-c18370fe427e
+:CREATED:  <2026-01-05 Mon 18:53>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:55] -- [[wikipedia:Interaction nets][wiki]]
+[2026-01-05 Mon 18:57] <- [[id:04f5c842-e24d-455c-be60-e0813825c14d][Interaction Calculus]]
+:END:
+A graphical model of computation by Yves Lafont in 1990.
 ** Paradox
 :PROPERTIES:
 :ID:       23328bba-a55c-475a-9438-8f86f5df6f2a
 :CREATED:  <2025-02-28 Fri 18:55>
 :END:
+*** Von Neumann paradox
+:PROPERTIES:
+:ID:       ced95c20-cf43-491d-9f73-d53bb01da9d5
+:CREATED:  <2026-01-05 Mon 20:01>
+:END:
+#+begin_quote
+Building on the Hausdorff paradox of Felix Hausdorff (1914), Stefan
+Banach and Alfred Tarski in 1924 showed how to subdivide a
+three-dimensional ball into disjoint sets, then translate and rotate
+these sets to form two identical copies of the same ball; this is the
+Banach–Tarski paradox. They also proved that a two-dimensional disk
+has no such paradoxical decomposition. But in 1929, von Neumann
+subdivided the disk into finitely many pieces and rearranged them into
+two disks, using area-preserving affine transformations instead of
+translations and rotations. The result depended on finding free groups
+of affine transformations, an important technique extended later by
+von Neumann in his work on measure theory.
+
+#+end_quote

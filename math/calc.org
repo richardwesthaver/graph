@@ -5,15 +5,35 @@
 :ID:       cb921570-b908-4b8b-bf46-d4f31b3e1239
 :CREATED:  <2025-02-28 Fri 18:15>
 :END:
+:EDGES:
+[2026-01-05 Mon 19:04] -- [[wikipedia:Fundamental theorem of calculus][wiki]]
+:END:
 The study of continuous change.
-- [[https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus][Fundamental theorem of calculus - Wikipedia]]
+** Lambda Calculus
+:PROPERTIES:
+:ID:       2daeb26b-040d-4afe-ac65-76feb2aa2b09
+:CREATED:  <2025-05-18 Sun 17:44>
+:END:
+:EDGES:
+[2025-05-18 Sun 17:45] -- [[wikipedia:Lambda calculus][wiki]]
+:END:
+- [[https://crypto.stanford.edu/~blynn/lambda/][Lambda calculus - Lambda Calculus]]
+- [[https://crypto.stanford.edu/~blynn/lambda/sk.html][Lambda calculus - A Combinatory Compiler]]
+- [[https://crypto.stanford.edu/~blynn/lambda/kiselyov.html][Lambda calculus - Kiselyov Combinator Translation]]
+- [[https://crypto.stanford.edu/~blynn/lambda/systemf.html][Lambda calculus - System F]]
+** Geometrical Calculus
+:PROPERTIES:
+:ID:       c832a0d6-26ee-456c-9bca-4ad9b9d2a975
+:CREATED:  <2026-01-05 Mon 19:13>
+:END:
+
 ** Differential Calculus
 :PROPERTIES:
 :ID:       d0976b17-9de6-4c85-9ae5-8f1e89c4941a
 :CREATED:  <2025-02-28 Fri 18:33>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:33] -- [[https://en.wikipedia.org/wiki/Differential_calculus][Differential calculus - Wikipedia]]
+[2025-02-28 Fri 18:33] -- [[wiki:Differential calculus][wiki]]
 :END:
 ** Integral
 :PROPERTIES:
@@ -21,7 +41,7 @@ The study of continuous change.
 :CREATED:  <2025-02-28 Fri 18:34>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:35] -- [[https://en.wikipedia.org/wiki/Integral][Integral - Wikipedia]]
+[2025-02-28 Fri 18:35] -- [[wiki:Integral][wiki]]
 :END:
 ** Series
 :PROPERTIES:
@@ -29,16 +49,23 @@ The study of continuous change.
 :CREATED:  <2025-02-28 Fri 18:37>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:37] -- [[https://en.wikipedia.org/wiki/Series_(mathematics)][Series (mathematics) - Wikipedia]]
+[2025-02-28 Fri 18:37] -- [[wiki:Series (mathematics)][wiki]]
 :END:
-
+** Matrix Calculus
+:PROPERTIES:
+:ID:       35548c93-f79b-4393-bd34-f5914045c334
+:CREATED:  <2026-01-05 Mon 19:02>
+:END:
+:EDGES:
+[2026-01-05 Mon 19:02] -- [[wikipedia:Matrix calculus][wiki]]
+:END:
 ** Vector Calculus
 :PROPERTIES:
 :ID:       a652db50-8f75-46df-8ba0-f196f4b7fb75
 :CREATED:  <2025-02-28 Fri 18:37>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:37] -- [[https://en.wikipedia.org/wiki/Vector_calculus][Vector calculus - Wikipedia]]
+[2025-02-28 Fri 18:37] -- [[wiki:Vector calculus][wiki]]
 :END:
 
 ** Stochastic Calculus
@@ -47,7 +74,7 @@ The study of continuous change.
 :CREATED:  <2025-02-28 Fri 18:38>
 :END:
 :EDGES:
-[2025-02-28 Fri 18:38] -- [[https://en.wikipedia.org/wiki/Stochastic_calculus][Stochastic calculus - Wikipedia]]
+[2025-02-28 Fri 18:38] -- [[wiki:Stochastic calculus][wiki]]
 :END:
 
 ** Characteristic Equation
@@ -66,7 +93,23 @@ The study of continuous change.
 :EDGES:
 [2025-02-28 Fri 18:32] -- [[https://en.wikipedia.org/wiki/Generalized_function][Generalized function - Wikipedia]]
 :END:
+#+begin_quote
+In mathematics, generalized functions are objects extending the notion
+of functions on real or complex numbers. There is more than one
+recognized theory, for example the theory of
+distributions. Generalized functions are especially useful for
+treating discontinuous functions more like smooth functions, and
+describing discrete physical phenomena such as point charges. They are
+applied extensively, especially in physics and engineering. Important
+motivations have been the technical requirements of theories of
+partial differential equations and group representations.
 
+A common feature of some of the approaches is that they build on
+operator aspects of everyday, numerical functions. The early history
+is connected with some ideas on operational calculus, and some
+contemporary developments are closely related to Mikio Sato's
+algebraic analysis.
+#+end_quote
 ** Tensor Theory
 :PROPERTIES:
 :ID:       c5b31660-aa39-4438-b3a9-28ca05368fe7
@@ -96,6 +139,7 @@ The study of continuous change.
 :EDGES:
 [2025-05-22 Thu 19:54] -- [[wikipedia:Tensor field][wiki]]
 :END:
+A function assigning a tensor to each point of a region of a space.
 **** Tensor Density
 :PROPERTIES:
 :ID:       c4185461-4a5d-4343-842a-f1031cb85a25
@@ -104,3 +148,20 @@ The study of continuous change.
 :EDGES:
 [2025-05-22 Thu 19:53] -- [[wikipedia:Tensor density][wiki]]
 :END:
+Generalization of the [[id:a0eddece-2818-4f67-b557-d35118097d93][Tensor Field]] concept.
+- negative tensor density sometimes called /tensor capacity/
+- can also be regarded as a section of the tensor product of a tensor
+  bundle with a density bundle
+- differences in classification
+  - authentic vs pseudotensor densities, even vs odd
+** Interaction Calculus
+:PROPERTIES:
+:ID:       04f5c842-e24d-455c-be60-e0813825c14d
+:CREATED:  <2026-01-05 Mon 18:48>
+:END:
+:EDGES:
+[2026-01-05 Mon 18:51] -- [[https://link.springer.com/book/10.1007/10704567][PPDP'99 Proceedings]]
+[2026-01-05 Mon 18:57] -> [[id:a714eb13-728c-4aaf-8185-c18370fe427e][Interaction Nets]]
+:END:
+- Textual representation of [[id:a714eb13-728c-4aaf-8185-c18370fe427e][interaction nets]] 
+- introduced in 1999
