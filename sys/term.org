@@ -27,3 +27,56 @@
 :EDGES:
 [2025-04-11 Fri 21:40] -- [[man:terminfo][man]]
 :END:
+#+begin_quote
+The number of columns on each line for the terminal is given by the
+cols numeric capability. If the terminal is a CRT , then the number of
+lines on the screen is given by the lines capability. If the terminal
+wraps around to the beginning of the next line when it reaches the
+right margin, then it should have the am capability. If the terminal
+can clear its screen, leaving the cursor in the home position, then
+this is given by the clear string capability. If the terminal
+overstrikes (rather than clearing a position when a character is
+struck over) then it should have the os capability. If the terminal is
+a printing terminal, with no soft copy unit, give it both hc and
+os. (os applies to storage scope terminals, such as TEKTRONIX 4010
+series, as well as hard copy and APL terminals.) If there is a code to
+move the cursor to the left edge of the current row, give this as
+cr. (Normally this will be carriage return, control M.) If there is a
+code to produce an audible signal (bell, beep, etc) give this as bel.
+If there is a code to move the cursor one position to the left (such
+as backspace) that capability should be given as cub1. Similarly,
+codes to move to the right, up, and down should be given as cuf1,
+cuu1, and cud1. These local cursor motions should not alter the text
+they pass over, for example, you would not normally use 'cuf1= '
+because the space would erase the character moved over.
+
+A very important point here is that the local cursor motions encoded
+in terminfo are undefined at the left and top edges of a CRT
+terminal. Programs should never attempt to backspace around the left
+edge, unless bw is given, and never attempt to go up locally off the
+top. In order to scroll text up, a program will go to the bottom left
+corner of the screen and send the ind (index) string.
+
+To scroll text down, a program goes to the top left corner of the
+screen and sends the ri (reverse index) string. The strings ind and ri
+are undefined when not on their respective corners of the screen.
+
+Parameterized versions of the scrolling sequences are indn and rin
+which have the same semantics as ind and ri except that they take one
+parameter, and scroll that many lines. They are also undefined except
+at the appropriate edge of the screen.
+
+The am capability tells whether the cursor sticks at the right edge of
+the screen when text is output, but this does not necessarily apply to
+a cuf1 from the last column. The only local motion which is defined
+from the left edge is if bw is given, then a cub1 from the left edge
+will move to the right edge of the previous row. If bw is not given,
+the effect is undefined. This is useful for drawing a box around the
+edge of the screen, for example. If the terminal has switch selectable
+automatic margins, the terminfo file usually assumes that this is on;
+i.e., am. If the terminal has a command which moves to the first
+column of the next line, that command can be given as nel
+(newline). It does not matter if the command clears the remainder of
+the current line, so if the terminal has no cr and lf it may still be
+possible to craft a working nel out of one or both of them.
+#+end_quote
