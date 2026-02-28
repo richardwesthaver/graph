@@ -9,6 +9,7 @@
 [2025-06-23 Mon 19:37] -- [[https://color.org/index.xalter][home]]
 [2025-06-23 Mon 19:37] -- [[wikipedia:International Color Consortium][wiki]]
 :END:
+
 ** ICC profile specification
 :PROPERTIES:
 :ID:       ae26908f-4d58-40a5-8f17-0de44ed51f9e
@@ -47,6 +48,7 @@
 :END:
 - subtractive, based on CMY, used in color printing
 - Cyan, Magenta, Yellow, Key (usually blacK)
+
 ** LAB
 :PROPERTIES:
 :ID:       5889bd44-c0a1-4cdf-ae87-a0de4cf77214

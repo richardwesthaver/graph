@@ -133,7 +133,7 @@ Information about compiling /without/ libc.
 :END:
 :EDGES:
 [2025-07-18 Fri 23:43] -- [[https://www.libjpeg-turbo.org/][libjpeg-turbo | Main / libjpeg-turbo]]
-[2025-07-18 Fri 23:46] -> [[id:ee2a3b64-3a16-4056-a6b4-2514495f7ccb][JPG]]
+[2025-07-18 Fri 23:46] -> [[id:ee2a3b64-3a16-4056-a6b4-2514495f7ccb][JPEG]]
 :END:
 
 *** LAPACKE

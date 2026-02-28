@@ -21,12 +21,12 @@ Portable Network Graphics, developed as an improvement to [[id:9fbe4894-4557-46c
 [2025-07-18 Fri 23:32] -- [[https://www.w3.org/Graphics/GIF/spec-gif89a.txt][spec]]
 [2025-10-16 Thu 18:32] <- [[id:6f46c6f3-32a5-4932-b2db-687ea4c8e04f][DEFLATE]]
 :END:
-jiffy
-* JPG
+- basically repeated image captures with LZW compression
+* JPEG
 :PROPERTIES:
 :ID:       ee2a3b64-3a16-4056-a6b4-2514495f7ccb
 :CREATED:  <2025-07-18 Fri 23:38>
-:AKA: JPEG
+:AKA: JPG
 :END:
 :EDGES:
 [2025-07-18 Fri 23:39] -- [[https://jpeg.org/jpeg/][JPEG - JPEG 1]]
@@ -34,6 +34,7 @@ jiffy
 [2025-07-18 Fri 23:46] <- [[id:e25fd7f1-8387-4572-8cee-f2da0183d5e2][libjpeg-turbo]]
 :END:
 - JPEG = Joint Photographic Experts Group
+- complicated enough to merit using FFI (imo) - see [[id:e25fd7f1-8387-4572-8cee-f2da0183d5e2][libjpeg-turbo]]
 - Developed in 1992 by the ISO
 - True color (up to 24 bits/pixel) and grayscale (up to 8 bits/pixel) images
 - Eligible compression quality between 
@@ -41,3 +42,5 @@ jiffy
   ratios about bits/pixel (bpp)
 - Based on the Discrete Cosine Transform (DCT)
 - Several working modes: lossy, lossless and hierarchical
+
+

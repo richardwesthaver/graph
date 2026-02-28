@@ -18,6 +18,8 @@ Unified Extensible Firmware Interface
 - [[https://github.com/KunYi/Simple-UEFI-Bootloader][KunYi/Simple-UEFI-Bootloader: A UEFI bootloader for bare-metal x86-64 applications]]
 - [[https://github.com/ajxs/uefi-elf-bootloader][GitHub - ajxs/uefi-elf-bootloader: UEFI ELF Bootloader example]]
 - [[https://www.kraxel.org/blog/2024/07/uefi-network-boot/][modern uefi network booting | kraxel's news]]
+- [[https://blog.hansenpartnership.com/the-meaning-of-all-the-uefi-keys/][The Meaning of all the UEFI Keys | James Bottomley's random Pages]]
+- [[https://github.com/microsoft/secureboot_objects][microsoft/secureboot_objects: Secure boot objects recommended by Microsoft.]]
 ** OVMF
 :PROPERTIES:
 :ID:       6f908314-d6d8-471a-96c7-e388f6891fb0

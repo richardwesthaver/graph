@@ -1,0 +1,36 @@
+#+title: IPC
+#+setupfile: ../../clean.theme
+* IPC
+:PROPERTIES:
+:ID:       21985279-2724-45bc-a472-8feb9540f705
+:CREATED:  <2026-02-27 Fri 20:54>
+:END:
+:EDGES:
+[2026-02-27 Fri 21:00] -- [[wikipedia:Inter-process communication][wiki]]
+:END:
+** D-Bus
+:PROPERTIES:
+:ID:       44d2a4fc-b42e-49b3-9ad6-84a90b5cbd38
+:CREATED:  <2026-02-27 Fri 20:55>
+:AKA: dbus
+:END:
+:EDGES:
+[2026-02-27 Fri 20:55] -- [[https://www.freedesktop.org/wiki/Software/dbus][dbus]]
+:END:
+** ubus
+:PROPERTIES:
+:ID:       e6beb962-3b43-4d81-b1c7-17cf062327f9
+:CREATED:  <2026-02-27 Fri 20:58>
+:END:
+:EDGES:
+[2026-02-27 Fri 20:58] -- [[https://openwrt.org/docs/techref/ubus][[OpenWrt Wiki] ubus (OpenWrt micro bus architecture)]]
+:END:
+IPC protocol used by OpenWrt
+** ZeroMQ
+:PROPERTIES:
+:ID:       089bb9cc-9f1f-4810-b24f-da40d7a3ab87
+:CREATED:  <2026-02-27 Fri 20:59>
+:END:
+:EDGES:
+[2026-02-27 Fri 20:59] -- [[https://en.wikipedia.org/wiki/ZeroMQ][ZeroMQ - Wikipedia]]
+:END:

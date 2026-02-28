@@ -15,7 +15,9 @@
 :END:
 :EDGES:
 [2025-04-07 Mon 17:10] -- [[https://xiph.org/flac/][FLAC - What is FLAC?]]
+[2025-09-12 Fri 19:30] -- [[https://www.rfc-editor.org/rfc/rfc9639.html][RFC 9639: Free Lossless Audio Codec (FLAC)]]
 :END:
+Free Lossless Audio Codec
 ** Ogg
 :PROPERTIES:
 :ID:       d903a0ad-3935-417f-ba42-2bc4b11032ed

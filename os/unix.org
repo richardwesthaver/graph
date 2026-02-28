@@ -126,8 +126,10 @@ umount .stash/
 :ID:       94f363d8-45a2-4d48-9e25-17b1ac50771a
 :CREATED:  <2025-07-04 Fri 20:10>
 :END:
-- [[https://www.man7.org/linux/man-pages/man2/ioctl.2.html][ioctl(2) - Linux manual page]]
-- [[https://www.kernel.org/doc/html/latest/driver-api/ioctl.html][ioctl based interfaces - The Linux Kernel documentation]]
+:EDGES:
+[2026-02-27 Fri 20:36] -- [[https://www.man7.org/linux/man-pages/man2/ioctl.2.html][ioctl(2) - Linux manual page]]
+[2026-02-27 Fri 20:36] -- [[https://www.kernel.org/doc/html/latest/driver-api/ioctl.html][ioctl based interfaces — The Linux Kernel documentation]]
+:END:
 *** Keyutils                                                         :crypto:
 :PROPERTIES:
 :ID:       5e859a3f-0c31-4796-85c6-7008b346f186
@@ -135,13 +137,19 @@ umount .stash/
 :END:
 :EDGES:
 [2025-02-14 Fri 22:12] -- [[https://man7.org/linux/man-pages/man7/keyutils.7.html][keyutils(7) - Linux manual page]]
+[2026-02-27 Fri 20:35] -- [[https://blog.cloudflare.com/the-linux-kernel-key-retention-service-and-why-you-should-use-it-in-your-next-application/][The Linux Kernel Key Retention Service and why you should use it in your next application]]
+[2026-02-27 Fri 20:36] -- [[https://www.man7.org/linux/man-pages/man1/keyctl.1.html][keyctl(1) - Linux manual page]]
 :END:
+- [[https://man7.org/linux/man-pages/man7/asymmetric.7.html][asymmetric-key(7) - Linux manual page]] - use for public-key crypto
 *** spidev
 :PROPERTIES:
 :ID:       93c4f02f-2b00-4741-98e4-f427530f4875
 :CREATED:  <2025-07-04 Fri 20:02>
 :END:
-- [[https://www.kernel.org/doc/Documentation/spi/spidev]]
+:EDGES:
+[2026-02-27 Fri 20:36] -- [[https://www.kernel.org/doc/Documentation/spi/spidev][HTML page at URL has no title]]
+:END:
+
 *** Netlink
 :PROPERTIES:
 :ID:       25cc1e3f-60f0-401a-a8b6-ac8d5670233d
