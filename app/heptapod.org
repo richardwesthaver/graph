@@ -1,0 +1,18 @@
+#+title: Heptapod
+#+setupfile: ../../clean.theme
+* Heptapod
+:PROPERTIES:
+:ID:       c2b38cd6-ed93-49af-a3ad-d27d270da58d
+:CREATED:  <2026-03-01 Sun 17:59>
+:END:
+:EDGES:
+[2026-03-01 Sun 17:59] -- [[https://fosstodon.org/@heptapod][Heptapod (@heptapod@fosstodon.org) - Fosstodon]]
+[2026-03-01 Sun 17:59] -- [[https://heptapod.net/][Heptapod]]
+[2026-03-01 Sun 18:00] -- [[https://foss.heptapod.net/][Explore projects · GitLab]]
+[2026-03-01 Sun 18:01] -- [[https://hub.docker.com/r/heptapod/heptapod][heptapod/heptapod - Docker Image]]
+:END:
+- our preferred source forge - really only able to run via container
+  (podman) - see [[vc:infra/pod][infra/pod]]
+- same as GitLab but Mercurial is first-class
+- [[https://docs.gitlab.com/install/docker/][Install GitLab in a Docker container | GitLab Docs]] - same
+  installation instructions as GitLab

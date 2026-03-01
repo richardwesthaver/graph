@@ -218,6 +218,17 @@ US National Weather Service
 :EDGES:
 [2025-03-02 Sun 20:35] -- [[https://amazon.com/][Amazon]]
 :END:
+** aws.amazon.com
+:PROPERTIES:
+:ID:       d6d95ca9-2b8d-48b1-b1f5-ff6e9167ea27
+:CREATED:  <2026-03-01 Sun 18:31>
+:END:
+:EDGES:
+[2026-03-01 Sun 18:31] -- [[https://aws.amazon.com/][Cloud Computing Services - Amazon Web Services (AWS)]]
+:END:
+- [[https://docs.aws.amazon.com/s3/][S3 docs]]
+  - [[https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html][S3 API Reference - Amazon Simple Storage Service]]
+  - [[https://docs.aws.amazon.com/apigateway/latest/developerguide/api-as-s3-proxy-export-swagger-with-extensions.html][OpenAPI definitions of the sample API as an Amazon S3 proxy - Amazon API Gateway]]
 * wikipedia.org
 :PROPERTIES:
 :ID:       043f7b08-abcf-4727-a772-9b64f7f43d58
@@ -300,6 +311,17 @@ US National Weather Service
 :investigate:
 https://github.com/_side-panels/user.json
 :end:
+* cloudflare.com
+:PROPERTIES:
+:ID:       691927c0-9b2d-4ea9-9f2e-ea59520a20a5
+:CREATED:  <2026-03-01 Sun 18:24>
+:END:
+:EDGES:
+[2026-03-01 Sun 18:24] -- [[https://www.cloudflare.com/][Connect, protect, and build everywhere | Cloudflare]]
+[2026-03-01 Sun 18:24] -- [[https://developers.cloudflare.com][Welcome to Cloudflare | Cloudflare Docs]]
+:END:
+- [[https://developers.cloudflare.com/pages/get-started/direct-upload/][Direct Upload · Cloudflare Pages docs]]
+- [[https://developers.cloudflare.com/r2/objects/upload-objects/][Upload objects · Cloudflare R2 docs]]
 * inovelli.com
 :PROPERTIES:
 :ID:       aa602235-4216-4b15-aa1a-48fea48f7a25
