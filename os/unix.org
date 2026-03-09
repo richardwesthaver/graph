@@ -130,6 +130,12 @@ umount .stash/
 [2026-02-27 Fri 20:36] -- [[https://www.man7.org/linux/man-pages/man2/ioctl.2.html][ioctl(2) - Linux manual page]]
 [2026-02-27 Fri 20:36] -- [[https://www.kernel.org/doc/html/latest/driver-api/ioctl.html][ioctl based interfaces — The Linux Kernel documentation]]
 :END:
+#+begin_quote
+ioctl() is the most common way for applications to interface with
+device drivers. It is flexible and easily extended by adding new
+commands and can be passed through character devices, block devices as
+well as sockets and other special file descriptors.
+#+end_quote
 *** Keyutils                                                         :crypto:
 :PROPERTIES:
 :ID:       5e859a3f-0c31-4796-85c6-7008b346f186
@@ -317,6 +323,8 @@ https://github.com/ming1/ubdsrv
 [2025-02-27 Thu 19:44] -- [[https://linux-kernel-labs.github.io/refs/heads/master/lectures/syscalls.html][System Calls - The Linux Kernel documentation]]
 [2025-02-27 Thu 19:46] -- [[https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl][linux/arch/x86/entry/syscalls/syscall_64.tbl]]
 :END:
+syscalls are the primary interface between an application and the
+Linux kernel.
 **** Core
 :PROPERTIES:
 :ID:       c670fcee-f9b1-4acd-ab32-3b795748b544
@@ -411,6 +419,73 @@ Input/Output operations
 :EDGES:
 [2025-02-27 Thu 19:42] -- [[https://man7.org/linux/man-pages/man7/epoll.7.html][epoll(7) - Linux manual page]]
 :END:
+#+begin_quote
+The epoll event distribution interface is able to behave both as
+edge-triggered (ET) and as level-triggered (LT).  The difference
+between the two mechanisms can be described as follows.  Suppose
+that this scenario happens:
+
+(1)  The file descriptor that represents the read side of a pipe
+     (rfd) is registered on the epoll instance.
+
+(2)  A pipe writer writes 2 kB of data on the write side of the
+     pipe.
+
+(3)  A call to epoll_wait(2) is done that will return rfd as a
+     ready file descriptor.
+
+(4)  The pipe reader reads 1 kB of data from rfd.
+
+(5)  A call to epoll_wait(2) is done.
+
+If the rfd file descriptor has been added to the epoll interface
+using the EPOLLET (edge-triggered) flag, the call to epoll_wait(2)
+done in step 5 will probably hang despite the available data still
+present in the file input buffer; meanwhile the remote peer might
+be expecting a response based on the data it already sent.  The
+reason for this is that edge-triggered mode delivers events only
+when changes occur on the monitored file descriptor, that is, an
+event will be generated upon each receipt of a chunk of data.  So,
+in step 5 the caller might end up waiting for some data that is
+already present inside the input buffer.  In the above example, an
+event on rfd will be generated because of the write done in 2 and
+the event is consumed in 3.  Since the read operation done in 4
+does not consume the whole buffer data, the call to epoll_wait(2)
+done in step 5 might block indefinitely.
+
+An application that employs the EPOLLET flag should use
+nonblocking file descriptors to avoid having a blocking read or
+write starve a task that is handling multiple file descriptors.
+The suggested way to use epoll as an edge-triggered (EPOLLET)
+interface is as follows:
+
+(1)  with nonblocking file descriptors; and
+
+(2)  by waiting for an event only after read(2) or write(2) return
+     EAGAIN.
+
+By contrast, when used as a level-triggered interface (the
+default, when EPOLLET is not specified), epoll is simply a faster
+poll(2), and can be used wherever the latter is used since it
+shares the same semantics.
+
+Since even with edge-triggered epoll, multiple events can be
+generated upon receipt of multiple chunks of data, the caller has
+the option to specify the EPOLLONESHOT flag, to tell epoll to
+disable the associated file descriptor after the receipt of an
+event with epoll_wait(2).  When the EPOLLONESHOT flag is
+specified, it is the caller's responsibility to rearm the file
+descriptor using epoll_ctl(2) with EPOLL_CTL_MOD.
+
+If multiple threads (or processes, if child processes have
+inherited the epoll file descriptor across fork(2)) are blocked in
+epoll_wait(2) waiting on the same epoll file descriptor and a file
+descriptor in the interest list that is marked for edge-triggered
+(EPOLLET) notification becomes ready, just one of the threads (or
+processes) is awoken from epoll_wait(2).  This provides a useful
+optimization for avoiding "thundering herd" wake-ups in some
+scenarios.
+#+end_quote
 ***** io_uring
 :PROPERTIES:
 :ID:       92c2a9aa-6584-470e-977a-3547bca79414

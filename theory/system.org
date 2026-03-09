@@ -272,6 +272,15 @@ The Portable Operating System Interface
 [2025-03-04 Tue 17:32] -- [[https://en.wikipedia.org/wiki/System_testing][System testing - Wikipedia]]
 [2025-03-04 Tue 17:32] -- [[https://en.wikipedia.org/wiki/System_integration_testing][System integration testing - Wikipedia]]
 :END:
+*** Lorem Ipsum
+:PROPERTIES:
+:ID:       7936acf6-f60d-49e7-b09f-6c2fa0d8a623
+:CREATED:  <2026-03-07 Sat 18:28>
+:AKA: Lipsum
+:END:
+:EDGES:
+[2026-03-07 Sat 18:28] -- [[https://www.lipsum.com/][Lorem Ipsum - All the facts - Lipsum generator]]
+:END:
 ** Web                                                                  :web:
 :PROPERTIES:
 :ID:       1a791c60-412b-415d-89bc-06ff9d166931

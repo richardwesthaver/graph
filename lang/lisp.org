@@ -1017,6 +1017,28 @@ A CL to JS compiler
   - io/iterators.lisp
   - io/rtc.lisp (fsm)
 
+- wisdom from clim/demo/thinkadot.lisp:
+  #+begin_src lisp
+    ;;; in all node-state stuff, t = left, nil = right
+    (defstruct td-node
+      (direction t)
+      left-successor
+      right-successor
+      x
+      y
+      (color-phase nil)
+      (entry-p nil))
+  #+end_src
+*** CL-GSERVER
+:PROPERTIES:
+:ID:       0aa28dd2-d424-4021-a775-095439dffd7a
+:CREATED:  <2026-03-06 Fri 21:29>
+:AKA: Sento
+:END:
+:EDGES:
+[2026-03-06 Fri 21:29] -- [[github:mdbergmann/cl-gserver][src]]
+:END:
+An actor framework
 *** C-mera
 :PROPERTIES:
 :ID:       26cd6032-0e6e-4f9b-ae9f-2b88aa95dafc
@@ -1106,7 +1128,21 @@ C-MERA - CM-C - CMU-C - CMS-C
   :version "1.1.0"
   :depends-on ("cmu-c"))
 #+end_src
-
+*** IOLib
+:PROPERTIES:
+:ID:       894ce499-1ce7-4051-a921-661995fe42b2
+:CREATED:  <2026-03-08 Sun 19:10>
+:END:
+:EDGES:
+[2026-03-08 Sun 19:11] -- [[github:sionescu/iolib][src]]
+:END:
+#+begin_quote
+IOLib is a portable I/O library for ANSI Common Lisp. It includes socket
+interfaces for network programming with IPV4/IPV6 TCP and UDP, an I/O
+multiplexer that includes nonblocking I/O, a DNS resolver library, and a
+pathname library.
+#+end_quote
+- depends on libfixposix
 ** Systems
 :PROPERTIES:
 :ID:       a6911466-c135-488c-a67e-689f22592a44
