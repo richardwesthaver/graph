@@ -8,15 +8,65 @@
 :EDGES:
 [2026-02-27 Fri 21:00] -- [[wikipedia:Inter-process communication][wiki]]
 :END:
-** D-Bus
+** dbus
 :PROPERTIES:
 :ID:       44d2a4fc-b42e-49b3-9ad6-84a90b5cbd38
 :CREATED:  <2026-02-27 Fri 20:55>
-:AKA: dbus
+:AKA: D-Bus
 :END:
 :EDGES:
 [2026-02-27 Fri 20:55] -- [[https://www.freedesktop.org/wiki/Software/dbus][dbus]]
 :END:
+- [[https://github.com/JohnBlue-git/HowToDBus][JohnBlue-git/HowToDBus: Notes about how to use DBus or how to coding with DBus.]]
+- [[https://www.gnu.org/software/emacs/manual/html_node/dbus/Introspection.html][Introspection (Using of D-Bus)]] \\
+  The root node element may have node and interface children. A child
+  node element must have a name attribute, this case it is the
+  relative object path to the root node element.
+
+  An interface element has just one attribute, name, which is the full
+  name of that interface. The default interface
+  ‘org.freedesktop.DBus.Introspectable’ is always present. Example:
+  #+begin_example
+  <node name="/org/bluez">
+  <interface name="org.freedesktop.DBus.Introspectable">
+    …
+  </interface>
+  <interface name="org.bluez.Manager">
+    …
+  </interface>
+  <interface name="org.bluez.Database">
+    …
+  </interface>
+  <interface name="org.bluez.Security">
+    …
+  </interface>
+  <node name="service_audio"/>
+  <node name="service_input"/>
+  <node name="service_network"/>
+  <node name="service_serial"/>
+  </node>
+  #+end_example
+
+  Children of an interface element can be method, signal and property
+  elements. A method element stands for a D-Bus method of the
+  surrounding interface. The element itself has a name attribute,
+  showing the method name. Children elements arg stand for the
+  arguments of a method. Example:
+  #+begin_example
+    <method name="ResolveHostName">
+      <arg name="interface" type="i" direction="in"/>
+      <arg name="protocol" type="i" direction="in"/>
+      <arg name="name" type="s" direction="in"/>
+      <arg name="aprotocol" type="i" direction="in"/>
+      <arg name="flags" type="u" direction="in"/>
+      <arg name="interface" type="i" direction="out"/>
+      <arg name="protocol" type="i" direction="out"/>
+      <arg name="name" type="s" direction="out"/>
+      <arg name="aprotocol" type="i" direction="out"/>
+      <arg name="address" type="s" direction="out"/>
+      <arg name="flags" type="u" direction="out"/>
+    </method>
+  #+end_example
 ** ubus
 :PROPERTIES:
 :ID:       e6beb962-3b43-4d81-b1c7-17cf062327f9

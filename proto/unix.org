@@ -9,7 +9,11 @@
 [2025-04-15 Tue 15:48] -- [[wikipedia:Unix][wiki]]
 [2025-04-15 Tue 15:49] << [[id:ab57dccf-c9f3-4347-b9d0-5731904f3d67][Linux]]
 [2025-04-15 Tue 15:51] -- [[https://www.opengroup.org/membership/forums/platform/unix][The UNIX® Standard | www.opengroup.org]]
+[2026-03-14 Sat 23:17] -- [[https://cscie2x.dce.harvard.edu/hw/ch01s06.html][Basics of the Unix Philosophy]]
 :END:
+- https://web.stanford.edu/class/cs240/readings/worse_is_better.pdf
+=it takes a tough man to make a tender chicken...= - guy from MIT
+=Unix and C are the ultimate computer viruses=
 ** SUS
 :PROPERTIES:
 :ID:       60ea3e74-f3fc-4a92-87fc-aaf62a8f532f

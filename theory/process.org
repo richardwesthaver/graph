@@ -51,7 +51,12 @@
 :EDGES:
 [2025-05-10 Sat 16:41] -- [[wikipedia:Chrestomathy][wiki]]
 :END:
-
+#+begin_quote
+a collection of selected literary passages (usually from a single
+author); a selection of literary passages from a foreign language
+assembled for studying the language; or a text in various languages,
+used especially as an aid in learning a subject.
+#+end_quote
 ** Information
 :PROPERTIES:
 :ID:       d181e466-49d6-4421-9282-d227618c5188

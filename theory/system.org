@@ -255,6 +255,25 @@ The Portable Operating System Interface
 [2025-03-03 Mon 17:06] -- [[https://en.wikipedia.org/wiki/Expert_system][Expert system - Wikipedia]]
 [2025-03-04 Tue 16:04] << [[id:91c00d39-6541-4b29-8d6b-a5b8c770cab0][PAIP]]
 :END:
+* Software Design
+:PROPERTIES:
+:ID:       b337e6f1-9340-4f2b-b840-08d57b5fc5f8
+:CREATED:  <2026-03-31 Tue 22:39>
+:END:
+- [[https://en.wikipedia.org/wiki/Multitier_architecture][Multitier architecture - Wikipedia]]
+** DDD
+:PROPERTIES:
+:ID:       1d6dfd1b-692c-4253-a364-e0e63b2cb048
+:CREATED:  <2026-03-31 Tue 22:40>
+:END:
+:EDGES:
+[2026-03-31 Tue 22:41] -- [[wikipedia:Domain-driven design][wiki]]
+:END:
+Domain-driven design
+- focuse on modeling software to match a domain according to input
+  from domain experts.
+- against the idea of a single unified model
+  - divides large system into bounded contexts, each with their own model
 * Frameworks
 :PROPERTIES:
 :ID:       7eb1d3c6-606d-425d-8c2b-3847e42f0134

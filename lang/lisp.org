@@ -405,6 +405,15 @@ margin. If the current column cannot be determined at the time output
 begins, the left margin is assumed to be zero. The right margin is
 controlled by *print-right-margin*.
 #+end_quote
+** Debugging
+:PROPERTIES:
+:ID:       4d5f7613-0441-4f69-b559-24f12ae39e15
+:CREATED:  <2026-03-30 Mon 20:02>
+:END:
+:EDGES:
+[2026-03-30 Mon 20:03] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/25_ab.htm][CLHS: Section 25.1.2]]
+:END:
+
 ** Format Directives
 :PROPERTIES:
 :ID:       852b2c7f-238e-480d-ad63-3b5b53c58929

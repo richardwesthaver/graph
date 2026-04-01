@@ -1,4 +1,4 @@
-#+title: GNU/Linux
+#+title: Unix
 #+description: A Free (as in Freedom) OS
 #+setupfile: ../../clean.theme
 * GNU/Linux                                                           :linux:
@@ -37,6 +37,29 @@ See also xterm(1).
 :ID:       3e6b5e34-4cf0-4289-afda-bea7c2a343dd
 :CREATED:  <2025-02-14 Fri 22:11>
 :END:
+*** PAM
+:PROPERTIES:
+:ID:       ebdad1cf-804a-47bc-9a8b-a8487f3b6e57
+:CREATED:  <2026-03-31 Tue 22:30>
+:END:
+:EDGES:
+[2026-03-31 Tue 22:30] -- [[https://www.man7.org/linux/man-pages/man8/PAM.8.html][PAM(8) - Linux manual page]]
+[2026-03-31 Tue 22:30] -- [[https://wiki.archlinux.org/title/PAM][PAM - ArchWiki]]
+[2026-03-31 Tue 22:30] -- [[https://www.redhat.com/en/blog/pluggable-authentication-modules-pam][An introduction to Pluggable Authentication Modules (PAM) in Linux]]
+[2026-03-31 Tue 22:31] -- [[github:linux-pam/linux-pam][src]]
+:END:
+Pluggable Authentication Modules for Linux
+
+- core library for most Linux-based systems
+
+#+begin_quote
+PAM provides a way to develop programs that are independent of
+authentication scheme. These programs need "authentication modules" to
+be attached to them at run-time in order to work. Which authentication
+module is to be attached is dependent upon the local system setup and
+is at the discretion of the local system administrator.
+#+end_quote
+
 *** Ublk                                                                 :fs:
 :PROPERTIES:
 :ID:       46fdde04-496d-45b4-a674-367edafb8054
@@ -498,7 +521,13 @@ scenarios.
 [2025-02-27 Thu 19:41] -- [[https://man7.org/linux/man-pages/man7/io_uring.7.html][io_uring(7) - Linux manual page]]
 [2025-02-27 Thu 19:41] -- [[https://blog.cloudflare.com/missing-manuals-io_uring-worker-pool/][Missing Manuals - io_uring worker pool]]
 [2025-02-27 Thu 19:42] -- [[https://unixism.net/loti/][Lord of the io_uring]]
+[2026-03-30 Mon 20:57] -- [[https://arxiv.org/html/2512.04859v1][io_uring for High-Performance DBMSs: When and How to Use It]]
+[2026-03-31 Tue 22:35] -- [[https://toziegler.github.io/2025-12-08-io-uring/][io_uring for Systems Engineers]]
 :END:
+- increasingly being preferred for high-io systems where batching is a
+  must and pipelines can be optimized
+- implementing io_uring support in our core io/mux protocol AO
+  [2026-03-30 Mon]
 ***** poll
 :PROPERTIES:
 :ID:       d43311bf-7f5f-4d21-aad8-4b35548813b5
@@ -507,6 +536,7 @@ scenarios.
 :EDGES:
 [2025-02-27 Thu 19:43] -- [[https://man7.org/linux/man-pages/man2/poll.2.html][poll(2) - Linux manual page]]
 :END:
+
 ** Community
 :PROPERTIES:
 :ID:       d494d0ab-53ee-4c01-8276-638351d86368
@@ -866,6 +896,17 @@ RETURN VALUE
        cution.  On failure, a ­1 will be returned in the parent's context,  no
        child process will be created, and errno will be set appropriately.
 #+end_quote
+*** Signals
+:PROPERTIES:
+:ID:       37740e21-e0a8-4d09-9292-72be229a65f9
+:CREATED:  <2026-03-09 Mon 19:00>
+:END:
+:EDGES:
+[2026-03-09 Mon 19:00] -- [[https://www.man7.org/linux/man-pages/man2/sigaction.2.html][sigaction(2) - Linux manual page]]
+[2026-03-09 Mon 19:00] -- [[https://www.man7.org/linux/man-pages/man7/signal.7.html][signal(7) - Linux manual page]]
+[2026-03-09 Mon 19:02] -- [[https://www.man7.org/linux/man-pages/man2/sigaltstack.2.html][sigaltstack(2) - Linux manual page]]
+:END:
+
 * Plan 9
 :PROPERTIES:
 :ID:       3c707aa1-be3a-4258-bcd8-195216e658b5
