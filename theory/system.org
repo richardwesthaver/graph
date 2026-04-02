@@ -261,6 +261,7 @@ The Portable Operating System Interface
 :CREATED:  <2026-03-31 Tue 22:39>
 :END:
 - [[https://en.wikipedia.org/wiki/Multitier_architecture][Multitier architecture - Wikipedia]]
+- [[https://tchayen.com/how-to-write-a-flexbox-layout-engine][How to Write a Flexbox Layout Engine]]
 ** DDD
 :PROPERTIES:
 :ID:       1d6dfd1b-692c-4253-a364-e0e63b2cb048
@@ -274,6 +275,15 @@ Domain-driven design
   from domain experts.
 - against the idea of a single unified model
   - divides large system into bounded contexts, each with their own model
+** TDD
+:PROPERTIES:
+:ID:       5773b3bd-37cd-406e-87ad-a041389f4198
+:CREATED:  <2026-03-31 Tue 22:50>
+:END:
+:EDGES:
+[2026-03-31 Tue 22:51] -- [[wikipedia:Test-driven development][wiki]]
+:END:
+- Test-driven development
 * Frameworks
 :PROPERTIES:
 :ID:       7eb1d3c6-606d-425d-8c2b-3847e42f0134

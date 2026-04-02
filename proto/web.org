@@ -1,5 +1,22 @@
 #+title: Web Protocols and Standards
 #+setupfile: ../../clean.theme
+* URI
+:PROPERTIES:
+:ID:       86847e74-1dc7-47e0-b2a6-6af03555798c
+:CREATED:  <2026-04-01 Wed 21:59>
+:END:
+:EDGES:
+[2026-04-01 Wed 21:59] -- [[https://www.rfc-editor.org/rfc/rfc3986][RFC 3986: Uniform Resource Identifier (URI): Generic Syntax]]
+:END:
+** URL
+:PROPERTIES:
+:ID:       f38a19eb-18c3-4b48-851b-745b839dd1e1
+:CREATED:  <2026-04-01 Wed 21:59>
+:END:
+:EDGES:
+[2026-04-01 Wed 21:59] -- [[https://url.spec.whatwg.org/][URL Standard]]
+:END:
+
 * WebGPU
 :PROPERTIES:
 :ID:       78ff8ddb-cc33-4538-9157-1a11cc04248d

@@ -27,5 +27,5 @@
 :CREATED:  <2025-02-01 Sat 20:59>
 :END:
 :EDGES:
-[2025-02-01 Sat 20:59] -- [[https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf][HTML page at URL has no title]]
+[2025-02-01 Sat 20:59] -- [[https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf]]
 :END:

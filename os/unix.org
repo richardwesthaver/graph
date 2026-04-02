@@ -47,6 +47,7 @@ See also xterm(1).
 [2026-03-31 Tue 22:30] -- [[https://wiki.archlinux.org/title/PAM][PAM - ArchWiki]]
 [2026-03-31 Tue 22:30] -- [[https://www.redhat.com/en/blog/pluggable-authentication-modules-pam][An introduction to Pluggable Authentication Modules (PAM) in Linux]]
 [2026-03-31 Tue 22:31] -- [[github:linux-pam/linux-pam][src]]
+[2026-04-01 Wed 20:38] >> [[id:ff7219fb-ee6f-4db2-a0da-05546e09bdd4][Security]]
 :END:
 Pluggable Authentication Modules for Linux
 
@@ -356,6 +357,33 @@ Linux kernel.
 :EDGES:
 [2025-03-07 Fri 15:35] -- [[https://docs.kernel.org/subsystem-apis.html#core-subsystems][Core Subsystems]]
 :END:
+**** Security
+:PROPERTIES:
+:ID:       ff7219fb-ee6f-4db2-a0da-05546e09bdd4
+:CREATED:  <2026-04-01 Wed 20:34>
+:END:
+:EDGES:
+[2026-04-01 Wed 20:35] -- [[https://docs.kernel.org/security/index.html][Security Documentation — The Linux Kernel documentation]]
+[2026-04-01 Wed 20:38] << [[id:ebdad1cf-804a-47bc-9a8b-a8487f3b6e57][PAM]]
+:END:
+***** CoCo
+:PROPERTIES:
+:ID:       2452fe4f-dc42-49a8-8e9d-54f6f094f342
+:CREATED:  <2026-04-01 Wed 20:36>
+:END:
+:EDGES:
+[2026-04-01 Wed 20:37] -- [[https://docs.kernel.org/security/snp-tdx-threat-model.html][Confidential Computing in Linux for x86 virtualization — The Linux Kernel documentation]]
+:END:
+Confidential Computing - stuff covering TEEs (Trusted Execution Environment)
+***** Seccomp
+:PROPERTIES:
+:ID:       66441b6d-4141-4582-9f9e-75bcbc38339d
+:CREATED:  <2026-04-01 Wed 20:38>
+:END:
+:EDGES:
+[2026-04-01 Wed 20:39] -- [[https://www.man7.org/linux/man-pages/man2/seccomp.2.html][seccomp(2) - Linux manual page]]
+:END:
+Security Computing (syscall)
 **** Storage
 :PROPERTIES:
 :ID:       f28b16e2-97e5-4575-a3d6-941efeb8942d
