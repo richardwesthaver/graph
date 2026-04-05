@@ -103,7 +103,7 @@ school of thought to be considered one.
 :CREATED:  <2025-02-16 Sun 19:09>
 :END:
 :EDGES:
-[2025-02-16 Sun 19:16] -- [[https://datafusion.apache.org/][Apache DataFusion - Apache DataFusion documentation]]
+[2025-02-16 Sun 19:16] -- [[https://datafusion.apache.org/][docs]]
 :END:
 **** Arrow
 :PROPERTIES:
@@ -111,7 +111,7 @@ school of thought to be considered one.
 :CREATED:  <2025-02-27 Thu 18:02>
 :END:
 :EDGES:
-[2025-02-27 Thu 18:02] -- [[https://arrow.apache.org/][Apache Arrow | Apache Arrow]]
+[2025-02-27 Thu 18:02] -- [[https://arrow.apache.org/][home]]
 :END:
 
 *** tigerbeetle                                                     :fin:zig:
@@ -120,7 +120,7 @@ school of thought to be considered one.
 :CREATED:  <2025-02-27 Thu 16:17>
 :END:
 :EDGES:
-[2025-02-27 Thu 16:17] -- [[https://github.com/tigerbeetle/tigerbeetle][GitHub - tigerbeetle/tigerbeetle: The financial transactions database designed for mission critical safety and performance.]]
+[2025-02-27 Thu 16:17] -- [[https://github.com/tigerbeetle/tigerbeetle][src]]
 :END:
 - very high quality code
 - zig

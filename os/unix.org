@@ -375,6 +375,16 @@ Linux kernel.
 [2026-04-01 Wed 20:37] -- [[https://docs.kernel.org/security/snp-tdx-threat-model.html][Confidential Computing in Linux for x86 virtualization — The Linux Kernel documentation]]
 :END:
 Confidential Computing - stuff covering TEEs (Trusted Execution Environment)
+***** Landlock
+:PROPERTIES:
+:ID:       85afe36e-21ae-4792-87d7-84efeb046cc3
+:CREATED:  <2026-04-03 Fri 00:00>
+:END:
+:EDGES:
+[2026-04-03 Fri 00:01] -- [[https://www.kernel.org/doc/html/latest/userspace-api/landlock.html][Landlock: unprivileged access control — The Linux Kernel documentation]]
+[2026-04-03 Fri 00:01] -- [[https://landlock.io/][Landlock: Unprivileged Sandboxing — Landlock documentation]]
+:END:
+Unprivileged sandboxing
 ***** Seccomp
 :PROPERTIES:
 :ID:       66441b6d-4141-4582-9f9e-75bcbc38339d
@@ -382,8 +392,10 @@ Confidential Computing - stuff covering TEEs (Trusted Execution Environment)
 :END:
 :EDGES:
 [2026-04-01 Wed 20:39] -- [[https://www.man7.org/linux/man-pages/man2/seccomp.2.html][seccomp(2) - Linux manual page]]
+[2026-04-02 Thu 23:20] -- [[https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html][Seccomp BPF (SECure COMPuting with filters) — The Linux Kernel documentation]]
 :END:
 Security Computing (syscall)
+- BPF programs make [[id:c07e50bf-57e2-48b7-9fa3-7b9f4c0c35fd][TOCTOU]] attacks impossible.
 **** Storage
 :PROPERTIES:
 :ID:       f28b16e2-97e5-4575-a3d6-941efeb8942d

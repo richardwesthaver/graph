@@ -54,7 +54,7 @@
 :CREATED:  <2025-08-08 Fri 22:08>
 :END:
 :EDGES:
-[2025-08-08 Fri 22:08] -- [[https://wiki.osdev.org/GAS][GAS - OSDev Wiki]]
+[2025-08-08 Fri 22:08] -- [[https://wiki.osdev.org/GAS][OSDev Wiki]]
 :END:
 - [[https://www.gnu.org/software/binutils/][Binutils - GNU Project - Free Software Foundation]]
 - [[https://terminalroot.com/x8664-assembly-tutorial-with-gnu-assembler-gas-for-beginners/][x86_64 Assembly Tutorial with GNU Assembler (GAS) for Beginners]]
@@ -98,7 +98,7 @@
 :EDGES:
 [2025-03-02 Sun 21:20] -- [[https://en.wikipedia.org/wiki/X86-64][x86-64 - Wikipedia]]
 [2025-03-02 Sun 21:20] -- [[https://gist.github.com/aagontuk/177947659828c1fe6611d4971bfddd27][Resources on x86_64 ISA · GitHub]]
-[2025-03-02 Sun 21:21] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html][Intel® 64 and IA-32 Architectures Software Developer Manuals]]
+[2025-03-02 Sun 21:21] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html][intel dev manuals]]
 :END:
 - [[https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/programmer-references/40332.pdf][AMD64 Architecture Programmer's Manual Vol 1-5]]
 *** Extensions
@@ -151,7 +151,7 @@ SIMD within a register
 :CREATED:  <2025-03-03 Mon 14:34>
 :END:
 :EDGES:
-[2025-03-03 Mon 14:36] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/advanced-performance-extensions-apx.html][Introducing Intel® Advanced Performance Extensions (Intel® APX)]]
+[2025-03-03 Mon 14:36] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/advanced-performance-extensions-apx.html][Introducing Intel Advanced Performance Extensions (Intel APX)]]
 :END:
 
 **** AES
@@ -170,7 +170,7 @@ SIMD within a register
 :END:
 :EDGES:
 [2025-03-03 Mon 14:39] -- [[https://en.wikipedia.org/wiki/X86_virtualization][x86 virtualization - Wikipedia]]
-[2025-03-03 Mon 16:56] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/sect-virtualization-troubleshooting-enabling_intel_vt_and_amd_v_virtualization_hardware_extensions_in_bios][Enabling Intel VT and AMD-V virtualization hardware extensions in BIOS | Red Hat Product Documentation]]
+[2025-03-03 Mon 16:56] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/sect-virtualization-troubleshooting-enabling_intel_vt_and_amd_v_virtualization_hardware_extensions_in_bios][Enabling Intel VT and AMD-V virtualization hardware extensions in BIOS]]
 :END:
 ***** AMD-V
 :PROPERTIES:
@@ -189,9 +189,9 @@ SIMD within a register
 :CREATED:  <2025-03-02 Sun 21:22>
 :END:
 :EDGES:
-[2025-03-02 Sun 21:22] -- [[https://riscv.org/][RISC-V International]]
-[2025-03-02 Sun 21:23] -- [[https://github.com/riscv/riscv-isa-manual][GitHub - riscv/riscv-isa-manual: RISC-V Instruction Set Manual]]
-[2025-03-02 Sun 21:23] -- [[https://riscv.org/specifications/ratified/][RISC-V Ratified Specifications]]
+[2025-03-02 Sun 21:22] -- [[https://riscv.org/][home]]
+[2025-03-02 Sun 21:23] -- [[https://github.com/riscv/riscv-isa-manual][man]]
+[2025-03-02 Sun 21:23] -- [[https://riscv.org/specifications/ratified/][specs]]
 :END:
 
 ** WASM                                                                 :web:
@@ -200,9 +200,9 @@ SIMD within a register
 :CREATED:  <2025-01-18 Sat 20:45>
 :END:
 :EDGES:
-[2025-03-02 Sun 21:41] -- [[https://developer.mozilla.org/en-US/docs/WebAssembly/Reference][WebAssembly instruction reference - WebAssembly | MDN]]
-[2025-03-02 Sun 21:40] -- [[https://webassembly.org/][WebAssembly]]
-[2025-03-02 Sun 21:40] -- [[https://webassembly.github.io/spec/core/][WebAssembly Specification - WebAssembly 2.0 (Draft 2025-01-28)]]
+[2025-03-02 Sun 21:41] -- [[https://developer.mozilla.org/en-US/docs/WebAssembly/Reference][ref]]
+[2025-03-02 Sun 21:40] -- [[https://webassembly.org/][home]]
+[2025-03-02 Sun 21:40] -- [[https://webassembly.github.io/spec/core/][spec]]
 :END:
 - [[https://ktye.github.io/wa/][wa]] - ktye compilation strat for wasm
 ** LLVM IR                                                             :llvm:
@@ -211,7 +211,7 @@ SIMD within a register
 :CREATED:  <2025-03-02 Sun 21:18>
 :END:
 :EDGES:
-[2025-03-02 Sun 21:18] -- [[https://llvm.org/docs/LangRef.html][LLVM Language Reference Manual - LLVM 21.0.0git documentation]]
+[2025-03-02 Sun 21:18] -- [[https://llvm.org/docs/LangRef.html][ref]]
 [2025-03-02 Sun 21:18] -- [[https://mcyoung.xyz/2023/08/01/llvm-ir/][A Gentle Introduction to LLVM IR · mcyoung]]
 [2025-03-03 Mon 14:32] >> [[id:496b952f-4c98-4303-92b4-1c766565092c][LLVM]]
 :END:
@@ -221,6 +221,6 @@ SIMD within a register
 :CREATED:  <2025-03-02 Sun 21:24>
 :END:
 :EDGES:
-[2025-03-02 Sun 21:24] -- [[https://docs.nvidia.com/cuda/nvvm-ir-spec/][1. Introduction - NVVM IR Specification 12.8 documentation]]
+[2025-03-02 Sun 21:24] -- [[https://docs.nvidia.com/cuda/nvvm-ir-spec/][spec]]
 [2025-03-03 Mon 14:48] >> [[id:339518e9-2112-4c79-9471-ccc8f57b8105][NVCC]]
 :END:

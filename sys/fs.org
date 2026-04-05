@@ -179,7 +179,7 @@ servers. This entails challenges on many different fronts.
 :END:
 :EDGES:
 [2025-10-11 Sat 22:00] -- [[wikipedia:XFS][wiki]]
-[2025-10-11 Sat 22:00] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs][Chapter 3. The XFS File System | Storage Administration Guide | Red Hat Enterprise Linux | 7 | Red Hat Documentation]]
+[2025-10-11 Sat 22:00] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs][red hat docs]]
 [2025-10-11 Sat 22:00] -- [[https://linuxvox.com/blog/linux-xfs/#google_vignette][Unveiling the Power of Linux XFS: A Comprehensive Guide — linuxvox.com]]
 :END:
 XFS is a high-performance 64-bit journaling file system created by

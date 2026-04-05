@@ -8,7 +8,7 @@
 :EDGES:
 [2025-02-13 Thu 22:33] -- [[https://www.forth.com/][forth.com]]
 [2025-03-09 Sun 20:54] -- [[https://raw.githubusercontent.com/nornagon/jonesforth/master/jonesforth.S][jonesforth.S]]
-[2025-03-09 Sun 20:55] -- [[https://github.com/c2d7fa/jonasforth][c2d7fa/jonasforth: Forth interpreter written in bare-metal assembly running on UEFI (unfinished)]]
+[2025-03-09 Sun 20:55] -- [[https://github.com/c2d7fa/jonasforth][jonasforth]]
 [2025-08-10 Sun 18:52] -- [[https://forth-standard.org/][Forth]]
 :END:
 - [2023-07-04 Tue]
@@ -92,7 +92,7 @@ _implementation/_
 :CREATED:  <2025-03-03 Mon 20:04>
 :END:
 :EDGES:
-[2025-03-03 Mon 20:04] -- [[https://www.gnu.org/software/gforth/][Gforth - GNU Project - Free Software Foundation.]]
+[2025-03-03 Mon 20:04] -- [[https://www.gnu.org/software/gforth/][home]]
 [2025-03-03 Mon 20:05] -- [[info:gforth][info]]
 :END:
 ** avrforth
@@ -101,7 +101,7 @@ _implementation/_
 :CREATED:  <2025-08-08 Fri 21:38>
 :END:
 :EDGES:
-[2025-08-08 Fri 21:38] -- [[http://krue.net/avrforth/][krüe :: avrforth]]
+[2025-08-08 Fri 21:38] -- [[http://krue.net/avrforth/][home]]
 [2025-08-08 Fri 22:04] -> [[id:ec0316f3-db1a-4bcd-966c-2ac0bb3458f0][AVR]]
 [2025-08-17 Sun 21:19] -> [[id:75819bf7-326d-49e1-8a4b-b93e1336b7db][avr-libc]]
 :END:
@@ -156,7 +156,7 @@ uart. I use avrdude and picocom for those tasks.
 :CREATED:  <2025-08-08 Fri 21:40>
 :END:
 :EDGES:
-[2025-08-08 Fri 21:40] -- [[https://colorforth.github.io/][Chuck Moore's colorForth, OKAD and S40 Forth Multicomputer chip]]
+[2025-08-08 Fri 21:40] -- [[https://colorforth.github.io/][home]]
 :END:
 ** Books
 :PROPERTIES:
@@ -172,7 +172,7 @@ uart. I use avrdude and picocom for those tasks.
 :ID:       b0f61b51-fbd8-4b45-a8cd-0a2e08864fed
 :END:
 :EDGES:
-[2025-02-13 Thu 22:34] -- [[https://factorcode.org/][Factor programming language]]
+[2025-02-13 Thu 22:34] -- [[https://factorcode.org/][home]]
 :END:
 
 * Joy

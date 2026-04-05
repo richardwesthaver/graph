@@ -75,7 +75,7 @@ is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 :CREATED:  <2025-03-13 Thu 19:47>
 :END:
 :EDGES:
-[2025-03-13 Thu 19:48] -- [[https://en.wikipedia.org/wiki/S-expression][S-expression - Wikipedia]]
+[2025-03-13 Thu 19:48] -- [[https://en.wikipedia.org/wiki/S-expression][wiki]]
 :END:
 *** common-lisp unicode support
 :PROPERTIES:
@@ -85,6 +85,7 @@ is [[id:a7f9b428-9323-492f-aaa5-94669bfbc55b][SBCL]].
 :LOGBOOK:
 - State "NOTE"       from              [2023-10-20 Fri 01:11]
 :END:
+
 #+begin_src lisp
 (defmacro λ (&rest symbols-and-expr)
   `(lambda ,(butlast symbols-and-expr)

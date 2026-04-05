@@ -57,6 +57,28 @@ Exploits are flaws in computer systems which can be leveraged.
 [2026-01-05 Mon 21:38] -- [[wikipedia:Return-oriented programming][wiki]]
 [2026-01-05 Mon 21:38] -> [[id:b8b4da43-18a1-469c-a256-8336fde50db8][Disassembler]]
 :END:
+** Time-of-check to Time-of-use
+:PROPERTIES:
+:ID:       c07e50bf-57e2-48b7-9fa3-7b9f4c0c35fd
+:CREATED:  <2026-04-02 Thu 23:13>
+:AKA: TOCTOU
+:END:
+:EDGES:
+[2026-04-02 Thu 23:14] -- [[wikipedia:Time-of-check to time-of-use][wiki]]
+:END:
+#+begin_quote
+race condition involving the checking of the state of a part of a
+system (such as a security credential) and the use of the results of
+that check.
+#+end_quote
+
+basically:
+1. check data X
+  X <- data is modified out-of-band
+2. use data X
+
+can happen when a program may run concurrently between 1 and 2 and has access to the data.
+
 * Honeypot
 :PROPERTIES:
 :ID:       a3dbce54-1677-4d11-9716-13574d25ed65
