@@ -233,3 +233,17 @@ A very simple, symmetrical substition cipher that shifts a character
 by 13 positions. Since the standard alphabet has 26 characters, this
 operation is its own inverse.
 - The canonical example of weak encryption.
+** Multiplication
+:PROPERTIES:
+:ID:       36fa7337-5b6a-4f5c-8b53-75b075f9803d
+:CREATED:  <2026-04-12 Sun 15:15>
+:END:
+*** Schonhage-Strassen
+:PROPERTIES:
+:ID:       f3d1f7de-40d8-4db4-b80d-4139ae2ab507
+:CREATED:  <2026-04-12 Sun 15:16>
+:END:
+:EDGES:
+[2026-04-12 Sun 15:16] -- [[https://every-algorithm.github.io/2024/06/20/sch%C3%B6nhagestrassen_algorithm.html][Schönhage–Strassen Algorithm: A Quick Overview | Every Algorithm]]
+:END:
+A classical technique for multiplying large integers.

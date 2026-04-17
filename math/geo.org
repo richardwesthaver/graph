@@ -40,3 +40,4 @@
 :EDGES:
 [2025-05-26 Mon 18:57] -- [[wikipedia:Trigonometry][wiki]]
 :END:
+- identities: [[https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Inverse_trigonometric_functions][List of trigonometric identities - Wikipedia]]

@@ -568,6 +568,421 @@ scenarios.
   must and pipelines can be optimized
 - implementing io_uring support in our core io/mux protocol AO
   [2026-03-30 Mon]
+
+- cat with liburing
+  #+begin_src c
+  #include <fcntl.h>
+  #include <stdio.h>
+  #include <string.h>
+  #include <sys/stat.h>
+  #include <sys/ioctl.h>
+  #include <liburing.h>
+  #include <stdlib.h>
+
+  #define QUEUE_DEPTH 1
+  #define BLOCK_SZ    1024
+
+  struct file_info {
+      off_t file_sz;
+      struct iovec iovecs[];      /* Referred by readv/writev */
+  };
+
+  /*
+  ,* Returns the size of the file whose open file descriptor is passed in.
+  ,* Properly handles regular file and block devices as well. Pretty.
+  ,* */
+
+  off_t get_file_size(int fd) {
+      struct stat st;
+
+      if(fstat(fd, &st) < 0) {
+          perror("fstat");
+          return -1;
+      }
+
+      if (S_ISBLK(st.st_mode)) {
+          unsigned long long bytes;
+          if (ioctl(fd, BLKGETSIZE64, &bytes) != 0) {
+              perror("ioctl");
+              return -1;
+          }
+          return bytes;
+      } else if (S_ISREG(st.st_mode))
+          return st.st_size;
+
+      return -1;
+  }
+
+  /*
+   ,* Output a string of characters of len length to stdout.
+   ,* We use buffered output here to be efficient,
+   ,* since we need to output character-by-character.
+   ,* */
+  void output_to_console(char *buf, int len) {
+      while (len--) {
+          fputc(*buf++, stdout);
+      }
+  }
+
+  /*
+   ,* Wait for a completion to be available, fetch the data from
+   ,* the readv operation and print it to the console.
+   ,* */
+
+  int get_completion_and_print(struct io_uring *ring) {
+      struct io_uring_cqe *cqe;
+      int ret = io_uring_wait_cqe(ring, &cqe);
+      if (ret < 0) {
+          perror("io_uring_wait_cqe");
+          return 1;
+      }
+      if (cqe->res < 0) {
+          fprintf(stderr, "Async readv failed.\n");
+          return 1;
+      }
+      struct file_info *fi = io_uring_cqe_get_data(cqe);
+      int blocks = (int) fi->file_sz / BLOCK_SZ;
+      if (fi->file_sz % BLOCK_SZ) blocks++;
+      for (int i = 0; i < blocks; i ++)
+          output_to_console(fi->iovecs[i].iov_base, fi->iovecs[i].iov_len);
+
+      io_uring_cqe_seen(ring, cqe);
+      return 0;
+  }
+
+  /*
+   ,* Submit the readv request via liburing
+   ,* */
+  int submit_read_request(char *file_path, struct io_uring *ring) {
+      int file_fd = open(file_path, O_RDONLY);
+      if (file_fd < 0) {
+          perror("open");
+          return 1;
+      }
+      off_t file_sz = get_file_size(file_fd);
+      off_t bytes_remaining = file_sz;
+      off_t offset = 0;
+      int current_block = 0;
+      int blocks = (int) file_sz / BLOCK_SZ;
+      if (file_sz % BLOCK_SZ) blocks++;
+      struct file_info *fi = malloc(sizeof(*fi) +
+                                            (sizeof(struct iovec) * blocks));
+      char *buff = malloc(file_sz);
+      if (!buff) {
+          fprintf(stderr, "Unable to allocate memory.\n");
+          return 1;
+      }
+
+      /*
+       ,* For each block of the file we need to read, we allocate an iovec struct
+       ,* which is indexed into the iovecs array. This array is passed in as part
+       ,* of the submission. If you don't understand this, then you need to look
+       ,* up how the readv() and writev() system calls work.
+       ,* */
+      while (bytes_remaining) {
+          off_t bytes_to_read = bytes_remaining;
+          if (bytes_to_read > BLOCK_SZ)
+              bytes_to_read = BLOCK_SZ;
+
+          offset += bytes_to_read;
+          fi->iovecs[current_block].iov_len = bytes_to_read;
+          void *buf;
+          if( posix_memalign(&buf, BLOCK_SZ, BLOCK_SZ)) {
+              perror("posix_memalign");
+              return 1;
+          }
+          fi->iovecs[current_block].iov_base = buf;
+
+          current_block++;
+          bytes_remaining -= bytes_to_read;
+      }
+      fi->file_sz = file_sz;
+
+      /* Get an SQE */
+      struct io_uring_sqe *sqe = io_uring_get_sqe(ring);
+      /* Setup a readv operation */
+      io_uring_prep_readv(sqe, file_fd, fi->iovecs, blocks, 0);
+      /* Set user data */
+      io_uring_sqe_set_data(sqe, fi);
+      /* Finally, submit the request */
+      io_uring_submit(ring);
+
+      return 0;
+  }
+
+  int main(int argc, char *argv[]) {
+      struct io_uring ring;
+
+      if (argc < 2) {
+          fprintf(stderr, "Usage: %s [file name] <[file name] ...>\n",
+                  argv[0]);
+          return 1;
+      }
+
+      /* Initialize io_uring */
+      io_uring_queue_init(QUEUE_DEPTH, &ring, 0);
+
+      for (int i = 1; i < argc; i++) {
+          int ret = submit_read_request(argv[i], &ring);
+          if (ret) {
+              fprintf(stderr, "Error reading file: %s\n", argv[i]);
+              return 1;
+          }
+          get_completion_and_print(&ring);
+      }
+
+      /* Call the clean-up function. */
+      io_uring_queue_exit(&ring);
+      return 0;
+  }
+  #+end_src
+- cp with liburing
+  #+begin_src c
+  #include <stdio.h>
+  #include <fcntl.h>
+  #include <string.h>
+  #include <stdlib.h>
+  #include <unistd.h>
+  #include <assert.h>
+  #include <errno.h>
+  #include <sys/stat.h>
+  #include <sys/ioctl.h>
+  #include <liburing.h>
+
+  #define QD  2
+  #define BS (16 * 1024)
+
+  static int infd, outfd;
+
+  struct io_data {
+      int read;
+      off_t first_offset, offset;
+      size_t first_len;
+      struct iovec iov;
+  };
+
+  static int setup_context(unsigned entries, struct io_uring *ring) {
+      int ret;
+
+      ret = io_uring_queue_init(entries, ring, 0);
+      if( ret < 0) {
+          fprintf(stderr, "queue_init: %s\n", strerror(-ret));
+          return -1;
+      }
+
+      return 0;
+  }
+
+  static int get_file_size(int fd, off_t *size) {
+      struct stat st;
+
+      if (fstat(fd, &st) < 0 )
+          return -1;
+      if(S_ISREG(st.st_mode)) {
+          ,*size = st.st_size;
+          return 0;
+      } else if (S_ISBLK(st.st_mode)) {
+          unsigned long long bytes;
+
+          if (ioctl(fd, BLKGETSIZE64, &bytes) != 0)
+              return -1;
+
+          ,*size = bytes;
+          return 0;
+      }
+      return -1;
+  }
+
+  static void queue_prepped(struct io_uring *ring, struct io_data *data) {
+      struct io_uring_sqe *sqe;
+
+      sqe = io_uring_get_sqe(ring);
+      assert(sqe);
+
+      if (data->read)
+          io_uring_prep_readv(sqe, infd, &data->iov, 1, data->offset);
+      else
+          io_uring_prep_writev(sqe, outfd, &data->iov, 1, data->offset);
+
+      io_uring_sqe_set_data(sqe, data);
+  }
+
+  static int queue_read(struct io_uring *ring, off_t size, off_t offset) {
+      struct io_uring_sqe *sqe;
+      struct io_data *data;
+
+      data = malloc(size + sizeof(*data));
+      if (!data)
+          return 1;
+
+      sqe = io_uring_get_sqe(ring);
+      if (!sqe) {
+          free(data);
+          return 1;
+      }
+
+      data->read = 1;
+      data->offset = data->first_offset = offset;
+
+      data->iov.iov_base = data + 1;
+      data->iov.iov_len = size;
+      data->first_len = size;
+
+      io_uring_prep_readv(sqe, infd, &data->iov, 1, offset);
+      io_uring_sqe_set_data(sqe, data);
+      return 0;
+  }
+
+  static void queue_write(struct io_uring *ring, struct io_data *data) {
+      data->read = 0;
+      data->offset = data->first_offset;
+
+      data->iov.iov_base = data + 1;
+      data->iov.iov_len = data->first_len;
+
+      queue_prepped(ring, data);
+      io_uring_submit(ring);
+  }
+
+  int copy_file(struct io_uring *ring, off_t insize) {
+      unsigned long reads, writes;
+      struct io_uring_cqe *cqe;
+      off_t write_left, offset;
+      int ret;
+
+      write_left = insize;
+      writes = reads = offset = 0;
+
+      while (insize || write_left) {
+          int had_reads, got_comp;
+
+          /* Queue up as many reads as we can */
+          had_reads = reads;
+          while (insize) {
+              off_t this_size = insize;
+
+              if (reads + writes >= QD)
+                  break;
+              if (this_size > BS)
+                  this_size = BS;
+              else if (!this_size)
+                  break;
+
+              if (queue_read(ring, this_size, offset))
+                  break;
+
+              insize -= this_size;
+              offset += this_size;
+              reads++;
+          }
+
+          if (had_reads != reads) {
+              ret = io_uring_submit(ring);
+              if (ret < 0) {
+                  fprintf(stderr, "io_uring_submit: %s\n", strerror(-ret));
+                  break;
+              }
+          }
+
+          /* Queue is full at this point. Let's find at least one completion */
+          got_comp = 0;
+          while (write_left) {
+              struct io_data *data;
+
+              if (!got_comp) {
+                  ret = io_uring_wait_cqe(ring, &cqe);
+                  got_comp = 1;
+              } else {
+                  ret = io_uring_peek_cqe(ring, &cqe);
+                  if (ret == -EAGAIN) {
+                      cqe = NULL;
+                      ret = 0;
+                  }
+              }
+              if (ret < 0) {
+                  fprintf(stderr, "io_uring_peek_cqe: %s\n",
+                          strerror(-ret));
+                  return 1;
+              }
+              if (!cqe)
+                  break;
+
+              data = io_uring_cqe_get_data(cqe);
+              if (cqe->res < 0) {
+                  if (cqe->res == -EAGAIN) {
+                      queue_prepped(ring, data);
+                      io_uring_cqe_seen(ring, cqe);
+                      continue;
+                  }
+                  fprintf(stderr, "cqe failed: %s\n",
+                          strerror(-cqe->res));
+                  return 1;
+              } else if (cqe->res != data->iov.iov_len) {
+                  /* short read/write; adjust and requeue */
+                  data->iov.iov_base += cqe->res;
+                  data->iov.iov_len -= cqe->res;
+                  queue_prepped(ring, data);
+                  io_uring_cqe_seen(ring, cqe);
+                  continue;
+              }
+
+              /*
+               ,* All done. If write, nothing else to do. If read,
+               ,* queue up corresponding write.
+               ,* */
+
+              if (data->read) {
+                  queue_write(ring, data);
+                  write_left -= data->first_len;
+                  reads--;
+                  writes++;
+              } else {
+                  free(data);
+                  writes--;
+              }
+              io_uring_cqe_seen(ring, cqe);
+          }
+      }
+
+      return 0;
+  }
+
+  int main(int argc, char *argv[]) {
+      struct io_uring ring;
+      off_t insize;
+      int ret;
+
+      if (argc < 3) {
+          printf("Usage: %s <infile> <outfile>\n", argv[0]);
+          return 1;
+      }
+
+      infd = open(argv[1], O_RDONLY);
+      if (infd < 0) {
+          perror("open infile");
+          return 1;
+      }
+
+      outfd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+      if (outfd < 0) {
+          perror("open outfile");
+          return 1;
+      }
+
+      if (setup_context(QD, &ring))
+          return 1;
+
+      if (get_file_size(infd, &insize))
+          return 1;
+
+      ret = copy_file(&ring, insize);
+
+      close(infd);
+      close(outfd);
+      io_uring_queue_exit(&ring);
+      return ret;
+  }
+  #+end_src
 ***** poll
 :PROPERTIES:
 :ID:       d43311bf-7f5f-4d21-aad8-4b35548813b5
@@ -703,6 +1118,7 @@ Linux Distributions
   installing Arch from scratch to be a good stat check for system
   devs.
 - High quality Wiki
+- *releases* [[https://gitlab.archlinux.org/groups/archlinux/-/packages/][Package registry · Arch Linux · GitLab]]
 **** Archiso
 :PROPERTIES:
 :ID:       06ee60a3-9a98-40d2-893b-39ce992fc0dc
@@ -964,3 +1380,25 @@ RETURN VALUE
 :EDGES:
 [2025-06-22 Sun 14:56] -- [[https://www.openbsd.org/][OpenBSD]]
 :END:
+
+* Android
+:PROPERTIES:
+:ID:       027a4ebc-2b25-4ece-9a66-ee9bdc34d833
+:CREATED:  <2026-04-16 Thu 21:45>
+:END:
+:EDGES:
+[2026-04-16 Thu 21:45] -- [[https://developer.android.com/guide/platform][Platform architecture]]
+:END:
+
+** GrapheneOS
+:PROPERTIES:
+:ID:       bb21bcd1-4ff4-4718-bceb-6ba0ef95d69f
+:CREATED:  <2026-04-16 Thu 21:45>
+:END:
+:EDGES:
+[2026-04-16 Thu 21:46] -- [[https://grapheneos.org][GrapheneOS: the private and secure mobile OS]]
+:END:
+- [[https://grapheneos.org/install/web#prerequisites][Web installer]]
+- NOTE [2026-04-16 Thu] - OEM is often gate-kept by carrier (verizon
+  at&t t-mobile) - need to get around that via customer support
+  somehow or don't buy vendor-locked hardware. what a load of BS.

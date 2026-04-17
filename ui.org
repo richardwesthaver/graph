@@ -4,9 +4,9 @@
 #+email: richard.westhaver@gmail.com
 #+html_link_up: ..
 #+setupfile: ../clean.theme
-#+html_head: <script src="https://cdn.otom8.dev/js/3d-force-graph.mjs"></script>
-#+html_head: <script src="https://cdn.otom8.dev/js/minisearch.mjs"></script>
-#+html_head: <script src="https://cdn.otom8.dev/js/search.js"></script>
+#+html_head: <script src="https://cdn.compiler.company/js/3d-force-graph.mjs"></script>
+#+html_head: <script src="https://cdn.compiler.company/js/minisearch.mjs"></script>
+#+html_head: <script src="https://cdn.compiler.company/js/search.js"></script>
 #+html_head:  <style>
 #+html_head: .node-label {
 #+html_head:      font-size: 0.5em;

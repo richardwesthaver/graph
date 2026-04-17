@@ -61,3 +61,12 @@ Virtual Machines
 [2025-02-14 Fri 21:33] -- [[https://en.wikipedia.org/wiki/Open_Virtualization_Format][Open Virtualization Format - Wikipedia]]
 :END:
 Open Virtualization Format
+** cloud-init
+:PROPERTIES:
+:ID:       10174b54-9c6d-4af8-a782-f6b3bb3dfac7
+:CREATED:  <2026-04-15 Wed 18:57>
+:END:
+:EDGES:
+[2026-04-15 Wed 18:57] -- [[https://docs.cloud-init.io/en/latest/tutorial/qemu.html][New user tutorial with QEMU - cloud-init 26.1 documentation]]
+[2026-04-15 Wed 18:58] -- [[https://docs.cloud-init.io/][cloud-init 26.1 documentation]]
+:END:
