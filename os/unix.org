@@ -318,6 +318,46 @@ https://en.wikipedia.org/wiki/Dynamic_Kernel_Module_Support
 :END:
 /dev/fb*
 - used by fbgrab/fbcat program
+**** Network Block Device
+:PROPERTIES:
+:ID:       9e0e0782-97cb-4b3a-85a2-b9df08bee962
+:CREATED:  <2026-04-18 Sat 13:44>
+:END:
+:EDGES:
+[2026-04-18 Sat 13:44] -- [[https://docs.kernel.org/admin-guide/blockdev/nbd.html][Network Block Device (TCP version) — The Linux Kernel documentation]]
+:END:
+- server toml config located at =/etc/nbd-server/config=
+  #+begin_src toml
+  [generic]
+  	# The [generic] section is required, even if nothing is specified
+  	# there.
+  	# When either of these options are specified, nbd-server drops
+  	# privileges to the given user and group after opening ports, but
+  	# _before_ opening files.
+  	user = nbd
+  	group = nbd
+  [export1]
+  	exportname = /export/nbd/export1-file
+  	authfile = /export/nbd/export1-authfile
+  	timeout = 30
+  	filesize = 10000000
+  	readonly = false
+  	multifile = false
+  	copyonwrite = false
+  	prerun = dd if=/dev/zero of=%s bs=1k count=500
+  	postrun = rm -f %s
+  [otherexport]
+  	exportname = /export/nbd/experiment
+  	# The other options are all optional.
+  #+end_src
+**** zram
+:PROPERTIES:
+:ID:       f35ff674-2a35-4863-a431-ee3d4dcbb634
+:CREATED:  <2026-04-18 Sat 13:53>
+:END:
+:EDGES:
+[2026-04-18 Sat 13:53] -- [[https://docs.kernel.org/admin-guide/blockdev/zram.html][zram: Compressed RAM-based block devices — The Linux Kernel documentation]]
+:END:
 **** Userspace Block Device
 :PROPERTIES:
 :ID:       d58cb494-ce43-49cc-859b-aa6a518ac314
@@ -1238,6 +1278,9 @@ build directory. Then you can use pacman to install the package.
 :EDGES:
 [2025-07-09 Wed 17:06] -- [[https://wiki.archlinux.org/title/Pacman][pacman - ArchWiki]]
 :END:
+- [2026-04-17 Fri] [[https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported][Pacman partial upgrades are unsupported]]
+  - https://bbs.archlinux.org/viewtopic.php?id=306532
+  - [[https://wiki.archlinux.org/title/Pacman#Manually_reinstalling_pacman][Manually reinstalling pacman]]
 **** Configuration
 :PROPERTIES:
 :ID:       85f0992c-fc87-42dc-8946-0384dfe1ccb8
