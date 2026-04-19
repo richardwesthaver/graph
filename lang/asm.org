@@ -31,23 +31,48 @@
 [2025-01-17 Fri 18:23] -- [[https://www.nasm.us/][NASM]]
 :END:
 - hello world
-    #+begin_src asm
-      section.data
-           msg db 'Hello, World!', 0
+  #+begin_src asm
+  section.data
+       msg db 'Hello, World!', 0
 
-      section.text
-           global _start
-      _start:
-           mov rax, 1 ; syscall: write
-           mov rdi, 1 ; file descriptor: stdout
-           mov rsi, msg ; pointer to message
-           mov rdx, 13 ; message length
-           syscall; make the syscall
-           mov rax, 60 ; syscall: exit
-           xor rdi, rdi ; status: 0
-           syscall; make the syscall
+  section.text
+       global _start
+  _start:
+       mov rax, 1 ; syscall: write
+       mov rdi, 1 ; file descriptor: stdout
+       mov rsi, msg ; pointer to message
+       mov rdx, 13 ; message length
+       syscall; make the syscall
+       mov rax, 60 ; syscall: exit
+       xor rdi, rdi ; status: 0
+       syscall; make the syscall
     #+end_src
+- hello linux
+  #+begin_src asm
+  ;;; asm/hello.linux.asm --- nasm example -*- mode:nasm -*-
 
+  ;; nasm -f elf hello.linux.asm && ld -m elf_i386 hello.linux.o -o hello.linux && hello.linux
+
+  ;;; Code:
+  global _start
+
+  section .data
+  msg:	db	"Hello, world!", 10
+  .len:	equ	$ - msg
+
+  section .text
+  _start:
+  	mov	eax, 4 ; write
+  	mov	ebx, 1 ; stdout
+  	mov	ecx, msg
+  	mov	edx, msg.len
+  	int	0x80   ; write(stdout, msg, strlen(msg));
+
+  	xor	eax, msg.len ; invert return value from write()
+  	xchg eax, ebx ; value for exit()
+  	mov	eax, 1 ; exit
+  	int	0x80   ; exit(...)
+    #+end_src
 ** GAS
 :PROPERTIES:
 :ID:       2a7304bc-b666-4ea6-a37d-64487875ff4e
