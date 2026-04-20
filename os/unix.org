@@ -1168,8 +1168,8 @@ Linux Distributions
 [2025-06-08 Sun 19:23] -- [[https://wiki.archlinux.org/title/Archiso][archiso - ArchWiki]]
 :END:
 - supports cloud-init service
-- sshd on by default
-#+begin_src sh :results output :export both :eval never
+- sshd on by default (requires sudo disabled)
+#+begin_src sh :results output replace :export both :eval no-export
   mkarchiso -h
 #+end_src
 
@@ -1212,7 +1212,7 @@ usage: mkarchiso [options] <profile_dir>
   profile_dir:        Directory of the archiso profile to build
 #+end_example
 
-#+begin_src sh :results output :export both :eval never
+#+begin_src sh :results output :export both :eval no-export
   run_archiso -h
 #+end_src
 
@@ -1222,6 +1222,7 @@ Usage:
     run_archiso [options]
 
 Options:
+    -A [arch]       change architecture (defaults to the host architecture; supports: x86_64, i686, aarch64 and riscv64)
     -a              set accessibility support using brltty
     -b              set boot type to 'BIOS'
     -d              set image type to hard disk instead of optical disc
@@ -1270,6 +1271,7 @@ running makepkg inside a directory, the software sources are
 downloaded, the software is compiled, and then packaged within the
 build directory. Then you can use pacman to install the package.
 #+end_quote
+(makepkg, makechrootpkg, etc)
 **** Pacman
 :PROPERTIES:
 :ID:       8bbcda66-0611-42a8-9f99-10d1cd7d82e2

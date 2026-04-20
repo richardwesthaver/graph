@@ -338,3 +338,18 @@ https://github.com/_side-panels/user.json
 :END:
 - blog and search engine available here, many other TLDs including
   .org have taken it down.
+* btdig.com
+:PROPERTIES:
+:ID:       43f47250-f229-41ec-b37c-2e3dd2b1ea37
+:CREATED:  <2026-04-19 Sun 17:57>
+:END:
+:EDGES:
+[2026-04-19 Sun 17:58] -- [[https://btdig.com/][BTDigg DHT Search Engine: Free Search Engine For Free Torrent Content]]
+:END:
+#+begin_quote
+BTDigg is the first Mainline DHT search engine. It participates in the
+BitTorrent DHT network, supporting the network and making
+correspondence between magnet links and a few torrent attributes that
+are indexed and inserted into a database. For end users, BTDigg
+provides a full-text database search via a Web interface.
+#+end_quote
