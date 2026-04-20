@@ -205,3 +205,36 @@ Linux, developed as the successor to ext3.
 :END:
 Another COW, more robust and fresher impl than BTRFS
 - [[https://linuxiac.com/torvalds-drops-bcachefs-from-linux-6-17-amid-maintainer-dispute/][Torvalds Drops Bcachefs from Linux 6.17 Amid Maintainer Dispute]]
+** NFS
+:PROPERTIES:
+:ID:       9f0abbb7-4636-492b-ae4d-ef09cc1f6ef0
+:CREATED:  <2026-04-19 Sun 20:50>
+:AKA: Network File System
+:END:
+:EDGES:
+[2026-04-19 Sun 20:51] -- [[https://wiki.archlinux.org/title/NFS][NFS - ArchWiki]]
+[2026-04-19 Sun 20:56] -- [[https://nfs.sourceforge.net/][Linux NFS faq]]
+[2026-04-19 Sun 21:22] -- [[https://www.rfc-editor.org/rfc/rfc7530][RFC 7530: Network File System (NFS) Version 4 Protocol]]
+[2026-04-19 Sun 21:22] -- [[https://www.rfc-editor.org/rfc/rfc7531][RFC 7531: Network File System (NFS) Version 4 External Data Representation Standard (XDR) Description]]
+:END:
+#+begin_quote
+Q. Which local file systems can I export with the Linux NFS server?
+
+A. We expect the following local file systems to work, as they are
+tested often: ext2, ext3, jfs, reiserfs, xfs.
+
+These local file systems may work or may have a few minor-ish issues:
+iso9660, ntfs, reiser4, udf. Ask on the NFS mailing list for details.
+
+Any file system based on FAT or not having the ability to provide
+permanent inode numbers will have trouble with NFS versions 2 and 3
+(see question C4).
+
+Local file systems that are known not to work with the Linux NFS
+server are: procfs, sysfs, tmpfs (and friends).
+#+end_quote
+
+- for the most part our preference is [[id:a5dab699-aa5f-4862-a733-90e62efbeaf4][XFS]].
+- has a netlink interface: ~/usr/include/linux/nfsd_netlink.h~
+- NFSv4 is the most current
+- [[https://aur.archlinux.org/packages/ktls-utils][AUR (en) - ktls-utils]] - for TLS encryption options
