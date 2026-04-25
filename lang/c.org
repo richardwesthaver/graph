@@ -25,7 +25,46 @@
       return 0;
   }
 #+end_src
-** Macros
+** Syntax
+:PROPERTIES:
+:ID:       0157d160-7eeb-4e01-ab69-43000e09cc3c
+:CREATED:  <2026-04-24 Fri 12:06>
+:END:
+:EDGES:
+[2026-04-24 Fri 12:07] -- [[https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Lexical-Syntax.html][Lexical Syntax (GNU C Language Manual)]]
+:END:
+*** Statements
+:PROPERTIES:
+:ID:       9132ff22-4c85-4aed-ab5c-1bd777648927
+:CREATED:  <2026-04-24 Fri 12:04>
+:END:
+:EDGES:
+[2026-04-24 Fri 12:05] -- [[https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Statements.html][Statements (GNU C Language Manual)]]
+:END:
+#+begin_quote
+A statement specifies computations to be done for effect; it does not
+produce a value, as an expression would. In general a statement ends
+with a semicolon (‘;’), but blocks (which are statements, more or
+less) are an exception to that rule.
+#+end_quote
+**** Duff's Device
+:PROPERTIES:
+:ID:       f9a7443a-a362-4d47-b3d3-045fdd6c3c57
+:CREATED:  <2026-04-24 Fri 12:06>
+:END:
+:EDGES:
+[2026-04-24 Fri 12:07] -- [[https://en.wikipedia.org/wiki/Duff's_device][Duff's device - Wikipedia]]
+:END:
+- [[https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Duffs-Device.html][Duffs Device (GNU C Language Manual)]]
+*** Preprocessor
+:PROPERTIES:
+:ID:       6c5a4df9-612c-4591-bfe9-7904cc03fb4c
+:CREATED:  <2026-04-24 Fri 12:08>
+:END:
+:EDGES:
+[2026-04-24 Fri 12:08] -- [[https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Preprocessing.html][Preprocessing (GNU C Language Manual)]]
+:END:
+**** Macros
 :PROPERTIES:
 :ID:       93cddd0e-4189-4e78-a0e5-b3ceaf6b7d6e
 :CREATED:  <2025-03-07 Fri 18:44>
@@ -33,7 +72,7 @@
 - [[https://gcc.gnu.org/onlinedocs/cpp/Macros.html][Macros (The C Preprocessor)]]
 The C preprocessor is unhygienic (good) and fairly simple (at least
 compared to C)
-** Types
+*** Types
 :PROPERTIES:
 :ID:       3aa8b635-2c81-4992-8e65-fb2b0dee7b06
 :CREATED:  <2025-09-29 Mon 17:58>
