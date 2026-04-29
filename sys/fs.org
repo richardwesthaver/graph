@@ -180,7 +180,7 @@ servers. This entails challenges on many different fronts.
 :EDGES:
 [2025-10-11 Sat 22:00] -- [[wikipedia:XFS][wiki]]
 [2025-10-11 Sat 22:00] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs][red hat docs]]
-[2025-10-11 Sat 22:00] -- [[https://linuxvox.com/blog/linux-xfs/#google_vignette][Unveiling the Power of Linux XFS: A Comprehensive Guide — linuxvox.com]]
+[2025-10-11 Sat 22:00] -- [[https://linuxvox.com/blog/linux-xfs/#google_vignette][Unveiling the Power of Linux XFS]]
 :END:
 XFS is a high-performance 64-bit journaling file system created by
 Silicon Graphics, Inc (SGI) in 1993.
@@ -214,8 +214,8 @@ Another COW, more robust and fresher impl than BTRFS
 :EDGES:
 [2026-04-19 Sun 20:51] -- [[https://wiki.archlinux.org/title/NFS][NFS - ArchWiki]]
 [2026-04-19 Sun 20:56] -- [[https://nfs.sourceforge.net/][Linux NFS faq]]
-[2026-04-19 Sun 21:22] -- [[https://www.rfc-editor.org/rfc/rfc7530][RFC 7530: Network File System (NFS) Version 4 Protocol]]
-[2026-04-19 Sun 21:22] -- [[https://www.rfc-editor.org/rfc/rfc7531][RFC 7531: Network File System (NFS) Version 4 External Data Representation Standard (XDR) Description]]
+[2026-04-19 Sun 21:22] -- [[https://www.rfc-editor.org/rfc/rfc7530][RFC 7530]]
+[2026-04-19 Sun 21:22] -- [[https://www.rfc-editor.org/rfc/rfc7531][RFC 7531]]
 :END:
 #+begin_quote
 Q. Which local file systems can I export with the Linux NFS server?

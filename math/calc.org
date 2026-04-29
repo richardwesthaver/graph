@@ -1,6 +1,3 @@
-:PROPERTIES:
-:ID:       8ab93af6-eb88-4524-99ba-d0c885f89bcb
-:END:
 #+title: Calculus
 #+setupfile: ../../clean.theme
 * Calculus

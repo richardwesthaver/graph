@@ -19,6 +19,8 @@
 :EDGES:
 [2025-08-17 Sun 21:20] -> [[id:0881a735-21ea-4509-aa97-b2d239cbbaf0][POSIX]]
 :END:
+- [[https://linuxhandbook.com/cdpath/][CDPATH: The Forgotten Magic Trick in Your Bash Toolbox]]
+  - unset CDPATH (used in ~makepkg~)
 * Zsh
 :PROPERTIES:
 :ID:       761baf51-4774-4954-be97-7b3aa53cb4d1
