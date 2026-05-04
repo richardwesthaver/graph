@@ -181,6 +181,17 @@ Information about compiling /without/ libc.
 :CREATED:  <2025-05-08 Thu 20:22>
 :END:
 Part of [[id:449aad9e-abd1-4a10-a1a8-d6a1c3356542][LAPACK]]
+*** libarchive
+:PROPERTIES:
+:ID:       8abf5410-165d-43c5-a37b-fb9be29f227e
+:CREATED:  <2026-05-04 Mon 19:44>
+:END:
+:EDGES:
+[2026-05-04 Mon 19:44] -- [[https://www.libarchive.org/][home]]
+:END:
+C library and command-line tools for reading and writing tar, cpio,
+zip, ISO, and other archive formats.
+
 *** libcrypto
 :PROPERTIES:
 :ID:       ea07b1ac-7e78-48be-a192-41b52a08002b

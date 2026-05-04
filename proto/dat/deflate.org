@@ -28,6 +28,59 @@ Very popular means of compressing any sort of data including web
 pages, images, and text with reasonable performance.
 
 In general you can usually rely on ZLIB and GZIP being supported.
+
+- from [[https://codeberg.org/fourier/cl-zip][fourier/cl-zip]]:
+  #+begin_quote
+  Basic idea:
+  Deflation is a means of compressing an octet sequence that
+  combines the LZ77 algorithm for marking common substrings and
+  Huffman coding to take advantage of different frequency of occurance
+  for each possible values in the file.
+  This algorithm may not be as easy to understand or as efficient
+  as the LZW compression algorithm but Deflate does have the big
+  advantage in that it is not patented.  Thus Deflate is a very
+  widely used.  Nowdays it's the most common compression method
+  used in Windows Zip programs (e.g. Winzip) and in the Unix gzip program.
+  Java jar files, being just zip files, also use this compression method.
+
+
+  Lempel-Ziv 1977 (LZ77):
+  An octet sequence often contains repeated subsequences.  The LZ algorithm
+  compresses a file by replacing repeated substrings with (Length,Distance)
+  markers which mean during decompression: Go back Distance octets 
+  in output stream and copy Length bytes to the output stream.  
+
+  Huffman Coding:
+  A Huffman code for a set of values V assigns a unique bitsequence
+  to each value in V.   A bitsequence is a sequence of 0's and 1'.
+  An important property of Huffman codes is that if X is a bitsequence
+  for a value in V then no other value in V has a bitsequence 
+  with X as a prefix of that sequence.  This means that if you see
+  the bitsequence X in the stream you know that this denotes the value
+  v and you don't have to read any more bits.
+
+
+  Blocks:
+  A deflated file is a sequence of blocks.  There are three types of
+  blocks:
+  1. uncompressed - The block simply contains the same sequence of 
+  octets as were found in the input stream.  This type of block
+  is useful when the input stream has already been compressed (e.g.
+  it's a jpg or gif file) as compressing a compressed file often
+  results in the file getting larger.
+
+  2. compressed with fixed Huffman code - The block contains a 
+  huffman-coded LZ77 compressed bitsequence.  The huffman code
+  used is specified by the deflate algorithm.   This type of block
+  is useful when the octet sequence is short since in that case
+  the overhead of creating a custom huffman code is more than is gained
+  by that custom code.
+
+  3. compressed with a custom Huffman code - The block contains
+  a description of a Huffman code to be used in this block only
+  and then a Huffman-code LZ77 compressed bitsequence.  The values
+  that describe the custome huffman tree are themselves huffman coded.
+  #+end_quote
 ** ZLIB
 :PROPERTIES:
 :ID:       cee22050-4aae-4735-bb53-5c6253aa21e7

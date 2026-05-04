@@ -353,3 +353,13 @@ correspondence between magnet links and a few torrent attributes that
 are indexed and inserted into a database. For end users, BTDigg
 provides a full-text database search via a Web interface.
 #+end_quote
+* rmcpay.com                                                           :saas:
+:PROPERTIES:
+:ID:       ef57acca-ec3e-482c-9c63-2338f5a2249e
+:CREATED:  <2026-04-29 Wed 18:52>
+:END:
+Parking Authority ransomware
+- contact: ~info@rmcpay.com~
+- Receivable Management Corporation
+- rmcpayments.com - https://rmcpayments.com/pay.html - 'jotform'
+- phone: (781) 933-1550 | (800) 281-1036

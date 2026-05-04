@@ -1,0 +1,15 @@
+#+title: ZIP File Format
+#+setupfile: ../../../clean.theme
+* Zip
+:PROPERTIES:
+:ID:       44562f82-60b6-4d89-9346-c0d5525e86c8
+:CREATED:  <2026-05-04 Mon 19:40>
+:END:
+:EDGES:
+[2026-05-04 Mon 19:41] -- [[https://en.wikipedia.org/wiki/ZIP_(file_format)][wiki]]
+:END:
+see also: [[https://en.wikipedia.org/wiki/PKWare][PKWare]] (PKZIP, Phil Katz)
+
+In a Unix environment [[id:7615cb48-0257-44f0-bc2f-ba13307031c8][tarballs]] are usually preferred, although zip
+files can be optimal in specific scenarios due to the difference in
+design - Zip files interweave compression and archival.

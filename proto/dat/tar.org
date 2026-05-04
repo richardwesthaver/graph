@@ -1,0 +1,16 @@
+#+title: Tar File Format
+#+setupfile: ../../../clean.theme
+* Tar
+:PROPERTIES:
+:ID:       7615cb48-0257-44f0-bc2f-ba13307031c8
+:CREATED:  <2026-05-04 Mon 19:42>
+:END:
+:EDGES:
+[2026-05-04 Mon 19:43] -- [[https://www.gnu.org/software/tar/manual/html_node/Standard.html][GNU tar 1.35: Basic Tar Format]]
+:END:
+see also: [[id:8abf5410-165d-43c5-a37b-fb9be29f227e][libarchive]].
+
+Tarfiles are often compressed, resulting in a ~tarball~. Unlike [[id:44562f82-60b6-4d89-9346-c0d5525e86c8][zip]]
+files, compression and archival are two separate processes. This can
+have some pretty significant performance implications so users beware!
+(especially on Win*..)
