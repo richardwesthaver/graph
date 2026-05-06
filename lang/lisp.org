@@ -274,6 +274,31 @@ list, max, min, nconc, or, progn, and standard.
 | FLOATING-POINT-UNDERFLOW         |
 | SIMPLE-BIT-VECTOR                |
 
+*** Pathnames
+:PROPERTIES:
+:ID:       6935daca-1ad0-45b0-97e5-f59745f06ad9
+:CREATED:  <2026-05-04 Mon 20:30>
+:END:
+:EDGES:
+[2026-05-04 Mon 20:32] -- [[https://www.sbcl.org/manual/#Pathnames][sbcl#pathnames]]
+[2026-05-04 Mon 20:35] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/t_pn.htm#pathname][CLHS: System Class PATHNAME]]
+:END:
+
+**** Logical Pathnames
+:PROPERTIES:
+:ID:       bbdc87f1-cece-474f-905e-d02401e82510
+:CREATED:  <2026-05-04 Mon 20:30>
+:END:
+:EDGES:
+[2026-05-04 Mon 20:31] -- [[https://lispblog.xach.com/post/112015191018/logical-pathnames-and-eager-parsing][Zach Beane Common Lisp – Logical pathnames and eager parsing]]
+[2026-05-04 Mon 20:35] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/t_logica.htm#logical-pathname][CLHS: System Class LOGICAL-PATHNAME]]
+:END:
+#+begin_quote
+A pathname that uses a namestring syntax that is
+implementation-independent, and that has component values that are
+implementation-independent. Logical pathnames do not refer directly to
+filenames.
+#+end_quote
 *** Simple Types
 :PROPERTIES:
 :ID:       62417b14-efff-448d-92c0-5b0e99a180ee

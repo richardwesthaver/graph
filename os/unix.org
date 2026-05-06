@@ -1103,7 +1103,7 @@ Linux Distributions
     #+name: coreos-download-qcow2
     #+begin_src shell :var stream="next"
       # stream = stable,testing,next
-      coreos-installer download -s $stream -p qemu -f qcow2.xz --decompress -C ~/.stash/scratch/
+    coreos-installer download -s $stream -p qemu -f qcow2.xz --decompress -C ~/.stash/scratch/
     #+end_src
 
     #+RESULTS:
@@ -1159,6 +1159,7 @@ Linux Distributions
   devs.
 - High quality Wiki
 - *releases* [[https://gitlab.archlinux.org/groups/archlinux/-/packages/][Package registry · Arch Linux · GitLab]]
+- [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive - ArchWiki]]
 **** Archiso
 :PROPERTIES:
 :ID:       06ee60a3-9a98-40d2-893b-39ce992fc0dc
@@ -1167,6 +1168,14 @@ Linux Distributions
 :EDGES:
 [2025-06-08 Sun 19:23] -- [[https://wiki.archlinux.org/title/Archiso][archiso - ArchWiki]]
 :END:
+#+begin_quote
+Archiso is a highly-customizable tool for building Arch Linux live
+CD/USB ISO images, netboot artifacts and bootstrap tarballs. The
+official images are built with archiso and include these packages. It
+can be used as the basis for rescue systems, Linux installers or other
+systems.
+#+end_quote
+
 - supports cloud-init service
 - sshd on by default (requires sudo disabled)
 #+begin_src sh :results output replace :export both :eval no-export
