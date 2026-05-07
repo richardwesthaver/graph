@@ -1,0 +1,11 @@
+#+title: Go
+#+setupfile: ../../clean.theme
+* Go
+:PROPERTIES:
+:ID:       2fc595ad-f426-4247-98ff-9b2ab5eb1aba
+:CREATED:  <2026-05-06 Wed 19:31>
+:AKA: Golang
+:END:
+:EDGES:
+[2026-05-06 Wed 19:31] -- [[https://go.dev/][The Go Programming Language]]
+:END:

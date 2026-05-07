@@ -8,6 +8,16 @@
 :EDGES:
 [2025-06-23 Mon 18:51] -- [[https://www.python.org/][Welcome to Python.org]]
 :END:
+** PEPs
+:PROPERTIES:
+:ID:       60ca4e95-2051-451e-a085-9c7095f410f6
+:CREATED:  <2026-05-06 Wed 19:27>
+:AKA: Python Enhancement Proposals
+:END:
+:EDGES:
+[2026-05-06 Wed 19:28] -- [[https://peps.python.org/][PEP 0 – Index of Python Enhancement Proposals (PEPs) | peps.python.org]]
+:END:
+- API: [[https://peps.python.org/api/peps.json][peps.json]]
 ** f-string
 :PROPERTIES:
 :ID:       aad902c0-22e0-48f2-af5e-43120ac3db10
@@ -17,3 +27,55 @@
 [2025-06-23 Mon 18:50] -- [[https://fstring.help/cheat/][Python f-string cheat sheet]]
 [2025-06-23 Mon 18:51] -- [[https://realpython.com/python-f-strings/][Python's F-String for String Interpolation and Formatting – Real Python]]
 :END:
+** Packages
+:PROPERTIES:
+:ID:       78af4557-f1cf-4952-aa9e-d8f86b32fee0
+:CREATED:  <2026-05-06 Wed 19:26>
+:END:
+*** Astral
+:PROPERTIES:
+:ID:       98cd4e64-b815-44b7-ac00-6ecfa4863497
+:CREATED:  <2026-05-06 Wed 19:26>
+:END:
+- [[https://docs.astral.sh/][docs]]
+**** uv
+:PROPERTIES:
+:ID:       102aab0c-af6b-4926-80a5-6e9295154996
+:CREATED:  <2026-05-06 Wed 19:27>
+:END:
+:EDGES:
+[2026-05-06 Wed 19:27] -- [[https://docs.astral.sh/uv/][uv]]
+:END:
+**** ruff
+:PROPERTIES:
+:ID:       f73d72e9-fa3a-4953-89af-2d10e5c0df30
+:CREATED:  <2026-05-06 Wed 19:27>
+:END:
+:EDGES:
+[2026-05-06 Wed 19:27] -- [[https://docs.astral.sh/ruff/][Ruff]]
+:END:
+**** ty
+:PROPERTIES:
+:ID:       3866c844-7509-4269-94a9-1fd1a99daf41
+:CREATED:  <2026-05-06 Wed 19:27>
+:END:
+:EDGES:
+[2026-05-06 Wed 19:27] -- [[https://docs.astral.sh/ty][ty]]
+:END:
+*** PyInstaller
+:PROPERTIES:
+:ID:       cff089ec-31a2-446c-9aca-fd426a4480bc
+:CREATED:  <2026-05-06 Wed 19:30>
+:END:
+:EDGES:
+[2026-05-06 Wed 19:30] -- [[https://pyinstaller.org/en/stable/][PyInstaller Manual — PyInstaller 6.20.0 documentation]]
+:END:
+*** Shiv
+:PROPERTIES:
+:ID:       fbf18857-17e3-43d4-b336-5a78c083f16a
+:CREATED:  <2026-05-06 Wed 19:30>
+:END:
+:EDGES:
+[2026-05-06 Wed 19:30] -- [[https://shiv.readthedocs.io/en/latest/][shiv 🔪 — shiv documentation]]
+:END:
+- written at LinkedIn
