@@ -1,0 +1,23 @@
+#+title: Organizations
+#+setupfile: ../../clean.theme
+* NTF
+:PROPERTIES:
+:ID:       bc366321-ee96-41a2-a70d-fee9fb7e49fd
+:CREATED:  <2026-05-07 Thu 19:41>
+:AKA: Network Time Foundation
+:END:
+:EDGES:
+[2026-05-07 Thu 19:41] -- [[https://www.nwtime.org/][Network Time Foundation]]
+[2026-05-07 Thu 19:51] -> [[id:4673d7ab-aa8b-497f-a86a-630e4dfdb49c][NTP]]
+[2026-05-07 Thu 19:52] -> [[id:36e7b014-2780-4941-bc17-7c782195ee8b][PTP]]
+:END:
+* Project Pendulum
+:PROPERTIES:
+:ID:       93addffd-bf75-4d66-8ff4-6a727d0c3d81
+:CREATED:  <2026-05-07 Thu 19:44>
+:END:
+:EDGES:
+[2026-05-07 Thu 19:45] -- [[https://github.com/pendulum-project][Project Pendulum (by Trifecta Tech Foundation)]]
+[2026-05-07 Thu 19:51] << [[id:76e01d38-9c42-464d-9eee-d13dd4bb4e55][Statime]]
+[2026-05-07 Thu 19:51] -> [[id:4673d7ab-aa8b-497f-a86a-630e4dfdb49c][NTP]]
+:END:

@@ -37,9 +37,9 @@ an interface for modifying the graph.
 | id          | 1784914079056115652                      |
 | root        | ~/comp/org/graph/                        |
 | tags        | ORG DOCS NOTES META PLAN ARCHIVE GRAPH   |
-| updated     | Thu May 07 17:29:23 2026 -0400           |
+| updated     | Thu May 07 18:23:22 2026 -0400           |
 | langs       | org                                      |
-| lines       | 17775 :code 16741 :comment 36 :blank 998 |
+| lines       | 17776 :code 16742 :comment 36 :blank 998 |
 |-------------+------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/comp/org/graph/
@@ -62,7 +62,7 @@ an interface for modifying the graph.
 2026-02    109 
 2026-03    672 *****
 2026-04   1913 ****************
-2026-05    277 **
+2026-05    288 **
 #+end_example
 
 #+CALL: project-html-files() :dir ~/comp/org/graph/
@@ -192,7 +192,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2026-03-14 23:28:12 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2026-04-01 21:59:42 |
-| [[https://compiler.company/graph/index.html][index]]                | 2026-05-06 19:46:10 |
+| [[https://compiler.company/graph/index.html][index]]                | 2026-05-07 17:39:14 |
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-11-01 02:17:43 |
 | [[https://compiler.company/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2026-04-04 23:45:51 |

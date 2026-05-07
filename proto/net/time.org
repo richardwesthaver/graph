@@ -1,0 +1,30 @@
+#+title: Network Time Protocols
+* NTP
+:PROPERTIES:
+:ID:       4673d7ab-aa8b-497f-a86a-630e4dfdb49c
+:CREATED:  <2026-05-07 Thu 19:40>
+:END:
+:EDGES:
+[2026-05-07 Thu 19:44] -- [[https://wiki.archlinux.org/title/Network_Time_Protocol_daemon][Network Time Protocol daemon - ArchWiki]]
+[2026-05-07 Thu 19:44] -- [[wikipedia:Network_Time_Protocol][wiki]]
+[2026-05-07 Thu 19:51] <- [[id:93addffd-bf75-4d66-8ff4-6a727d0c3d81][Project Pendulum]]
+[2026-05-07 Thu 19:51] <- [[id:bc366321-ee96-41a2-a70d-fee9fb7e49fd][NTF]]
+:END:
+* PTP
+:PROPERTIES:
+:ID:       36e7b014-2780-4941-bc17-7c782195ee8b
+:CREATED:  <2026-05-07 Thu 19:40>
+:END:
+:EDGES:
+[2026-05-07 Thu 19:43] -- [[https://linuxptp.nwtime.org/documentation/][Documentation]]
+[2026-05-07 Thu 19:52] <- [[id:bc366321-ee96-41a2-a70d-fee9fb7e49fd][NTF]]
+:END:
+** Statime
+:PROPERTIES:
+:ID:       76e01d38-9c42-464d-9eee-d13dd4bb4e55
+:CREATED:  <2026-05-07 Thu 19:46>
+:END:
+:EDGES:
+[2026-05-07 Thu 19:46] -- [[https://github.com/pendulum-project/statime][pendulum-project/statime: Implementation of the Precision Time Protocol (PTP) in Rust]]
+[2026-05-07 Thu 19:51] >> [[id:93addffd-bf75-4d66-8ff4-6a727d0c3d81][Project Pendulum]]
+:END:
