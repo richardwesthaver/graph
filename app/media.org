@@ -4,11 +4,27 @@
 :PROPERTIES:
 :ID:       9df7a344-14a4-4d14-939a-b59894d7e676
 :CREATED:  <2025-03-22 Sat 20:57>
+:AKA: Music Player Daemon
 :END:
 :EDGES:
 [2025-03-22 Sat 20:58] -- [[https://mpd.readthedocs.io/en/latest/][docs]]
+[2026-05-08 Fri 21:26] -- [[archwiki:Music_Player_Daemon][archwiki]]
 :END:
-Music Player Daemon
+- defacto standard for ~music servers~, paired with one or more ~MPD clients~
+- supports simultaenous system-wide and user configs
+- may broadcast on a network using something like [[id:97ff5b91-cf31-4fdb-b563-c24e08c5cd24][Icecast]].
+* Icecast
+:PROPERTIES:
+:ID:       97ff5b91-cf31-4fdb-b563-c24e08c5cd24
+:CREATED:  <2026-05-08 Fri 21:30>
+:END:
+:EDGES:
+[2026-05-08 Fri 21:30] -- [[archwiki:Icecast][archwiki]]
+[2026-05-08 Fri 21:32] -- [[https://www.icecast.org/][Icecast]]
+[2026-05-08 Fri 21:34] >> [[id:baeb9eb2-4a29-48c8-ab6b-08d6435b3dfb][Xiph]]
+:END:
+A program for streaming media such as audio and video over a network.
+- [[https://icecast.org/apps/][3rd Party Applications — Icecast]]
 * MPV                                                                 :video:
 :PROPERTIES:
 :ID:       349e75df-c3e3-4c1d-90e0-161e014ecaff
@@ -132,6 +148,7 @@ FADE; LOCK; NAME; SYNC; ONSETS; HIQ
 :PROPERTIES:
 :ID:       0c1b92be-522e-43bc-a00d-c54e762dd399
 :CREATED:  <2025-03-23 Sun 20:58>
+:AKA: Fruity Loops
 :END:
 :EDGES:
 [2025-03-23 Sun 20:57] -- [[https://image-line.com][home]]

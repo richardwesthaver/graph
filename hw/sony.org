@@ -1,0 +1,14 @@
+#+title: Sony
+#+setupfile: ../../clean.theme
+* Sony
+:PROPERTIES:
+:ID:       a6a352c3-a4cc-4553-8107-bfefde8cdcd6
+:CREATED:  <2026-05-08 Fri 21:40>
+:AKA: Sony Group Corporation
+:END:
+:EDGES:
+[2026-05-08 Fri 21:41] -- [[wikipedia:Sony][wiki]]
+[2026-05-08 Fri 22:08] -> [[id:94958bd9-37ba-4b96-bbcc-fcea8bc58c29][CD]]
+:END:
+Sony was founded in 1946 as Tokyo Tsushin Kogyo K.K. by Masaru Ibuka
+and Akio Morita.

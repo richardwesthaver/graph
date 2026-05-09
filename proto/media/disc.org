@@ -1,0 +1,47 @@
+#+title: Disc Formats
+#+setupfile: ../../../clean.theme
+* CD
+:PROPERTIES:
+:ID:       94958bd9-37ba-4b96-bbcc-fcea8bc58c29
+:CREATED:  <2026-05-08 Fri 22:06>
+:AKA: Compact Disc
+:END:
+:EDGES:
+[2026-05-08 Fri 22:06] -- [[wikipedia:Compact disc][wiki]]
+[2026-05-08 Fri 22:08] <- [[id:7c836fa5-de1a-4075-9ff3-1fde1a5910bb][Philips]]
+[2026-05-08 Fri 22:08] <- [[id:a6a352c3-a4cc-4553-8107-bfefde8cdcd6][Sony]]
+:END:
+The OG optical disk data storage format. Developed by [[id:a6a352c3-a4cc-4553-8107-bfefde8cdcd6][Sony]]/[[id:7c836fa5-de1a-4075-9ff3-1fde1a5910bb][Philips]].
+* SACD
+:PROPERTIES:
+:ID:       4473478d-4a0a-412e-8426-9a5c818e11f6
+:CREATED:  <2026-05-08 Fri 22:05>
+:AKA: Super Audio CD
+:END:
+:EDGES:
+[2026-05-08 Fri 22:05] -- [[wikipedia:Super_Audio_CD][wiki]]
+:END:
+** DSD
+:PROPERTIES:
+:ID:       a8469289-6309-42af-b5cb-4f1b59ec8307
+:CREATED:  <2026-05-08 Fri 21:37>
+:AKA: Direct Stream Digital
+:END:
+:EDGES:
+[2026-05-08 Fri 21:37] -- [[wikipedia:Direct_Stream_Digital][wiki]]
+:END:
+A trademark used by [[id:a6a352c3-a4cc-4553-8107-bfefde8cdcd6][Sony]] and [[id:7c836fa5-de1a-4075-9ff3-1fde1a5910bb][Philips]] for their system used to
+digitally encode audio for the SACD.
+
+In 2005 Philips sold its DSD tool division to [[wikipedia:Sonic_Studio][Sonic Studio]].
+
+DSD uses delta-sigma modulation (a form of pulse-density modulation
+encoding). Signals are encoded in single-bit sequences at a sample
+rate of ~2.8224 MHz~. 64x the SR of standard CD audio @ 44.1kHz but
+with 1-bit samples instead of 16.
+
+#+begin_quote
+DSD is simply a format for storing a delta-sigma signal without
+applying a decimation process that converts the signal to a PCM
+signal.
+#+end_quote

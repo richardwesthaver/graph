@@ -1,0 +1,14 @@
+#+title: Philips
+#+setupfile: ../../clean.theme
+* Philips
+:PROPERTIES:
+:ID:       7c836fa5-de1a-4075-9ff3-1fde1a5910bb
+:CREATED:  <2026-05-08 Fri 21:40>
+:AKA: Koninklijke Philips N.V.
+:END:
+:EDGES:
+[2026-05-08 Fri 21:41] -- [[wikipedia:Philips][wiki]]
+[2026-05-08 Fri 22:08] -> [[id:94958bd9-37ba-4b96-bbcc-fcea8bc58c29][CD]]
+:END:
+a Dutch multinational health technology and former consumer
+electronics company that was founded in Eindhoven in 1891.

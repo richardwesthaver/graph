@@ -8,6 +8,8 @@
 :EDGES:
 [2025-02-14 Fri 22:35] -- [[https://en.wikipedia.org/wiki/Digital_signal_processing][Digital signal processing - Wikipedia]]
 :END:
+- see also [[https://en.wikipedia.org/wiki/Signal_processing][Signal processing - Wikipedia]]
+- subfiled focusing on analyzing/modifying/synthesizing digital signals
 ** FFT
 :PROPERTIES:
 :ID:       f0d573b1-ca28-48f5-b635-56b658e519a5
@@ -32,3 +34,48 @@
 :EDGES:
 [2025-03-30 Sun 01:07] -- [[https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm][Cooley–Tukey FFT algorithm - Wikipedia]]
 :END:
+** Sampling
+:PROPERTIES:
+:ID:       df4c2e32-0921-447f-9333-ba5673a20d06
+:CREATED:  <2026-05-08 Fri 21:55>
+:END:
+:EDGES:
+[2026-05-08 Fri 21:55] -- [[wikipedia:Sampling (signal processing)][wiki]]
+:END:
+The reduction of a continuous-time signal to a discrete-time signal
+- [[wikipedia:Nyquist-Shannon Sampling Theorem][Nyquist-Shannon Sampling Theorem]]
+- Nyquist rate vs frequency
+*** Oversampling
+:PROPERTIES:
+:ID:       0578c677-1d35-4a69-ad95-d2e256416643
+:CREATED:  <2026-05-08 Fri 21:57>
+:END:
+:EDGES:
+[2026-05-08 Fri 21:57] -- [[wikipedia:Oversampling][wiki]]
+:END:
+The process of sampling a signal at a frequency /significantly/ higher
+than the Nyquist rate.
+**** Delta-sigma modulation
+:PROPERTIES:
+:ID:       b5bd8c8f-5406-4c0c-a1ad-217ecc071191
+:CREATED:  <2026-05-08 Fri 21:59>
+:END:
+:EDGES:
+[2026-05-08 Fri 21:59] -- [[wikipedia:Delta-sigma_modulation][wiki]]
+:END:
+**** Pulse-code modulation
+:PROPERTIES:
+:ID:       5cc94bed-b935-4e6e-8248-00d973debc81
+:CREATED:  <2026-05-08 Fri 22:01>
+:END:
+:EDGES:
+[2026-05-08 Fri 22:01] -- [[wikipedia:Pulse-code modulation][wiki]]
+:END:
+A method of digitally representing analog signals.
+
+two basic properties:
+- sampling rate (~SR~)
+- bit depth
+
+PCM streams are the standard form of digital audio on most computers,
+CDs, etc.
