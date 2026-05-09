@@ -100,6 +100,7 @@ the Emacs Web Wowser, a browser written in elisp based on shr.el.
 :END:
 :EDGES:
 [2025-03-03 Mon 16:46] -- [[info:erc][info]]
+[2026-05-08 Fri 19:50] >> [[id:13368ff1-b66a-4f98-beba-bb7687d963f4][IRC]]
 :END:
 
 ** EUDC
@@ -128,6 +129,7 @@ Emacs Unified Directory Client
 :END:
 :EDGES:
 [2025-03-03 Mon 17:46] -- [[info:slime][info]]
+[2026-05-08 Fri 19:55] <- [[id:a69e0d55-e25f-4332-8fdc-aad2843ba649][Swank]]
 :END:
 
 ** Eshell

@@ -2367,6 +2367,17 @@ style.
   a replacement groveler - once the SYN system is loaded (after
   tree-sitter) the new groveler may be used in system definitions and
   SB-GROVEL will only be needed for bootstrapping.
+*** WAIT sb-fibers
+:PROPERTIES:
+:ID:       831bc450-0723-4662-bace-29f0e3835673
+:CREATED:  <2026-05-08 Fri 21:01>
+:END:
+:LOGBOOK:
+- State "WAIT"       from              [2026-05-08 Fri 21:01] \\
+  WIP implementations by multiple contributors, submission to sb-devel
+  from this week looks promising.
+:END:
+- [[https://sourceforge.net/p/sbcl/mailman/sbcl-devel/thread/03A2666B-BBAD-40F2-8D2B-CCCB1FC1AE90%40protonmail.com/#msg59332212][Thread: [Sbcl-devel] Coroutines, goroutines | Steel Bank Common Lisp]]
 *** sb-cltl2
 :PROPERTIES:
 :ID:       d2269803-9084-4845-8860-047c37da36c7

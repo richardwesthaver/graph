@@ -15,6 +15,24 @@
 [2026-05-07 Thu 19:38] -- [[https://gitlab.com/lumifaza/inferno][LUMIFAZA / Inferno-AoIP]]
 :END:
 Unofficial implementation of Dante, but isn't pay2play.
+
+#+begin_quote
+Disclaimer: Dante uses technology patented by Audinate. This source
+code may use these patents too. Consult a lawyer if you want to:
+
+- make money of it
+- distribute binaries in (or from) a region where software patents
+  apply
+
+This project makes no claim to be either authorized or approved by
+Audinate.
+
+Please do not use this project to make counterfeit Dante
+devices/software, it is both immoral and illegal (while Audinate's
+approach is only immoral). Always specify that the implementation is
+unofficial and not endorsed by Audinate. Probably you can legally say
+that it is compatible with a subset of Dante protocol, but IANAL.
+#+end_quote
 ** Dante                                                        :proprietary:
 :PROPERTIES:
 :ID:       5eaf463b-c57e-449b-ae51-556871a42aea

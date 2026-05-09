@@ -1,0 +1,34 @@
+#+title: Threads
+#+setupfile: ../../clean.theme
+* Threads
+:PROPERTIES:
+:ID:       019b5a13-df61-4a01-971a-4ac48fa5c617
+:CREATED:  <2026-05-08 Fri 20:50>
+:END:
+** Green Threads
+:PROPERTIES:
+:ID:       144255ab-4f31-46f6-a627-4537090e6dc5
+:CREATED:  <2026-05-08 Fri 20:50>
+:END:
+:EDGES:
+[2026-05-08 Fri 20:51] -- [[man:https://aleksandr-pezikov.blog/threads-green-threads-fibers-coroutines-what-is-the-difference-cbc2c887c0c1][Green Threads, Fibers, Coroutines - What is the difference?]]
+:END:
+*** Coroutines
+:PROPERTIES:
+:ID:       b1914866-4e35-4d6c-a8f3-4b71b418c199
+:CREATED:  <2026-05-08 Fri 20:54>
+:END:
+:EDGES:
+[2026-05-08 Fri 20:54] -- [[https://kotlinlang.org/docs/coroutines-overview.html][Coroutines | Kotlin Documentation]]
+[2026-05-08 Fri 20:55] << [[id:0ca9d35c-d70c-449b-9671-7f2bd5ee2705][Goroutines]]
+[2026-05-08 Fri 20:57] -- [[https://www.youtube.com/watch?v=S2nVKfYJykw][Lightning Talk: Proof of Concept: Coroutines in SBCL - YouTube]]
+:END:
+*** Fibers
+:PROPERTIES:
+:ID:       9ac2d388-81ff-406e-88be-8abdd210b916
+:CREATED:  <2026-05-08 Fri 20:55>
+:END:
+:EDGES:
+[2026-05-08 Fri 20:56] -- [[wikipedia:Fiber (computer science)][wiki]]
+:END:
+A particularly lightweight thread of execution.

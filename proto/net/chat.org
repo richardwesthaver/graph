@@ -1,0 +1,30 @@
+#+title: Chat Protocols
+#+setupfile: ../../../clean.theme
+#+filetags: chat
+* IRC                                                                   :irc:
+:PROPERTIES:
+:ID:       13368ff1-b66a-4f98-beba-bb7687d963f4
+:CREATED:  <2026-05-08 Fri 19:45>
+:END:
+:EDGES:
+[2026-05-08 Fri 19:47] -- [[https://www.rfc-editor.org/rfc/rfc1459][RFC 1459: Internet Relay Chat Protocol]]
+[2026-05-08 Fri 19:50] << [[id:a42c2aaa-8dda-40ca-b455-7511f0cb084a][ERC]]
+:END:
+** UnrealIRCd
+:PROPERTIES:
+:ID:       88d5de2c-d58c-4b74-9e28-30aa36355ebc
+:CREATED:  <2026-05-08 Fri 19:46>
+:END:
+:EDGES:
+[2026-05-08 Fri 19:46] -- [[https://www.unrealircd.org/docs/Configuration][Configuration - UnrealIRCd documentation wiki]]
+:END:
+- popular IRC server, supports most v3 features
+* Matrix
+:PROPERTIES:
+:ID:       5a2444f3-4015-40e3-b3d9-6ced04c2c989
+:CREATED:  <2026-05-08 Fri 19:45>
+:END:
+:EDGES:
+[2026-05-08 Fri 19:47] -- [[https://matrix.org/][Matrix.org]]
+[2026-05-08 Fri 19:47] -- [[https://spec.matrix.org/latest/][Matrix Specification]]
+:END:

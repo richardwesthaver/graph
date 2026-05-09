@@ -1163,6 +1163,20 @@ C-MERA - CM-C - CMU-C - CMS-C
   :version "1.1.0"
   :depends-on ("cmu-c"))
 #+end_src
+*** Swank
+:PROPERTIES:
+:ID:       a69e0d55-e25f-4332-8fdc-aad2843ba649
+:CREATED:  <2026-05-08 Fri 19:52>
+:END:
+:EDGES:
+[2026-05-08 Fri 19:55] -> [[id:f499c680-9a01-4a11-bc69-81861fd864d0][SLIME]]
+:END:
+The server and protocol components of [[id:f499c680-9a01-4a11-bc69-81861fd864d0][SLIME]]. Included in the same repo.
+
+See also [[https://github.com/brown/swank-client][swank-client]] which provides a client-side-only protocol
+implementation.
+
+Swank is [[id:a2c33f5d-8e07-4122-98df-72d321ae313b][TCP]]-based and unencrypted by default.
 *** IOLib
 :PROPERTIES:
 :ID:       894ce499-1ce7-4051-a921-661995fe42b2

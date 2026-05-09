@@ -9,3 +9,12 @@
 :EDGES:
 [2026-05-06 Wed 19:31] -- [[https://go.dev/][The Go Programming Language]]
 :END:
+** Goroutines
+:PROPERTIES:
+:ID:       0ca9d35c-d70c-449b-9671-7f2bd5ee2705
+:CREATED:  <2026-05-08 Fri 20:55>
+:END:
+:EDGES:
+[2026-05-08 Fri 20:55] -- [[https://gobyexample.com/goroutines][Go by Example: Goroutines]]
+[2026-05-08 Fri 20:55] >> [[id:b1914866-4e35-4d6c-a8f3-4b71b418c199][Coroutines]]
+:END:
