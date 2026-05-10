@@ -1,7 +1,6 @@
 #+title: ASM
 #+description: Assembly Language Flavors
 #+setupfile: ../../clean.theme
-
 * Assembly                                                              :asm:
 :PROPERTIES:
 :ID:       c57c2462-7e95-4e6b-9f5b-d7207aeda442
@@ -217,6 +216,36 @@ SIMD within a register
 [2025-03-02 Sun 21:22] -- [[https://riscv.org/][home]]
 [2025-03-02 Sun 21:23] -- [[https://github.com/riscv/riscv-isa-manual][man]]
 [2025-03-02 Sun 21:23] -- [[https://riscv.org/specifications/ratified/][specs]]
+:END:
+
+** ARM                                                                  :arm:
+:PROPERTIES:
+:ID:       88f212ae-23d2-4b10-b78b-7139dba28e64
+:CREATED:  <2026-05-09 Sat 20:39>
+:END:
+:EDGES:
+[2026-05-09 Sat 20:41] -- [[https://www.arm.com/architecture][Arm Architecture]]
+[2026-05-09 Sat 20:42] -- [[wikipedia:ARM_architecture_family][wiki]]
+:END:
+
+*** A64                                                                 
+:PROPERTIES:
+:ID:       bb8a87ba-b251-4c9d-a829-4231547d68d8
+:CREATED:  <2026-05-09 Sat 20:38>
+:AKA: AArch64, arm64
+:END:
+:EDGES:
+[2026-05-09 Sat 20:38] -- [[https://developer.arm.com/Architectures/A64%20Instruction%20Set%20Architecture][A64 Instruction Set Architecture]]
+:END:
+
+*** A32
+:PROPERTIES:
+:ID:       0325f88d-545c-4d10-be76-f503c1aaa37c
+:CREATED:  <2026-05-09 Sat 20:39>
+:AKA: Aarch32, arm32
+:END:
+:EDGES:
+[2026-05-09 Sat 20:41] -- [[https://developer.arm.com/Architectures/A32%20Instruction%20Set%20Architecture][A32 Instruction Set Architecture]]
 :END:
 
 ** WASM                                                                 :web:

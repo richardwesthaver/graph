@@ -1281,6 +1281,26 @@ downloaded, the software is compiled, and then packaged within the
 build directory. Then you can use pacman to install the package.
 #+end_quote
 (makepkg, makechrootpkg, etc)
+
+**** PKGBUILD
+:PROPERTIES:
+:ID:       59eb9925-ec78-4202-b42e-53456c04ac27
+:CREATED:  <2026-05-09 Sat 21:08>
+:END:
+:EDGES:
+[2026-05-09 Sat 21:08] -- [[archwiki:PKGBUILD][archwiki]]
+:END:
+
+**** AUR
+:PROPERTIES:
+:ID:       133e5971-2952-45b7-889a-36dc77312211
+:CREATED:  <2026-05-09 Sat 22:34>
+:AKA: Arch User Repository
+:END:
+:EDGES:
+[2026-05-09 Sat 22:35] -- [[https://aur.archlinux.org/][AUR (en) - Home]]
+:END:
+Packaging Script created by Arch Linux users.
 **** Pacman
 :PROPERTIES:
 :ID:       8bbcda66-0611-42a8-9f99-10d1cd7d82e2
