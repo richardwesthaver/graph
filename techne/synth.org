@@ -1,0 +1,8 @@
+#+title: Synthesizer
+#+setupfile: ../../clean.theme
+* Synth
+:PROPERTIES:
+:ID:       750c57f9-e4f3-4d15-baf1-893b25b4ed5c
+:CREATED:  <2026-05-09 Sat 23:31>
+:AKA: Synthesizer
+:END:
