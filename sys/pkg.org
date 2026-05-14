@@ -1,0 +1,46 @@
+#+title: Packages
+#+setupfile: ../../clean.theme
+#+filetags: pkg
+* Packages
+:PROPERTIES:
+:ID:       db7d826b-f528-4798-87e4-f82427a25855
+:CREATED:  <2026-05-13 Wed 19:40>
+:END:
+Software packages as we know them today usually refer to collections
+of packages which are bundled in accordance with a ~package
+format~. Packages contain configuration files, scripts, configs, docs,
+licenses, etc in addition to various metadata, signatures, and a
+~build script~ to install the package on a target system.
+
+Package Managers for Linux are usually bundled with a [[id:34966e81-ab92-4b85-b11e-073784261db5][Distro]] and
+Windows/MacOS have their own particular flavors which we probably
+won't discuss further.
+
+There are various ~paradigms~ of package managers - the one which we
+are most commited to is the [[id:3c814d4d-8635-4c6f-a849-5c7d72db20fe][Pacman]]/PKGBUILD meta, also borrowed by [[id:b52fdc61-2fcc-42e0-a1df-66ebd0ca0488][APK]].
+
+Pacman is not without its faults though. PKGBUILDs are shell scripts
+which makes them particularly difficult to parse/generate. Since it is
+library-based the functionality can be a bit too distributed, the CLI
+tool is also a pain.
+** Package Management
+:PROPERTIES:
+:ID:       f22bb870-97e4-41a5-9e00-31939861a7dc
+:CREATED:  <2026-05-13 Wed 21:54>
+:END:
+Packages and in particular ~package management~ are deceptively simple
+concepts. Behind the scenes there is a lot going on beyond the simple
+package formats that we see.
+
+When thinking about package managers I find it easiest to start with
+the roles involved. In the simplest case you might have:
+- *Package Clients* are responsible for maintaining downloaded
+  packages.
+- *Package Archives* are responsible for hosting packages for others
+  to download. May use a [[id:36ccc6c1-1b2d-4a48-8c1c-714a43873407][VCS]] as a medium.
+- *Package Maintainers* upload packages
+
+You may also need to consider:
+- *Package Distributors* download packages from upstream archives and
+  prepare them for distribution across an organization.
+- *Package Builders* test, build, and verify packages

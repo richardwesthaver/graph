@@ -13,7 +13,7 @@ Standardized by the Single Unix Specification and POSIX
 
 [[cdn:media/img/vi-cheat-sheet.gif]]
 
-** Vim
+** vim
 :PROPERTIES:
 :ID:       df400751-0b3e-41a5-8512-a778a58cc1bd
 :CREATED:  <2025-03-04 Tue 18:02>
@@ -21,4 +21,14 @@ Standardized by the Single Unix Specification and POSIX
 :EDGES:
 [2025-03-04 Tue 18:02] -- [[https://www.vim.org/][home]]
 [2025-05-10 Sat 23:09] >> [[id:eddaae08-a0c1-4413-9f0a-804f663ae176][IDE]]
+:END:
+
+** neovim
+:PROPERTIES:
+:ID:       a92fcc96-fbf4-4f02-a2bf-0e2676d0ef7f
+:CREATED:  <2026-05-13 Wed 21:27>
+:END:
+:EDGES:
+[2026-05-13 Wed 21:27] -- [[https://neovim.io/][home]]
+[2026-05-13 Wed 21:28] >> [[id:eddaae08-a0c1-4413-9f0a-804f663ae176][IDE]]
 :END:

@@ -1,0 +1,35 @@
+#+title: Package Managers
+#+setupfile: ../../clean.theme
+* Flatpak
+:PROPERTIES:
+:ID:       8907d7fd-ae27-4a36-b7f0-3b3a8e6745c9
+:CREATED:  <2025-04-06 Sun 17:55>
+:END:
+:EDGES:
+[2025-04-06 Sun 17:55] -- [[https://flatpak.org/][Flatpak-the future of application distribution]]
+:END:
+- cross-Linux distro package manager
+- sandboxed
+* Homebrew
+:PROPERTIES:
+:ID:       e8358b3c-e658-40f8-920a-40f5692f910a
+:CREATED:  <2026-05-13 Wed 21:25>
+:END:
+:EDGES:
+[2026-05-13 Wed 21:25] -- [[https://brew.sh/][home]]
+:END:
+- supports Linux as well, relegated to the MacOS world.
+
+#+name: homebrew-install
+#+begin_src shell :eval never
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#+end_src
+* NuGet
+:PROPERTIES:
+:ID:       7d1a905e-a311-4680-97aa-2bbfd939e5e7
+:CREATED:  <2026-05-13 Wed 21:28>
+:END:
+:EDGES:
+[2026-05-13 Wed 21:28] -- [[https://www.nuget.org/][home]]
+:END:
+The package manager for .NET.

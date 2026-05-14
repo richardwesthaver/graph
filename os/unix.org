@@ -1066,7 +1066,7 @@ Linux Distributions
 :END:
 - RHEL is based on Fedora
   - RH has influence over roadmap
-*** bootc
+**** bootc
 :PROPERTIES:
 :ID:       101c2239-6e98-4899-b552-17e8ae9c55c8
 :CREATED:  <2025-04-16 Wed 18:52>
@@ -1141,13 +1141,43 @@ Linux Distributions
 :EDGES:
 [2025-02-22 Sat 19:34] -- [[https://docs.fedoraproject.org/en-US/iot/][Fedora IoT Documentation]]
 :END:
+**** dnf
+:PROPERTIES:
+:ID:       26b32ae2-b49c-42cb-a0d7-4823221b79f2
+:CREATED:  <2025-02-22 Sat 18:57>
+:END:
+:EDGES:
+[2025-02-22 Sat 18:58] -- [[https://github.com/rpm-software-management/dnf5][rpm-software-management/dnf5]]
+[2025-02-22 Sat 19:01] -- [[https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/sysadmin/#dnf-5][Changes in Fedora 41 For System Administrators :: Fedora Docs]]
+:END:
+Dandified YUM
+**** rpm
+:PROPERTIES:
+:ID:       0a40d25f-0fe5-4b71-9d22-07d4bb355ff4
+:CREATED:  <2025-02-22 Sat 19:02>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:02] -- [[https://rpm.org/index.html][rpm.org - Home]]
+[2025-02-22 Sat 19:03] -- [[https://rpm-packaging-guide.github.io/][RPM Packaging Guide]]
+[2025-02-22 Sat 19:06] -- [[https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based][RPM-based Linux distributions - Wikipedia]]
+:END:
+***** rpm-ostree
+:PROPERTIES:
+:ID:       836933b5-3035-4e8c-a2b9-63a773a359db
+:CREATED:  <2025-02-22 Sat 19:18>
+:END:
+:EDGES:
+[2025-02-22 Sat 19:18] -- [[https://coreos.github.io/rpm-ostree/][A true hybrid image/package system | rpm-ostree]]
+:END:
+[[https://coreos.github.io/rpm-ostree/countme/][DNF Count Me support | rpm-ostree]]
+
 *** Arch Linux                                                         :arch:
 :PROPERTIES:
 :ID:       6ef3fb84-6805-46f7-ad13-8929a023b43c
 :CREATED:  <2025-02-22 Sat 19:39>
 :END:
 :EDGES:
-[2025-02-22 Sat 19:40] -- [[https://archlinux.org/][Arch Linux]]
+[2025-02-22 Sat 19:40] -- [[https://archlinux.org/][home]]
 [2025-06-08 Sun 19:28] -> [[id:3c814d4d-8635-4c6f-a849-5c7d72db20fe][Pacman]]
 :END:
 - Arch (btw)
@@ -1160,6 +1190,90 @@ Linux Distributions
 - High quality Wiki
 - *releases* [[https://gitlab.archlinux.org/groups/archlinux/-/packages/][Package registry · Arch Linux · GitLab]]
 - [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive - ArchWiki]]
+**** Pacman
+:PROPERTIES:
+:ID:       3c814d4d-8635-4c6f-a849-5c7d72db20fe
+:CREATED:  <2025-03-03 Mon 16:28>
+:END:
+:EDGES:
+[2025-03-03 Mon 16:29] -- [[https://pacman.archlinux.page/][Pacman Home Page]]
+[2025-03-03 Mon 16:29] -- [[https://wiki.archlinux.org/title/Pacman][pacman - ArchWiki]]
+[2025-06-08 Sun 19:28] <- [[id:6ef3fb84-6805-46f7-ad13-8929a023b43c][Arch]]
+:END:
+#+begin_quote
+pacman is a utility which manages software packages in Linux. It uses
+simple compressed files as a package format, and maintains a
+text-based package database (more of a hierarchy), just in case some
+hand tweaking is necessary.
+
+pacman does not strive to "do everything." It will add, remove and
+upgrade packages in the system, and it will allow you to query the
+package database for installed packages, files and owners. It also
+attempts to handle dependencies automatically and can download
+packages from a remote server.
+#+end_quote
+
+- [2026-04-17 Fri] [[https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported][Pacman partial upgrades are unsupported]]
+  - https://bbs.archlinux.org/viewtopic.php?id=306532
+  - [[https://wiki.archlinux.org/title/Pacman#Manually_reinstalling_pacman][Manually reinstalling pacman]]
+***** pacman.conf
+:PROPERTIES:
+:ID:       089909cf-4fd0-4124-a19e-f8ec619f8a63
+:CREATED:  <2026-05-13 Wed 21:10>
+:END:
+:EDGES:
+[2026-05-13 Wed 21:10] -- [[https://man.archlinux.org/man/pacman.conf.5][man]]
+:END:
+#+name: pacman-conf-example
+#+begin_src conf
+#
+# pacman.conf
+#
+[options]
+NoUpgrade = etc/passwd etc/group etc/shadow
+NoUpgrade = etc/fstab
+[core]
+Include = /etc/pacman.d/core
+[custom]
+Server = file:///home/pkgs
+#+end_src
+
+***** Pacman Hooks
+:PROPERTIES:
+:ID:       05cc62c7-db2a-4bf6-b94d-e04a2b17aed0
+:CREATED:  <2025-06-08 Sun 19:29>
+:END:
+:EDGES:
+[2025-06-08 Sun 19:29] -- [[https://wiki.archlinux.org/title/Pacman#Hooks][pacman hooks - ArchWiki]]
+:END:
+#+begin_quote
+Pacman can run pre- and post-transaction hooks from the
+/usr/share/libalpm/hooks/ directory; more directories can be specified
+with the HookDir option in pacman.conf, which defaults to
+/etc/pacman.d/hooks. Hook file names must be suffixed with
+.hook. Pacman hooks are not interactive.
+#+end_quote
+***** libalpm
+:PROPERTIES:
+:ID:       cb4a3977-f53c-4d43-a5fa-78d6d49b948d
+:CREATED:  <2026-05-13 Wed 21:15>
+:END:
+:EDGES:
+[2026-05-13 Wed 21:15] -- [[https://man.archlinux.org/man/libalpm.3.en][man]]
+[2026-05-13 Wed 21:17] -- [[https://gitlab.archlinux.org/pacman/pacman/-/blob/master/lib/libalpm/alpm.h][lib/libalpm/alpm.h]]
+:END:
+A package management library primarily used by Pacman.
+***** Extras
+:PROPERTIES:
+:ID:       219f8bb6-b324-4a33-87e0-69114948c0f6
+:CREATED:  <2025-06-08 Sun 19:31>
+:END:
+:EDGES:
+[2025-06-08 Sun 19:31] -- [[https://man.archlinux.org/man/pactree.8][pactree(8) - Arch manual pages]]
+:END:
+- show dependencies of a package
+- not included with pacman - install pacman-contrib
+- see also =pakbak= and =pacolog= (AUR)
 **** Archiso
 :PROPERTIES:
 :ID:       06ee60a3-9a98-40d2-893b-39ce992fc0dc
@@ -1281,8 +1395,7 @@ downloaded, the software is compiled, and then packaged within the
 build directory. Then you can use pacman to install the package.
 #+end_quote
 (makepkg, makechrootpkg, etc)
-
-**** PKGBUILD
+***** PKGBUILD
 :PROPERTIES:
 :ID:       59eb9925-ec78-4202-b42e-53456c04ac27
 :CREATED:  <2026-05-09 Sat 21:08>
@@ -1300,18 +1413,6 @@ build directory. Then you can use pacman to install the package.
 :EDGES:
 [2026-05-09 Sat 22:35] -- [[https://aur.archlinux.org/][AUR (en) - Home]]
 :END:
-Packaging Script created by Arch Linux users.
-**** Pacman
-:PROPERTIES:
-:ID:       8bbcda66-0611-42a8-9f99-10d1cd7d82e2
-:CREATED:  <2025-07-09 Wed 17:06>
-:END:
-:EDGES:
-[2025-07-09 Wed 17:06] -- [[https://wiki.archlinux.org/title/Pacman][pacman - ArchWiki]]
-:END:
-- [2026-04-17 Fri] [[https://wiki.archlinux.org/title/System_maintenance#Partial_upgrades_are_unsupported][Pacman partial upgrades are unsupported]]
-  - https://bbs.archlinux.org/viewtopic.php?id=306532
-  - [[https://wiki.archlinux.org/title/Pacman#Manually_reinstalling_pacman][Manually reinstalling pacman]]
 **** Configuration
 :PROPERTIES:
 :ID:       85f0992c-fc87-42dc-8946-0384dfe1ccb8
@@ -1370,6 +1471,14 @@ images for different machines and containers.
   - there's like a hundred different ways to encounter this error -
     the default alpine shell is dash masquerading as sh. the error
     message may also mention /bin/sh not found in $PATH.
+**** APK
+:PROPERTIES:
+:ID:       b52fdc61-2fcc-42e0-a1df-66ebd0ca0488
+:CREATED:  <2025-03-04 Tue 15:52>
+:END:
+:EDGES:
+[2025-03-04 Tue 15:54] -- [[https://docs.alpinelinux.org/user-handbook/0.1a/Working/apk.html][Working with the Alpine Package Keeper (apk) - Alpine Linux Documentation]]
+:END:
 *** Adélie
 :PROPERTIES:
 :ID:       b54a3fef-192f-4767-bec2-c10058e69a89
