@@ -125,6 +125,7 @@
 [2025-03-02 Sun 21:21] -- [[https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html][intel dev manuals]]
 :END:
 - [[https://www.amd.com/content/dam/amd/en/documents/processor-tech-docs/programmer-references/40332.pdf][AMD64 Architecture Programmer's Manual Vol 1-5]]
+- [[https://en.wikipedia.org/wiki/X86-64#Differences_between_AMD64_and_Intel_64][amd64 vs intel64]]
 *** Extensions
 :PROPERTIES:
 :ID:       c9748bd6-8f6b-459e-b863-b2b155e3e420
@@ -195,18 +196,35 @@ SIMD within a register
 :EDGES:
 [2025-03-03 Mon 14:39] -- [[https://en.wikipedia.org/wiki/X86_virtualization][x86 virtualization - Wikipedia]]
 [2025-03-03 Mon 16:56] -- [[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/5/html/virtualization/sect-virtualization-troubleshooting-enabling_intel_vt_and_amd_v_virtualization_hardware_extensions_in_bios][Enabling Intel VT and AMD-V virtualization hardware extensions in BIOS]]
+[2026-05-17 Sun 16:29] -- [[https://www.intel.com/content/www/us/en/business/enterprise-computers/resources/virtualization-security.html][Virtualization Security (Intel)]]
 :END:
+- [[https://github.com/0voice/Introduce_to_virtualization/tree/main/papers][0voice/Introduce_to_virtualization/papers]]
 ***** AMD-V
 :PROPERTIES:
 :ID:       5aabf9b2-3071-40cc-acfb-f93ed4a15afb
 :CREATED:  <2025-03-03 Mon 14:39>
 :END:
+:EDGES:
+[2026-05-17 Sun 16:30] -- [[https://www.mimuw.edu.pl/~vincent/lecture6/sources/amd-pacifica-specification.pdf][AMD Pacifica Specification]]
+[2025-03-02 Sun 21:22] -- [[https://riscv.org/][home]]
+:END:
+AMD-virtualization (AMD-V) is the implementation of a Secure Virtual
+Machine from AMD. Developed under the codename ~Pacifica~, AMD first
+launched these features under the name AMD Secure Virtual Machine
+(SVM). The corresponding CPU-flag is also called svm.
+
 ***** Intel VT-x
 :PROPERTIES:
 :ID:       16a8ffe9-da94-43dd-be0f-7e0d7af68476
 :CREATED:  <2025-03-03 Mon 14:39>
 :END:
+:EDGES:
+[2026-05-17 Sun 16:38] -- [[https://courses.cs.vt.edu/cs5204/fall08-kafura/Papers/Virtualization/Intel-Virtualization.pdf][Intel Virtualization]]
+:END:
+Previously codenamed ~Vanderpool~, VT-x represents Intel's technology
+for virtualization on the x86 platform.
 
+- [[https://www.intel.com/content/www/us/en/content-details/859320/strategic-collaboration-with-acontis-and-motrotech-to-empower-industrial-workload-consolidation-with-intel-virtualization-technology.html][Acontis And Motrotech Industrial Workload Consolidation With Intel VT]]
 ** RISC-V                                                              :risc:
 :PROPERTIES:
 :ID:       e6c89750-0770-4c0f-a943-f6419313970e
