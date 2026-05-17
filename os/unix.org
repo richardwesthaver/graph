@@ -1395,6 +1395,9 @@ downloaded, the software is compiled, and then packaged within the
 build directory. Then you can use pacman to install the package.
 #+end_quote
 (makepkg, makechrootpkg, etc)
+
+- [[https://wiki.archlinux.org/title/Pacman/Package_signing][pacman/Package signing - ArchWiki]]
+  - [[https://gist.github.com/elieux/fad9451bbfc4ddb5cde7][pacman-sign-guide]]
 ***** PKGBUILD
 :PROPERTIES:
 :ID:       59eb9925-ec78-4202-b42e-53456c04ac27
@@ -1443,6 +1446,17 @@ images for different machines and containers.
 - sudoedit the files in =/var/lib/iwd/= after initial setup with iwctl
 - for encryption check [[archwiki:Iwd#Encrypted_network_profiles][iwd - Encrypted network profiles]]
 - [[https://wiki.archlinux.org/title/Systemd-networkd#Usage_with_containers][systemd-networkd - ArchWiki]] set up a bridge to ethernet for containers
+***** cloud-init
+:PROPERTIES:
+:ID:       1e726b53-266d-4020-a48a-0405de5a0365
+:CREATED:  <2026-05-17 Sun 18:47>
+:END:
+:EDGES:
+[2026-05-17 Sun 18:48] >> [[id:10174b54-9c6d-4af8-a782-f6b3bb3dfac7][cloud-init]]
+[2026-05-17 Sun 18:48] -- [[https://wiki.archlinux.org/title/Cloud-init][Cloud-init - ArchWiki]]
+[2026-05-17 Sun 18:51] -- [[https://wiki.archlinux.org/title/Install_Arch_Linux_via_SSH#Installation_on_a_headless_server][Install Arch Linux via SSH - ArchWiki]]
+:END:
+
 *** Ubuntu
 :PROPERTIES:
 :ID:       5d1223c7-0ded-44b9-b494-3a3593a2fe02

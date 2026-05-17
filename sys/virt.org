@@ -69,4 +69,5 @@ Open Virtualization Format
 :EDGES:
 [2026-04-15 Wed 18:57] -- [[https://docs.cloud-init.io/en/latest/tutorial/qemu.html][New user tutorial with QEMU - cloud-init 26.1 documentation]]
 [2026-04-15 Wed 18:58] -- [[https://docs.cloud-init.io/][cloud-init 26.1 documentation]]
+[2026-05-17 Sun 18:48] << [[id:1e726b53-266d-4020-a48a-0405de5a0365][cloud-init]]
 :END:
