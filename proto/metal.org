@@ -20,6 +20,34 @@ Unified Extensible Firmware Interface
 - [[https://www.kraxel.org/blog/2024/07/uefi-network-boot/][modern uefi network booting | kraxel's news]]
 - [[https://blog.hansenpartnership.com/the-meaning-of-all-the-uefi-keys/][The Meaning of all the UEFI Keys | James Bottomley's random Pages]]
 - [[https://github.com/microsoft/secureboot_objects][microsoft/secureboot_objects: Secure boot objects recommended by Microsoft.]]
+
+Supersedes [[id:7f759436-4087-455f-92fa-1dc49d5dbcfe][BIOS]] in a similar manner to Wayland over X11 I
+suppose.. yet we prefer UEFI+X11 :)
+** EFI Stub
+:PROPERTIES:
+:ID:       60dea93a-8c06-4370-b89a-832a27772b9c
+:CREATED:  <2026-05-18 Mon 20:39>
+:END:
+:EDGES:
+[2026-05-18 Mon 20:39] -- [[https://wiki.archlinux.org/title/EFI_boot_stub][EFI boot stub - ArchWiki]]
+[2026-05-18 Mon 20:43] -- [[https://www.freedesktop.org/software/systemd/man/latest/systemd-stub.html#][systemd-stub]]
+:END:
+*** UKI
+:PROPERTIES:
+:ID:       4e5188f6-e84c-4c48-a879-901426b73295
+:CREATED:  <2026-05-18 Mon 20:38>
+:AKA: Unified Kernel Image
+:END:
+:EDGES:
+[2026-05-18 Mon 20:38] -- [[archwiki:Unified_kernel_image][archwiki]]
+[2026-05-18 Mon 20:43] -- [[https://www.freedesktop.org/software/systemd/man/latest/ukify.html][ukify]]
+[2026-05-18 Mon 20:44] -- [[https://uapi-group.org/specifications/specs/unified_kernel_image/][UAPI.5 Unified Kernel Images | UAPI Group Specifications]]
+[2026-05-18 Mon 20:45] >> [[id:1196e1fc-7d87-430d-9b68-c5a8a240b82e][UAPI Group]]
+:END:
+Unified Kernel Images (UKI) are a combination of an [[id:60dea93a-8c06-4370-b89a-832a27772b9c][EFI stub]], an
+initramfs, and further resources in a single UEFI PE file. This bundle
+of files can then easily be signed for use with secure boot.
+
 ** OVMF
 :PROPERTIES:
 :ID:       6f908314-d6d8-471a-96c7-e388f6891fb0

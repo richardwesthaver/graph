@@ -5,6 +5,7 @@
 :PROPERTIES:
 :ID:       8ff74861-a0bc-49e1-83eb-3a32f8f8fb78
 :CREATED:  <2025-02-15 Sat 16:31>
+:AKA: File System
 :END:
 :EDGES:
 [2025-10-11 Sat 21:59] -- [[man:file-hierarchy][man]]
@@ -238,3 +239,19 @@ server are: procfs, sysfs, tmpfs (and friends).
 - has a netlink interface: ~/usr/include/linux/nfsd_netlink.h~
 - NFSv4 is the most current
 - [[https://aur.archlinux.org/packages/ktls-utils][AUR (en) - ktls-utils]] - for TLS encryption options
+* File Syncing
+:PROPERTIES:
+:ID:       5dcc3d7a-8d3e-4efd-9159-45d9d528429b
+:CREATED:  <2026-05-18 Mon 20:52>
+:END:
+Syncing files across devices on a network can be a real pain - the
+current best-method we have for easing the pain is ~rsync~.
+** rsync
+:PROPERTIES:
+:ID:       e16f0072-f857-450c-acfc-f4d3b9d1f852
+:CREATED:  <2026-05-18 Mon 20:53>
+:END:
+:EDGES:
+[2026-05-18 Mon 20:53] -- [[man:rsync][man]]
+:END:
+- see also [[https://lsyncd.github.io/lsyncd/][Lsyncd - Live Syncing (Mirror) Daemon]] for ideas..

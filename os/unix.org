@@ -1044,6 +1044,7 @@ scenarios.
 :END:
 :EDGES:
 [2025-03-11 Tue 21:46] -- [[https://uapi-group.org/][The Linux Userspace API (UAPI) Group | The Linux Userspace API Group]]
+[2026-05-18 Mon 20:45] << [[id:4e5188f6-e84c-4c48-a879-901426b73295][UKI]]
 :END:
 The Linux Userspace API Group
 - [[https://uapi-group.org/specifications/specs/discoverable_partitions_specification/][Discoverable Partitions Specification | UAPI Group Specifications]]
@@ -1190,6 +1191,30 @@ Dandified YUM
 - High quality Wiki
 - *releases* [[https://gitlab.archlinux.org/groups/archlinux/-/packages/][Package registry · Arch Linux · GitLab]]
 - [[https://wiki.archlinux.org/title/Arch_Linux_Archive][Arch Linux Archive - ArchWiki]]
+- [[https://github.com/seblu/archivetools][seblu/archivetools: Arch Linux Archive Tools (mirror)]]
+**** Arch Boot Process
+:PROPERTIES:
+:ID:       f673f776-03c7-4db0-ab0d-fae463f8e8ff
+:CREATED:  <2026-05-18 Mon 20:26>
+:END:
+:EDGES:
+[2026-05-18 Mon 20:26] -- [[archwiki:Arch_boot_process][Arch boot process]]
+:END:
+We really don't care much for [[id:7f759436-4087-455f-92fa-1dc49d5dbcfe][BIOS]], so we'll only be considering the
+[[id:533c2390-63c9-4cac-b0ff-2e7e93b4c60f][UEFI]] boot process here.
+
+#+begin_quote
+UEFI launches EFI applications, e.g. boot loaders, boot managers, UEFI
+shell, etc. These applications are usually stored as files in the EFI
+system partition. Each vendor can store its files in the EFI system
+partition under the /EFI/vendor_name directory. The applications can
+be launched by adding a boot entry to the NVRAM or from the UEFI
+shell.
+#+end_quote
+
+Starting from UEFI firmware launch, we first encounter a UEFI
+application, either a boot manager or an [[id:60dea93a-8c06-4370-b89a-832a27772b9c][EFI boot stub]].
+
 **** Pacman
 :PROPERTIES:
 :ID:       3c814d4d-8635-4c6f-a849-5c7d72db20fe
@@ -1406,6 +1431,11 @@ build directory. Then you can use pacman to install the package.
 :EDGES:
 [2026-05-09 Sat 21:08] -- [[archwiki:PKGBUILD][archwiki]]
 :END:
+- If you need to create any custom variables for use in your build
+  process, it is recommended to prefix their name with an ~_~
+  (underscore). This will prevent any possible name clashes with
+  internal makepkg variables. For ex‐ ample, to store the base kernel
+  version in a variable, use something simi‐ lar to $_basekernver.
 
 **** AUR
 :PROPERTIES:
@@ -1416,11 +1446,20 @@ build directory. Then you can use pacman to install the package.
 :EDGES:
 [2026-05-09 Sat 22:35] -- [[https://aur.archlinux.org/][AUR (en) - Home]]
 :END:
+There are several 'pacman extensions' out there (yaru/paru/?) which
+support AUR searching and other such things - for our purposes we are
+content with copying the git link (by clicking in browser) and cloning
+it, then running =makepkg -si=.
+
 **** Configuration
 :PROPERTIES:
 :ID:       85f0992c-fc87-42dc-8946-0384dfe1ccb8
 :CREATED:  <2025-10-26 Sun 20:28>
 :END:
+Arch Linux system configuration is either too complex or too trivial
+to discuss depending on who you ask. Here we simply cover topics with
+useful tips and tricks as I encounter them.
+
 ***** Bootstrapping
 :PROPERTIES:
 :ID:       a3078d9b-457c-4545-a058-098ad1bed196
