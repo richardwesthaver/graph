@@ -283,7 +283,45 @@ list, max, min, nconc, or, progn, and standard.
 [2026-05-04 Mon 20:32] -- [[https://www.sbcl.org/manual/#Pathnames][sbcl#pathnames]]
 [2026-05-04 Mon 20:35] -- [[https://www.lispworks.com/documentation/HyperSpec/Body/t_pn.htm#pathname][CLHS: System Class PATHNAME]]
 :END:
-
+#+begin_src lisp
+;;; FIXME: the below shouldn't really be here, but in documentation
+;;; (chapter 19 makes a lot of requirements for documenting
+;;; implementation-dependent decisions), but anyway it's probably not
+;;; what we currently do.
+;;;
+;;; Unix namestrings have the following format:
+;;;
+;;; namestring := [ directory ] [ file [ type [ version ]]]
+;;; directory := [ "/" ] { file "/" }*
+;;; file := [^/]*
+;;; type := "." [^/.]*
+;;; version := "." ([0-9]+ | "*")
+;;;
+;;; Note: this grammar is ambiguous. The string foo.bar.5 can be
+;;; parsed as either just the file specified or as specifying the
+;;; file, type, and version. Therefore, we use the following rules
+;;; when confronted with an ambiguous file.type.version string:
+;;;
+;;; - If the first character is a dot, it's part of the file. It is not
+;;; considered a dot in the following rules.
+;;;
+;;; - Otherwise, the last dot separates the file and the type.
+;;;
+;;; Wildcard characters:
+;;;
+;;; If the directory, file, type components contain any of the
+;;; following characters, it is considered part of a wildcard pattern
+;;; and has the following meaning.
+;;;
+;;; ? - matches any one character
+;;; * - matches any zero or more characters.
+;;; [abc] - matches any of a, b, or c.
+;;; {str1,str2,...,strn} - matches any of str1, str2, ..., or strn.
+;;;   (FIXME: no it doesn't)
+;;;
+;;; Any of these special characters can be preceded by an escape
+;;; character to cause it to be treated as a regular character.
+#+end_src
 **** Logical Pathnames
 :PROPERTIES:
 :ID:       bbdc87f1-cece-474f-905e-d02401e82510
@@ -299,6 +337,24 @@ implementation-independent, and that has component values that are
 implementation-independent. Logical pathnames do not refer directly to
 filenames.
 #+end_quote
+
+#+begin_src lisp
+;;; Logical pathnames have the following format:
+;;;
+;;; logical-namestring ::=
+;;;      [host ":"] [";"] {directory ";"}* [name] ["." type ["." version]]
+;;;
+;;; host ::= word
+;;; directory ::= word | wildcard-word | **
+;;; name ::= word | wildcard-word
+;;; type ::= word | wildcard-word
+;;; version ::= pos-int | newest | NEWEST | *
+;;; word ::= {uppercase-letter | digit | -}+
+;;; wildcard-word ::= [word] '* {word '*}* [word]
+;;; pos-int ::= integer > 0
+;;;
+;;; Physical pathnames include all these slots and a device slot.
+#+end_src
 *** Simple Types
 :PROPERTIES:
 :ID:       62417b14-efff-448d-92c0-5b0e99a180ee
@@ -1553,6 +1609,19 @@ Maclisp->Zetalisp
 [2025-03-01 Sat 16:36] -- [[https://www.gnu.org/software/emacs/manual/eintr.html][An Introduction to Programming in Emacs Lisp - GNU Project - Free Software Foundation (FSF)]]
 [2025-03-03 Mon 14:01] >> [[id:5fc53135-1b6c-4260-b264-66be7a2b8ff0][Emacs]]
 :END:
+** use-package
+:PROPERTIES:
+:ID:       42ffc518-9c9c-4c59-9145-233aa58c6362
+:CREATED:  <2026-05-21 Thu 22:22>
+:END:
+:EDGES:
+[2026-05-21 Thu 22:25] -- [[info:use-package#Top][info]]
+:END:
+Declarative package configuration for Emacs.
+- single macro
+- NOT a package manager
+- isolates package configuration and loading
+- [[info:use-package#Keyword extensions][use-package#Keyword extensions]]
 ** Threads
 :PROPERTIES:
 :ID:       5510378f-d1a7-4642-8a24-ada2d7f7e54d
