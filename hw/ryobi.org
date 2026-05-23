@@ -1,0 +1,21 @@
+#+title: Ryobi
+#+setupfile: ../../clean.theme
+* Ryobi Limited
+:PROPERTIES:
+:ID:       56ebf594-d2c8-4e2e-90d0-3369391d119b
+:CREATED:  <2026-05-23 Sat 15:30>
+:END:
+:EDGES:
+[2026-05-23 Sat 15:30] -- [[https://www.ryobi-group.co.jp/en/][home]]
+:END:
+** Power Tools
+:PROPERTIES:
+:ID:       b9ec7e6b-f7bf-44fb-8503-4c5f6c576f10
+:CREATED:  <2026-05-23 Sat 15:32>
+:END:
+- cordless first
+- pushed hard by Home Depot AO [2026-05-23 Sat]
+  - 100USD gets you 2 4Ah batteries+charger and a lil tool of your choice
+  - rest of the stuff you buy separately, without bat/charger/cords
+- [[https://mowersweb.com/ryobi-battery-comparison-chart/][Ryobi Battery Comparison Chart(All Models Comparison) | Mowers Web]]
+- [[https://batteryskills.com/how-many-amps-does-a-ryobi-battery-put-out/][How Many Amps Does a Ryobi Battery Put Out? - Battery Skills]]

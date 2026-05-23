@@ -1,0 +1,25 @@
+#+title: Power
+#+setupfile: ../../clean.theme
+* Battery
+:PROPERTIES:
+:ID:       bd5c6e00-b5c2-4edd-8490-c7df89fdf13a
+:CREATED:  <2026-05-23 Sat 15:42>
+:END:
+:EDGES:
+[2026-05-23 Sat 15:47] -- [[wikipedia:Electric_battery][wiki]]
+:END:
+- [[https://batteryskills.com/resting-voltage-of-agm-battery][Resting Voltage of AGM Battery: Understanding Its Significance]]
+- [[https://batteryskills.com/lithium-ion-battery-current-variation-during-charging-and-discharging/][Lithium-Ion Battery Current Variation During Charging And Discharging]]
+- [[https://batteryskills.com/building-a-diy-electric-bike-battery-pack-with-18650-cells/][Building a DIY Electric Bike Battery Pack with 18650 Cells]]
+- Ah (Amp-hours) ≠ Amps: A 6.0Ah battery stores more energy but
+  doesn’t necessarily output more current—its discharge rate (e.g.,
+  30A) determines peak power.
+- Compatibility isn’t universal: Older NiCad batteries (e.g., RB18L)
+  output fewer amps than modern lithium-ion models, struggling with
+  newer high-demand tools.
+** Battery Management System
+:PROPERTIES:
+:ID:       15d55ad3-a638-481b-a3c9-8290b8d658ee
+:CREATED:  <2026-05-23 Sat 15:42>
+:AKA: BMS
+:END:
