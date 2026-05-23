@@ -2397,7 +2397,7 @@ style.
 [2025-11-24 Mon 22:22] >> [[id:93e1ed13-dc82-4a9b-8b9e-f60f06b01a4f][Aliens]]
 :END:
 - 'Grovels' C header files for definitions indicated by the user
-  - see constants.lisp files in [[vc:core/ffi/]]
+  - see constants.lisp files in [[vc:core:ffi]]
 - generates a C file, which is compiled AND executed with the system C
   compiler (GCC)
 - not actually doing anything with the header files themselves,
