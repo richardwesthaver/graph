@@ -1,0 +1,23 @@
+#+title: LSP
+#+setupfile: ../../clean.theme
+* Language Server Protocol
+:PROPERTIES:
+:ID:       51bd814a-a93d-42e9-9a74-06a463be85f5
+:CREATED:  <2026-05-22 Fri 22:12>
+:AKA: LSP
+:END:
+:EDGES:
+[2026-05-22 Fri 22:13] -- [[https://microsoft.github.io/language-server-protocol/][home]]
+[2026-05-22 Fri 22:14] -- [[https://microsoft.github.io/language-server-protocol/specifications/specification-current][spec]]
+:END:
+#+begin_quote
+A Language Server is meant to provide the language-specific smarts and
+communicate with development tools over a protocol that enables
+inter-process communication.
+
+The idea behind the Language Server Protocol (LSP) is to standardize
+the protocol for how such servers and development tools
+communicate. This way, a single Language Server can be re-used in
+multiple development tools, which in turn can support multiple
+languages with minimal effort.
+#+end_quote

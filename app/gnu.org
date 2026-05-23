@@ -153,7 +153,128 @@ Emacs Unified Directory Client
 :EDGES:
 [2025-03-03 Mon 19:57] -- [[info:eglot][info]]
 :END:
+#+begin_quote
+Eglot is the Emacs client for the “Language Server Protocol” (LSP).  The
+name "Eglot" is an acronym that stands for "Emacs polyGLOT". (1) Eglot
+provides infrastructure and a set of commands for enriching the source
+code editing capabilities of Emacs via LSP.  LSP is a standardized
+communications protocol between source code editors (such as Emacs) and
+language servers--programs external to Emacs which analyze the source
+code on behalf of Emacs.  The protocol allows Emacs to receive various
+source code services from the server, such as description and location
+of function calls, types of variables, class definitions, syntactic
+errors, etc.  This way, Emacs doesn't need to implement the
+language-specific parsing and analysis capabilities in its own code, but
+is still capable of providing sophisticated editing features that rely
+on such capabilities, such as automatic code completion, go-to
+definition of function/class, documentation of symbol at-point,
+refactoring, on-the-fly diagnostics, and more.
 
+   Eglot itself is completely language-agnostic, but it can support any
+programming language for which there is a language server and an Emacs
+major mode.
+#+end_quote
+- [[help:eglot-server-programs][eglot-server-programs]]
+  - alist of ~(major-mode . server)~
+- [[info:eglot#Advanced server configuration][eglot#Advanced server configuration]]
+
+- Featues
+  #+begin_quote
+   • At-point documentation: when point is near a symbol or an
+     identifier, information about the identifier's significance in the
+     program (its function or method signature, its type, its custom
+     documentation string, etc.)  is made available via the ElDoc
+     package (*note (emacs)Programming Language Doc::).
+
+   • On-the-fly diagnostic annotations, via the Flymake package (*note
+     (Flymake)Top::).  Eglot's Flymake backend replaces other Flymake
+     backends while it is managing a buffer, and enhances diagnostics
+     with interactive server-suggested fixes (so-called “code actions”,
+     *note Eglot Commands::).
+
+   • Finding definitions and uses of identifiers, via Xref (*note
+     (emacs)Xref::).  Eglot provides a backend for the Xref capabilities
+     which uses the language server's understanding of the program
+     source.  In particular, it eliminates the need to generate tags
+     tables (*note (emacs)Tags tables::) for languages which are only
+     supported by the ‘etags’ backend.
+
+   • Buffer navigation by name of function, class, method, etc., via
+     Imenu (*note (emacs)Imenu::).  Eglot provides its own variant of
+     ‘imenu-create-index-function’, which generates the index for the
+     buffer based on the language server's program source analysis.
+
+   • Enhanced completion of symbol at point by the ‘completion-at-point’
+     command (*note (emacs)Symbol Completion::).  This uses the language
+     server's parser data for the completion candidates.
+
+   • Server-suggested code refactorings.  The ElDoc package is also
+     leveraged to retrieve so-called “code actions” nearby point.  When
+     such suggestions are available they are annotated with a special
+     indication and can be easily invoked by the user with the
+     ‘eglot-code-action’ command (*note Eglot Commands::).
+
+   • On-the-fly succinct informative annotations, so-called “inlay
+     hints”.  Eglot adds special intangible text nearby certain
+     identifiers, be it the type of a variable, or the name of a formal
+     parameter in a function call.  *Note Eglot Commands::, and the
+     ‘eglot-inlay-hints-mode’ minor mode.
+
+   • Enhanced source code fontification via LSP “semantic tokens”.
+     Eglot can leverage the language server's understanding of the role
+     and meaning of identifiers in the code to provide more accurate
+     syntax highlighting.  *Note Eglot Commands::, and the
+     ‘eglot-semantic-tokens-mode’ minor mode.
+
+   • Display of function call and type hierarchies via the
+     ‘eglot-show-call-hierarchy’ and ‘eglot-show-type-hierarchy’
+     commands (*note Eglot Commands::).
+
+   • Code reformatting via the ‘eglot-format’ and related commands
+     (*note Eglot Commands::).  Automatic reformatting of source code is
+     also supported and is activated automatically as you type.
+
+   • Eglot enhances symbol completion front-ends by providing completion
+     candidates based on the language server's understanding of the
+     source code (*note (emacs)Symbol Completion::).  The Company
+     package, installable from GNU ELPA, is a popular package known to
+     work well with Eglot.
+
+   • If YASnippet, a popular third-party package for automatic insertion
+     of code templates (snippets), is installed, and the language server
+     supports snippet completion candidates, Eglot arranges for the
+     completion package to instantiate these snippets using YASnippet.
+     (YASnippet can be installed from GNU ELPA.)
+
+   • When the server provides at-point documentation formatted as
+     Markdown in addition to plain text, Eglot arranges for the ElDoc
+     package to enrich this text with fontifications, hyperlinks and
+     other nice formatting before displaying it to the user.  This makes
+     the documentation shown by ElDoc look nicer on display.
+
+   • In addition to enabling and enhancing other features and packages,
+     Eglot also provides a number of user commands based on the
+     capabilities of language servers.  Examples include renaming
+     symbols with ‘eglot-rename’ and asking to automatically correct
+     problems with ‘eglot-code-actions’.  *Note Eglot Commands::.
+  #+end_quote
+- eglot is /optimistic/ by default - to opt out of features use
+  =eglot-ignored-server-capabilities= and =eglot-managed-mode-hook=
+
+- autostart: =(add-hook 'foo-mode-hook 'eglot-ensure)=
+  - on first connection: =eglot-connect-hook=
+
+- some multiserver scenarios not supported by Eglot's architecture,
+  better off building a LSP server multiplexer (hint hint)
+  - [[https://github.com/joaotavora/rassumfrassum][joaotavora/rassumfrassum]]
+
+- extension documentation recommends just read the source
+  - uses generics
+  - example included: [[info:eglot#Extending Eglot][eglot#Extending Eglot]] : inactiveRegions clangd
+    17 feature
+  - see also [[info:eglot#JSONRPC objects in Elisp][eglot#JSONRPC objects in Elisp]]
+
+- performance opts: =eglot-events-buffer-config=
 ** Calc
 :PROPERTIES:
 :ID:       92ad7518-cf81-4aca-9940-bd40fb02f5dd
