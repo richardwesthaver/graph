@@ -1777,6 +1777,23 @@ Declarative package configuration for Emacs.
 :EDGES:
 [2025-03-03 Mon 14:08] -- [[info:elisp#svg images][ref]]
 :END:
+- [[https://lars.ingebrigtsen.no/2026/02/17/a-little-collection-of-svg-tricks-for-emacs/][A little collection of SVG tricks for Emacs – Random Thoughts]]
+*** Icons
+:PROPERTIES:
+:ID:       eb112a07-aef7-4369-81f3-a50282bad8cc
+:CREATED:  <2026-05-23 Sat 18:47>
+:END:
+:EDGES:
+[2026-05-23 Sat 18:47] -- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Icons.html][Icons (GNU Emacs Lisp Reference Manual)]]
+:END:
+*** Buttons
+:PROPERTIES:
+:ID:       9aed2656-f389-4a2b-8425-f6eeb546e901
+:CREATED:  <2026-05-23 Sat 18:47>
+:END:
+:EDGES:
+[2026-05-23 Sat 18:47] -- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Buttons.html][Buttons (GNU Emacs Lisp Reference Manual)]]
+:END:
 ** Faces
 :PROPERTIES:
 :ID:       291cd491-b88c-4d52-b500-e7cc3095b3f1
@@ -2071,12 +2088,6 @@ citation references and table cells.
 org-protocol-protocol-alist
 #+end_src
 
-** SVGs
-:PROPERTIES:
-:ID:       ca5f3b80-0121-4d0b-8df8-92425f4aebe8
-:CREATED:  <2026-04-18 Sat 20:44>
-:END:
-- [[https://lars.ingebrigtsen.no/2026/02/17/a-little-collection-of-svg-tricks-for-emacs/][A little collection of SVG tricks for Emacs – Random Thoughts]]
 ** Overlays
 :PROPERTIES:
 :ID:       358a0e2b-b5e0-47ad-9c70-7bb72b1c548f
