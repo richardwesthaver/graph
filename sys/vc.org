@@ -298,3 +298,22 @@ hggit = ~/.data/skel/ext/hg-git/hggit
 [2025-02-14 Fri 21:22] -- [[https://wiki.mercurial-scm.org/EvolveExtension][Evolve Extension]]
 [2025-02-14 Fri 21:22] -- [[https://wiki.mercurial-scm.org/ChangesetEvolution][Changeset Evolution]]
 :END:
+** Sapling
+:PROPERTIES:
+:ID:       90d10bd0-80bd-463c-9e35-350874437407
+:CREATED:  <2026-05-28 Thu 20:14>
+:END:
+:EDGES:
+[2026-05-28 Thu 20:16] -- [[https://sapling-scm.com/][home]]
+[2026-05-28 Thu 20:17] -- [[github:facebook/sapling][src]]
+:END:
+server components called Mononoke/Eden, VFS via EdenFS, technically buildable but not supported outside of FB-int.
+
+- note about 'distributed'
+#+begin_quote
+Sapling started from Mercurial as a distributed source control system, it then transitioned to a client-server architecture to solve the challenges. The server can utilize distributed storage and pre-build various kinds of indexes to provide more efficient operations.
+
+While Sapling is less "distributed", we tried to make the difference transparent to the user. For example, our lazy commit graph implementation does not require extra commands to "deepen" the graph. The user sees full history.
+
+That said, we do drop support of pulling from a lazy repo. Commit cloud covers these use-cases.
+#+end_quote

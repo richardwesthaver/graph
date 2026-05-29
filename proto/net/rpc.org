@@ -1,0 +1,16 @@
+#+title: RPC
+#+setupfile: ../../../clean.theme
+* Remote Procedure Calls
+:PROPERTIES:
+:ID:       0dffb407-07a1-4fb0-af44-8c0769cd6251
+:CREATED:  <2026-05-29 Fri 17:24>
+:AKA: RPC
+:END:
+** JSON-RPC
+:PROPERTIES:
+:ID:       ad4fb331-3cb3-4896-bec1-a42e5db17d3c
+:CREATED:  <2026-05-29 Fri 17:24>
+:END:
+:EDGES:
+[2026-05-29 Fri 17:24] -- [[https://www.jsonrpc.org/specification][spec]]
+:END:

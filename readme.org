@@ -27,7 +27,7 @@ an interface for modifying the graph.
 | files |  148 |
 
 #+BEGIN: project-info :status nil :tasks nil :html t :vc nil
-#+CALL: project-details(vc='nil) :dir ~/comp/org/graph/
+#+CALL: project-details(vc='nil) :dir ~/src/org/graph/
 
 #+RESULTS:
 |-------------+-------------------------------------------|
@@ -35,14 +35,14 @@ an interface for modifying the graph.
 | version     | 0.1.0                                     |
 | description | CC Org Files                              |
 | id          | 1784914079056115652                       |
-| root        | ~/comp/org/graph/                         |
+| root        | ~/src/org/graph/                         |
 | tags        | ORG DOCS NOTES META PLAN ARCHIVE GRAPH    |
 | updated     | Thu May 07 19:53:19 2026 -0400            |
 | langs       | org                                       |
 | lines       | 17885 :code 16847 :comment 36 :blank 1002 |
 |-------------+-------------------------------------------|
 
-#+CALL: hg-churn() :dir ~/comp/org/graph/
+#+CALL: hg-churn() :dir ~/src/org/graph/
 
 #+RESULTS:
 #+begin_example
@@ -65,7 +65,7 @@ an interface for modifying the graph.
 2026-05    383 ***
 #+end_example
 
-#+CALL: project-html-files() :dir ~/comp/org/graph/
+#+CALL: project-html-files() :dir ~/src/org/graph/
 
 #+RESULTS:
 | file                 | modified            |

@@ -2088,6 +2088,138 @@ citation references and table cells.
 org-protocol-protocol-alist
 #+end_src
 
+** Autotype
+:PROPERTIES:
+:ID:       d0af9d29-bbcd-405c-8c48-e3e933d71b25
+:CREATED:  <2026-05-28 Thu 21:16>
+:END:
+:EDGES:
+[2026-05-28 Thu 21:16] -- [[info:autotype#Top][info]]
+:END:
+- [[https://taingram.org/blog/emacs-auto-insert.html][Emacs Auto-Insert Text in New Files]]
+- [[info:autotype#Autoinserting][autoinsert]]
+- [[info:autotype#Hippie Expand][hippie expand]] usually replaces dabbrev-expand
+  - hippie-expand-try-function-list
+- executable-insert / executable-set-magic
+- abbrevs
+- dabbrevs
+  - dynamic abbrevs - write a few chars and expand something you wrote earlier
+- [[info:autotype#Tempo][tempo]]
+- [[info:autotype#Using Skeletons][skeleton]]
+
+  #+begin_src emacs-lisp
+  (describe-function 'skeleton-insert)
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  skeleton-insert is an autoloaded native-comp-function in
+  ‘skeleton.el’.
+
+  (skeleton-insert SKELETON &optional REGIONS STR)
+
+  Insert the complex statement skeleton SKELETON describes very concisely.
+
+  With optional second argument REGIONS, wrap first interesting point
+  (‘_’) in skeleton around next REGIONS words, if REGIONS is positive.
+  If REGIONS is negative, wrap REGIONS preceding interregions into first
+  REGIONS interesting positions (successive ‘_’s) in skeleton.
+
+  An interregion is the stretch of text between two contiguous marked
+  points.  If you marked A B C [] (where [] is the cursor) in
+  alphabetical order, the 3 interregions are simply the last 3 regions.
+  But if you marked B A [] C, the interregions are B-A, A-[], []-C.
+
+  The optional third argument STR, if specified, is the value for the
+  variable ‘str’ within the skeleton.  When this is non-nil, the
+  interactor gets ignored, and this should be a valid skeleton element.
+
+  When done with skeleton, but before going back to ‘_’-point, add
+  a newline (unless ‘skeleton-end-newline’ is nil or ‘_’-point is at end
+  of line), and run the hook ‘skeleton-end-hook’.
+
+  SKELETON is made up as (INTERACTOR ELEMENT ...).  INTERACTOR may be nil if
+  not needed, a prompt-string or an expression for complex read functions.
+
+  If ELEMENT is a string or a character it gets inserted (see also
+  ‘skeleton-transformation-function’).  Other possibilities are:
+
+          \n	go to next line and indent according to mode, unless
+                  this is the first/last element of a skeleton and point
+                  is at bol/eol
+          _	interesting point, interregion here
+          -	interesting point, no interregion interaction, overrides
+                  interesting point set by _
+          >	indent line (or interregion if > _) according to major mode
+          @	add position to ‘skeleton-positions’
+          &	do next ELEMENT if previous moved point
+          |	do next ELEMENT if previous didn’t move point
+          -NUM	delete NUM preceding characters (see ‘skeleton-untabify’)
+          resume:	skipped, continue here if quit is signaled
+          nil	skipped
+
+  After termination, point will be positioned at the last occurrence of -
+  or at the first occurrence of _ or at the end of the inserted text.
+
+  Note that \n as the last element of the skeleton only inserts a
+  newline if not at eol.  If you want to unconditionally insert a newline
+  at the end of the skeleton, use "\n" instead.  Likewise with \n
+  as the first element when at bol.
+
+  Further elements can be defined via ‘skeleton-further-elements’.
+  ELEMENT may itself be a SKELETON with an INTERACTOR.  The user is prompted
+  repeatedly for different inputs.  The SKELETON is processed as often as
+  the user enters a non-empty string.  C-g terminates skeleton insertion, but
+  continues after ‘resume:’ and positions at ‘_’ if any.  If INTERACTOR in
+  such a subskeleton is a prompt-string which contains a ".. %s .." it is
+  formatted with ‘skeleton-subprompt’.  Such an INTERACTOR may also be a list
+  of strings with the subskeleton being repeated once for each string.
+
+  Quoted Lisp expressions are evaluated for their side-effects.
+  Other Lisp expressions are evaluated and the value treated as above.
+  Note that expressions may not return t since this implies an
+  endless loop.  Modes can define other symbols by locally setting them
+  to any valid skeleton element.  The following local variables are
+  available:
+
+          str	first time: read a string according to INTERACTOR
+                  then: insert previously read string once more
+          help	help-form during interaction with the user or nil
+          input	initial input (string or cons with index) while reading str
+          v1, v2	local variables for memorizing anything you want
+
+    Probably introduced at or before Emacs version 22.1.
+
+  #+end_example
+
+  #+begin_src emacs-lisp
+  (define-skeleton local-variables-section
+   "Insert a local variables section.  Use current comment syntax if any."
+   (completing-read "Mode: " obarray
+   	   (lambda (symbol)
+   	     (if (commandp symbol)
+   		 (string-match "-mode$" (symbol-name symbol))))
+   	   t)
+   '(save-excursion
+      (if (re-search-forward page-delimiter nil t)
+    (error "Not on last page")))
+   comment-start "Local Variables:" comment-end \n
+   comment-start "mode: " str
+   & -5 | '(kill-line 0) & -1 | comment-end \n
+   ( (completing-read (format "Variable, %s: " skeleton-subprompt)
+   	     obarray
+   	     (lambda (symbol)
+   	       (or (eq symbol 'eval)
+   		   (custom-variable-p symbol)))
+   	     t)
+     comment-start str ": "
+     (read-from-minibuffer "Expression: " nil read-expression-map nil
+   		  'read-expression-history) | _
+     comment-end \n)
+   resume:
+   comment-start "End:" comment-end \n)
+  #+end_src
+
 ** Overlays
 :PROPERTIES:
 :ID:       358a0e2b-b5e0-47ad-9c70-7bb72b1c548f
