@@ -68,7 +68,71 @@ make install
    - --with-x-toolkit=no
    - --without-x
    - --without-dbus --without-gconf --without-gsettings
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/General-Variables.html][Emacs General Variables]]
+  - probably want to set load-path
+** Diary
+:PROPERTIES:
+:ID:       f344abcc-1a23-43cf-83fb-4a95b54c51ed
+:CREATED:  <2026-06-02 Tue 20:18>
+:END:
+:EDGES:
+[2026-06-02 Tue 20:18] -- [[info:emacs#Diary][info]]
+:END:
+** Remember
+:PROPERTIES:
+:ID:       7a0c9956-16ee-4302-a152-c3c5f0f0bdbf
+:CREATED:  <2026-06-02 Tue 20:18>
+:END:
+- textmodes/remember.el
+#+begin_quote
+Hyperbole, as a data presentation tool, always struck me as being
+very powerful, but it seemed to require a lot of "front-end" work
+before that data was really available.  The problem with BBDB, or
+keeping up a Bibl-mode file, is that you have to use different
+functions to record the data, and it always takes time to stop what
+you're doing, format the data in the manner expected by that
+particular data interface, and then resume your work.
 
+With "remember", you just hit `M-x remember' (you'd probably want
+to bind this to an easily accessible keystroke, like C-x M-r), slam
+in your text however you like, and then hit C-c C-c.  It will file
+the data away for later retrieval, and possibly indexing.
+
+Indexing is to data what "studying" is in the real world.  What you
+do when you study (or lucubrate, for some of us) is to realize
+certain relationships implicit in the data, so that you can make
+use of those relationships.  Expressing that a certain quote you
+remembered was a religious quote, and that you want the ability to
+pull up all quotes of a religious nature, is what studying does.
+This is a more labor intensive task than the original remembering
+of the data, and it's typical in real life to set aside a special
+period of time for doing this work.
+
+"Remember" works in the same way.  When you enter data, either by
+typing it into a buffer, or using the contents of the selected
+region, it will store that data -- unindexed, uninterpreted -- in a
+data pool.  It will also try to remember as much context
+information as possible (any text properties that were set, where
+you copied it from, when, how, etc).  Later, you can walk through
+your accumulated set of data (both organized, and unorganized) and
+easily begin moving things around, and making annotations that will
+express the full meaning of that data, as far as you know it.
+
+Obviously this latter stage is more user-interface intensive, and
+it would be nice if "remember" could do it as elegantly as
+possible, rather than requiring a billion keystrokes to reorganize
+your hierarchy.  Well, as the future arrives, hopefully experience
+and user feedback will help to make this as intuitive a tool as
+possible.
+#+end_quote
+** Change Logs
+:PROPERTIES:
+:ID:       cf1cdbeb-5042-453d-a80b-f40e07cd7959
+:CREATED:  <2026-06-03 Wed 19:29>
+:END:
+:EDGES:
+[2026-06-03 Wed 19:29] -- [[info:emacs#Change Log][info]]
+:END:
 ** Eww                                                              :browser:
 :PROPERTIES:
 :ID:       21adcc1c-67ee-4f50-9049-12794824b2c7

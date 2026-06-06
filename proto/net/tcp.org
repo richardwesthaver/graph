@@ -105,6 +105,8 @@ update of UDP - is a suitable alternative.
 Query/Response protocol which allows a client to access dictionary
 definitions from a set of natural language dictionary databases.
 
+port 2628
+
 #+begin_quote
 For many years, the Internet community has relied on the "webster"
 protocol for access to natural language definitions. The webster

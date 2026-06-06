@@ -1416,6 +1416,17 @@ practice.
 [2025-03-07 Fri 23:30] -- [[https://www.softwarepreservation.org/projects/LISP/lisp2/TM-3417_400_00_LISP2_LAP_Spec.pdf][spec]]
 :END:
 The LISP 2 Assembly Program
+*** Foreign Function Interface
+:PROPERTIES:
+:ID:       203517c3-8324-471e-b932-56ead04d8e1a
+:CREATED:  <2026-06-05 Fri 19:40>
+:AKA: FFI
+:END:
+:EDGES:
+[2026-06-05 Fri 19:41] -- [[wikipedia:Foreign_function_interface][wiki]]
+:END:
+Originally a term from the Common Lisp spec 😮
+
 ** Books
 :PROPERTIES:
 :ID:       04d98054-94f2-47d1-8af4-751c10827ee8

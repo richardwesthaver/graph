@@ -21,3 +21,26 @@ communicate. This way, a single Language Server can be re-used in
 multiple development tools, which in turn can support multiple
 languages with minimal effort.
 #+end_quote
+* Debug Adapter Protocol
+:PROPERTIES:
+:ID:       3409e652-a0f2-4d03-9eeb-3206db3881bf
+:CREATED:  <2026-06-05 Fri 17:37>
+:END:
+:EDGES:
+[2026-06-05 Fri 17:37] -- [[https://microsoft.github.io/debug-adapter-protocol/][home]]
+:END:
+#+begin_quote
+The idea behind the Debug Adapter Protocol (DAP) is to abstract the
+way how the debugging support of development tools communicates with
+debuggers or runtimes into a protocol. Since it is unrealistic to
+assume that existing debuggers or runtimes adopt this protocol any
+time soon, we rather assume that an intermediary component - a so
+called Debug Adapter - adapts an existing debugger or runtime to the
+Debug Adapter Protocol.
+
+The Debug Adapter Protocol makes it possible to implement a generic
+debugger for a development tool that can communicate with different
+debuggers via Debug Adapters. And Debug Adapters can be re-used across
+multiple development tools which significantly reduces the effort to
+support a new debugger in different tools.
+#+end_quote

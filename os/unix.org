@@ -1434,8 +1434,8 @@ build directory. Then you can use pacman to install the package.
 - If you need to create any custom variables for use in your build
   process, it is recommended to prefix their name with an ~_~
   (underscore). This will prevent any possible name clashes with
-  internal makepkg variables. For ex‐ ample, to store the base kernel
-  version in a variable, use something simi‐ lar to $_basekernver.
+  internal makepkg variables. For example, to store the base kernel
+  version in a variable, use something similar to =$_basekernver=.
 
 **** AUR
 :PROPERTIES:
