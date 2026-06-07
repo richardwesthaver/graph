@@ -42,6 +42,22 @@
 - [[https://internals.rust-lang.org/t/traits-that-should-be-in-std-but-arent/3002][Traits that should be in std, but aren't - libs - Rust Internals]]
 - [[https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples][Macros in Rust]]                                                     :macros:
 - [[https://danielkeep.github.io/tlborm/book/README.html][The Little Book of Rust Macros]]                                     :macros:
+** Applications
+:PROPERTIES:
+:ID:       904d11ec-1ea4-4644-a685-8520752e1be2
+:CREATED:  <2026-06-06 Sat 22:05>
+:END:
+*** Garage                                                               :s3:
+:PROPERTIES:
+:ID:       b0c5a8e7-9da3-4628-b174-3de07247fb6d
+:CREATED:  <2026-06-06 Sat 22:05>
+:END:
+:EDGES:
+[2026-06-06 Sat 22:05] -- [[https://git.deuxfleurs.fr/Deuxfleurs/garage][src]]
+:END:
+S3-compatible object store for small self-hosted geo-distributed
+deployments.
+- available via pacman (extra/garage)
 ** Libraries
 :PROPERTIES:
 :ID:       8fbe9da2-1d6a-43bc-bd89-cf448d43eab8

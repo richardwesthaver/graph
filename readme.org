@@ -37,9 +37,9 @@ an interface for modifying the graph.
 | id          | 1784914079056115652                       |
 | root        | ~/src/org/graph/                          |
 | tags        | ORG DOCS NOTES META PLAN ARCHIVE GRAPH    |
-| updated     | Sat Jun 06 20:54:13 2026 -0400            |
+| updated     | Sat Jun 06 21:42:08 2026 -0400            |
 | langs       | org                                       |
-| lines       | 19072 :code 17922 :comment 69 :blank 1081 |
+| lines       | 19074 :code 17923 :comment 69 :blank 1082 |
 |-------------+-------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/src/org/graph/
@@ -63,7 +63,7 @@ an interface for modifying the graph.
 2026-03    672 *****
 2026-04   1913 ****************
 2026-05   1722 ***************
-2026-06    224 *
+2026-06    272 **
 #+end_example
 
 #+CALL: project-html-files() :dir ~/src/org/graph/
@@ -113,7 +113,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/hw/storage.html][hw/storage]]           | 2025-06-03 22:06:35 |
 | [[https://compiler.company/graph/hw/studio.html][hw/studio]]            | 2025-08-12 12:37:44 |
 | [[https://compiler.company/graph/hw/travel.html][hw/travel]]            | 2025-03-12 21:08:20 |
-| [[https://compiler.company/graph/lang/apl.html][lang/apl]]             | 2025-10-07 17:11:16 |
+| [[https://compiler.company/graph/lang/apl.html][lang/apl]]             | 2026-06-06 21:41:31 |
 | [[https://compiler.company/graph/lang/asm.html][lang/asm]]             | 2026-06-05 23:03:46 |
 | [[https://compiler.company/graph/lang/basic.html][lang/basic]]           | 2025-02-27 17:01:01 |
 | [[https://compiler.company/graph/lang/c.html][lang/c]]               | 2026-05-04 19:45:20 |
@@ -204,7 +204,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2026-03-14 23:28:12 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2026-04-01 21:59:42 |
-| [[https://compiler.company/graph/index.html][index]]                | 2026-06-06 00:31:44 |
+| [[https://compiler.company/graph/index.html][index]]                | 2026-06-06 21:07:01 |
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-11-01 02:17:43 |
 | [[https://compiler.company/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2026-04-04 23:45:51 |
