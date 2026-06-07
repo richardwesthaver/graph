@@ -48,7 +48,7 @@
     #+end_src
 - hello linux
   #+begin_src asm
-  ;;; asm/hello.linux.asm --- nasm example -*- mode:nasm -*-
+  ;;; asm/hello.linux.asm --- nasm example -*- mode:asm -*-
 
   ;; nasm -f elf hello.linux.asm && ld -m elf_i386 hello.linux.o -o hello.linux && hello.linux
 

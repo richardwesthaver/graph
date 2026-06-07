@@ -22,9 +22,9 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 1155 |
-| edges |  872 |
-| files |  148 |
+| nodes | 1213 |
+| edges |  920 |
+| files |  160 |
 
 #+BEGIN: project-info :status nil :tasks nil :html t :vc nil
 #+CALL: project-details(vc='nil) :dir ~/src/org/graph/
@@ -35,11 +35,11 @@ an interface for modifying the graph.
 | version     | 0.1.0                                     |
 | description | CC Org Files                              |
 | id          | 1784914079056115652                       |
-| root        | ~/src/org/graph/                         |
+| root        | ~/src/org/graph/                          |
 | tags        | ORG DOCS NOTES META PLAN ARCHIVE GRAPH    |
-| updated     | Thu May 07 19:53:19 2026 -0400            |
+| updated     | Fri Jun 05 20:48:05 2026 -0400            |
 | langs       | org                                       |
-| lines       | 17885 :code 16847 :comment 36 :blank 1002 |
+| lines       | 19036 :code 17886 :comment 69 :blank 1081 |
 |-------------+-------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/src/org/graph/
@@ -62,7 +62,8 @@ an interface for modifying the graph.
 2026-02    109 
 2026-03    672 *****
 2026-04   1913 ****************
-2026-05    383 ***
+2026-05   1722 ***************
+2026-06    104 
 #+end_example
 
 #+CALL: project-html-files() :dir ~/src/org/graph/
@@ -70,26 +71,26 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
-| [[https://compiler.company/graph/proto/net/audio.html][proto/net/audio]]      | 2026-05-08 17:31:32 |
-| [[https://compiler.company/graph/index.html][index]]                | 2026-05-07 20:03:03 |
+| [[https://compiler.company/graph/app/gnu.html][app/gnu]]              | 2026-06-05 20:52:59 |
+| [[https://compiler.company/graph/lang/asm.html][lang/asm]]             | 2026-06-05 23:03:46 |
+| [[https://compiler.company/graph/index.html][index]]                | 2026-06-05 23:18:44 |
 | [[https://compiler.company/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
 | [[https://compiler.company/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
-| [[https://compiler.company/graph/app/gnu.html][app/gnu]]              | 2026-04-18 20:47:37 |
-| [[https://compiler.company/graph/app/heptapod.html][app/heptapod]]         | 2026-03-01 18:12:54 |
+| [[https://compiler.company/graph/app/heptapod.html][app/heptapod]]         | 2026-05-23 00:03:10 |
 | [[https://compiler.company/graph/app/mail.html][app/mail]]             | 2026-03-01 20:25:22 |
-| [[https://compiler.company/graph/app/media.html][app/media]]            | 2025-04-18 19:33:21 |
+| [[https://compiler.company/graph/app/media.html][app/media]]            | 2026-05-08 21:35:26 |
 | [[https://compiler.company/graph/app/net.html][app/net]]              | 2025-10-07 17:12:02 |
-| [[https://compiler.company/graph/app/pkg.html][app/pkg]]              | 2025-10-07 17:11:49 |
+| [[https://compiler.company/graph/app/pm.html][app/pm]]               | 2026-05-13 21:29:03 |
 | [[https://compiler.company/graph/app/podman.html][app/podman]]           | 2026-04-15 18:57:10 |
 | [[https://compiler.company/graph/app/qemu.html][app/qemu]]             | 2025-10-26 20:58:08 |
 | [[https://compiler.company/graph/app/term.html][app/term]]             | 2025-10-07 17:26:15 |
-| [[https://compiler.company/graph/app/vi.html][app/vi]]               | 2025-11-08 17:58:06 |
+| [[https://compiler.company/graph/app/vi.html][app/vi]]               | 2026-05-13 21:28:22 |
 | [[https://compiler.company/graph/comp/ecl.html][comp/ecl]]             | 2025-10-18 20:28:25 |
 | [[https://compiler.company/graph/comp/gcc.html][comp/gcc]]             | 2025-10-18 20:27:28 |
 | [[https://compiler.company/graph/comp/ghc.html][comp/ghc]]             | 2025-10-18 20:27:19 |
 | [[https://compiler.company/graph/comp/llvm.html][comp/llvm]]            | 2025-10-18 20:27:33 |
-| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]            | 2025-12-31 20:25:49 |
-| [[https://compiler.company/graph/hw/amd.html][hw/amd]]               | 2025-06-09 17:13:00 |
+| [[https://compiler.company/graph/comp/sbcl.html][comp/sbcl]]            | 2026-05-23 00:03:23 |
+| [[https://compiler.company/graph/hw/amd.html][hw/amd]]               | 2026-05-17 16:23:09 |
 | [[https://compiler.company/graph/hw/apple.html][hw/apple]]             | 2025-03-03 20:34:42 |
 | [[https://compiler.company/graph/hw/avr.html][hw/avr]]               | 2025-08-09 01:07:47 |
 | [[https://compiler.company/graph/hw/car.html][hw/car]]               | 2025-02-21 22:34:16 |
@@ -104,26 +105,29 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/hw/kbd.html][hw/kbd]]               | 2025-10-01 20:35:48 |
 | [[https://compiler.company/graph/hw/material.html][hw/material]]          | 2025-06-07 17:33:12 |
 | [[https://compiler.company/graph/hw/nvidia.html][hw/nvidia]]            | 2025-03-03 14:47:56 |
+| [[https://compiler.company/graph/hw/philips.html][hw/philips]]           | 2026-05-08 22:08:18 |
 | [[https://compiler.company/graph/hw/pine64.html][hw/pine64]]            | 2025-04-15 16:02:06 |
+| [[https://compiler.company/graph/hw/power.html][hw/power]]             | 2026-05-23 15:48:00 |
+| [[https://compiler.company/graph/hw/ryobi.html][hw/ryobi]]             | 2026-05-23 15:40:48 |
 | [[https://compiler.company/graph/hw/samsung.html][hw/samsung]]           | 2025-02-21 22:34:37 |
 | [[https://compiler.company/graph/hw/shop.html][hw/shop]]              | 2025-06-04 15:42:47 |
+| [[https://compiler.company/graph/hw/sony.html][hw/sony]]              | 2026-05-08 22:08:34 |
 | [[https://compiler.company/graph/hw/storage.html][hw/storage]]           | 2025-06-03 22:06:35 |
 | [[https://compiler.company/graph/hw/studio.html][hw/studio]]            | 2025-08-12 12:37:44 |
 | [[https://compiler.company/graph/hw/travel.html][hw/travel]]            | 2025-03-12 21:08:20 |
 | [[https://compiler.company/graph/lang/apl.html][lang/apl]]             | 2025-10-07 17:11:16 |
-| [[https://compiler.company/graph/lang/asm.html][lang/asm]]             | 2026-04-18 19:37:16 |
 | [[https://compiler.company/graph/lang/basic.html][lang/basic]]           | 2025-02-27 17:01:01 |
 | [[https://compiler.company/graph/lang/c.html][lang/c]]               | 2026-05-04 19:45:20 |
 | [[https://compiler.company/graph/lang/cobol.html][lang/cobol]]           | 2025-03-07 22:57:10 |
 | [[https://compiler.company/graph/lang/erlang.html][lang/erlang]]          | 2025-03-03 21:04:21 |
 | [[https://compiler.company/graph/lang/forth.html][lang/forth]]           | 2026-04-05 00:11:03 |
 | [[https://compiler.company/graph/lang/fortran.html][lang/fortran]]         | 2025-10-07 17:11:30 |
-| [[https://compiler.company/graph/lang/go.html][lang/go]]              | 2026-05-06 19:32:02 |
+| [[https://compiler.company/graph/lang/go.html][lang/go]]              | 2026-05-08 21:03:39 |
 | [[https://compiler.company/graph/lang/haskell.html][lang/haskell]]         | 2025-10-18 20:27:11 |
 | [[https://compiler.company/graph/lang/java.html][lang/java]]            | 2025-03-03 20:43:11 |
 | [[https://compiler.company/graph/lang/javascript.html][lang/javascript]]      | 2025-11-02 15:48:45 |
 | [[https://compiler.company/graph/lang/julia.html][lang/julia]]           | 2025-06-09 15:05:43 |
-| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]            | 2026-05-04 20:36:29 |
+| [[https://compiler.company/graph/lang/lisp.html][lang/lisp]]            | 2026-06-05 19:42:01 |
 | [[https://compiler.company/graph/lang/ml.html][lang/ml]]              | 2025-10-18 20:29:18 |
 | [[https://compiler.company/graph/lang/python.html][lang/python]]          | 2026-05-06 19:31:04 |
 | [[https://compiler.company/graph/lang/query.html][lang/query]]           | 2025-10-18 20:29:00 |
@@ -136,7 +140,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/math/algo.html][math/algo]]            | 2026-04-12 15:17:06 |
 | [[https://compiler.company/graph/math/calc.html][math/calc]]            | 2026-04-28 21:45:49 |
 | [[https://compiler.company/graph/math/compsci.html][math/compsci]]         | 2026-01-05 18:54:16 |
-| [[https://compiler.company/graph/math/dsp.html][math/dsp]]             | 2025-03-30 01:08:05 |
+| [[https://compiler.company/graph/math/dsp.html][math/dsp]]             | 2026-05-08 22:04:05 |
 | [[https://compiler.company/graph/math/geo.html][math/geo]]             | 2026-04-08 16:32:09 |
 | [[https://compiler.company/graph/math/logic.html][math/logic]]           | 2026-01-05 20:58:17 |
 | [[https://compiler.company/graph/math/ml.html][math/ml]]              | 2026-01-05 21:16:28 |
@@ -148,7 +152,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/notes.html][notes]]                | 2025-03-25 15:23:42 |
 | [[https://compiler.company/graph/os/mac.html][os/mac]]               | 2025-03-03 18:06:20 |
 | [[https://compiler.company/graph/os/mainframe.html][os/mainframe]]         | 2025-03-04 19:43:31 |
-| [[https://compiler.company/graph/os/unix.html][os/unix]]              | 2026-05-05 20:57:28 |
+| [[https://compiler.company/graph/os/unix.html][os/unix]]              | 2026-06-05 19:09:22 |
 | [[https://compiler.company/graph/os/win.html][os/win]]               | 2025-03-03 18:51:19 |
 | [[https://compiler.company/graph/proto/ansi.html][proto/ansi]]           | 2025-04-12 15:48:34 |
 | [[https://compiler.company/graph/proto/color.html][proto/color]]          | 2026-02-27 20:51:52 |
@@ -172,23 +176,28 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/ietf.html][proto/ietf]]           | 2025-06-17 23:18:36 |
 | [[https://compiler.company/graph/proto/ipc.html][proto/ipc]]            | 2026-03-25 20:11:38 |
 | [[https://compiler.company/graph/proto/iso.html][proto/iso]]            | 2026-02-27 20:55:04 |
+| [[https://compiler.company/graph/proto/lsp.html][proto/lsp]]            | 2026-06-05 17:38:14 |
 | [[https://compiler.company/graph/proto/mail.html][proto/mail]]           | 2025-04-15 15:52:45 |
 | [[https://compiler.company/graph/proto/math.html][proto/math]]           | 2025-05-08 20:42:15 |
+| [[https://compiler.company/graph/proto/media/disc.html][proto/media/disc]]     | 2026-05-08 22:09:34 |
 | [[https://compiler.company/graph/proto/media/image.html][proto/media/image]]    | 2026-02-27 20:50:18 |
 | [[https://compiler.company/graph/proto/media/matroska.html][proto/media/matroska]] | 2025-04-15 15:15:25 |
-| [[https://compiler.company/graph/proto/media/xiph.html][proto/media/xiph]]     | 2026-02-27 20:51:33 |
-| [[https://compiler.company/graph/proto/metal.html][proto/metal]]          | 2026-02-27 20:47:01 |
+| [[https://compiler.company/graph/proto/media/xiph.html][proto/media/xiph]]     | 2026-05-08 21:34:18 |
+| [[https://compiler.company/graph/proto/metal.html][proto/metal]]          | 2026-05-18 20:45:58 |
+| [[https://compiler.company/graph/proto/net/audio.html][proto/net/audio]]      | 2026-05-08 17:31:32 |
 | [[https://compiler.company/graph/proto/net/bonjour.html][proto/net/bonjour]]    | 2025-09-12 19:27:04 |
+| [[https://compiler.company/graph/proto/net/chat.html][proto/net/chat]]       | 2026-05-08 19:50:58 |
 | [[https://compiler.company/graph/proto/net/dns.html][proto/net/dns]]        | 2025-03-03 15:48:04 |
 | [[https://compiler.company/graph/proto/net/iot.html][proto/net/iot]]        | 2025-09-13 15:58:13 |
 | [[https://compiler.company/graph/proto/net/ip.html][proto/net/ip]]         | 2025-03-03 15:48:07 |
 | [[https://compiler.company/graph/proto/net/iscsi.html][proto/net/iscsi]]      | 2025-10-07 17:12:45 |
 | [[https://compiler.company/graph/proto/net/lora.html][proto/net/lora]]       | 2025-09-18 21:44:32 |
 | [[https://compiler.company/graph/proto/net/p2p.html][proto/net/p2p]]        | 2026-04-04 23:49:10 |
+| [[https://compiler.company/graph/proto/net/rpc.html][proto/net/rpc]]        | 2026-05-29 17:24:52 |
 | [[https://compiler.company/graph/proto/net/ssh.html][proto/net/ssh]]        | 2025-06-05 18:32:19 |
-| [[https://compiler.company/graph/proto/net/tcp.html][proto/net/tcp]]        | 2025-10-13 17:38:59 |
+| [[https://compiler.company/graph/proto/net/tcp.html][proto/net/tcp]]        | 2026-06-05 16:33:36 |
 | [[https://compiler.company/graph/proto/net/time.html][proto/net/time]]       | 2026-05-07 19:52:24 |
-| [[https://compiler.company/graph/proto/net/tls.html][proto/net/tls]]        | 2025-10-07 17:12:41 |
+| [[https://compiler.company/graph/proto/net/tls.html][proto/net/tls]]        | 2026-05-08 19:50:26 |
 | [[https://compiler.company/graph/proto/net/udp.html][proto/net/udp]]        | 2025-09-30 15:55:18 |
 | [[https://compiler.company/graph/proto/net/vpn.html][proto/net/vpn]]        | 2025-09-30 16:41:04 |
 | [[https://compiler.company/graph/proto/nist.html][proto/nist]]           | 2025-07-20 21:43:41 |
@@ -198,14 +207,18 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-11-01 02:17:43 |
 | [[https://compiler.company/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2026-04-04 23:45:51 |
-| [[https://compiler.company/graph/sys/fs.html][sys/fs]]               | 2026-04-28 21:35:42 |
-| [[https://compiler.company/graph/sys/ide.html][sys/ide]]              | 2025-10-11 19:32:15 |
+| [[https://compiler.company/graph/sys/fs.html][sys/fs]]               | 2026-05-18 20:57:00 |
+| [[https://compiler.company/graph/sys/ide.html][sys/ide]]              | 2026-05-13 21:28:12 |
 | [[https://compiler.company/graph/sys/mem.html][sys/mem]]              | 2025-06-03 22:03:01 |
+| [[https://compiler.company/graph/sys/pkg.html][sys/pkg]]              | 2026-05-13 22:15:50 |
 | [[https://compiler.company/graph/sys/srv.html][sys/srv]]              | 2026-04-17 20:45:11 |
 | [[https://compiler.company/graph/sys/term.html][sys/term]]             | 2026-03-05 18:30:32 |
-| [[https://compiler.company/graph/sys/vc.html][sys/vc]]               | 2025-11-11 20:32:47 |
-| [[https://compiler.company/graph/sys/virt.html][sys/virt]]             | 2026-04-15 18:58:15 |
-| [[https://compiler.company/graph/techne/percussion.html][techne/percussion]]    | 2025-10-26 20:51:59 |
+| [[https://compiler.company/graph/sys/thread.html][sys/thread]]           | 2026-05-08 20:57:38 |
+| [[https://compiler.company/graph/sys/vc.html][sys/vc]]               | 2026-05-28 20:17:28 |
+| [[https://compiler.company/graph/sys/virt.html][sys/virt]]             | 2026-05-17 18:56:34 |
+| [[https://compiler.company/graph/techne/percussion.html][techne/percussion]]    | 2026-05-09 23:30:41 |
+| [[https://compiler.company/graph/techne/piano.html][techne/piano]]         | 2026-05-09 23:30:47 |
+| [[https://compiler.company/graph/techne/synth.html][techne/synth]]         | 2026-05-09 23:31:21 |
 | [[https://compiler.company/graph/theory/ai.html][theory/ai]]            | 2025-10-07 17:08:27 |
 | [[https://compiler.company/graph/theory/compiler.html][theory/compiler]]      | 2025-05-08 21:14:51 |
 | [[https://compiler.company/graph/theory/econ.html][theory/econ]]          | 2025-10-16 19:32:15 |

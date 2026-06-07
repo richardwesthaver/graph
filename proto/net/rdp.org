@@ -1,0 +1,36 @@
+#+title: RDP
+#+setupfile: ../../../clean.theme
+* Remote Desktop Protocol
+:PROPERTIES:
+:ID:       9f326985-aa5d-4f11-bb1d-c8cadc80dfd4
+:CREATED:  <2026-06-06 Sat 18:27>
+:AKA: RDP
+:END:
+- [[https://github.com/CS198NDSGChanBrianJoe/markdown/blob/master/Joe/Summary%20-%20Remote%20Desktop%20Protocols%20A%20Comparison%20Of%20Spice%2C%20NX%20and%20VNC.md][Remote Desktop Protocols A Comparison Of Spice, NX and VNC.md at master (CS198NDSGChanBrianJoe/markdown)]]
+** VNC
+:PROPERTIES:
+:ID:       0abcc8d3-d9be-4214-a4bd-f3dc5d449a3f
+:CREATED:  <2026-06-06 Sat 18:29>
+:AKA: Virtual Network Computing
+:END:
+:EDGES:
+[2026-06-06 Sat 18:30] -- [[wikipedia:VNC][wiki]]
+[2026-06-06 Sat 18:33] -- [[archwiki:TigerVNC][archwiki]]
+:END:
+- sends rendered frames from server to be displayed client-side
+*** RFB
+:PROPERTIES:
+:ID:       a2e318bc-8edd-4dbf-9b38-9eaafde7ae88
+:CREATED:  <2026-06-06 Sat 18:30>
+:AKA: Remote Frame Buffer
+:END:
+The protocol used by VNC and derivatives.
+** SPICE
+:PROPERTIES:
+:ID:       e10e047b-eaf9-4c2b-9af8-4d04855decce
+:CREATED:  <2026-06-06 Sat 18:29>
+:END:
+:EDGES:
+[2026-06-06 Sat 18:29] -- [[https://www.spice-space.org/][home]]
+:END:
+- sends commands from server to render client-side

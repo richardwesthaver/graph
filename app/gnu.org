@@ -148,6 +148,15 @@ the Emacs Web Wowser, a browser written in elisp based on shr.el.
   }
 #+end_src
 
+** Pages
+:PROPERTIES:
+:ID:       ce9a92b0-ad75-4ca1-8653-cad020514c66
+:CREATED:  <2026-06-05 Fri 20:52>
+:END:
+:EDGES:
+[2026-06-05 Fri 20:52] -- [[info:emacs#Pages][info]]
+:END:
+
 ** Speedbar
 :PROPERTIES:
 :ID:       2cebd8b2-615e-44b2-afd4-2e302f836dd3
