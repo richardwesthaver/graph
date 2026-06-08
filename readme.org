@@ -22,8 +22,8 @@ an interface for modifying the graph.
 
 #+call: org-graph-info()
 #+RESULTS:
-| nodes | 1217 |
-| edges |  922 |
+| nodes | 1219 |
+| edges |  923 |
 | files |  161 |
 
 #+BEGIN: project-info :status nil :tasks nil :html t :vc nil
@@ -37,9 +37,9 @@ an interface for modifying the graph.
 | id          | 1784914079056115652                       |
 | root        | ~/src/org/graph/                          |
 | tags        | ORG DOCS NOTES META PLAN ARCHIVE GRAPH    |
-| updated     | Sat Jun 06 21:42:08 2026 -0400            |
+| updated     | Sat Jun 06 22:21:49 2026 -0400            |
 | langs       | org                                       |
-| lines       | 19074 :code 17923 :comment 69 :blank 1082 |
+| lines       | 19090 :code 17939 :comment 69 :blank 1082 |
 |-------------+-------------------------------------------|
 
 #+CALL: hg-churn() :dir ~/src/org/graph/
@@ -63,7 +63,7 @@ an interface for modifying the graph.
 2026-03    672 *****
 2026-04   1913 ****************
 2026-05   1722 ***************
-2026-06    272 **
+2026-06    298 **
 #+end_example
 
 #+CALL: project-html-files() :dir ~/src/org/graph/
@@ -71,6 +71,7 @@ an interface for modifying the graph.
 #+RESULTS:
 | file                 | modified            |
 |----------------------+---------------------|
+| [[https://compiler.company/graph/index.html][index]]                | 2026-06-06 22:34:26 |
 | [[https://compiler.company/graph/app/cas.html][app/cas]]              | 2025-07-22 21:09:44 |
 | [[https://compiler.company/graph/app/desktop.html][app/desktop]]          | 2025-10-07 17:11:56 |
 | [[https://compiler.company/graph/app/gnu.html][app/gnu]]              | 2026-06-05 20:52:59 |
@@ -130,7 +131,7 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/lang/ml.html][lang/ml]]              | 2025-10-18 20:29:18 |
 | [[https://compiler.company/graph/lang/python.html][lang/python]]          | 2026-05-06 19:31:04 |
 | [[https://compiler.company/graph/lang/query.html][lang/query]]           | 2025-10-18 20:29:00 |
-| [[https://compiler.company/graph/lang/rust.html][lang/rust]]            | 2025-10-18 20:29:22 |
+| [[https://compiler.company/graph/lang/rust.html][lang/rust]]            | 2026-06-06 22:06:34 |
 | [[https://compiler.company/graph/lang/shell.html][lang/shell]]           | 2026-04-27 20:33:41 |
 | [[https://compiler.company/graph/lang/smalltalk.html][lang/smalltalk]]       | 2025-03-03 21:05:21 |
 | [[https://compiler.company/graph/lang/swift.html][lang/swift]]           | 2025-03-07 22:57:38 |
@@ -204,7 +205,6 @@ an interface for modifying the graph.
 | [[https://compiler.company/graph/proto/opengroup.html][proto/opengroup]]      | 2025-10-03 12:30:24 |
 | [[https://compiler.company/graph/proto/unix.html][proto/unix]]           | 2026-03-14 23:28:12 |
 | [[https://compiler.company/graph/proto/web.html][proto/web]]            | 2026-04-01 21:59:42 |
-| [[https://compiler.company/graph/index.html][index]]                | 2026-06-06 21:07:01 |
 | [[https://compiler.company/graph/refs.html][refs]]                 | 2025-11-01 02:17:43 |
 | [[https://compiler.company/graph/sys/bin.html][sys/bin]]              | 2025-10-11 19:32:26 |
 | [[https://compiler.company/graph/sys/db.html][sys/db]]               | 2026-04-04 23:45:51 |

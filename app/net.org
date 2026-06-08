@@ -14,7 +14,7 @@
 [2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/canary/][Chrome Canary]]
 [2025-02-13 Thu 22:36] -- [[https://www.google.com/chrome/][Google Chrome]]
 [2025-02-13 Thu 22:38] -- [[https://www.chromium.org/chromium-projects/][Chromium]]
-[2025-03-03 Mon 16:31] -- [[man:chromium][man]]
+[2025-03-03 Mon 16:31] -- [[info:chromium][info]]
 :END:
 *** Devtools
 :PROPERTIES:
