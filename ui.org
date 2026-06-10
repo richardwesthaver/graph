@@ -1,7 +1,7 @@
 #+title: Graph UI
 #+description: CC Knowledge Graph UI
 #+author: Richard Westhaver
-#+email: richard.westhaver@gmail.com
+#+email: ellis@compiler.company
 #+html_link_up: ..
 #+setupfile: ../clean.theme
 #+html_head: <script src="https://cdn.compiler.company/js/3d-force-graph.mjs"></script>
