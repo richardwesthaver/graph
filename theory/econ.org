@@ -8,6 +8,10 @@
 :EDGES:
 [2025-02-14 Fri 22:57] -- [[https://en.wikipedia.org/wiki/Economics][Economics - Wikipedia]]
 :END:
+- panics/shocks
+- surprise/attention
+- everything is random until proven otherwise
+- valuable patterns are rewarded (ie evolution)
 ** Microeconomics                                                     :micro:
 :PROPERTIES:
 :ID:       6e111491-9ca8-4535-9642-d0bec178eed2

@@ -1,5 +1,6 @@
 #+title: Python
 #+setupfile: ../../clean.theme
+#+filetags: python
 * Python
 :PROPERTIES:
 :ID:       43663178-a6db-4cd5-923f-612eaa8ae14a
