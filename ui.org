@@ -12,6 +12,17 @@
 #+html_head:      font-size: 0.5em;
 #+html_head:    }
 #+html_head:  </style>
+#+call: org-graph-search()
+
+#+RESULTS:
+#+begin_export html
+<div class='search'>
+  <input type='text' placeholder='search' name='graph' autoComplete='none' autoCorrect='none' autoCapitalize='none' spellCheck='false'/>
+  <button class='clear'>&times;</button>
+</div>
+<ul class='suggestions'></ul>
+#+end_export
+
 #+call: org-graph-3d()
 
 #+RESULTS:
@@ -21,7 +32,7 @@
 <script type='module'>
     import SpriteText from 'https://esm.sh/three-spritetext';
     const Graph = new ForceGraph3D(document.getElementById('3d-graph'),{controlType: 'orbit'})
-      .jsonUrl('https://cdn.otom8.dev/data/org-graph.json')
+      .jsonUrl('https://cdn.compiler.company/data/org-graph.json')
       .showNavInfo(false)
       .nodeId('id')
       .nodeLabel('id')
@@ -41,15 +52,4 @@
       })
       .nodeThreeObjectExtend(true);
 </script>
-#+end_export
-
-#+call: org-graph-search()
-
-#+RESULTS:
-#+begin_export html
-<div class='search'>
-  <input type='text' placeholder='search' name='graph' autoComplete='none' autoCorrect='none' autoCapitalize='none' spellCheck='false'/>
-  <button class='clear'>&times;</button>
-</div>
-<ul class='suggestions'></ul>
 #+end_export
