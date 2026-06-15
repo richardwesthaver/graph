@@ -5,6 +5,7 @@
 :PROPERTIES:
 :ID:       ab57dccf-c9f3-4347-b9d0-5731904f3d67
 :CREATED:  <2025-02-09 Sun 13:33>
+:HEADER-ARGS: :eval no
 :END:
 :EDGES:
 [2025-03-06 Thu 09:11] >> [[id:7f92b7d3-8c42-4d25-849d-58928bc12ebb][UNIX]]
@@ -263,6 +264,8 @@ mknod - create special device files
   losetup -d /dev/loop0 #teardown
 #+end_src
 
+#+RESULTS:
+
 #+begin_src shell
   echo "sup dude" > /dev/loop0
   dd if=/dev/loop0 -bs=1
@@ -271,15 +274,55 @@ mknod - create special device files
   hdparm -T /dev/nvme0
 #+end_src
 
+#+RESULTS:
+
 #+begin_src shell
 modprobe scsi_debug add_host=5 max_luns=10 num_tgts=2 dev_size_mb=16
 #+end_src
+
+#+RESULTS:
 
 sparsefiles: create with C, dd, or truncate
 
 #+begin_src shell :results output
 truncate --help
 #+end_src
+
+#+RESULTS:
+#+begin_example
+Usage: truncate OPTION... FILE...
+Shrink or extend the size of each FILE to the specified size
+
+A FILE argument that does not exist is created.
+
+If a FILE is larger than the specified size, the extra data is lost.
+If a FILE is shorter, it is extended and the sparse extended part (hole)
+reads as zero bytes.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -c, --no-create        do not create any files
+  -o, --io-blocks        treat SIZE as number of IO blocks instead of bytes
+  -r, --reference=RFILE  base size on RFILE
+  -s, --size=SIZE        set or adjust the file size by SIZE bytes
+      --help
+         display this help and exit
+      --version
+         output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y,R,Q (powers of 1024) or KB,MB,... (powers of 1000).
+Binary prefixes can be used, too: KiB=K, MiB=M, and so on.
+
+SIZE may also be prefixed by one of the following modifying characters:
+'+' extend by, '-' reduce by, '<' at most, '>' at least,
+'/' round down to multiple of, '%' round up to multiple of.
+
+Report bugs to: bug-coreutils@gnu.org
+GNU coreutils home page: <https://www.gnu.org/software/coreutils/>
+General help using GNU software: <https://www.gnu.org/gethelp/>
+Full documentation <https://www.gnu.org/software/coreutils/truncate>
+or available locally via: info '(coreutils) truncate invocation'
+#+end_example
 
 test mkfs.btrfs on 10T dummy block device
 #+begin_src shell
@@ -289,12 +332,16 @@ test mkfs.btrfs on 10T dummy block device
   mkfs.btrfs /dev/loop0
 #+end_src
 
+#+RESULTS:
+
 diagnostics
 #+begin_src shell
   iostat # pacman -S sysstat
   blktrace # paru -S blktrace
   iotop # pacman -S iotop
 #+end_src
+
+#+RESULTS:
 
 bcc/ trace: Who/which process is executing specific functions against
 block devices?
