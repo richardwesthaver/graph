@@ -1384,6 +1384,28 @@ practice.
       whichever is appropriate here.
       ----------------------------------------------------------------------
 #+end_example
+** Blogs
+:PROPERTIES:
+:ID:       f677579e-a644-444f-90e6-442909f94ef8
+:CREATED:  <2026-06-15 Mon 21:47>
+:END:
+*** Structural Insight
+:PROPERTIES:
+:ID:       a1002554-61eb-4f72-ac62-f497ffe6c15e
+:CREATED:  <2026-06-15 Mon 21:47>
+:END:
+:EDGES:
+[2026-06-15 Mon 21:48] -- [[https://fexpr.blogspot.com/][Structural insight]]
+:END:
+**** Fexpr
+:PROPERTIES:
+:ID:       9c02fb15-967b-4294-a8ac-1327f1ec0de1
+:CREATED:  <2026-06-15 Mon 21:49>
+:END:
+:EDGES:
+[2026-06-15 Mon 21:49] -- [[https://fexpr.blogspot.com/2011/04/fexpr.html][Structural insight: Fexpr]]
+:END:
+
 ** History
 :PROPERTIES:
 :ID:       fb444369-a3e2-4451-8afc-e29571e706de
