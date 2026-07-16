@@ -7,9 +7,56 @@
 :END:
 :EDGES:
 [2026-05-04 Mon 19:41] -- [[https://en.wikipedia.org/wiki/ZIP_(file_format)][wiki]]
+[2026-07-15 Wed 20:20] << [[id:445fc03d-2500-408a-b320-a17bb046e64a][Zip bomb]]
 :END:
 see also: [[https://en.wikipedia.org/wiki/PKWare][PKWare]] (PKZIP, Phil Katz)
 
 In a Unix environment [[id:7615cb48-0257-44f0-bc2f-ba13307031c8][tarballs]] are usually preferred, although zip
 files can be optimal in specific scenarios due to the difference in
 design - Zip files interweave compression and archival.
+
+- zip files contain one or more files or directories
+
+#+begin_quote
+A ZIP file is correctly identified by the presence of an end of
+central directory record which is located at the end of the archive
+structure in order to allow the easy appending of new files. If the
+end of central directory record indicates a non-empty archive, the
+name of each file or directory within the archive should be specified
+in a central directory entry, along with other metadata about the
+entry, and an offset into the ZIP file, pointing to the actual entry
+data. This allows a file listing of the archive to be performed
+relatively quickly, as the entire archive does not have to be read to
+see the list of files. The entries within the ZIP file also include
+this information, for redundancy, in a local file header. Because ZIP
+files may be appended to, only files specified in the central
+directory at the end of the file are valid. Scanning a ZIP file for
+local file headers is invalid (except in the case of corrupted
+archives), as the central directory may declare that some files have
+been deleted and other files have been updated.
+#+end_quote
+
+#+begin_quote
+The ZIP format uses specific 4-byte "signatures" to denote the various
+structures in the file. Each file entry is marked by a specific
+signature. The end of central directory record is indicated with its
+specific signature, and each entry in the central directory starts
+with the 4-byte central file header signature.
+#+end_quote
+
+#+begin_quote
+The minimum size of a .ZIP file is 22 bytes. Such an empty zip file
+contains only an End of Central Directory Record (EOCD): 
+50 4B 05 06
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00
+
+The maximum size for both the archive file and the individual files
+inside it is 4,294,967,295 bytes (232 − 1 bytes, or 4 GiB minus 1
+byte) for standard ZIP. For ZIP64, the maximum size is
+18,446,744,073,709,551,615 bytes (264 − 1 bytes, or 16 EiB minus 1
+byte)
+#+end_quote

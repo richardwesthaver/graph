@@ -78,6 +78,15 @@ basically:
 2. use data X
 
 can happen when a program may run concurrently between 1 and 2 and has access to the data.
+** Zip bomb
+:PROPERTIES:
+:CREATED:  <2026-07-15 Wed 20:19>
+:ID:       445fc03d-2500-408a-b320-a17bb046e64a
+:END:
+:EDGES:
+[2026-07-15 Wed 20:19] -- [[wikipedia:Zip_bomb][wiki]]
+[2026-07-15 Wed 20:20] >> [[id:44562f82-60b6-4d89-9346-c0d5525e86c8][Zip]]
+:END:
 
 * Honeypot
 :PROPERTIES:
