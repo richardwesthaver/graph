@@ -1233,6 +1233,251 @@ See also [[https://github.com/brown/swank-client][swank-client]] which provides 
 implementation.
 
 Swank is [[id:a2c33f5d-8e07-4122-98df-72d321ae313b][TCP]]-based and unencrypted by default.
+*** Elephant
+:PROPERTIES:
+:CREATED:  <2026-07-21 Tue 21:54>
+:ID:       d0fc3dc0-3ff9-442c-9eb2-97661a4a4cbe
+:END:
+:EDGES:
+[2026-07-21 Tue 21:55] -- [[https://elephant.common-lisp.dev/][The Elephant Persistent Object Database]]
+[2026-07-21 Tue 21:56] -- [[gh:gonzojive/elephant][src]]
+:END:
+- similar goals to XDB, but not lisp-native (provides systems for BDB
+  and CLSQL)
+- our own STORE protocol is quite similar
+
+:notes:
+[2026-07-24 Fri]
+- tons of useful documentation in the doc/ subdir
+
+one thing I haven't thought much about is how and when to initialize
+the 'stored index' containing an ordered collection of lisp values -
+figure out 'warm boot'.
+
+#+begin_quote
+The use of persistent objects makes coding concise, convenient, and 
+powerful, and makes persistence almost invisible to the programmer.
+However, Elephant also allows the same basic data dictionary of
+key/value retrieval that BerkeleyDB provides.
+#+end_quote
+
+(in our case RDB)
+
+#+begin_quote
+While Elephant can use either RDBMSs or Berkeley DB as a data store,
+the model it supports is that of objects stored in persistent indices.
+Unlike systems such as Hibernate for Java, the user does not need to
+construct or worry about a mapping from the object space into the
+database.  Elephant relies on LISP rather than SQL for its data
+manipulation language.  Elephant is designed to be a simple and
+convenient tool for the programmer.
+#+end_quote
+
+Concepts:
+- store controller (store)
+- persistent sets (psets)
+- btrees - sorted order persistent KV abstraction
+- stored values - most lisp values including standard objects/arrays,
+  can be used as either key or value in a btree
+- persistent objects - objects where most slot values are stored in
+  the data store and IO performed on slot access. Storing a persistent
+  object in a btree only store a reference for object identity.
+- object indexing - the ability to lookup and sort objects by their
+  slot values rather than by explicit inclusion in a collection.
+- transactions - dx for executing operations on objects or collects (transaction/txn)
+
+Basic operation is OPEN-STORE with a spec (cons where car is a backend
+kw), do stuff, then CLOSE-STORE. Alternatively WITH-OPEN-STORE.
+
+#+begin_quote
+What values live between lisp sessions is called /liveness/.
+Liveness in a store is determined by whether the value can be reached
+from the root of the store.  The root is a special BTree in which
+other BTrees and lisp values can be stored.  This BTree has a special
+interface through the store controller.  (There is a second root BTree
+called the class root which will be discussed later.)
+#+end_quote
+
+use ADD-TO-ROOT to put something into the root object and
+GET-FROM-ROOT to retrieve it. See also ROOT-EXISTSP, REMOVE-FROM-ROOT,
+MAP-ROOT. The root object itself can be accessed from the store
+itself.
+
+important notes: 
+
+'This will affect all aggregate types: objects, conses, hash-tables,
+et cetera.'
+
+- *Lisp identity can't be preserved* - if you get an object from the
+  index, store as a lisp variable and then get it again, the two
+  objects won't be [[id:COMMON-LISP:EQ][EQ]].
+- *Nested aggregates are stored in one buffer*
+- *Mutated substructure does not persist*
+
+- *Serialization and deserialization can be costly*
+- *Merge-conflicts in heavily multi-process/threaded situations*
+
+- persistent classes
+  - serialized by their OID and class
+
+  - slot values are store separately (and invisible to the user), keyed by OID and slot
+
+  - loading (deserializing) a persistent class instantiates the object
+    or finds it in a cache if it already exists.
+
+  - the cache is a weak hash-table.
+
+  - slot values are NOT loaded until you ask for them. persisted slots
+    don't have space allocated for them because we read from the DB.
+
+  - Changes persist immediately
+
+  - serde of persistent classes is fast, much faster than ordinary clos objects.
+
+  - do not suffer from merge conflicts
+
+  - declares all slots be persistent by default - use =:transient t=
+    for non-persistent.
+
+  - class slots with =:allocation :class= are never persisted
+
+#+begin_quote
+Persistent classes may inherit from other classes.  Slots inherited
+from persistent classes remain persistent.  Transient slots and slots
+inherited from ordinary classes remain transient.  Ordinary classes
+cannot inherit from persistent classes -- otherwise persistent slots
+could not be stored!
+#+end_quote
+
+to simulate a new lisp session: FLUSH-INSTANCE-CACHE
+
+#+begin_quote
+Using persistent objects has implications for the performance of your
+system.  Note that the database is read every time you access a slot.
+This is a feature, not a bug, especially in concurrent situations: you
+want the most recent commits by other threads, right?  This can be
+used as a weak form of IPC.  But also note that in particular, if your
+slot value is not an immediate value or persistent object, reading
+will cons or freshly allocate storage for the value.
+
+Gets are not an expensive operation; you can perform thousands to tens
+of thousands of primitive reads per second.  However, if you're
+concerned, cache large values in memory and avoid writing them back to
+disk as long as you can.
+#+end_quote
+
+- persistent collections
+  - pset and btree are the solutions provided for the setf problem
+#+begin_quote
+Each provides persistent addition, deletion and mutation of elements,
+but the pset is a simple data structure that may be more efficient in
+memory and time than the more general btree.
+
+The ~pset~ is also a very convenient data structure for enabling a
+persistent slot contain a collection that can be updated without
+deserializing and/or reserializing a list, array or hash table on
+every access.
+
+The only difference is the api used to manipulate it. Instead of slot
+accessors, we use insert, remove, map and find.
+
+There is one drawback to persistent sets and that is that they are not
+garbage collected.  Over time, orphaned sets will eat up alot of disk
+space.  Therefore you need to explicitly free the space or resort to
+more frequent uses of the migrate procedure to compact your database.
+The pset supports the drop-pset
+
+However, given that persistent objects have the same explicit storage
+property, using psets to create collection slots is a nice match.
+
+BTrees are collections of key-value pairs ordered by key with a log(N)
+random access time and a rich iteration mechanism.  Like persistent
+sets, they solve all the collection problems of the prior sections.
+Every key-value pair is stored independently in Elephant just like
+persistent object slots.
+
+The primary interface to btree objects is through get-value.  You use
+setf get-value to store key-value pairs.  This interface is very
+similar to gethash.
+
+In addition to the hash-table like interface, btree stores
+pairs sorted by the lisp value of the key, lowest to highest.  This is
+works well for numbers, strings, symbols and persistent objects, but
+due to serialization semantics may be strange for other values like
+arrays, lists, standard-objects, etc.
+
+#+end_quote
+
+see MAP-BTREE
+
+- indexing persistent classes
+
+=(defsclass foo () () (:index t))=
+
+#+begin_quote
+Notice the class argument ``:index t''.  This tells Elephant to store
+a reference to this class.  Under the covers, there are a set of
+btrees that keep track of classes
+#+end_quote
+
+GET-INSTANCES-BY-CLASS returns all created instances, or more
+efficiently for iteration MAP-CLASS
+
+#+begin_quote
+Elephant makes no guarantee about the ordering of class elements, so
+you cannot depend on the insertion ordering
+#+end_quote
+
+If we want ordered elements.. use slot indices!
+
+=(defsclass foo () ((a :index t) (b :index t)))=
+
+#+begin_quote
+get-instances-by-value will retrieve all instances that are equal to
+the value argument, with the equality relation defined by the database
+backend.
+
+#+end_quote
+
+TODO: GET-INSTANCES-BY-RANGE
+
+#+begin_quote
+To map over duplicate values, use the :value keyword argument.  To map
+by range, use the :start and :end arguments.
+#+end_quote
+
+MAP-CLASS-INDEX
+
+- Transactions
+  - use WITH-TRANSACTION macro
+  - no dynamic nesting and idempotent side-effects
+  - to perform a group of transactions, use ENSURE-TRANSACTION for
+    each unit, which will reuse an existing transaction if there is
+    one.
+  - the side effects of the body must be the same no matter how many
+    times the body is executed
+
+#+begin_quote
+The best rule-of-thumb is to ensure that transaction bodies are purely
+functional as above, except for side effects to persistent objects and
+btrees.
+
+If you really do need to execute side-effects into lisp memory, such
+as writes to transient slots, make sure they are idempotent and that
+other processes cannot read the written values until the transaction
+completes.
+
+We cannot have infinitely sized transactions due to the finite size of
+the data store's memory cache.  Large operations (such as loading data
+into a database) need to be split into a sequential set of smaller
+transactions.  When dealing with persistent objects a good rule of
+thumb is to keep the number of objects touched in a transaction well
+under 1000.
+
+
+#+end_quote
+
+:end:
 *** IOLib
 :PROPERTIES:
 :ID:       894ce499-1ce7-4051-a921-661995fe42b2
@@ -1438,6 +1683,39 @@ practice.
 [2025-03-07 Fri 23:30] -- [[https://www.softwarepreservation.org/projects/LISP/lisp2/TM-3417_400_00_LISP2_LAP_Spec.pdf][spec]]
 :END:
 The LISP 2 Assembly Program
+*** NASA
+:PROPERTIES:
+:CREATED:  <2026-07-22 Wed 20:10>
+:ID:       b5bb2fc8-df98-4c2e-9b83-e3fb6d3ff9ab
+:END:
+:EDGES:
+[2026-07-22 Wed 20:13] -- [[https://ntrs.nasa.gov/api/citations/19940023562/downloads/19940023562.pdf][Ames AI Branch 1992 Report]]
+[2026-07-22 Wed 20:14] -- [[https://ntrs.nasa.gov/api/citations/19920014117/downloads/19920014117.pdf][Coordinating Complex Problem-Solving Among Distributed Intelligent Agents]]
+:END:
+There are several famous Lisp stories retold by some JPL OGs -
+interesting stuff. What is less-known is the general infrastructure,
+ops, and planning software which Common Lisp was used for.
+
+For my part I am less interested in the remote debugger and JPL side
+of things, but extremely interested in the Mission Control and
+network-based planning systems mentioned in various places.
+
+See also:
+Working Notes from The 1992 AAAI
+Spring Symposium on
+Practical Approaches to Scheduling
+- https://ntrs.nasa.gov/api/citations/19890004614/downloads/19890004614.pdf
+- https://ntrs.nasa.gov/citations/19880015808
+**** GERRY
+:PROPERTIES:
+:CREATED:  <2026-07-22 Wed 20:16>
+:ID:       9fbbcfa5-1ac5-4e2a-b807-b6cadd05653b
+:END:
+#+begin_quote
+GERRY was an intelligent, rule-based scheduling system deployed at
+the NASA Ames Research Center to aid test engineers and human
+schedulers.
+#+end_quote
 *** Foreign Function Interface
 :PROPERTIES:
 :ID:       203517c3-8324-471e-b932-56ead04d8e1a

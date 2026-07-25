@@ -12,6 +12,7 @@ https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/
 https://www.opensourceshakespeare.org/
 [[https://registry.opendata.aws/][Registry of Open Data on AWS]]
 [[http://www.cs.toronto.edu/~kriz/cifar.html][CIFAR-10 and CIFAR-100 datasets]]
+https://sti.nasa.gov/docs/STI_Open_API_Documentation_20210426.pdf
 * feeds
 :PROPERTIES:
 :ID:       a9659676-999f-4eb4-b841-dd3a2e383317
