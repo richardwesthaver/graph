@@ -1276,7 +1276,7 @@ convenient tool for the programmer.
 Concepts:
 - store controller (store)
 - persistent sets (psets)
-- btrees - sorted order persistent KV abstraction
+- Btrees - sorted order persistent KV abstraction
 - stored values - most lisp values including standard objects/arrays,
   can be used as either key or value in a btree
 - persistent objects - objects where most slot values are stored in
@@ -1474,9 +1474,316 @@ transactions.  When dealing with persistent objects a good rule of
 thumb is to keep the number of objects touched in a transaction well
 under 1000.
 
-
 #+end_quote
 
+on to the guide.. [2026-07-25 Sat]
+
+- *all lisp objects are stored by value*
+- native byte ordering
+
+- Atomic Types
+  - ~nil~ has it's own special tag in the serializer so it is easily
+  identifiable. nil is an awkward value as it is also a boolean.
+  The boolean value ~t~ is stored as the symbol ~'T~.
+  - Bignums are broken into a sequence of fixnum-sized chunks and
+  assembled by masking words onto the bignum. This is awfully expensive,
+  but it's always correct and fully portable.
+  - A rational is merely a ratio of two integers stored as fixnums or bignums.
+  - A complex is a pair of floating point values, rationals or integers.
+  - Standalone chars are represented by their char-code and are stored
+    in 32-bit format to ensure that all lisps are stored correctly.
+  - Symbols are stored as two strings, the package name and the symbol
+    name in that package. When deserialized, the target package is
+    searched for and the symbol is interned in that package.
+- Aggregate Types
+  - Cons is simply stored as a cons record containing two nested
+    elements. Linear lists are not treated specially (i.e. no
+    cdr-coding) by the serializer.
+  - Arrays are stored as sequences of nested, serialized elements.
+    The array parameters are also stored so that arrays with fill
+    pointers, adjustable arrays can be stored and reconstructed.  The
+    only arrays that cannot be reproduced are displaced arrays, which
+    are copied by value and reconstructed as standard arrays during
+    deserialization.
+  - Hash tables are stored as a sequence of key-value pairs, where the
+    key and value can be any serializable value. On deserialization,
+    the reconstructed key and value quantities are written
+    incrementally into the hash table. The hash table does remember
+    it's test, rehash size and threshold and it's total count.  The
+    final size of the new hash table is set to ~(* (/ size
+    reshash-threshold) rehash-size)~.
+  - Structure objects are serialized using the metaprotocol.  Each
+    slot where the value is bound is serialized by serializing the
+    slot name and the value in sequence. The underlying lisp must
+    support the ~struct-constructor~ method so that a new, empty
+    instance of the structure can be created and then populated by the
+    stored keys and values.
+  - Instances of subclasses of standard-object are stored almost
+    identically to structs. The type of the object is stored and the
+    object slots with bound values are serialized as slotname-value
+    pairs. To read an object of this type, the lisp image must have
+    the class defined and it must have at least the slots that are
+    stored on disk. There is no good method for schema evolution
+    (redefining objects to have less slots) of ordinary classes.
+
+After initialization of a stored object the following state has been created:
+- placeholder instance :: in memory, storage for oid, spec, lisp
+  instance data and transient slot values. mediates access to stored
+  values, does not persist itself.
+- cached reference :: weak reference to instance in the store object cache
+- memory references :: a normal reference to the instance may be retained by the caller
+- database slot values :: the data store contains the stored slot values
+  that were initialized, indexed by the object id and slot name
+- database references :: if placeholder instance is written to a
+  stored slot, added to a btree, or the class is indexed, a
+  ~reference~ to the instance was added to the data store. This
+  reference consists of an OID and a class name. If this reference is
+  reachable, then the stored object can be reconstructed using the
+  ~:FROM-OID~ keyword argument.
+
+If you manually create an object using an OID which already exists in
+the database, ~initargs~ to ~make-instance~ take precedence over
+existing values in the database, which in turn take precedence over
+any ~initforms~ defined in the class.
+
+- LIFETIMES
+#+begin_quote
+The distributed nature of persistent instance storage results in some
+interesting behaviors, especially with respect to transient slots.
+The prior section detailed the state of the system after the original
+initialization of an object.  The object can then be in a number of
+different states:
+#+end_quote
+
+- resident :: the canonical state of an in-use stored object
+- unreferenced, unreclaimed :: all memory refs dropped but placeholder
+  hasn't been reclaimed. Weak pointer still exists in object cache. If
+  a database ref is fetched, the cached value will be used.
+- Non-resident :: The object only exists as reachable database refs
+  and slot values. This is the state after GC of the placeholder.
+- Recreated :: An intermediary state where a non-resident object is
+  fetched from the data store and its placeholder must be recreated
+  prior to the object entering residency state.
+  - when a ref is deserialized, its OID is used to lookup the object
+    in the store object cache. If this fails the instance is created
+    with a call such as:
+    #+begin_src lisp :eval no
+    (make-instance 'sclass :from-oid 2000 :store *store*)
+    #+end_src
+  - ~:from-oid~ inhibits some ~make-instance~ behavior
+
+A good policy is to initialize transient values using an ~:after~
+method on [[id:COMMON-LISP:INITIALIZE-INSTANCE][initialize-instance]]. This allows you to initialize transient
+values using either system defaults or persistent slot values. That
+way you can ensure that the transient slots are always in a consistent
+state when accessed by the application, regardless of when the
+placeholder object was recreated.
+
+In general, transient slots are a good place for intermediate values
+in a computation or to cache frequently read items to avoid
+deserialization overhead.  [[id:OBJ/BTREE:INDEXED-BTREE][indexed-btree]] is an example of this
+approach, an in-memory hash is cached in the transient slot for reads
+and writes are mirrored to a serialized hash in a persistent slot.
+The :after method just copies the persistent hash value to the
+transient slot.
+
+Creating a set-valued slot:
+#+begin_src lisp :eval no
+(defsclass my-set ()
+  ((set-slot :accessor set-slot :initform nil :set-valued t)))
+#+end_src
+
+see SET-INSERT, SET-LIST
+
+- Association Slots
+#+begin_quote
+Assocation slots allow you to create relationships between objects in
+your system. In the following set of examples two classes are created,
+a 'job' class and a 'person' class. These classes are related in that
+each person can only be associated with one job, but a job might have
+multiple people associated with it. To capture this relationship in
+Elephant you can use Association slots.
+#+end_quote
+
+#+begin_quote
+You can enable/disable class indexing for an entire class. When you
+disable indexing all references to instances of that class are
+lost. If you re-enable class indexing only newly created classes will
+be stored in the class index.  You can manually restore them by using
+~find-class-index~ to get the clas index BTree if you have an
+alternate in-memory index.
+
+You can add/remove a secondary index for a slot. So long as the class
+index remains, this can be done multiple times without losing any
+data.
+
+There is also a facility for defining 'derived slots'.  These can be
+non-slot parameters which are a function of the class's persistent
+slot values.  For example you can use an index to keep an alternate
+representation available for fast indexing.  If an object has an x,y
+coordinate, you could define a derived index for r,theta which stored
+references in polar coordinates.  These would be ordered so you could
+iterate over a class-index to get objects in order of increasing
+radius from the origin or over a range of theta.
+
+...
+
+Thus, the question of if and how a given class should be indexed is
+very flexible and dynamic, and does not need to be determined at the
+beginning of your development. This represents the ability to ``late
+bind'' the decision of what to index.
+
+In general, there is always a tradeoff: an indexed slot increases
+storage associated with that slot and slows down write operations.
+Reads however remain as fast as for unindexed persistent slots.  The
+Elephant system makes it simple to choose where and when one wants to
+utilize this tradeoff.
+#+end_quote
+
+- see also src/elephant/classindex-utils.lisp - documents tools for
+  handling class redefs and polcies that should be used for
+  synchronization.
+- ~*default-indexed-class-sync-policy*~ values:
+  - :class - class is master, indices are deleted for any slots no
+    longer indexed
+  - :db - db is master, class indexing annotations are updated so
+    slots which satisfy ~class-indexedp-by-name~ are isomorphic to the
+    existing indices in the db.
+  - :union - expected result - updates the class to match any existing
+    indices and creates new ones.
+
+- BTrees
+  - core data structure, Elephant directly exposes it
+
+  - basic API is: ~get-value~, ~remove-kv~
+
+  - Sorting is done first by primitive type (string, standard-class,
+    array, etc) and then by value within that type.  The type order
+    and internal sorting constraint is:
+    - Numbers - effectively coerced to double float and sorted relatively
+
+    - strings - varwidth - width type sorted separately?? hmm
+
+    - pathnames,symbols - sorted by string radix then lexically
+
+    - aggregates sorted by type in following order then arbitrary:
+      stored instance refs, cons, hash-table, standard objects,
+      arrays, structs, then nil.
+
+    - not GC'd (like ssets) - use ~drop-btree~ to delete all KV pairs
+      and return storage - the OID used will not be recovered.
+
+- Btree Cursors
+  - used to traverse btrees one KV at a time
+
+  - must be created inside a transaction - made with call to
+    ~make-cursor~ method of btree. Make sure to close cursor when
+    stack is unwound, best to use ~with-btree-cursor~.
+
+  - can duplicate cursors with ~cursor-duplicate~ - avoids overhead
+
+  - two states: initialized or uninitialized
+
+  - to initialize:
+
+    - ~cursor-first~ or ~cursor-last~
+
+    - ~cursor-set~ or ~cursor-set-range~
+
+  - once initialized cursor can be incremented or decremented - O(1)
+
+    - ~cursor-next~ or ~cursor-prev~
+
+  - can use cursors for side effects: ~cursor-put~ replace the value
+    without incrementing and ~cursor-delete~ deletes the KV pair and
+    becomes uninitialized.
+
+- BTree Indexing
+
+  - ~indexed-btree~ maintains a set of ~btree-index~ instances which
+    provide alternative indexing algos.
+
+  - Each index is itself a btree with values matched to the keys of
+    the parent btree.
+
+  - Index is created with ~add-index~
+
+  - important property of ~btree-index~: allows duplicate keys. No
+    dupes allowed in btree and indexed-btree.
+
+  - index cursors are just like btree cursors except you can get the
+    main btree value instead of the indexed valued. parallel set of
+    operations - ~cursor-pnext~ for example returns (exists, key,
+    primary-btree-value, index-value = primary-btree-key).
+
+The big difference between btree cursors and index cursors is that
+indices can have duplicate key values.  This means we have to choose
+between incrementing over elements, unique key-values or only within a
+duplicate segment.  There are cursor operations for each:
+- Simple move - standard btree ops and cursor-pnext/cursor-pprev
+- Move to different KV (cursor-pnext-nodup and cursor-pprev-nodup)
+- Move to next duplicate KV (cursor-pnext-dup and cursor-pprev-dup)
+
+- after incrementing through a set of dupes the last NEXT operation returns nil indicating no more dupes - consequence is the cursor is uninitialized and needs to be reset.
+
+Shared Resource Locks:
+- store connection table
+- instance cache
+- circularity buffer pool for serializer
+- static-streams for FFI (rw: is this needed?)
+
+#+begin_quote
+You can trace ~execute-transaction~ to see the sequence
+of calls that occur dynamically and detect where and how many
+transactions are and are not happening. 
+#+end_quote
+
+- Repository migration and upgrade
+  (see tests migrate1-5)
+  - single generic ~migrate~ function
+
+It is assumed that typically migrate will be called on two
+repositories and all live objects (those reachable in the root or
+class-root) will be copied to the target repository via recursive
+calls to migrate for specific objects.
+
+Migrate will not handle: 
+- circular lists
+- Indexed classes only have their class index copied if you use the
+  top level migration.
+- one-time activity - should close the source store after validation
+- cannot currently migrate a store that has more data than your main
+  memory. (rw: we can probably fix this)
+- OID equivalence is not maintained - can overload the migrate method
+  to accomplish this
+
+#+begin_quote
+To customize migration overload a version of migrate to specialize on
+your specific persistent class type.
+
+=(defmethod migrate ((dst store-controller) (src my-class)))=
+
+In the body of this method you can call ~(call-next-method)~ to get a
+destination repository object with all the slots copied over to the
+target repository which you can then overwrite. To avoid the default
+persistent slot copying, bind the dynamic variable
+~*inhibit-slot-writes*~ in your user method using
+~with-inhibited-slot-copy~ a convenience macro.
+#+end_quote
+
+- Performance is usually measured in transactions per second.
+  Database reads are cheap.
+
+#+begin_quote
+All data written to the data store ends up in a BTree slot using a
+transaction.  There are two databases, one for persistent slot values
+and one for btrees.  The mapping of Elephant objects is quite simple.
+
+Persistent slots are written to a btree using a unique key and the
+serialized value being written.  The key is the oid of the persistent
+object concatenated to the serialized name of the slot being written.
+This ordering groups slots together on the disk
+#+end_quote
 :end:
 *** IOLib
 :PROPERTIES:
